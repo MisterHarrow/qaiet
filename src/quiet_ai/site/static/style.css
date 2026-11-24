@@ -188,14 +188,20 @@ summary:hover { color: var(--ink); }
 .empty { grid-column: 1 / -1; margin: 1rem 0; color: var(--muted); }
 .empty .reset { margin-left: 0.5rem; padding: 0.15rem 0.7rem; color: var(--ink); background: none; border: 1px solid var(--rule); border-radius: 999px; cursor: pointer; }
 
-/* Rising */
+/* Rising: groups by category, flowing in columns */
 .rising { margin-top: 3rem; padding-top: 1.6rem; border-top: 1px solid var(--ink); }
-.rising h2 { margin: 0; font: 500 1.2rem/1.3 var(--serif); }
+.rising-head h2 { margin: 0; font: 500 1.2rem/1.3 var(--serif); }
 .section-note { margin: 0.25rem 0 0; color: var(--muted); font-size: 0.86rem; }
-.rising ol { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 2.5rem; margin: 1rem 0 0; padding: 0; list-style: none; }
-.rising li { padding: 0.85rem 0; border-top: 1px solid var(--rule); }
+.rising-filters { margin-top: 1rem; }
+.rising-groups { columns: 3 20rem; column-gap: 2.5rem; margin-top: 1.4rem; }
+.rgroup { break-inside: avoid; margin-bottom: 1.6rem; }
+.rising-groups.single { columns: 1; max-width: 48rem; }
+.rgroup .eyebrow { padding-bottom: 0.45rem; border-bottom: 1px solid var(--rule); margin-bottom: 0; }
+.rgroup .count { font-weight: 400; color: var(--faint); margin-left: 0.3em; letter-spacing: 0; }
+.rgroup ol { margin: 0; padding: 0; list-style: none; }
+.rgroup li { padding: 0.75rem 0; border-top: 1px solid var(--wash); break-inside: avoid; }
+.rgroup li:first-child { border-top: 0; }
 .r-head { margin: 0; font-size: 0.95rem; overflow-wrap: anywhere; }
-.kind { font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--faint); margin-right: 0.5em; }
 .what { margin: 0.25rem 0 0; font-size: 0.9rem; }
 .why-it { margin: 0.15rem 0 0; font-size: 0.85rem; color: var(--muted); }
 .rising .num { margin: 0.25rem 0 0; }
@@ -209,7 +215,6 @@ summary:hover { color: var(--ink); }
 @media (max-width: 75rem) { .stories { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (max-width: 58rem) {
   .stories { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .rising ol { grid-template-columns: 1fr; }
 }
 @media (max-width: 38rem) {
   .page { padding: 1.6rem 1rem 3rem; }

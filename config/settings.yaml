@@ -107,7 +107,8 @@ momentum:
 
 rising:
   window_hours: 48                # builder items seen in a listing this recently
-  quota: {repo: 4, model: 2, space: 1, dataset: 1, paper: 2}
+  # Candidates per listing; on the page they are grouped by what they are (agent, model, tool, ...).
+  quota: {repo: 10, model: 5, space: 3, dataset: 3, paper: 5}
 
 analysis:
   label_batch_size: 20            # items per Haiku labeling call

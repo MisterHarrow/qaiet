@@ -165,7 +165,7 @@ class MomentumSettings(_Model):
 
 class RisingSettings(_Model):
     window_hours: int = 48
-    quota: dict[str, int] = Field(default_factory=lambda: {"repo": 4, "model": 2, "space": 1, "dataset": 1, "paper": 2})
+    quota: dict[str, int] = Field(default_factory=lambda: {"repo": 10, "model": 5, "space": 3, "dataset": 3, "paper": 5})
 
 
 class AnalysisSettings(_Model):

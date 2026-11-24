@@ -186,14 +186,35 @@ def builders_line(b: dict) -> str:
     return " · ".join(parts)
 
 
+# Rising categories: what a project is (from its Haiku label), in display order.
+RISING_CATEGORIES = [
+    ("model", "Models"), ("agent", "Agents"), ("tool/library", "Tools & libraries"), ("infra", "Infrastructure"),
+    ("dataset", "Datasets"), ("research paper", "Papers"), ("demo/app", "Apps & demos"),
+]
+# Before an item is labeled, its listing decides.
+_DEFAULT_CATEGORY = {"repo": "tool/library", "model": "model", "dataset": "dataset", "space": "demo/app", "paper": "research paper"}
+
+
 def rising_entries(store: Store, rising: list[RisingItem]) -> list[dict]:
     out = []
     for r in rising:
         lab = store.conn.execute("SELECT data FROM item_labels WHERE item_id = ?", (r.item_id,)).fetchone()
         data = json.loads(lab["data"]) if lab else {}
-        out.append({"id": r.item_id, "kind": data.get("kind") or r.kind, "title": r.title, "url": r.url, "signal": r.signal,
-                    "what": data.get("what"), "why": data.get("why"), "story_id": r.story_id})
+        category = data.get("kind") or _DEFAULT_CATEGORY.get(r.kind, "tool/library")
+        out.append({"id": r.item_id, "kind": r.kind, "category": category, "title": r.title, "url": r.url, "signal": r.signal,
+                    "score": r.score, "what": data.get("what"), "why": data.get("why"), "story_id": r.story_id})
     return out
+
+
+def rising_groups(entries: list[dict]) -> list[dict]:
+    """Rising items grouped by category, in a fixed order, each group in listing-rank order."""
+    groups = []
+    for key, label in RISING_CATEGORIES:
+        items = [e for e in entries if e["category"] == key]
+        if items:
+            slug = re.sub(r"[^a-z]+", "-", key).strip("-")
+            groups.append({"key": key, "slug": slug, "label": label, "items": items})
+    return groups
 
 
 def build(store: Store, settings: Settings, sources: SourcesConfig, scores: list[StoryScore], rising: list[RisingItem], now: datetime, top: int) -> dict[str, Any]:
@@ -215,7 +236,8 @@ def build(store: Store, settings: Settings, sources: SourcesConfig, scores: list
         "terms": terms,
         "terms_hours": settings.site.terms_hours,
         "stories": stories,
-        "rising": rising_entries(store, rising),
+        "rising": (rising_list := rising_entries(store, rising)),
+        "rising_groups": rising_groups(rising_list),
         "llm": {"month_spend_usd": round(spend, 4), "budget_usd": settings.llm.monthly_budget_usd,
                 "budget_reached": spend >= settings.llm.monthly_budget_usd},
     }

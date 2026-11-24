@@ -117,20 +117,35 @@
 <p class="empty" hidden>No stories match this filter. <button type="button" class="reset">Show all</button></p>
 </section>
 
-{% if e.rising %}
+{% if e.rising_groups %}
 <section class="rising" aria-labelledby="rising-h">
-  <h2 id="rising-h">Rising</h2>
-  <p class="section-note">Fastest-climbing projects among builders right now.</p>
-  <ol>
-    {% for r in e.rising %}
-    <li>
-      <p class="r-head"><span class="kind">{{ r.kind }}</span> <a href="{{ r.url }}" rel="noopener">{{ r.title }}</a></p>
-      {% if r.what %}<p class="what">{{ r.what }}</p>{% endif %}
-      {% if r.why %}<p class="why-it">{{ r.why }}</p>{% endif %}
-      <p class="num">{{ r.signal }}</p>
-    </li>
+  <div class="rising-head">
+    <h2 id="rising-h">Rising</h2>
+    <p class="section-note">Fastest-climbing projects among builders right now, by what they are.</p>
+  </div>
+  <nav class="filters rising-filters" aria-label="Filter rising projects by category" hidden>
+    <button type="button" data-category="" aria-pressed="true">All <span class="n">{{ e.rising|length }}</span></button>
+    {% for g in e.rising_groups %}
+    <button type="button" data-category="{{ g.slug }}" aria-pressed="false">{{ g.label }} <span class="n">{{ g["items"]|length }}</span></button>
     {% endfor %}
-  </ol>
+  </nav>
+  <div class="rising-groups">
+    {% for g in e.rising_groups %}
+    <div class="rgroup" data-category="{{ g.slug }}">
+      <h3 class="eyebrow">{{ g.label }} <span class="count">{{ g["items"]|length }}</span></h3>
+      <ol>
+        {% for r in g["items"] %}
+        <li>
+          <p class="r-head"><a href="{{ r.url }}" rel="noopener">{{ r.title }}</a></p>
+          {% if r.what %}<p class="what">{{ r.what }}</p>{% endif %}
+          {% if r.why %}<p class="why-it">{{ r.why }}</p>{% endif %}
+          <p class="num">{{ r.signal }}</p>
+        </li>
+        {% endfor %}
+      </ol>
+    </div>
+    {% endfor %}
+  </div>
 </section>
 {% endif %}
 </main>

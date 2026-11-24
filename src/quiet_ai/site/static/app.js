@@ -37,3 +37,20 @@
   var reset = document.querySelector(".reset");
   if (reset) reset.addEventListener("click", function () { state = { track: "", term: "" }; apply(); });
 })();
+
+// Rising: filter the category groups.
+(function () {
+  var nav = document.querySelector(".rising-filters");
+  if (!nav) return;
+  nav.hidden = false;
+  var buttons = nav.querySelectorAll("button[data-category]");
+  var groups = document.querySelectorAll(".rgroup");
+  buttons.forEach(function (b) {
+    b.addEventListener("click", function () {
+      var cat = b.dataset.category;
+      buttons.forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+      groups.forEach(function (g) { g.hidden = !!cat && g.dataset.category !== cat; });
+      document.querySelector(".rising-groups").classList.toggle("single", !!cat);
+    });
+  });
+})();

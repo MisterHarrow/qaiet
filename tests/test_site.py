@@ -28,8 +28,10 @@ def edition(**over):
     }
     e = {"generated_at": "2026-11-24T09:00:00+00:00", "weather": "Quiet day.", "stories": [story], "terms_hours": 24,
          "terms": [{"key": "nvidia", "label": "Nvidia", "outlets": 12, "size": 4, "stories": 1}],
-         "rising": [{"id": "r", "kind": "agent", "title": "o/r", "url": "https://github.com/o/r", "signal": "+10 stars/day", "what": "w", "why": "y", "story_id": None}],
+         "rising": [{"id": "r", "kind": "repo", "category": "agent", "title": "o/r", "url": "https://github.com/o/r", "signal": "+10 stars/day", "what": "w", "why": "y", "story_id": None}],
          "llm": {"month_spend_usd": 0.1, "budget_usd": 30, "budget_reached": False}}
+    from quiet_ai.pipeline.edition import rising_groups
+    e["rising_groups"] = rising_groups(e["rising"])
     e.update(over)
     return e
 
@@ -101,3 +103,14 @@ def test_top_terms_merge_variants_and_count_outlets(settings):
     assert terms["trump"]["outlets"] == 2 and terms["trump"]["label"] == "Trump"       # aliases merged
     assert "ai" not in terms and "cnbc" not in terms                                     # stopword, outlet name
     assert terms["nvidia"]["size"] == 4
+
+
+def test_rising_grouped_by_category(tmp_path):
+    from quiet_ai.pipeline.edition import rising_groups
+    entries = [{"category": c, "title": t} for c, t in [("research paper", "p1"), ("agent", "a1"), ("model", "m1"), ("agent", "a2")]]
+    groups = rising_groups(entries)
+    assert [(g["label"], [i["title"] for i in g["items"]]) for g in groups] == [("Models", ["m1"]), ("Agents", ["a1", "a2"]), ("Papers", ["p1"])]
+    assert groups[2]["slug"] == "research-paper"
+    html = build.render(edition(), tmp_path).read_text()
+    assert '<div class="rgroup" data-category="agent">' in html and 'data-category="agent" aria-pressed="false">Agents <span class="n">1</span>' in html
+    assert '<nav class="filters rising-filters" aria-label="Filter rising projects by category" hidden>' in html

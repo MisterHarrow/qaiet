@@ -30,6 +30,12 @@ Checked in the browser at desktop and 375px (no horizontal scroll), light and da
 - **Track selector filters instead of highlighting.** "All / Technical / Political / Economic" with counts; non-matching cards are hidden. A track and a name combine. A "Show all" reset appears when nothing matches.
 - `analysis.top_stories` and `summarize_top` went from 7/10 to 12 to fill three rows. The brief said 5–7; this is the setting to change back.
 
+## Revision 2: Rising by category
+
+- Rising is grouped by what each project is, from its Haiku label: Models, Agents, Tools & libraries, Infrastructure, Datasets, Papers, Apps & demos. Groups flow in three columns (one on phones), each in ranking order. Chips with counts filter to one category. Without JavaScript all groups show.
+- More candidates so categories aren't thin: up to 10 repos, 5 models, 3 spaces, 3 datasets and 5 papers (26 today). All of them get a what/why label, about $0.005 per run.
+- An unlabeled item falls back to its listing: repo → tool, space → app, paper → paper.
+
 ## Fixes found while reviewing the page
 
 - "split" now needs 20% on each side (was 25%). The top story had 31% critical and 22% positive and read "mostly neutral" while its coverage sentence described a split.
