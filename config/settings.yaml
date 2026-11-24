@@ -83,11 +83,43 @@ cluster:
   # Tuned 2026-11-24 on 1,900 items: 0.55 and below glued unrelated "AI and society" pieces into
   # one 100-item blob; 0.65 split the Huang story's market angle off. See docs/m2-notes.md.
   window_hours: 72                # rolling window of items considered
-  join_threshold: 0.62            # cosine similarity to join an existing story
+  join_threshold: 0.62            # cosine similarity to join an existing story...
+  confident_threshold: 0.72       # ...below this, only when the item shares a name with the story
   strict_join_threshold: 0.8      # for repos, models, datasets, spaces, papers, launches
   strict_kinds: [repo, model, dataset, space, paper, launch]
   merge_threshold: 0.76           # two stories this similar (and sharing a name or link) are merged
   entity_boost: 0.03              # added per shared name (company, product, person), max 2
+
+momentum:
+  # Counts (outlets, countries, aggregators, digests) are log-scaled against the window's maximum;
+  # platform volumes (HN points, stars, HF trending, social) are percentile ranks so no one source
+  # dominates. Weighted sum, halved every half_life_hours since the story's latest item. Weights sum to 1.
+  half_life_hours: 36
+  weights:
+    outlets: 0.25                 # distinct news outlets
+    countries: 0.10               # distinct outlet countries
+    hn_points: 0.15               # Hacker News points
+    star_velocity: 0.10           # GitHub stars gained per day
+    hf_trending: 0.10             # Hugging Face trending score, paper upvotes
+    social: 0.10                  # Bluesky and HF posts, plus their likes and reposts
+    aggregators: 0.10             # led on Techmeme / Memeorandum
+    digests: 0.10                 # picked up by AI digests (AINews, TLDR AI, The Batch, ...)
+
+rising:
+  window_hours: 48                # builder items seen in a listing this recently
+  quota: {repo: 4, model: 2, space: 1, dataset: 1, paper: 2}
+
+analysis:
+  label_batch_size: 20            # items per Haiku labeling call
+  news_prompt: news_label_v1      # prompt files in src/quiet_ai/llm/prompts/; the version is stored on each label
+  builder_prompt: builder_label_v1
+  summary_prompt: story_summary_v1
+  weather_prompt: weather_v1
+  summarize_top: 10               # Sonnet summaries for the top stories only
+  resummarize_new_items: 3        # re-summarize after this many new items, or any new outlet
+  builder_label_top: 30           # what/why labels for this many Rising candidates
+  stance_kinds: [news, newsletter]  # kinds that get track/frame/stance (newsletters: commentary only)
+  top_stories: 7                  # stories on the page
 
 llm:
   item_model: claude-haiku-5-5    # relevance, translation, item labels

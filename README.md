@@ -2,7 +2,7 @@
 
 A calm, text-first page that answers once a day: what happened in AI, how is it being framed, and what are builders actually making?
 
-Status: **M2 (stories)**. Sources are fetched into SQLite, filtered for AI relevance and grouped into stories. Labels, ranking and the site come in later milestones. Plan and source verification: [docs/m0-report.md](docs/m0-report.md). Relevance and clustering decisions: [docs/m2-notes.md](docs/m2-notes.md).
+Status: **M3 (analysis)**. Sources are fetched, filtered for AI relevance, grouped into stories, labeled (track, frame, stance, evidence), ranked by momentum and summarized. The site comes in M4. Notes per milestone: [M0 plan and sources](docs/m0-report.md), [M2 relevance and clustering](docs/m2-notes.md), [M3 labels, momentum, costs](docs/m3-notes.md).
 
 ## Setup
 
@@ -17,8 +17,12 @@ cp .env.example .env   # ANTHROPIC_API_KEY (relevance of ambiguous items, transl
 uv run qa ingest                 # fetch every source, store new items in data/quiet-ai.db
 uv run qa ingest -s github -s nyt  # only some sources or fetchers
 uv run qa ingest --dry-run       # replay recorded fixtures: no network, nothing written
-uv run qa cluster                # relevance filter, embeddings, stories; prints the current stories
-uv run qa cluster --dry-run      # same on fixtures, no network, no LLM
+uv run qa run                    # everything: ingest, stories, labels, summaries; prints the edition
+uv run qa cluster                # relevance filter, embeddings, stories
+uv run qa classify               # labels (Haiku), momentum, summaries and weather (Sonnet); prints the edition
+uv run qa stories                # print the ranked stories from the database, no LLM calls
+uv run qa costs                  # LLM spend this month against the cap
+uv run qa classify --dry-run     # any of these with --dry-run: fixtures, no network, no LLM
 uv run qa sources check          # fetch every source once and report health (writes nothing)
 uv run qa sources check --dry-run --strict
 uv run qa sources list

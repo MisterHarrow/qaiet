@@ -16,9 +16,12 @@ from quiet_ai.config import ROOT, load_accounts, load_dotenv, load_settings, loa
 from quiet_ai.fetchers.base import Context, run_tasks
 from quiet_ai.http import Http
 from quiet_ai.llm.client import LLM
+from quiet_ai.pipeline import edition as edition_mod
+from quiet_ai.pipeline import momentum
 from quiet_ai.pipeline import stories as story_views
 from quiet_ai.pipeline.ingest import build_tasks, ingest as run_ingest
-from quiet_ai.pipeline.process import default_embedder, run_cluster
+from quiet_ai.pipeline.process import default_embedder, run_analysis, run_cluster
+from quiet_ai.render_terminal import render
 from quiet_ai.store.db import Store
 
 FIXTURES = ROOT / "tests" / "fixtures" / "http"
@@ -150,6 +153,111 @@ def cluster(
     console.print(f"embedded {result.embedded} with {result.embedder}; placed {cl.placed} items: "
                   f"{cl.by_link} by link, {cl.by_similarity} by similarity, {cl.new_stories} new stories, {cl.merged} merged")
     console.print(f"active stories: {len(views)} ({sum(v.items > 1 for v in views)} with 2+ items)")
+    store.close()
+
+
+def _open(dry_run: bool) -> tuple[Store, datetime]:
+    """The live DB, or (dry run) an in-memory DB filled from fixtures and clustered."""
+    settings, sources = load_settings(), load_sources()
+    if not dry_run:
+        return Store(ROOT / settings.db_path), _now()
+    store = Store(":memory:")
+    ctx = _context("replay")
+    run_ingest(ctx, store, dry_run=True)
+    ctx.http.close()
+    run_cluster(store, settings, sources, ctx.now, None, default_embedder(settings, offline=True))
+    return store, ctx.now
+
+
+def _analyze_and_print(store: Store, now: datetime, dry_run: bool, no_llm: bool, run_id: str) -> None:
+    settings, sources = load_settings(), load_sources()
+    llm = None if (dry_run or no_llm) else LLM(settings.llm, store, run_id)
+    res = run_analysis(store, settings, sources, now, llm)
+    ed = edition_mod.build(store, settings, sources, res.scores, res.rising, now, settings.analysis.top_stories)
+    render(console, ed)
+    n, b, s = res.news, res.builders, res.summaries
+    cost = llm.cost_usd if llm else 0.0
+    console.print(f"\n[dim]labels: {n.labeled} news ({n.from_cache} cached, {n.low_confidence} low confidence, "
+                  f"{n.evidence_dropped} evidence phrases rejected), {b.labeled} builder; summaries: {s.summarized} new, "
+                  f"{s.unchanged} unchanged; weather {'updated' if res.weather.weather else 'unchanged'}; "
+                  f"LLM {llm.calls if llm else 0} calls, ${cost:.4f} this run[/]")
+    for note in res.notes:
+        console.print(f"[yellow]note: {note}[/]")
+
+
+@app.command()
+def classify(
+    dry_run: DryRun = False,
+    no_llm: Annotated[bool, typer.Option("--no-llm", help="Skip Haiku/Sonnet; momentum and view only.")] = False,
+) -> None:
+    """Label items, score momentum, summarize the top stories; print the ranked stories."""
+    load_dotenv()
+    store, now = _open(dry_run)
+    run_id = store.start_run("classify", dry_run, now)
+    _analyze_and_print(store, now, dry_run, no_llm, run_id)
+    store.finish_run(run_id, _now())
+    store.close()
+
+
+@app.command()
+def stories(dry_run: DryRun = False) -> None:
+    """Print the current ranked stories from the database (no LLM calls)."""
+    settings, sources = load_settings(), load_sources()
+    store, now = _open(dry_run)
+    scores = momentum.score_stories(store, settings, sources, now)
+    ed = edition_mod.build(store, settings, sources, scores, momentum.rising(store, settings, now), now, settings.analysis.top_stories)
+    render(console, ed)
+    store.close()
+
+
+@app.command()
+def run(
+    no_llm: Annotated[bool, typer.Option("--no-llm", help="Skip every LLM step.")] = False,
+) -> None:
+    """Everything: ingest, relevance, embeddings, stories, labels, summaries; print the edition."""
+    load_dotenv()
+    settings, sources = load_settings(), load_sources()
+    store = Store(ROOT / settings.db_path)
+    ctx = _context("live", fetch_state=store.load_fetch_state())
+    ctx.known_urls = store.urls_for_sources([f.id for f in ctx.sources.feeds if f.sitemap])
+    reports = run_ingest(ctx, store)
+    ctx.http.close()
+    bad = [r.result.source for r in reports if r.result.status not in ("ok", "not_modified")]
+    console.print(f"[dim]ingest: {sum(r.new for r in reports)} new items; {len(bad)} sources failed {', '.join(bad[:8])}[/]")
+    now = _now()
+    run_id = store.start_run("run", False, now)
+    llm = None if no_llm else LLM(settings.llm, store, run_id)
+    cl = run_cluster(store, settings, sources, now, llm, default_embedder(settings))
+    console.print(f"[dim]stories: {cl.cluster.placed} items placed, {cl.cluster.new_stories} new stories; "
+                  f"{cl.relevance.pending} items undecided[/]")
+    _analyze_and_print(store, now, False, no_llm, run_id)
+    store.finish_run(run_id, _now())
+    store.close()
+
+
+@app.command()
+def costs() -> None:
+    """LLM spend this month, by task and model, against the cap."""
+    settings = load_settings()
+    store = Store(ROOT / settings.db_path)
+    now = _now()
+    start = now.replace(day=1, hour=0, minute=0, second=0)
+    rows = store.conn.execute(
+        "SELECT task, model, COUNT(*) calls, SUM(input_tokens) i, SUM(output_tokens) o, SUM(cache_read_tokens) cr, "
+        "SUM(cost_usd) c, SUM(error IS NOT NULL) errs FROM llm_calls WHERE created_at >= ? GROUP BY task, model ORDER BY c DESC",
+        (start.isoformat(timespec="seconds"),),
+    ).fetchall()
+    table = Table(title=f"LLM costs since {start:%Y-%m-%d}")
+    for col in ("task", "model", "calls", "errors", "input", "output", "cache read", "USD"):
+        table.add_column(col, justify="left" if col in ("task", "model") else "right")
+    total = 0.0
+    for r in rows:
+        total += r["c"] or 0
+        table.add_row(r["task"], r["model"], str(r["calls"]), str(r["errs"]), f"{r['i'] or 0:,}", f"{r['o'] or 0:,}", f"{r['cr'] or 0:,}", f"{r['c'] or 0:.4f}")
+    console.print(table)
+    cap = settings.llm.monthly_budget_usd
+    days = (now - start).total_seconds() / 86400 or 1
+    console.print(f"month to date ${total:.4f} of ${cap:.2f} cap; on pace for ${total / days * 30:.2f} this month")
     store.close()
 
 

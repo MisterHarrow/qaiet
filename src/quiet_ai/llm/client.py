@@ -18,6 +18,10 @@ PROMPTS = Path(__file__).parent / "prompts"
 T = TypeVar("T", bound=BaseModel)
 
 
+# Short classification calls on Haiku: no thinking (allowed at effort high or below).
+NO_THINKING = {"type": "disabled"}
+
+
 class LLMUnavailable(Exception):
     """No API key, budget cap reached, or the model declined."""
 
@@ -78,25 +82,45 @@ class LLM:
 
     # -- calls ----------------------------------------------------------------------------
 
-    def parse(self, task: str, model: str, system: str, user: str, output: type[T], max_tokens: int = 4000, effort: str = "low") -> T:
+    def parse(
+        self,
+        task: str,
+        model: str,
+        system: str,
+        user: str,
+        output: type[T],
+        max_tokens: int = 4000,
+        effort: str = "low",
+        thinking: dict | None = None,
+        fallbacks: bool = False,
+    ) -> T:
+        """One structured-output call. `thinking=None` leaves the model's default (adaptive).
+        `fallbacks=True` lets the API re-run a declined request on a fallback model
+        (server-side, beta; Sonnet/Opus only, not Haiku)."""
         if self.budget_left() <= 0:
             raise LLMUnavailable(f"monthly LLM budget of ${self.s.monthly_budget_usd:.0f} reached")
         now = datetime.now(timezone.utc)
+        kwargs = dict(
+            model=model,
+            max_tokens=max_tokens,
+            # The system prompt is identical across calls: cache it.
+            system=[{"type": "text", "text": system, "cache_control": {"type": "ephemeral"}}],
+            messages=[{"role": "user", "content": user}],
+            output_format=output,
+            output_config={"effort": effort},
+        )
+        if thinking is not None:
+            kwargs["thinking"] = thinking
         try:
-            resp = self.client.messages.parse(
-                model=model,
-                max_tokens=max_tokens,
-                # The system prompt is identical across calls: cache it.
-                system=[{"type": "text", "text": system, "cache_control": {"type": "ephemeral"}}],
-                messages=[{"role": "user", "content": user}],
-                output_format=output,
-                output_config={"effort": effort},
-                thinking={"type": "disabled"},
-            )
+            if fallbacks:
+                resp = self.client.beta.messages.parse(**kwargs, betas=["server-side-fallback-2026-07-01"], fallbacks="default")
+            else:
+                resp = self.client.messages.parse(**kwargs)
         except Exception as e:
             self._log(task, model, None, now, error=f"{type(e).__name__}: {e}"[:300])
             raise
-        cost = self._log(task, model, resp.usage, now)
+        served = getattr(resp, "model", None) or model
+        cost = self._log(task, served if served in self.s.prices else model, resp.usage, now)
         self.calls += 1
         self.cost_usd += cost
         if resp.stop_reason == "refusal":

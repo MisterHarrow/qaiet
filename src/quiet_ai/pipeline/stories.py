@@ -33,6 +33,26 @@ class StoryView:
     last_at: str = ""
 
 
+def _rep_key(r, centroid):
+    sim = float(from_blob(r["vector"]) @ centroid) if centroid is not None and r["vector"] else 0.0
+    english = bool(r["title_en"]) or (r["lang"] or "en") == "en"
+    return (_KIND_RANK.get(r["kind"], 9), not english, -sim)
+
+
+def representative_title(store: Store, story_id: str) -> str | None:
+    """Headline of the press item closest to the story's centroid, English preferred."""
+    rows = store.conn.execute(
+        "SELECT i.kind, i.lang, i.title, i.title_en, e.vector, s.centroid FROM items i JOIN stories s ON s.id = i.story_id "
+        "LEFT JOIN embeddings e ON e.item_id = i.id WHERE i.story_id = ?",
+        (story_id,),
+    ).fetchall()
+    if not rows:
+        return None
+    centroid = normalize(from_blob(rows[0]["centroid"])[None, :])[0] if rows[0]["centroid"] else None
+    rep = min(rows, key=lambda r: _rep_key(r, centroid))
+    return rep["title_en"] or rep["title"]
+
+
 def source_names(sources: SourcesConfig) -> dict[str, str]:
     names = dict(BUILDER_SOURCES)
     names.update({f.id: f.name for f in sources.feeds})
@@ -57,12 +77,7 @@ def active(store: Store, sources: SourcesConfig, now: datetime, window_hours: in
     for sid, members in grouped.items():
         centroid = normalize(from_blob(members[0]["centroid"])[None, :])[0] if members[0]["centroid"] else None
 
-        def rep_key(r):
-            sim = float(from_blob(r["vector"]) @ centroid) if centroid is not None and r["vector"] else 0.0
-            english = bool(r["title_en"]) or (r["lang"] or "en") == "en"
-            return (_KIND_RANK.get(r["kind"], 9), not english, -sim)
-
-        rep = min(members, key=rep_key)
+        rep = min(members, key=lambda r: _rep_key(r, centroid))
         news = [r for r in members if r["kind"] == "news"]
         views.append(StoryView(
             id=sid,

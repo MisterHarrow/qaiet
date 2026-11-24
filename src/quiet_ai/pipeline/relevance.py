@@ -10,7 +10,7 @@ from dataclasses import dataclass, field
 from pydantic import BaseModel
 
 from quiet_ai.config import Settings, SourcesConfig
-from quiet_ai.llm.client import LLM, LLMUnavailable, load_prompt
+from quiet_ai.llm.client import LLM, NO_THINKING, LLMUnavailable, load_prompt
 from quiet_ai.store.db import Store
 
 log = logging.getLogger(__name__)
@@ -151,7 +151,7 @@ def run(store: Store, settings: Settings, sources: SourcesConfig, llm: LLM | Non
             for n, r in enumerate(batch)
         )
         try:
-            out = llm.parse(TASK, settings.llm.item_model, system, user, _Batch, max_tokens=200 + 120 * len(batch))
+            out = llm.parse(TASK, settings.llm.item_model, system, user, _Batch, max_tokens=200 + 120 * len(batch), thinking=NO_THINKING)
         except LLMUnavailable as e:
             stats.note = str(e)
             break

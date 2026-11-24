@@ -46,9 +46,25 @@ _ENTITY_NAMES = re.compile(
 _VERSIONED = re.compile(r"\b([A-Z][A-Za-z]{1,15})[- ]?(\d+(?:\.\d+)*)\b")
 
 
-def entities(text: str) -> set[str]:
+_WORD = re.compile(r"[A-Za-zÀ-ÿ][\w'’-]*")
+_NOT_NAMES = {
+    "the", "a", "an", "ai", "and", "or", "but", "how", "why", "what", "who", "when", "where", "is", "are", "was", "will",
+    "new", "this", "that", "its", "it's", "after", "as", "in", "on", "at", "for", "of", "to", "with", "from", "by", "us",
+    "ceo", "llm", "ki", "ia", "der", "die", "das", "le", "la", "les", "el", "en", "och", "det", "den", "i",
+}
+
+
+def entities(text: str, extra: list[str] | None = None) -> set[str]:
+    """Names in a headline: a fixed list of AI companies/people/places, versioned model
+    names ("GPT-6.2"), and, in sentence-case headlines, capitalized words after the first.
+    `extra` adds names an LLM label already extracted."""
     out = {m.lower() for m in _ENTITY_NAMES.findall(text)}
     out |= {f"{a.lower()}-{b}" for a, b in _VERSIONED.findall(text) if not a.isupper() or len(a) <= 4}
+    words = _WORD.findall(text)
+    caps = [w for w in words[1:] if w[0].isupper()]
+    if words and len(caps) <= 0.5 * (len(words) - 1):  # Title Case headlines capitalize everything
+        out |= {w.lower().rstrip("'’s") for w in caps if len(w) > 2 and w.lower() not in _NOT_NAMES}
+    out |= {e.lower() for e in extra or [] if e.lower() not in _NOT_NAMES}
     return out
 
 
@@ -135,8 +151,8 @@ class ClusterStats:
 
 def _window_items(store: Store, model: str, since: str, strict_kinds: set[str]) -> list[dict]:
     rows = store.conn.execute(
-        f"SELECT i.id, i.kind, i.url, i.title, i.title_en, i.extra, i.story_id, {EVENT_AT} AS event_at, e.vector "
-        "FROM items i JOIN embeddings e ON e.item_id = i.id AND e.model = ? "
+        f"SELECT i.id, i.kind, i.url, i.title, i.title_en, i.extra, i.story_id, {EVENT_AT} AS event_at, e.vector, l.data AS label "
+        "FROM items i JOIN embeddings e ON e.item_id = i.id AND e.model = ? LEFT JOIN item_labels l ON l.item_id = i.id "
         f"WHERE i.relevant = 1 AND i.dup_of IS NULL AND {EVENT_AT} >= ? ORDER BY event_at, i.id",
         (model, since),
     ).fetchall()
@@ -146,7 +162,8 @@ def _window_items(store: Store, model: str, since: str, strict_kinds: set[str]) 
         text = r["title_en"] or r["title"]
         out.append({
             "id": r["id"], "kind": r["kind"], "strict": r["kind"] in strict_kinds, "story_id": r["story_id"], "event_at": r["event_at"], "vec": from_blob(r["vector"]),
-            "ents": entities(text), "keys": link_keys(r["kind"], r["url"], extra),
+            "ents": entities(text, json.loads(r["label"]).get("entities") if r["label"] else None),
+            "keys": link_keys(r["kind"], r["url"], extra),
         })
     return out
 
@@ -208,7 +225,11 @@ def run(store: Store, model: str, cfg: ClusterSettings, now: datetime) -> Cluste
             thresholds = np.array([
                 cfg.join_threshold if (not it["strict"] and stories[s].loose) else cfg.strict_join_threshold for s in ids
             ])
-            margin = sims + boost - thresholds
+            # Generic AI headlines sit around 0.6 to each other. In the band between join_threshold
+            # and confident_threshold an item needs a shared name to join.
+            shared = boost > 0
+            gated = (sims + boost >= thresholds) & ((sims >= cfg.confident_threshold) | shared | (thresholds > cfg.join_threshold))
+            margin = np.where(gated, sims + boost - thresholds, -1.0)
             best = int(np.argmax(margin))
             if margin[best] >= 0:
                 target, how = ids[best], "similarity"

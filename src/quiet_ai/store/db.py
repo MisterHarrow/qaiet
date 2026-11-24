@@ -11,7 +11,7 @@ from pathlib import Path
 
 from quiet_ai.store.models import Item
 
-SCHEMA_VERSION = 2
+SCHEMA_VERSION = 3
 
 # Applied in order to databases older than the version key. SCHEMA below is version 1.
 MIGRATIONS: dict[int, list[str]] = {
@@ -58,6 +58,39 @@ MIGRATIONS: dict[int, list[str]] = {
             cost_usd           REAL NOT NULL DEFAULT 0,
             error              TEXT,
             created_at         TEXT NOT NULL)""",
+    ],
+    3: [
+        """CREATE TABLE IF NOT EXISTS item_labels (
+            item_id        TEXT PRIMARY KEY REFERENCES items(id) ON DELETE CASCADE,
+            task           TEXT NOT NULL,           -- news | builder
+            prompt_version TEXT NOT NULL,
+            model          TEXT NOT NULL,
+            track          TEXT,                    -- news: technical | political | economic
+            track2         TEXT,
+            frame          TEXT,
+            stance         INTEGER,                 -- -2..+2
+            confidence     TEXT,                    -- low | medium | high
+            data           TEXT NOT NULL,           -- full label JSON (evidence, rationale, entities | what, why, kind)
+            created_at     TEXT NOT NULL)""",
+        "CREATE INDEX IF NOT EXISTS item_labels_track ON item_labels(track)",
+        """CREATE TABLE IF NOT EXISTS story_summaries (
+            story_id       TEXT PRIMARY KEY,
+            prompt_version TEXT NOT NULL,
+            model          TEXT NOT NULL,
+            data           TEXT NOT NULL,           -- headline, track, coverage, builders
+            item_count     INTEGER NOT NULL,        -- story size when summarized
+            outlet_count   INTEGER NOT NULL,
+            created_at     TEXT NOT NULL)""",
+        """CREATE TABLE IF NOT EXISTS reports (
+            id             INTEGER PRIMARY KEY AUTOINCREMENT,
+            kind           TEXT NOT NULL,           -- weather
+            prompt_version TEXT,
+            model          TEXT,
+            data           TEXT NOT NULL,
+            created_at     TEXT NOT NULL)""",
+        "ALTER TABLE stories ADD COLUMN momentum REAL",
+        "ALTER TABLE stories ADD COLUMN features TEXT",
+        "ALTER TABLE stories ADD COLUMN scored_at TEXT",
     ],
 }
 

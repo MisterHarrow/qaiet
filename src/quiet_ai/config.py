@@ -148,10 +148,37 @@ class EmbedSettings(_Model):
 class ClusterSettings(_Model):
     window_hours: int = 72
     join_threshold: float = 0.62
+    confident_threshold: float = 0.72
     strict_join_threshold: float = 0.8
     strict_kinds: list[str] = Field(default_factory=lambda: ["repo", "model", "dataset", "space", "paper", "launch"])
     merge_threshold: float = 0.76
     entity_boost: float = 0.03
+
+
+class MomentumSettings(_Model):
+    half_life_hours: float = 36
+    weights: dict[str, float] = Field(default_factory=lambda: {
+        "outlets": 0.25, "countries": 0.10, "hn_points": 0.15, "star_velocity": 0.10,
+        "hf_trending": 0.10, "social": 0.10, "aggregators": 0.10, "digests": 0.10,
+    })
+
+
+class RisingSettings(_Model):
+    window_hours: int = 48
+    quota: dict[str, int] = Field(default_factory=lambda: {"repo": 4, "model": 2, "space": 1, "dataset": 1, "paper": 2})
+
+
+class AnalysisSettings(_Model):
+    label_batch_size: int = 20
+    news_prompt: str = "news_label_v1"
+    builder_prompt: str = "builder_label_v1"
+    summary_prompt: str = "story_summary_v1"
+    weather_prompt: str = "weather_v1"
+    summarize_top: int = 10
+    resummarize_new_items: int = 3   # re-summarize after this many new items, or any new outlet
+    builder_label_top: int = 30      # label this many Rising candidates (plus builders in top stories)
+    stance_kinds: list[str] = Field(default_factory=lambda: ["news", "newsletter"])
+    top_stories: int = 7             # stories on the page
 
 
 class ModelPrice(_Model):
@@ -182,6 +209,9 @@ class Settings(_Model):
     embed: EmbedSettings = Field(default_factory=EmbedSettings)
     cluster: ClusterSettings = Field(default_factory=ClusterSettings)
     llm: LLMSettings = Field(default_factory=LLMSettings)
+    momentum: MomentumSettings = Field(default_factory=MomentumSettings)
+    rising: RisingSettings = Field(default_factory=RisingSettings)
+    analysis: AnalysisSettings = Field(default_factory=AnalysisSettings)
 
 
 def _yaml(path: Path) -> dict:
