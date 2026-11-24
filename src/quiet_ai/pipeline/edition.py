@@ -4,8 +4,10 @@ frozen daily archive (M5) all read this one structure."""
 from __future__ import annotations
 
 import json
-from collections import Counter
-from datetime import datetime
+import re
+import unicodedata
+from collections import Counter, defaultdict
+from datetime import datetime, timedelta
 from typing import Any
 
 from quiet_ai.config import Settings, SourcesConfig
@@ -15,6 +17,50 @@ from quiet_ai.store.db import Store, iso
 
 STANCES = (-2, -1, 0, 1, 2)
 _PRESS_KINDS = ("news", "newsletter")
+
+
+_SUFFIX = re.compile(r"(?:'s|’s|,? (?:corp\.?|corporation|inc\.?|ltd\.?|plc|co\.|group|holdings))$")
+
+
+def term_key(name: str, aliases: dict[str, str]) -> str:
+    """Normalize a named entity so variants count together: case, possessives, company suffixes, aliases."""
+    k = unicodedata.normalize("NFKC", name).strip().lower().strip(" .,;:\"'“”‘’")
+    k = _SUFFIX.sub("", k).strip()
+    alias = aliases.get(k)
+    return alias.lower() if alias else k
+
+
+def top_terms(store: Store, sources: SourcesConfig, settings: Settings, now) -> list[dict]:
+    """The names most outlets mentioned in the last `terms_hours`, from the item labels.
+    Counted once per outlet, so one outlet repeating a name doesn't inflate it."""
+    s = settings.site
+    aliases = {k.lower(): v for k, v in s.term_aliases.items()}
+    stop = {w.lower() for w in s.term_stopwords}
+    outlet_names = {f.name.lower() for f in sources.feeds} | {g.name.lower() for g in sources.gdelt_outlets}
+    rows = store.conn.execute(
+        "SELECT i.source, l.data FROM item_labels l JOIN items i ON i.id = l.item_id "
+        "WHERE l.task = 'news' AND i.relevant = 1 AND i.first_seen_at >= ?",
+        (iso(now - timedelta(hours=s.terms_hours)),),
+    ).fetchall()
+    outlets: dict[str, set] = defaultdict(set)
+    spellings: dict[str, Counter] = defaultdict(Counter)
+    for r in rows:
+        for name in json.loads(r["data"]).get("entities", []):
+            key = term_key(name, aliases)
+            if not key or key in stop or key in outlet_names or len(key) < 2:
+                continue
+            outlets[key].add(r["source"])
+            spellings[key][aliases.get(name.strip().lower(), name.strip())] += 1
+    ranked = sorted(outlets.items(), key=lambda kv: (-len(kv[1]), kv[0]))[: s.terms_count]
+    if not ranked:
+        return []
+    top = len(ranked[0][1])
+    out = []
+    for key, srcs in ranked:
+        share = len(srcs) / top
+        size = 4 if share >= 0.66 else 3 if share >= 0.4 else 2 if share >= 0.2 else 1
+        out.append({"key": key, "label": spellings[key].most_common(1)[0][0], "outlets": len(srcs), "size": size})
+    return out
 
 
 def story_members(store: Store, story_id: str) -> list[dict]:
@@ -104,6 +150,7 @@ def story_entry(store: Store, sources: SourcesConfig, score: StoryScore, rank: i
         "builders": builders,
         "builders_line": builders_line(builders),
         "items": len(members),
+        "entities": sorted({e for m in members if m["label"] for e in m["label"].get("entities", [])}),
     }
 
 
@@ -153,10 +200,21 @@ def build(store: Store, settings: Settings, sources: SourcesConfig, scores: list
     weather = store.conn.execute("SELECT data FROM reports WHERE kind = 'weather' ORDER BY id DESC LIMIT 1").fetchone()
     month_start = now.replace(day=1, hour=0, minute=0, second=0, microsecond=0)
     spend = store.conn.execute("SELECT COALESCE(SUM(cost_usd), 0) FROM llm_calls WHERE created_at >= ?", (iso(month_start),)).fetchone()[0]
+    terms = top_terms(store, sources, settings, now)
+    keys = {t["key"] for t in terms}
+    aliases = {k.lower(): v for k, v in settings.site.term_aliases.items()}
+    stories = [story_entry(store, sources, s, n) for n, s in enumerate(scores[:top], 1)]
+    for st in stories:
+        st["terms"] = sorted({term_key(e, aliases) for e in st["entities"]} & keys)
+        for t in terms:
+            if t["key"] in st["terms"]:
+                t["stories"] = t.get("stories", 0) + 1
     return {
         "generated_at": iso(now),
         "weather": json.loads(weather["data"])["sentence"] if weather else None,
-        "stories": [story_entry(store, sources, s, n) for n, s in enumerate(scores[:top], 1)],
+        "terms": terms,
+        "terms_hours": settings.site.terms_hours,
+        "stories": stories,
         "rising": rising_entries(store, rising),
         "llm": {"month_spend_usd": round(spend, 4), "budget_usd": settings.llm.monthly_budget_usd,
                 "budget_reached": spend >= settings.llm.monthly_budget_usd},

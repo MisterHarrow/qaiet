@@ -115,11 +115,11 @@ analysis:
   builder_prompt: builder_label_v1
   summary_prompt: story_summary_v3
   weather_prompt: weather_v1
-  summarize_top: 10               # Sonnet summaries for the top stories only
+  summarize_top: 12               # Sonnet summaries for the top stories only
   resummarize_new_items: 3        # re-summarize after this many new items, or any new outlet
   builder_label_top: 30           # what/why labels for this many Rising candidates
   stance_kinds: [news, newsletter]  # kinds that get track/frame/stance (newsletters: commentary only)
-  top_stories: 7                  # stories on the page
+  top_stories: 12                 # story cards on the page (three rows of four)
 
 llm:
   item_model: claude-haiku-5-5    # relevance, translation, item labels
@@ -132,6 +132,24 @@ llm:
 site:
   out_dir: site                   # qa build writes here; git-ignored
   timezone: Europe/Stockholm      # dates and times on the page
+  # "Most mentioned" row in the header: names from the item labels, counted once per outlet.
+  terms_count: 16
+  terms_hours: 24
+  term_aliases:                   # lowercase variant -> the name to show
+    donald trump: Trump
+    trump administration: Trump
+    president trump: Trump
+    president donald trump: Trump
+    united states: US
+    u.s.: US
+    usa: US
+    u.s: US
+    eu: EU
+    european union: EU
+    uk: UK
+    united kingdom: UK
+    britain: UK
+  term_stopwords: [ai, artificial intelligence, a.i., generative ai, llm, llms, tech, technology, chatbot, chatbots]
 
 schedule:
   every_hours: 2

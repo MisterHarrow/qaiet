@@ -174,16 +174,20 @@ class AnalysisSettings(_Model):
     builder_prompt: str = "builder_label_v1"
     summary_prompt: str = "story_summary_v3"
     weather_prompt: str = "weather_v1"
-    summarize_top: int = 10
+    summarize_top: int = 12
     resummarize_new_items: int = 3   # re-summarize after this many new items, or any new outlet
     builder_label_top: int = 30      # label this many Rising candidates (plus builders in top stories)
     stance_kinds: list[str] = Field(default_factory=lambda: ["news", "newsletter"])
-    top_stories: int = 7             # stories on the page
+    top_stories: int = 12            # stories on the page
 
 
 class SiteSettings(_Model):
     out_dir: str = "site"
     timezone: str = "Europe/Stockholm"
+    terms_count: int = 16
+    terms_hours: int = 24
+    term_aliases: dict[str, str] = Field(default_factory=dict)
+    term_stopwords: list[str] = Field(default_factory=lambda: ["ai", "artificial intelligence"])
 
 
 class ModelPrice(_Model):

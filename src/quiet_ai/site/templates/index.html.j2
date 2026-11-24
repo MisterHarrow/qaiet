@@ -12,39 +12,58 @@
 <div class="page">
 
 <header class="masthead">
-  <p class="wordmark"><a href="./">quiet ai</a></p>
-  <p class="dateline"><time datetime="{{ e.generated_at }}">{{ date_long }}</time> <span class="sep">·</span> updated {{ updated }} {{ tz_name }}</p>
+  <div class="masthead-top">
+    <p class="wordmark"><a href="./">quiet ai</a></p>
+    <p class="dateline"><time datetime="{{ e.generated_at }}">{{ date_long }}</time> <span class="sep">·</span> updated {{ updated }} {{ tz_name }}</p>
+  </div>
   {% if e.weather %}
   <p class="weather">{{ e.weather }}</p>
   {% endif %}
   {% if e.llm.budget_reached %}
   <p class="notice">This month's budget for machine labeling is used up. Stories and links still update; labels and summaries are paused until next month.</p>
   {% endif %}
-  <nav class="filters" aria-label="Highlight a track" hidden>
-    <span class="filters-label">Highlight</span>
+
+  {% if e.terms %}
+  <div class="terms" aria-labelledby="terms-h">
+    <h2 id="terms-h" class="eyebrow">Most mentioned <span class="eyebrow-note">by number of outlets, last {{ e.terms_hours }} hours</span></h2>
+    <ul class="term-list">
+      {% for t in e.terms %}
+      <li><button type="button" class="term t{{ t.size }}" data-term="{{ t.key }}" aria-pressed="false" disabled
+          title="{{ t.label }}: mentioned by {{ t.outlets }} outlets{% if t.stories %}; in {{ t.stories }} of the stories below{% endif %}">{{ t.label }}<span class="term-n">{{ t.outlets }}</span></button></li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+  <nav class="filters" aria-label="Filter stories by track" hidden>
+    <button type="button" data-track="" aria-pressed="true">All <span class="n">{{ e.stories|length }}</span></button>
     {% for t in ["technical", "political", "economic"] %}
-    <button type="button" data-track="{{ t }}" aria-pressed="false">{{ t|capitalize }}</button>
+    {% set n = e.stories|selectattr("track", "equalto", t)|list|length %}
+    <button type="button" data-track="{{ t }}" aria-pressed="false"{% if not n %} disabled{% endif %}>{{ t|capitalize }} <span class="n">{{ n }}</span></button>
     {% endfor %}
+    <span class="filter-state" aria-live="polite"></span>
   </nav>
 </header>
 
 <main>
 <section class="stories" aria-label="Top stories">
 {% for s in e.stories %}
-<article class="story" id="{{ s.id }}" data-track="{{ s.track or 'none' }}">
+<article class="card" id="{{ s.id }}" data-track="{{ s.track or 'none' }}" data-terms="{{ s.terms|join('|') }}">
   <p class="kicker"><span class="rank">{{ s.rank }}</span>{% if s.track %}<span class="track">{{ s.track }}</span>{% endif %}</p>
   <h2>{{ s.headline }}</h2>
 
   {% if s.outlets %}
-  <p class="meta">
-    <span>{{ s.outlets }} outlet{{ "s" if s.outlets != 1 }}</span><span class="sep">·</span><span>{{ s.countries }} countr{{ "ies" if s.countries != 1 else "y" }}</span>
-    {% if s.segments %}
+  <p class="meta">{{ s.outlets }} outlet{{ "s" if s.outlets != 1 }}<span class="sep">·</span>{{ s.countries }} countr{{ "ies" if s.countries != 1 else "y" }}</p>
+  {% if s.segments %}
+  <p class="stance-row">
     <span class="stance" role="img" aria-label="{{ s.stance_label }}" title="{{ s.stance_label }}">
       {% for seg in s.segments %}<span class="seg st{{ seg.key }}" style="width:{{ seg.pct }}%"></span>{% endfor %}
     </span>
     {% if s.stance_summary %}<span class="stance-summary">{{ s.stance_summary }}</span>{% endif %}
-    {% endif %}
   </p>
+  {% endif %}
+  {% else %}
+  <p class="meta">Builders only <span class="sep">·</span> no outlet coverage yet</p>
   {% endif %}
 
   {% if s.summary and s.summary.coverage %}
@@ -52,14 +71,14 @@
   {% endif %}
 
   {% set b = s.builders %}
-  {% set builders_text = (s.summary.builders if s.summary and s.summary.builders else s.builders_line) %}
-  {% if builders_text %}
-  <p class="builders"><span class="label">Builders</span> {{ builders_text }}</p>
+  {% if s.builders_line %}
+  <p class="builders"><span class="label">Builders</span> {{ s.builders_line }}</p>
   {% endif %}
 
   {% if s.coverage or b.hn or b.repos or b.models or b.papers or b.official %}
   <details>
     <summary>{% if s.coverage %}Headlines by stance{% else %}Links{% endif %}</summary>
+    {% if s.summary and s.summary.builders %}<p class="builders-long">{{ s.summary.builders }}</p>{% endif %}
     {% for g in s.coverage %}
     <div class="group">
       <h3><span class="dot st{{ g.stance }}" aria-hidden="true"></span>{{ stance_names[g.stance] }} <span class="count">{{ g["items"]|length }}</span></h3>
@@ -84,8 +103,8 @@
       <h3>Builder links</h3>
       <ul>
         {% for o in b.official %}<li><span class="outlet">{{ o.source }}</span> <a href="{{ o.url }}" rel="noopener">{{ o.title }}</a></li>{% endfor %}
-        {% for h in b.hn[:3] %}<li><span class="outlet">Hacker News</span> <a href="{{ h.url }}" rel="noopener">{{ h.title }}</a> <span class="num">{{ h.points|thousands }} points · {{ h.comments|thousands }} comments</span></li>{% endfor %}
-        {% for r in b.repos[:5] %}<li><span class="outlet">GitHub</span> <a href="{{ r.url }}" rel="noopener">{{ r.title }}</a> <span class="num">{{ r.stars|thousands }} stars</span></li>{% endfor %}
+        {% for h in b.hn[:3] %}<li><span class="outlet">Hacker News <span class="num">{{ h.points|thousands }} points · {{ h.comments|thousands }} comments</span></span> <a href="{{ h.url }}" rel="noopener">{{ h.title }}</a></li>{% endfor %}
+        {% for r in b.repos[:5] %}<li><span class="outlet">GitHub <span class="num">{{ r.stars|thousands }} stars</span></span> <a href="{{ r.url }}" rel="noopener">{{ r.title }}</a></li>{% endfor %}
         {% for m in b.models[:5] %}<li><span class="outlet">{{ m.source }}</span> <a href="{{ m.url }}" rel="noopener">{{ m.title }}</a></li>{% endfor %}
         {% for p in b.papers[:3] %}<li><span class="outlet">Paper</span> <a href="{{ p.url }}" rel="noopener">{{ p.title }}</a></li>{% endfor %}
       </ul>
@@ -95,6 +114,7 @@
   {% endif %}
 </article>
 {% endfor %}
+<p class="empty" hidden>No stories match this filter. <button type="button" class="reset">Show all</button></p>
 </section>
 
 {% if e.rising %}

@@ -23,6 +23,13 @@
 
 Checked in the browser at desktop and 375px (no horizontal scroll), light and dark.
 
+## Revision 1 (Benjamin's review)
+
+- **Cards, four per row.** 12 stories (three rows) as cards: 4 per row on wide screens, then 3, 2 and 1 as the screen narrows. Cards are equal height while closed. Once one is opened, rows size to their content, so the neighbours don't stretch. Long coverage sentences are clipped to six lines in the card and shown in full when the card is opened.
+- **"Most mentioned" in the header.** The 16 names the most outlets mentioned in the last 24 hours, taken from the Haiku labels' entities. Each name is counted once per outlet, so one outlet repeating a name doesn't inflate it. Sized in four steps by share of the top name. Variants are merged through `site.term_aliases` (Trump / Donald Trump / Trump administration; US / United States; ...), possessives and company suffixes are dropped, and generic words and outlet names are left out. Clicking a name filters the cards to stories that mention it.
+- **Track selector filters instead of highlighting.** "All / Technical / Political / Economic" with counts; non-matching cards are hidden. A track and a name combine. A "Show all" reset appears when nothing matches.
+- `analysis.top_stories` and `summarize_top` went from 7/10 to 12 to fill three rows. The brief said 5–7; this is the setting to change back.
+
 ## Fixes found while reviewing the page
 
 - "split" now needs 20% on each side (was 25%). The top story had 31% critical and 22% positive and read "mostly neutral" while its coverage sentence described a split.
