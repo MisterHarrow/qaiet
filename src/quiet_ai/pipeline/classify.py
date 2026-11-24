@@ -4,9 +4,11 @@ News and commentary: track, frame, stance (-2..2), evidence phrases, rationale, 
 entities. Builder items: what it is, why it matters, kind. Results are cached by content hash
 and prompt version; every label records the prompt version that produced it.
 
-Evidence is checked: a phrase counts only if it appears in the item's own headline or summary
-and is at most 12 words. A label with no surviving evidence drops to low confidence, which the
-site shows as "unclear".
+Changing a prompt version relabels items in the window on the next run.
+
+Evidence is checked: a phrase counts only if it appears in the item's own headline or summary.
+A real quote longer than 12 words is cut to its first 12. A label with no surviving evidence
+drops to low confidence, which the site shows as "unclear".
 """
 
 from __future__ import annotations
@@ -77,20 +79,35 @@ class LabelStats:
 
 
 def _norm(text: str) -> str:
+    """Lowercase words only: quotes, dashes, ellipses and other punctuation don't decide a match."""
     text = unicodedata.normalize("NFKC", text).lower()
-    text = text.replace("’", "'").replace("‘", "'").replace("“", '"').replace("”", '"').replace("–", "-").replace("—", "-")
-    return re.sub(r"\s+", " ", text).strip(" .,;:!?\"'")
+    return " ".join(re.findall(r"\w+", text))
 
 
 def check_news_label(raw: dict, sources_text: list[str]) -> dict:
     """Keep evidence that is really in the item's text; repair impossible frames."""
-    haystack = " ".join(_norm(t) for t in sources_text if t)
-    kept = [p.strip() for p in raw.get("evidence", []) if p.strip() and len(p.split()) <= MAX_EVIDENCE_WORDS and _norm(p) in haystack]
+    texts = [" " + _norm(t) + " " for t in sources_text if t]
+    kept, rejected, truncated = [], [], 0
+    for p in raw.get("evidence", []):
+        p = p.strip()
+        if not (p and _norm(p) and any(f" {_norm(p)} " in t for t in texts)):
+            rejected.append(p)
+            continue
+        words = p.split()
+        if len(words) > MAX_EVIDENCE_WORDS:  # a real quote, too long: keep its first 12 words
+            p = " ".join(words[:MAX_EVIDENCE_WORDS]).rstrip(",;:") + "…"
+            truncated += 1
+        kept.append(p)
     out = dict(raw)
     out["evidence"] = kept[:2]
-    out["evidence_dropped"] = len(raw.get("evidence", [])) - len(out["evidence"])
+    out["evidence_rejected"] = rejected
+    out["evidence_dropped"] = len(rejected)
+    out["evidence_truncated"] = truncated
     if out.get("track2") == out.get("track"):
         out["track2"] = None
+    if out.get("track") == "technical" and out.get("frame") == "neutral":
+        # The brief gives technical items no neutral frame; plain technical reporting is "grounded".
+        out["frame"], out["frame_repaired"] = "grounded", "neutral"
     if out.get("frame") not in FRAMES.get(out.get("track"), ()):
         out["frame"] = "neutral" if "neutral" in FRAMES.get(out.get("track"), ()) else None
         out["confidence"] = "low"
@@ -106,15 +123,20 @@ def _news_line(n: int, r) -> str:
         title += f" (English: {r['title_en']})"
     line = f"[{n}] ({r['lang'] or 'en'}) headline: {title}"
     if r["summary"]:
-        line += f" | summary: {r['summary'][:300]}"
+        line += f" | summary: {_cut(r['summary'], 300)}"
     return line
+
+
+def _cut(text: str, n: int) -> str:
+    """Cut at a word boundary, so the model never sees (and quotes) half a word."""
+    return text if len(text) <= n else text[:n].rsplit(" ", 1)[0]
 
 
 def _builder_line(n: int, r) -> str:
     extra = json.loads(r["extra"] or "{}")
     bits = [f"[{n}] ({r['kind']}) {r['title']}"]
     if r["summary"]:
-        bits.append(r["summary"][:300])
+        bits.append(_cut(r["summary"], 300))
     tags = extra.get("topics") or extra.get("tags") or extra.get("keywords") or []
     if tags:
         bits.append("tags: " + ", ".join(map(str, tags[:8])))
@@ -183,10 +205,10 @@ def label_news(store: Store, settings: Settings, sources: SourcesConfig, llm: LL
     rows = store.conn.execute(
         f"SELECT i.id, i.title, i.title_en, i.summary, i.lang, i.source, i.content_hash FROM items i "
         f"LEFT JOIN item_labels l ON l.item_id = i.id "
-        f"WHERE l.item_id IS NULL AND i.relevant = 1 AND i.dup_of IS NULL AND i.first_seen_at >= ? "
+        f"WHERE (l.item_id IS NULL OR l.prompt_version != ?) AND i.relevant = 1 AND i.dup_of IS NULL AND i.first_seen_at >= ? "
         f"AND i.kind IN ({','.join('?' * len(kinds))}) AND i.source NOT IN ({','.join('?' * len(digests))}) "
         f"ORDER BY i.first_seen_at DESC",
-        (since_iso, *kinds, *digests),
+        (a.news_prompt, since_iso, *kinds, *digests),
     ).fetchall()
     stats.skipped_llm_false = sum(1 for r in rows if r["source"] in no_llm)
     rows = [r for r in rows if r["source"] not in no_llm]
@@ -207,8 +229,8 @@ def label_builders(store: Store, settings: Settings, llm: LLM, item_ids: list[st
         return stats
     rows = store.conn.execute(
         f"SELECT i.id, i.kind, i.title, i.summary, i.extra, i.content_hash FROM items i LEFT JOIN item_labels l ON l.item_id = i.id "
-        f"WHERE l.item_id IS NULL AND i.id IN ({','.join('?' * len(item_ids))})",
-        item_ids,
+        f"WHERE (l.item_id IS NULL OR l.prompt_version != ?) AND i.id IN ({','.join('?' * len(item_ids))})",
+        [a.builder_prompt, *item_ids],
     ).fetchall()
     if not rows:
         return stats

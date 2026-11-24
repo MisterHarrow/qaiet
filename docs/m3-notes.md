@@ -53,6 +53,27 @@ Every call is logged in `llm_calls` with tokens and cost, priced with the model 
 
 Expected first run on today's backlog: about $0.30 (1,000 news labels about $0.12, 10 summaries about $0.12, the rest pennies). After that, about $0.70 a day.
 
-## Not verified live
+## First live run (2026-11-24)
 
-No `ANTHROPIC_API_KEY` on the dev machine, so labels, summaries and weather have only run against a fake client in the tests. They check that the right items are sent (opted-out publishers and digests aren't), the request shape (no thinking on Haiku, fallbacks on Sonnet, cached system prompt), the evidence check, caching (a second run makes no calls) and the budget stop. Prompt quality is unknown until the first real run. That's also when to label the ~50-item gold set for `qa eval` (M6).
+Three passes over the same backlog, about 1,000 news items, 380 ambiguous relevance checks and 10 story summaries. Total: **$0.33**, of which about $0.13 was the first pass and the rest was re-labeling after prompt changes.
+
+| | v1 | v2 | v3 (current) |
+|---|---|---|---|
+| Low-confidence labels | 27% | 35% | **10%** |
+| Evidence phrases rejected | 142 | 295 | **23** |
+
+What changed:
+- **v2**:
+  - Technical items have no neutral frame in the brief, so the model's "neutral" failed the check (all 78 frame failures were technical). The prompt now says plain technical reporting is "grounded", and a leftover technical "neutral" is mapped to grounded (recorded as `frame_repaired`).
+  - Evidence matching now ignores punctuation (curly quotes, ellipses).
+  - Rejected phrases are stored for auditing.
+  - Relevance v2: "AI companies (including Nvidia), their leaders and staff". v1 had called "Huang had contact with Chinese intelligence" not AI.
+  - Summary v2: headlines at most 18 words; coverage is null when no outlet covered the story.
+- **v3**: v2's "never shorten inside the phrase" made the model copy whole clauses, and 282 of 295 rejections were real quotes over 12 words. The prompt now asks for 3 to 12 consecutive words. As a backstop, a real quote that is too long is cut to its first 12 words with "…" (127 cut) instead of discarded.
+- Summaries sent to the model are cut at a word boundary. Half-words like "tigh" were being quoted and then failing the match.
+
+Label mix (v3): track economic 511, political 330, technical 186. Stance −2: 114, −1: 304, 0: 394, +1: 189, +2: 26. The day is dominated by the Nvidia scandal and a market sell-off, so negative stances lead.
+
+Bias-audit preview (mean stance of confident labels, by seed-list group): US left −1.04, UK/EU −0.43, tech trade −0.44, US mainstream −0.26, US right −0.22, Nordics −0.11, Asia/Middle East +0.06. The low-confidence share is now similar across groups (6–18%; US right was 48% under v1). This is one day of data and not yet checked against a hand-labeled gold set (M6).
+
+Cost check: the monthly pace shown by `qa costs` ($9.81) is inflated by the three re-label passes; steady state should stay near the M0 estimate (~$20/month at 12 runs a day).

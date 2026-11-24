@@ -94,7 +94,7 @@ def seeded_store(settings):
 
 
 def test_evidence_must_come_from_the_item():
-    raw = {"track": "technical", "frame": "bubble", "evidence": ["Nvidia board reinstates", "not in the text", "x " * 13],
+    raw = {"track": "technical", "frame": "bubble", "evidence": ["Nvidia board reinstates", "not in the text", "x y"],
            "confidence": "high", "entities": ["Nvidia", "Nvidia"], "track2": "technical"}
     out = classify.check_news_label(raw, ["Nvidia board reinstates Huang", None, "summary"])
     assert out["evidence"] == ["Nvidia board reinstates"] and out["evidence_dropped"] == 2
@@ -123,7 +123,7 @@ def test_full_analysis_with_fake_llm(settings):
     assert "again" not in sent and "(TLDR)" not in sent
     assert res.news.labeled == 2 and res.news.skipped_llm_false == 1 and res.news.evidence_dropped == 2
     lab = json.loads(st.conn.execute("SELECT data FROM item_labels WHERE item_id = 'n2'").fetchone()[0])
-    assert lab["frame"] == "bubble" and lab["prompt_version"] == "news_label_v1" and lab["evidence"]
+    assert lab["frame"] == "bubble" and lab["prompt_version"] == "news_label_v3" and lab["evidence"]
 
     # Haiku calls have thinking off; Sonnet calls use the server-side refusal fallback.
     haiku = [c for c in fake.calls if c["model"] == "claude-haiku-5-5"]
@@ -177,3 +177,21 @@ def test_cli_classify_and_stories_dry_run():
     assert "momentum" in res.output and "Rising" in res.output
     res = runner.invoke(app, ["stories", "--dry-run"])
     assert res.exit_code == 0, res.output
+
+
+def test_evidence_match_ignores_punctuation_and_keeps_rejected():
+    out = classify.check_news_label(
+        {"track": "technical", "frame": "neutral", "evidence": ["Huang's return resuscitates AI trade...", "a made-up phrase"], "confidence": "medium"},
+        ["Japan Stocks Rebound as Huang’s Return Resuscitates AI Trade"],
+    )
+    assert out["evidence"] == ["Huang's return resuscitates AI trade..."] and out["evidence_rejected"] == ["a made-up phrase"]
+    assert out["frame"] == "grounded" and out["frame_repaired"] == "neutral" and out["confidence"] == "medium"
+    # Whole words only: "AI" must not match inside "said"
+    assert classify.check_news_label({"track": "economic", "frame": "boom", "evidence": ["ai"], "confidence": "high"}, ["He said so"])["evidence"] == []
+
+
+def test_long_real_quotes_are_cut_to_twelve_words():
+    text = "one two three four five six seven eight nine ten eleven twelve thirteen fourteen"
+    out = classify.check_news_label({"track": "economic", "frame": "boom", "evidence": [text], "confidence": "high"}, [text])
+    assert out["evidence"] == ["one two three four five six seven eight nine ten eleven twelve…"]
+    assert out["evidence_truncated"] == 1 and out["confidence"] == "high"

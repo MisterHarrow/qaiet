@@ -256,7 +256,8 @@ def costs() -> None:
         table.add_row(r["task"], r["model"], str(r["calls"]), str(r["errs"]), f"{r['i'] or 0:,}", f"{r['o'] or 0:,}", f"{r['cr'] or 0:,}", f"{r['c'] or 0:.4f}")
     console.print(table)
     cap = settings.llm.monthly_budget_usd
-    days = (now - start).total_seconds() / 86400 or 1
+    first = store.conn.execute("SELECT MIN(created_at) FROM llm_calls WHERE created_at >= ?", (start.isoformat(timespec="seconds"),)).fetchone()[0]
+    days = max(1.0, (now - datetime.fromisoformat(first)).total_seconds() / 86400) if first else 1.0
     console.print(f"month to date ${total:.4f} of ${cap:.2f} cap; on pace for ${total / days * 30:.2f} this month")
     store.close()
 

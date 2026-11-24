@@ -147,7 +147,7 @@ def run(store: Store, settings: Settings, sources: SourcesConfig, llm: LLM | Non
     for start in range(0, len(todo), rel.llm_batch_size):
         batch = todo[start : start + rel.llm_batch_size]
         user = "\n".join(
-            f"[{n}] ({r['lang'] or 'en'}) {r['title']}" + (f" | {r['summary'][:200]}" if r["summary"] else "")
+            f"[{n}] ({r['lang'] or 'en'}) {r['title']}" + (f" | {r['summary'][:200].rsplit(' ', 1)[0]}" if r["summary"] else "")
             for n, r in enumerate(batch)
         )
         try:

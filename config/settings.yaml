@@ -68,7 +68,7 @@ relevance:
   always_kinds: [repo, model, dataset, space, paper, launch]
   always_sources: [hf_posts]
   llm_batch_size: 25              # ambiguous items per Haiku call
-  prompt: relevance_v1            # src/quiet_ai/llm/prompts/<prompt>.md
+  prompt: relevance_v2            # src/quiet_ai/llm/prompts/<prompt>.md
 
 embed:
   # Local ONNX model via fastembed, CPU. Multilingual: Swedish/German/French/Spanish headlines land
@@ -111,9 +111,9 @@ rising:
 
 analysis:
   label_batch_size: 20            # items per Haiku labeling call
-  news_prompt: news_label_v1      # prompt files in src/quiet_ai/llm/prompts/; the version is stored on each label
+  news_prompt: news_label_v3      # prompt files in src/quiet_ai/llm/prompts/; the version is stored on each label
   builder_prompt: builder_label_v1
-  summary_prompt: story_summary_v1
+  summary_prompt: story_summary_v2
   weather_prompt: weather_v1
   summarize_top: 10               # Sonnet summaries for the top stories only
   resummarize_new_items: 3        # re-summarize after this many new items, or any new outlet

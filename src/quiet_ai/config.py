@@ -135,7 +135,7 @@ class RelevanceSettings(_Model):
     always_kinds: list[str] = Field(default_factory=lambda: ["repo", "model", "dataset", "space", "paper", "launch"])
     always_sources: list[str] = Field(default_factory=lambda: ["hf_posts"])
     llm_batch_size: int = 25
-    prompt: str = "relevance_v1"
+    prompt: str = "relevance_v2"
 
 
 class EmbedSettings(_Model):
@@ -170,9 +170,9 @@ class RisingSettings(_Model):
 
 class AnalysisSettings(_Model):
     label_batch_size: int = 20
-    news_prompt: str = "news_label_v1"
+    news_prompt: str = "news_label_v3"
     builder_prompt: str = "builder_label_v1"
-    summary_prompt: str = "story_summary_v1"
+    summary_prompt: str = "story_summary_v2"
     weather_prompt: str = "weather_v1"
     summarize_top: int = 10
     resummarize_new_items: int = 3   # re-summarize after this many new items, or any new outlet

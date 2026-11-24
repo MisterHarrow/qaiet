@@ -25,7 +25,7 @@ STANCE_WORD = {"-2": "strongly critical", "-1": "critical", "0": "neutral", "1":
 class StorySummary(BaseModel):
     headline: str
     track: Literal["technical", "political", "economic"]
-    coverage: str
+    coverage: str | None
     builders: str | None
 
 

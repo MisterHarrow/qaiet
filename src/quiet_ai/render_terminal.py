@@ -6,7 +6,7 @@ from rich.console import Console
 from rich.markup import escape
 
 STANCE_MARK = {"-2": "−−", "-1": "−", "0": "0", "1": "+", "2": "++", "unclear": "?", "unlabeled": "·"}
-STANCE_STYLE = {"-2": "bold", "-1": "", "0": "dim", "1": "", "2": "bold", "unclear": "dim italic", "unlabeled": "dim"}
+STANCE_STYLE = {"-2": "bold", "-1": "default", "0": "dim", "1": "default", "2": "bold", "unclear": "dim italic", "unlabeled": "dim"}
 
 
 def stance_bar(stance: dict[str, int]) -> str:
@@ -31,7 +31,7 @@ def render(console: Console, edition: dict, examples_per_stance: int = 2) -> Non
             mark = STANCE_MARK[group["stance"]]
             for c in group["items"][:examples_per_stance]:
                 ev = f' “{escape(c["evidence"][0])}”' if c["evidence"] else ""
-                frame = f" [dim]{c['frame']}[/]" if c["frame"] else ""
+                frame = f" [dim]{c['frame']}[/]" if c["frame"] and group["stance"] not in ("unclear", "unlabeled") else ""
                 title = c["title_en"] or c["title"]
                 if c["llm_opt_out"]:
                     frame = " [dim](not labeled: publisher opted out of AI input)[/]"
