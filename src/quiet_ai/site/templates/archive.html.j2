@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Archive · quiet ai</title>
-<meta name="description" content="Every past daily edition of quiet ai, frozen at midnight Stockholm time.">
+<meta name="description" content="Every past morning edition of quiet ai.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23f6f3ec'/%3E%3Cpath d='M8 20h16M8 14h11' stroke='%23302d28' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="{{ root }}static/style.css">
 </head>
@@ -18,7 +18,7 @@
 </header>
 <main class="prose">
 <h1>Archive</h1>
-<p class="lede">Each day's front page, frozen at midnight Stockholm time.</p>
+<p class="lede">Every morning's edition, as it was published.</p>
 {% if days %}
 <ol class="archive-list">
   {% for d in days %}
@@ -30,7 +30,7 @@
   {% endfor %}
 </ol>
 {% else %}
-<p>The first edition is frozen after midnight on the first full day of collection.</p>
+<p>Editions appear here the morning after they are published.</p>
 {% endif %}
 </main>
 </div>

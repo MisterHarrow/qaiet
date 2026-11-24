@@ -4,7 +4,13 @@ Live at https://misterharrow.github.io/quiet-ai/ (GitHub Pages, deployed by Acti
 
 ## How it runs
 
-`.github/workflows/run.yml`, every 2 hours at :17 UTC, plus manual runs from the Actions tab:
+**Schedule (changed the same day, at Benjamin's request): published once a day at 06:30 Stockholm, collected every 2 hours.**
+
+- **Collect runs** (every 2 hours at :17 UTC): restore the database, fetch every source, save. No model calls and no deploy, so they cost nothing. They exist because about 10 high-volume feeds (Bloomberg, The Hill, Business Insider, SvD, Al Jazeera, France 24, Korea Herald, ABC, Dagens industri) list fewer items than they publish in a day; fetching once a day would miss part of their coverage.
+- **Publish runs** (06:30 Stockholm): everything below. GitHub cron is UTC and can't follow daylight saving, so it fires at 04:30 and 05:30 UTC and `.github/scripts/plan.sh` keeps the one that is 06:xx in Stockholm. Manual runs from the Actions tab publish by default, or collect if chosen.
+- **Editions:** each publish is that day's edition. The next morning's publish freezes it to `editions/<date>.json` and the archive.
+
+A publish run does:
 
 1. Restore `data/quiet-ai.db` from the `db` release (`quiet-ai.db.gz`).
 2. `uv run qa run`:
@@ -47,4 +53,4 @@ Now:
 - **Summaries** refresh only when a story grows by about 30% (at least 3 items), gains about 20% more outlets (at least 1), or its stance mix moves by 20% (at least 3 labels).
 - **Weather lines** refresh when a view's top 3 stories change, or at most every 6 hours otherwise.
 
-Verified on the next run: **$0.019** (2 summaries, 3 weather lines, a few Haiku batches), so about $0.25 a day or $7–10 a month at 12 runs, with busier news days higher. The settings are `analysis.resummarize_growth` and `analysis.weather_min_hours`. `qa costs` shows the month's pace; the cap still stops all LLM steps at $30.
+Verified on the next run: **$0.019** (2 summaries, 3 weather lines, a few Haiku batches). With one publish a day (a full day of new items to label and more stories changed), expect roughly $0.05–0.15 a day, **about $2–5 a month**. The settings are `analysis.resummarize_growth` and `analysis.weather_min_hours`. `qa costs` shows the month's pace; the cap still stops all LLM steps at $30.

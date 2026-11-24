@@ -167,6 +167,7 @@ site:
   term_stopwords: [ai, artificial intelligence, a.i., generative ai, llm, llms, tech, technology, chatbot, chatbots]
 
 schedule:
-  every_hours: 2
-  edition_timezone: Europe/Stockholm
-  edition_cutoff: "00:00"
+  # Describes .github/workflows/run.yml for the site's text (the workflow is what actually runs).
+  collect_every_hours: 2          # fetch sources only, no model calls
+  publish_at: "06:30"             # labels, summaries, the page and the daily edition
+  timezone: Europe/Stockholm

@@ -1,8 +1,9 @@
 """Daily editions and housekeeping.
 
-Every run stores the front-page edition under its local date (Europe/Stockholm). Once a date
-is over (00:00 local), its last edition is written to editions/<date>.json, committed by the
-workflow and rendered as a permanent page under /archive/<date>/.
+Every publish (06:30 Stockholm) stores the front-page edition under its local date. The next
+publish writes earlier dates to editions/<date>.json, which the workflow commits and the site
+renders as permanent pages under /archive/<date>/. A manual publish later the same day
+replaces that day's edition until it is frozen.
 """
 
 from __future__ import annotations

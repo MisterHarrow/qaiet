@@ -1,11 +1,22 @@
 name: run
 
-# Every 2 hours: restore the database, run the whole pipeline, save the database,
-# commit any newly frozen daily editions, and deploy the site to GitHub Pages.
+# Two kinds of run share this workflow and the database:
+#   collect - every 2 hours: fetch every source and save the database. No model calls, no deploy.
+#             Keeps high-volume feeds complete (some list fewer items than they publish in a day).
+#   publish - every morning at 06:30 Stockholm: collect, then relevance, stories, labels,
+#             summaries, the site and the daily edition; save, commit editions, deploy to Pages.
+# Manual runs (Actions tab) publish by default; pick "collect" to only fetch.
 on:
   schedule:
-    - cron: "17 */2 * * *"   # :17 past every second hour (UTC), away from the top-of-hour rush
+    - cron: "17 */2 * * *"   # collect: :17 past every second hour (UTC)
+    - cron: "30 4,5 * * *"   # publish: 04:30 and 05:30 UTC; plan.sh keeps the one that is 06:30 in Stockholm
   workflow_dispatch:
+    inputs:
+      mode:
+        description: What to run
+        type: choice
+        options: [publish, collect]
+        default: publish
 
 permissions:
   contents: write   # commit frozen editions, store the database as a release asset
@@ -17,10 +28,32 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      mode: ${{ steps.plan.outputs.mode }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          sparse-checkout: .github/scripts
+      - id: plan
+        env:
+          EVENT: ${{ github.event_name }}
+          SCHEDULE: ${{ github.event.schedule }}
+          INPUT_MODE: ${{ inputs.mode }}
+          PUBLISH_CRON: "30 4,5 * * *"
+        run: |
+          mode=$(.github/scripts/plan.sh)
+          echo "mode=$mode" >> "$GITHUB_OUTPUT"
+          echo "This run: $mode (Stockholm time $(TZ=Europe/Stockholm date +%H:%M))"
+
   run:
+    needs: plan
+    if: needs.plan.outputs.mode != 'skip'
     runs-on: ubuntu-latest
     timeout-minutes: 45
     env:
+      MODE: ${{ needs.plan.outputs.mode }}
       GH_TOKEN: ${{ github.token }}
       GITHUB_TOKEN: ${{ github.token }}        # GitHub search: 30 requests/min instead of 10
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -33,6 +66,7 @@ jobs:
           enable-cache: true
 
       - name: Cache the embedding model
+        if: env.MODE == 'publish'
         uses: actions/cache@v6
         with:
           path: .cache/fastembed
@@ -51,7 +85,12 @@ jobs:
       - name: Install
         run: uv sync --frozen
 
-      - name: Run pipeline
+      - name: Collect
+        if: env.MODE == 'collect'
+        run: uv run qa ingest
+
+      - name: Publish
+        if: env.MODE == 'publish'
         run: uv run qa run
 
       - name: Save database
@@ -71,6 +110,7 @@ jobs:
           done
 
       - name: Commit frozen editions
+        if: env.MODE == 'publish'
         run: |
           git add editions
           if git diff --cached --quiet; then
@@ -82,14 +122,17 @@ jobs:
             git push
           fi
 
-      - uses: actions/configure-pages@v6
+      - if: env.MODE == 'publish'
+        uses: actions/configure-pages@v6
 
-      - uses: actions/upload-pages-artifact@v5
+      - if: env.MODE == 'publish'
+        uses: actions/upload-pages-artifact@v5
         with:
           path: site
 
   deploy:
-    needs: run
+    needs: [plan, run]
+    if: needs.plan.outputs.mode == 'publish'
     runs-on: ubuntu-latest
     environment:
       name: github-pages

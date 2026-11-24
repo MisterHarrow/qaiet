@@ -40,10 +40,10 @@ def test_archive_pages(tmp_path):
     html = index.read_text()
     assert '<a href="2026-11-24/">Tuesday 24 November 2026</a>' in html and "Quiet day." in html
     day = (tmp_path / "archive" / "2026-11-24" / "index.html").read_text()
-    assert "Edition of Tuesday 24 November 2026" in day and "It no longer changes" in day
+    assert "Edition of Tuesday 24 November 2026" in day and "The edition published on Tuesday 24 November 2026" in day
     assert 'href="../../static/style.css"' in day and 'class="periods"' not in day
     empty = build.render_archive([], tmp_path / "empty").read_text()
-    assert "first edition is frozen after midnight" in empty
+    assert "Editions appear here the morning after" in empty
 
 
 def test_prune_rules():

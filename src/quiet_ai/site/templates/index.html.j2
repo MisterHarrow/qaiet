@@ -23,7 +23,7 @@
   </nav>
   {% endif %}
   {% if frozen_date %}
-  <p class="partial">The front page as it stood at the end of {{ frozen_date }}, last updated {{ updated }} {{ tz_name }}. It no longer changes. <a href="{{ root }}">Today's overview</a></p>
+  <p class="partial">The edition published on {{ frozen_date }} at {{ updated }} {{ tz_name }}. It no longer changes. <a href="{{ root }}">Today's overview</a></p>
   {% endif %}
   {% if data_since and not frozen_date %}
   <p class="partial">Collecting since {{ data_since }}, so this view covers less than {{ period.label }} so far. It fills in as the days pass.</p>

@@ -213,9 +213,10 @@ class SiteSettings(_Model):
 
 
 class ScheduleSettings(_Model):
-    every_hours: int = 2
-    edition_timezone: str = "Europe/Stockholm"
-    edition_cutoff: str = "00:00"
+    """Documents the workflow's timing for the site's text; .github/workflows/run.yml is what runs it."""
+    collect_every_hours: int = 2
+    publish_at: str = "06:30"
+    timezone: str = "Europe/Stockholm"
 
 
 class ModelPrice(_Model):
