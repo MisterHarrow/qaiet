@@ -37,7 +37,7 @@ Setup done on 2026-11-24:
   | The Batch (deeplearning.ai, Vercel) | 403 | Kept; same. |
   | GDELT | 429 | Kept; its rate limit seems to count GitHub's shared IPs. |
 
-  Working around these blocks (proxies, browser-like user agents) is out of bounds by design.
+  Working around these blocks (proxies, browser-like user agents) is out of bounds by design. The blocks are intermittent: on the second run Marcus on AI, ChinAI and The Batch all worked, and only Breitbart and GDELT failed.
 
 ## Cost control
 
@@ -47,4 +47,4 @@ Now:
 - **Summaries** refresh only when a story grows by about 30% (at least 3 items), gains about 20% more outlets (at least 1), or its stance mix moves by 20% (at least 3 labels).
 - **Weather lines** refresh when a view's top 3 stories change, or at most every 6 hours otherwise.
 
-The settings are `analysis.resummarize_growth` and `analysis.weather_min_hours`. `qa costs` shows the month's pace; the cap still stops all LLM steps at $30.
+Verified on the next run: **$0.019** (2 summaries, 3 weather lines, a few Haiku batches), so about $0.25 a day or $7–10 a month at 12 runs, with busier news days higher. The settings are `analysis.resummarize_growth` and `analysis.weather_min_hours`. `qa costs` shows the month's pace; the cap still stops all LLM steps at $30.
