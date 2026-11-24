@@ -1,0 +1,479 @@
+# Curated Bluesky accounts for quiet-ai. DRAFT from M0 (2026-11-24). Benjamin approves before use.
+# X is out of scope (paid API), so Bluesky is the only social source.
+#
+# bluesky: handle resolved via the public AppView (getProfile); display name and bio checked
+#          by hand against the person. bluesky_active = posted (not a reply) since 2026-08-26.
+#          Only active accounts are polled; inactive ones stay listed so they can be switched on.
+# category: lab | researcher | builder | policy | econ | journalist | skeptic
+#          (used for balance checks only, never shown as a label on the site)
+accounts:
+- name: Ai2
+  category: lab
+  bluesky: ai2.bsky.social
+  bluesky_active: true
+  bluesky_followers: 5074
+- name: Anthropic
+  category: lab
+  bluesky: anthropic.com
+  bluesky_active: false
+  bluesky_followers: 17205
+- name: EleutherAI
+  category: lab
+  bluesky: eleutherai.bsky.social
+  bluesky_active: false
+  bluesky_followers: 2006
+- name: Epoch AI
+  category: lab
+  bluesky: epochai.bsky.social
+  bluesky_active: true
+  bluesky_followers: 1818
+- name: Hugging Face
+  category: lab
+  bluesky: hf.co
+  bluesky_active: false
+  bluesky_followers: 17115
+- name: LangChain
+  category: lab
+  bluesky: langchain.bsky.social
+  bluesky_active: false
+  bluesky_followers: 2235
+- name: Microsoft Research
+  category: lab
+  bluesky: msftresearch.bsky.social
+  bluesky_active: true
+  bluesky_followers: 5114
+- name: Sakana AI
+  category: lab
+  bluesky: sakanaai.bsky.social
+  bluesky_active: true
+  bluesky_followers: 1666
+- name: Abeba Birhane
+  category: researcher
+  bluesky: abeba.blacksky.app
+  bluesky_active: true
+  bluesky_followers: 55097
+- name: Chris Olah
+  category: researcher
+  bluesky: colah.bsky.social
+  bluesky_active: false
+  bluesky_followers: 7224
+- name: Christopher Manning
+  category: researcher
+  bluesky: chrmanning.bsky.social
+  bluesky_active: false
+  bluesky_followers: 10098
+- name: Ethan Mollick
+  category: researcher
+  bluesky: emollick.bsky.social
+  bluesky_active: true
+  bluesky_followers: 38155
+- name: Jan Leike
+  category: researcher
+  bluesky: janleike.bsky.social
+  bluesky_active: false
+  bluesky_followers: 61
+- name: Jeff Dean
+  category: researcher
+  bluesky: jeffdean.bsky.social
+  bluesky_active: false
+  bluesky_followers: 11242
+- name: Kyunghyun Cho
+  category: researcher
+  bluesky: kyunghyuncho.bsky.social
+  bluesky_active: false
+  bluesky_followers: 3391
+- name: Lucas Beyer
+  category: researcher
+  bluesky: giffmana.ai
+  bluesky_active: false
+  bluesky_followers: 6323
+- name: Margaret Mitchell
+  category: researcher
+  bluesky: mmitchell.bsky.social
+  bluesky_active: true
+  bluesky_followers: 24506
+- name: Nathan Lambert
+  category: researcher
+  bluesky: natolambert.bsky.social
+  bluesky_active: true
+  bluesky_followers: 15356
+- name: Noam Brown
+  category: researcher
+  bluesky: polynoamial.bsky.social
+  bluesky_active: false
+  bluesky_followers: 1752
+- name: Sara Hooker
+  category: researcher
+  bluesky: sarahooker.bsky.social
+  bluesky_active: false
+  bluesky_followers: 8189
+- name: Sayash Kapoor
+  category: researcher
+  bluesky: sayash.bsky.social
+  bluesky_active: false
+  bluesky_followers: 8839
+- name: Sebastian Raschka
+  category: researcher
+  bluesky: rasbt.bsky.social
+  bluesky_active: true
+  bluesky_followers: 10622
+- name: Stella Biderman
+  category: researcher
+  bluesky: stellaathena.bsky.social
+  bluesky_active: true
+  bluesky_followers: 6016
+- name: Yann LeCun
+  category: researcher
+  bluesky: yann-lecun.bsky.social
+  bluesky_active: false
+  bluesky_followers: 16913
+- name: Yoshua Bengio
+  category: researcher
+  bluesky: yoshuabengio.bsky.social
+  bluesky_active: true
+  bluesky_followers: 9427
+- name: Zvi Mowshowitz
+  category: researcher
+  bluesky: thezvi.bsky.social
+  bluesky_active: true
+  bluesky_followers: 2021
+- name: Clem Delangue
+  category: builder
+  bluesky: clem.hf.co
+  bluesky_active: false
+  bluesky_followers: 3563
+- name: Eugene Yan
+  category: builder
+  bluesky: eugeneyan.com
+  bluesky_active: false
+  bluesky_followers: 10934
+- name: Guillermo Rauch
+  category: builder
+  bluesky: rauchg.blue
+  bluesky_active: false
+  bluesky_followers: 10146
+- name: Hamel Husain
+  category: builder
+  bluesky: hamel.bsky.social
+  bluesky_active: true
+  bluesky_followers: 6823
+- name: Jeremy Howard
+  category: builder
+  bluesky: howard.fm
+  bluesky_active: false
+  bluesky_followers: 21027
+- name: Maxime Labonne
+  category: builder
+  bluesky: maximelabonne.bsky.social
+  bluesky_active: false
+  bluesky_followers: 855
+- name: Omar Sanseviero
+  category: builder
+  bluesky: osanseviero.bsky.social
+  bluesky_active: false
+  bluesky_followers: 3415
+- name: Philipp Schmid
+  category: builder
+  bluesky: philschmid.bsky.social
+  bluesky_active: false
+  bluesky_followers: 2944
+- name: Shreya Shankar
+  category: builder
+  bluesky: sh-reya.bsky.social
+  bluesky_active: false
+  bluesky_followers: 774
+- name: Simon Willison
+  category: builder
+  bluesky: simonwillison.net
+  bluesky_active: true
+  bluesky_followers: 52517
+- name: Soumith Chintala
+  category: builder
+  bluesky: soumithchintala.bsky.social
+  bluesky_active: false
+  bluesky_followers: 10541
+- name: Thomas Wolf
+  category: builder
+  bluesky: thomwolf.bsky.social
+  bluesky_active: false
+  bluesky_followers: 12941
+- name: swyx
+  category: builder
+  bluesky: swyx.io
+  bluesky_active: false
+  bluesky_followers: 9228
+- name: AI Now Institute
+  category: policy
+  bluesky: ainowinstitute.bsky.social
+  bluesky_active: true
+  bluesky_followers: 11511
+- name: Ada Lovelace Institute
+  category: policy
+  bluesky: adalovelaceinst.bsky.social
+  bluesky_active: true
+  bluesky_followers: 5798
+- name: Adam Thierer
+  category: policy
+  bluesky: adamthierer.bsky.social
+  bluesky_active: false
+  bluesky_followers: 573
+- name: Amba Kak
+  category: policy
+  bluesky: ambakak.bsky.social
+  bluesky_active: true
+  bluesky_followers: 1325
+- name: DAIR Institute
+  category: policy
+  bluesky: dairinstitute.bsky.social
+  bluesky_active: true
+  bluesky_followers: 7450
+- name: Daphne Keller
+  category: policy
+  bluesky: daphnek.bsky.social
+  bluesky_active: true
+  bluesky_followers: 13273
+- name: Dean W. Ball
+  category: policy
+  bluesky: deanwb.bsky.social
+  bluesky_active: false
+  bluesky_followers: 1843
+- name: Electronic Frontier Foundation
+  category: policy
+  bluesky: eff.org
+  bluesky_active: true
+  bluesky_followers: 168007
+- name: Future of Life Institute
+  category: policy
+  bluesky: futureoflife.org
+  bluesky_active: true
+  bluesky_followers: 1090
+- name: Helen Toner
+  category: policy
+  bluesky: hlntnr.bsky.social
+  bluesky_active: false
+  bluesky_followers: 1619
+- name: Jack Clark
+  category: policy
+  bluesky: jackclarksf.bsky.social
+  bluesky_active: false
+  bluesky_followers: 2323
+- name: Jeffrey Ding
+  category: policy
+  bluesky: jeffreyding.bsky.social
+  bluesky_active: false
+  bluesky_followers: 714
+- name: Jordan Schneider
+  category: policy
+  bluesky: jordanschneider.bsky.social
+  bluesky_active: false
+  bluesky_followers: 847
+- name: Justin Hendrix
+  category: policy
+  bluesky: justinhendrix.bsky.social
+  bluesky_active: true
+  bluesky_followers: 137095
+- name: Kai Zenner
+  category: policy
+  bluesky: kzenner.bsky.social
+  bluesky_active: false
+  bluesky_followers: 211
+- name: Lina Khan
+  category: policy
+  bluesky: linamkhan.bsky.social
+  bluesky_active: false
+  bluesky_followers: 5073
+- name: Luiza Jarovsky
+  category: policy
+  bluesky: luizajarovsky.bsky.social
+  bluesky_active: true
+  bluesky_followers: 3737
+- name: Marietje Schaake
+  category: policy
+  bluesky: marietjeschaake.bsky.social
+  bluesky_active: true
+  bluesky_followers: 24292
+- name: Mike Masnick
+  category: policy
+  bluesky: masnick.com
+  bluesky_active: true
+  bluesky_followers: 207757
+- name: Miles Brundage
+  category: policy
+  bluesky: milesbrundage.bsky.social
+  bluesky_active: false
+  bluesky_followers: 12070
+- name: Neil Chilson
+  category: policy
+  bluesky: neilchilson.bsky.social
+  bluesky_active: false
+  bluesky_followers: 229
+- name: Rumman Chowdhury
+  category: policy
+  bluesky: ruchowdh.bsky.social
+  bluesky_active: false
+  bluesky_followers: 23005
+- name: Samuel Hammond
+  category: policy
+  bluesky: hamandcheese.bsky.social
+  bluesky_active: false
+  bluesky_followers: 1707
+- name: Sarah Myers West
+  category: policy
+  bluesky: smw.bsky.social
+  bluesky_active: true
+  bluesky_followers: 6039
+- name: Stanford HAI
+  category: policy
+  bluesky: stanfordhai.bsky.social
+  bluesky_active: false
+  bluesky_followers: 3007
+- name: Suresh Venkatasubramanian
+  category: policy
+  bluesky: geomblog.bsky.social
+  bluesky_active: true
+  bluesky_followers: 4777
+- name: Tech Policy Press
+  category: policy
+  bluesky: techpolicypress.bsky.social
+  bluesky_active: true
+  bluesky_followers: 26580
+- name: Anton Korinek
+  category: econ
+  bluesky: akorinek.bsky.social
+  bluesky_active: false
+  bluesky_followers: 502
+- name: Erik Brynjolfsson
+  category: econ
+  bluesky: erikbryn.bsky.social
+  bluesky_active: true
+  bluesky_followers: 6385
+- name: Joe Weisenthal
+  category: econ
+  bluesky: weisenthal.bsky.social
+  bluesky_active: true
+  bluesky_followers: 64296
+- name: Justin Wolfers
+  category: econ
+  bluesky: justinwolfers.bsky.social
+  bluesky_active: true
+  bluesky_followers: 174947
+- name: Paul Krugman
+  category: econ
+  bluesky: pkrugman.bsky.social
+  bluesky_active: true
+  bluesky_followers: 317297
+- name: Tracy Alloway
+  category: econ
+  bluesky: tracyalloway.bsky.social
+  bluesky_active: false
+  bluesky_followers: 14644
+- name: Casey Newton
+  category: journalist
+  bluesky: caseynewton.bsky.social
+  bluesky_active: true
+  bluesky_followers: 326637
+- name: Charlie Warzel
+  category: journalist
+  bluesky: cwarzel.bsky.social
+  bluesky_active: true
+  bluesky_followers: 112633
+- name: Gergely Orosz
+  category: journalist
+  bluesky: gergely.pragmaticengineer.com
+  bluesky_active: true
+  bluesky_followers: 43637
+- name: Jason Koebler
+  category: journalist
+  bluesky: jasonkoebler.bsky.social
+  bluesky_active: true
+  bluesky_followers: 63341
+- name: Kara Swisher
+  category: journalist
+  bluesky: karaswisher.bsky.social
+  bluesky_active: false
+  bluesky_followers: 441225
+- name: Karen Hao
+  category: journalist
+  bluesky: karenhao.bsky.social
+  bluesky_active: true
+  bluesky_followers: 26128
+- name: Kylie Robison
+  category: journalist
+  bluesky: kylierobison.com
+  bluesky_active: false
+  bluesky_followers: 55868
+- name: Will Knight
+  category: journalist
+  bluesky: willknight.bsky.social
+  bluesky_active: false
+  bluesky_followers: 19621
+- name: Alex Hanna
+  category: skeptic
+  bluesky: alexhanna.bsky.social
+  bluesky_active: true
+  bluesky_followers: 25804
+- name: Arvind Narayanan
+  category: skeptic
+  bluesky: randomwalker.bsky.social
+  bluesky_active: true
+  bluesky_followers: 24408
+- name: Brian Merchant
+  category: skeptic
+  bluesky: bcmerchant.bsky.social
+  bluesky_active: true
+  bluesky_followers: 148740
+- name: Cory Doctorow
+  category: skeptic
+  bluesky: doctorow.pluralistic.net
+  bluesky_active: true
+  bluesky_followers: 37786
+- name: Ed Zitron
+  category: skeptic
+  bluesky: edzitron.com
+  bluesky_active: true
+  bluesky_followers: 191922
+- name: Emily M. Bender
+  category: skeptic
+  bluesky: emilymbender.bsky.social
+  bluesky_active: true
+  bluesky_followers: 46770
+- name: Gary Marcus
+  category: skeptic
+  bluesky: garymarcus.bsky.social
+  bluesky_active: true
+  bluesky_followers: 31677
+- name: Grady Booch
+  category: skeptic
+  bluesky: booch.com
+  bluesky_active: true
+  bluesky_followers: 19221
+- name: Melanie Mitchell
+  category: skeptic
+  bluesky: melaniemitchell.bsky.social
+  bluesky_active: true
+  bluesky_followers: 26999
+- name: Meredith Whittaker
+  category: skeptic
+  bluesky: meredithmeredith.bsky.social
+  bluesky_active: true
+  bluesky_followers: 184901
+- name: Molly White
+  category: skeptic
+  bluesky: molly.wiki
+  bluesky_active: true
+  bluesky_followers: 241742
+- name: Paris Marx
+  category: skeptic
+  bluesky: parismarx.com
+  bluesky_active: true
+  bluesky_followers: 83494
+- name: Subbarao Kambhampati
+  category: skeptic
+  bluesky: rao2z.bsky.social
+  bluesky_active: true
+  bluesky_followers: 1014
+- name: Timnit Gebru
+  category: skeptic
+  bluesky: timnitgebru.blacksky.app
+  bluesky_active: true
+  bluesky_followers: 42567
