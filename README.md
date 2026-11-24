@@ -27,6 +27,7 @@ uv run qa stories -p week        # same for another view: day, week, month, year
 uv run qa costs                  # LLM spend this month against the cap
 uv run qa pull                   # replace data/quiet-ai.db with the live database (the `db` release asset)
 uv run qa eval sample            # write a blind, stratified sample to tests/gold/labels.yaml for hand labeling
+uv run qa eval crosscheck        # label the same sample with Claude Opus 5.5 and score the site against it
 uv run qa eval score             # agreement between the model's labels and the hand labels
 uv run qa eval audit --by group  # stance by outlet group (or --by type / country), to spot classifier skew
 uv run qa classify --dry-run     # any of these with --dry-run: fixtures, no network, no LLM

@@ -37,6 +37,26 @@ Built as plain inline SVG, no chart library, no requests to other sites. "Index"
 
 **To do (Benjamin):** fill in `track`, `frame` and `stance` for the 50 items in `tests/gold/labels.yaml`, from the headline and summary alone, then `uv run qa pull` and `uv run qa eval score`. Once the file is committed, the /about page shows the agreement numbers in place of the "being labeled" note.
 
+### Cross-check with Claude Opus 5.5
+
+`qa eval crosscheck` has Claude Opus 5.5 label the same 50 articles through the site's own prompt (`news_label_v3`) and the same input the Haiku labeler sees (headline, English translation, summary). Opus 5.5 always thinks; effort is medium. Low-confidence Opus stances count as blank, the way a person would leave them. The labels are in `tests/gold/labels-claude-opus-5-5.yaml`. Cost: 5 calls, $0.16.
+
+| Field | Site agrees with Opus | n |
+|---|---|---|
+| Angle | 90% | 50 |
+| Frame (same angle) | 64% | 45 |
+| Stance, exact | 65% | 48 |
+| Stance, within one step | 96% | 48 |
+
+- **Mean absolute stance difference** is 0.40. **Net bias** is +0.02: the site's labels are neither more critical nor more positive than Opus's overall. By group, no direction stands out (all within ±0.17 except one US left-leaning article).
+- **Two big stance disagreements:**
+  - DN, "Ökända hackare hotar läcka Nvidias hemligheter": the site says −2, Opus 0 (plain reporting). Opus is right.
+  - Vox, "The US helped the world rein in nuclear weapons. Could it do the same for AI?": the site says +1, Opus −1 (argues for constraints). Opus reads the stance definition more closely. This one is the "US left-leaning +2.00" in the per-group line, so if anything the site read the left-leaning outlet as more positive, not less.
+- **Angle disagreements** are borderline cases: data-center emissions (technical vs economic), Jensen Huang's exit and China's supply chain (economic vs political).
+- **Frame** is the weakest field. The frames are fine distinctions, and the cards show them only on hover.
+
+What this says: Haiku's labels hold up against a much larger model, and there is no lean *between* them. What it can't say: whether both share a lean (same family, same prompt). Only the hand labels in `labels.yaml` can answer that, and they are still blank. /about shows the cross-check and says so.
+
 ### Bias audit, first look (989 labels)
 
 | Group | Mean stance | Critical | Positive |

@@ -49,7 +49,7 @@ def _health(store: Store, names: dict[str, str]) -> dict | None:
 
 
 def about_context(store: Store, settings: Settings, sources: SourcesConfig, accounts: list[Account], now: datetime,
-                  gold: Path | None = None) -> dict:
+                  gold: Path | None = None, crosscheck: Path | None = None) -> dict:
     names = source_names(sources)
     feeds = [f for f in sources.feeds if f.enabled]
     news = [f for f in feeds if f.kind == "news"]
@@ -64,6 +64,11 @@ def about_context(store: Store, settings: Settings, sources: SourcesConfig, acco
     audit = [dict(r, label=GROUP_NAMES.get(r["key"], r["key"])) for r in evaluate.audit(store, sources, by="group", min_n=20)
              if r["key"] != "other" and r["mean"] is not None]
     agreement = evaluate.score(store, evaluate.load_gold(gold)) if gold else {"n": 0}
+    cross = evaluate.score(store, evaluate.load_gold(crosscheck), sources) if crosscheck else {"n": 0}
+    if cross["n"]:
+        meta = evaluate.load_meta(crosscheck)
+        cross["model"] = evaluate.model_name(meta.get("model", "a larger model"))
+        cross["date"] = str(meta.get("labeled_at", ""))[:10]
     g, s = settings.gap, settings.sentiment
     return {
         "gap": {"quiet_max_outlets": g.quiet_max_outlets, "builder_min_pct": round(g.builder_min_rank * 100),
@@ -72,6 +77,7 @@ def about_context(store: Store, settings: Settings, sources: SourcesConfig, acco
         "audit": audit,
         "audit_labels": sum(r["n"] for r in audit),
         "agreement": agreement,
+        "crosscheck": cross,
         "generated_at": iso(now),
         "counts": {
             "outlets": len(news),

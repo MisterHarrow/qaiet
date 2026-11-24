@@ -9,6 +9,7 @@ from pathlib import Path
 from typing import Annotated
 
 import typer
+import yaml
 from rich.console import Console
 from rich.table import Table
 
@@ -262,7 +263,7 @@ def _render_site(store: Store, settings, sources, now: datetime, editions: list[
     """Every view, /about and /archive (from the frozen files in editions/)."""
     tz = settings.site.timezone
     pages = site_build.render_all(editions, out, tz)
-    site_build.render_about(about_context(store, settings, sources, load_accounts(), now, gold=GOLD), out, tz)
+    site_build.render_about(about_context(store, settings, sources, load_accounts(), now, gold=GOLD, crosscheck=crosscheck_path()), out, tz)
     site_build.render_archive(archive.load_frozen(ROOT / settings.site.editions_dir), out, tz)
     site_build.render_sentiment(sentiment_mod.history(store), out, tz)
     return pages[0]
@@ -361,6 +362,11 @@ def prune(vacuum: Annotated[bool, typer.Option("--vacuum", help="Also compact th
 eval_app = typer.Typer(no_args_is_help=True, help="Check the labels: hand-labeled sample, agreement, bias audit.")
 app.add_typer(eval_app, name="eval")
 GOLD = ROOT / "tests" / "gold" / "labels.yaml"
+CROSSCHECK_MODEL = "claude-opus-5-5"
+
+
+def crosscheck_path(model: str = CROSSCHECK_MODEL) -> Path:
+    return GOLD.parent / f"labels-{model}.yaml"
 
 
 @eval_app.command("sample")
@@ -381,19 +387,34 @@ def eval_sample(
     store.close()
 
 
-@eval_app.command("score")
-def eval_score() -> None:
-    """Agreement between the model's labels and the hand labels, per field."""
+@eval_app.command("crosscheck")
+def eval_crosscheck(
+    model: Annotated[str, typer.Option("--model", help="The larger model that labels the sample.")] = CROSSCHECK_MODEL,
+) -> None:
+    """Label the hand-label sample with a larger model (same prompt and input as the site), then score the site against it."""
     from quiet_ai import evaluate
 
-    settings = load_settings()
+    load_dotenv()
+    settings, sources = load_settings(), load_sources()
+    if model not in settings.llm.prices:
+        raise typer.BadParameter(f"no price for {model} in config/settings.yaml (llm.prices); add it so the cost is logged")
+    raw = yaml.safe_load(GOLD.read_text(encoding="utf-8")) if GOLD.exists() else None
+    sample_items = (raw or {}).get("items") or []
+    if not sample_items:
+        raise typer.BadParameter(f"no sample in {GOLD.relative_to(ROOT)}; run qa eval sample first")
     store = Store(ROOT / settings.db_path)
-    res = evaluate.score(store, evaluate.load_gold(GOLD))
+    now = _now()
+    llm = LLM(settings.llm, store, store.start_run("eval-crosscheck", False, now))
+    items = evaluate.crosscheck(store, settings, llm, sample_items, model)
+    path = crosscheck_path(model)
+    evaluate.write_crosscheck(items, path, model, settings.analysis.news_prompt, now.isoformat(timespec="seconds"))
+    console.print(f"{model} labeled {len(items)} of {len(sample_items)} articles in {llm.calls} calls, ${llm.cost_usd:.3f}; wrote {path.relative_to(ROOT)}")
+    _print_score(evaluate.score(store, evaluate.load_gold(path), sources), f"site labels vs {model}")
     store.close()
-    if not res["n"]:
-        console.print(f"no hand labels yet in {GOLD.relative_to(ROOT)} (run qa eval sample, then fill it in)")
-        return
-    table = Table(title=f"agreement with hand labels (n={res['n']})")
+
+
+def _print_score(res: dict, title: str) -> None:
+    table = Table(title=f"{title} (n={res['n']})")
     for col in ("field", "agree", "n"):
         table.add_column(col, justify="left" if col == "field" else "right")
     for field in ("track", "frame", "stance_exact", "stance_within_1"):
@@ -401,8 +422,29 @@ def eval_score() -> None:
     console.print(table)
     console.print(f"stance mean absolute error: {res['stance_mae']}; within 1 by model confidence: "
                   + ", ".join(f"{k} {v['agree']}% (n={v['n']})" for k, v in res["stance_within_1_by_confidence"].items()))
+    if res.get("stance_bias") is not None:
+        console.print(f"stance bias (site minus reference, + = site reads more positive): {res['stance_bias']:+.2f}; by group: "
+                      + ", ".join(f"{k} {v['bias']:+.2f} (n={v['n']})" for k, v in res["stance_bias_by_group"].items()))
     if res["missing"]:
-        console.print(f"[yellow]{res['missing']} hand-labeled items have no model label in this database (pruned or not pulled)[/]")
+        console.print(f"[yellow]{res['missing']} labeled items have no site label in this database (pruned or not pulled)[/]")
+
+
+@eval_app.command("score")
+def eval_score() -> None:
+    """Agreement between the model's labels and the hand labels, per field."""
+    from quiet_ai import evaluate
+
+    settings, sources = load_settings(), load_sources()
+    store = Store(ROOT / settings.db_path)
+    res = evaluate.score(store, evaluate.load_gold(GOLD), sources)
+    cross = evaluate.score(store, evaluate.load_gold(crosscheck_path()), sources)
+    store.close()
+    if cross["n"]:
+        _print_score(cross, f"site labels vs {CROSSCHECK_MODEL}")
+    if not res["n"]:
+        console.print(f"no hand labels yet in {GOLD.relative_to(ROOT)} (run qa eval sample, then fill it in)")
+        return
+    _print_score(res, "site labels vs hand labels")
 
 
 @eval_app.command("audit")

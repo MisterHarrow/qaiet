@@ -100,6 +100,10 @@
   {% else %}
   <p>A blind sample of articles, spread across angles and stances, is being labeled by hand to measure how often the model agrees with a person. The numbers will appear here once that is done.</p>
   {% endif %}
+  {% set cx = a.crosscheck %}
+  {% if cx.n %}
+  <p>A second opinion from a larger model: {{ cx.model }} labeled the same {{ cx.n }} articles, from the same instructions and the same headline and summary. It agrees with the labels on this site on the angle {{ cx.track.agree }}% of the time{% if cx.frame.n %}, on the frame {{ cx.frame.agree }}% (where both chose the same angle){% endif %}, and on the stance {{ cx.stance_exact.agree }}% exactly and {{ cx.stance_within_1.agree }}% within one step.{% if cx.stance_bias is not none %} {% if cx.stance_bias|abs < 0.1 %}Neither reads the coverage as more critical than the other.{% else %}On average the site's labels read {{ "%.1f"|format(cx.stance_bias|abs) }} of a step more {{ "positive" if cx.stance_bias > 0 else "critical" }} than {{ cx.model }}'s.{% endif %}{% endif %} This catches plain mistakes and shows how much a single label can wobble. It can't catch a lean that both models share, since they come from the same family; that is what the hand labels are for.</p>
+  {% endif %}
   {% if a.audit %}
   <p>Another check looks for skew: does the model call one group of outlets critical far more than the others? Average stance of confident labels, by outlet group, across {{ a.audit_labels|thousands }} labeled articles so far:</p>
   <table class="weights audit">
