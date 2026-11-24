@@ -3,19 +3,28 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>quiet ai · {{ date_long }}</title>
+<title>quiet ai · {{ period.label }} · {{ date_long }}</title>
 <meta name="description" content="A quiet daily overview of AI: what happened, how it is framed, and what builders are making.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23f6f3ec'/%3E%3Cpath d='M8 20h16M8 14h11' stroke='%23302d28' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="static/style.css">
+<link rel="stylesheet" href="{{ root }}static/style.css">
 </head>
 <body>
 <div class="page">
 
 <header class="masthead">
   <div class="masthead-top">
-    <p class="wordmark"><a href="./">quiet ai</a></p>
+    <p class="wordmark"><a href="{{ root or './' }}">quiet ai</a></p>
     <p class="dateline"><time datetime="{{ e.generated_at }}">{{ date_long }}</time> <span class="sep">·</span> updated {{ updated }} {{ tz_name }}</p>
   </div>
+  {% if periods|length > 1 %}
+  <nav class="periods" aria-label="Time period">
+    <span class="periods-label">Last</span>
+    {% for p in periods %}<a href="{{ p.href or './' }}"{% if p.active %} aria-current="page"{% endif %}>{{ p.label }}</a>{% endfor %}
+  </nav>
+  {% endif %}
+  {% if data_since %}
+  <p class="partial">Collecting since {{ data_since }}, so this view covers less than {{ period.label }} so far. It fills in as the days pass.</p>
+  {% endif %}
   {% if e.weather %}
   <p class="weather">{{ e.weather }}</p>
   {% endif %}
@@ -25,7 +34,7 @@
 
   {% if e.terms %}
   <div class="terms" aria-labelledby="terms-h">
-    <h2 id="terms-h" class="eyebrow">Most mentioned <span class="eyebrow-note">by number of outlets, last {{ e.terms_hours }} hours</span></h2>
+    <h2 id="terms-h" class="eyebrow">Most mentioned <span class="eyebrow-note">by number of outlets, last {{ period.label }}</span></h2>
     <ul class="term-list">
       {% for t in e.terms %}
       <li><button type="button" class="term t{{ t.size }}" data-term="{{ t.key }}" aria-pressed="false" disabled
@@ -121,7 +130,7 @@
 <section class="rising" aria-labelledby="rising-h">
   <div class="rising-head">
     <h2 id="rising-h">Rising</h2>
-    <p class="section-note">Fastest-climbing projects among builders right now, by what they are.</p>
+    <p class="section-note">Fastest-climbing projects among builders, last {{ period.label }}, by what they are.</p>
   </div>
   <nav class="filters rising-filters" aria-label="Filter rising projects by category" hidden>
     <button type="button" data-category="" aria-pressed="true">All <span class="n">{{ e.rising|length }}</span></button>
@@ -159,6 +168,6 @@
 </footer>
 
 </div>
-<script src="static/app.js" defer></script>
+<script src="{{ root }}static/app.js" defer></script>
 </body>
 </html>

@@ -20,7 +20,7 @@ from quiet_ai.pipeline import edition as edition_mod
 from quiet_ai.pipeline import momentum
 from quiet_ai.pipeline import stories as story_views
 from quiet_ai.pipeline.ingest import build_tasks, ingest as run_ingest
-from quiet_ai.pipeline.process import default_embedder, run_analysis, run_cluster
+from quiet_ai.pipeline.process import default_embedder, period_views, run_analysis, run_cluster
 from quiet_ai.render_terminal import render
 from quiet_ai.site import build as site_build
 from quiet_ai.store.db import Store
@@ -177,8 +177,8 @@ def _analyze_and_print(store: Store, now: datetime, dry_run: bool, no_llm: bool,
     ed = edition_mod.build(store, settings, sources, res.scores, res.rising, now, settings.analysis.top_stories)
     render(console, ed)
     if build_site:
-        page = site_build.render(ed, ROOT / settings.site.out_dir, settings.site.timezone)
-        console.print(f"[dim]site: {page}[/]")
+        pages = site_build.render_all(_editions(store, settings, sources, now, res.views), ROOT / settings.site.out_dir, settings.site.timezone)
+        console.print(f"[dim]site: {len(pages)} views in {pages[0].parent}[/]")
     n, b, s = res.news, res.builders, res.summaries
     cost = llm.cost_usd if llm else 0.0
     console.print(f"\n[dim]labels: {n.labeled} news ({n.from_cache} cached, {n.low_confidence} low confidence, "
@@ -204,12 +204,18 @@ def classify(
 
 
 @app.command()
-def stories(dry_run: DryRun = False) -> None:
+def stories(
+    dry_run: DryRun = False,
+    period: Annotated[str, typer.Option("--period", "-p", help="day, week, month or year (site.periods keys).")] = "",
+) -> None:
     """Print the current ranked stories from the database (no LLM calls)."""
     settings, sources = load_settings(), load_sources()
+    chosen = next((p for p in settings.site.periods if p.key == period), settings.site.periods[0]) if period else settings.site.periods[0]
     store, now = _open(dry_run)
-    scores = momentum.score_stories(store, settings, sources, now)
-    ed = edition_mod.build(store, settings, sources, scores, momentum.rising(store, settings, now), now, settings.analysis.top_stories)
+    scores = momentum.score_stories(store, settings, sources, now, chosen)
+    ed = edition_mod.build(store, settings, sources, scores, momentum.rising(store, settings, now, chosen.hours), now,
+                           settings.analysis.top_stories, chosen)
+    console.print(f"[dim]period: last {chosen.label}[/]")
     render(console, ed)
     store.close()
 
@@ -239,14 +245,17 @@ def run(
     store.close()
 
 
+def _editions(store: Store, settings, sources, now: datetime, views=None) -> list[dict]:
+    views = views or period_views(store, settings, sources, now)
+    return [edition_mod.build(store, settings, sources, v.scores, v.rising, now, settings.analysis.top_stories, v.period) for v in views.values()]
+
+
 def _build_site(dry_run: bool, out: Path | None) -> Path:
     settings, sources = load_settings(), load_sources()
     store, now = _open(dry_run)
-    scores = momentum.score_stories(store, settings, sources, now)
-    ed = edition_mod.build(store, settings, sources, scores, momentum.rising(store, settings, now), now, settings.analysis.top_stories)
-    page = site_build.render(ed, out or ROOT / settings.site.out_dir, settings.site.timezone)
+    pages = site_build.render_all(_editions(store, settings, sources, now), out or ROOT / settings.site.out_dir, settings.site.timezone)
     store.close()
-    return page
+    return pages[0]
 
 
 Out = Annotated[Path | None, typer.Option("--out", help="Output directory (default: site.out_dir).")]

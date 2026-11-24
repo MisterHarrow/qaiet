@@ -36,6 +36,21 @@ Checked in the browser at desktop and 375px (no horizontal scroll), light and da
 - More candidates so categories aren't thin: up to 10 repos, 5 models, 3 spaces, 3 datasets and 5 papers (26 today). All of them get a what/why label, about $0.005 per run.
 - An unlabeled item falls back to its listing: repo → tool, space → app, paper → paper.
 
+## Revision 3: time periods
+
+- **Switcher: Last 24 hours · 7 days · 30 days · 1 year.** Each is its own static page (`/`, `/week/`, `/month/`, `/year/`), so it works without JavaScript and can be linked. All are rebuilt every run. Periods are configured in `site.periods`.
+- **Everything follows the period:**
+  - which stories appear, ranked only by their items inside the period;
+  - "Most mentioned";
+  - the weather line, one per view (`weather:<period>` reports, prompt `weather_v3`);
+  - Rising, with star velocity measured over the period.
+- **Longer views rank by coverage, not just "now".** Decay half-life is 36 hours for the day view, 4 days for the week, 15 days for the month and 90 days for the year.
+- **Stories that come back are merged.** A story ends after 72h of silence, so a topic that returns gets a new ID. In the week, month and year views such stories are shown as one, keyed `<first id>@<period>`, when their centroids are within 0.72 and they share one of their top names. Only the 300 most active stories of a period are considered, which keeps the year view fast. Merged stories get their own summary; single stories share one summary across all views.
+- **Honest about missing data.** Collection started 24 Nov 2026, and feeds carry about a day of older items. A view reaching further back says "Collecting since …, so this view covers less than … so far", and its weather line is told so ("So far today: …") instead of claiming a whole month or year.
+- `qa stories --period week` prints any view in the terminal.
+
+Not yet done, for M5: trimming old data so a year of SQLite stays small (embeddings are already kept 7 days).
+
 ## Fixes found while reviewing the page
 
 - "split" now needs 20% on each side (was 25%). The top story had 31% critical and 22% positive and read "mostly neutral" while its coverage sentence described a split.

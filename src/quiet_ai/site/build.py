@@ -47,19 +47,46 @@ def stance_label(stance: dict[str, int]) -> str:
     return "Stance of the coverage: " + ", ".join(parts) if parts else "No stance labels"
 
 
-def render(edition: dict, out_dir: Path, tz: str = "Europe/Stockholm") -> Path:
-    out_dir.mkdir(parents=True, exist_ok=True)
-    local = datetime.fromisoformat(edition["generated_at"]).astimezone(ZoneInfo(tz))
+def _long_date(dt: datetime) -> str:
+    return f"{dt:%A} {dt.day} {dt:%B %Y}"
+
+
+def period_path(index: int, key: str) -> str:
+    """The first view is the front page; the others live in their own folder."""
+    return "" if index == 0 else f"{key}/"
+
+
+def render(edition: dict, out_dir: Path, tz: str = "Europe/Stockholm", periods: list[dict] | None = None) -> Path:
+    """Render one view. `periods` lists every view ({key, label, path}) for the switcher."""
+    period = edition.get("period") or {"key": "day", "label": "24 hours"}
+    periods = periods or [{"key": period["key"], "label": period["label"], "path": ""}]
+    me = next((p for p in periods if p["key"] == period["key"]), periods[0])
+    page_dir = out_dir / me["path"]
+    page_dir.mkdir(parents=True, exist_ok=True)
+    root = "../" * me["path"].count("/")
+    zone = ZoneInfo(tz)
+    local = datetime.fromisoformat(edition["generated_at"]).astimezone(zone)
     for s in edition["stories"]:
         s["segments"] = stance_segments(s["stance"])
         s["stance_label"] = stance_label(s["stance"])
+    since = edition.get("data_since")
     html = _env().get_template("index.html.j2").render(
         e=edition,
-        date_long=f"{local:%A} {local.day} {local:%B %Y}",
+        root=root,
+        period=period,
+        periods=[{**p, "href": root + p["path"], "active": p["key"] == period["key"]} for p in periods],
+        date_long=_long_date(local),
         updated=f"{local:%H:%M}",
         tz_name=tz.split("/")[-1],
+        data_since=_long_date(datetime.fromisoformat(since).astimezone(zone)) if since else None,
     )
-    (out_dir / "index.html").write_text(html, encoding="utf-8")
+    (page_dir / "index.html").write_text(html, encoding="utf-8")
     shutil.copytree(HERE / "static", out_dir / "static", dirs_exist_ok=True)
-    (out_dir / "edition.json").write_text(json.dumps(edition, ensure_ascii=False, indent=1, default=str), encoding="utf-8")
-    return out_dir / "index.html"
+    (page_dir / "edition.json").write_text(json.dumps(edition, ensure_ascii=False, indent=1, default=str), encoding="utf-8")
+    return page_dir / "index.html"
+
+
+def render_all(editions: list[dict], out_dir: Path, tz: str = "Europe/Stockholm") -> list[Path]:
+    """Render every view with a shared switcher. `editions` are in display order."""
+    periods = [{"key": e["period"]["key"], "label": e["period"]["label"], "path": period_path(i, e["period"]["key"])} for i, e in enumerate(editions)]
+    return [render(e, out_dir, tz, periods) for e in editions]

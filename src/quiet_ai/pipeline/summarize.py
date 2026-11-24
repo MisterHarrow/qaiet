@@ -11,9 +11,9 @@ from typing import Literal
 
 from pydantic import BaseModel
 
-from quiet_ai.config import Settings, SourcesConfig
+from quiet_ai.config import PeriodSettings, Settings, SourcesConfig
 from quiet_ai.llm.client import LLM, LLMUnavailable, load_prompt
-from quiet_ai.pipeline.edition import story_entry
+from quiet_ai.pipeline.edition import covered_hours, story_entry, weather_kind
 from quiet_ai.pipeline.momentum import RisingItem, StoryScore
 from quiet_ai.store.db import Store, iso
 
@@ -126,14 +126,24 @@ def summarize_top(store: Store, settings: Settings, sources: SourcesConfig, llm:
     return stats
 
 
-def weather(store: Store, settings: Settings, sources: SourcesConfig, llm: LLM, scores: list[StoryScore], rising: list[RisingItem], top: int, now: datetime) -> SummaryStats:
-    """Regenerate only when the set of top stories changed since the last report."""
+def weather(store: Store, settings: Settings, sources: SourcesConfig, llm: LLM, scores: list[StoryScore], rising: list[RisingItem], top: int,
+            now: datetime, period: PeriodSettings | None = None) -> SummaryStats:
+    """One sentence per view; regenerated only when that view's top stories changed."""
     stats = SummaryStats()
+    period = period or settings.site.periods[0]
+    kind = weather_kind(period.key)
     top_ids = [s.story_id for s in scores[:top]]
-    last = store.conn.execute("SELECT data FROM reports WHERE kind = 'weather' ORDER BY id DESC LIMIT 1").fetchone()
-    if last and json.loads(last["data"]).get("story_ids") == top_ids:
+    last = store.conn.execute("SELECT data, prompt_version FROM reports WHERE kind = ? ORDER BY id DESC LIMIT 1", (kind,)).fetchone()
+    if last and last["prompt_version"] == settings.analysis.weather_prompt and json.loads(last["data"]).get("story_ids") == top_ids:
         return stats
-    lines = ["Top stories:"]
+    if not top_ids:
+        return stats
+    lines = [f"Period: the last {period.label}."]
+    covered = covered_hours(store, now)
+    if covered is not None and covered < period.hours:
+        span = "about the last day" if covered < 36 else f"about the last {covered / 24:.0f} days"
+        lines.append(f"Data covers only {span} of this period (collection started recently).")
+    lines.append("Top stories:")
     for n, s in enumerate(scores[:top], 1):
         e = story_entry(store, sources, s, n)
         lines.append(f"- {e['headline']} [{e['track'] or 'unknown angle'}; {e['outlets']} outlets]")
@@ -150,8 +160,8 @@ def weather(store: Store, settings: Settings, sources: SourcesConfig, llm: LLM, 
         return stats
     with store.conn:
         store.conn.execute(
-            "INSERT INTO reports(kind, prompt_version, model, data, created_at) VALUES ('weather', ?, ?, ?, ?)",
-            (settings.analysis.weather_prompt, settings.llm.story_model, json.dumps({"sentence": out.sentence, "story_ids": top_ids}), iso(now)),
+            "INSERT INTO reports(kind, prompt_version, model, data, created_at) VALUES (?, ?, ?, ?, ?)",
+            (kind, settings.analysis.weather_prompt, settings.llm.story_model, json.dumps({"sentence": out.sentence, "story_ids": top_ids}), iso(now)),
         )
     stats.weather = True
     return stats

@@ -7,18 +7,24 @@ Two kinds of features, each scaled to 0..1 across the active stories:
   percentile ranks, so no single source can dominate: 3,000 HN points count no more than
   being the top HN story of the window.
 The weighted sum is decayed by the age of the story's latest item.
+
+Every view (24 hours, 7 days, ...) scores only the items inside its period, and longer views
+merge stories that went quiet and came back.
 """
 
 from __future__ import annotations
 
 import json
 import math
-from collections import defaultdict
+from collections import Counter, defaultdict
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta
 
-from quiet_ai.config import Settings, SourcesConfig
+from quiet_ai.config import PeriodSettings, Settings, SourcesConfig
+from quiet_ai.pipeline.cluster import EVENT_AT
+from quiet_ai.pipeline.embed import from_blob, normalize
 from quiet_ai.store.db import Store, iso
+from quiet_ai.terms import term_key
 from quiet_ai.text import parse_iso
 
 FEATURES = ("outlets", "countries", "hn_points", "star_velocity", "hf_trending", "social", "aggregators", "digests")
@@ -28,10 +34,15 @@ RISING_KINDS = ("repo", "model", "dataset", "space", "paper")
 
 @dataclass
 class StoryScore:
-    story_id: str
+    story_id: str  # a story ID, or "<id>@<period>" for stories merged in a longer view
     score: float
     features: dict[str, float]
     last_at: str
+    members: list[str] = field(default_factory=list)
+
+    def __post_init__(self):
+        if not self.members:
+            self.members = [self.story_id]
 
 
 @dataclass
@@ -70,31 +81,23 @@ def log_share(values: dict[str, float]) -> dict[str, float]:
     return {k: math.log1p(v) / math.log1p(top) for k, v in values.items()}
 
 
-def star_velocities(store: Store, item_ids: list[str], now: datetime) -> dict[str, float]:
-    """Stars gained per day, measured across runs once we have 6+ hours of snapshots in the
-    last 48h; before that, the lifetime average (stars per day since the repo was created)."""
+def star_velocities(store: Store, item_ids: list[str], now: datetime, hours: float = 48) -> dict[str, float]:
+    """Stars gained per day, measured across runs once there are 6+ hours of snapshots inside
+    the window (at least 48h); before that, the lifetime average (stars per day since creation)."""
     if not item_ids:
         return {}
     snaps: dict[str, list[tuple[str, int]]] = defaultdict(list)
+    created: dict[str, str] = {}
     for i in range(0, len(item_ids), 500):
         chunk = item_ids[i : i + 500]
-        rows = store.conn.execute(
-            f"SELECT item_id, observed_at, metrics FROM metric_snapshots WHERE item_id IN ({','.join('?' * len(chunk))}) "
-            "ORDER BY observed_at",
-            chunk,
-        )
-        for r in rows:
+        marks = ",".join("?" * len(chunk))
+        for r in store.conn.execute(f"SELECT item_id, observed_at, metrics FROM metric_snapshots WHERE item_id IN ({marks}) ORDER BY observed_at", chunk):
             stars = json.loads(r["metrics"]).get("stars")
             if stars is not None:
                 snaps[r["item_id"]].append((r["observed_at"], stars))
-    created = {
-        r["id"]: r["published_at"]
-        for r in store.conn.execute(
-            f"SELECT id, published_at FROM items WHERE id IN ({','.join('?' * len(item_ids))})", item_ids
-        )
-    }
+        created.update({r["id"]: r["published_at"] for r in store.conn.execute(f"SELECT id, published_at FROM items WHERE id IN ({marks})", chunk)})
     out = {}
-    since = iso(now - timedelta(hours=48))
+    since = iso(now - timedelta(hours=max(48, hours)))
     for iid in item_ids:
         s = snaps.get(iid)
         if not s:
@@ -111,18 +114,88 @@ def star_velocities(store: Store, item_ids: list[str], now: datetime) -> dict[st
     return out
 
 
-def score_stories(store: Store, settings: Settings, sources: SourcesConfig, now: datetime) -> list[StoryScore]:
+def _story_entities(store: Store, story_ids: list[str], aliases: dict[str, str], top: int = 5) -> dict[str, set[str]]:
+    """Each story's most frequent names, from its items' labels."""
+    counts: dict[str, Counter] = defaultdict(Counter)
+    for i in range(0, len(story_ids), 500):
+        chunk = story_ids[i : i + 500]
+        rows = store.conn.execute(
+            f"SELECT i.story_id, l.data FROM items i JOIN item_labels l ON l.item_id = i.id WHERE i.story_id IN ({','.join('?' * len(chunk))})",
+            chunk,
+        )
+        for r in rows:
+            for e in json.loads(r["data"]).get("entities", []):
+                counts[r["story_id"]][term_key(e, aliases)] += 1
+    return {sid: {k for k, _ in c.most_common(top)} for sid, c in counts.items()}
+
+
+def merge_groups(store: Store, settings: Settings, activity: dict[str, tuple], period: PeriodSettings) -> dict[str, list[str]]:
+    """For longer views: stories about the same thing that went quiet and came back (and so
+    got separate IDs) are shown as one. A story joins a group when its centroid is within
+    `period_merge_threshold` of the group's and they share one of their top names.
+    Returns display key -> member story IDs (most active first)."""
+    site = settings.site
+    order = sorted(activity, key=lambda sid: activity[sid], reverse=True)
+    candidates, rest = order[: site.period_merge_candidates], order[site.period_merge_candidates :]
+    vecs = {
+        r["id"]: from_blob(r["centroid"]) for r in store.conn.execute(
+            f"SELECT id, centroid FROM stories WHERE id IN ({','.join('?' * len(candidates))}) AND centroid IS NOT NULL", candidates
+        )
+    } if candidates else {}
+    ents = _story_entities(store, candidates, {k.lower(): v for k, v in site.term_aliases.items()})
+    groups: list[dict] = []
+    for sid in candidates:
+        v = vecs.get(sid)
+        best, best_sim = None, site.period_merge_threshold
+        if v is not None and ents.get(sid):
+            unit = normalize(v[None, :])[0]
+            for g in groups:
+                sim = float(normalize(g["mean"][None, :])[0] @ unit)
+                if sim >= best_sim and g["ents"] & ents[sid]:
+                    best, best_sim = g, sim
+        weight = activity[sid][-1] or 1
+        if best:
+            best["mean"] = (best["mean"] * best["weight"] + v * weight) / (best["weight"] + weight)
+            best["weight"] += weight
+            best["ents"] |= ents[sid]
+            best["members"].append(sid)
+        else:
+            groups.append({"mean": v if v is not None else None, "weight": weight, "ents": set(ents.get(sid, ())), "members": [sid]})
+            if v is None:
+                groups[-1]["mean"] = None
+    out: dict[str, list[str]] = {}
+    for g in groups:
+        key = g["members"][0] if len(g["members"]) == 1 else f"{g['members'][0]}@{period.key}"
+        out[key] = g["members"]
+    for sid in rest:
+        out[sid] = [sid]
+    return out
+
+
+def score_stories(store: Store, settings: Settings, sources: SourcesConfig, now: datetime, period: PeriodSettings | None = None) -> list[StoryScore]:
+    """Rank stories by activity inside a period (the front-page period by default)."""
     m = settings.momentum
-    since = iso(now - timedelta(hours=settings.cluster.window_hours))
+    first = settings.site.periods[0]
+    period = period or first
+    since = iso(now - timedelta(hours=period.hours))
     countries = {f.id: f.country for f in sources.feeds} | {g.id: g.country for g in sources.gdelt_outlets}
     digests = {f.id for f in sources.feeds if f.role == "digest"}
     rows = store.conn.execute(
-        f"SELECT i.id, i.story_id, i.kind, i.source, i.metrics, s.last_item_at FROM items i "
-        "JOIN stories s ON s.id = i.story_id WHERE s.merged_into IS NULL AND s.last_item_at >= ? AND i.relevant = 1",
+        f"SELECT i.id, i.story_id, i.kind, i.source, i.metrics, {EVENT_AT} AS event_at FROM items i "
+        f"JOIN stories s ON s.id = i.story_id WHERE s.merged_into IS NULL AND i.relevant = 1 AND i.dup_of IS NULL AND {EVENT_AT} >= ?",
         (since,),
     ).fetchall()
-    repo_ids = [r["id"] for r in rows if r["kind"] == "repo"]
-    velocity = star_velocities(store, repo_ids, now)
+    if not rows:
+        return []
+    activity: dict[str, tuple] = {}
+    per_story: dict[str, list] = defaultdict(list)
+    for r in rows:
+        per_story[r["story_id"]].append(r)
+    for sid, rs in per_story.items():
+        activity[sid] = (len({r["source"] for r in rs if r["kind"] == "news"}), len(rs))
+    groups = merge_groups(store, settings, activity, period) if period.merge else {sid: [sid] for sid in per_story}
+    key_of = {sid: key for key, members in groups.items() for sid in members}
+    velocity = star_velocities(store, [r["id"] for r in rows if r["kind"] == "repo"], now, period.hours)
 
     raw: dict[str, dict[str, float]] = defaultdict(lambda: dict.fromkeys(FEATURES, 0.0))
     outlets: dict[str, set] = defaultdict(set)
@@ -131,13 +204,13 @@ def score_stories(store: Store, settings: Settings, sources: SourcesConfig, now:
     digs: dict[str, set] = defaultdict(set)
     last_at: dict[str, str] = {}
     for r in rows:
-        sid, met = r["story_id"], json.loads(r["metrics"] or "{}")
-        f = raw[sid]
-        last_at[sid] = r["last_item_at"]
+        key, met = key_of[r["story_id"]], json.loads(r["metrics"] or "{}")
+        f = raw[key]
+        last_at[key] = max(last_at.get(key, ""), r["event_at"])
         if r["kind"] == "news":
-            outlets[sid].add(r["source"])
+            outlets[key].add(r["source"])
             if countries.get(r["source"]):
-                ctry[sid].add(countries[r["source"]])
+                ctry[key].add(countries[r["source"]])
         elif r["kind"] == "hn":
             f["hn_points"] += met.get("points", 0)
         elif r["kind"] == "repo":
@@ -149,41 +222,43 @@ def score_stories(store: Store, settings: Settings, sources: SourcesConfig, now:
         elif r["kind"] == "social":
             f["social"] += 1 + (met.get("likes") or 0) + (met.get("reposts") or 0)
         elif r["kind"] == "aggregator":
-            aggs[sid].add(r["source"])
+            aggs[key].add(r["source"])
         elif r["kind"] == "newsletter" and r["source"] in digests:
-            digs[sid].add(r["source"])
-    for sid, f in raw.items():
-        f["outlets"], f["countries"] = len(outlets[sid]), len(ctry[sid])
-        f["aggregators"], f["digests"] = len(aggs[sid]), len(digs[sid])
+            digs[key].add(r["source"])
+    for key, f in raw.items():
+        f["outlets"], f["countries"] = len(outlets[key]), len(ctry[key])
+        f["aggregators"], f["digests"] = len(aggs[key]), len(digs[key])
 
     ranks = {
-        feat: (log_share if feat in COUNT_FEATURES else percentile_ranks)({sid: f[feat] for sid, f in raw.items()})
+        feat: (log_share if feat in COUNT_FEATURES else percentile_ranks)({k: f[feat] for k, f in raw.items()})
         for feat in FEATURES
     }
     scores = []
-    for sid, f in raw.items():
-        base = sum(m.weights.get(feat, 0.0) * ranks[feat][sid] for feat in FEATURES)
-        age_h = max(0.0, (now - parse_iso(last_at[sid])).total_seconds() / 3600)
-        decay = 0.5 ** (age_h / m.half_life_hours)
-        scores.append(StoryScore(sid, round(base * decay, 4), {k: round(v, 2) for k, v in f.items()}, last_at[sid]))
+    for key, f in raw.items():
+        base = sum(m.weights.get(feat, 0.0) * ranks[feat][key] for feat in FEATURES)
+        age_h = max(0.0, (now - parse_iso(last_at[key])).total_seconds() / 3600)
+        decay = 0.5 ** (age_h / period.half_life_hours)
+        scores.append(StoryScore(key, round(base * decay, 4), {k: round(v, 2) for k, v in f.items()}, last_at[key], groups[key]))
     scores.sort(key=lambda s: (s.score, s.features["outlets"], s.story_id), reverse=True)
-    with store.conn:
-        store.conn.executemany(
-            "UPDATE stories SET momentum = ?, features = ?, scored_at = ? WHERE id = ?",
-            [(s.score, json.dumps(s.features, sort_keys=True), iso(now), s.story_id) for s in scores],
-        )
+    if period.key == first.key:
+        with store.conn:
+            store.conn.executemany(
+                "UPDATE stories SET momentum = ?, features = ?, scored_at = ? WHERE id = ?",
+                [(s.score, json.dumps(s.features, sort_keys=True), iso(now), s.story_id) for s in scores if len(s.members) == 1],
+            )
     return scores
 
 
-def rising(store: Store, settings: Settings, now: datetime) -> list[RisingItem]:
-    """Fastest-rising builder items, with a quota per kind so one kind can't fill the list."""
-    since = iso(now - timedelta(hours=settings.rising.window_hours))
+def rising(store: Store, settings: Settings, now: datetime, hours: float | None = None) -> list[RisingItem]:
+    """Fastest-rising builder items seen in a listing within the period, with a quota per kind."""
+    hours = hours or settings.rising.window_hours
+    since = iso(now - timedelta(hours=max(hours, 24)))
     rows = store.conn.execute(
         "SELECT id, kind, source, title, url, metrics, extra, story_id FROM items "
         f"WHERE kind IN ({','.join('?' * len(RISING_KINDS))}) AND relevant = 1 AND last_seen_at >= ? AND source != 'openrouter'",
         (*RISING_KINDS, since),
     ).fetchall()
-    velocity = star_velocities(store, [r["id"] for r in rows if r["kind"] == "repo"], now)
+    velocity = star_velocities(store, [r["id"] for r in rows if r["kind"] == "repo"], now, hours)
     by_kind: dict[str, list[RisingItem]] = defaultdict(list)
     for r in rows:
         met = json.loads(r["metrics"] or "{}")
@@ -202,7 +277,5 @@ def rising(store: Store, settings: Settings, now: datetime) -> list[RisingItem]:
             )
     out = []
     for kind, quota in settings.rising.quota.items():
-        items = sorted(by_kind.get(kind, []), key=lambda x: (x.score, x.item_id), reverse=True)[:quota]
-        out += items
+        out += sorted(by_kind.get(kind, []), key=lambda x: (x.score, x.item_id), reverse=True)[:quota]
     return out
-

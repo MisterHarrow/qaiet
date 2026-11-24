@@ -115,7 +115,7 @@ analysis:
   news_prompt: news_label_v3      # prompt files in src/quiet_ai/llm/prompts/; the version is stored on each label
   builder_prompt: builder_label_v1
   summary_prompt: story_summary_v3
-  weather_prompt: weather_v1
+  weather_prompt: weather_v3
   summarize_top: 12               # Sonnet summaries for the top stories only
   resummarize_new_items: 3        # re-summarize after this many new items, or any new outlet
   builder_label_top: 30           # what/why labels for this many Rising candidates
@@ -133,9 +133,18 @@ llm:
 site:
   out_dir: site                   # qa build writes here; git-ignored
   timezone: Europe/Stockholm      # dates and times on the page
-  # "Most mentioned" row in the header: names from the item labels, counted once per outlet.
+  # Views the reader can switch between. The first is the front page; the others live at /<key>/.
+  # Each view ranks stories by activity inside its period; half_life_hours sets how much the
+  # recent part counts. Longer views merge stories that went quiet and came back (merge: true).
+  periods:
+    - {key: day, label: 24 hours, hours: 24, half_life_hours: 36}
+    - {key: week, label: 7 days, hours: 168, half_life_hours: 96, merge: true}
+    - {key: month, label: 30 days, hours: 720, half_life_hours: 360, merge: true}
+    - {key: year, label: 1 year, hours: 8760, half_life_hours: 2160, merge: true}
+  period_merge_threshold: 0.72    # centroid similarity for merging, plus at least one shared name
+  period_merge_candidates: 300    # only the most active stories of a period are considered for merging
+  # "Most mentioned" row in the header: names from the item labels in the period, counted once per outlet.
   terms_count: 16
-  terms_hours: 24
   term_aliases:                   # lowercase variant -> the name to show
     donald trump: Trump
     trump administration: Trump

@@ -69,9 +69,18 @@ button { font: inherit; }
 .wordmark { margin: 0; font: 600 1rem/1 var(--sans); letter-spacing: 0.02em; }
 .wordmark a { text-decoration: none; }
 .dateline { margin: 0; color: var(--muted); font-size: 0.88rem; }
+.periods { display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem; margin-top: 1.2rem; font-size: 0.86rem; }
+.periods-label { color: var(--faint); margin-right: 0.35rem; }
+.periods a {
+  padding: 0.2rem 0.75rem; border-radius: 999px; text-decoration: none; color: var(--muted);
+  border: 1px solid transparent;
+}
+.periods a:hover { color: var(--ink); border-color: var(--rule); }
+.periods a[aria-current="page"] { color: var(--ink); border-color: var(--ink); font-weight: 500; }
+.partial { max-width: 48rem; margin: 0.8rem 0 0; font-size: 0.84rem; color: var(--faint); }
 .weather {
   max-width: 48rem;
-  margin: 1.5rem 0 0;
+  margin: 1.3rem 0 0;
   font: 400 1.5rem/1.38 var(--serif);
   letter-spacing: -0.005em;
   text-wrap: pretty;

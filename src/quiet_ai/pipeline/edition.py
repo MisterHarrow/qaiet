@@ -10,28 +10,18 @@ from collections import Counter, defaultdict
 from datetime import datetime, timedelta
 from typing import Any
 
-from quiet_ai.config import Settings, SourcesConfig
+from quiet_ai.config import PeriodSettings, Settings, SourcesConfig
 from quiet_ai.pipeline.momentum import RisingItem, StoryScore
 from quiet_ai.pipeline.stories import representative_title, source_names
 from quiet_ai.store.db import Store, iso
+from quiet_ai.terms import term_key
 
 STANCES = (-2, -1, 0, 1, 2)
 _PRESS_KINDS = ("news", "newsletter")
 
 
-_SUFFIX = re.compile(r"(?:'s|’s|,? (?:corp\.?|corporation|inc\.?|ltd\.?|plc|co\.|group|holdings))$")
-
-
-def term_key(name: str, aliases: dict[str, str]) -> str:
-    """Normalize a named entity so variants count together: case, possessives, company suffixes, aliases."""
-    k = unicodedata.normalize("NFKC", name).strip().lower().strip(" .,;:\"'“”‘’")
-    k = _SUFFIX.sub("", k).strip()
-    alias = aliases.get(k)
-    return alias.lower() if alias else k
-
-
-def top_terms(store: Store, sources: SourcesConfig, settings: Settings, now) -> list[dict]:
-    """The names most outlets mentioned in the last `terms_hours`, from the item labels.
+def top_terms(store: Store, sources: SourcesConfig, settings: Settings, now, hours: float = 24) -> list[dict]:
+    """The names most outlets mentioned in the last `hours`, from the item labels.
     Counted once per outlet, so one outlet repeating a name doesn't inflate it."""
     s = settings.site
     aliases = {k.lower(): v for k, v in s.term_aliases.items()}
@@ -40,7 +30,7 @@ def top_terms(store: Store, sources: SourcesConfig, settings: Settings, now) -> 
     rows = store.conn.execute(
         "SELECT i.source, l.data FROM item_labels l JOIN items i ON i.id = l.item_id "
         "WHERE l.task = 'news' AND i.relevant = 1 AND i.first_seen_at >= ?",
-        (iso(now - timedelta(hours=s.terms_hours)),),
+        (iso(now - timedelta(hours=hours)),),
     ).fetchall()
     outlets: dict[str, set] = defaultdict(set)
     spellings: dict[str, Counter] = defaultdict(Counter)
@@ -63,13 +53,15 @@ def top_terms(store: Store, sources: SourcesConfig, settings: Settings, now) -> 
     return out
 
 
-def story_members(store: Store, story_id: str) -> list[dict]:
+def story_members(store: Store, story_ids: str | list[str]) -> list[dict]:
+    """Items of one story, or of several stories shown together in a longer view."""
+    ids = [story_ids] if isinstance(story_ids, str) else list(story_ids)
     rows = store.conn.execute(
         "SELECT i.id, i.kind, i.source, i.url, i.title, i.title_en, i.lang, i.published_at, i.metrics, i.extra, "
         "l.task, l.track, l.frame, l.stance, l.confidence, l.data AS label "
-        "FROM items i LEFT JOIN item_labels l ON l.item_id = i.id WHERE i.story_id = ? AND i.relevant = 1 AND i.dup_of IS NULL "
-        "ORDER BY i.published_at",
-        (story_id,),
+        f"FROM items i LEFT JOIN item_labels l ON l.item_id = i.id WHERE i.story_id IN ({','.join('?' * len(ids))}) "
+        "AND i.relevant = 1 AND i.dup_of IS NULL ORDER BY i.published_at",
+        ids,
     ).fetchall()
     out = []
     for r in rows:
@@ -93,7 +85,7 @@ def story_entry(store: Store, sources: SourcesConfig, score: StoryScore, rank: i
     names = source_names(sources)
     feeds = {f.id: f for f in sources.feeds}
     countries = {f.id: f.country for f in sources.feeds} | {g.id: g.country for g in sources.gdelt_outlets}
-    members = story_members(store, score.story_id)
+    members = story_members(store, score.members)
     summary = store.conn.execute("SELECT data, prompt_version, model FROM story_summaries WHERE story_id = ?", (score.story_id,)).fetchone()
     summary_data = json.loads(summary["data"]) if summary else None
 
@@ -133,7 +125,7 @@ def story_entry(store: Store, sources: SourcesConfig, score: StoryScore, rank: i
         "official": [{"title": m["title"], "url": m["url"], "source": names.get(m["source"], m["source"])} for m in members if m["kind"] == "lab"],
         "digests": sorted({names.get(m["source"], m["source"]) for m in members if m["kind"] == "newsletter" and feeds.get(m["source"]) and feeds[m["source"]].role == "digest"}),
     }
-    headline = (summary_data or {}).get("headline") or representative_title(store, score.story_id) or score.story_id
+    headline = (summary_data or {}).get("headline") or representative_title(store, score.members[0]) or score.story_id
     return {
         "id": score.story_id,
         "rank": rank,
@@ -217,11 +209,38 @@ def rising_groups(entries: list[dict]) -> list[dict]:
     return groups
 
 
-def build(store: Store, settings: Settings, sources: SourcesConfig, scores: list[StoryScore], rising: list[RisingItem], now: datetime, top: int) -> dict[str, Any]:
-    weather = store.conn.execute("SELECT data FROM reports WHERE kind = 'weather' ORDER BY id DESC LIMIT 1").fetchone()
+def weather_kind(period_key: str) -> str:
+    return f"weather:{period_key}"
+
+
+# Feeds carry roughly a day of older items, so the first run already covers about 24 hours.
+FEED_BACKLOG_HOURS = 24
+
+
+def data_since(store: Store) -> str | None:
+    """When collection started (first item ever seen)."""
+    row = store.conn.execute("SELECT MIN(first_seen_at) FROM items").fetchone()
+    return row[0] if row else None
+
+
+def covered_hours(store: Store, now: datetime) -> float | None:
+    """How far back the data reasonably reaches: collection time plus the feeds' backlog."""
+    since = data_since(store)
+    if not since:
+        return None
+    return (now - datetime.fromisoformat(since)).total_seconds() / 3600 + FEED_BACKLOG_HOURS
+
+
+def build(store: Store, settings: Settings, sources: SourcesConfig, scores: list[StoryScore], rising: list[RisingItem], now: datetime,
+          top: int, period: PeriodSettings | None = None) -> dict[str, Any]:
+    period = period or settings.site.periods[0]
+    weather = store.conn.execute("SELECT data FROM reports WHERE kind = ? ORDER BY id DESC LIMIT 1", (weather_kind(period.key),)).fetchone()
     month_start = now.replace(day=1, hour=0, minute=0, second=0, microsecond=0)
     spend = store.conn.execute("SELECT COALESCE(SUM(cost_usd), 0) FROM llm_calls WHERE created_at >= ?", (iso(month_start),)).fetchone()[0]
-    terms = top_terms(store, sources, settings, now)
+    since = data_since(store)
+    covered = covered_hours(store, now)
+    partial = covered is not None and covered < period.hours
+    terms = top_terms(store, sources, settings, now, period.hours)
     keys = {t["key"] for t in terms}
     aliases = {k.lower(): v for k, v in settings.site.term_aliases.items()}
     stories = [story_entry(store, sources, s, n) for n, s in enumerate(scores[:top], 1)]
@@ -232,9 +251,10 @@ def build(store: Store, settings: Settings, sources: SourcesConfig, scores: list
                 t["stories"] = t.get("stories", 0) + 1
     return {
         "generated_at": iso(now),
+        "period": {"key": period.key, "label": period.label, "hours": period.hours},
+        "data_since": since if partial else None,  # set when the period reaches back before our first data
         "weather": json.loads(weather["data"])["sentence"] if weather else None,
         "terms": terms,
-        "terms_hours": settings.site.terms_hours,
         "stories": stories,
         "rising": (rising_list := rising_entries(store, rising)),
         "rising_groups": rising_groups(rising_list),

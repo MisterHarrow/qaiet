@@ -38,36 +38,71 @@ def run_cluster(store: Store, settings: Settings, sources: SourcesConfig, now: d
 
 
 @dataclass
-class AnalysisRun:
+class PeriodView:
+    period: object
     scores: list[momentum.StoryScore]
     rising: list[momentum.RisingItem]
+
+
+@dataclass
+class AnalysisRun:
+    views: dict[str, PeriodView]
     news: classify.LabelStats
     builders: classify.LabelStats
     summaries: summarize.SummaryStats
     weather: summarize.SummaryStats
     notes: list[str]
 
+    @property
+    def front(self) -> PeriodView:
+        return next(iter(self.views.values()))
+
+    @property
+    def scores(self) -> list[momentum.StoryScore]:
+        return self.front.scores
+
+    @property
+    def rising(self) -> list[momentum.RisingItem]:
+        return self.front.rising
+
+
+def period_views(store: Store, settings: Settings, sources: SourcesConfig, now: datetime) -> dict[str, PeriodView]:
+    return {
+        p.key: PeriodView(p, momentum.score_stories(store, settings, sources, now, p), momentum.rising(store, settings, now, p.hours))
+        for p in settings.site.periods
+    }
+
 
 def run_analysis(store: Store, settings: Settings, sources: SourcesConfig, now: datetime, llm: LLM | None) -> AnalysisRun:
-    """Momentum, item labels (Haiku), story summaries and weather (Sonnet). Without an LLM, or
-    once the budget is spent, the LLM steps are skipped and everything else still runs."""
+    """Labels (Haiku), then for every view (24 hours, 7 days, ...): ranking, Rising, summaries
+    of its top stories and its weather line (Sonnet). Without an LLM, or once the budget is
+    spent, the LLM steps are skipped and everything else still runs."""
     a = settings.analysis
     since = iso(now - timedelta(hours=settings.cluster.window_hours))
     use_llm = llm is not None and llm.available
     notes = [] if use_llm else ["no ANTHROPIC_API_KEY: no labels, summaries or weather this run"]
     news = classify.label_news(store, settings, sources, llm, since) if use_llm else classify.LabelStats()
-    scores = momentum.score_stories(store, settings, sources, now)
-    rising = momentum.rising(store, settings, now)
-    builder_ids = [r.item_id for r in rising]
-    top_ids = [s.story_id for s in scores[: a.summarize_top]]
-    if top_ids:
-        builder_ids += [r["id"] for r in store.conn.execute(
-            f"SELECT id FROM items WHERE story_id IN ({','.join('?' * len(top_ids))}) AND kind IN ('repo','model','dataset','space','paper')",
-            top_ids,
-        )]
+    views = period_views(store, settings, sources, now)  # after labels: merging uses their names
+    builder_ids: list[str] = []
+    for v in views.values():
+        builder_ids += [r.item_id for r in v.rising]
+        members = [sid for s in v.scores[: a.summarize_top] for sid in s.members]
+        if members:
+            builder_ids += [r["id"] for r in store.conn.execute(
+                f"SELECT id FROM items WHERE story_id IN ({','.join('?' * len(members))}) AND kind IN ('repo','model','dataset','space','paper')",
+                members,
+            )]
     builders = classify.label_builders(store, settings, llm, list(dict.fromkeys(builder_ids))) if use_llm else classify.LabelStats()
-    sums = summarize.summarize_top(store, settings, sources, llm, scores, now) if use_llm else summarize.SummaryStats()
-    wx = summarize.weather(store, settings, sources, llm, scores, rising, a.top_stories, now) if use_llm else summarize.SummaryStats()
+    sums, wx = summarize.SummaryStats(), summarize.SummaryStats()
+    if use_llm:
+        for v in views.values():
+            st = summarize.summarize_top(store, settings, sources, llm, v.scores, now)
+            sums.summarized += st.summarized
+            sums.unchanged += st.unchanged
+            sums.notes += [n for n in st.notes if n not in sums.notes]
+            w = summarize.weather(store, settings, sources, llm, v.scores, v.rising, a.top_stories, now, v.period)
+            wx.weather = wx.weather or w.weather
+            wx.notes += [n for n in w.notes if n not in wx.notes]
     for st in (news, builders, sums, wx):
         notes += [n for n in st.notes if n not in notes]
-    return AnalysisRun(scores, rising, news, builders, sums, wx, notes)
+    return AnalysisRun(views, news, builders, sums, wx, notes)

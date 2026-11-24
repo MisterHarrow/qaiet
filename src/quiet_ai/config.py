@@ -173,7 +173,7 @@ class AnalysisSettings(_Model):
     news_prompt: str = "news_label_v3"
     builder_prompt: str = "builder_label_v1"
     summary_prompt: str = "story_summary_v3"
-    weather_prompt: str = "weather_v1"
+    weather_prompt: str = "weather_v3"
     summarize_top: int = 12
     resummarize_new_items: int = 3   # re-summarize after this many new items, or any new outlet
     builder_label_top: int = 30      # label this many Rising candidates (plus builders in top stories)
@@ -181,11 +181,30 @@ class AnalysisSettings(_Model):
     top_stories: int = 12            # stories on the page
 
 
+class PeriodSettings(_Model):
+    key: str
+    label: str
+    hours: int
+    half_life_hours: float           # momentum decay within this view
+    merge: bool = False              # merge stories that recur within the period (longer views)
+
+
+def _default_periods() -> list[PeriodSettings]:
+    return [
+        PeriodSettings(key="day", label="24 hours", hours=24, half_life_hours=36),
+        PeriodSettings(key="week", label="7 days", hours=168, half_life_hours=96, merge=True),
+        PeriodSettings(key="month", label="30 days", hours=720, half_life_hours=360, merge=True),
+        PeriodSettings(key="year", label="1 year", hours=8760, half_life_hours=2160, merge=True),
+    ]
+
+
 class SiteSettings(_Model):
     out_dir: str = "site"
     timezone: str = "Europe/Stockholm"
+    periods: list[PeriodSettings] = Field(default_factory=_default_periods)  # first one is the front page
+    period_merge_threshold: float = 0.72
+    period_merge_candidates: int = 300
     terms_count: int = 16
-    terms_hours: int = 24
     term_aliases: dict[str, str] = Field(default_factory=dict)
     term_stopwords: list[str] = Field(default_factory=lambda: ["ai", "artificial intelligence"])
 

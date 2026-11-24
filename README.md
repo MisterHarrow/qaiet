@@ -23,6 +23,7 @@ uv run qa serve                  # build and preview at http://localhost:8765
 uv run qa cluster                # relevance filter, embeddings, stories
 uv run qa classify               # labels (Haiku), momentum, summaries and weather (Sonnet); prints the edition
 uv run qa stories                # print the ranked stories from the database, no LLM calls
+uv run qa stories -p week        # same for another view: day, week, month, year
 uv run qa costs                  # LLM spend this month against the cap
 uv run qa classify --dry-run     # any of these with --dry-run: fixtures, no network, no LLM
 uv run qa sources check          # fetch every source once and report health (writes nothing)
