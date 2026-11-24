@@ -1,0 +1,339 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:rvofkpg4qgalioqtvphgclbh/app.bsky.feed.post/3mzgrzccmwr2v",
+    "cid": "bafyreifnfwssnkqo5a56yv4v3wai3u737f3pfy6qcbzzarmuyrqe3tdxci",
+    "author": {
+     "did": "did:plc:rvofkpg4qgalioqtvphgclbh",
+     "handle": "msftresearch.bsky.social",
+     "displayName": "Microsoft Research",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-11-16T22:31:22.428Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-03T21:32:06.645Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "card": {
+       "description": "Research Manager Mike Walker reflects on a career spanning hacker culture, cybersecurity, and AI, sharing lessons about trust, teamwork, leadership, and why solving difficult problems requires curiosity, judgment, agility—and an understanding of the rules.",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreibphghv3dhjuosvjq3bfqzbmi7lmky4mfzsxhldripf7asgwgaihy"
+        },
+        "mimeType": "image/jpeg",
+        "size": 808517
+       },
+       "title": "Learn the rules: The hacker mindset - Microsoft Research",
+       "uri": "https://msft.it/63323a4wPt"
+      },
+      "external": {
+       "description": "Research Manager Mike Walker reflects on a career spanning hacker culture, cybersecurity, and AI, sharing lessons about trust, teamwork, leadership, and why solving difficult problems requires curiosity, judgment, agility—and an understanding of the rules.",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreibphghv3dhjuosvjq3bfqzbmi7lmky4mfzsxhldripf7asgwgaihy"
+        },
+        "mimeType": "image/jpeg",
+        "size": 808517
+       },
+       "title": "Learn the rules: The hacker mindset - Microsoft Research",
+       "uri": "https://msft.it/63323a4wPt"
+      }
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://msft.it/63323a4wPt"
+        }
+       ],
+       "index": {
+        "byteEnd": 217,
+        "byteStart": 199
+       }
+      }
+     ],
+     "text": "Want to understand a system? Start with its rules.\nMicrosoft Research Manager Mike Walker joins Principal Technical Program Manager Weishung Liu to explore what happens when the rules meet reality. \nmsft.it/63323a4wPt \n"
+    },
+    "embed": {
+     "external": {
+      "uri": "https://msft.it/63323a4wPt",
+      "title": "Learn the rules: The hacker mindset - Microsoft Research",
+      "description": "Research Manager Mike Walker reflects on a career spanning hacker culture, cybersecurity, and AI, sharing lessons about trust, teamwork, leadership, and why solving difficult problems requires curiosity, judgment, agility—and an understanding of the rules.",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:rvofkpg4qgalioqtvphgclbh/bafkreibphghv3dhjuosvjq3bfqzbmi7lmky4mfzsxhldripf7asgwgaihy"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 8,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-03T21:32:07.374Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:rvofkpg4qgalioqtvphgclbh/app.bsky.feed.post/3mz24zpvf4z2r",
+    "cid": "bafyreigejsaxp7uhikafztkmuyjlq4zjmunmgaljo4s46edivtmixoqw6q",
+    "author": {
+     "did": "did:plc:rvofkpg4qgalioqtvphgclbh",
+     "handle": "msftresearch.bsky.social",
+     "displayName": "Microsoft Research",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-11-16T22:31:22.428Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-10-29T20:44:35.503Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "card": {
+       "description": "Host Sowbhagya Suresh shares some of the latest news and cutting-edge research from across Microsoft—from understanding the challenges facing coding agents to uncovering how people use AI at work and improving extended-range weather forecasting.\n\nResearch Focus newsletter on LinkedIn: https://msft.it/63321aFDF3\nMicrosoft Research Podcast: https://msft.it/63322aFDFO\n\n0:00: Introduction \n0:48: A self-improving agentic framework  \n1:35: Understanding coding agent success and failure \n2:29: Evolving…",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreidmtqjlksmsubhjc26synbv55zckgbmabxwjv2tt7xxlpzstngtsa"
+        },
+        "mimeType": "image/jpeg",
+        "size": 73359
+       },
+       "title": "Microsoft Research Focus – Edition #97",
+       "uri": "https://msft.it/63323aFDFP"
+      },
+      "external": {
+       "description": "Host Sowbhagya Suresh shares some of the latest news and cutting-edge research from across Microsoft—from understanding the challenges facing coding agents to uncovering how people use AI at work and improving extended-range weather forecasting.\n\nResearch Focus newsletter on LinkedIn: https://msft.it/63321aFDF3\nMicrosoft Research Podcast: https://msft.it/63322aFDFO\n\n0:00: Introduction \n0:48: A self-improving agentic framework  \n1:35: Understanding coding agent success and failure \n2:29: Evolving…",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreidmtqjlksmsubhjc26synbv55zckgbmabxwjv2tt7xxlpzstngtsa"
+        },
+        "mimeType": "image/jpeg",
+        "size": 73359
+       },
+       "title": "Microsoft Research Focus – Edition #97",
+       "uri": "https://msft.it/63323aFDFP"
+      }
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://msft.it/63323aFDFP"
+        }
+       ],
+       "index": {
+        "byteEnd": 271,
+        "byteStart": 253
+       }
+      }
+     ],
+     "text": "Introducing Microsoft Research Focus, now in video and audio.\n\nThis edition covers AI agents, Copilot Chat usage, BioEmu2's public preview, and advances in weather forecasting.\n\nListen to the full episode on major podcast platforms or watch on YouTube: msft.it/63323aFDFP\n"
+    },
+    "embed": {
+     "external": {
+      "uri": "https://msft.it/63323aFDFP",
+      "title": "Microsoft Research Focus – Edition #97",
+      "description": "Host Sowbhagya Suresh shares some of the latest news and cutting-edge research from across Microsoft—from understanding the challenges facing coding agents to uncovering how people use AI at work and improving extended-range weather forecasting.\n\nResearch Focus newsletter on LinkedIn: https://msft.it/63321aFDF3\nMicrosoft Research Podcast: https://msft.it/63322aFDFO\n\n0:00: Introduction \n0:48: A self-improving agentic framework  \n1:35: Understanding coding agent success and failure \n2:29: Evolving…",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:rvofkpg4qgalioqtvphgclbh/bafkreidmtqjlksmsubhjc26synbv55zckgbmabxwjv2tt7xxlpzstngtsa"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 4,
+    "quoteCount": 1,
+    "indexedAt": "2026-10-29T20:44:36.080Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:rvofkpg4qgalioqtvphgclbh/app.bsky.feed.post/3myi2ftrupk2w",
+    "cid": "bafyreihbt4532mercd5drwmptbrcaaekxq3buu3v4hsrvqlwes5pea337u",
+    "author": {
+     "did": "did:plc:rvofkpg4qgalioqtvphgclbh",
+     "handle": "msftresearch.bsky.social",
+     "displayName": "Microsoft Research",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-11-16T22:31:22.428Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-10-22T16:09:43.370Z",
+     "embed": {
+      "$type": "app.bsky.embed.video",
+      "video": {
+       "$type": "blob",
+       "ref": {
+        "$link": "bafkreiai3hx373fj25mqqoacfz3o6cejqs7xy7nudpr2cv3j2kw2uthy6u"
+       },
+       "mimeType": "video/mp4",
+       "size": 17921844
+      }
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://msft.it/63325aaFPD"
+        }
+       ],
+       "index": {
+        "byteEnd": 216,
+        "byteStart": 198
+       }
+      }
+     ],
+     "text": "Flint-interactive gives AI agents a language for creating interactive visualizations. Click a chart, filter data, highlight related content, and explore beyond the view the author originally chose. msft.it/63325aaFPD"
+    },
+    "embed": {
+     "cid": "bafkreiai3hx373fj25mqqoacfz3o6cejqs7xy7nudpr2cv3j2kw2uthy6u",
+     "playlist": "https://video.bsky.app/watch/did%3Aplc%3Arvofkpg4qgalioqtvphgclbh/bafkreiai3hx373fj25mqqoacfz3o6cejqs7xy7nudpr2cv3j2kw2uthy6u/playlist.m3u8",
+     "$type": "app.bsky.embed.video#view"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 1,
+    "repostCount": 0,
+    "likeCount": 6,
+    "quoteCount": 0,
+    "indexedAt": "2026-10-22T16:09:48.246Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:rvofkpg4qgalioqtvphgclbh/app.bsky.feed.post/3myfsyu3p4v24",
+    "cid": "bafyreiahzafm4bopy7fmmibelunlr2oetn6p4kdvxroyj7llo3pa6xv7oe",
+    "author": {
+     "did": "did:plc:rvofkpg4qgalioqtvphgclbh",
+     "handle": "msftresearch.bsky.social",
+     "displayName": "Microsoft Research",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-11-16T22:31:22.428Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-10-21T18:51:51.929Z",
+     "embed": {
+      "$type": "app.bsky.embed.video",
+      "video": {
+       "$type": "blob",
+       "ref": {
+        "$link": "bafkreie3tpp4fyq25dsbbyqq3bwflnoidxc3hyyq5ousjn2svmpy6mxmim"
+       },
+       "mimeType": "video/mp4",
+       "size": 49169870
+      }
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://msft.it/63326aakQa"
+        }
+       ],
+       "index": {
+        "byteEnd": 278,
+        "byteStart": 260
+       }
+      }
+     ],
+     "text": "For decades, a key question about the challenges of high-dimensional computation resisted proof. New research resolves the KLS conjecture, removing a major barrier to understanding the efficiency of randomized algorithms used throughout science and computing. msft.it/63326aakQa "
+    },
+    "embed": {
+     "cid": "bafkreie3tpp4fyq25dsbbyqq3bwflnoidxc3hyyq5ousjn2svmpy6mxmim",
+     "playlist": "https://video.bsky.app/watch/did%3Aplc%3Arvofkpg4qgalioqtvphgclbh/bafkreie3tpp4fyq25dsbbyqq3bwflnoidxc3hyyq5ousjn2svmpy6mxmim/playlist.m3u8",
+     "$type": "app.bsky.embed.video#view"
+    },
+    "bookmarkCount": 2,
+    "replyCount": 1,
+    "repostCount": 0,
+    "likeCount": 7,
+    "quoteCount": 1,
+    "indexedAt": "2026-10-21T18:51:57.540Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:rvofkpg4qgalioqtvphgclbh/app.bsky.feed.post/3mydk4gqpi32i",
+    "cid": "bafyreibl7ezchyl2wuvuvtgapjqj24svbwd2l2afnjuswq4rmppurlwpie",
+    "author": {
+     "did": "did:plc:rvofkpg4qgalioqtvphgclbh",
+     "handle": "msftresearch.bsky.social",
+     "displayName": "Microsoft Research",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-11-16T22:31:22.428Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-10-20T21:07:29.120Z",
+     "embed": {
+      "$type": "app.bsky.embed.video",
+      "video": {
+       "$type": "blob",
+       "ref": {
+        "$link": "bafkreigjwfrpvay55alcdqajwotb47k77aa7rxelaj2wkpfozkrszofsnu"
+       },
+       "mimeType": "video/mp4",
+       "size": 36515567
+      }
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://msft.it/63322av2PO"
+        }
+       ],
+       "index": {
+        "byteEnd": 203,
+        "byteStart": 185
+       }
+      }
+     ],
+     "text": "When the problems you're working to solve feel overwhelming, what keeps you hopeful? \n\nFor Microsoft Research's Chris White, it's knowing there's something he can do. Find the podcast: msft.it/63322av2PO\n"
+    },
+    "embed": {
+     "cid": "bafkreigjwfrpvay55alcdqajwotb47k77aa7rxelaj2wkpfozkrszofsnu",
+     "playlist": "https://video.bsky.app/watch/did%3Aplc%3Arvofkpg4qgalioqtvphgclbh/bafkreigjwfrpvay55alcdqajwotb47k77aa7rxelaj2wkpfozkrszofsnu/playlist.m3u8",
+     "$type": "app.bsky.embed.video#view"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 1,
+    "repostCount": 0,
+    "likeCount": 1,
+    "quoteCount": 1,
+    "indexedAt": "2026-10-20T21:07:34.942Z"
+   }
+  }
+ ],
+ "cursor": "2026-07-21T19:30:26.83Z"
+}

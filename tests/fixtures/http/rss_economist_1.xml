@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>
+      <![CDATA[Science & technology]]>
+    </title>
+    <description/>
+    <link>https://www.economist.com/science-and-technology</link>
+    <pubDate>Mon, 23 Nov 2026 20:53:51 +0000</pubDate>
+    <lastBuildDate>Mon, 23 Nov 2026 20:53:51 +0000</lastBuildDate>
+    <atom:link href="https://www.economist.com/science-and-technology/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>
+        <![CDATA[AI has conquered mathematics’ greatest challenge]]>
+      </title>
+      <description>
+        <![CDATA[The Riemann hypothesis has fallen. Where does mathematics, and AI, go from here?]]>
+      </description>
+      <link>https://www.economist.com/science-and-technology/2026/11/20/ai-has-conquered-mathematics-greatest-challenge</link>
+      <guid isPermaLink="false">783dbd9c-6238-4d14-bc13-d320b0705e5c</guid>
+      <pubDate>Fri, 20 Nov 2026 21:41:15 +0000</pubDate>
+    </item>
+    <item>
+      <title>
+        <![CDATA[Are some salts healthier than others?]]>
+      </title>
+      <description>
+        <![CDATA[The claim has more than a grain of truth]]>
+      </description>
+      <link>https://www.economist.com/science-and-technology/2026/11/20/are-some-salts-healthier-than-others</link>
+      <guid isPermaLink="false">2babc241-4cbf-4699-a04a-817e9d07a3b6</guid>
+      <pubDate>Fri, 20 Nov 2026 16:01:15 +0000</pubDate>
+    </item>
+    <item>
+      <title>
+        <![CDATA[LLMs are developing filthy mouths]]>
+      </title>
+      <description>
+        <![CDATA[More challenging tasks may be to blame]]>
+      </description>
+      <link>https://www.economist.com/science-and-technology/2026/11/18/llms-are-developing-filthy-mouths</link>
+      <guid isPermaLink="false">6e059724-7ca2-45c2-8566-3a8b4e9f52ae</guid>
+      <pubDate>Wed, 18 Nov 2026 17:48:07 +0000</pubDate>
+    </item>
+    <item>
+      <title>
+        <![CDATA[Some grasshoppers fly like butterflies to mislead predators]]>
+      </title>
+      <description>
+        <![CDATA[It is a rare example of motion-related mimicry]]>
+      </description>
+      <link>https://www.economist.com/science-and-technology/2026/11/18/some-grasshoppers-fly-like-butterflies-to-mislead-predators</link>
+      <guid isPermaLink="false">a71e17aa-8f66-474f-a5e8-dc88f6a2012f</guid>
+      <pubDate>Wed, 18 Nov 2026 17:40:03 +0000</pubDate>
+    </item>
+    <item>
+      <title>
+        <![CDATA[America has slashed funding for biomedical science abroad]]>
+      </title>
+      <description>
+        <![CDATA[It has also weakened oversight of how future grants are spent]]>
+      </description>
+      <link>https://www.economist.com/science-and-technology/2026/11/18/america-has-slashed-funding-for-biomedical-science-abroad</link>
+      <guid isPermaLink="false">d1c62d75-0d6e-474b-b7fa-09170cb7a6a7</guid>
+      <pubDate>Wed, 18 Nov 2026 17:37:15 +0000</pubDate>
+    </item>
+  </channel>
+</rss>

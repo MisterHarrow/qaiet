@@ -1,0 +1,32 @@
+[project]
+name = "quiet-ai"
+version = "0.1.0"
+description = "A quiet daily overview of AI: how the press frames it, what builders make."
+readme = "README.md"
+authors = [
+    { name = "Benjamin Klingsbo", email = "hello@b3njamin.ai" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "feedparser>=6.0.14",
+    "httpx>=0.28.1",
+    "protego>=0.7.0",
+    "pydantic>=2.14.4",
+    "pyyaml>=6.0.4",
+    "typer>=0.29.2",
+]
+
+[project.scripts]
+qa = "quiet_ai.cli:app"
+
+[build-system]
+requires = ["uv_build>=0.12.19,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

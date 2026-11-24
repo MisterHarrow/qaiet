@@ -1,0 +1,90 @@
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns0="http://www.w3.org/2005/Atom" version="2.0">
+<channel> <title>Business</title> <link>https://www.telegraph.co.uk/business/</link> <ns0:link href="https://www.telegraph.co.uk/business/rss.xml" rel="self" type="application/rss+xml" /> <description>www.telegraph.co.uk for the latest news from the UK and around the world.</description> <language>en-GB</language> <lastBuildDate>Mon, 23 Nov 2026 21:18:17 GMT</lastBuildDate> <image> <title>Telegraph Logo</title> <url>https://www.telegraph.co.uk/content/dam/telegraph-logos/Micro%2089-189w%20-%20Black.png</url> <link>https://www.telegraph.co.uk/content/dam/telegraph-logos/Micro%2089-189w%20-%20Black.png</link> </image> <ttl>1</ttl> <item>
+	<title>Wall Street stocks soar as Jensen Huang returns to Nvidia</title>
+	<link>https://www.telegraph.co.uk/business/2026/11/23/us-stocks-poised-to-rebound-after-global-tech-sell-off/</link>
+	<description>Wall Street stocks soar as Jensen Huang returns to Nvidia</description>
+	<pubDate>Mon, 23 Nov 2026 21:18:07 GMT</pubDate>
+	<guid isPermaLink="false">cf9697ba-9578-3ce2-8584-94f8fe9d016a</guid>
+	<dc:creator>James Warrington</dc:creator>
+	<dc:creator>Joe Sledge</dc:creator>
+	<category domain="">topics:things/uk-economy</category>
+	<category domain="">topics:organisations/ftse-100</category>
+	<category domain="">topics:things/pound</category>
+	<category domain="">topics:organisations/dow-jones-industrial-average</category>
+	<category domain="">topics:things/global-economy</category>
+	<category domain="">topics:in-the-news/iran-war</category>
+	<category domain="">structure:business</category>
+	<category domain="">structure:live-priority</category>
+	<category domain="">structure:apple-news-free</category>
+	<enclosure url="https://www.telegraph.co.uk/content/dam/business/2026/11/23/TELEMMGLPICT000453110518_17954239357480_trans_NvBQzQNjv4BqgsaO8O78rhmZrDxTlQBjdLdu0TL-Cg_AMOUqySXmFgU.jpeg" type="image/jpeg" length="99" />
+</item><item>
+	<title>Anthropic plunges as Wall Street suffers AI sell-off</title>
+	<link>https://www.telegraph.co.uk/business/2026/11/20/ai-tech-sell-off-anthropic-claude-nasdaq-ftse-100-markets/</link>
+	<description>Anthropic plunges as Wall Street suffers AI sell-off</description>
+	<pubDate>Fri, 20 Nov 2026 21:07:18 GMT</pubDate>
+	<guid isPermaLink="false">bda0b4ae-4aa7-30ec-be01-1fa0df2a19ae</guid>
+	<dc:creator>Chris Price</dc:creator>
+	<dc:creator>Joe Sledge</dc:creator>
+	<category domain="">topics:things/uk-economy</category>
+	<category domain="">topics:organisations/ftse-100</category>
+	<category domain="">topics:things/pound</category>
+	<category domain="">topics:organisations/dow-jones-industrial-average</category>
+	<category domain="">topics:things/global-economy</category>
+	<category domain="">topics:in-the-news/iran-war</category>
+	<category domain="">structure:business</category>
+	<category domain="">structure:live-priority</category>
+	<category domain="">structure:apple-news-free</category>
+	<enclosure url="https://www.telegraph.co.uk/content/dam/business/2026/11/20/TELEMMGLPICT000512259073_17951754298490_trans_NvBQzQNjv4BqqVzuuqpFlyLIwiB6NTmJwWyaKjL1CatlwZEbgNRqSgg.jpeg" type="image/jpeg" length="99" />
+</item><item>
+	<title>Anthropic achieves $2tn valuation as shares soar</title>
+	<link>https://www.telegraph.co.uk/business/2026/11/19/anthropic-ipo-listing-nasdaq-ai-claude-ftse-100-markets/</link>
+	<description>Anthropic achieves $2tn valuation as shares soar</description>
+	<pubDate>Thu, 19 Nov 2026 21:34:56 GMT</pubDate>
+	<guid isPermaLink="false">c03bff2e-5afe-3dfb-987a-fc287d302f5b</guid>
+	<dc:creator>Matthew Field</dc:creator>
+	<dc:creator>Chris Price</dc:creator>
+	<dc:creator>Joe Sledge</dc:creator>
+	<category domain="">topics:things/uk-economy</category>
+	<category domain="">topics:organisations/ftse-100</category>
+	<category domain="">topics:things/pound</category>
+	<category domain="">topics:organisations/dow-jones-industrial-average</category>
+	<category domain="">topics:things/global-economy</category>
+	<category domain="">topics:in-the-news/iran-war</category>
+	<category domain="">structure:business</category>
+	<category domain="">structure:live-priority</category>
+	<category domain="">structure:apple-news-free</category>
+</item><item>
+	<title>Households face back-to-back interest rate rises</title>
+	<link>https://www.telegraph.co.uk/business/2026/11/18/uk-inflation-cpi-bank-of-england-interest-rates-ftse-100/</link>
+	<description>Households face back-to-back interest rate rises</description>
+	<pubDate>Wed, 18 Nov 2026 13:46:06 GMT</pubDate>
+	<guid isPermaLink="false">59edb673-7c10-3a7d-9c56-443ece86dd80</guid>
+	<dc:creator>Chris Price</dc:creator>
+	<category domain="">topics:things/uk-economy</category>
+	<category domain="">topics:organisations/ftse-100</category>
+	<category domain="">topics:things/pound</category>
+	<category domain="">topics:organisations/dow-jones-industrial-average</category>
+	<category domain="">topics:in-the-news/cost-of-living</category>
+	<category domain="">topics:things/global-economy</category>
+	<category domain="">structure:business</category>
+	<category domain="">structure:live-priority</category>
+	<category domain="">structure:apple-news-free</category>
+	<enclosure url="https://www.telegraph.co.uk/content/dam/business/2026/11/18/TELEMMGLPICT000489490063_17949915462470_trans_NvBQzQNjv4BqI9qG_7_6mNzIlwZsTkKqAM7NL8eUlvIUqny2M10JmUs.jpeg" type="image/jpeg" length="99" />
+</item><item>
+	<title>Bosses ‘increasingly reluctant’ to hire as employment costs soar</title>
+	<link>https://www.telegraph.co.uk/business/2026/11/17/job-vacancies-growth-milburn-employment-ftse-100-markets/</link>
+	<description>Bosses ‘increasingly reluctant’ to hire as employment costs soar</description>
+	<pubDate>Tue, 17 Nov 2026 12:04:28 GMT</pubDate>
+	<guid isPermaLink="false">ccb6fa2f-c866-3e5e-8524-532af90d7f18</guid>
+	<dc:creator>Chris Price</dc:creator>
+	<category domain="">topics:things/uk-economy</category>
+	<category domain="">topics:organisations/ftse-100</category>
+	<category domain="">topics:things/pound</category>
+	<category domain="">topics:organisations/dow-jones-industrial-average</category>
+	<category domain="">topics:in-the-news/cost-of-living</category>
+	<category domain="">topics:things/global-economy</category>
+	<category domain="">structure:business</category>
+	<category domain="">structure:live-priority</category>
+	<category domain="">structure:apple-news-free</category>
+	<enclosure url="https://www.telegraph.co.uk/content/dam/business/2026/11/17/TELEMMGLPICT000453561388_17948974897250_trans_NvBQzQNjv4BqgsaO8O78rhmZrDxTlQBjdGLvJF5WfpqnBZShRL_tOZw.jpeg" type="image/jpeg" length="99" />
+</item></channel></rss>

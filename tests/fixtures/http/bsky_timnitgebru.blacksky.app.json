@@ -1,0 +1,850 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:wbtjiqd5pshd5tsvwjv6xmr3/app.bsky.feed.post/3n2tyca7pgc2c",
+    "cid": "bafyreiemdtslehdwobjdbed33zk6wiawqhnof2wu7kbqrey2blqfal72ku",
+    "author": {
+     "did": "did:plc:wbtjiqd5pshd5tsvwjv6xmr3",
+     "handle": "adambecker.bsky.social",
+     "displayName": "Adam Becker",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-04T02:43:16.070Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3m66jpvkgkn2w",
+        "isValid": true,
+        "createdAt": "2025-11-22T00:22:09.204Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-21T20:54:17.157Z",
+     "embed": {
+      "$type": "app.bsky.embed.record",
+      "record": {
+       "cid": "bafyreibxi3gqiqp7cuww5nmxozxjn5qveiqsclrb4vin3twmflp3g7s3hq",
+       "uri": "at://did:plc:554uh3zchoid3tyseo2mfml5/app.bsky.feed.post/3n2txezlunc2m"
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "lol, no\n\ncultists gonna cult"
+    },
+    "embed": {
+     "record": {
+      "uri": "at://did:plc:554uh3zchoid3tyseo2mfml5/app.bsky.feed.post/3n2txezlunc2m",
+      "cid": "bafyreibxi3gqiqp7cuww5nmxozxjn5qveiqsclrb4vin3twmflp3g7s3hq",
+      "author": {
+       "did": "did:plc:554uh3zchoid3tyseo2mfml5",
+       "handle": "zeteo.com",
+       "displayName": "Zeteo",
+       "associated": {
+        "activitySubscription": {
+         "allowSubscriptions": "followers"
+        }
+       },
+       "createdAt": "2024-11-12T15:52:18.703Z",
+       "verification": {
+        "verifications": [
+         {
+          "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+          "issuerDisplayName": "Bluesky",
+          "issuerHandle": "bsky.app",
+          "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3luocs3k5og24",
+          "isValid": true,
+          "createdAt": "2025-07-24T00:48:45.939Z"
+         }
+        ],
+        "verifiedStatus": "valid",
+        "trustedVerifierStatus": "none"
+       }
+      },
+      "value": {
+       "$type": "app.bsky.feed.post",
+       "createdAt": "2026-11-21T20:37:57.137Z",
+       "embed": {
+        "$type": "app.bsky.embed.video",
+        "aspectRatio": {
+         "height": 1920,
+         "width": 1080
+        },
+        "presentation": "default",
+        "video": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreibdv3puvwjkq6bnbnz4xmckq72vuypy3smoubnkwzqvm33v6e3bu4"
+         },
+         "mimeType": "video/mp4",
+         "size": 53186613
+        }
+       },
+       "facets": [
+        {
+         "$type": "app.bsky.richtext.facet",
+         "features": [
+          {
+           "$type": "app.bsky.richtext.facet#mention",
+           "did": "did:plc:tlgyaztbkv5nag622fppv6re"
+          }
+         ],
+         "index": {
+          "byteEnd": 193,
+          "byteStart": 174
+         }
+        },
+        {
+         "features": [
+          {
+           "$type": "app.bsky.richtext.facet#link",
+           "uri": "https://zeteo.com"
+          }
+         ],
+         "index": {
+          "byteEnd": 298,
+          "byteStart": 289
+         }
+        }
+       ],
+       "langs": [
+        "en"
+       ],
+       "text": "The Latest Problem AI Solved Should 'Terrify' You\n\nAfter 167 years, the Riemann hypothesis was solved by Claude. That should be a great accomplishment, right?\n\nAI researcher @so8res.bsky.social explains why this could be the brink of super intelligent AI agents going rogue.\n\nSubscribe to zeteo.com."
+      },
+      "likeCount": 338,
+      "replyCount": 109,
+      "repostCount": 125,
+      "quoteCount": 48,
+      "indexedAt": "2026-11-21T20:38:00.647Z",
+      "embeds": [
+       {
+        "cid": "bafkreibdv3puvwjkq6bnbnz4xmckq72vuypy3smoubnkwzqvm33v6e3bu4",
+        "playlist": "https://video.bsky.app/watch/did%3Aplc%3A554uh3zchoid3tyseo2mfml5/bafkreibdv3puvwjkq6bnbnz4xmckq72vuypy3smoubnkwzqvm33v6e3bu4/playlist.m3u8",
+        "aspectRatio": {
+         "height": 1920,
+         "width": 1080
+        },
+        "presentation": "default",
+        "$type": "app.bsky.embed.video#view"
+       }
+      ],
+      "$type": "app.bsky.embed.record#viewRecord"
+     },
+     "$type": "app.bsky.embed.record#view"
+    },
+    "bookmarkCount": 3,
+    "replyCount": 8,
+    "repostCount": 14,
+    "likeCount": 137,
+    "quoteCount": 1,
+    "indexedAt": "2026-11-21T20:54:17.040Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:azpq3hfq3llpowyqpjkqwgxs",
+     "handle": "timnitgebru.blacksky.app",
+     "displayName": "Timnit Gebru",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-12-04T23:08:33.346Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mrla3qtrah2z",
+        "isValid": true,
+        "createdAt": "2026-07-26T20:33:07.001Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:azpq3hfq3llpowyqpjkqwgxs/app.bsky.feed.repost/3n2ynpynrmo3l",
+    "cid": "bafyreidiv5yydhosqfxvihinlv55ham3zjlkzkmaf3gfhh742q5nyetgjy",
+    "indexedAt": "2026-11-23T17:28:26.651Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:wlamchyb2ae65fgx75sfaqsq/app.bsky.feed.post/3n2unadoa422g",
+    "cid": "bafyreidawhl3w3aikqztqafmrs543xqqoxrgu3ggnerzbkjx5uuh7j4num",
+    "author": {
+     "did": "did:plc:wlamchyb2ae65fgx75sfaqsq",
+     "handle": "iansociologo.bsky.social",
+     "displayName": "Ian Carrillo",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-08-04T00:53:06.808Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-22T03:09:02.238Z",
+     "embed": {
+      "$type": "app.bsky.embed.record",
+      "record": {
+       "cid": "bafyreibxi3gqiqp7cuww5nmxozxjn5qveiqsclrb4vin3twmflp3g7s3hq",
+       "uri": "at://did:plc:554uh3zchoid3tyseo2mfml5/app.bsky.feed.post/3n2txezlunc2m"
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "This is the kind of hype claim that my sociology of AI students know how to methodically disassemble. That's the real AI literacy."
+    },
+    "embed": {
+     "record": {
+      "uri": "at://did:plc:554uh3zchoid3tyseo2mfml5/app.bsky.feed.post/3n2txezlunc2m",
+      "cid": "bafyreibxi3gqiqp7cuww5nmxozxjn5qveiqsclrb4vin3twmflp3g7s3hq",
+      "author": {
+       "did": "did:plc:554uh3zchoid3tyseo2mfml5",
+       "handle": "zeteo.com",
+       "displayName": "Zeteo",
+       "associated": {
+        "activitySubscription": {
+         "allowSubscriptions": "followers"
+        }
+       },
+       "createdAt": "2024-11-12T15:52:18.703Z",
+       "verification": {
+        "verifications": [
+         {
+          "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+          "issuerDisplayName": "Bluesky",
+          "issuerHandle": "bsky.app",
+          "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3luocs3k5og24",
+          "isValid": true,
+          "createdAt": "2025-07-24T00:48:45.939Z"
+         }
+        ],
+        "verifiedStatus": "valid",
+        "trustedVerifierStatus": "none"
+       }
+      },
+      "value": {
+       "$type": "app.bsky.feed.post",
+       "createdAt": "2026-11-21T20:37:57.137Z",
+       "embed": {
+        "$type": "app.bsky.embed.video",
+        "aspectRatio": {
+         "height": 1920,
+         "width": 1080
+        },
+        "presentation": "default",
+        "video": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreibdv3puvwjkq6bnbnz4xmckq72vuypy3smoubnkwzqvm33v6e3bu4"
+         },
+         "mimeType": "video/mp4",
+         "size": 53186613
+        }
+       },
+       "facets": [
+        {
+         "$type": "app.bsky.richtext.facet",
+         "features": [
+          {
+           "$type": "app.bsky.richtext.facet#mention",
+           "did": "did:plc:tlgyaztbkv5nag622fppv6re"
+          }
+         ],
+         "index": {
+          "byteEnd": 193,
+          "byteStart": 174
+         }
+        },
+        {
+         "features": [
+          {
+           "$type": "app.bsky.richtext.facet#link",
+           "uri": "https://zeteo.com"
+          }
+         ],
+         "index": {
+          "byteEnd": 298,
+          "byteStart": 289
+         }
+        }
+       ],
+       "langs": [
+        "en"
+       ],
+       "text": "The Latest Problem AI Solved Should 'Terrify' You\n\nAfter 167 years, the Riemann hypothesis was solved by Claude. That should be a great accomplishment, right?\n\nAI researcher @so8res.bsky.social explains why this could be the brink of super intelligent AI agents going rogue.\n\nSubscribe to zeteo.com."
+      },
+      "likeCount": 338,
+      "replyCount": 109,
+      "repostCount": 125,
+      "quoteCount": 48,
+      "indexedAt": "2026-11-21T20:38:00.647Z",
+      "embeds": [
+       {
+        "cid": "bafkreibdv3puvwjkq6bnbnz4xmckq72vuypy3smoubnkwzqvm33v6e3bu4",
+        "playlist": "https://video.bsky.app/watch/did%3Aplc%3A554uh3zchoid3tyseo2mfml5/bafkreibdv3puvwjkq6bnbnz4xmckq72vuypy3smoubnkwzqvm33v6e3bu4/playlist.m3u8",
+        "aspectRatio": {
+         "height": 1920,
+         "width": 1080
+        },
+        "presentation": "default",
+        "$type": "app.bsky.embed.video#view"
+       }
+      ],
+      "$type": "app.bsky.embed.record#viewRecord"
+     },
+     "$type": "app.bsky.embed.record#view"
+    },
+    "bookmarkCount": 12,
+    "replyCount": 8,
+    "repostCount": 27,
+    "likeCount": 187,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-22T03:09:01.345Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:azpq3hfq3llpowyqpjkqwgxs",
+     "handle": "timnitgebru.blacksky.app",
+     "displayName": "Timnit Gebru",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-12-04T23:08:33.346Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mrla3qtrah2z",
+        "isValid": true,
+        "createdAt": "2026-07-26T20:33:07.001Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:azpq3hfq3llpowyqpjkqwgxs/app.bsky.feed.repost/3n2ynpv6ruxc7",
+    "cid": "bafyreieo6q6mrulx7aeawdfwfceixobe25v5g3kd5jrpsxcx4c6eby6un4",
+    "indexedAt": "2026-11-23T17:28:23.040Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 2
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:azpq3hfq3llpowyqpjkqwgxs/app.bsky.feed.post/3n2ykotwrbs25",
+    "cid": "bafyreigihxnodqyzqeddc5cwrvl7cexoqijruhw2qx52arh7lgkitxqezu",
+    "author": {
+     "did": "did:plc:azpq3hfq3llpowyqpjkqwgxs",
+     "handle": "timnitgebru.blacksky.app",
+     "displayName": "Timnit Gebru",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-12-04T23:08:33.346Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mrla3qtrah2z",
+        "isValid": true,
+        "createdAt": "2026-07-26T20:33:07.001Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T16:34:06.750Z",
+     "embed": {
+      "$type": "app.bsky.embed.recordWithMedia",
+      "media": {
+       "$type": "app.bsky.embed.images",
+       "images": [
+        {
+         "alt": "",
+         "aspectRatio": {
+          "height": 1276,
+          "width": 2648
+         },
+         "image": {
+          "$type": "blob",
+          "ref": {
+           "$link": "bafkreiaw2hz2dhfjj56xfbegcxa7m4b5dd4ya5mncbulvwuwy3nomh2uxa"
+          },
+          "mimeType": "image/jpeg",
+          "size": 1701981
+         }
+        }
+       ]
+      },
+      "record": {
+       "$type": "app.bsky.embed.record",
+       "record": {
+        "cid": "bafyreibxi3gqiqp7cuww5nmxozxjn5qveiqsclrb4vin3twmflp3g7s3hq",
+        "uri": "at://did:plc:554uh3zchoid3tyseo2mfml5/app.bsky.feed.post/3n2txezlunc2m"
+       }
+      }
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://www.iankduncan.com/commentary/2026-09-16-sex-ai-and-the-apocalypse"
+        }
+       ],
+       "index": {
+        "byteEnd": 296,
+        "byteStart": 262
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "Let me explain to you who these people are platforming. \n\nA cult of open race scientists, eugenicists and documented patterns of sexual harassment and assault. \n\nDisgusting that it's the \"left\" platforming these race scientists, eugenicists and harassers. 🤮 \nwww.iankduncan.com/commentary/2..."
+    },
+    "embed": {
+     "media": {
+      "images": [
+       {
+        "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:azpq3hfq3llpowyqpjkqwgxs/bafkreiaw2hz2dhfjj56xfbegcxa7m4b5dd4ya5mncbulvwuwy3nomh2uxa",
+        "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:azpq3hfq3llpowyqpjkqwgxs/bafkreiaw2hz2dhfjj56xfbegcxa7m4b5dd4ya5mncbulvwuwy3nomh2uxa",
+        "alt": "",
+        "aspectRatio": {
+         "height": 1276,
+         "width": 2648
+        }
+       }
+      ],
+      "$type": "app.bsky.embed.images#view"
+     },
+     "record": {
+      "record": {
+       "uri": "at://did:plc:554uh3zchoid3tyseo2mfml5/app.bsky.feed.post/3n2txezlunc2m",
+       "cid": "bafyreibxi3gqiqp7cuww5nmxozxjn5qveiqsclrb4vin3twmflp3g7s3hq",
+       "author": {
+        "did": "did:plc:554uh3zchoid3tyseo2mfml5",
+        "handle": "zeteo.com",
+        "displayName": "Zeteo",
+        "associated": {
+         "activitySubscription": {
+          "allowSubscriptions": "followers"
+         }
+        },
+        "createdAt": "2024-11-12T15:52:18.703Z",
+        "verification": {
+         "verifications": [
+          {
+           "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+           "issuerDisplayName": "Bluesky",
+           "issuerHandle": "bsky.app",
+           "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3luocs3k5og24",
+           "isValid": true,
+           "createdAt": "2025-07-24T00:48:45.939Z"
+          }
+         ],
+         "verifiedStatus": "valid",
+         "trustedVerifierStatus": "none"
+        }
+       },
+       "value": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-11-21T20:37:57.137Z",
+        "embed": {
+         "$type": "app.bsky.embed.video",
+         "aspectRatio": {
+          "height": 1920,
+          "width": 1080
+         },
+         "presentation": "default",
+         "video": {
+          "$type": "blob",
+          "ref": {
+           "$link": "bafkreibdv3puvwjkq6bnbnz4xmckq72vuypy3smoubnkwzqvm33v6e3bu4"
+          },
+          "mimeType": "video/mp4",
+          "size": 53186613
+         }
+        },
+        "facets": [
+         {
+          "$type": "app.bsky.richtext.facet",
+          "features": [
+           {
+            "$type": "app.bsky.richtext.facet#mention",
+            "did": "did:plc:tlgyaztbkv5nag622fppv6re"
+           }
+          ],
+          "index": {
+           "byteEnd": 193,
+           "byteStart": 174
+          }
+         },
+         {
+          "features": [
+           {
+            "$type": "app.bsky.richtext.facet#link",
+            "uri": "https://zeteo.com"
+           }
+          ],
+          "index": {
+           "byteEnd": 298,
+           "byteStart": 289
+          }
+         }
+        ],
+        "langs": [
+         "en"
+        ],
+        "text": "The Latest Problem AI Solved Should 'Terrify' You\n\nAfter 167 years, the Riemann hypothesis was solved by Claude. That should be a great accomplishment, right?\n\nAI researcher @so8res.bsky.social explains why this could be the brink of super intelligent AI agents going rogue.\n\nSubscribe to zeteo.com."
+       },
+       "likeCount": 338,
+       "replyCount": 109,
+       "repostCount": 125,
+       "quoteCount": 48,
+       "indexedAt": "2026-11-21T20:38:00.647Z",
+       "embeds": [
+        {
+         "cid": "bafkreibdv3puvwjkq6bnbnz4xmckq72vuypy3smoubnkwzqvm33v6e3bu4",
+         "playlist": "https://video.bsky.app/watch/did%3Aplc%3A554uh3zchoid3tyseo2mfml5/bafkreibdv3puvwjkq6bnbnz4xmckq72vuypy3smoubnkwzqvm33v6e3bu4/playlist.m3u8",
+         "aspectRatio": {
+          "height": 1920,
+          "width": 1080
+         },
+         "presentation": "default",
+         "$type": "app.bsky.embed.video#view"
+        }
+       ],
+       "$type": "app.bsky.embed.record#viewRecord"
+      }
+     },
+     "$type": "app.bsky.embed.recordWithMedia#view"
+    },
+    "bookmarkCount": 33,
+    "replyCount": 6,
+    "repostCount": 77,
+    "likeCount": 202,
+    "quoteCount": 5,
+    "indexedAt": "2026-11-23T16:34:09.245Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 5
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:fodyg35g25joa5rpplt4y43g/app.bsky.feed.post/3n2xsif3ues2w",
+    "cid": "bafyreid5cxg2w2m3wgfzeipwzt26irhsn6sl2wqccez65eeapxmqf2mzfe",
+    "author": {
+     "did": "did:plc:fodyg35g25joa5rpplt4y43g",
+     "handle": "adolfoneto.elixiremfoco.com",
+     "displayName": "Adolfo Neto",
+     "pronouns": "he/him",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all",
+       "allowGroupInvites": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-07-12T17:46:33.417Z",
+     "status": {
+      "uri": "at://did:plc:fodyg35g25joa5rpplt4y43g/app.bsky.actor.status/self",
+      "cid": "bafyreigkpa42v6f7vmwvl5ogvwhzaaynmjtny6orubity4cfy77z756gpm",
+      "record": {
+       "$type": "app.bsky.actor.status",
+       "createdAt": "2026-10-24T11:18:46.863Z",
+       "durationMinutes": 240,
+       "embed": {
+        "$type": "app.bsky.embed.external",
+        "external": {
+         "$type": "app.bsky.embed.external#external",
+         "description": "SIGA O LULA!\n\nhttp://www.facebook.com/Lula\nhttps://bsky.app/profile...",
+         "thumb": {
+          "$type": "blob",
+          "ref": {
+           "$link": "bafkreic6o7w6zww43zylffsze2ge6l3frj7evycpbvc5z76x36r5n6tsje"
+          },
+          "mimeType": "image/jpeg",
+          "size": 422939
+         },
+         "title": "Live da Virada: 24 horas ao vivo",
+         "uri": "https://www.youtube.com/live/mR2M_KlQqt4j"
+        }
+       },
+       "status": "app.bsky.actor.status#live"
+      },
+      "status": "app.bsky.actor.status#live",
+      "embed": {
+       "external": {
+        "uri": "https://www.youtube.com/live/mR2M_KlQqt4j",
+        "title": "Live da Virada: 24 horas ao vivo",
+        "description": "SIGA O LULA!\n\nhttp://www.facebook.com/Lula\nhttps://bsky.app/profile...",
+        "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:fodyg35g25joa5rpplt4y43g/bafkreic6o7w6zww43zylffsze2ge6l3frj7evycpbvc5z76x36r5n6tsje"
+       },
+       "$type": "app.bsky.embed.external#view"
+      },
+      "expiresAt": "2026-10-24T15:18:46.863Z",
+      "isActive": false
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T09:21:00.097Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "YouTube video by The Nerd Reich with Gil Duran",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreieo4nris4odq7bgwmtydnw6q7xp3yuibypkgfquoiw5ywygrd6au4"
+        },
+        "mimeType": "image/jpeg",
+        "size": 97148
+       },
+       "title": "The Real Danger of AI Isn't 'Superintelligence' (It's Much Worse)",
+       "uri": "https://youtu.be/zQgydA0UdIU"
+      }
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:azpq3hfq3llpowyqpjkqwgxs"
+        }
+       ],
+       "index": {
+        "byteEnd": 118,
+        "byteStart": 93
+       }
+      },
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://youtu.be/zQgydA0UdIU"
+        }
+       ],
+       "index": {
+        "byteEnd": 144,
+        "byteStart": 124
+       }
+      },
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:waplkqr2wuy2c4qbge6h6ed4"
+        }
+       ],
+       "index": {
+        "byteEnd": 161,
+        "byteStart": 148
+       }
+      }
+     ],
+     "langs": [
+      "pt"
+     ],
+     "text": "\"Geoff Hinton said GPT-4 is humanity's butterfly and then he said chatgpt is an alien being\"\n@timnitgebru.blacksky.app \n\nin youtu.be/zQgydA0UdIU by @gilduran.com"
+    },
+    "embed": {
+     "external": {
+      "uri": "https://youtu.be/zQgydA0UdIU",
+      "title": "The Real Danger of AI Isn't 'Superintelligence' (It's Much Worse)",
+      "description": "YouTube video by The Nerd Reich with Gil Duran",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:fodyg35g25joa5rpplt4y43g/bafkreieo4nris4odq7bgwmtydnw6q7xp3yuibypkgfquoiw5ywygrd6au4"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 9,
+    "replyCount": 3,
+    "repostCount": 3,
+    "likeCount": 20,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-23T09:21:04.042Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:azpq3hfq3llpowyqpjkqwgxs",
+     "handle": "timnitgebru.blacksky.app",
+     "displayName": "Timnit Gebru",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-12-04T23:08:33.346Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mrla3qtrah2z",
+        "isValid": true,
+        "createdAt": "2026-07-26T20:33:07.001Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:azpq3hfq3llpowyqpjkqwgxs/app.bsky.feed.repost/3n2yjhrjam3ra",
+    "cid": "bafyreigg3uxdqi6un46pooqkhg5h64nrj3gwfsjsjbmhdw2lw33oz444gy",
+    "indexedAt": "2026-11-23T16:12:15.753Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 3
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:snaxo4dhow6layarg7gqyuzz/app.bsky.feed.post/3n2urw7lth22u",
+    "cid": "bafyreiasxjnnhc5seawlo4nal2bkp75lgpvz7lxza66fwu6u47ol6jardq",
+    "author": {
+     "did": "did:plc:snaxo4dhow6layarg7gqyuzz",
+     "handle": "gleemie.bsky.social",
+     "displayName": "Lilly Irani",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all",
+       "allowGroupInvites": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-07-12T18:20:13.665Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-22T04:32:51.141Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "The deal gives hundreds of thousands of students, faculty and staff access to ChatGPT. Faculty leaders say they had asked university administration to move with more caution.",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreici43n4nxy5fifphstrahygtm7oeveosifew2hhofeet3b77lxqse"
+        },
+        "mimeType": "image/jpeg",
+        "size": 326358
+       },
+       "title": "UC jumps into AI with systemwide OpenAI deal as faculty urge caution",
+       "uri": "https://www.latimes.com/california/story/2026-11-21/uc-openai-chatgpt-deal"
+      }
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://www.latimes.com/california/story/2026-11-21/uc-openai-chatgpt-deal"
+        }
+       ],
+       "index": {
+        "byteEnd": 311,
+        "byteStart": 280
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "UC signed an OpenAI contract which includes provisions that prohibits the use of ChatGPT to develop AI models that compete with OpenAI products. You can't openly research without violating the ToS!\n\nLeadership so out of touch with actual research and teaching. 🤦🏻‍♀️\n\nwww.latimes.com/california/s..."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://www.latimes.com/california/story/2026-11-21/uc-openai-chatgpt-deal",
+      "title": "UC jumps into AI with systemwide OpenAI deal as faculty urge caution",
+      "description": "The deal gives hundreds of thousands of students, faculty and staff access to ChatGPT. Faculty leaders say they had asked university administration to move with more caution.",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:snaxo4dhow6layarg7gqyuzz/bafkreici43n4nxy5fifphstrahygtm7oeveosifew2hhofeet3b77lxqse"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 11,
+    "replyCount": 7,
+    "repostCount": 43,
+    "likeCount": 126,
+    "quoteCount": 7,
+    "indexedAt": "2026-11-22T04:32:52.646Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:azpq3hfq3llpowyqpjkqwgxs",
+     "handle": "timnitgebru.blacksky.app",
+     "displayName": "Timnit Gebru",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-12-04T23:08:33.346Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mrla3qtrah2z",
+        "isValid": true,
+        "createdAt": "2026-07-26T20:33:07.001Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:azpq3hfq3llpowyqpjkqwgxs/app.bsky.feed.repost/3n2vwkblmmlij",
+    "cid": "bafyreihz5a6uvxlljpdnl4gvskbjtke5wn3xupxciv3rqvsgtzmm7yxvs4",
+    "indexedAt": "2026-11-22T15:28:19.146Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  }
+ ],
+ "cursor": "2026-11-19T02:10:37.657Z"
+}

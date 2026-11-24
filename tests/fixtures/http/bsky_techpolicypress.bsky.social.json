@@ -1,0 +1,355 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:k3sjdodbk2cofbfzxucculeb/app.bsky.feed.post/3n2ztzvxx662h",
+    "cid": "bafyreifbux3jxtvtdqbidy3jpvspg2p44m4uycpm2p22dhi2ena5ddk5me",
+    "author": {
+     "did": "did:plc:k3sjdodbk2cofbfzxucculeb",
+     "handle": "techpolicypress.bsky.social",
+     "displayName": "Tech Policy Press",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-29T17:14:27.614Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lv7ff3ykk62m",
+        "isValid": true,
+        "createdAt": "2025-07-30T19:50:27.019Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-24T04:54:01.108Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "The suggestion Europe can thrive by letting its factory floors integrate frontier LLMs is as dangerous as it is deliberate, writes Cristina Caffarra.",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreidyt26wjlucd4lxiqsqhf577mpn3uoc5wfc3lhnxc42izkflpulvm"
+        },
+        "mimeType": "image/png",
+        "size": 558315
+       },
+       "title": "‘Middle Power Leverage’ is a Trap for Europe's Industrial AI",
+       "uri": "https://buff.ly/ghAUHYv"
+      }
+     },
+     "text": "“It is a narrative of vassalage. It is a trap.” Cristina Caffarra says Europe shouldn’t trade deep access to its industrial data for frontier AI models."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://buff.ly/ghAUHYv",
+      "title": "‘Middle Power Leverage’ is a Trap for Europe's Industrial AI",
+      "description": "The suggestion Europe can thrive by letting its factory floors integrate frontier LLMs is as dangerous as it is deliberate, writes Cristina Caffarra.",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:k3sjdodbk2cofbfzxucculeb/bafkreidyt26wjlucd4lxiqsqhf577mpn3uoc5wfc3lhnxc42izkflpulvm"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 1,
+    "replyCount": 1,
+    "repostCount": 5,
+    "likeCount": 13,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-24T04:54:02.040Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:k3sjdodbk2cofbfzxucculeb/app.bsky.feed.post/3n2zpdydsdu2a",
+    "cid": "bafyreie5o2ruynhwkfk3kke3t4efpsb4kpzrqbolub7ocwcxdx6xdpfuya",
+    "author": {
+     "did": "did:plc:k3sjdodbk2cofbfzxucculeb",
+     "handle": "techpolicypress.bsky.social",
+     "displayName": "Tech Policy Press",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-29T17:14:27.614Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lv7ff3ykk62m",
+        "isValid": true,
+        "createdAt": "2025-07-30T19:50:27.019Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-24T03:30:10.478Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "Tom Smith writes that the Philippines must demand transparency, protect workers and communities, and safeguard its sovereignty before signing a Pax Silica deal.",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreigi3fkkqwerxzd72uszqpe4p3gtdhef7zrzxom2f2nwcvw2sgdkoa"
+        },
+        "mimeType": "image/png",
+        "size": 468365
+       },
+       "title": "Trump Left Manila Without a Pax Silica Deal. What Can the Philippines Demand?",
+       "uri": "https://buff.ly/d10YnfZ"
+      }
+     },
+     "text": "Filipinos are “entitled to ask what Marcos is prepared to concede to keep US backing,” writes Tom Smith, who argues the public should see the Pax Silica framework, and have a say in it, before anything is signed."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://buff.ly/d10YnfZ",
+      "title": "Trump Left Manila Without a Pax Silica Deal. What Can the Philippines Demand?",
+      "description": "Tom Smith writes that the Philippines must demand transparency, protect workers and communities, and safeguard its sovereignty before signing a Pax Silica deal.",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:k3sjdodbk2cofbfzxucculeb/bafkreigi3fkkqwerxzd72uszqpe4p3gtdhef7zrzxom2f2nwcvw2sgdkoa"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 1,
+    "likeCount": 4,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-24T03:30:11.348Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:k3sjdodbk2cofbfzxucculeb/app.bsky.feed.post/3n2zdbigquo2n",
+    "cid": "bafyreicovkvu4obam5jb7nuemsscuyuypzmabvaipvuwu6immoypc3ob3e",
+    "author": {
+     "did": "did:plc:k3sjdodbk2cofbfzxucculeb",
+     "handle": "techpolicypress.bsky.social",
+     "displayName": "Tech Policy Press",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-29T17:14:27.614Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lv7ff3ykk62m",
+        "isValid": true,
+        "createdAt": "2025-07-30T19:50:27.019Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T23:54:01.480Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "George Colville writes about who controls the emerging AI agent economy and the risks it poses to competition and consumer choice.",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreidy5npek2xl7qgmta6j43wnu7u26zrivczxwcyfmfuu6gby5gjpoa"
+        },
+        "mimeType": "image/png",
+        "size": 406260
+       },
+       "title": "The Next Big Tech Monopoly Could Be Your Personal AI Agent",
+       "uri": "https://buff.ly/GzIQ9Cv"
+      }
+     },
+     "text": "A new Open Markets Institute Europe report examines how AI agents could concentrate extraordinary power in a few private companies. George Colville writes on the risks to competition, consumer choice and democracy, and what policymakers can do."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://buff.ly/GzIQ9Cv",
+      "title": "The Next Big Tech Monopoly Could Be Your Personal AI Agent",
+      "description": "George Colville writes about who controls the emerging AI agent economy and the risks it poses to competition and consumer choice.",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:k3sjdodbk2cofbfzxucculeb/bafkreidy5npek2xl7qgmta6j43wnu7u26zrivczxwcyfmfuu6gby5gjpoa"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 3,
+    "replyCount": 0,
+    "repostCount": 10,
+    "likeCount": 9,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-23T23:54:02.245Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:k3sjdodbk2cofbfzxucculeb/app.bsky.feed.post/3n2yzbaw7io2q",
+    "cid": "bafyreibfmrox377jwcmnv4rouzbplk2gbzenrl7vsqngdc7owspkjojjjm",
+    "author": {
+     "did": "did:plc:k3sjdodbk2cofbfzxucculeb",
+     "handle": "techpolicypress.bsky.social",
+     "displayName": "Tech Policy Press",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-29T17:14:27.614Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lv7ff3ykk62m",
+        "isValid": true,
+        "createdAt": "2025-07-30T19:50:27.019Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T20:54:55.759Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "Eliza McCullough, Tim Newman and Aiha Nguyen argue that worker power and stronger labor laws are key to steering technology away from exploiting worker data.",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreicr2t7ctvhqbwmf6gluqqglepxzfgdauyjhfrkznc7r6htxb5b4n4"
+        },
+        "mimeType": "image/png",
+        "size": 874924
+       },
+       "title": "Robotics Is Coming for Workers’ Data. It’s Time for a National Response",
+       "uri": "https://buff.ly/ymebDdJ"
+      }
+     },
+     "text": "Data collection is now a profitable asset that workers produce, Eliza McCullough, Tim Newman, and Aiha Nguyen write, to “fuel their own disempowerment and potential displacement.”"
+    },
+    "embed": {
+     "external": {
+      "uri": "https://buff.ly/ymebDdJ",
+      "title": "Robotics Is Coming for Workers’ Data. It’s Time for a National Response",
+      "description": "Eliza McCullough, Tim Newman and Aiha Nguyen argue that worker power and stronger labor laws are key to steering technology away from exploiting worker data.",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:k3sjdodbk2cofbfzxucculeb/bafkreicr2t7ctvhqbwmf6gluqqglepxzfgdauyjhfrkznc7r6htxb5b4n4"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 1,
+    "repostCount": 9,
+    "likeCount": 14,
+    "quoteCount": 2,
+    "indexedAt": "2026-11-23T20:54:57.343Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:k3sjdodbk2cofbfzxucculeb/app.bsky.feed.post/3n2yy23nozb2c",
+    "cid": "bafyreib7gupseffsq7g3yms7rgz4bfzi4evg2kgwjgt4dxyyntbwcutrzq",
+    "author": {
+     "did": "did:plc:k3sjdodbk2cofbfzxucculeb",
+     "handle": "techpolicypress.bsky.social",
+     "displayName": "Tech Policy Press",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-29T17:14:27.614Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lv7ff3ykk62m",
+        "isValid": true,
+        "createdAt": "2025-07-30T19:50:27.019Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T20:33:02.056Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "Google’s AI Overviews cut publisher clicks 40% with no benefit to users. The EU, UK and Brazil now have the evidence they need, writes Courtney Radsch.",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreibxs3yyecbmxco67dtgwvezn42xhz57fb2kiple7vjqzot4t5guma"
+        },
+        "mimeType": "image/png",
+        "size": 902042
+       },
+       "title": "No Cure Without Evidence? AI Overviews Cut Clicks 40% and Give Users Nothing",
+       "uri": "https://buff.ly/2j86BlL"
+      }
+     },
+     "text": "A field experiment finds Google’s AI Overviews cut outbound clicks to publishers by about 40%, with no measurable gain in user satisfaction. Courtney C. Radsch, director of the Center for Media & Digital Governance at Open Markets Institute, on what it means for regulators."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://buff.ly/2j86BlL",
+      "title": "No Cure Without Evidence? AI Overviews Cut Clicks 40% and Give Users Nothing",
+      "description": "Google’s AI Overviews cut publisher clicks 40% with no benefit to users. The EU, UK and Brazil now have the evidence they need, writes Courtney Radsch.",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:k3sjdodbk2cofbfzxucculeb/bafkreibxs3yyecbmxco67dtgwvezn42xhz57fb2kiple7vjqzot4t5guma"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 1,
+    "replyCount": 0,
+    "repostCount": 9,
+    "likeCount": 10,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-23T20:33:02.761Z"
+   }
+  }
+ ],
+ "cursor": "2026-11-22T03:30:09.208Z"
+}

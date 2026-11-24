@@ -1,0 +1,589 @@
+{
+ "socialPosts": [
+  {
+   "slug": "435419400378646",
+   "content": [
+    {
+     "type": "text",
+     "value": "We made Inkling 2 Mini GGUFs run ~1.9x faster locally! ⚡️",
+     "raw": "We made Inkling 2 Mini GGUFs run ~1.9x faster locally! ⚡️"
+    },
+    {
+     "type": "new_line",
+     "raw": "\n"
+    },
+    {
+     "type": "new_line",
+     "raw": "\n"
+    },
+    {
+     "type": "text",
+     "value": "Inkling 2 Mini GGUFs can now reach 125 tokens/s on a RTX Pro 6000 GPU via Unsloth, with no accuracy loss.",
+     "raw": "Inkling 2 Mini GGUFs can now reach 125 tokens/s on a RTX Pro 6000 GPU via Unsloth, with no accuracy loss."
+    },
+    {
+     "type": "new_line",
+     "raw": "\n"
+    },
+    {
+     "type": "new_line",
+     "raw": "\n"
+    },
+    {
+     "type": "text",
+     "value": "Run faster via Unsloth Desktop!",
+     "raw": "Run faster via Unsloth Desktop!"
+    },
+    {
+     "type": "new_line",
+     "raw": "\n"
+    },
+    {
+     "type": "new_line",
+     "raw": "\n"
+    },
+    {
+     "type": "text",
+     "value": "GitHub repo: ",
+     "raw": "GitHub repo: "
+    },
+    {
+     "type": "link",
+     "href": "https://github.com/unslothai/unsloth",
+     "raw": "https://github.com/unslothai/unsloth"
+    },
+    {
+     "type": "new_line",
+     "raw": "\n"
+    },
+    {
+     "type": "text",
+     "value": "GGUF: ",
+     "raw": "GGUF: "
+    },
+    {
+     "type": "resource",
+     "resource": {
+      "type": "model",
+      "id": "unsloth/Inkling-2-Mini-GGUF"
+     },
+     "url": "https://huggingface.co/unsloth/Inkling-2-Mini-GGUF",
+     "raw": "https://huggingface.co/unsloth/Inkling-2-Mini-GGUF"
+    }
+   ],
+   "rawContent": "We made Inkling 2 Mini GGUFs run ~1.9x faster locally! ⚡️\n\nInkling 2 Mini GGUFs can now reach 125 tokens/s on a RTX Pro 6000 GPU via Unsloth, with no accuracy loss.\n\nRun faster via Unsloth Desktop!\n\nGitHub repo: https://github.com/unslothai/unsloth\nGGUF: https://huggingface.co/unsloth/Inkling-2-Mini-GGUF",
+   "author": {
+    "_id": "62ecdc18b72a69615d6bd857",
+    "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/62ecdc18b72a69615d6bd857/qAHhWJbSsmoezFHiErBUT.png",
+    "fullname": "Daniel (Unsloth)",
+    "name": "danielhanchen",
+    "type": "user",
+    "isPro": true,
+    "isHf": false,
+    "isHfAdmin": false,
+    "isMod": false,
+    "followerCount": 1806,
+    "isUserFollowing": false
+   },
+   "reactions": [
+    {
+     "reaction": "🔥",
+     "users": [
+      "MadMike477",
+      "jamiem90",
+      "Dumbledore2",
+      "Voidic98",
+      "anvme",
+      "iWrencha",
+      "stormrider2003",
+      "luksamuk",
+      "taesiri",
+      "testingusera1",
+      "bong-water-water-bong"
+     ],
+     "count": 11
+    },
+    {
+     "reaction": "🚀",
+     "users": [
+      "MadMike477"
+     ],
+     "count": 1
+    },
+    {
+     "reaction": "❤️",
+     "users": [
+      "MadMike477"
+     ],
+     "count": 1
+    },
+    {
+     "reaction": "🤗",
+     "users": [
+      "MadMike477"
+     ],
+     "count": 1
+    },
+    {
+     "reaction": "👍",
+     "users": [
+      "joeblowma"
+     ],
+     "count": 1
+    }
+   ],
+   "publishedAt": "2026-11-23T16:32:13.000Z",
+   "updatedAt": "2026-11-23T16:32:13.136Z",
+   "url": "/posts/danielhanchen/435419400378646",
+   "totalUniqueImpressions": 4502,
+   "identifiedLanguage": {
+    "language": "en",
+    "probability": 0.6001105308532715
+   },
+   "numComments": 0
+  },
+  {
+   "slug": "850241984654214",
+   "content": [
+    {
+     "type": "text",
+     "value": "Hello everyone 🌐",
+     "raw": "Hello everyone 🌐"
+    },
+    {
+     "type": "new_line",
+     "raw": "\n"
+    },
+    {
+     "type": "new_line",
+     "raw": "\n"
+    },
+    {
+     "type": "text",
+     "value": "🧪 Zenodo, the research repository, hosts petabytes of scientific data!",
+     "raw": "🧪 Zenodo, the research repository, hosts petabytes of scientific data!"
+    },
+    {
+     "type": "new_line",
+     "raw": "\n"
+    },
+    {
+     "type": "text",
+     "value": "🧬 So I'm currently crawling 1,509 repositories totaling 2.5 TB. PARQUET ONLY 🤗",
+     "raw": "🧬 So I'm currently crawling 1,509 repositories totaling 2.5 TB. PARQUET ONLY 🤗"
+    },
+    {
+     "type": "new_line",
+     "raw": "\n"
+    },
+    {
+     "type": "new_line",
+     "raw": "\n"
+    },
+    {
+     "type": "text",
+     "value": "HF Org: ",
+     "raw": "HF Org: "
+    },
+    {
+     "type": "resource",
+     "resource": {
+      "type": "org",
+      "id": "Zenodo-ML"
+     },
+     "url": "https://huggingface.co/Zenodo-ML",
+     "raw": "https://huggingface.co/Zenodo-ML",
+     "image": "https://cdn-avatars.huggingface.co/v1/production/uploads/6975505c60cf607407afe2c0/tcjNr8vaH30wSXTMwRkvl.png"
+    },
+    {
+     "type": "new_line",
+     "raw": "\n"
+    },
+    {
+     "type": "new_line",
+     "raw": "\n"
+    },
+    {
+     "type": "text",
+     "value": "By Science & FOR SCIENCE ...",
+     "raw": "By Science & FOR SCIENCE ..."
+    }
+   ],
+   "rawContent": "Hello everyone 🌐\n\n🧪 Zenodo, the research repository, hosts petabytes of scientific data!\n🧬 So I'm currently crawling 1,509 repositories totaling 2.5 TB. PARQUET ONLY 🤗\n\nHF Org: https://huggingface.co/Zenodo-ML\n\nBy Science & FOR SCIENCE ...",
+   "author": {
+    "_id": "6975505c60cf607407afe2c0",
+    "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/6975505c60cf607407afe2c0/EqSByEekLG005t4okCoh0.png",
+    "fullname": "PhysiQuanty",
+    "name": "PhysiQuanty",
+    "type": "user",
+    "isPro": true,
+    "isHf": false,
+    "isHfAdmin": false,
+    "isMod": false,
+    "followerCount": 532,
+    "isUserFollowing": false
+   },
+   "reactions": [
+    {
+     "reaction": "🔥",
+     "users": [
+      "PhysiQuanty",
+      "dataGAPI1"
+     ],
+     "count": 2
+    },
+    {
+     "reaction": "🚀",
+     "users": [
+      "PhysiQuanty"
+     ],
+     "count": 1
+    }
+   ],
+   "publishedAt": "2026-11-24T04:52:44.000Z",
+   "updatedAt": "2026-11-24T08:06:45.678Z",
+   "url": "/posts/PhysiQuanty/850241984654214",
+   "totalUniqueImpressions": 46,
+   "identifiedLanguage": {
+    "language": "en",
+    "probability": 0.6769154071807861
+   },
+   "numComments": 0
+  },
+  {
+   "slug": "571523981938556",
+   "content": [
+    {
+     "type": "text",
+     "value": "Depth Pro 2 now runs in the browser on WebGPU.",
+     "raw": "Depth Pro 2 now runs in the browser on WebGPU."
+    },
+    {
+     "type": "new_line",
+     "raw": "\n"
+    },
+    {
+     "type": "new_line",
+     "raw": "\n"
+    },
+    {
+     "type": "text",
+     "value": "I converted Apple's Depth Pro 2 (sizes S and B, plus the field-of-view model) to LiteRT, so it runs on the GPU through LiteRT.js. In Chrome on an M1 MacBook Pro, S takes about 320 ms a frame at 480x854 and B about 800 ms, in float16.",
+     "raw": "I converted Apple's Depth Pro 2 (sizes S and B, plus the field-of-view model) to LiteRT, so it runs on the GPU through LiteRT.js. In Chrome on an M1 MacBook Pro, S takes about 320 ms a frame at 480x854 and B about 800 ms, in float16."
+    },
+    {
+     "type": "new_line",
+     "raw": "\n"
+    },
+    {
+     "type": "new_line",
+     "raw": "\n"
+    },
+    {
+     "type": "text",
+     "value": "Demo, with your own photos or the webcam (nothing leaves your machine): ",
+     "raw": "Demo, with your own photos or the webcam (nothing leaves your machine): "
+    },
+    {
+     "type": "resource",
+     "resource": {
+      "type": "space",
+      "id": "byoussef/DepthPro2-WebGPU"
+     },
+     "url": "https://huggingface.co/spaces/byoussef/DepthPro2-WebGPU",
+     "raw": "https://huggingface.co/spaces/byoussef/DepthPro2-WebGPU"
+    },
+    {
+     "type": "new_line",
+     "raw": "\n"
+    },
+    {
+     "type": "new_line",
+     "raw": "\n"
+    },
+    {
+     "type": "text",
+     "value": "Files, JS and Python usage, and the export script: ",
+     "raw": "Files, JS and Python usage, and the export script: "
+    },
+    {
+     "type": "resource",
+     "resource": {
+      "type": "model",
+      "id": "byoussef/DepthPro2-litert"
+     },
+     "url": "https://huggingface.co/byoussef/DepthPro2-litert",
+     "raw": "https://huggingface.co/byoussef/DepthPro2-litert"
+    },
+    {
+     "type": "new_line",
+     "raw": "\n"
+    },
+    {
+     "type": "new_line",
+     "raw": "\n"
+    },
+    {
+     "type": "text",
+     "value": "Unofficial, and research use only under Apple's model license. Original model: ",
+     "raw": "Unofficial, and research use only under Apple's model license. Original model: "
+    },
+    {
+     "type": "resource",
+     "resource": {
+      "type": "model",
+      "id": "apple/DepthPro2"
+     },
+     "url": "https://huggingface.co/apple/DepthPro2",
+     "raw": "https://huggingface.co/apple/DepthPro2"
+    }
+   ],
+   "rawContent": "Depth Pro 2 now runs in the browser on WebGPU.\n\nI converted Apple's Depth Pro 2 (sizes S and B, plus the field-of-view model) to LiteRT, so it runs on the GPU through LiteRT.js. In Chrome on an M1 MacBook Pro, S takes about 320 ms a frame at 480x854 and B about 800 ms, in float16.\n\nDemo, with your own photos or the webcam (nothing leaves your machine): https://huggingface.co/spaces/byoussef/DepthPro2-WebGPU\n\nFiles, JS and Python usage, and the export script: https://huggingface.co/byoussef/Depth…",
+   "author": {
+    "_id": "63638e4b2e11f41bc8168b20",
+    "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/1678864953699-63638e4b2e11f41bc8168b20.jpeg",
+    "fullname": "youssef boulaouane",
+    "name": "byoussef",
+    "type": "user",
+    "isPro": false,
+    "isHf": false,
+    "isHfAdmin": false,
+    "isMod": false,
+    "followerCount": 18,
+    "isUserFollowing": false
+   },
+   "reactions": [
+    {
+     "reaction": "🚀",
+     "users": [
+      "byoussef",
+      "joseph-bou"
+     ],
+     "count": 2
+    }
+   ],
+   "publishedAt": "2026-11-23T14:58:11.000Z",
+   "updatedAt": "2026-11-23T14:58:11.336Z",
+   "url": "/posts/byoussef/571523981938556",
+   "totalUniqueImpressions": 366,
+   "identifiedLanguage": {
+    "language": "en",
+    "probability": 0.7174680233001709
+   },
+   "numComments": 0
+  },
+  {
+   "slug": "934831069994012",
+   "content": [
+    {
+     "type": "text",
+     "value": "In case you haven’t seen (or tried) it yet: Ava is an AI character you can talk to face to face, right in your browser 🙂 ",
+     "raw": "In case you haven’t seen (or tried) it yet: Ava is an AI character you can talk to face to face, right in your browser 🙂 "
+    },
+    {
+     "type": "new_line",
+     "raw": "\n"
+    },
+    {
+     "type": "new_line",
+     "raw": "\n"
+    },
+    {
+     "type": "resource",
+     "resource": {
+      "type": "space",
+      "id": "townbox/ava"
+     },
+     "url": "https://huggingface.co/spaces/townbox/ava",
+     "raw": "https://huggingface.co/spaces/townbox/ava"
+    },
+    {
+     "type": "new_line",
+     "raw": "\n"
+    },
+    {
+     "type": "new_line",
+     "raw": "\n"
+    },
+    {
+     "type": "text",
+     "value": "- No login, nothing to install",
+     "raw": "- No login, nothing to install"
+    },
+    {
+     "type": "new_line",
+     "raw": "\n"
+    },
+    {
+     "type": "text",
+     "value": "- Runs 100% in the browser via WebGPU",
+     "raw": "- Runs 100% in the browser via WebGPU"
+    },
+    {
+     "type": "new_line",
+     "raw": "\n"
+    },
+    {
+     "type": "text",
+     "value": "- Powered by ",
+     "raw": "- Powered by "
+    },
+    {
+     "type": "resource",
+     "resource": {
+      "type": "model",
+      "id": "LiquidAI/LFM3-Omni-2B-GGUF"
+     },
+     "url": "https://huggingface.co/LiquidAI/LFM3-Omni-2B-GGUF",
+     "raw": "https://huggingface.co/LiquidAI/LFM3-Omni-2B-GGUF"
+    },
+    {
+     "type": "text",
+     "value": ", running locally on your device via WebGPU",
+     "raw": ", running locally on your device via WebGPU"
+    },
+    {
+     "type": "new_line",
+     "raw": "\n"
+    },
+    {
+     "type": "text",
+     "value": "- Your conversations stay on your machine",
+     "raw": "- Your conversations stay on your machine"
+    },
+    {
+     "type": "new_line",
+     "raw": "\n"
+    },
+    {
+     "type": "new_line",
+     "raw": "\n"
+    },
+    {
+     "type": "text",
+     "value": "Really bullish on 100% local experiences lately. No backend inference bill, no account to create, and you keep your data.",
+     "raw": "Really bullish on 100% local experiences lately. No backend inference bill, no account to create, and you keep your data."
+    }
+   ],
+   "rawContent": "In case you haven’t seen (or tried) it yet: Ava is an AI character you can talk to face to face, right in your browser 🙂 \n\nhttps://huggingface.co/spaces/townbox/ava\n\n- No login, nothing to install\n- Runs 100% in the browser via WebGPU\n- Powered by https://huggingface.co/LiquidAI/LFM3-Omni-2B-GGUF, running locally on your device via WebGPU\n- Your conversations stay on your machine\n\nReally bullish on 100% local experiences lately. No backend inference bill, no account to create, and you keep your data.",
+   "author": {
+    "_id": "5f17f0a0925b9863e28ad517",
+    "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/5f17f0a0925b9863e28ad517/78BR8GuQiX9a8wbbRlSAC.webp",
+    "fullname": "Victor Mustar",
+    "name": "victor",
+    "type": "user",
+    "isPro": true,
+    "isHf": true,
+    "isHfAdmin": true,
+    "isMod": false,
+    "followerCount": 6942,
+    "isUserFollowing": false
+   },
+   "reactions": [
+    {
+     "reaction": "❤️",
+     "users": [
+      "ccore",
+      "madc"
+     ],
+     "count": 2
+    }
+   ],
+   "publishedAt": "2026-11-17T13:57:44.000Z",
+   "updatedAt": "2026-11-20T20:20:45.988Z",
+   "url": "/posts/victor/934831069994012",
+   "totalUniqueImpressions": 375,
+   "identifiedLanguage": {
+    "language": "en",
+    "probability": 0.8802880048751831
+   },
+   "numComments": 1
+  },
+  {
+   "slug": "296865704977685",
+   "content": [
+    {
+     "type": "text",
+     "value": "CCORE Web Coder 4B is out with the full Safetensors weights!",
+     "raw": "CCORE Web Coder 4B is out with the full Safetensors weights!"
+    },
+    {
+     "type": "new_line",
+     "raw": "\n"
+    },
+    {
+     "type": "resource",
+     "resource": {
+      "type": "model",
+      "id": "ccore/CCORE-Web-Coder-4B"
+     },
+     "url": "https://huggingface.co/ccore/CCORE-Web-Coder-4B",
+     "raw": "https://huggingface.co/ccore/CCORE-Web-Coder-4B"
+    },
+    {
+     "type": "new_line",
+     "raw": "\n"
+    },
+    {
+     "type": "text",
+     "value": "Give it one prompt and see what a 4B model can build. A landing page, a pitch deck, or an infographic comes back as a single editable HTML file you can open in your browser.",
+     "raw": "Give it one prompt and see what a 4B model can build. A landing page, a pitch deck, or an infographic comes back as a single editable HTML file you can open in your browser."
+    },
+    {
+     "type": "new_line",
+     "raw": "\n"
+    },
+    {
+     "type": "new_line",
+     "raw": "\n"
+    },
+    {
+     "type": "text",
+     "value": "The final checkpoint is also available in F16, Q8_0, and Q4_K_M GGUFs for local inference. The training dataset is coming November 25.",
+     "raw": "The final checkpoint is also available in F16, Q8_0, and Q4_K_M GGUFs for local inference. The training dataset is coming November 25."
+    },
+    {
+     "type": "new_line",
+     "raw": "\n"
+    },
+    {
+     "type": "new_line",
+     "raw": "\n"
+    }
+   ],
+   "rawContent": "CCORE Web Coder 4B is out with the full Safetensors weights!\nhttps://huggingface.co/ccore/CCORE-Web-Coder-4B\nGive it one prompt and see what a 4B model can build. A landing page, a pitch deck, or an infographic comes back as a single editable HTML file you can open in your browser.\n\nThe final checkpoint is also available in F16, Q8_0, and Q4_K_M GGUFs for local inference. The training dataset is coming November 25.\n\n",
+   "author": {
+    "_id": "6087d45d1e36b13a64497da8",
+    "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/6087d45d1e36b13a64497da8/2r9RYvSMFhm9jh6HsiQjj.jpeg",
+    "fullname": "Caio Giovannetti",
+    "name": "ccore",
+    "type": "user",
+    "isPro": true,
+    "isHf": false,
+    "isHfAdmin": false,
+    "isMod": false,
+    "followerCount": 405,
+    "isUserFollowing": false
+   },
+   "reactions": [
+    {
+     "reaction": "🚀",
+     "users": [
+      "madc"
+     ],
+     "count": 1
+    }
+   ],
+   "publishedAt": "2026-11-24T01:50:54.000Z",
+   "updatedAt": "2026-11-24T01:50:54.735Z",
+   "url": "/posts/ccore/296865704977685",
+   "totalUniqueImpressions": 63,
+   "identifiedLanguage": {
+    "language": "en",
+    "probability": 0.8890713453292847
+   },
+   "numComments": 0
+  }
+ ],
+ "numTotalItems": 8929
+}

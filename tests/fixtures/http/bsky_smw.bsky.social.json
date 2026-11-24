@@ -1,0 +1,513 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:t6v3yxlof4topjf5rwvbxopa/app.bsky.feed.post/3n2yoshow722z",
+    "cid": "bafyreighrpyazijru4c7lxj4dcmpbvyxqidx4m2pwmu5ir3ql72yfd72ta",
+    "author": {
+     "did": "did:plc:t6v3yxlof4topjf5rwvbxopa",
+     "handle": "smw.bsky.social",
+     "displayName": "Sarah Myers West",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-07-01T20:29:23.298Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T17:47:43.137Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "Washington is treating the industry as if it’s too big to fail, even as the market sends lukewarm signals.",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreiayp6p2c6ful5ci7hfnxzptlmmyoujfqtyvt6w2rizec7lywdzfoi"
+        },
+        "mimeType": "image/jpeg",
+        "size": 838095
+       },
+       "title": "Opinion | You May Already Be Bailing Out the AI Business",
+       "uri": "https://www.wsj.com/opinion/you-may-already-be-bailing-out-the-ai-business-dd67d452"
+      }
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:tpuat3ljcylhre4p7ioud2px"
+        }
+       ],
+       "index": {
+        "byteEnd": 48,
+        "byteStart": 28
+       }
+      },
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://www.wsj.com/opinion/you-may-already-be-bailing-out-the-ai-business-dd67d452"
+        }
+       ],
+       "index": {
+        "byteEnd": 255,
+        "byteStart": 228
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "Almost exactly a year since @ambakak.bsky.social and I wrote in the WSJ that it wouldn’t take a crisis moment for the admin to bail out the AI industry - that it was arguably already underway. Still holds up w today’s news: www.wsj.com/opinion/you-..."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://www.wsj.com/opinion/you-may-already-be-bailing-out-the-ai-business-dd67d452",
+      "title": "Opinion | You May Already Be Bailing Out the AI Business",
+      "description": "Washington is treating the industry as if it’s too big to fail, even as the market sends lukewarm signals.",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:t6v3yxlof4topjf5rwvbxopa/bafkreiayp6p2c6ful5ci7hfnxzptlmmyoujfqtyvt6w2rizec7lywdzfoi"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 6,
+    "likeCount": 10,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-23T17:47:45.647Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:t6v3yxlof4topjf5rwvbxopa/app.bsky.feed.post/3n2a33newtc2j",
+    "cid": "bafyreiavt25jf2x3qx7llhz5ex7b3wazvcedng4kmnlkiwie2sogysw6s4",
+    "author": {
+     "did": "did:plc:t6v3yxlof4topjf5rwvbxopa",
+     "handle": "smw.bsky.social",
+     "displayName": "Sarah Myers West",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-07-01T20:29:23.298Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-13T22:51:02.536Z",
+     "embed": {
+      "$type": "app.bsky.embed.record",
+      "record": {
+       "cid": "bafyreihyzs2teipyimuznpkq35umed5qthbpsjgy5k5b67lz6mz6ojykre",
+       "uri": "at://did:plc:ploub7siu45j4aazlumn6hfz/app.bsky.feed.post/3n27p7s3wzc2v"
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "BAAJA is barreling through at a moment where the AI market is increasingly precarious - making it a critical juncture for friction that will stop the slow bailout of tech firms. Read more ⬇️"
+    },
+    "embed": {
+     "record": {
+      "uri": "at://did:plc:ploub7siu45j4aazlumn6hfz/app.bsky.feed.post/3n27p7s3wzc2v",
+      "cid": "bafyreihyzs2teipyimuznpkq35umed5qthbpsjgy5k5b67lz6mz6ojykre",
+      "author": {
+       "did": "did:plc:ploub7siu45j4aazlumn6hfz",
+       "handle": "ainowinstitute.bsky.social",
+       "displayName": "AI Now Institute",
+       "associated": {
+        "chat": {
+         "allowIncoming": "none"
+        },
+        "activitySubscription": {
+         "allowSubscriptions": "followers"
+        }
+       },
+       "createdAt": "2023-07-12T16:58:22.424Z"
+      },
+      "value": {
+       "$type": "app.bsky.feed.post",
+       "createdAt": "2026-11-13T19:18:36.799Z",
+       "embed": {
+        "$type": "app.bsky.embed.images",
+        "images": [
+         {
+          "alt": "",
+          "aspectRatio": {
+           "height": 3604,
+           "width": 4000
+          },
+          "image": {
+           "$type": "blob",
+           "ref": {
+            "$link": "bafkreif5yrrspkrknmpm2ntzov64sudgm5cnhpvwxb5pspwd5xiuyhrjgq"
+           },
+           "mimeType": "image/jpeg",
+           "size": 1826101
+          }
+         }
+        ]
+       },
+       "langs": [
+        "en"
+       ],
+       "text": "BAAJA is a backdoor bailout of the AI industry and would strip communities of tools to check Big Tech’s fast-tracking of data centers. Congress can do Silicon Valley’s bidding or stand with communities to shape their own future. Our statement:"
+      },
+      "likeCount": 191,
+      "replyCount": 6,
+      "repostCount": 120,
+      "quoteCount": 19,
+      "opThreadPostIndex": 1,
+      "opThreadPostCount": 2,
+      "indexedAt": "2026-11-13T19:18:55.379Z",
+      "embeds": [
+       {
+        "images": [
+         {
+          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ploub7siu45j4aazlumn6hfz/bafkreif5yrrspkrknmpm2ntzov64sudgm5cnhpvwxb5pspwd5xiuyhrjgq",
+          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:ploub7siu45j4aazlumn6hfz/bafkreif5yrrspkrknmpm2ntzov64sudgm5cnhpvwxb5pspwd5xiuyhrjgq",
+          "alt": "",
+          "aspectRatio": {
+           "height": 3604,
+           "width": 4000
+          }
+         }
+        ],
+        "$type": "app.bsky.embed.images#view"
+       }
+      ],
+      "$type": "app.bsky.embed.record#viewRecord"
+     },
+     "$type": "app.bsky.embed.record#view"
+    },
+    "bookmarkCount": 3,
+    "replyCount": 0,
+    "repostCount": 17,
+    "likeCount": 34,
+    "quoteCount": 1,
+    "indexedAt": "2026-11-13T22:51:02.775Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:t6v3yxlof4topjf5rwvbxopa/app.bsky.feed.post/3myx2ery7qk2b",
+    "cid": "bafyreigzhhra46uzrbu7aj7gosr4spk4sjxuelsvgpk2iesaranxcd6leu",
+    "author": {
+     "did": "did:plc:t6v3yxlof4topjf5rwvbxopa",
+     "handle": "smw.bsky.social",
+     "displayName": "Sarah Myers West",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-07-01T20:29:23.298Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-10-28T15:19:06.335Z",
+     "embed": {
+      "$type": "app.bsky.embed.record",
+      "record": {
+       "cid": "bafyreigogwgb3cpkf5ytqpqjni462qm3ifetswdvdd2lbp4yqoak6zuwxy",
+       "uri": "at://did:plc:6bkauwsodlabjblnghmdkleb/app.bsky.feed.post/3myulzzq5ec26"
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "Right to the top of my reading list ⬇️"
+    },
+    "embed": {
+     "record": {
+      "uri": "at://did:plc:6bkauwsodlabjblnghmdkleb/app.bsky.feed.post/3myulzzq5ec26",
+      "cid": "bafyreigogwgb3cpkf5ytqpqjni462qm3ifetswdvdd2lbp4yqoak6zuwxy",
+      "author": {
+       "did": "did:plc:6bkauwsodlabjblnghmdkleb",
+       "handle": "susglickman.bsky.social",
+       "displayName": "susannah glickman",
+       "associated": {
+        "chat": {
+         "allowIncoming": "none"
+        },
+        "activitySubscription": {
+         "allowSubscriptions": "followers"
+        }
+       },
+       "createdAt": "2023-09-20T15:25:41.166Z"
+      },
+      "value": {
+       "$type": "app.bsky.feed.post",
+       "createdAt": "2026-10-27T15:57:13.500Z",
+       "embed": {
+        "$type": "app.bsky.embed.external",
+        "external": {
+         "description": "Toward a Labor History of AI",
+         "title": "Toward a Labor History of AI | International Labor and Working-Class History | Cambridge Core",
+         "uri": "https://www.cambridge.org/core/journals/international-labor-and-working-class-history/article/toward-a-labor-history-of-ai/AE05C3A734C96ACD1CAAF17EA1C1C9B6"
+        }
+       },
+       "facets": [
+        {
+         "$type": "app.bsky.richtext.facet",
+         "features": [
+          {
+           "$type": "app.bsky.richtext.facet#mention",
+           "did": "did:plc:4y33jrakkgjaczrfmh7ifwap"
+          }
+         ],
+         "index": {
+          "byteEnd": 21,
+          "byteStart": 0
+         }
+        },
+        {
+         "features": [
+          {
+           "$type": "app.bsky.richtext.facet#link",
+           "uri": "https://www.cambridge.org/core/journals/international-labor-and-working-class-history/article/toward-a-labor-history-of-ai/AE05C3A734C96ACD1CAAF17EA1C1C9B6"
+          }
+         ],
+         "index": {
+          "byteEnd": 111,
+          "byteStart": 78
+         }
+        }
+       ],
+       "langs": [
+        "en"
+       ],
+       "text": "@abenanav.bsky.social and my special issue on ai and labor is out with ilwch!\nwww.cambridge.org/core/journal..."
+      },
+      "likeCount": 66,
+      "replyCount": 3,
+      "repostCount": 36,
+      "quoteCount": 8,
+      "opThreadPostIndex": 1,
+      "opThreadPostCount": 8,
+      "indexedAt": "2026-10-27T15:57:14.182Z",
+      "embeds": [
+       {
+        "external": {
+         "uri": "https://www.cambridge.org/core/journals/international-labor-and-working-class-history/article/toward-a-labor-history-of-ai/AE05C3A734C96ACD1CAAF17EA1C1C9B6",
+         "title": "Toward a Labor History of AI | International Labor and Working-Class History | Cambridge Core",
+         "description": "Toward a Labor History of AI"
+        },
+        "$type": "app.bsky.embed.external#view"
+       }
+      ],
+      "$type": "app.bsky.embed.record#viewRecord"
+     },
+     "$type": "app.bsky.embed.record#view"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 1,
+    "likeCount": 6,
+    "quoteCount": 0,
+    "indexedAt": "2026-10-28T15:19:06.684Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:ploub7siu45j4aazlumn6hfz/app.bsky.feed.post/3mywxtgkses2p",
+    "cid": "bafyreie2j3e5pvpwmjd7len7pcghzfbbbameghngy34rbqujiqwvuv4rt4",
+    "author": {
+     "did": "did:plc:ploub7siu45j4aazlumn6hfz",
+     "handle": "ainowinstitute.bsky.social",
+     "displayName": "AI Now Institute",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-07-12T16:58:22.424Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-10-28T14:33:36.454Z",
+     "embed": {
+      "$type": "app.bsky.embed.video",
+      "aspectRatio": {
+       "height": 2160,
+       "width": 3840
+      },
+      "presentation": "default",
+      "video": {
+       "$type": "blob",
+       "ref": {
+        "$link": "bafkreidjbdyo5jdxwo525fwjukuvxubrhsdeik6hodcpxm6r23nkwmrtta"
+       },
+       "mimeType": "video/mp4",
+       "size": 63762328
+      }
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:a4wzpl7hpxvvntj6hatvuhlw"
+        }
+       ],
+       "index": {
+        "byteEnd": 137,
+        "byteStart": 108
+       }
+      },
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://bit.ly/watch-ai-assembly"
+        }
+       ],
+       "index": {
+        "byteEnd": 297,
+        "byteStart": 273
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "The People’s AI Assembly was an evening full of inspiring conversations, energy, and power. Together with @moreperfectunion.bsky.social, we brought together organizers, labor and policy leaders, artists, journalists, and hundreds of everyday folks.\n\nWatch the recording: bit.ly/watch-ai-assembly."
+    },
+    "embed": {
+     "cid": "bafkreidjbdyo5jdxwo525fwjukuvxubrhsdeik6hodcpxm6r23nkwmrtta",
+     "playlist": "https://video.bsky.app/watch/did%3Aplc%3Aploub7siu45j4aazlumn6hfz/bafkreidjbdyo5jdxwo525fwjukuvxubrhsdeik6hodcpxm6r23nkwmrtta/playlist.m3u8",
+     "aspectRatio": {
+      "height": 2160,
+      "width": 3840
+     },
+     "presentation": "default",
+     "$type": "app.bsky.embed.video#view"
+    },
+    "bookmarkCount": 3,
+    "replyCount": 2,
+    "repostCount": 6,
+    "likeCount": 16,
+    "quoteCount": 1,
+    "indexedAt": "2026-10-28T14:33:40.872Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:t6v3yxlof4topjf5rwvbxopa",
+     "handle": "smw.bsky.social",
+     "displayName": "Sarah Myers West",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-07-01T20:29:23.298Z"
+    },
+    "uri": "at://did:plc:t6v3yxlof4topjf5rwvbxopa/app.bsky.feed.repost/3mywygovojf2d",
+    "cid": "bafyreighiqybdttn2iyxfzggqispavzfhytpm56klj46lunwjfxomkg4cu",
+    "indexedAt": "2026-10-28T14:44:22.973Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:ploub7siu45j4aazlumn6hfz/app.bsky.feed.post/3moighkf4k22n",
+    "cid": "bafyreid5s3oi3reaitu2djuvmbo3alroe66xdjktn2dwgk45obppkr4j7a",
+    "author": {
+     "did": "did:plc:ploub7siu45j4aazlumn6hfz",
+     "handle": "ainowinstitute.bsky.social",
+     "displayName": "AI Now Institute",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-07-12T16:58:22.424Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-06-17T13:33:31.583Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "The Senior Fellow, Global Programs, will lead a tightly scoped, policy-responsive workstream at the intersection of AI, industrial policy, and global political economy; building on AI Now’s existing r...",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreibu7wskaxskucbjcq5xsjfw2t5swgjx6zktglcq3u4wcee4pjur2q"
+        },
+        "mimeType": "image/jpeg",
+        "size": 936869
+       },
+       "title": "AI Now is Hiring a Senior Fellow, Global Programs - AI Now Institute",
+       "uri": "https://ainowinstitute.org/general/ai-now-is-hiring-a-senior-fellow-global-programs"
+      }
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://ainowinstitute.org/general/ai-now-is-hiring-a-senior-fellow-global-programs"
+        }
+       ],
+       "index": {
+        "byteEnd": 300,
+        "byteStart": 266
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "We're hiring a Senior Fellow, Global Programs to lead our work at the intersection of AI, industrial strategy, trade, and global political economy - building on our AI Nationalism(s) research and partnerships & research network outside the US and EU. Remote and PT: ainowinstitute.org/general/ai-n..."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://ainowinstitute.org/general/ai-now-is-hiring-a-senior-fellow-global-programs",
+      "title": "AI Now is Hiring a Senior Fellow, Global Programs - AI Now Institute",
+      "description": "The Senior Fellow, Global Programs, will lead a tightly scoped, policy-responsive workstream at the intersection of AI, industrial policy, and global political economy; building on AI Now’s existing r...",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ploub7siu45j4aazlumn6hfz/bafkreibu7wskaxskucbjcq5xsjfw2t5swgjx6zktglcq3u4wcee4pjur2q"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 1,
+    "replyCount": 2,
+    "repostCount": 4,
+    "likeCount": 6,
+    "quoteCount": 0,
+    "indexedAt": "2026-06-17T13:33:56.366Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:t6v3yxlof4topjf5rwvbxopa",
+     "handle": "smw.bsky.social",
+     "displayName": "Sarah Myers West",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-07-01T20:29:23.298Z"
+    },
+    "uri": "at://did:plc:t6v3yxlof4topjf5rwvbxopa/app.bsky.feed.repost/3moihufrw7a2e",
+    "cid": "bafyreidwctsbaxohjyzenhkx6kz26iwoy2gbva2ksa6hzszakkjly7ubqq",
+    "indexedAt": "2026-06-17T13:58:36.968Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  }
+ ],
+ "cursor": "2025-08-07T13:33:04.279Z"
+}

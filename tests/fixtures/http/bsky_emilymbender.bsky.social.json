@@ -1,0 +1,541 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:5ggiiihtdugxkmffnwgfb4ev/app.bsky.feed.post/3n2znvdkh3s2c",
+    "cid": "bafyreifj7fyuxyj2mudpnbjqnlnpis5gxc66zpsrvafm7aqhmogszovz3q",
+    "author": {
+     "did": "did:plc:5ggiiihtdugxkmffnwgfb4ev",
+     "handle": "ali-alkhatib.com",
+     "displayName": "ali alkhatib",
+     "pronouns": "he/him",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      },
+      "germ": {
+       "showButtonTo": "usersIFollow",
+       "messageMeUrl": "https://landing.ger.mx/newUser"
+      }
+     },
+     "createdAt": "2023-04-27T21:34:15.810Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-24T03:04:05.459Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "associatedRefs": [
+        {
+         "$type": "com.atproto.repo.strongRef",
+         "cid": "bafyreicnjoh33m7y356ndfsl6rp7ta2thg73rtopj76r74ebo4dalbmj44",
+         "uri": "at://did:plc:5ggiiihtdugxkmffnwgfb4ev/site.standard.document/d47pag7aqrnmi"
+        },
+        {
+         "$type": "com.atproto.repo.strongRef",
+         "cid": "bafyreictdnx3fewpnz2nyg7ypblwab3buo7aynsjwv74odxiqjebrfnimi",
+         "uri": "at://did:plc:5ggiiihtdugxkmffnwgfb4ev/site.standard.publication/3mse73ryqkb2p"
+        }
+       ],
+       "description": "Hello everyone, this week I'm taking a break from Hyperscale to plan to watch Ghost in the Machine (6pm GMT Nov 28, or at the alternative time 10am GMT Nov...",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreie2x7nu2yrqkd5dkyotycjivqncyacxwaply3hrqdea62g3fp3wq4"
+        },
+        "mimeType": "image/jpeg",
+        "size": 36292
+       },
+       "title": "[AI Skeptics] Ghost in the Machine",
+       "uri": "https://buttondown.com/ai-skeptics-reading-group/archive/ai-skeptics-ghost-in-the-machine/"
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "[not sure if emails are sending but] for AI Skeptics Reading Group this week, we're taking a slight detour from Hyperscale to watch \"Ghost in the Machine\" this weekend (6pm GMT on Nov 28, or 10am GMT on Nov 29 - pick a lane based on whichever works better for your body's timezone)"
+    },
+    "embed": {
+     "external": {
+      "uri": "https://buttondown.com/ai-skeptics-reading-group/archive/ai-skeptics-ghost-in-the-machine/",
+      "title": "[AI Skeptics] Ghost in the Machine",
+      "description": "Hello everyone, this week I'm taking a break from Hyperscale to plan to watch Ghost in the Machine (6pm GMT Nov 28, or at the alternative time 10am GMT Nov...",
+      "createdAt": "2026-11-24T02:53:44.000Z",
+      "source": {
+       "uri": "https://buttondown.com/ai-skeptics-reading-group",
+       "icon": "https://cdn.bsky.app/img/avatar/plain/did:plc:5ggiiihtdugxkmffnwgfb4ev/bafkreidgkg44tsxbr7dv34naavq4r2riy27rp5vpruqt4ad5ncfgopgiyu",
+       "title": "AI Skeptics Reading Group",
+       "description": "A reading group for AI skeptics It's exactly what it sounds like!",
+       "theme": {
+        "backgroundRGB": {
+         "r": 255,
+         "g": 255,
+         "b": 255,
+         "$type": "app.bsky.embed.external#colorRGB"
+        },
+        "foregroundRGB": {
+         "r": 24,
+         "g": 24,
+         "b": 27,
+         "$type": "app.bsky.embed.external#colorRGB"
+        },
+        "accentRGB": {
+         "r": 225,
+         "g": 29,
+         "b": 72,
+         "$type": "app.bsky.embed.external#colorRGB"
+        },
+        "accentForegroundRGB": {
+         "r": 255,
+         "g": 255,
+         "b": 255,
+         "$type": "app.bsky.embed.external#colorRGB"
+        }
+       },
+       "$type": "app.bsky.embed.external#viewExternalSource"
+      },
+      "associatedProfiles": [
+       {
+        "did": "did:plc:5ggiiihtdugxkmffnwgfb4ev",
+        "handle": "ali-alkhatib.com",
+        "displayName": "ali alkhatib",
+        "pronouns": "he/him",
+        "associated": {
+         "chat": {
+          "allowIncoming": "all"
+         },
+         "activitySubscription": {
+          "allowSubscriptions": "followers"
+         },
+         "germ": {
+          "showButtonTo": "usersIFollow",
+          "messageMeUrl": "https://landing.ger.mx/newUser"
+         }
+        },
+        "createdAt": "2023-04-27T21:34:15.810Z"
+       }
+      ],
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:5ggiiihtdugxkmffnwgfb4ev/bafkreie2x7nu2yrqkd5dkyotycjivqncyacxwaply3hrqdea62g3fp3wq4",
+      "associatedRefs": [
+       {
+        "$type": "com.atproto.repo.strongRef",
+        "cid": "bafyreicnjoh33m7y356ndfsl6rp7ta2thg73rtopj76r74ebo4dalbmj44",
+        "uri": "at://did:plc:5ggiiihtdugxkmffnwgfb4ev/site.standard.document/d47pag7aqrnmi"
+       },
+       {
+        "$type": "com.atproto.repo.strongRef",
+        "cid": "bafyreictdnx3fewpnz2nyg7ypblwab3buo7aynsjwv74odxiqjebrfnimi",
+        "uri": "at://did:plc:5ggiiihtdugxkmffnwgfb4ev/site.standard.publication/3mse73ryqkb2p"
+       }
+      ]
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 5,
+    "replyCount": 1,
+    "repostCount": 5,
+    "likeCount": 21,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-24T03:04:07.758Z",
+    "threadgate": {
+     "uri": "at://did:plc:5ggiiihtdugxkmffnwgfb4ev/app.bsky.feed.threadgate/3n2znvdkh3s2c",
+     "cid": "bafyreibbdqq74y2p67hhoruusoa3ktmnakxocsgkurzvcwjyhyvccxlmby",
+     "record": {
+      "$type": "app.bsky.feed.threadgate",
+      "allow": [
+       {
+        "$type": "app.bsky.feed.threadgate#followerRule"
+       },
+       {
+        "$type": "app.bsky.feed.threadgate#followingRule"
+       },
+       {
+        "$type": "app.bsky.feed.threadgate#mentionRule"
+       }
+      ],
+      "createdAt": "2026-11-24T03:04:05.994Z",
+      "hiddenReplies": [],
+      "post": "at://did:plc:5ggiiihtdugxkmffnwgfb4ev/app.bsky.feed.post/3n2znvdkh3s2c"
+     },
+     "lists": []
+    }
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:aeug3w4mdhnc2wv73hmrh36v",
+     "handle": "emilymbender.bsky.social",
+     "displayName": "Emily M. Bender",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-04T03:28:08.872Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mqsa3ijeid2x",
+        "isValid": true,
+        "createdAt": "2026-07-16T21:56:24.867Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:aeug3w4mdhnc2wv73hmrh36v/app.bsky.feed.repost/3n2zo6v6kpt2e",
+    "cid": "bafyreic5tanpceulah7b2j2pnpjs25nkmi6fwdtocciyejwxem6ydxklii",
+    "indexedAt": "2026-11-24T03:09:26.044Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 5
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:aeug3w4mdhnc2wv73hmrh36v/app.bsky.feed.post/3n2z3ubvg3kst",
+    "cid": "bafyreieoazn74sdpchmcaz7s3z36nhgkrfwy2tqxkxjknubf53vlvpnepe",
+    "author": {
+     "did": "did:plc:aeug3w4mdhnc2wv73hmrh36v",
+     "handle": "emilymbender.bsky.social",
+     "displayName": "Emily M. Bender",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-04T03:28:08.872Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mqsa3ijeid2x",
+        "isValid": true,
+        "createdAt": "2026-07-16T21:56:24.867Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T21:41:22.814Z",
+     "facets": [],
+     "langs": [
+      "en"
+     ],
+     "tags": [],
+     "text": "Anyone else getting invitations to that very AI safety-coded event in Oakland CA in a few weeks that include the sentence \"It would be a pleasure to have you among the guests listening in.\"?\n\n>>"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 2,
+    "repostCount": 1,
+    "likeCount": 14,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-23T21:41:23.147Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 7
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:tm3djotsgwdkml5jn5rpubhd/app.bsky.feed.post/3n234sachck2h",
+    "cid": "bafyreigsuctf5s2u2fbljnzikq3z34g5sr3rco4a6opnvp5kpyhwgawdlm",
+    "author": {
+     "did": "did:plc:tm3djotsgwdkml5jn5rpubhd",
+     "handle": "goldengateblond.bsky.social",
+     "displayName": "shauna",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-26T12:49:18.282Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-11T23:38:15.625Z",
+     "langs": [
+      "en"
+     ],
+     "text": "turns out the invisible hand of the market is always up someone's skirt"
+    },
+    "bookmarkCount": 28,
+    "replyCount": 19,
+    "repostCount": 416,
+    "likeCount": 2469,
+    "quoteCount": 7,
+    "indexedAt": "2026-11-11T23:38:15.880Z",
+    "threadgate": {
+     "uri": "at://did:plc:tm3djotsgwdkml5jn5rpubhd/app.bsky.feed.threadgate/3n234sachck2h",
+     "cid": "bafyreify5g327djx2chktq6lmhdfolcooc5hlack5r4dg5gylorgzokrwy",
+     "record": {
+      "$type": "app.bsky.feed.threadgate",
+      "allow": [
+       {
+        "$type": "app.bsky.feed.threadgate#followerRule"
+       }
+      ],
+      "createdAt": "2026-11-11T23:38:15.634Z",
+      "hiddenReplies": [],
+      "post": "at://did:plc:tm3djotsgwdkml5jn5rpubhd/app.bsky.feed.post/3n234sachck2h"
+     },
+     "lists": []
+    }
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:aeug3w4mdhnc2wv73hmrh36v",
+     "handle": "emilymbender.bsky.social",
+     "displayName": "Emily M. Bender",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-04T03:28:08.872Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mqsa3ijeid2x",
+        "isValid": true,
+        "createdAt": "2026-07-16T21:56:24.867Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:aeug3w4mdhnc2wv73hmrh36v/app.bsky.feed.repost/3n2z3kjzlha2x",
+    "cid": "bafyreihti6j6g2ensgmhra7df4dirdd6x3sfmzr7mpkgtgbj3fnxap3gtq",
+    "indexedAt": "2026-11-23T21:35:55.941Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:aeug3w4mdhnc2wv73hmrh36v/app.bsky.feed.post/3n2ysz6a5fs24",
+    "cid": "bafyreic7nyfxc5nh74etwy7qwmyroi56ntkdrkwqgwuyu5spg37zqqphgm",
+    "author": {
+     "did": "did:plc:aeug3w4mdhnc2wv73hmrh36v",
+     "handle": "emilymbender.bsky.social",
+     "displayName": "Emily M. Bender",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-04T03:28:08.872Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mqsa3ijeid2x",
+        "isValid": true,
+        "createdAt": "2026-07-16T21:56:24.867Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T19:03:03.067Z",
+     "embed": {
+      "$type": "app.bsky.embed.record",
+      "record": {
+       "cid": "bafyreigfeib7s6axpous4g6i2vkk5t4nztih57taeas5cqbgnrvjrfic5m",
+       "uri": "at://did:plc:4usmserhjqkvhldgedfjb3jw/app.bsky.feed.post/3n2jn53mcjs2f"
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "\"Given the likely cyberattacks on Microsoft, flights, banks, and now NSA, it's arguably a matter of US national security to *immediately* return the most important person in Having an Affair with Jensen Huang to his role at the top Having an Affair with Jensen Huang company.\""
+    },
+    "embed": {
+     "record": {
+      "uri": "at://did:plc:4usmserhjqkvhldgedfjb3jw/app.bsky.feed.post/3n2jn53mcjs2f",
+      "cid": "bafyreigfeib7s6axpous4g6i2vkk5t4nztih57taeas5cqbgnrvjrfic5m",
+      "author": {
+       "did": "did:plc:4usmserhjqkvhldgedfjb3jw",
+       "handle": "paleofuture.bsky.social",
+       "displayName": "Matt Novak",
+       "associated": {
+        "chat": {
+         "allowIncoming": "following"
+        },
+        "activitySubscription": {
+         "allowSubscriptions": "followers"
+        }
+       },
+       "createdAt": "2023-05-12T21:19:00.859Z",
+       "verification": {
+        "verifications": [
+         {
+          "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+          "issuerDisplayName": "Bluesky",
+          "issuerHandle": "bsky.app",
+          "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3ltdnkpqtrd2d",
+          "isValid": true,
+          "createdAt": "2025-07-07T01:36:59.989Z"
+         }
+        ],
+        "verifiedStatus": "valid",
+        "trustedVerifierStatus": "none"
+       }
+      },
+      "value": {
+       "$type": "app.bsky.feed.post",
+       "createdAt": "2026-11-17T18:07:56.011Z",
+       "embed": {
+        "$type": "app.bsky.embed.images",
+        "images": [
+         {
+          "alt": "Balaji on Twitter: By the way, in the unlikely event that the @nvidia\n board doesn’t immediately restore Jensen as CEO…there’s actually a scenario where the Department of War steps in on Jensen’s side.\n\nWhy? Given the likely cyberattacks on Microsoft, flights, banks, and now NSA, it’s arguably a matter of US national security to immediately return the most important person in AI to his role at the top AI company.\n\nDefense Production Act, but for the restoration of Jensen Huang.",
+          "aspectRatio": {
+           "height": 502,
+           "width": 598
+          },
+          "image": {
+           "$type": "blob",
+           "ref": {
+            "$link": "bafkreibon766iyubezme4akeuh6dgxgpk7nxnu5t4qpygrnwp24gn36zza"
+           },
+           "mimeType": "image/jpeg",
+           "size": 239490
+          }
+         }
+        ]
+       },
+       "langs": [
+        "en"
+       ],
+       "text": "\"Defense Production Act, but for the restoration of Jensen Huang.\""
+      },
+      "likeCount": 1169,
+      "replyCount": 152,
+      "repostCount": 149,
+      "quoteCount": 238,
+      "indexedAt": "2026-11-17T18:07:58.344Z",
+      "embeds": [
+       {
+        "images": [
+         {
+          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:4usmserhjqkvhldgedfjb3jw/bafkreibon766iyubezme4akeuh6dgxgpk7nxnu5t4qpygrnwp24gn36zza",
+          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:4usmserhjqkvhldgedfjb3jw/bafkreibon766iyubezme4akeuh6dgxgpk7nxnu5t4qpygrnwp24gn36zza",
+          "alt": "Balaji on Twitter: By the way, in the unlikely event that the @nvidia\n board doesn’t immediately restore Jensen as CEO…there’s actually a scenario where the Department of War steps in on Jensen’s side.\n\nWhy? Given the likely cyberattacks on Microsoft, flights, banks, and now NSA, it’s arguably a matter of US national security to immediately return the most important person in AI to his role at the top AI company.\n\nDefense Production Act, but for the restoration of Jensen Huang.",
+          "aspectRatio": {
+           "height": 502,
+           "width": 598
+          }
+         }
+        ],
+        "$type": "app.bsky.embed.images#view"
+       }
+      ],
+      "$type": "app.bsky.embed.record#viewRecord"
+     },
+     "$type": "app.bsky.embed.record#view"
+    },
+    "bookmarkCount": 4,
+    "replyCount": 3,
+    "repostCount": 12,
+    "likeCount": 89,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-23T19:03:03.451Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 2
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:aeug3w4mdhnc2wv73hmrh36v/app.bsky.feed.post/3n2yskx2gukst",
+    "cid": "bafyreigdf3bzfcwfh2jmbgqow627jg3ar3jxtoryp23lb2jpeidadzw2qi",
+    "author": {
+     "did": "did:plc:aeug3w4mdhnc2wv73hmrh36v",
+     "handle": "emilymbender.bsky.social",
+     "displayName": "Emily M. Bender",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-04T03:28:08.872Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mqsa3ijeid2x",
+        "isValid": true,
+        "createdAt": "2026-07-16T21:56:24.867Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T18:55:05.778Z",
+     "facets": [],
+     "langs": [
+      "en"
+     ],
+     "tags": [],
+     "text": "Curious how the folks who seem to enjoy using Claude etc to make slides or whatever feel about a) the data center polluting Boxtown (where 50% of Claude queries are reportedly handled) and b) the naked corruption around Trump, Jensen Huang, etc.\n\n>>"
+    },
+    "bookmarkCount": 17,
+    "replyCount": 9,
+    "repostCount": 21,
+    "likeCount": 154,
+    "quoteCount": 3,
+    "indexedAt": "2026-11-23T18:55:05.949Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 5
+  }
+ ],
+ "cursor": "2026-11-20T20:12:53.801Z"
+}

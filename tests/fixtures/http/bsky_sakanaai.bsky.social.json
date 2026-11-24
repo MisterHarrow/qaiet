@@ -1,0 +1,387 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:qygqevukksg7rnewku4ffpkv/app.bsky.feed.post/3n2zkhepaec2t",
+    "cid": "bafyreifsnjp63luuq5bdup6eu4r22pr45yggprkhdccbltwwqjqreaeyci",
+    "author": {
+     "did": "did:plc:qygqevukksg7rnewku4ffpkv",
+     "handle": "sakanaai.bsky.social",
+     "displayName": "Sakana AI",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-12-01T00:38:52.246Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-24T02:02:35.674Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "",
+        "aspectRatio": {
+         "height": 1836,
+         "width": 2304
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreicyghtuvk5kuxf5an5j6vfajxp5jq5pfgnjf35v6iwlpzvxmlyy2e"
+         },
+         "mimeType": "image/jpeg",
+         "size": 1061889
+        }
+       }
+      ]
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://sakana.ai/careers/member-of-technical-staff-llm-development/"
+        }
+       ],
+       "index": {
+        "byteEnd": 372,
+        "byteStart": 347
+       }
+      }
+     ],
+     "langs": [
+      "ja"
+     ],
+     "text": "「Sakana Sawara」をはじめとするLLM開発を担うMember of Technical Staffも募集中です🐟\n\n事前・中間・事後学習から評価まで、仮説検証をリードする役割です。LLM開発の経験は必須ではなく、他領域でのマルチGPU実験やデータ構築、HPC等の経験も歓迎します。\n\n詳細： sakana.ai/careers/memb..."
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:qygqevukksg7rnewku4ffpkv/bafkreicyghtuvk5kuxf5an5j6vfajxp5jq5pfgnjf35v6iwlpzvxmlyy2e",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:qygqevukksg7rnewku4ffpkv/bafkreicyghtuvk5kuxf5an5j6vfajxp5jq5pfgnjf35v6iwlpzvxmlyy2e",
+       "alt": "",
+       "aspectRatio": {
+        "height": 1836,
+        "width": 2304
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-24T02:03:47.744Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:qygqevukksg7rnewku4ffpkv/app.bsky.feed.post/3n2x6tka7us2n",
+    "cid": "bafyreifjiygsh6uvzxe5st4n2lenfqik457xjh3sh5howo34qcju5b74ly",
+    "author": {
+     "did": "did:plc:qygqevukksg7rnewku4ffpkv",
+     "handle": "sakanaai.bsky.social",
+     "displayName": "Sakana AI",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-12-01T00:38:52.246Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T03:29:19.751Z",
+     "embed": {
+      "$type": "app.bsky.embed.video",
+      "aspectRatio": {
+       "height": 1080,
+       "width": 1920
+      },
+      "presentation": "default",
+      "video": {
+       "$type": "blob",
+       "ref": {
+        "$link": "bafkreiedwldd5neyo3jywib4gai2nmwnbkbteq3ivuh7g3vxwvtdbrmnhe"
+       },
+       "mimeType": "video/mp4",
+       "size": 64002455
+      }
+     },
+     "langs": [
+      "ja"
+     ],
+     "text": "「言語モデル開発は、想像以上に研究の競争だ」\n\nChief Scientistの秋葉拓哉が、エージェント用途に向け、一から事前学習する新言語モデル「Sakana Sawara」を解説。\n\n鍵を握るのは「計算資源×研究効率」と人材密度。Sawara自身が次のSawaraの開発を加速する「部分的なRSI」へ。"
+    },
+    "embed": {
+     "cid": "bafkreiedwldd5neyo3jywib4gai2nmwnbkbteq3ivuh7g3vxwvtdbrmnhe",
+     "playlist": "https://video.bsky.app/watch/did%3Aplc%3Aqygqevukksg7rnewku4ffpkv/bafkreiedwldd5neyo3jywib4gai2nmwnbkbteq3ivuh7g3vxwvtdbrmnhe/playlist.m3u8",
+     "aspectRatio": {
+      "height": 1080,
+      "width": 1920
+     },
+     "presentation": "default",
+     "$type": "app.bsky.embed.video#view"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 1,
+    "repostCount": 1,
+    "likeCount": 6,
+    "quoteCount": 1,
+    "indexedAt": "2026-11-23T03:30:30.848Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 2
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:qygqevukksg7rnewku4ffpkv/app.bsky.feed.post/3n2vwprfaoc2e",
+    "cid": "bafyreic6j3zis6srmsoyubixqfwhrdpmktkb6z5ucynhdcvfdojzkrqalm",
+    "author": {
+     "did": "did:plc:qygqevukksg7rnewku4ffpkv",
+     "handle": "sakanaai.bsky.social",
+     "displayName": "Sakana AI",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-12-01T00:38:52.246Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-22T15:31:23.363Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "",
+        "aspectRatio": {
+         "height": 1755,
+         "width": 2048
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreigtxwlprvlhr47ydp4dkujpqfewx36kg6jesd2dsrpf3jphpusehq"
+         },
+         "mimeType": "image/jpeg",
+         "size": 1263795
+        }
+       }
+      ]
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://sakana.ai/symposium-2026/"
+        }
+       ],
+       "index": {
+        "byteEnd": 231,
+        "byteStart": 206
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "Sakana AI Symposium in Tokyo now on YouTube\n\nThe sessions on world models, LLMs, AI scientists, and Physical AI, from the Sakana AI team and our Chief Scientific Advisor, Jürgen Schmidhuber.\n\nFull Report: sakana.ai/symposium-20...\n\nHighlights from each session in the thread below. 🧵"
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:qygqevukksg7rnewku4ffpkv/bafkreigtxwlprvlhr47ydp4dkujpqfewx36kg6jesd2dsrpf3jphpusehq",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:qygqevukksg7rnewku4ffpkv/bafkreigtxwlprvlhr47ydp4dkujpqfewx36kg6jesd2dsrpf3jphpusehq",
+       "alt": "",
+       "aspectRatio": {
+        "height": 1755,
+        "width": 2048
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 4,
+    "replyCount": 1,
+    "repostCount": 1,
+    "likeCount": 18,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-22T15:32:34.954Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 8
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:qygqevukksg7rnewku4ffpkv/app.bsky.feed.post/3n2q7fwqs222k",
+    "cid": "bafyreiemermmuuoe7d4ibcdtuwzrf4wch7jjzf3q6sfizg4fky6p35jqau",
+    "author": {
+     "did": "did:plc:qygqevukksg7rnewku4ffpkv",
+     "handle": "sakanaai.bsky.social",
+     "displayName": "Sakana AI",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-12-01T00:38:52.246Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-20T08:50:58.688Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "人工知能（AI）開発のSakana AI（サカナAI、東京・港）は20日、サイバーセキュリティーの研究を手掛ける専門チームを設けたと発表した。チームはデビッド・ハ最高経営責任者（CEO）らが率いる。ハCEOは「日本に根ざすAI企業として、私たちは自らが築こうとしている社会を守る力になりたい」と話した。チームの活動は自社サ",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreic6r67sti5cs6jlooswq6tzbpbmen6ihcaqjxc5awdkhpsxhbr2wq"
+        },
+        "mimeType": "image/jpeg",
+        "size": 228161
+       },
+       "title": "サカナAI、サイバーセキュリティー研究部門設立　CEO直轄 - 日本経済新聞",
+       "uri": "https://www.nikkei.com/article/DGXZQOUC2077P0Q6A121C2000000/"
+      }
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://www.nikkei.com/article/DGXZQOUC2077P0Q6A121C2000000/"
+        }
+       ],
+       "index": {
+        "byteEnd": 108,
+        "byteStart": 78
+       }
+      }
+     ],
+     "langs": [
+      "ja"
+     ],
+     "text": "サカナAI、サイバーセキュリティー研究部門設立　CEO直轄\nwww.nikkei.com/article/DGXZ..."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://www.nikkei.com/article/DGXZQOUC2077P0Q6A121C2000000/",
+      "title": "サカナAI、サイバーセキュリティー研究部門設立　CEO直轄 - 日本経済新聞",
+      "description": "人工知能（AI）開発のSakana AI（サカナAI、東京・港）は20日、サイバーセキュリティーの研究を手掛ける専門チームを設けたと発表した。チームはデビッド・ハ最高経営責任者（CEO）らが率いる。ハCEOは「日本に根ざすAI企業として、私たちは自らが築こうとしている社会を守る力になりたい」と話した。チームの活動は自社サ",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:qygqevukksg7rnewku4ffpkv/bafkreic6r67sti5cs6jlooswq6tzbpbmen6ihcaqjxc5awdkhpsxhbr2wq"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 1,
+    "replyCount": 0,
+    "repostCount": 1,
+    "likeCount": 1,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-20T08:52:07.345Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:qygqevukksg7rnewku4ffpkv/app.bsky.feed.post/3n2pjgx4zds22",
+    "cid": "bafyreidrpcgdymtuhtpe77artqe4rpxnivdr44hk5dcgyhqmx7j4fkrlgu",
+    "author": {
+     "did": "did:plc:qygqevukksg7rnewku4ffpkv",
+     "handle": "sakanaai.bsky.social",
+     "displayName": "Sakana AI",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-12-01T00:38:52.246Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-20T02:17:50.323Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "",
+        "aspectRatio": {
+         "height": 1080,
+         "width": 1920
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreidymlmsbacrnlseegedpczqit26sehzyhwjggayhhoaqajslsniba"
+         },
+         "mimeType": "image/jpeg",
+         "size": 117301
+        }
+       }
+      ]
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://sakana.ai/security-research-group/"
+        }
+       ],
+       "index": {
+        "byteEnd": 87,
+        "byteStart": 62
+       }
+      },
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://sakana.ai/careers/member-of-technical-staff-security-research-group/"
+        }
+       ],
+       "index": {
+        "byteEnd": 122,
+        "byteStart": 97
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "Introducing the Sakana AI Security Research Group 🐟\n\nBlog: sakana.ai/security-res...\nJoin us: sakana.ai/careers/memb...\n\nThe Security Research Group is a R&D team inside Sakana AI studying collective, AI-driven cyber defense and the security and safety of AI itself.\n\nThread:"
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:qygqevukksg7rnewku4ffpkv/bafkreidymlmsbacrnlseegedpczqit26sehzyhwjggayhhoaqajslsniba",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:qygqevukksg7rnewku4ffpkv/bafkreidymlmsbacrnlseegedpczqit26sehzyhwjggayhhoaqajslsniba",
+       "alt": "",
+       "aspectRatio": {
+        "height": 1080,
+        "width": 1920
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 3,
+    "replyCount": 1,
+    "repostCount": 0,
+    "likeCount": 9,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-20T02:19:01.747Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 3
+  }
+ ],
+ "cursor": "2026-09-25T10:11:11.855Z"
+}

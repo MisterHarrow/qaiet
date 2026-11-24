@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
+    <channel>
+        <title><![CDATA[Bloomberg Technology]]></title>
+        <description><![CDATA[Bloomberg Technology]]></description>
+        <link>http://bloomberg.com/technology/</link>
+        <image>
+            <url>http://www.bloomberg.com/feeds/static/images/bloomberg_logo_blue.png</url>
+            <title>Bloomberg Technology</title>
+            <link>http://bloomberg.com/technology/</link>
+        </image>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Tue, 24 Nov 2026 08:19:27 GMT</lastBuildDate>
+        <atom:link href="https://www.bloomberg.com/feeds/technology/news.rss" rel="self" type="application/rss+xml"/>
+        <copyright><![CDATA[Copyright 2026 BLOOMBERG L.P. ALL RIGHTS RESERVED]]></copyright>
+        <language><![CDATA[en]]></language>
+        <item>
+            <title><![CDATA[Zurrer: Huang’s Credibility in Industry Too Important (Video)]]></title>
+            <link>https://www.bloomberg.com/news/videos/2026-11-24/zurrer-huang-s-credibility-in-industry-too-important-video</link>
+            <guid isPermaLink="false">TOZYMYR24U8G00</guid>
+            <pubDate>Tue, 24 Nov 2026 08:15:11 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[What's Next for Huang, Nvidia and the AI Trade?]]></title>
+            <description><![CDATA[Nvidia's reinstatement of Jensen Huang as chief executive officer doesn’t remove the cloud that still lingers over him and chipmaking giant. Huang is set to testify before the Senate Banking Committee on Dec. 3, while concerns also remain around the costs and risks of the AI buildout. Bloomberg's Neil Campling has more. (Source: Bloomberg)]]></description>
+            <link>https://www.bloomberg.com/news/videos/2026-11-24/what-s-next-for-huang-nvidia-and-the-ai-trade-video</link>
+            <guid isPermaLink="false">TOZYSIKGIFPO00</guid>
+            <pubDate>Tue, 24 Nov 2026 08:12:18 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[US Blacklists Alibaba-Owned Company in Megaspeed Crackdown]]></title>
+            <description><![CDATA[The Trump administration blacklisted a Singaporean subsidiary of Alibaba Group Holding Ltd., roping one of China’s biggest tech companies into its crackdown on Megaspeed International, the firm at the center of a controversy that briefly cost Jensen Huang his job at Nvidia Corp.]]></description>
+            <link>https://www.bloomberg.com/news/articles/2026-11-24/us-blacklists-alibaba-owned-company-in-setback-to-ai-ambitions</link>
+            <guid isPermaLink="false">TOZEXUKK3NYC00</guid>
+            <dc:creator><![CDATA[Mackenzie Hawkins, Andy Lin and Luz Ding]]></dc:creator>
+            <pubDate>Tue, 24 Nov 2026 01:45:36 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Australia Bolsters Online Safety Law With Tougher Big Tech Fine]]></title>
+            <description><![CDATA[The world’s biggest technology providers may face fines of as much as 5% of their global revenue under Australia’s new Digital Duty of Care law after the government toughened penalties to secure its passage.]]></description>
+            <link>https://www.bloomberg.com/news/articles/2026-11-24/australia-bolsters-online-safety-law-with-tougher-big-tech-fine</link>
+            <guid isPermaLink="false">TOZRQ5T96OSK00</guid>
+            <dc:creator><![CDATA[Angus Whitley and James Mayger]]></dc:creator>
+            <pubDate>Tue, 24 Nov 2026 07:49:58 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Nvidia Reinstates Huang as CEO as US Sanctions Iran’s Shadow Banking Network]]></title>
+            <description><![CDATA[Horizons Middle East & Africa is your daily spotlight on one of the world's fastest-growing regions. Live from Dubai, we bring you the latest global markets and analysis, plus news-making interviews, with a special focus on MEA. All that and more, as you head to the office in the Gulf, pause for lunch in Hong Kong, or start your day in London or Johannesburg.  (Source: Bloomberg)]]></description>
+            <link>https://www.bloomberg.com/news/videos/2026-11-24/horizons-middle-east-africa-11-24-2026-video</link>
+            <guid isPermaLink="false">TOZX6ST3BZLT00</guid>
+            <pubDate>Tue, 24 Nov 2026 07:37:40 GMT</pubDate>
+        </item>
+    </channel>
+</rss>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>
+      <![CDATA[Business]]>
+    </title>
+    <description/>
+    <link>https://www.economist.com/business</link>
+    <pubDate>Mon, 23 Nov 2026 21:28:13 +0000</pubDate>
+    <lastBuildDate>Mon, 23 Nov 2026 21:28:13 +0000</lastBuildDate>
+    <atom:link href="https://www.economist.com/business/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>
+        <![CDATA[How the manosphere cashes in on male insecurity]]>
+      </title>
+      <description>
+        <![CDATA[Behind the controversial influencers lies a web of troubling sponsorship deals]]>
+      </description>
+      <link>https://www.economist.com/business/2026/11/23/how-the-manosphere-cashes-in-on-male-insecurity</link>
+      <guid isPermaLink="false">4768cf2c-91b1-4836-bfdb-7d7bce2ca35c</guid>
+      <pubDate>Mon, 23 Nov 2026 21:28:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>
+        <![CDATA[Jensen Huang returns. But Nvidia will never be the same]]>
+      </title>
+      <description>
+        <![CDATA[He now faces a hostile Congress, rattled employees and wary business partners]]>
+      </description>
+      <link>https://www.economist.com/business/2026/11/23/jensen-huang-returns-but-nvidia-will-never-be-the-same</link>
+      <guid isPermaLink="false">d705f1d2-1793-4fa4-9590-40c9fad6948c</guid>
+      <pubDate>Mon, 23 Nov 2026 16:30:30 +0000</pubDate>
+    </item>
+    <item>
+      <title>
+        <![CDATA[Bartleby newsletter: Valley mentality]]>
+      </title>
+      <description>
+        <![CDATA[Andrew Palmer, Bartleby columnist, asks why people who think that AI might have terrible outcomes persist in developing it]]>
+      </description>
+      <link>https://www.economist.com/business/2026/11/23/bartleby-newsletter-valley-mentality</link>
+      <guid isPermaLink="false">bbdacbcd-4523-4c0f-9fbe-6321308e7bf6</guid>
+      <pubDate>Mon, 23 Nov 2026 14:54:47 +0000</pubDate>
+    </item>
+    <item>
+      <title>
+        <![CDATA[Anthropic soars, but it may soon be back, cap in hand]]>
+      </title>
+      <description>
+        <![CDATA[The biggest IPO of all time is just a start]]>
+      </description>
+      <link>https://www.economist.com/business/2026/11/19/anthropic-soars-but-it-may-soon-be-back-cap-in-hand</link>
+      <guid isPermaLink="false">79eabd75-3d9c-4f0b-b185-fcd5d64644f4</guid>
+      <pubDate>Thu, 19 Nov 2026 23:15:40 +0000</pubDate>
+    </item>
+    <item>
+      <title>
+        <![CDATA[The world’s carmakers are revving up in America]]>
+      </title>
+      <description>
+        <![CDATA[Donald Trump’s policies are only part of the explanation]]>
+      </description>
+      <link>https://www.economist.com/business/2026/11/19/the-worlds-carmakers-are-revving-up-in-america</link>
+      <guid isPermaLink="false">4c31faa2-46de-436b-87fb-6c833793316c</guid>
+      <pubDate>Thu, 19 Nov 2026 14:01:02 +0000</pubDate>
+    </item>
+  </channel>
+</rss>

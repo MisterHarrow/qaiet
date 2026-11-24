@@ -1,0 +1,7 @@
+<html><head>
+<title>Researchers at UCLA, Washington, and Northwestern Release MEMCON for Agents</title>
+<meta name="description" content="Many agents save past experiences as text in an external store, and most search and update such memories using settings the agent’s developer..."/>
+<meta property="og:title" content="Researchers at UCLA, Washington, and Northwestern Release MEMCON for Agents"/>
+<meta property="og:description" content="Many agents save past experiences as text in an external store, and most search and update such memories using settings the agent’s developer..."/>
+<meta property="article:published_time" content="2026-11-20T08:15:00.000-08:00"/>
+</head></html>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	 xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	 xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	 xmlns:dc="http://purl.org/dc/elements/1.1/"
+	 xmlns:atom="http://www.w3.org/2005/Atom"
+	 xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	 xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+		xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+xmlns:podcast="https://podcastindex.org/namespace/1.0"
+xmlns:rawvoice="https://blubrry.com/developer/rawvoice-rss/"
+xmlns:media="http://search.yahoo.com/mrss/"
+>
+	<channel>
+		<title>Reason Magazine</title>
+		<atom:link href="https://reason.com/feed/" rel="self" type="application/rss+xml" />
+		<link>https://reason.com/</link>
+		<description><![CDATA[Free Minds and Free Markets]]></description>
+		<lastBuildDate>
+			Tue, 24 Nov 2026 03:00:00 -0500		</lastBuildDate>
+		<language>en-US</language>
+				<sy:updatePeriod>
+				hourly		</sy:updatePeriod>
+		<sy:updateFrequency>
+				1		</sy:updateFrequency>
+		<generator>https://wordpress.org/?v=7.1.5</generator>
+
+<image>
+	<url>https://reason.com/wp-content/uploads/2026/08/cropped-rinsquareRGB-32x32.png</url>
+	<title>Reason Magazine</title>
+	<link>https://reason.com/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<atom:link rel="hub" href="https://pubsubhubbub.appspot.com/" />
+	<itunes:author>Reason Magazine</itunes:author>
+	<itunes:explicit>true</itunes:explicit>
+	<itunes:image href="https://reason.com/wp-content/plugins/powerpress/itunes_default.jpg" />
+	<itunes:type>episodic</itunes:type>
+	<itunes:owner>
+		<itunes:name>Reason Magazine</itunes:name>
+		<itunes:email>podcasts@reason.com</itunes:email>
+	</itunes:owner>
+	<podcast:medium>podcast</podcast:medium>
+	<image>
+		<title>Reason Magazine</title>
+		<url>https://reason.com/wp-content/plugins/powerpress/rss_default.jpg</url>
+		<link>https://reason.com/latest/</link>
+	</image>
+	<podcast:podping usesPodping="true" />
+		<item>
+			<title>Open Thread</title>
+			<link>https://reason.com/volokh/2026/11/24/open-thread-398/</link>
+							<comments>https://reason.com/volokh/2026/11/24/open-thread-398/#respond</comments>
+						<pubDate>Tue, 24 Nov 2026 08:00:00 +0000</pubDate>
+											<dc:creator><![CDATA[Eugene Volokh]]></dc:creator>
+												<category><![CDATA[Politics]]></category>
+			<guid isPermaLink="false">https://reason.com/?post_type=volokh-post&#038;p=8412475</guid>
+							<description><![CDATA[What’s on your mind?]]></description>
+											
+													<wfw:commentRss>https://reason.com/volokh/2026/11/24/open-thread-398/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+													<atom:updated>2026-11-24T08:00:00Z</atom:updated>
+		</item>
+				<item>
+			<title>Setting the Record Straight On Senator Cornyn And The N.D. Tex. Seat</title>
+			<link>https://reason.com/volokh/2026/11/24/setting-the-record-straight-on-senator-cornyn-and-the-n-d-tex-seat/</link>
+							<comments>https://reason.com/volokh/2026/11/24/setting-the-record-straight-on-senator-cornyn-and-the-n-d-tex-seat/#respond</comments>
+						<pubDate>Tue, 24 Nov 2026 07:08:47 +0000</pubDate>
+											<dc:creator><![CDATA[Josh Blackman]]></dc:creator>
+													<guid isPermaLink="false">https://reason.com/?post_type=volokh-post&#038;p=8412673</guid>
+							<description><![CDATA[At the outset of President Trump's second term, there were a number of vacant district court seats throughout Texas. A&#8230;
+The post Setting the Record Straight On Senator Cornyn And The N.D. Tex. Seat appeared first on Reason Magazine.
+]]></description>
+											
+													<wfw:commentRss>https://reason.com/volokh/2026/11/24/setting-the-record-straight-on-senator-cornyn-and-the-n-d-tex-seat/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+													<atom:updated>2026-11-24T07:26:31Z</atom:updated>
+		</item>
+				<item>
+			<title>Bob Woodward Interviews Justice Kagan, Or Does Justice Kagan Interview Bob Woodward</title>
+			<link>https://reason.com/volokh/2026/11/24/bob-woodward-interviews-justice-kagan-or-does-justice-kagan-interview-bob-woodward/</link>
+							<comments>https://reason.com/volokh/2026/11/24/bob-woodward-interviews-justice-kagan-or-does-justice-kagan-interview-bob-woodward/#respond</comments>
+						<pubDate>Tue, 24 Nov 2026 05:58:20 +0000</pubDate>
+											<dc:creator><![CDATA[Josh Blackman]]></dc:creator>
+													<guid isPermaLink="false">https://reason.com/?post_type=volokh-post&#038;p=8412707</guid>
+							<description><![CDATA[Kagan sheds some light on her view about leaks, Dobbs, and the Court.]]></description>
+											
+													<wfw:commentRss>https://reason.com/volokh/2026/11/24/bob-woodward-interviews-justice-kagan-or-does-justice-kagan-interview-bob-woodward/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+													<atom:updated>2026-11-24T05:58:20Z</atom:updated>
+		</item>
+				<item>
+			<title>Second Amendment Roundup, II: Much Ado About Bowie Knives</title>
+			<link>https://reason.com/volokh/2026/11/23/second-amendment-roundup-ii-much-ado-about-bowie-knives/</link>
+							<comments>https://reason.com/volokh/2026/11/23/second-amendment-roundup-ii-much-ado-about-bowie-knives/#comments</comments>
+						<pubDate>Tue, 24 Nov 2026 03:11:13 +0000</pubDate>
+											<dc:creator><![CDATA[Stephen Halbrook]]></dc:creator>
+													<guid isPermaLink="false">https://reason.com/?post_type=volokh-post&#038;p=8412686</guid>
+							<description><![CDATA[Laws on concealed carry are not historical analogues for banning semiautomatic rifles.]]></description>
+											
+													<wfw:commentRss>https://reason.com/volokh/2026/11/23/second-amendment-roundup-ii-much-ado-about-bowie-knives/feed/</wfw:commentRss>
+			<slash:comments>3</slash:comments>
+													<atom:updated>2026-11-24T03:11:13Z</atom:updated>
+		</item>
+				<item>
+			<title>Second Amendment Roundup, I: The Common Use Test and the Federal &quot;Assault Weapon&quot; Ban</title>
+			<link>https://reason.com/volokh/2026/11/23/second-amendment-roundup-i-the-common-use-test-and-the-federal-assault-weapon-ban/</link>
+							<comments>https://reason.com/volokh/2026/11/23/second-amendment-roundup-i-the-common-use-test-and-the-federal-assault-weapon-ban/#respond</comments>
+						<pubDate>Tue, 24 Nov 2026 02:37:19 +0000</pubDate>
+											<dc:creator><![CDATA[Stephen Halbrook]]></dc:creator>
+													<guid isPermaLink="false">https://reason.com/?post_type=volokh-post&#038;p=8412672</guid>
+							<description><![CDATA[The federal law did not prohibit the basic AR-15 rifle design.]]></description>
+											
+													<wfw:commentRss>https://reason.com/volokh/2026/11/23/second-amendment-roundup-i-the-common-use-test-and-the-federal-assault-weapon-ban/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+													<atom:updated>2026-11-24T02:37:19Z</atom:updated>
+		</item>
+			</channel>
+</rss>

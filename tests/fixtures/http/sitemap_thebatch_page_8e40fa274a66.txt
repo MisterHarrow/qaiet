@@ -1,0 +1,7 @@
+<html><head>
+<title>World Labs&#x27; Atlas Gives Developers 3D Video and Graphics Generation for Games, Robotics, More</title>
+<meta name="description" content="World Labs has opened Atlas, its latest world model, to the public, offering developers a self-serve API that lets them turn text prompts into..."/>
+<meta property="og:title" content="World Labs&#x27; Atlas Gives Developers 3D Video and Graphics Generation for Games, Robotics, More"/>
+<meta property="og:description" content="World Labs has opened Atlas, its latest world model, to the public, offering developers a self-serve API that lets them turn text prompts into..."/>
+<meta property="article:published_time" content="2026-11-20T08:10:00.000-08:00"/>
+</head></html>

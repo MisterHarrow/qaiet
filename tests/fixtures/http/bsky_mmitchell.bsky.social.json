@@ -1,0 +1,554 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:tar4wbp265b3n2tehdnwdogu/app.bsky.feed.post/3n2qxwzjbxd2w",
+    "cid": "bafyreief5e6g6c3cnl5xyzwlqahxef66yykeapl5wgemcv6hufwq4k472q",
+    "author": {
+     "did": "did:plc:tar4wbp265b3n2tehdnwdogu",
+     "handle": "nexusproject.bsky.social",
+     "displayName": "The Nexus Project",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-11-07T23:32:49.479Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-20T16:10:00.994Z",
+     "langs": [
+      "en"
+     ],
+     "text": "This is how normalization works. When people with big platforms repeat a slur casually (purposely or not), it stops sounding like a slur. Then the ideas that come with it start to feel familiar."
+    },
+    "bookmarkCount": 3,
+    "replyCount": 1,
+    "repostCount": 34,
+    "likeCount": 240,
+    "quoteCount": 1,
+    "indexedAt": "2026-11-20T16:10:02.853Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:3tmaleaxipegsectvamyrkyi",
+     "handle": "mmitchell.bsky.social",
+     "displayName": "Margaret Mitchell",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-28T17:01:54.532Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mrtee43vsh2p",
+        "isValid": true,
+        "createdAt": "2026-07-30T02:10:40.187Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:3tmaleaxipegsectvamyrkyi/app.bsky.feed.repost/3n2r7yxk6bp2u",
+    "cid": "bafyreifgyt6v4qtx2xih7unepemyt55rftdw7cmgqxotuu46hlf5jjr4z4",
+    "indexedAt": "2026-11-20T18:34:17.059Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   },
+   "opThreadPostIndex": 5,
+   "opThreadPostCount": 7
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:45djnq4zj4bl7c22dzvyff7b/app.bsky.feed.post/3n2pujq33is2m",
+    "cid": "bafyreih7gp2roq5joxa64j7hvxisqfzktbcfdgdrlck2vqcfi2gu5q5l6a",
+    "author": {
+     "did": "did:plc:45djnq4zj4bl7c22dzvyff7b",
+     "handle": "carlosbrody.bsky.social",
+     "displayName": "Carlos Brody",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2025-03-01T22:25:56.045Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-20T05:36:14.742Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "",
+        "aspectRatio": {
+         "height": 644,
+         "width": 1200
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreih5ifiubijoeg52oeyonepf5dsr6d74utzw7xuzrqyxwkfxvv6l54"
+         },
+         "mimeType": "image/jpeg",
+         "size": 627869
+        }
+       }
+      ]
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:tk6yavumhhjplzqijs44sc53"
+        }
+       ],
+       "index": {
+        "byteEnd": 79,
+        "byteStart": 54
+       }
+      },
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:xckdhichlgxizbrgc4e7p5mq"
+        }
+       ],
+       "index": {
+        "byteEnd": 110,
+        "byteStart": 84
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "My brilliant grad student Eva Yi Xie (also advised by @nathanieldaw.bsky.social and @ben-eysenbach.bsky.social ) was kidnapped by ICE this afternoon as she trying to take a domestic flight home from a conference.\n\nShe is being held in a detention center in VA. Please help us bring her home."
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:45djnq4zj4bl7c22dzvyff7b/bafkreih5ifiubijoeg52oeyonepf5dsr6d74utzw7xuzrqyxwkfxvv6l54",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:45djnq4zj4bl7c22dzvyff7b/bafkreih5ifiubijoeg52oeyonepf5dsr6d74utzw7xuzrqyxwkfxvv6l54",
+       "alt": "",
+       "aspectRatio": {
+        "height": 644,
+        "width": 1200
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 572,
+    "replyCount": 210,
+    "repostCount": 7604,
+    "likeCount": 13093,
+    "quoteCount": 510,
+    "indexedAt": "2026-11-20T05:36:17.445Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:3tmaleaxipegsectvamyrkyi",
+     "handle": "mmitchell.bsky.social",
+     "displayName": "Margaret Mitchell",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-28T17:01:54.532Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mrtee43vsh2p",
+        "isValid": true,
+        "createdAt": "2026-07-30T02:10:40.187Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:3tmaleaxipegsectvamyrkyi/app.bsky.feed.repost/3n2q2iqfi7a2i",
+    "cid": "bafyreiauyu4kyramkzlphjxmlj3rq5oow7pafdlsf7ueip6mhckuito75y",
+    "indexedAt": "2026-11-20T07:23:04.145Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 9
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:zbpdmlnpf2dxmjqzn7awfqe4/app.bsky.feed.post/3n2meh7bx6c2g",
+    "cid": "bafyreidwvjq4u3wkrzsfawp4xhvv5eyrlmoy6tl6awmbfye3u2pnoarfim",
+    "author": {
+     "did": "did:plc:zbpdmlnpf2dxmjqzn7awfqe4",
+     "handle": "notredale.bsky.social",
+     "displayName": "DGM",
+     "pronouns": "he/him",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-07-15T20:55:05.675Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-18T20:10:30.946Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "I've actually met the person at Anthropic whose job it is to model welfare, to look after Claude's interests. I should say you're rolling your eyes now.\nThere's nothing that's good or bad for it in the sense that something can be good or bad for a cockroach— there's no mental life there in the ordinary sense. It's not a mind. It's not somebody that we have to care about. It's a machine. Here are some of the smartest people on the planet being completely idiotic. Well, intelligence is not completely transferable, I guess.",
+        "aspectRatio": {
+         "height": 1174,
+         "width": 1206
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreidunvdmouch372igofzwhfjm3gsbdommvt43n63t42xkl73chkjmu"
+         },
+         "mimeType": "image/jpeg",
+         "size": 1194550
+        }
+       }
+      ]
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "he mad"
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:zbpdmlnpf2dxmjqzn7awfqe4/bafkreidunvdmouch372igofzwhfjm3gsbdommvt43n63t42xkl73chkjmu",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:zbpdmlnpf2dxmjqzn7awfqe4/bafkreidunvdmouch372igofzwhfjm3gsbdommvt43n63t42xkl73chkjmu",
+       "alt": "I've actually met the person at Anthropic whose job it is to model welfare, to look after Claude's interests. I should say you're rolling your eyes now.\nThere's nothing that's good or bad for it in the sense that something can be good or bad for a cockroach— there's no mental life there in the ordinary sense. It's not a mind. It's not somebody that we have to care about. It's a machine. Here are some of the smartest people on the planet being completely idiotic. Well, intelligence is not completely transferable, I guess.",
+       "aspectRatio": {
+        "height": 1174,
+        "width": 1206
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 5,
+    "replyCount": 0,
+    "repostCount": 26,
+    "likeCount": 178,
+    "quoteCount": 1,
+    "indexedAt": "2026-11-18T20:10:35.544Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:3tmaleaxipegsectvamyrkyi",
+     "handle": "mmitchell.bsky.social",
+     "displayName": "Margaret Mitchell",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-28T17:01:54.532Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mrtee43vsh2p",
+        "isValid": true,
+        "createdAt": "2026-07-30T02:10:40.187Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:3tmaleaxipegsectvamyrkyi/app.bsky.feed.repost/3n2mrutyho222",
+    "cid": "bafyreieavcvnmcvknamyz5wxd2ogg4eiotie3wjzdysonaf7eedbph6ry4",
+    "indexedAt": "2026-11-19T00:10:47.744Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:dvvvi2lfda3eq46zikkozitb/app.bsky.feed.post/3n2iwtfahd22l",
+    "cid": "bafyreidxztcuh64gielwfw3o4kwiiyqdgpuiyz64htuebaph2pa7bgu2ye",
+    "author": {
+     "did": "did:plc:dvvvi2lfda3eq46zikkozitb",
+     "handle": "rachelcoldicutt.bsky.social",
+     "displayName": "Rachel Coldicutt",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-09-29T18:56:06.938Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-17T11:28:48.245Z",
+     "langs": [
+      "en"
+     ],
+     "text": "Being completely open to machine-readability is antithetical to most workplace cultures, and I also suspect it leads to more confident and outspoken people being privileged in decision-making - anything that is too tentative to make the record, or too ambiguous to be understood, will get overlooked"
+    },
+    "bookmarkCount": 2,
+    "replyCount": 5,
+    "repostCount": 6,
+    "likeCount": 40,
+    "quoteCount": 1,
+    "indexedAt": "2026-11-17T11:28:48.950Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:3tmaleaxipegsectvamyrkyi",
+     "handle": "mmitchell.bsky.social",
+     "displayName": "Margaret Mitchell",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-28T17:01:54.532Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mrtee43vsh2p",
+        "isValid": true,
+        "createdAt": "2026-07-30T02:10:40.187Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:3tmaleaxipegsectvamyrkyi/app.bsky.feed.repost/3n2jj5fa2cd2p",
+    "cid": "bafyreicpk2fv6ygiptrgozhvxhpygxth6vsd2ac4zyi7kfprukcgy2wlnm",
+    "indexedAt": "2026-11-17T16:56:31.344Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   },
+   "opThreadPostIndex": 2,
+   "opThreadPostCount": 3
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:dvvvi2lfda3eq46zikkozitb/app.bsky.feed.post/3n2iwqgsj6c2l",
+    "cid": "bafyreigd242xzupqqbwpegvjewyxtdrjdjc6zkgwocs54ngpbzdnm6k4iu",
+    "author": {
+     "did": "did:plc:dvvvi2lfda3eq46zikkozitb",
+     "handle": "rachelcoldicutt.bsky.social",
+     "displayName": "Rachel Coldicutt",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-09-29T18:56:06.938Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-17T11:27:09.218Z",
+     "embed": {
+      "$type": "app.bsky.embed.record",
+      "record": {
+       "cid": "bafyreihjmvkj76br3ugtdj64m55abwyn3qn32vcqoflmtmz7nuwlkcopgq",
+       "uri": "at://did:plc:dh2u4moxrna3sl2w57ro72n5/app.bsky.feed.post/3n2iw7ribzs2k"
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "This is fascinating. On the work we've done on the impacts of voice transcription, lots of ppl note it can have a chilling effect on workplace relationships (no one wants their start-of-meeting anecdotes logged) and also what they are willing to say \"on the record\", plus lots of implications for HR"
+    },
+    "embed": {
+     "record": {
+      "uri": "at://did:plc:dh2u4moxrna3sl2w57ro72n5/app.bsky.feed.post/3n2iw7ribzs2k",
+      "cid": "bafyreihjmvkj76br3ugtdj64m55abwyn3qn32vcqoflmtmz7nuwlkcopgq",
+      "author": {
+       "did": "did:plc:dh2u4moxrna3sl2w57ro72n5",
+       "handle": "sarahoconnorft.ft.com",
+       "displayName": "Sarah O'Connor",
+       "associated": {
+        "chat": {
+         "allowIncoming": "following"
+        },
+        "activitySubscription": {
+         "allowSubscriptions": "followers"
+        }
+       },
+       "createdAt": "2023-10-13T09:57:47.731Z",
+       "verification": {
+        "verifications": [
+         {
+          "issuer": "did:plc:5u54z2qgkq43dh2nzwzdbbhb",
+          "issuerDisplayName": "Financial Times",
+          "issuerHandle": "financialtimes.com",
+          "uri": "at://did:plc:5u54z2qgkq43dh2nzwzdbbhb/app.bsky.graph.verification/3lptvonzvat2j",
+          "isValid": true,
+          "createdAt": "2025-05-23T15:04:13.010Z"
+         }
+        ],
+        "verifiedStatus": "valid",
+        "trustedVerifierStatus": "none"
+       }
+      },
+      "value": {
+       "$type": "app.bsky.feed.post",
+       "createdAt": "2026-11-17T11:17:49.989Z",
+       "embed": {
+        "$type": "app.bsky.embed.images",
+        "images": [
+         {
+          "alt": "",
+          "aspectRatio": {
+           "height": 547,
+           "width": 984
+          },
+          "image": {
+           "$type": "blob",
+           "ref": {
+            "$link": "bafkreibbx5w5asvlblna4l67owi7uycmo7vwx42isn3axaymlt27v53xla"
+           },
+           "mimeType": "image/jpeg",
+           "size": 509324
+          }
+         }
+        ]
+       },
+       "facets": [
+        {
+         "features": [
+          {
+           "$type": "app.bsky.richtext.facet#link",
+           "uri": "https://www.ft.com/content/9df59321-a7a0-4ed7-b02f-60cfc5fdcb2e?syn-25a6b1a6=1"
+          }
+         ],
+         "index": {
+          "byteEnd": 295,
+          "byteStart": 269
+         }
+        }
+       ],
+       "langs": [
+        "en"
+       ],
+       "text": "It's worth paying attention not just to what AI can & can't do, but also how companies change the nature of human work in order to make AI more effective. At Anthropic, everyone's work & meetings have to be machine-readable, so that AI agents can see what's happening. www.ft.com/content/9df5..."
+      },
+      "likeCount": 164,
+      "replyCount": 28,
+      "repostCount": 85,
+      "quoteCount": 16,
+      "opThreadPostIndex": 1,
+      "opThreadPostCount": 3,
+      "indexedAt": "2026-11-17T11:17:54.246Z",
+      "embeds": [
+       {
+        "images": [
+         {
+          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:dh2u4moxrna3sl2w57ro72n5/bafkreibbx5w5asvlblna4l67owi7uycmo7vwx42isn3axaymlt27v53xla",
+          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:dh2u4moxrna3sl2w57ro72n5/bafkreibbx5w5asvlblna4l67owi7uycmo7vwx42isn3axaymlt27v53xla",
+          "alt": "",
+          "aspectRatio": {
+           "height": 547,
+           "width": 984
+          }
+         }
+        ],
+        "$type": "app.bsky.embed.images#view"
+       }
+      ],
+      "$type": "app.bsky.embed.record#viewRecord"
+     },
+     "$type": "app.bsky.embed.record#view"
+    },
+    "bookmarkCount": 14,
+    "replyCount": 6,
+    "repostCount": 28,
+    "likeCount": 76,
+    "quoteCount": 3,
+    "indexedAt": "2026-11-17T11:27:09.841Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:3tmaleaxipegsectvamyrkyi",
+     "handle": "mmitchell.bsky.social",
+     "displayName": "Margaret Mitchell",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-28T17:01:54.532Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mrtee43vsh2p",
+        "isValid": true,
+        "createdAt": "2026-07-30T02:10:40.187Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:3tmaleaxipegsectvamyrkyi/app.bsky.feed.repost/3n2jj54vfqf2f",
+    "cid": "bafyreibilsbfqya3jhdcjti6cvtffwwdfi23ihcggdac3gl7gcqaeji2ue",
+    "indexedAt": "2026-11-17T16:56:22.451Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 3
+  }
+ ],
+ "cursor": "2026-07-29T17:34:27.463Z"
+}

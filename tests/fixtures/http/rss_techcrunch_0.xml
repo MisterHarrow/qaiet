@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>AI News &amp; Artificial Intelligence | TechCrunch</title>
+	<atom:link href="https://techcrunch.com/category/artificial-intelligence/feed/" rel="self" type="application/rss+xml" />
+	<link>https://techcrunch.com/category/artificial-intelligence/</link>
+	<description>Startup and Technology News</description>
+	<lastBuildDate>Mon, 23 Nov 2026 22:41:15 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.9.12</generator>
+
+<image>
+	<url>https://techcrunch.com/wp-content/uploads/2015/02/cropped-cropped-favicon-gradient.png?w=32</url>
+	<title>AI News &amp; Artificial Intelligence | TechCrunch</title>
+	<link>https://techcrunch.com/category/artificial-intelligence/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Anthropic launches Claude Ship, letting AI agents review, fix, and approve code changes</title>
+		<link>https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/</link>
+		
+		<dc:creator><![CDATA[Sarah Perez]]></dc:creator>
+		<pubDate>Mon, 23 Nov 2026 22:05:50 +0000</pubDate>
+				<category><![CDATA[AI]]></category>
+		<category><![CDATA[Anthropic]]></category>
+		<category><![CDATA[Claude]]></category>
+		<category><![CDATA[code]]></category>
+		<category><![CDATA[coding]]></category>
+		<guid isPermaLink="false">https://techcrunch.com/?p=3191583</guid>
+
+					<description><![CDATA[As AI-generated code piles up, Anthropic's new developer tools aim to eliminate another bottleneck by letting agents handle routine approvals.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Supertake raises $20M to let AI agents turn your market predictions into stock portfolios</title>
+		<link>https://techcrunch.com/2026/11/23/supertake-raises-20m-to-let-ai-agents-turn-your-market-predictions-into-stock-portfolios/</link>
+		
+		<dc:creator><![CDATA[Sarah Perez]]></dc:creator>
+		<pubDate>Mon, 23 Nov 2026 22:02:05 +0000</pubDate>
+				<category><![CDATA[AI]]></category>
+		<category><![CDATA[Fintech]]></category>
+		<category><![CDATA[Fundraising]]></category>
+		<category><![CDATA[Startups]]></category>
+		<category><![CDATA[AI agents]]></category>
+		<category><![CDATA[investing]]></category>
+		<guid isPermaLink="false">https://techcrunch.com/?p=3191460</guid>
+
+					<description><![CDATA[Think you know where the market is headed? A startup called Supertake lets you put money behind your ideas without having to pick the stocks yourself.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Elon Musk and others rejoice as Jensen Huang is reinstated at Nvidia amid scandal</title>
+		<link>https://techcrunch.com/2026/11/23/elon-musk-and-others-rejoice-as-jensen-huang-is-reinstated-at-nvidia-amid-scandal/</link>
+		
+		<dc:creator><![CDATA[Amanda Silberling]]></dc:creator>
+		<pubDate>Mon, 23 Nov 2026 21:47:41 +0000</pubDate>
+				<category><![CDATA[AI]]></category>
+		<category><![CDATA[Jensen Huang]]></category>
+		<category><![CDATA[nvidia]]></category>
+		<guid isPermaLink="false">https://techcrunch.com/?p=3191575</guid>
+
+					<description><![CDATA["The mistake has been corrected," Elon Musk chimed in.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Megaspeed, the company at the center of the Jensen Huang scandal, appears headed for a US blacklist</title>
+		<link>https://techcrunch.com/2026/11/23/megaspeed-the-company-at-the-center-of-the-jensen-huang-scandal-appears-headed-for-a-u-s-blacklist/</link>
+		
+		<dc:creator><![CDATA[Lucas Ropek]]></dc:creator>
+		<pubDate>Mon, 23 Nov 2026 21:25:42 +0000</pubDate>
+				<category><![CDATA[AI]]></category>
+		<category><![CDATA[Donald Trump]]></category>
+		<category><![CDATA[In Brief]]></category>
+		<category><![CDATA[Jensen Huang]]></category>
+		<category><![CDATA[nvidia]]></category>
+		<guid isPermaLink="false">https://techcrunch.com/?p=3191574</guid>
+
+					<description><![CDATA[Megaspeed, which was previously led by Alice Huang, would be barred from doing business with U.S. companies unless those companies attained a special license from the federal government. ]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Nvidia employees greet Jensen Huang like a hero as he returns to company&#8217;s HQ</title>
+		<link>https://techcrunch.com/2026/11/23/nvidia-employees-greet-jensen-huang-like-a-hero-as-he-returns-to-companys-hq/</link>
+		
+		<dc:creator><![CDATA[Amanda Silberling]]></dc:creator>
+		<pubDate>Mon, 23 Nov 2026 20:38:53 +0000</pubDate>
+				<category><![CDATA[AI]]></category>
+		<category><![CDATA[In Brief]]></category>
+		<category><![CDATA[Jensen Huang]]></category>
+		<category><![CDATA[nvidia]]></category>
+		<guid isPermaLink="false">https://techcrunch.com/?p=3191548</guid>
+
+					<description><![CDATA["I'm going to be a better CEO the second time around," Huang told employees.]]></description>
+		
+		
+		
+			</item>
+	</channel>
+</rss>

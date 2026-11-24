@@ -1,0 +1,661 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:putoh2nr457642oxhqyrpngz/app.bsky.feed.post/3n25a5uwjg22t",
+    "cid": "bafyreihoxp3j22ddk7bsclzixja4upfh3xvytjjbsyihs2bchh5ujp5fg4",
+    "author": {
+     "did": "did:plc:putoh2nr457642oxhqyrpngz",
+     "handle": "thegraduatecenter.bsky.social",
+     "displayName": "CUNY Graduate Center",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-01-03T19:47:33.329Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-12T19:43:47.048Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "Two seated people onstage, taking a question from the audience.",
+        "aspectRatio": {
+         "height": 1350,
+         "width": 1080
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreicwwq6d5strk6rr5aykjqoixlzl77oxwhv2fqiltyw2nguv7zwx2m"
+         },
+         "mimeType": "image/jpeg",
+         "size": 1205872
+        }
+       },
+       {
+        "alt": "Woman with microphone gesturing ",
+        "aspectRatio": {
+         "height": 1350,
+         "width": 1080
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreieadmvplp4gx6jqdcbqenn2bja4s3ufy6624aimisrt6liekyzjaa"
+         },
+         "mimeType": "image/jpeg",
+         "size": 1141300
+        }
+       },
+       {
+        "alt": "Seated man speaking into microphone and smiling ",
+        "aspectRatio": {
+         "height": 1350,
+         "width": 1080
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreiezyfcltwcaxlffghit7ne2ugscdvaiprdiov5gge6usgmpu2rh6i"
+         },
+         "mimeType": "image/jpeg",
+         "size": 1130718
+        }
+       },
+       {
+        "alt": "Three people posing for a photo backstage ",
+        "aspectRatio": {
+         "height": 1350,
+         "width": 1080
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreia3eguhzz2dkngtdzd3omjvznbfe4qk7sap326s5k32nzc7laft3q"
+         },
+         "mimeType": "image/jpeg",
+         "size": 1127990
+        }
+       }
+      ]
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:vl7iw2awdpm72srjve3f4fj2"
+        }
+       ],
+       "index": {
+        "byteEnd": 90,
+        "byteStart": 69
+       }
+      },
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:wpj5z24vsmik5ocqjybwjpso"
+        }
+       ],
+       "index": {
+        "byteEnd": 163,
+        "byteStart": 138
+       }
+      },
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:2wihyfaunsxochkyvqzal45x"
+        }
+       ],
+       "index": {
+        "byteEnd": 283,
+        "byteStart": 261
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "Thanks for a timely & engaging conversation! Nobel-winning economist @pkrugman.bsky.social (CUNY Graduate Center) & influential historian @hcrichardson.bsky.social (Boston College) explored American politics in the wake of the midterm elections. Presented with @stone-lis.bsky.social. Video soon!"
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:putoh2nr457642oxhqyrpngz/bafkreicwwq6d5strk6rr5aykjqoixlzl77oxwhv2fqiltyw2nguv7zwx2m",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:putoh2nr457642oxhqyrpngz/bafkreicwwq6d5strk6rr5aykjqoixlzl77oxwhv2fqiltyw2nguv7zwx2m",
+       "alt": "Two seated people onstage, taking a question from the audience.",
+       "aspectRatio": {
+        "height": 1350,
+        "width": 1080
+       }
+      },
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:putoh2nr457642oxhqyrpngz/bafkreieadmvplp4gx6jqdcbqenn2bja4s3ufy6624aimisrt6liekyzjaa",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:putoh2nr457642oxhqyrpngz/bafkreieadmvplp4gx6jqdcbqenn2bja4s3ufy6624aimisrt6liekyzjaa",
+       "alt": "Woman with microphone gesturing ",
+       "aspectRatio": {
+        "height": 1350,
+        "width": 1080
+       }
+      },
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:putoh2nr457642oxhqyrpngz/bafkreiezyfcltwcaxlffghit7ne2ugscdvaiprdiov5gge6usgmpu2rh6i",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:putoh2nr457642oxhqyrpngz/bafkreiezyfcltwcaxlffghit7ne2ugscdvaiprdiov5gge6usgmpu2rh6i",
+       "alt": "Seated man speaking into microphone and smiling ",
+       "aspectRatio": {
+        "height": 1350,
+        "width": 1080
+       }
+      },
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:putoh2nr457642oxhqyrpngz/bafkreia3eguhzz2dkngtdzd3omjvznbfe4qk7sap326s5k32nzc7laft3q",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:putoh2nr457642oxhqyrpngz/bafkreia3eguhzz2dkngtdzd3omjvznbfe4qk7sap326s5k32nzc7laft3q",
+       "alt": "Three people posing for a photo backstage ",
+       "aspectRatio": {
+        "height": 1350,
+        "width": 1080
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 4,
+    "replyCount": 2,
+    "repostCount": 21,
+    "likeCount": 120,
+    "quoteCount": 1,
+    "indexedAt": "2026-11-12T19:43:58.872Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:vl7iw2awdpm72srjve3f4fj2",
+     "handle": "pkrugman.bsky.social",
+     "displayName": "Paul Krugman",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-06-14T04:33:07.055Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3m4tid4pqlg2r",
+        "isValid": true,
+        "createdAt": "2025-11-04T21:32:38.065Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:vl7iw2awdpm72srjve3f4fj2/app.bsky.feed.repost/3n25akn2qax2g",
+    "cid": "bafyreibk6v23lqckzfn3gxkt6rrk2kqrpqfjwvl4x3karsvfmjmtqhj6oi",
+    "indexedAt": "2026-11-12T19:50:55.176Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 2
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:2wihyfaunsxochkyvqzal45x/app.bsky.feed.post/3mya7jnzhbs2z",
+    "cid": "bafyreido3ayfwvyzmf3q7ejijkyxmpol2g4a6hvsb7vrqfw7kdj52l2m2y",
+    "author": {
+     "did": "did:plc:2wihyfaunsxochkyvqzal45x",
+     "handle": "stone-lis.bsky.social",
+     "displayName": "Stone Center on Socio-Economic Inequality",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-11-06T18:44:24.258Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-10-19T13:20:04.684Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "The Stone Center on Socio-Economic Inequality is seeking applicants for a ninth cohort of postdoctoral scholars. These full-time, two-year positions will begin in August 2026.",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreideebe3urrpu37evpoooiukw26bhc57eguurywzzgp4rvrjzvluru"
+        },
+        "mimeType": "image/jpeg",
+        "size": 216303
+       },
+       "title": "Applications Are Open for Two Postdoctoral Positions at the GC CUNY Stone Center - Stone Center on Socio-Economic Inequality",
+       "uri": "https://stonecenter.gc.cuny.edu/applications-are-open-for-two-postdoctoral-positions-at-the-gc-cuny-stone-center-2027/"
+      }
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:putoh2nr457642oxhqyrpngz"
+        }
+       ],
+       "index": {
+        "byteEnd": 194,
+        "byteStart": 164
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "Apply by Nov. 2 - two weeks from today! Applications are open for our postdoctoral scholars program. These 2-year positions start in Aug. 2027 and are based at the @thegraduatecenter.bsky.social Stone Center in NYC. One is focused on wealth inequality, the other more broadly on economic inequality."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://stonecenter.gc.cuny.edu/applications-are-open-for-two-postdoctoral-positions-at-the-gc-cuny-stone-center-2027/",
+      "title": "Applications Are Open for Two Postdoctoral Positions at the GC CUNY Stone Center - Stone Center on Socio-Economic Inequality",
+      "description": "The Stone Center on Socio-Economic Inequality is seeking applicants for a ninth cohort of postdoctoral scholars. These full-time, two-year positions will begin in August 2026.",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:2wihyfaunsxochkyvqzal45x/bafkreideebe3urrpu37evpoooiukw26bhc57eguurywzzgp4rvrjzvluru"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 2,
+    "replyCount": 0,
+    "repostCount": 22,
+    "likeCount": 44,
+    "quoteCount": 1,
+    "indexedAt": "2026-10-19T13:20:05.261Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:vl7iw2awdpm72srjve3f4fj2",
+     "handle": "pkrugman.bsky.social",
+     "displayName": "Paul Krugman",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-06-14T04:33:07.055Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3m4tid4pqlg2r",
+        "isValid": true,
+        "createdAt": "2025-11-04T21:32:38.065Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:vl7iw2awdpm72srjve3f4fj2/app.bsky.feed.repost/3myaugduxae2n",
+    "cid": "bafyreid5xruvwyijh4czanexg3ujeub6hogqaapclylia2gyjzs5yul2zq",
+    "indexedAt": "2026-10-19T19:34:06.260Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:2wihyfaunsxochkyvqzal45x/app.bsky.feed.post/3mwbniufwdc2p",
+    "cid": "bafyreigw2bu56dh5oybjyn226l2bpr45au6a3ple6c2ievhkckksgzjg44",
+    "author": {
+     "did": "did:plc:2wihyfaunsxochkyvqzal45x",
+     "handle": "stone-lis.bsky.social",
+     "displayName": "Stone Center on Socio-Economic Inequality",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-11-06T18:44:24.258Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-09-24T16:12:26.696Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "Paul Krugman gave this talk on economic size and economic power during the second day of the European Central Bank's annual research conference.",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreibbetmpoal3766pg357sfxn4utgqel4bo5g4wqd5kipx4lhv7yowu"
+        },
+        "mimeType": "image/jpeg",
+        "size": 470027
+       },
+       "title": "Economic Size and Economic Power - Stone Center on Socio-Economic Inequality",
+       "uri": "https://stonecenter.gc.cuny.edu/economic-size-and-economic-power/"
+      }
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:vl7iw2awdpm72srjve3f4fj2"
+        }
+       ],
+       "index": {
+        "byteEnd": 55,
+        "byteStart": 34
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "Watch Stone Center Senior Scholar @pkrugman.bsky.social discuss geoeconomics at last week's ECB Annual Research Conference. \"Once you start turning trade relations into a source of geopolitical power, you might find yourself starting to do other things in pursuit of geopolitical power.\""
+    },
+    "embed": {
+     "external": {
+      "uri": "https://stonecenter.gc.cuny.edu/economic-size-and-economic-power/",
+      "title": "Economic Size and Economic Power - Stone Center on Socio-Economic Inequality",
+      "description": "Paul Krugman gave this talk on economic size and economic power during the second day of the European Central Bank's annual research conference.",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:2wihyfaunsxochkyvqzal45x/bafkreibbetmpoal3766pg357sfxn4utgqel4bo5g4wqd5kipx4lhv7yowu"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 6,
+    "replyCount": 5,
+    "repostCount": 25,
+    "likeCount": 60,
+    "quoteCount": 2,
+    "indexedAt": "2026-09-24T16:12:28.170Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:vl7iw2awdpm72srjve3f4fj2",
+     "handle": "pkrugman.bsky.social",
+     "displayName": "Paul Krugman",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-06-14T04:33:07.055Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3m4tid4pqlg2r",
+        "isValid": true,
+        "createdAt": "2025-11-04T21:32:38.065Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:vl7iw2awdpm72srjve3f4fj2/app.bsky.feed.repost/3mwbnra4gjl27",
+    "cid": "bafyreid2cf2s4rod5p4o4jhjprwlkmxi475elg624logzwvoybarhh77ry",
+    "indexedAt": "2026-09-24T16:17:07.569Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:2amnkge5a6hplfwyesmxqkfl/app.bsky.feed.post/3mtvscweqjk2f",
+    "cid": "bafyreifyjm22z4hgjmy4hzbyjqshoc2sbg25ovrdhuiu3v4ttylyygbsmy",
+    "author": {
+     "did": "did:plc:2amnkge5a6hplfwyesmxqkfl",
+     "handle": "gregsargent.bsky.social",
+     "displayName": "Greg Sargent",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-26T13:57:47.900Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3m63lfry3ja24",
+        "isValid": true,
+        "createdAt": "2025-11-20T20:14:18.191Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-08-25T12:16:16.023Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "As Trump’s tariff scams get worse, economist Paul Krugman explains how he just exposed new levels of disdain for his own supporters—and why MAGA economics is failing so spectacularly.",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreig5pprzjiwri7r2qz7ctkemnso33yesh4yhcphtdvxdp4pucujuje"
+        },
+        "mimeType": "image/jpeg",
+        "size": 224701
+       },
+       "title": "Krugman: Trump Just Revealed Extraordinary Contempt for MAGA Voters",
+       "uri": "https://newrepublic.com/article/214677/krugman-trump-just-revealed-extraordinary-contempt-maga-voters"
+      }
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:vl7iw2awdpm72srjve3f4fj2"
+        }
+       ],
+       "index": {
+        "byteEnd": 71,
+        "byteStart": 50
+       }
+      },
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://newrepublic.com/article/214677/krugman-trump-just-revealed-extraordinary-contempt-maga-voters"
+        }
+       ],
+       "index": {
+        "byteEnd": 274,
+        "byteStart": 243
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "We discussed all this on our podcast as well, and @pkrugman.bsky.social is just brilliant all throughout:\n\n\"Trump is going to lose this trade war...Mark Carney has a 60% approval rating and 30% disapproval. It’s Trump upside down.\"\n\nListen:\nnewrepublic.com/article/2146..."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://newrepublic.com/article/214677/krugman-trump-just-revealed-extraordinary-contempt-maga-voters",
+      "title": "Krugman: Trump Just Revealed Extraordinary Contempt for MAGA Voters",
+      "description": "As Trump’s tariff scams get worse, economist Paul Krugman explains how he just exposed new levels of disdain for his own supporters—and why MAGA economics is failing so spectacularly.",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:2amnkge5a6hplfwyesmxqkfl/bafkreig5pprzjiwri7r2qz7ctkemnso33yesh4yhcphtdvxdp4pucujuje"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 36,
+    "replyCount": 15,
+    "repostCount": 182,
+    "likeCount": 868,
+    "quoteCount": 15,
+    "indexedAt": "2026-08-25T12:16:15.368Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:vl7iw2awdpm72srjve3f4fj2",
+     "handle": "pkrugman.bsky.social",
+     "displayName": "Paul Krugman",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-06-14T04:33:07.055Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3m4tid4pqlg2r",
+        "isValid": true,
+        "createdAt": "2025-11-04T21:32:38.065Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:vl7iw2awdpm72srjve3f4fj2/app.bsky.feed.repost/3mtvtsxmcb22a",
+    "cid": "bafyreiawrutw5srovokzm4jnon3vyca2h57554dxfpxwavzztzvovekv64",
+    "indexedAt": "2026-08-25T12:43:08.267Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   },
+   "opThreadPostIndex": 6,
+   "opThreadPostCount": 6
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:vl7iw2awdpm72srjve3f4fj2/app.bsky.feed.post/3mtmw5ee4kc2i",
+    "cid": "bafyreid5rlmqzwx5ff67dcsrhk3hddeabrql3reujiyb3ymiv3kwdesdte",
+    "author": {
+     "did": "did:plc:vl7iw2awdpm72srjve3f4fj2",
+     "handle": "pkrugman.bsky.social",
+     "displayName": "Paul Krugman",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-06-14T04:33:07.055Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3m4tid4pqlg2r",
+        "isValid": true,
+        "createdAt": "2025-11-04T21:32:38.065Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-08-21T23:30:46.670Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "I am reporting for duty",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreicocvmiufzno3oj5w2jx2mo25l54ce3ulpvn5526u4oyyilwvnmbm"
+        },
+        "mimeType": "image/jpeg",
+        "size": 334323
+       },
+       "title": "Defending the Bonds",
+       "uri": "https://paulkrugman.substack.com/p/defending-the-bonds?r=fysdp&utm_medium=ios"
+      }
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://paulkrugman.substack.com/p/defending-the-bonds?r=fysdp&utm_medium=ios"
+        }
+       ],
+       "index": {
+        "byteEnd": 40,
+        "byteStart": 0
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "paulkrugman.substack.com/p/defending-..."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://paulkrugman.substack.com/p/defending-the-bonds?r=fysdp&utm_medium=ios",
+      "title": "Defending the Bonds",
+      "description": "I am reporting for duty",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:vl7iw2awdpm72srjve3f4fj2/bafkreicocvmiufzno3oj5w2jx2mo25l54ce3ulpvn5526u4oyyilwvnmbm"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 37,
+    "replyCount": 42,
+    "repostCount": 107,
+    "likeCount": 502,
+    "quoteCount": 22,
+    "indexedAt": "2026-08-21T23:30:48.068Z"
+   }
+  }
+ ],
+ "cursor": "2026-03-01T13:02:32.602Z"
+}

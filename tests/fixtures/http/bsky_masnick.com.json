@@ -1,0 +1,532 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:e6n7jxtu2qrhwvp3j6ib6sq6/app.bsky.feed.post/3n2ze2jdg4k2y",
+    "cid": "bafyreids6t23fpu5ag3pmvswppk63to7rjkayxgjkdvlax5bl3ddrfj4ia",
+    "author": {
+     "did": "did:plc:e6n7jxtu2qrhwvp3j6ib6sq6",
+     "handle": "proptermalone.bsky.social",
+     "displayName": "post malone ergo propter malone",
+     "pronouns": "he/him",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-27T15:26:00.264Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-24T00:08:01.875Z",
+     "langs": [
+      "en"
+     ],
+     "text": "so if you're a nvidia employee with an undisclosed affair with Huang do you still have to keep fucking him or no"
+    },
+    "bookmarkCount": 8,
+    "replyCount": 36,
+    "repostCount": 81,
+    "likeCount": 838,
+    "quoteCount": 4,
+    "indexedAt": "2026-11-24T00:08:02.450Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:cak4klqoj3bqgk5rj6b4f5do",
+     "handle": "masnick.com",
+     "displayName": "Mike Masnick",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following",
+       "allowGroupInvites": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      },
+      "germ": {
+       "showButtonTo": "usersIFollow",
+       "messageMeUrl": "https://landing.ger.mx/newUser"
+      }
+     },
+     "createdAt": "2023-03-27T23:27:35.019Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mdqydirplt2k",
+        "isValid": true,
+        "createdAt": "2026-01-31T23:37:32.707Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:cak4klqoj3bqgk5rj6b4f5do/app.bsky.feed.repost/3n2zx27pfjt2v",
+    "cid": "bafyreics5odefeq5rekw4ftpmampdbua4qihsi5qpncbqeuiive3kzggtm",
+    "indexedAt": "2026-11-24T05:47:53.042Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 3
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:cak4klqoj3bqgk5rj6b4f5do/app.bsky.feed.post/3n2zwzamg622z",
+    "cid": "bafyreifxxsxcbsyeqiwueqgqs76caca4rsgomes6qglymlr2kiunjlg4be",
+    "author": {
+     "did": "did:plc:cak4klqoj3bqgk5rj6b4f5do",
+     "handle": "masnick.com",
+     "displayName": "Mike Masnick",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following",
+       "allowGroupInvites": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      },
+      "germ": {
+       "showButtonTo": "usersIFollow",
+       "messageMeUrl": "https://landing.ger.mx/newUser"
+      }
+     },
+     "createdAt": "2023-03-27T23:27:35.019Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mdqydirplt2k",
+        "isValid": true,
+        "createdAt": "2026-01-31T23:37:32.707Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-24T05:47:20.272Z",
+     "embed": {
+      "$type": "app.bsky.embed.record",
+      "record": {
+       "cid": "bafyreiaawdomlrrq2tllyltysl735ioig7c2pmfpv2t77kkoxufgz2zdcq",
+       "uri": "at://did:plc:gkgmduxh722ocstroyi75gbg/app.bsky.feed.post/3n2zkuxqtlz2y"
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "Or writing an op-ed critical of the Israeli government."
+    },
+    "embed": {
+     "record": {
+      "uri": "at://did:plc:gkgmduxh722ocstroyi75gbg/app.bsky.feed.post/3n2zkuxqtlz2y",
+      "cid": "bafyreiaawdomlrrq2tllyltysl735ioig7c2pmfpv2t77kkoxufgz2zdcq",
+      "author": {
+       "did": "did:plc:gkgmduxh722ocstroyi75gbg",
+       "handle": "mjfree.bsky.social",
+       "displayName": "Morgan J Freeman",
+       "associated": {
+        "activitySubscription": {
+         "allowSubscriptions": "followers"
+        }
+       },
+       "createdAt": "2024-11-09T03:00:34.077Z",
+       "verification": {
+        "verifications": [
+         {
+          "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+          "issuerDisplayName": "Bluesky",
+          "issuerHandle": "bsky.app",
+          "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3movzijwdev2m",
+          "isValid": true,
+          "createdAt": "2026-06-22T23:18:42.074Z"
+         }
+        ],
+        "verifiedStatus": "valid",
+        "trustedVerifierStatus": "none"
+       }
+      },
+      "value": {
+       "$type": "app.bsky.feed.post",
+       "createdAt": "2026-11-24T02:10:11.849Z",
+       "text": "Thank God Jensen Huang only committed treason & fraud — not something truly heinous like overstaying a travel visa."
+      },
+      "likeCount": 3289,
+      "replyCount": 41,
+      "repostCount": 837,
+      "quoteCount": 21,
+      "indexedAt": "2026-11-24T02:10:12.142Z",
+      "embeds": [],
+      "$type": "app.bsky.embed.record#viewRecord"
+     },
+     "$type": "app.bsky.embed.record#view"
+    },
+    "bookmarkCount": 8,
+    "replyCount": 2,
+    "repostCount": 51,
+    "likeCount": 298,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-24T05:47:20.649Z",
+    "threadgate": {
+     "uri": "at://did:plc:cak4klqoj3bqgk5rj6b4f5do/app.bsky.feed.threadgate/3n2zwzamg622z",
+     "cid": "bafyreig7cul4wgars3jcv34oahkuudqlrd35gmy7zgvx3dhfpxmx7n2hea",
+     "record": {
+      "$type": "app.bsky.feed.threadgate",
+      "allow": [
+       {
+        "$type": "app.bsky.feed.threadgate#mentionRule"
+       },
+       {
+        "$type": "app.bsky.feed.threadgate#followingRule"
+       },
+       {
+        "$type": "app.bsky.feed.threadgate#followerRule"
+       }
+      ],
+      "createdAt": "2026-11-24T05:47:20.277Z",
+      "hiddenReplies": [],
+      "post": "at://did:plc:cak4klqoj3bqgk5rj6b4f5do/app.bsky.feed.post/3n2zwzamg622z"
+     },
+     "lists": []
+    }
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:a5fwvpvub5e7mxaebuxn3tuu/app.bsky.feed.post/3n2zoa43qo22a",
+    "cid": "bafyreiequcaoapbtxau4s64pj7v7k6dd5kxea3u6ltqnssoei4m7evbl4a",
+    "author": {
+     "did": "did:plc:a5fwvpvub5e7mxaebuxn3tuu",
+     "handle": "froomkin.bsky.social",
+     "displayName": "Dan Froomkin/Press Watch",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-07-06T17:39:26.320Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3n2rfgij5e72f",
+        "isValid": true,
+        "createdAt": "2026-11-20T20:11:19.298Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-24T03:10:06.725Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "Home page headline\nANALYSIS\nJensen Huang's Return Shows the Lengths Trump Will Go to Keep A.I.\nBooming\nPresident Trump intervened on behalf of the returning Nvidia chief in a bid to boost a key company driving the stock market.",
+        "aspectRatio": {
+         "height": 1045,
+         "width": 1170
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreihiptzzlnff7lgygclvppdfw43umppc2rptjmbskbudb5mcidk4pa"
+         },
+         "mimeType": "image/jpeg",
+         "size": 572018
+        }
+       }
+      ]
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "THAT’S what the NYT thinks this all about???"
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:a5fwvpvub5e7mxaebuxn3tuu/bafkreihiptzzlnff7lgygclvppdfw43umppc2rptjmbskbudb5mcidk4pa",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:a5fwvpvub5e7mxaebuxn3tuu/bafkreihiptzzlnff7lgygclvppdfw43umppc2rptjmbskbudb5mcidk4pa",
+       "alt": "Home page headline\nANALYSIS\nJensen Huang's Return Shows the Lengths Trump Will Go to Keep A.I.\nBooming\nPresident Trump intervened on behalf of the returning Nvidia chief in a bid to boost a key company driving the stock market.",
+       "aspectRatio": {
+        "height": 1045,
+        "width": 1170
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 9,
+    "replyCount": 29,
+    "repostCount": 80,
+    "likeCount": 561,
+    "quoteCount": 10,
+    "indexedAt": "2026-11-24T03:10:08.350Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:cak4klqoj3bqgk5rj6b4f5do",
+     "handle": "masnick.com",
+     "displayName": "Mike Masnick",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following",
+       "allowGroupInvites": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      },
+      "germ": {
+       "showButtonTo": "usersIFollow",
+       "messageMeUrl": "https://landing.ger.mx/newUser"
+      }
+     },
+     "createdAt": "2023-03-27T23:27:35.019Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mdqydirplt2k",
+        "isValid": true,
+        "createdAt": "2026-01-31T23:37:32.707Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:cak4klqoj3bqgk5rj6b4f5do/app.bsky.feed.repost/3n2zwy4p2yd27",
+    "cid": "bafyreieloe4acdurocgxjipftgeoirvcs5khmemo27hbv3ixp7r7lcycea",
+    "indexedAt": "2026-11-24T05:46:42.848Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:wbsyxxtht2fli5uvix6l55d4/app.bsky.feed.post/3n2znndv5dk2j",
+    "cid": "bafyreicroeswvbxycsmhwfrfgtuzykmytzii3qaqhol4yfvr4xmgi3b2du",
+    "author": {
+     "did": "did:plc:wbsyxxtht2fli5uvix6l55d4",
+     "handle": "prchovanec.bsky.social",
+     "displayName": "Patrick Chovanec",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-07-03T04:42:15.970Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-24T02:59:37.375Z",
+     "langs": [
+      "en"
+     ],
+     "text": "I never want to hear one more word from any of the AI bros who got Huang reinstated about how anyone opposing their data centers is letting China win."
+    },
+    "bookmarkCount": 10,
+    "replyCount": 10,
+    "repostCount": 202,
+    "likeCount": 1094,
+    "quoteCount": 3,
+    "indexedAt": "2026-11-24T02:59:37.644Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:cak4klqoj3bqgk5rj6b4f5do",
+     "handle": "masnick.com",
+     "displayName": "Mike Masnick",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following",
+       "allowGroupInvites": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      },
+      "germ": {
+       "showButtonTo": "usersIFollow",
+       "messageMeUrl": "https://landing.ger.mx/newUser"
+      }
+     },
+     "createdAt": "2023-03-27T23:27:35.019Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mdqydirplt2k",
+        "isValid": true,
+        "createdAt": "2026-01-31T23:37:32.707Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:cak4klqoj3bqgk5rj6b4f5do/app.bsky.feed.repost/3n2ztho5n4e2y",
+    "cid": "bafyreid2gyvciq4slbiqbzs33y5hdel5q2yqw4zw4uofq6euj73xbzilh4",
+    "indexedAt": "2026-11-24T04:43:49.346Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 2
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:nvfposmpmhegtyvhbs75s3pw/app.bsky.feed.post/3n2zoqm5pzc27",
+    "cid": "bafyreiceucefxonslfpb47aoyhx7iuerkwqdcp37juou7exxalj7z6bnwa",
+    "author": {
+     "did": "did:plc:nvfposmpmhegtyvhbs75s3pw",
+     "handle": "jamellebouie.net",
+     "displayName": "jamelle",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-27T16:31:46.732Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lndpuq3yfr24",
+        "isValid": true,
+        "createdAt": "2025-04-21T10:47:14.844Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-24T03:19:20.450Z",
+     "embed": {
+      "$type": "app.bsky.embed.video",
+      "aspectRatio": {
+       "height": 1024,
+       "width": 576
+      },
+      "presentation": "default",
+      "video": {
+       "$type": "blob",
+       "ref": {
+        "$link": "bafkreie65bdkh5v2eqkqr54wld4i3enja5o5jl7pobllnup4v3ttt5l65a"
+       },
+       "mimeType": "video/mp4",
+       "size": 59062983
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "big fan of the track star show and this one with queen latifah is so good! she is so insanely charismatic. (and like most thinking people my age i have had a crush on her since Living Single)"
+    },
+    "embed": {
+     "cid": "bafkreie65bdkh5v2eqkqr54wld4i3enja5o5jl7pobllnup4v3ttt5l65a",
+     "playlist": "https://video.bsky.app/watch/did%3Aplc%3Anvfposmpmhegtyvhbs75s3pw/bafkreie65bdkh5v2eqkqr54wld4i3enja5o5jl7pobllnup4v3ttt5l65a/playlist.m3u8",
+     "aspectRatio": {
+      "height": 1024,
+      "width": 576
+     },
+     "presentation": "default",
+     "$type": "app.bsky.embed.video#view"
+    },
+    "bookmarkCount": 181,
+    "replyCount": 61,
+    "repostCount": 173,
+    "likeCount": 1746,
+    "quoteCount": 24,
+    "indexedAt": "2026-11-24T03:19:23.841Z",
+    "threadgate": {
+     "uri": "at://did:plc:nvfposmpmhegtyvhbs75s3pw/app.bsky.feed.threadgate/3n2zoqm5pzc27",
+     "cid": "bafyreif42lvibgywxslzkot4ezyrx3mauzzuqhnenyvbvctxao4ugrxq54",
+     "record": {
+      "$type": "app.bsky.feed.threadgate",
+      "allow": [
+       {
+        "$type": "app.bsky.feed.threadgate#followerRule"
+       },
+       {
+        "$type": "app.bsky.feed.threadgate#followingRule"
+       }
+      ],
+      "createdAt": "2026-11-24T03:19:20.449Z",
+      "hiddenReplies": [],
+      "post": "at://did:plc:nvfposmpmhegtyvhbs75s3pw/app.bsky.feed.post/3n2zoqm5pzc27"
+     },
+     "lists": []
+    }
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:cak4klqoj3bqgk5rj6b4f5do",
+     "handle": "masnick.com",
+     "displayName": "Mike Masnick",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following",
+       "allowGroupInvites": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      },
+      "germ": {
+       "showButtonTo": "usersIFollow",
+       "messageMeUrl": "https://landing.ger.mx/newUser"
+      }
+     },
+     "createdAt": "2023-03-27T23:27:35.019Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mdqydirplt2k",
+        "isValid": true,
+        "createdAt": "2026-01-31T23:37:32.707Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:cak4klqoj3bqgk5rj6b4f5do/app.bsky.feed.repost/3n2zsvguoif27",
+    "cid": "bafyreiht647ibx7icjnbh3ddvi2x3ofg2wheddr27a4sw5ijx37gfwerne",
+    "indexedAt": "2026-11-24T04:33:37.845Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  }
+ ],
+ "cursor": "2026-11-24T00:04:19.621Z"
+}

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title type="text">heise online News</title><subtitle type="html"><![CDATA[Nachrichten nicht nur aus der Welt der Computer]]></subtitle>
+    <updated>2026-11-24T09:00:00+01:00</updated>
+    <id>https://www.heise.de/rss/heise-atom.xml</id>
+    <author>
+        <name>heise online</name><uri>https://www.heise.de</uri>
+    </author>
+    
+    <link rel="self" type="application/atom+xml" href="https://www.heise.de/rss/heise-atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://www.heise.de/"/>
+    <rights>Copyright (c) 2026 Heise Medien</rights>
+    
+    <entry>
+        <title type="html"><![CDATA[heise+ | Helfer im Browser: Praktische Bookmarklets mit KI programmieren]]></title>
+        <id>http://heise.de/-11517206</id>
+        <updated>2026-11-24T09:00:00+01:00</updated>
+        <published>2026-11-24T09:00:00+01:00</published>
+        <link href="https://www.heise.de/ratgeber/Helfer-im-Browser-Praktische-Bookmarklets-mit-KI-programmieren-11517206.html?wt_mc=rss.red.ho.ho.atom.beitrag_plus.beitrag_plus"/>
+        <author>
+            <name>Daniel Berger</name>
+        </author>
+        
+        <summary type="html"><![CDATA[Bookmarklets übernehmen im Browser praktische Dienste. Den JavaScript-Code dafür liefern KI-Chatbots in wenigen Sekunden.]]></summary>
+        
+    </entry>
+    
+    <entry>
+        <title type="html"><![CDATA[Tipp: Alternative zu eingestelltem Arc-Browser finden]]></title>
+        <id>http://heise.de/-11516643</id>
+        <updated>2026-11-24T09:00:00+01:00</updated>
+        <published>2026-11-24T09:00:00+01:00</published>
+        <link href="https://www.heise.de/ratgeber/Tipp-Alternative-zu-eingestelltem-Arc-Browser-finden-11516643.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag"/>
+        <author>
+            <name>Ben Schwan</name>
+        </author>
+        
+        <summary type="html"><![CDATA[Der besonders unter Mac-Nutzern beliebte Spezialbrowser Arc von der Browser Company sagt bald Tschüss. Was tun, wenn man eine ähnliche App haben will?]]></summary>
+        
+    </entry>
+    
+    <entry>
+        <title type="html"><![CDATA[Weniger Autos in Deutschland gestohlen]]></title>
+        <id>http://heise.de/-11535508</id>
+        <updated>2026-11-24T08:40:00+01:00</updated>
+        <published>2026-11-24T08:40:00+01:00</published>
+        <link href="https://www.heise.de/news/Weniger-Autos-in-Deutschland-gestohlen-11535508.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag"/>
+        <author>
+            <name>Martin Franz</name>
+        </author>
+        
+        <summary type="html"><![CDATA[Die Zahl der Pkw-Diebstähle ist im vergangenen Jahr gesunken. Warum die Hoffnungen auf sinkende Beiträge für die Kfz‑Versicherung dennoch vergeblich sind.]]></summary>
+        
+    </entry>
+    
+    <entry>
+        <title type="html"><![CDATA[Asynchrone Programmierung – Teil 5: Nebenläufigkeit effizient mit Rust und Tokio]]></title>
+        <id>http://heise.de/-11530471</id>
+        <updated>2026-11-24T08:38:00+01:00</updated>
+        <published>2026-11-24T08:38:00+01:00</published>
+        <link href="https://www.heise.de/hintergrund/Asynchrone-Programmierung-Teil-5-Nebenlaeufigkeit-effizient-mit-Rust-und-Tokio-11530471.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag"/>
+        <author>
+            <name>Martin Meeser</name>
+        </author>
+        
+        <summary type="html"><![CDATA[Rust bietet mit der Bibliothek Tokio sichere asynchrone Funktionen, die sich gegenüber anderen Sprachen durch schnelle Laufzeiten auszeichnet.]]></summary>
+        
+    </entry>
+    
+    <entry>
+        <title type="html"><![CDATA[„GTA 6“: Community will PC-Port selbst bauen]]></title>
+        <id>http://heise.de/-11535528</id>
+        <updated>2026-11-24T08:30:00+01:00</updated>
+        <published>2026-11-24T08:30:00+01:00</published>
+        <link href="https://www.heise.de/news/Nach-Exe-Leak-Modder-arbeiten-an-inoffizieller-PC-Version-von-GTA-6-11535528.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag"/>
+        <author>
+            <name>Daniel Herbig</name>
+        </author>
+        
+        <summary type="html"><![CDATA[Der Leaker Cyberleek hat die fehlende Exe zum Xbox-Build von „GTA 6“ veröffentlicht. Modder arbeiten an einer PC-Version, spielbar ist sie noch nicht.]]></summary>
+        
+    </entry>
+</feed>

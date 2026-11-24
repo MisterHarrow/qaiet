@@ -1,0 +1,307 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:mvxyjzxegieyly4ozxe5s6cj/app.bsky.feed.post/3n2zztrprvs2z",
+    "cid": "bafyreihconzzw5m7dejgjrzghj2e6bkukrjgcgnpzq2pjm4dkflaqruhry",
+    "author": {
+     "did": "did:plc:mvxyjzxegieyly4ozxe5s6cj",
+     "handle": "booch.com",
+     "displayName": "Grady Booch",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-23T23:08:19.492Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-24T06:37:58.106Z",
+     "langs": [
+      "en"
+     ],
+     "text": "Imagine I have a very powerful software-intensive oracle."
+    },
+    "bookmarkCount": 2,
+    "replyCount": 1,
+    "repostCount": 2,
+    "likeCount": 8,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-24T06:37:58.348Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 5
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:mvxyjzxegieyly4ozxe5s6cj/app.bsky.feed.post/3n2zghvyhrk2r",
+    "cid": "bafyreif5mtvderaypwqvnywfidvvrncuxoall7fd23lqwclbtqitsl222i",
+    "author": {
+     "did": "did:plc:mvxyjzxegieyly4ozxe5s6cj",
+     "handle": "booch.com",
+     "displayName": "Grady Booch",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-23T23:08:19.492Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-24T00:51:18.836Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "",
+        "aspectRatio": {
+         "height": 2048,
+         "width": 1536
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreihyhek5aq3wh7fnqhorwv6psorjubfhgcns2czv6ldvoq4sd7hjxm"
+         },
+         "mimeType": "image/jpeg",
+         "size": 1276608
+        }
+       }
+      ]
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "Current mood."
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:mvxyjzxegieyly4ozxe5s6cj/bafkreihyhek5aq3wh7fnqhorwv6psorjubfhgcns2czv6ldvoq4sd7hjxm",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:mvxyjzxegieyly4ozxe5s6cj/bafkreihyhek5aq3wh7fnqhorwv6psorjubfhgcns2czv6ldvoq4sd7hjxm",
+       "alt": "",
+       "aspectRatio": {
+        "height": 2048,
+        "width": 1536
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 42,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-24T00:51:21.148Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:mvxyjzxegieyly4ozxe5s6cj/app.bsky.feed.post/3n2zg6b36oc2p",
+    "cid": "bafyreiddvdyq3sn7crilmo4psu3splbzfwmmes73m6x7lv2cmbcvjmyh7m",
+    "author": {
+     "did": "did:plc:mvxyjzxegieyly4ozxe5s6cj",
+     "handle": "booch.com",
+     "displayName": "Grady Booch",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-23T23:08:19.492Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-24T00:45:54.915Z",
+     "langs": [
+      "en"
+     ],
+     "text": "A gentle reminder that - as Richard Feynman observed and as he lived his life - there is great pleasure in simply finding things out."
+    },
+    "bookmarkCount": 0,
+    "replyCount": 4,
+    "repostCount": 9,
+    "likeCount": 47,
+    "quoteCount": 1,
+    "indexedAt": "2026-11-24T00:45:55.341Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:mvxyjzxegieyly4ozxe5s6cj/app.bsky.feed.post/3n2zdi3ktbc2w",
+    "cid": "bafyreifcf3274eg7tzp4hiqfkjsnmuksuqplea4anp43temabn24izkxz4",
+    "author": {
+     "did": "did:plc:mvxyjzxegieyly4ozxe5s6cj",
+     "handle": "booch.com",
+     "displayName": "Grady Booch",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-23T23:08:19.492Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T23:57:43.458Z",
+     "langs": [
+      "en"
+     ],
+     "text": "This is absolutely the best time to be a corrupt and immoral billionaire."
+    },
+    "bookmarkCount": 0,
+    "replyCount": 6,
+    "repostCount": 8,
+    "likeCount": 68,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-23T23:57:43.653Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:mvxyjzxegieyly4ozxe5s6cj/app.bsky.feed.post/3n2zdcgedj22w",
+    "cid": "bafyreigwmt3tgm3atmbmtg77rxqp7hvj2ism6o4totlozg56677u6giig4",
+    "author": {
+     "did": "did:plc:mvxyjzxegieyly4ozxe5s6cj",
+     "handle": "booch.com",
+     "displayName": "Grady Booch",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-23T23:08:19.492Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T23:54:33.451Z",
+     "embed": {
+      "$type": "app.bsky.embed.record",
+      "record": {
+       "cid": "bafyreidxlwwwgiaadvnowsfplsynkrsax67jaxgikcvzidqptqjmnbqmne",
+       "uri": "at://did:plc:xqp2wfy2sz5m7n2mu322izo2/app.bsky.feed.post/3n2z6xdslds2o"
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "Fascinating"
+    },
+    "embed": {
+     "record": {
+      "uri": "at://did:plc:xqp2wfy2sz5m7n2mu322izo2/app.bsky.feed.post/3n2z6xdslds2o",
+      "cid": "bafyreidxlwwwgiaadvnowsfplsynkrsax67jaxgikcvzidqptqjmnbqmne",
+      "author": {
+       "did": "did:plc:xqp2wfy2sz5m7n2mu322izo2",
+       "handle": "alphaxiv.org",
+       "displayName": "alphaXiv",
+       "associated": {
+        "activitySubscription": {
+         "allowSubscriptions": "followers"
+        }
+       },
+       "createdAt": "2024-11-16T22:11:36.344Z",
+       "verification": {
+        "verifications": [
+         {
+          "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+          "issuerDisplayName": "Bluesky",
+          "issuerHandle": "bsky.app",
+          "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3n322cjc7zr2u",
+          "isValid": true,
+          "createdAt": "2026-11-24T06:46:12.400Z"
+         }
+        ],
+        "verifiedStatus": "valid",
+        "trustedVerifierStatus": "none"
+       }
+      },
+      "value": {
+       "$type": "app.bsky.feed.post",
+       "createdAt": "2026-11-23T22:36:46.707Z",
+       "embed": {
+        "$type": "app.bsky.embed.external",
+        "external": {
+         "description": "We prove that every arithmetic circuit that computes the permanent of an 𝑚 × 𝑚 matrix over the reals has more than 𝑚^{𝑐(log 𝑚)^{1/3}} gates, for some constant 𝑐 > 0 and all sufficiently large...",
+         "thumb": {
+          "$type": "blob",
+          "ref": {
+           "$link": "bafkreifrxmyfh4na7mdypsc54amci42xxfzen3yjthk7ij4rlsyyincqau"
+          },
+          "mimeType": "image/jpeg",
+          "size": 192382
+         },
+         "title": "VP ≠ VNP Over Every Field",
+         "uri": "https://www.alphaxiv.org/abs/2611.vp-vnp-arithmetic-lower-bounds"
+        }
+       },
+       "facets": [
+        {
+         "features": [
+          {
+           "$type": "app.bsky.richtext.facet#link",
+           "uri": "https://www.alphaxiv.org/abs/2611.vp-vnp-arithmetic-lower-bounds"
+          }
+         ],
+         "index": {
+          "byteEnd": 257,
+          "byteStart": 225
+         }
+        }
+       ],
+       "langs": [
+        "en"
+       ],
+       "text": "An internal Claude model just found a proof of the algebraic analogue of P vs NP, known as Valiant’s conjecture\n\nClaude is credited as the author of the 70-page paper and the Lean proof passed automated checks.\n\nRead here: www.alphaxiv.org/abs/2611.vp-..."
+      },
+      "likeCount": 139,
+      "replyCount": 7,
+      "repostCount": 31,
+      "quoteCount": 31,
+      "opThreadPostIndex": 1,
+      "opThreadPostCount": 3,
+      "indexedAt": "2026-11-23T22:36:48.640Z",
+      "embeds": [
+       {
+        "external": {
+         "uri": "https://www.alphaxiv.org/abs/2611.vp-vnp-arithmetic-lower-bounds",
+         "title": "VP ≠ VNP Over Every Field",
+         "description": "We prove that every arithmetic circuit that computes the permanent of an 𝑚 × 𝑚 matrix over the reals has more than 𝑚^{𝑐(log 𝑚)^{1/3}} gates, for some constant 𝑐 > 0 and all sufficiently large...",
+         "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:xqp2wfy2sz5m7n2mu322izo2/bafkreifrxmyfh4na7mdypsc54amci42xxfzen3yjthk7ij4rlsyyincqau"
+        },
+        "$type": "app.bsky.embed.external#view"
+       }
+      ],
+      "$type": "app.bsky.embed.record#viewRecord"
+     },
+     "$type": "app.bsky.embed.record#view"
+    },
+    "bookmarkCount": 3,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 9,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-23T23:54:33.941Z"
+   }
+  }
+ ],
+ "cursor": "2026-11-11T21:57:11.189Z"
+}

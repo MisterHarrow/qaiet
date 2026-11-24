@@ -1,0 +1,68 @@
+[
+ {
+  "_id": "6abaa43202007344336a78f9",
+  "id": "JCisHERE/wan2-2-i2v-v3",
+  "likes": 676,
+  "trendingScore": 167,
+  "private": false,
+  "sdk": "gradio",
+  "tags": [
+   "gradio",
+   "mcp-server",
+   "region:us"
+  ],
+  "createdAt": "2026-09-28T17:30:26.000Z"
+ },
+ {
+  "_id": "6af1ca0b19339ae58d47c533",
+  "id": "MiniMaxAI/minimax-h3-image",
+  "likes": 314,
+  "trendingScore": 131,
+  "private": false,
+  "sdk": "gradio",
+  "tags": [
+   "gradio",
+   "region:us"
+  ],
+  "createdAt": "2026-11-09T13:26:35.000Z"
+ },
+ {
+  "_id": "6ac907290fdd3575a69e0c14",
+  "id": "huggingface/moe-blogpost",
+  "likes": 840,
+  "trendingScore": 125,
+  "private": false,
+  "sdk": "docker",
+  "tags": [
+   "docker",
+   "region:us"
+  ],
+  "createdAt": "2026-10-09T15:24:25.000Z"
+ },
+ {
+  "_id": "6ad06bed04566565e8cbdb34",
+  "id": "joelniklaus/harness-leaderboard",
+  "likes": 539,
+  "trendingScore": 99,
+  "private": false,
+  "sdk": "docker",
+  "tags": [
+   "docker",
+   "region:us"
+  ],
+  "createdAt": "2026-10-15T06:00:13.000Z"
+ },
+ {
+  "_id": "6af15347c854cb463b12c932",
+  "id": "Lakonik/pi-H3",
+  "likes": 144,
+  "trendingScore": 93,
+  "private": false,
+  "sdk": "gradio",
+  "tags": [
+   "gradio",
+   "region:us"
+  ],
+  "createdAt": "2026-11-09T04:59:51.000Z"
+ }
+]

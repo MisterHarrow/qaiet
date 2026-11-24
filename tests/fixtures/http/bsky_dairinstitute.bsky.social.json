@@ -1,0 +1,593 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:fgmjkh5hqls6kwppbgbfo3r7/app.bsky.feed.post/3n2qyf2ljmc23",
+    "cid": "bafyreicu767s4hfj4prt3az3hfxdsztzevfkxc2vjybotkm5lyhqzt5ntm",
+    "author": {
+     "did": "did:plc:fgmjkh5hqls6kwppbgbfo3r7",
+     "handle": "thefirethesetimes.com",
+     "displayName": "The Fire These Times",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-07-06T07:03:50.598Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-20T16:17:52.693Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "Anti-Palestinian Racism w/ Dana El Kurd",
+        "aspectRatio": {
+         "height": 1080,
+         "width": 1080
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreiblpce7yewyujytow54pxygy5qsjwphdfytwv57nk522kmt7om3vi"
+         },
+         "mimeType": "image/jpeg",
+         "size": 268052
+        }
+       },
+       {
+        "alt": "Big Tech is Lying to You w/ Timnit Gebru",
+        "aspectRatio": {
+         "height": 1080,
+         "width": 1080
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreiflfrlw4iz6cz3at5tkbnwpw6hqgh4nh3rcxfpua3prpdm3svpqhe"
+         },
+         "mimeType": "image/jpeg",
+         "size": 773769
+        }
+       },
+       {
+        "alt": "The Transphobia to Fascism Pipeline w/ Sandy Ernest Allen",
+        "aspectRatio": {
+         "height": 1080,
+         "width": 1080
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreiaevyyhlfcgf7l3bncixdfwuykaqn6kmt54eklvkpxxd3eebi3jg4"
+         },
+         "mimeType": "image/jpeg",
+         "size": 413594
+        }
+       }
+      ]
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:nscpdzepvrn6m3cbocssgaq2"
+        }
+       ],
+       "index": {
+        "byteEnd": 83,
+        "byteStart": 54
+       }
+      },
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:mwo3iiroe2gwktsllwtoip23"
+        }
+       ],
+       "index": {
+        "byteEnd": 163,
+        "byteStart": 140
+       }
+      },
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:azpq3hfq3llpowyqpjkqwgxs"
+        }
+       ],
+       "index": {
+        "byteEnd": 242,
+        "byteStart": 217
+       }
+      },
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://www.patreon.com/thefirethesetimes/"
+        }
+       ],
+       "index": {
+        "byteEnd": 298,
+        "byteStart": 267
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "Out on Patreon today:\n\nFrom Transphobia to Fascism w/ @sandyernestallen.bsky.social \nPublic release: also today\n\nAnti-Palestinian Racism w/ @danaelkurd.bsky.social \nPublic release: Nov 30\n\nBig Tech is Lying to You w/ @timnitgebru.blacksky.app \nPublic release: Dec 7\n\nwww.patreon.com/thefirethese..."
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:fgmjkh5hqls6kwppbgbfo3r7/bafkreiblpce7yewyujytow54pxygy5qsjwphdfytwv57nk522kmt7om3vi",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:fgmjkh5hqls6kwppbgbfo3r7/bafkreiblpce7yewyujytow54pxygy5qsjwphdfytwv57nk522kmt7om3vi",
+       "alt": "Anti-Palestinian Racism w/ Dana El Kurd",
+       "aspectRatio": {
+        "height": 1080,
+        "width": 1080
+       }
+      },
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:fgmjkh5hqls6kwppbgbfo3r7/bafkreiflfrlw4iz6cz3at5tkbnwpw6hqgh4nh3rcxfpua3prpdm3svpqhe",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:fgmjkh5hqls6kwppbgbfo3r7/bafkreiflfrlw4iz6cz3at5tkbnwpw6hqgh4nh3rcxfpua3prpdm3svpqhe",
+       "alt": "Big Tech is Lying to You w/ Timnit Gebru",
+       "aspectRatio": {
+        "height": 1080,
+        "width": 1080
+       }
+      },
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:fgmjkh5hqls6kwppbgbfo3r7/bafkreiaevyyhlfcgf7l3bncixdfwuykaqn6kmt54eklvkpxxd3eebi3jg4",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:fgmjkh5hqls6kwppbgbfo3r7/bafkreiaevyyhlfcgf7l3bncixdfwuykaqn6kmt54eklvkpxxd3eebi3jg4",
+       "alt": "The Transphobia to Fascism Pipeline w/ Sandy Ernest Allen",
+       "aspectRatio": {
+        "height": 1080,
+        "width": 1080
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 11,
+    "replyCount": 1,
+    "repostCount": 15,
+    "likeCount": 34,
+    "quoteCount": 2,
+    "indexedAt": "2026-11-20T16:17:56.557Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:ptgy7bgb3tccpx23risxxez7",
+     "handle": "dairinstitute.bsky.social",
+     "displayName": "The Distributed AI Research (DAIR) Institute",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-12-04T23:40:26.846Z"
+    },
+    "uri": "at://did:plc:ptgy7bgb3tccpx23risxxez7/app.bsky.feed.repost/3n2r2gkcgsg25",
+    "cid": "bafyreihaafwt5nir4onxdl2gln52zyhs2f4dm6l2filfdvhtghcmo4ccva",
+    "indexedAt": "2026-11-20T16:54:30.346Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 3
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:ptgy7bgb3tccpx23risxxez7/app.bsky.feed.post/3n2qxo6fddw2u",
+    "cid": "bafyreigjhtgpxso74a6wszapk5krqeumdfj3cczzv7tmtylcvbejxu2mzq",
+    "author": {
+     "did": "did:plc:ptgy7bgb3tccpx23risxxez7",
+     "handle": "dairinstitute.bsky.social",
+     "displayName": "The Distributed AI Research (DAIR) Institute",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-12-04T23:40:26.846Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-20T16:05:04.794295Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "",
+       "title": "Data Workers United",
+       "uri": "https://dataworkersunited.org"
+      }
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:dywrop55krw4bgfho6hzcwmw"
+        }
+       ],
+       "index": {
+        "byteEnd": 266,
+        "byteStart": 239
+       }
+      },
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:p5oiqbjuucaaoibcwhlnihi3"
+        }
+       ],
+       "index": {
+        "byteEnd": 298,
+        "byteStart": 267
+       }
+      },
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://dataworkersunited.org"
+        }
+       ],
+       "index": {
+        "byteEnd": 236,
+        "byteStart": 207
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "👀 Get a sneak-peek at the new Data Workers United site! 👀 \nWe're launching it a few days early.\n\nVisit to learn how we're organizing data workers across the globe for solidarity and collective action: https://dataworkersunited.org \n\n@superrrnetwork.bsky.social\n@dataworkersinquiry.bsky.social"
+    },
+    "embed": {
+     "external": {
+      "uri": "https://dataworkersunited.org",
+      "title": "Data Workers United",
+      "description": ""
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 1,
+    "repostCount": 8,
+    "likeCount": 7,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-20T16:05:05.143Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 2
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:azpq3hfq3llpowyqpjkqwgxs/app.bsky.feed.post/3n2p2tu2aws2h",
+    "cid": "bafyreiazrcfrarlw7wxd3is42hkexqmq7rs2ra4ewcj5rusr7cai34od7y",
+    "author": {
+     "did": "did:plc:azpq3hfq3llpowyqpjkqwgxs",
+     "handle": "timnitgebru.blacksky.app",
+     "displayName": "Timnit Gebru",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-12-04T23:08:33.346Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mrla3qtrah2z",
+        "isValid": true,
+        "createdAt": "2026-07-26T20:33:07.001Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-19T21:56:37.166Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "Come celebrate 5 years of DAIR and learn what the future holds!",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreihkwzdkde2awz2r3czvks7dtiqcgqxbgayxawffbagdked3s66lqa"
+        },
+        "mimeType": "image/jpeg",
+        "size": 392916
+       },
+       "title": "DAIR's 5th Anniversary Celebration",
+       "uri": "https://bit.ly/dairturns5"
+      }
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:ptgy7bgb3tccpx23risxxez7"
+        }
+       ],
+       "index": {
+        "byteEnd": 85,
+        "byteStart": 59
+       }
+      },
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://bit.ly/dairturns5"
+        }
+       ],
+       "index": {
+        "byteEnd": 203,
+        "byteStart": 186
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "🔇🔇🔇Dear friends, we are celebrating FIVE YEARS of @dairinstitute.bsky.social & would love for you to join us!\n\nWhere? Virtually \n\n⏰ December 4, 5-8pm CET // 8-11am PST\n\nRSVP: bit.ly/dairturns5\n\nIt is your support that has gotten us here. So we want to show off a little bit and celebrate with you 🙂 🧵"
+    },
+    "embed": {
+     "external": {
+      "uri": "https://bit.ly/dairturns5",
+      "title": "DAIR's 5th Anniversary Celebration",
+      "description": "Come celebrate 5 years of DAIR and learn what the future holds!",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:azpq3hfq3llpowyqpjkqwgxs/bafkreihkwzdkde2awz2r3czvks7dtiqcgqxbgayxawffbagdked3s66lqa"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 4,
+    "replyCount": 1,
+    "repostCount": 39,
+    "likeCount": 90,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-19T21:56:42.646Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:ptgy7bgb3tccpx23risxxez7",
+     "handle": "dairinstitute.bsky.social",
+     "displayName": "The Distributed AI Research (DAIR) Institute",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-12-04T23:40:26.846Z"
+    },
+    "uri": "at://did:plc:ptgy7bgb3tccpx23risxxez7/app.bsky.feed.repost/3n2p3mbjuow2m",
+    "cid": "bafyreica7hmcddid2pj7jocewqyk3qrsd5aoqryexbw7esiv2r7xyfoooy",
+    "indexedAt": "2026-11-19T22:10:17.248Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 12
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:ptgy7bgb3tccpx23risxxez7/app.bsky.feed.post/3n2gz3ebolk2y",
+    "cid": "bafyreihvp5oyhff3b7vky5sn63olxn6wpjpt5rq27b74wtiielm3f53ylq",
+    "author": {
+     "did": "did:plc:ptgy7bgb3tccpx23risxxez7",
+     "handle": "dairinstitute.bsky.social",
+     "displayName": "The Distributed AI Research (DAIR) Institute",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-12-04T23:40:26.846Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-16T17:03:43.676Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "Twitch account for The Distributed AI Research Institute (DAIR). — dair_institute streams live on Twitch! Check out their videos, sign up to chat, and join their community.",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreiftuurf3zvllezn4gckc5p3zh5vhz6rcnzjrk3esdu2fyxtllnbt4"
+        },
+        "mimeType": "image/jpeg",
+        "size": 32232
+       },
+       "title": "dair_institute - Twitch",
+       "uri": "https://twitch.tv/dair_institute"
+      }
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:aeug3w4mdhnc2wv73hmrh36v"
+        }
+       ],
+       "index": {
+        "byteEnd": 80,
+        "byteStart": 55
+       }
+      },
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:m4fvxlyv4gqpugzszzp4cjxf"
+        }
+       ],
+       "index": {
+        "byteEnd": 105,
+        "byteStart": 83
+       }
+      },
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://twitch.tv/dair_institute"
+        }
+       ],
+       "index": {
+        "byteEnd": 298,
+        "byteStart": 274
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "TODAY on the Mystery AI Hype Theater 3000 livestream!\n\n@emilymbender.bsky.social & @alexhanna.bsky.social are exploring the political landscape, from the influence of Doomer narratives to lobbyists trying to weaken data center regulation.\n\nTune in:\nMonday, Nov 16, 12pm PST\ntwitch.tv/dair_institute"
+    },
+    "embed": {
+     "external": {
+      "uri": "https://twitch.tv/dair_institute",
+      "title": "dair_institute - Twitch",
+      "description": "Twitch account for The Distributed AI Research Institute (DAIR). — dair_institute streams live on Twitch! Check out their videos, sign up to chat, and join their community.",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ptgy7bgb3tccpx23risxxez7/bafkreiftuurf3zvllezn4gckc5p3zh5vhz6rcnzjrk3esdu2fyxtllnbt4"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 4,
+    "likeCount": 11,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-16T17:03:45.348Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:fgr4mvuihvox4x2is7qmsrc3/app.bsky.feed.post/3n27w4vii6s2u",
+    "cid": "bafyreic276gxqwcbfymt5jt6ik3kv72mjb2rnh3623veasazhgxgyuwrpq",
+    "author": {
+     "did": "did:plc:fgr4mvuihvox4x2is7qmsrc3",
+     "handle": "karabaic.org",
+     "displayName": "jack the nonabrasive",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-09-01T01:12:14.878Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-13T21:22:15.886Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "Enabling workers to fight back against AI and automation at work.",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreifqco7t37b6gkglehymg4ozucqzvb6twa2clqbmfollpsqrtwgzmy"
+        },
+        "mimeType": "image/jpeg",
+        "size": 712054
+       },
+       "title": "Luddite Lab Worker Resource Hub",
+       "uri": "https://dair-institute.org/projects/luddite-lab/"
+      }
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:ptgy7bgb3tccpx23risxxez7"
+        }
+       ],
+       "index": {
+        "byteEnd": 26,
+        "byteStart": 0
+       }
+      },
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://dair-institute.org/projects/luddite-lab/"
+        }
+       ],
+       "index": {
+        "byteEnd": 103,
+        "byteStart": 69
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "@dairinstitute.bsky.social may have a community & resources for you\n\ndair-institute.org/projects/lud..."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://dair-institute.org/projects/luddite-lab/",
+      "title": "Luddite Lab Worker Resource Hub",
+      "description": "Enabling workers to fight back against AI and automation at work.",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:fgr4mvuihvox4x2is7qmsrc3/bafkreifqco7t37b6gkglehymg4ozucqzvb6twa2clqbmfollpsqrtwgzmy"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 1,
+    "replyCount": 0,
+    "repostCount": 2,
+    "likeCount": 7,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-13T21:22:17.885Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:ptgy7bgb3tccpx23risxxez7",
+     "handle": "dairinstitute.bsky.social",
+     "displayName": "The Distributed AI Research (DAIR) Institute",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-12-04T23:40:26.846Z"
+    },
+    "uri": "at://did:plc:ptgy7bgb3tccpx23risxxez7/app.bsky.feed.repost/3n2bwemeipc2v",
+    "cid": "bafyreidx37zu6zzrlkuefegl4gkbk6a2svfcyykt5wjbxdifiy7nuhg6r4",
+    "indexedAt": "2026-11-14T16:31:55.252Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  }
+ ],
+ "cursor": "2026-10-28T18:34:14.466Z"
+}

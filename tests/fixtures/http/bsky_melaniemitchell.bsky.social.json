@@ -1,0 +1,447 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:p72jkscm4rt4xuep3lzv6doh/app.bsky.feed.post/3n2vyricbms2n",
+    "cid": "bafyreiabotuyx67s3pv4z4q7jyft365jg7dxspu3eaafoc45vrq7nhdwrm",
+    "author": {
+     "did": "did:plc:p72jkscm4rt4xuep3lzv6doh",
+     "handle": "melaniemitchell.bsky.social",
+     "displayName": "Melanie Mitchell",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-29T03:04:07.127Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mqsag3g7m42k",
+        "isValid": true,
+        "createdAt": "2026-07-16T22:02:20.190Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-22T16:08:08.422Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "Sim-to-real gaps are everywhere.",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreiblvoodjmxscw5ktfvpchbcwugw6dsfzfvyobwsaets6lrfguyncu"
+        },
+        "mimeType": "image/jpeg",
+        "size": 576346
+       },
+       "title": "This robotics concept helps explain the jaggedness of frontier capabilities",
+       "uri": "https://www.understandingai.org/p/this-robotics-concept-helps-explain"
+      }
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:5pjftcjsfxbwc4pu6n5hivzm"
+        }
+       ],
+       "index": {
+        "byteEnd": 46,
+        "byteStart": 23
+       }
+      },
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://www.understandingai.org/p/this-robotics-concept-helps-explain"
+        }
+       ],
+       "index": {
+        "byteEnd": 228,
+        "byteStart": 189
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "I found this piece, by @binarybits.bsky.social, to be a useful framework for thinking about where we are with respect to AI in fields beyond math, coding, and other \"verifiable\" domains. \n\nwww.understandingai.org/p/this-robot..."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://www.understandingai.org/p/this-robotics-concept-helps-explain",
+      "title": "This robotics concept helps explain the jaggedness of frontier capabilities",
+      "description": "Sim-to-real gaps are everywhere.",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:p72jkscm4rt4xuep3lzv6doh/bafkreiblvoodjmxscw5ktfvpchbcwugw6dsfzfvyobwsaets6lrfguyncu"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 26,
+    "replyCount": 5,
+    "repostCount": 11,
+    "likeCount": 57,
+    "quoteCount": 3,
+    "indexedAt": "2026-11-22T16:08:10.441Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:p72jkscm4rt4xuep3lzv6doh/app.bsky.feed.post/3myskilj5p22h",
+    "cid": "bafyreiays5d7t7iatxfle3w34g547gaoimowzvbse6lvjdebgqvsytyd6e",
+    "author": {
+     "did": "did:plc:p72jkscm4rt4xuep3lzv6doh",
+     "handle": "melaniemitchell.bsky.social",
+     "displayName": "Melanie Mitchell",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-29T03:04:07.127Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mqsag3g7m42k",
+        "isValid": true,
+        "createdAt": "2026-07-16T22:02:20.190Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-10-26T20:24:14.944Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "...and we can make a truly open language model.",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreif4d22rpw4rwmxxnqgjzf6rhyrgzzuh4qrjkfqco2hypmkeevpdyy"
+        },
+        "mimeType": "image/jpeg",
+        "size": 525537
+       },
+       "title": "The World Is Something We Make",
+       "uri": "https://www.argmin.net/p/the-world-is-something-we-make"
+      }
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:oogxmzmgauh5ug2tfe5vc7wm"
+        }
+       ],
+       "index": {
+        "byteEnd": 51,
+        "byteStart": 29
+       }
+      },
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://www.argmin.net/p/the-world-is-something-we-make"
+        }
+       ],
+       "index": {
+        "byteEnd": 136,
+        "byteStart": 106
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "Read this excellent essay by @beenwrekt.bsky.social\n\nIn short, forget OpenAI; we need to build open AI.\n\n www.argmin.net/p/the-world-..."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://www.argmin.net/p/the-world-is-something-we-make",
+      "title": "The World Is Something We Make",
+      "description": "...and we can make a truly open language model.",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:p72jkscm4rt4xuep3lzv6doh/bafkreif4d22rpw4rwmxxnqgjzf6rhyrgzzuh4qrjkfqco2hypmkeevpdyy"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 27,
+    "replyCount": 4,
+    "repostCount": 18,
+    "likeCount": 64,
+    "quoteCount": 3,
+    "indexedAt": "2026-10-26T20:24:21.539Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:p72jkscm4rt4xuep3lzv6doh/app.bsky.feed.post/3myirujlon22z",
+    "cid": "bafyreidk3gzhocvbt6bkly6srj6qochws7gjrxvudzq272whcrpmsasfqa",
+    "author": {
+     "did": "did:plc:p72jkscm4rt4xuep3lzv6doh",
+     "handle": "melaniemitchell.bsky.social",
+     "displayName": "Melanie Mitchell",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-29T03:04:07.127Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mqsag3g7m42k",
+        "isValid": true,
+        "createdAt": "2026-07-16T22:02:20.190Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-10-22T23:09:34.388Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "",
+        "aspectRatio": {
+         "height": 3000,
+         "width": 4000
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreihgfrptjco3mvgk5aoyjo5bujajugf37x5uuujgwqwlgvyobhequ4"
+         },
+         "mimeType": "image/jpeg",
+         "size": 1910306
+        }
+       }
+      ]
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "Incredible sky at dusk on my walk around our campus trails"
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:p72jkscm4rt4xuep3lzv6doh/bafkreihgfrptjco3mvgk5aoyjo5bujajugf37x5uuujgwqwlgvyobhequ4",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:p72jkscm4rt4xuep3lzv6doh/bafkreihgfrptjco3mvgk5aoyjo5bujajugf37x5uuujgwqwlgvyobhequ4",
+       "alt": "",
+       "aspectRatio": {
+        "height": 3000,
+        "width": 4000
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 2,
+    "repostCount": 0,
+    "likeCount": 64,
+    "quoteCount": 0,
+    "indexedAt": "2026-10-22T23:09:46.240Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:p72jkscm4rt4xuep3lzv6doh/app.bsky.feed.post/3my4onlgq722y",
+    "cid": "bafyreig5hxepgg774bp6ubfj2qbxikt4nv4zux3aurwl3yisjzh74mafyy",
+    "author": {
+     "did": "did:plc:p72jkscm4rt4xuep3lzv6doh",
+     "handle": "melaniemitchell.bsky.social",
+     "displayName": "Melanie Mitchell",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-29T03:04:07.127Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mqsag3g7m42k",
+        "isValid": true,
+        "createdAt": "2026-07-16T22:02:20.190Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-10-18T03:40:03.364Z",
+     "langs": [
+      "en"
+     ],
+     "text": "Just saw the Elizabeth Holmes documentary -- it really is as good as everyone has said."
+    },
+    "bookmarkCount": 3,
+    "replyCount": 3,
+    "repostCount": 1,
+    "likeCount": 43,
+    "quoteCount": 0,
+    "indexedAt": "2026-10-18T03:40:05.564Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:jhxnlqmy26jikbcst6kux7fr/app.bsky.feed.post/3my32iuc3lk2k",
+    "cid": "bafyreifjiz6k5i6bllqzgok4c54drk7bo7sadcz4t7is5ho7kyajgjyxdy",
+    "author": {
+     "did": "did:plc:jhxnlqmy26jikbcst6kux7fr",
+     "handle": "mjcrockett.bsky.social",
+     "displayName": "M.J. Crockett",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-08-08T13:41:40.204Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-10-17T12:06:50.301Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "",
+       "title": "Crockett Lab",
+       "uri": "https://www.crockettlab.org/"
+      }
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://www.crockettlab.org/"
+        }
+       ],
+       "index": {
+        "byteEnd": 177,
+        "byteStart": 158
+       }
+      },
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://apply.interfolio.com/195297"
+        }
+       ],
+       "index": {
+        "byteEnd": 242,
+        "byteStart": 215
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "I'm hiring a postdoc to start in summer/fall 2027! My lab uses computational social & cognitive science methods to explore how tech shapes knowledge & power: www.crockettlab.org\n\nYou can submit an application here: apply.interfolio.com/195297. Review of apps starts Nov 20. Please share!"
+    },
+    "embed": {
+     "external": {
+      "uri": "https://www.crockettlab.org/",
+      "title": "Crockett Lab",
+      "description": ""
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 19,
+    "replyCount": 3,
+    "repostCount": 84,
+    "likeCount": 102,
+    "quoteCount": 1,
+    "indexedAt": "2026-10-17T12:06:51.262Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:p72jkscm4rt4xuep3lzv6doh",
+     "handle": "melaniemitchell.bsky.social",
+     "displayName": "Melanie Mitchell",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-29T03:04:07.127Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mqsag3g7m42k",
+        "isValid": true,
+        "createdAt": "2026-07-16T22:02:20.190Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:p72jkscm4rt4xuep3lzv6doh/app.bsky.feed.repost/3my45nlmo2b2m",
+    "cid": "bafyreigok5fhex2ztcecdug3k2rcdlydkjgipspkwabhqmdjqud7dhcnoi",
+    "indexedAt": "2026-10-17T22:35:50.057Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 6
+  }
+ ],
+ "cursor": "2026-08-20T14:43:22.6Z"
+}

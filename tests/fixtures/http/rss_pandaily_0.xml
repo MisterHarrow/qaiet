@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Pandaily - China Tech News, AI &amp; Electric Vehicle Insights</title>
+        <link>https://pandaily.com</link>
+        <description>Latest technology news, AI breakthroughs, and electric vehicle developments from China's innovative tech landscape</description>
+        <lastBuildDate>Tue, 24 Nov 2026 08:19:51 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>Pandaily RSS Feed Generator</generator>
+        <language>en</language>
+        <image>
+            <title>Pandaily - China Tech News, AI &amp; Electric Vehicle Insights</title>
+            <url>https://pandaily.com/favicon.ico</url>
+            <link>https://pandaily.com</link>
+        </image>
+        <copyright>© 2026 Pandaily. All rights reserved.</copyright>
+        <item>
+            <title><![CDATA[Ant Group Releases Ling-3.2-air Multimodal Model With 5.5B Active Parameters]]></title>
+            <link>https://pandaily.com/ant-group-ling-3-2-air-multimodal-open-weights</link>
+            <guid isPermaLink="false">https://pandaily.com/ant-group-ling-3-2-air-multimodal-open-weights</guid>
+            <pubDate>Tue, 24 Nov 2026 07:06:23 GMT</pubDate>
+            <description><![CDATA[Ant Group released Ling-3.2-air with text, image and video input, 124B total parameters and downloadable weights under a model-card MIT declaration.]]></description>
+            
+            <author>contact@pandaily.com (Pandaily)</author>
+            <enclosure url="https://cms-image.pandaily.com/1/ling_editorial_8abb85f2c5.png" length="0" type="image/png"/>
+        </item>
+        <item>
+            <title><![CDATA[SenseTime Opens SenseNova U1.6 With Native Image Self-Correction]]></title>
+            <link>https://pandaily.com/sensetime-sensenova-u1-6-native-image-self-correction</link>
+            <guid isPermaLink="false">https://pandaily.com/sensetime-sensenova-u1-6-native-image-self-correction</guid>
+            <pubDate>Tue, 24 Nov 2026 07:05:50 GMT</pubDate>
+            <description><![CDATA[SenseTime released open SenseNova U1.6 weights and a hosted Lite update, with company-reported gains from checking and correcting image text.]]></description>
+            
+            <author>contact@pandaily.com (Pandaily)</author>
+            <enclosure url="https://cms-image.pandaily.com/1/sense_editorial_a834cc3523.png" length="0" type="image/png"/>
+        </item>
+        <item>
+            <title><![CDATA[Lecoo Lists Consumer Walking-Assist Exoskeleton Ahead of China Sale]]></title>
+            <link>https://pandaily.com/lecoo-consumer-walking-assist-exoskeleton-china-sale</link>
+            <guid isPermaLink="false">https://pandaily.com/lecoo-consumer-walking-assist-exoskeleton-china-sale</guid>
+            <pubDate>Tue, 24 Nov 2026 02:01:00 GMT</pubDate>
+            <description><![CDATA[Lecoo’s walking-assistance exoskeleton is listed for a November 28 China sale at an introductory CNY 6,999; advertised specifications are not medical validation.]]></description>
+            
+            <author>contact@pandaily.com (Pandaily)</author>
+            <enclosure url="https://cms-image.pandaily.com/1/lecoo_editorial_d5e4c63093.png" length="0" type="image/png"/>
+        </item>
+        <item>
+            <title><![CDATA[Astronstone Completes Ground Validation of Full-Size Rocket Capture Arms]]></title>
+            <link>https://pandaily.com/astronstone-full-size-rocket-capture-arms-ground-validation</link>
+            <guid isPermaLink="false">https://pandaily.com/astronstone-full-size-rocket-capture-arms-ground-validation</guid>
+            <pubDate>Tue, 24 Nov 2026 02:00:15 GMT</pubDate>
+            <description><![CDATA[Astronstone says its 100-tonne-class capture arms completed joint ground validation across weather and dynamic-load conditions; no flight recovery was announced.]]></description>
+            
+            <author>contact@pandaily.com (Pandaily)</author>
+            <enclosure url="https://cms-image.pandaily.com/1/astro_editorial_538f0bd948.png" length="0" type="image/png"/>
+        </item>
+        <item>
+            <title><![CDATA[XPeng Upgrades X-World 1.6 With Repeatable Virtual City Driving Tests]]></title>
+            <link>https://pandaily.com/xpeng-x-world-1-6-virtual-city-driving-simulation</link>
+            <guid isPermaLink="false">https://pandaily.com/xpeng-x-world-1-6-virtual-city-driving-simulation</guid>
+            <pubDate>Tue, 24 Nov 2026 01:59:33 GMT</pubDate>
+            <description><![CDATA[XPeng’s world-model upgrade recreates recorded roads for repeatable driving-AI tests, with company-reported gains in trajectory consistency and interaction latency.]]></description>
+            
+            <author>contact@pandaily.com (Pandaily)</author>
+            <enclosure url="https://cms-image.pandaily.com/1/xpeng_editorial_12576b6bc3.png" length="0" type="image/png"/>
+        </item>
+    </channel>
+</rss>

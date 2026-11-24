@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	xmlns:dcterms="http://purl.org/dc/terms/"
+>
+
+<channel>
+	<title>Technology News</title>
+	<atom:link href="https://thehill.com/policy/technology/feed/" rel="self" type="application/rss+xml" />
+	<link>https://thehill.com</link>
+	<description>Unbiased Politics News</description>
+	<lastBuildDate>Mon, 23 Nov 2026 23:43:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.9.12</generator>
+
+<image>
+	<url>https://thehill.com/wp-content/uploads/sites/2/2023/03/cropped-favicon-512px-1.png?w=32</url>
+	<title>Technology News</title>
+	<link>https://thehill.com</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Commerce Department adds Megaspeed to trade blacklist amid Nvidia scandal</title>
+		<link>https://thehill.com/policy/technology/6238594-commerce-blacklists-megaspeed-nvidia/</link>
+		
+		<dc:creator><![CDATA[Miranda Nazzaro]]></dc:creator>
+		<pubDate>Mon, 23 Nov 2026 22:45:24 +0000</pubDate>
+		<category><![CDATA[Technology]]></category>		
+		<category><![CDATA[Bureau of Industry and Security]]></category>
+		<category><![CDATA[Commerce Department]]></category>
+		<category><![CDATA[Federal Register]]></category>
+		<category><![CDATA[howard lutnick]]></category>
+		<category><![CDATA[Jensen Huang]]></category>
+		<category><![CDATA[Megaspeed]]></category>
+		<category><![CDATA[NVIDIA]]></category>
+		<guid isPermaLink="false">https://thehill.com/?p=6238594</guid>
+
+					<description><![CDATA[The Commerce Department moved to add Megaspeed — the company at the center of Nvidia's national security scandal — to its trade entity blacklist on Monday, according to federal records. The move, published in the Federal Register on Monday, comes as scrutiny mounts on the Commerce Department to tighten its chip export controls following reports...]]></description>
+		
+		
+		
+		<enclosure url="https://thehill.com/wp-content/uploads/sites/2/2026/11/GettyImages-2303986706-e1794406198818.jpg?w=900" type="image/jpeg" length="100858" />
+<dcterms:modified>2026-11-23T23:43:00+00:00</dcterms:modified>
+	</item>
+		<item>
+		<title>Huang profits from Nvidia&#039;s stock surge after he returns as CEO</title>
+		<link>https://thehill.com/business/6238473-nvidia-stock-surges-jensen-huang/</link>
+		
+		<dc:creator><![CDATA[Max Rego]]></dc:creator>
+		<pubDate>Mon, 23 Nov 2026 21:55:59 +0000</pubDate>
+		<category><![CDATA[Business]]></category>		
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Technology]]></category>
+		<category><![CDATA[Jensen Huang]]></category>
+		<category><![CDATA[NVIDIA]]></category>
+		<category><![CDATA[Securities and Exchange Commission]]></category>
+		<category><![CDATA[Trump administration]]></category>
+		<guid isPermaLink="false">https://thehill.com/?p=6238473</guid>
+
+					<description><![CDATA[Nvidia’s stock surged on Monday after Jensen Huang returned to the company, with the tech CEO set to benefit financially from the boost. The company’s stock closed at $165.05 per share, marking an increase of nearly 31.5 percent from Friday’s closing bell. Nvidia closed at $125.53 per share on Friday, the stock’s lowest point since...]]></description>
+		
+		
+		
+		<enclosure url="https://thehill.com/wp-content/uploads/sites/2/2026/11/Leading-Huang_061626_AP_Jeffery-McWhorter.jpg?w=900" type="image/jpeg" length="752925" />
+<dcterms:modified>2026-11-23T22:13:08+00:00</dcterms:modified>
+	</item>
+		<item>
+		<title>Key GOP lawmaker calls for administration briefing on Huang</title>
+		<link>https://thehill.com/homenews/house/6238496-mccaul-demands-nvidia-briefing/</link>
+		
+		<dc:creator><![CDATA[Tara Suter]]></dc:creator>
+		<pubDate>Mon, 23 Nov 2026 21:55:52 +0000</pubDate>
+		<category><![CDATA[House]]></category>		<category><![CDATA[Administration]]></category>
+		<category><![CDATA[Business]]></category>
+		
+		<category><![CDATA[National Security]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Technology]]></category>
+		<category><![CDATA[House GOP]]></category>
+		<category><![CDATA[House Homeland Security Committee]]></category>
+		<category><![CDATA[NVIDIA]]></category>
+		<category><![CDATA[Trump administration]]></category>
+		<guid isPermaLink="false">https://thehill.com/?p=6238496</guid>
+
+					<description><![CDATA[Rep. Michael McCaul (R-Texas), a former chair of the House Homeland Security Committee, pressed for a briefing from the Trump administration on Jensen Huang’s return to his role as Nvidia CEO. “If administration officials now believe that Mr. Huang’s extramarital relationship with an alleged Chinese intelligence asset — along with Nvidia’s deeply concerning sales of...]]></description>
+		
+		
+		
+		<enclosure url="https://thehill.com/wp-content/uploads/sites/2/2026/01/mccaulmichael_121125gn01_w.jpg?w=900" type="image/jpeg" length="714939" />
+<dcterms:modified>2026-11-23T22:11:29+00:00</dcterms:modified>
+	</item>
+		<item>
+		<title>Clayton to serve as interim national cyber director</title>
+		<link>https://thehill.com/policy/technology/6238398-jay-clayton-interim-cyber-director/</link>
+		
+		<dc:creator><![CDATA[Miranda Nazzaro]]></dc:creator>
+		<pubDate>Mon, 23 Nov 2026 21:55:03 +0000</pubDate>
+		<category><![CDATA[Technology]]></category>		<category><![CDATA[Administration]]></category>
+		
+		<guid isPermaLink="false">https://thehill.com/?p=6238398</guid>
+
+					<description><![CDATA[Director of National Intelligence Jay Clayton has been tapped to serve as interim national cyber director while Kirsten Davies awaits Senate confirmation, according to a White House official. Davies, who has served as the Pentagon's chief information officer since last year, was named the acting director of the White House's Office of the National Cyber...]]></description>
+		
+		
+		
+		<enclosure url="https://thehill.com/wp-content/uploads/sites/2/2026/11/AP26322598514736-e1795367590841.jpg?w=900" type="image/jpeg" length="87470" />
+<dcterms:modified>2026-11-23T22:02:32+00:00</dcterms:modified>
+	</item>
+		<item>
+		<title>Why Nvidia&#039;s board changed its mind on Jensen Huang </title>
+		<link>https://thehill.com/policy/technology/6238401-jensen-huang-returns-nvidia-board/</link>
+		
+		<dc:creator><![CDATA[Miranda Nazzaro]]></dc:creator>
+		<pubDate>Mon, 23 Nov 2026 21:28:29 +0000</pubDate>
+		<category><![CDATA[Technology]]></category>		<category><![CDATA[Business]]></category>
+		
+		<guid isPermaLink="false">https://thehill.com/?p=6238401</guid>
+
+					<description><![CDATA[Jensen Huang returned to Nvidia as CEO on Monday, leaving Washington and Wall Street with myriad questions about how the company’s board of directors changed its mind in a matter of days.   The board faced pressure on multiple fronts — from the Trump administration, Silicon Valley leaders and slumping markets — amid concerns about Nvidia’s future...]]></description>
+		
+		
+		
+		      <dc:creator><![CDATA[Julia Shapero]]></dc:creator>
+<enclosure url="https://thehill.com/wp-content/uploads/sites/2/2026/11/Why-Huang_112326_Nazzaro-Shapero_AP_Jonathan-Brady.jpg?w=900" type="image/jpeg" length="390597" />
+<dcterms:modified>2026-11-23T22:00:46+00:00</dcterms:modified>
+	</item>
+	</channel>
+</rss>

@@ -1,0 +1,645 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:j3tpb4iabrq3ukfaui6eymwf/app.bsky.feed.post/3n2zqu6v4qc2d",
+    "cid": "bafyreigzlbhb77diguupdxs5gvymc7svivyrgpodlz3jkogqaneb5cxt54",
+    "author": {
+     "did": "did:plc:j3tpb4iabrq3ukfaui6eymwf",
+     "handle": "lopatto.bsky.social",
+     "displayName": "Elizabeth Lopatto",
+     "pronouns": "she/her",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-25T15:55:20.210Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mbzhslv4nr2q",
+        "isValid": true,
+        "createdAt": "2026-01-09T21:45:20.059Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-24T03:57:08.237Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "After conversations with Huang about the importance of candor and honesty, the board ultimately decided that having him return was the best path, the people said.",
+        "aspectRatio": {
+         "height": 170,
+         "width": 1118
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreifnuw2hkdjd6g4lagjfzq4rnnbaq3sgdyxfm6zkzmurgyyxibxvuy"
+         },
+         "mimeType": "image/jpeg",
+         "size": 92320
+        }
+       }
+      ]
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://www.wsj.com/business/nvidia-jensen-huang-white-house-9ad03961?st=eyJWit&reflink=desktopwebshare_permalink"
+        }
+       ],
+       "index": {
+        "byteEnd": 35,
+        "byteStart": 8
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "oh good www.wsj.com/business/nvi..."
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:j3tpb4iabrq3ukfaui6eymwf/bafkreifnuw2hkdjd6g4lagjfzq4rnnbaq3sgdyxfm6zkzmurgyyxibxvuy",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:j3tpb4iabrq3ukfaui6eymwf/bafkreifnuw2hkdjd6g4lagjfzq4rnnbaq3sgdyxfm6zkzmurgyyxibxvuy",
+       "alt": "After conversations with Huang about the importance of candor and honesty, the board ultimately decided that having him return was the best path, the people said.",
+       "aspectRatio": {
+        "height": 170,
+        "width": 1118
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 19,
+    "replyCount": 10,
+    "repostCount": 77,
+    "likeCount": 528,
+    "quoteCount": 23,
+    "indexedAt": "2026-11-24T03:57:09.446Z",
+    "threadgate": {
+     "uri": "at://did:plc:j3tpb4iabrq3ukfaui6eymwf/app.bsky.feed.threadgate/3n2zqu6v4qc2d",
+     "cid": "bafyreiegmtj7x63av2rfeq3ngdqjunr2dquugf2z4lxny34nzjsa6ptg3i",
+     "record": {
+      "$type": "app.bsky.feed.threadgate",
+      "allow": [
+       {
+        "$type": "app.bsky.feed.threadgate#mentionRule"
+       },
+       {
+        "$type": "app.bsky.feed.threadgate#followingRule"
+       },
+       {
+        "$type": "app.bsky.feed.threadgate#followerRule"
+       }
+      ],
+      "createdAt": "2026-11-24T03:57:08.866Z",
+      "hiddenReplies": [],
+      "post": "at://did:plc:j3tpb4iabrq3ukfaui6eymwf/app.bsky.feed.post/3n2zqu6v4qc2d"
+     },
+     "lists": []
+    }
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:qnd2lqn52ernybdfonq4mc43",
+     "handle": "cwarzel.bsky.social",
+     "displayName": "Charlie Warzel",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-27T17:27:27.073Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3m6fv7p4mdl26",
+        "isValid": true,
+        "createdAt": "2025-11-24T22:36:28.696Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:qnd2lqn52ernybdfonq4mc43/app.bsky.feed.repost/3n2zseuwmkt2i",
+    "cid": "bafyreicxv3j4lr2maq3t6w6qe6swrub6ntjtsyjlfovpcavd2qo27tehqu",
+    "indexedAt": "2026-11-24T04:24:22.143Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 2
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:qnd2lqn52ernybdfonq4mc43/app.bsky.feed.post/3n2zo6onaps2z",
+    "cid": "bafyreibtxbyogurx4b4zdrjfdb47rzg3w6vx63rlxpmfnn5mdj24lplzse",
+    "author": {
+     "did": "did:plc:qnd2lqn52ernybdfonq4mc43",
+     "handle": "cwarzel.bsky.social",
+     "displayName": "Charlie Warzel",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-27T17:27:27.073Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3m6fv7p4mdl26",
+        "isValid": true,
+        "createdAt": "2025-11-24T22:36:28.696Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-24T03:09:19.075Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "YouTube video by The Atlantic",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreidsek3m2vjlue5npeazotuk7yi7vhif4sxoupczuhcq5x5l2rwbhy"
+        },
+        "mimeType": "image/jpeg",
+        "size": 89988
+       },
+       "title": "Jensen Huang and Silicon Valley’s Short-Term Thinking",
+       "uri": "https://youtu.be/xEMl6U-0MOU?si=Hx1vgCtTBTqyTnNL"
+      }
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://youtu.be/xEMl6U-0MOU?si=Hx1vgCtTBTqyTnNL"
+        }
+       ],
+       "index": {
+        "byteEnd": 132,
+        "byteStart": 108
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "at some point today (genuinely cannot remember when) we taped a quick emergency pod about the jensen stuff. youtu.be/xEMl6U-0MOU?..."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://youtu.be/xEMl6U-0MOU?si=Hx1vgCtTBTqyTnNL",
+      "title": "Jensen Huang and Silicon Valley’s Short-Term Thinking",
+      "description": "YouTube video by The Atlantic",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:qnd2lqn52ernybdfonq4mc43/bafkreidsek3m2vjlue5npeazotuk7yi7vhif4sxoupczuhcq5x5l2rwbhy"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 5,
+    "replyCount": 0,
+    "repostCount": 3,
+    "likeCount": 34,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-24T03:09:20.750Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:qnd2lqn52ernybdfonq4mc43/app.bsky.feed.post/3n2zjg3l3y22z",
+    "cid": "bafyreidv4zjfjtomhvfcd7bajmgnay23uwiq4gutnoyxj6sjxsjhfktexy",
+    "author": {
+     "did": "did:plc:qnd2lqn52ernybdfonq4mc43",
+     "handle": "cwarzel.bsky.social",
+     "displayName": "Charlie Warzel",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-27T17:27:27.073Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3m6fv7p4mdl26",
+        "isValid": true,
+        "createdAt": "2025-11-24T22:36:28.696Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-24T01:43:58.808Z",
+     "embed": {
+      "$type": "app.bsky.embed.record",
+      "record": {
+       "cid": "bafyreicqmoibdmip46a74w3aspwpfv4bfqeughee4xfjxiwbfx4dzff3ua",
+       "uri": "at://did:plc:5u54z2qgkq43dh2nzwzdbbhb/app.bsky.feed.post/3n2z7blofzz2b"
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "hell yeah brother this is what it's all about"
+    },
+    "embed": {
+     "record": {
+      "uri": "at://did:plc:5u54z2qgkq43dh2nzwzdbbhb/app.bsky.feed.post/3n2z7blofzz2b",
+      "cid": "bafyreicqmoibdmip46a74w3aspwpfv4bfqeughee4xfjxiwbfx4dzff3ua",
+      "author": {
+       "did": "did:plc:5u54z2qgkq43dh2nzwzdbbhb",
+       "handle": "financialtimes.com",
+       "displayName": "Financial Times",
+       "associated": {
+        "chat": {
+         "allowIncoming": "none",
+         "allowGroupInvites": "none"
+        },
+        "activitySubscription": {
+         "allowSubscriptions": "followers"
+        }
+       },
+       "createdAt": "2023-06-21T13:26:25.733Z",
+       "verification": {
+        "verifications": [
+         {
+          "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+          "issuerDisplayName": "Bluesky",
+          "issuerHandle": "bsky.app",
+          "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lndpuz7ybi2f",
+          "isValid": true,
+          "createdAt": "2025-04-21T10:47:24.418Z"
+         }
+        ],
+        "verifiedStatus": "valid",
+        "trustedVerifierStatus": "valid"
+       }
+      },
+      "value": {
+       "$type": "app.bsky.feed.post",
+       "createdAt": "2026-11-23T22:42:30.447344Z",
+       "embed": {
+        "$type": "app.bsky.embed.external",
+        "external": {
+         "description": "Profit on 30% jump in chip group’s share price based on maximum amount US president could have owned in latest disclosure",
+         "thumb": {
+          "$type": "blob",
+          "ref": {
+           "$link": "bafkreifw5xiffmxi5m7tjra2own42phynqirmyshbsjkr22fzx37xzkasa"
+          },
+          "mimeType": "image/jpeg",
+          "size": 58179
+         },
+         "title": "Trump made up to $15mn on Nvidia shares after Huang’s return",
+         "uri": "https://ft.trib.al/HsQtgTI"
+        }
+       },
+       "facets": [
+        {
+         "features": [
+          {
+           "$type": "app.bsky.richtext.facet#link",
+           "uri": "https://ft.trib.al/HsQtgTI"
+          }
+         ],
+         "index": {
+          "byteEnd": 81,
+          "byteStart": 63
+         }
+        }
+       ],
+       "text": "Trump made up to $15mn on Nvidia shares after Huang’s return ft.trib.al/HsQtgTI"
+      },
+      "likeCount": 379,
+      "replyCount": 28,
+      "repostCount": 266,
+      "quoteCount": 85,
+      "indexedAt": "2026-11-23T22:42:31.246Z",
+      "embeds": [
+       {
+        "external": {
+         "uri": "https://ft.trib.al/HsQtgTI",
+         "title": "Trump made up to $15mn on Nvidia shares after Huang’s return",
+         "description": "Profit on 30% jump in chip group’s share price based on maximum amount US president could have owned in latest disclosure",
+         "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:5u54z2qgkq43dh2nzwzdbbhb/bafkreifw5xiffmxi5m7tjra2own42phynqirmyshbsjkr22fzx37xzkasa"
+        },
+        "$type": "app.bsky.embed.external#view"
+       }
+      ],
+      "$type": "app.bsky.embed.record#viewRecord"
+     },
+     "$type": "app.bsky.embed.record#view"
+    },
+    "bookmarkCount": 6,
+    "replyCount": 5,
+    "repostCount": 46,
+    "likeCount": 291,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-24T01:43:59.342Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 2
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:qnd2lqn52ernybdfonq4mc43/app.bsky.feed.post/3n2z25elqkc2q",
+    "cid": "bafyreicags4finkih3ebd26v7uhbc5ptqrnnk43yhao4fgjok4vunjumky",
+    "author": {
+     "did": "did:plc:qnd2lqn52ernybdfonq4mc43",
+     "handle": "cwarzel.bsky.social",
+     "displayName": "Charlie Warzel",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-27T17:27:27.073Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3m6fv7p4mdl26",
+        "isValid": true,
+        "createdAt": "2025-11-24T22:36:28.696Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T21:10:40.149Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "America has two choices under Nvidia’s market dominance, and both are bad.",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreiaov6hsj5xwd3klqdjlzwxpqwefy5utcan44owvrbnkxwyoogz3fi"
+        },
+        "mimeType": "image/jpeg",
+        "size": 257714
+       },
+       "title": "The Economy Is a Hostage Situation",
+       "uri": "https://www.theatlantic.com/technology/2026/11/ai-hostage-economy-nvidia-huang/689552/?gift=nwn-guseqS6cY1kVeEKZAbpdqxVrx21_dKzB5y-WsIg&utm_source=copy-link&utm_medium=social&utm_campaign=share"
+      }
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://www.theatlantic.com/technology/2026/11/ai-hostage-economy-nvidia-huang/689552/?gift=nwn-guseqS6cY1kVeEKZAbpdqxVrx21_dKzB5y-WsIg&utm_source=copy-link&utm_medium=social&utm_campaign=share"
+        }
+       ],
+       "index": {
+        "byteEnd": 107,
+        "byteStart": 72
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "To quote the president: “When you’re a star, they let you do it.” www.theatlantic.com/technology/2..."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://www.theatlantic.com/technology/2026/11/ai-hostage-economy-nvidia-huang/689552/?gift=nwn-guseqS6cY1kVeEKZAbpdqxVrx21_dKzB5y-WsIg&utm_source=copy-link&utm_medium=social&utm_campaign=share",
+      "title": "The Economy Is a Hostage Situation",
+      "description": "America has two choices under Nvidia’s market dominance, and both are bad.",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:qnd2lqn52ernybdfonq4mc43/bafkreiaov6hsj5xwd3klqdjlzwxpqwefy5utcan44owvrbnkxwyoogz3fi"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 20,
+    "replyCount": 7,
+    "repostCount": 60,
+    "likeCount": 205,
+    "quoteCount": 9,
+    "indexedAt": "2026-11-23T21:10:41.445Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:cuzv6ldf3j4as5giwx53xuak/app.bsky.feed.post/3n2yyifl5dc2k",
+    "cid": "bafyreic273xdclbhses5fumpt2l425s7qds4tisyfj3hs63dhdbs4khkii",
+    "author": {
+     "did": "did:plc:cuzv6ldf3j4as5giwx53xuak",
+     "handle": "jschrinerbriggs.bsky.social",
+     "displayName": "Jacob Schriner-Briggs",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-09-20T22:49:26.209Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T20:41:02.791Z",
+     "embed": {
+      "$type": "app.bsky.embed.record",
+      "record": {
+       "cid": "bafyreig2mwxcdhjjrve44od4vylg4eiqmxyd3pscfdcwwv23chyk3am2ca",
+       "uri": "at://did:plc:qnd2lqn52ernybdfonq4mc43/app.bsky.feed.post/3n2yy5vs6hk2v"
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "\"[W]e all live in an Nvidia-state. What you need to know about living in an Nvidia-state is that it is not a democracy . . . the Nvidia-state governs via the logic of a hostage situation. You have two choices: Let AI rip while tech leaders act with impunity, or watch the economy enter a recession.\""
+    },
+    "embed": {
+     "record": {
+      "uri": "at://did:plc:qnd2lqn52ernybdfonq4mc43/app.bsky.feed.post/3n2yy5vs6hk2v",
+      "cid": "bafyreig2mwxcdhjjrve44od4vylg4eiqmxyd3pscfdcwwv23chyk3am2ca",
+      "author": {
+       "did": "did:plc:qnd2lqn52ernybdfonq4mc43",
+       "handle": "cwarzel.bsky.social",
+       "displayName": "Charlie Warzel",
+       "associated": {
+        "chat": {
+         "allowIncoming": "all"
+        },
+        "activitySubscription": {
+         "allowSubscriptions": "followers"
+        }
+       },
+       "createdAt": "2023-04-27T17:27:27.073Z",
+       "verification": {
+        "verifications": [
+         {
+          "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+          "issuerDisplayName": "Bluesky",
+          "issuerHandle": "bsky.app",
+          "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3m6fv7p4mdl26",
+          "isValid": true,
+          "createdAt": "2025-11-24T22:36:28.696Z"
+         }
+        ],
+        "verifiedStatus": "valid",
+        "trustedVerifierStatus": "none"
+       }
+      },
+      "value": {
+       "$type": "app.bsky.feed.post",
+       "createdAt": "2026-11-23T20:35:10.703Z",
+       "embed": {
+        "$type": "app.bsky.embed.external",
+        "external": {
+         "description": "America has two choices under Nvidia’s market dominance, and both are bad.",
+         "thumb": {
+          "$type": "blob",
+          "ref": {
+           "$link": "bafkreiaov6hsj5xwd3klqdjlzwxpqwefy5utcan44owvrbnkxwyoogz3fi"
+          },
+          "mimeType": "image/jpeg",
+          "size": 257714
+         },
+         "title": "The Economy Is a Hostage Situation",
+         "uri": "https://www.theatlantic.com/technology/2026/11/ai-hostage-economy-nvidia-huang/689552/?gift=nwn-guseqS6cY1kVeEKZAS95G0-s362W8MNnlI9Fss8&utm_source=copy-link&utm_medium=social&utm_campaign=share"
+        }
+       },
+       "facets": [
+        {
+         "features": [
+          {
+           "$type": "app.bsky.richtext.facet#link",
+           "uri": "https://www.theatlantic.com/technology/2026/11/ai-hostage-economy-nvidia-huang/689552/?gift=nwn-guseqS6cY1kVeEKZAS95G0-s362W8MNnlI9Fss8&utm_source=copy-link&utm_medium=social&utm_campaign=share"
+          }
+         ],
+         "index": {
+          "byteEnd": 46,
+          "byteStart": 11
+         }
+        }
+       ],
+       "langs": [
+        "en"
+       ],
+       "text": "blogged it www.theatlantic.com/technology/2..."
+      },
+      "likeCount": 390,
+      "replyCount": 11,
+      "repostCount": 80,
+      "quoteCount": 17,
+      "opThreadPostIndex": 2,
+      "opThreadPostCount": 2,
+      "indexedAt": "2026-11-23T20:35:12.556Z",
+      "embeds": [
+       {
+        "external": {
+         "uri": "https://www.theatlantic.com/technology/2026/11/ai-hostage-economy-nvidia-huang/689552/?gift=nwn-guseqS6cY1kVeEKZAS95G0-s362W8MNnlI9Fss8&utm_source=copy-link&utm_medium=social&utm_campaign=share",
+         "title": "The Economy Is a Hostage Situation",
+         "description": "America has two choices under Nvidia’s market dominance, and both are bad.",
+         "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:qnd2lqn52ernybdfonq4mc43/bafkreiaov6hsj5xwd3klqdjlzwxpqwefy5utcan44owvrbnkxwyoogz3fi"
+        },
+        "$type": "app.bsky.embed.external#view"
+       }
+      ],
+      "$type": "app.bsky.embed.record#viewRecord"
+     },
+     "$type": "app.bsky.embed.record#view"
+    },
+    "bookmarkCount": 32,
+    "replyCount": 16,
+    "repostCount": 113,
+    "likeCount": 411,
+    "quoteCount": 7,
+    "indexedAt": "2026-11-23T20:41:03.152Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:qnd2lqn52ernybdfonq4mc43",
+     "handle": "cwarzel.bsky.social",
+     "displayName": "Charlie Warzel",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-27T17:27:27.073Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3m6fv7p4mdl26",
+        "isValid": true,
+        "createdAt": "2025-11-24T22:36:28.696Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:qnd2lqn52ernybdfonq4mc43/app.bsky.feed.repost/3n2yz22paqc24",
+    "cid": "bafyreifolqd2hlzdkxayungxkmfu2crkt7kketgiemwbvzorkhfuyzimyy",
+    "indexedAt": "2026-11-23T20:50:55.542Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 2
+  }
+ ],
+ "cursor": "2026-11-16T23:43:22.271Z"
+}

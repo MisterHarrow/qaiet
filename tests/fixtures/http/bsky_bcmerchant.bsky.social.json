@@ -1,0 +1,445 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:776hcssquwcv2ihpptzvttxj/app.bsky.feed.post/3n2xakd42e22e",
+    "cid": "bafyreiggp7eo3gzzkzkzqazpfrhu6oxph6aqxcp2ouxak5u2ptqb7d4ffe",
+    "author": {
+     "did": "did:plc:776hcssquwcv2ihpptzvttxj",
+     "handle": "mattseybold.bsky.social",
+     "displayName": "Matt Seybold",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following",
+       "allowGroupInvites": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-06-01T08:58:11.222Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T03:59:57.769Z",
+     "langs": [
+      "en"
+     ],
+     "text": "This👆🏻installment of BitM is quite a ride."
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 1,
+    "likeCount": 3,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-23T03:59:58.243Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:j7tdfjsbop2oq7cghfbdwvqq",
+     "handle": "bcmerchant.bsky.social",
+     "displayName": "Brian Merchant",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-28T01:24:48.451Z"
+    },
+    "uri": "at://did:plc:j7tdfjsbop2oq7cghfbdwvqq/app.bsky.feed.repost/3n2zuw7hmj32n",
+    "cid": "bafyreiebprczmltlupglhdkgbrar5kk2jfbq5it63i5zf5a6mk2z6lhmoq",
+    "indexedAt": "2026-11-24T05:09:51.050Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   },
+   "opThreadPostIndex": 2,
+   "opThreadPostCount": 2
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:776hcssquwcv2ihpptzvttxj/app.bsky.feed.post/3n2x7sv3bws2e",
+    "cid": "bafyreigcbbawglzap47d2j6hrff2qqbdb22hmzy5muqyh2g3h2toghuoam",
+    "author": {
+     "did": "did:plc:776hcssquwcv2ihpptzvttxj",
+     "handle": "mattseybold.bsky.social",
+     "displayName": "Matt Seybold",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following",
+       "allowGroupInvites": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-06-01T08:58:11.222Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T03:46:51.308Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "Two new studies reveal the exploding carbon emissions of the AI industry, while Silicon Valley pushes to kill communities’ means of protesting data centers and the impacts on human health mount.",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreidxq2c7nrajblh7e465saydqdkmjfdd2vmq6a6dfdx7koxb32wssu"
+        },
+        "mimeType": "image/jpeg",
+        "size": 323884
+       },
+       "title": "AI is becoming a disaster for the climate",
+       "uri": "https://open.substack.com/pub/bloodinthemachine/p/ai-is-becoming-a-disaster-for-the?r=hykx&utm_medium=ios"
+      }
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:j7tdfjsbop2oq7cghfbdwvqq"
+        }
+       ],
+       "index": {
+        "byteEnd": 296,
+        "byteStart": 273
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "“The AI industry is on track, by some counts—including McKinsey’s—to generate more emissions than the coal mining industry, or global shipping and aviation. These are two of the most polluting heavy industries in the world, and AI is poised to blow past them.” - @bcmerchant.bsky.social"
+    },
+    "embed": {
+     "external": {
+      "uri": "https://open.substack.com/pub/bloodinthemachine/p/ai-is-becoming-a-disaster-for-the?r=hykx&utm_medium=ios",
+      "title": "AI is becoming a disaster for the climate",
+      "description": "Two new studies reveal the exploding carbon emissions of the AI industry, while Silicon Valley pushes to kill communities’ means of protesting data centers and the impacts on human health mount.",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:776hcssquwcv2ihpptzvttxj/bafkreidxq2c7nrajblh7e465saydqdkmjfdd2vmq6a6dfdx7koxb32wssu"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 27,
+    "replyCount": 3,
+    "repostCount": 54,
+    "likeCount": 113,
+    "quoteCount": 4,
+    "indexedAt": "2026-11-23T03:46:52.341Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:j7tdfjsbop2oq7cghfbdwvqq",
+     "handle": "bcmerchant.bsky.social",
+     "displayName": "Brian Merchant",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-28T01:24:48.451Z"
+    },
+    "uri": "at://did:plc:j7tdfjsbop2oq7cghfbdwvqq/app.bsky.feed.repost/3n2zuvy5teo2g",
+    "cid": "bafyreihmtrfx37c6sn5wuxtniryz2zebnjob637yqlcahnkmjo3tbfkxqa",
+    "indexedAt": "2026-11-24T05:09:43.541Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 2
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:4k4ru3ld2cxz7iuk75qkftrz/app.bsky.feed.post/3n2ybies6hc2j",
+    "cid": "bafyreihlemblocwcud6cfk3yiilkciylo5ocdcvdt2uv26lhm5eomkpgzu",
+    "author": {
+     "did": "did:plc:4k4ru3ld2cxz7iuk75qkftrz",
+     "handle": "nodirtydatacenterdeal.com",
+     "displayName": "No Dirty Data Center Deal!",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2026-10-21T19:40:54.250Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T13:49:25.913Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "Two new studies reveal the exploding carbon emissions of the AI industry, while Silicon Valley pushes to kill communities’ means of protesting data centers and the impacts on human health mount.",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreifgqw4br6nad3i2e4jaey2jmbagkbe5atnwqrsvdvrrwp5ib5kq5a"
+        },
+        "mimeType": "image/jpeg",
+        "size": 276922
+       },
+       "title": "AI is becoming a disaster for the climate",
+       "uri": "https://www.bloodinthemachine.com/p/ai-is-becoming-a-disaster-for-the"
+      }
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:j7tdfjsbop2oq7cghfbdwvqq"
+        }
+       ],
+       "index": {
+        "byteEnd": 232,
+        "byteStart": 209
+       }
+      },
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#tag",
+         "tag": "BAAJA"
+        }
+       ],
+       "index": {
+        "byteEnd": 242,
+        "byteStart": 236
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "\"The tech industry is not just buying more fossil fuel power, it’s proactively working to enact policies that make it cheaper, easier and less democratic a process to build more fossil fuel power plants.\" - @bcmerchant.bsky.social on #BAAJA"
+    },
+    "embed": {
+     "external": {
+      "uri": "https://www.bloodinthemachine.com/p/ai-is-becoming-a-disaster-for-the",
+      "title": "AI is becoming a disaster for the climate",
+      "description": "Two new studies reveal the exploding carbon emissions of the AI industry, while Silicon Valley pushes to kill communities’ means of protesting data centers and the impacts on human health mount.",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:4k4ru3ld2cxz7iuk75qkftrz/bafkreifgqw4br6nad3i2e4jaey2jmbagkbe5atnwqrsvdvrrwp5ib5kq5a"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 6,
+    "replyCount": 0,
+    "repostCount": 20,
+    "likeCount": 46,
+    "quoteCount": 1,
+    "indexedAt": "2026-11-23T13:49:27.553Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:j7tdfjsbop2oq7cghfbdwvqq",
+     "handle": "bcmerchant.bsky.social",
+     "displayName": "Brian Merchant",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-28T01:24:48.451Z"
+    },
+    "uri": "at://did:plc:j7tdfjsbop2oq7cghfbdwvqq/app.bsky.feed.repost/3n2zhuc2xvu2e",
+    "cid": "bafyreie74ul2unbm2q73pdhn3or3wfuqs4banx454dg35j7zyp6dmmrgsa",
+    "indexedAt": "2026-11-24T01:16:08.050Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:ttnsclr4clpx7vh5jpwu6ffi/app.bsky.feed.post/3n2z5b6qyrc2o",
+    "cid": "bafyreihd2b5niwu2jmnmofvu7jy32emnsb72ukcii2nv6gbwwdghlwvlzq",
+    "author": {
+     "did": "did:plc:ttnsclr4clpx7vh5jpwu6ffi",
+     "handle": "paulmwatson.com",
+     "displayName": "Paul Watson 🌍",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-08-04T16:14:36.278Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T22:06:29.474Z",
+     "embed": {
+      "$type": "app.bsky.embed.record",
+      "record": {
+       "cid": "bafyreickwcwsl5g36unp6oismw3etze73rnngvb7wlk3djga5nwnxndw5a",
+       "uri": "at://did:plc:j7tdfjsbop2oq7cghfbdwvqq/app.bsky.feed.post/3n2z54ebei222"
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "Ironic so much AI relies on Kenyan data annotators to teach it to delve, but can't seem to delve into its own environmental impact."
+    },
+    "embed": {
+     "record": {
+      "uri": "at://did:plc:j7tdfjsbop2oq7cghfbdwvqq/app.bsky.feed.post/3n2z54ebei222",
+      "cid": "bafyreickwcwsl5g36unp6oismw3etze73rnngvb7wlk3djga5nwnxndw5a",
+      "author": {
+       "did": "did:plc:j7tdfjsbop2oq7cghfbdwvqq",
+       "handle": "bcmerchant.bsky.social",
+       "displayName": "Brian Merchant",
+       "associated": {
+        "chat": {
+         "allowIncoming": "all"
+        },
+        "activitySubscription": {
+         "allowSubscriptions": "followers"
+        }
+       },
+       "createdAt": "2023-04-28T01:24:48.451Z"
+      },
+      "value": {
+       "$type": "app.bsky.feed.post",
+       "createdAt": "2026-11-23T22:03:47.480Z",
+       "embed": {
+        "$type": "app.bsky.embed.external",
+        "external": {
+         "description": "Two new studies reveal the exploding carbon emissions of the AI industry, while Silicon Valley pushes to kill communities’ means of protesting data centers and the impacts on human health mount.",
+         "thumb": {
+          "$type": "blob",
+          "ref": {
+           "$link": "bafkreifgqw4br6nad3i2e4jaey2jmbagkbe5atnwqrsvdvrrwp5ib5kq5a"
+          },
+          "mimeType": "image/jpeg",
+          "size": 276922
+         },
+         "title": "AI is becoming a disaster for the climate",
+         "uri": "https://www.bloodinthemachine.com/p/ai-is-becoming-a-disaster-for-the"
+        }
+       },
+       "langs": [
+        "en"
+       ],
+       "text": "Data centers in the US account for more carbon emissions than all of Kenya. The AI industry's emissions are on track to eclipse shipping and aviation. And big tech is working with the big oil to make it easier to build data centers and power plants.\n\nAI is becoming a true disaster for the climate."
+      },
+      "likeCount": 234,
+      "replyCount": 8,
+      "repostCount": 117,
+      "quoteCount": 6,
+      "indexedAt": "2026-11-23T22:03:49.241Z",
+      "embeds": [
+       {
+        "external": {
+         "uri": "https://www.bloodinthemachine.com/p/ai-is-becoming-a-disaster-for-the",
+         "title": "AI is becoming a disaster for the climate",
+         "description": "Two new studies reveal the exploding carbon emissions of the AI industry, while Silicon Valley pushes to kill communities’ means of protesting data centers and the impacts on human health mount.",
+         "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:j7tdfjsbop2oq7cghfbdwvqq/bafkreifgqw4br6nad3i2e4jaey2jmbagkbe5atnwqrsvdvrrwp5ib5kq5a"
+        },
+        "$type": "app.bsky.embed.external#view"
+       }
+      ],
+      "$type": "app.bsky.embed.record#viewRecord"
+     },
+     "$type": "app.bsky.embed.record#view"
+    },
+    "bookmarkCount": 2,
+    "replyCount": 1,
+    "repostCount": 9,
+    "likeCount": 31,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-23T22:06:30.142Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:j7tdfjsbop2oq7cghfbdwvqq",
+     "handle": "bcmerchant.bsky.social",
+     "displayName": "Brian Merchant",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-28T01:24:48.451Z"
+    },
+    "uri": "at://did:plc:j7tdfjsbop2oq7cghfbdwvqq/app.bsky.feed.repost/3n2z5ifwpvy24",
+    "cid": "bafyreieer2gs5erejka6nwwu2cev4upbntor6qmalvxgc3wwro3duathgm",
+    "indexedAt": "2026-11-23T22:10:32.047Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:j7tdfjsbop2oq7cghfbdwvqq/app.bsky.feed.post/3n2z54ebei222",
+    "cid": "bafyreickwcwsl5g36unp6oismw3etze73rnngvb7wlk3djga5nwnxndw5a",
+    "author": {
+     "did": "did:plc:j7tdfjsbop2oq7cghfbdwvqq",
+     "handle": "bcmerchant.bsky.social",
+     "displayName": "Brian Merchant",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-28T01:24:48.451Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T22:03:47.480Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "Two new studies reveal the exploding carbon emissions of the AI industry, while Silicon Valley pushes to kill communities’ means of protesting data centers and the impacts on human health mount.",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreifgqw4br6nad3i2e4jaey2jmbagkbe5atnwqrsvdvrrwp5ib5kq5a"
+        },
+        "mimeType": "image/jpeg",
+        "size": 276922
+       },
+       "title": "AI is becoming a disaster for the climate",
+       "uri": "https://www.bloodinthemachine.com/p/ai-is-becoming-a-disaster-for-the"
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "Data centers in the US account for more carbon emissions than all of Kenya. The AI industry's emissions are on track to eclipse shipping and aviation. And big tech is working with the big oil to make it easier to build data centers and power plants.\n\nAI is becoming a true disaster for the climate."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://www.bloodinthemachine.com/p/ai-is-becoming-a-disaster-for-the",
+      "title": "AI is becoming a disaster for the climate",
+      "description": "Two new studies reveal the exploding carbon emissions of the AI industry, while Silicon Valley pushes to kill communities’ means of protesting data centers and the impacts on human health mount.",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:j7tdfjsbop2oq7cghfbdwvqq/bafkreifgqw4br6nad3i2e4jaey2jmbagkbe5atnwqrsvdvrrwp5ib5kq5a"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 16,
+    "replyCount": 8,
+    "repostCount": 117,
+    "likeCount": 234,
+    "quoteCount": 6,
+    "indexedAt": "2026-11-23T22:03:49.241Z"
+   }
+  }
+ ],
+ "cursor": "2026-11-04T17:07:02.959Z"
+}

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns="http://purl.org/rss/1.0/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <channel rdf:about="https://asia.nikkei.com/rss/feed/nar" xml:lang="en-GB">
+    <title>Nikkei Asia</title>
+    <link>https://asia.nikkei.com/</link>
+    <description/>
+    <items>
+      <rdf:Seq>
+        <rdf:li resource="https://asia.nikkei.com/economy/trade/indonesia-eu-trade-deal-sparks-ambitious-hopes-and-transition-concerns"/>
+        <rdf:li resource="https://asia.nikkei.com/spotlight/supply-chain/asia-s-nvidia-suppliers-give-cautious-welcome-to-huang-return"/>
+        <rdf:li resource="https://asia.nikkei.com/business/tech/semiconductors/us-to-place-megaspeed-on-trade-blacklist-amid-nvidia-scandal"/>
+        <rdf:li resource="https://asia.nikkei.com/business/transportation/vietnam-awards-400m-high-speed-rail-study-to-french-led-consortium"/>
+        <rdf:li resource="https://asia.nikkei.com/business/markets/asian-stocks-leap-on-return-of-nvidia-s-jensen-huang"/>
+        <rdf:li resource="https://asia.nikkei.com/spotlight/podcasts/podcast-tech-latest/anthropic-ipo-raises-the-bar-for-asia-s-ai-labs"/>
+        <rdf:li resource="https://asia.nikkei.com/business/automobiles/electric-vehicles/eu-s-ev-incentives-to-exclude-japan-made-cars-even-in-amended-proposal"/>
+        <rdf:li resource="https://asia.nikkei.com/business/tech/semiconductors/huang-s-nvidia-return-sets-up-clash-with-china-hawks-in-congress"/>
+        <rdf:li resource="https://asia.nikkei.com/business/technology/nikkei-asia-forum-the-global-chip-game-our-predictions-for-2027"/>
+        <rdf:li resource="https://asia.nikkei.com/economy/singapore-gdp-grows-6.1-in-q3-as-ai-demand-stays-strong"/>
+        <rdf:li resource="https://asia.nikkei.com/politics/defense/japan-to-bolster-coast-guard-with-patrol-boats-drones-to-counter-china"/>
+        <rdf:li resource="https://asia.nikkei.com/spotlight/asean-money/southeast-asia-s-concert-ticket-wars-turn-malaysian-fans-into-concierges"/>
+        <rdf:li resource="https://asia.nikkei.com/business/energy/tokyo-power-provider-to-unify-cleanup-of-fukushima-nuclear-accident-site"/>
+        <rdf:li resource="https://asia.nikkei.com/politics/japan-s-defense-spending-pitted-against-sales-tax-cut-in-budget-tug-of-war"/>
+        <rdf:li resource="https://asia.nikkei.com/business/technology/japan-backs-kawasaki-heavy-s-sea-drone-trial-for-offshore-wind-inspections"/>
+        <rdf:li resource="https://asia.nikkei.com/opinion/us-democrats-sweep-narrows-trump-s-iran-options-oil-markets-murky"/>
+        <rdf:li resource="https://asia.nikkei.com/business/transportation/japan-trading-houses-grow-aircraft-part-ties-as-airlines-rely-on-aging-jets"/>
+        <rdf:li resource="https://asia.nikkei.com/business/tech/semiconductors/nvidia-reinstates-jensen-huang-as-ceo"/>
+        <rdf:li resource="https://asia.nikkei.com/politics/defense/china-expands-nuclear-submarine-fleet-with-us-strike-capability"/>
+        <rdf:li resource="https://asia.nikkei.com/business/pharmaceuticals/japanese-state-backed-lender-to-invest-in-late-stage-drug-trials"/>
+        <rdf:li resource="https://asia.nikkei.com/business/finance/japan-s-sumitomo-creates-fund-to-bring-ai-to-smaller-businesses"/>
+        <rdf:li resource="https://asia.nikkei.com/business/technology/artificial-intelligence/anthropic-claude-use-by-japanese-companies-up-10-fold-in-1-year"/>
+        <rdf:li resource="https://asia.nikkei.com/politics/indonesia-s-ex-foreign-minister-agriculture-minister-named-vp-candidates"/>
+        <rdf:li resource="https://asia.nikkei.com/politics/international-relations/india-announces-1.6bn-flood-recovery-package-for-nepal"/>
+        <rdf:li resource="https://asia.nikkei.com/economy/fires/indonesia-searches-for-34-missing-workers-after-candy-factory-fire"/>
+        <rdf:li resource="https://asia.nikkei.com/spotlight/society/crime/indonesia-watchdogs-decry-tax-crime-gap-in-forfeiture-law"/>
+        <rdf:li resource="https://asia.nikkei.com/politics/pakistan-s-push-to-split-provinces-hits-resistance-from-bhutto-s-party"/>
+        <rdf:li resource="https://asia.nikkei.com/business/consumer/japan-s-ricoh-shoots-for-younger-buyers-with-stripped-down-cameras"/>
+        <rdf:li resource="https://asia.nikkei.com/business/energy/us-india-energy-ties-tighten-as-new-delhi-snaps-up-venezuelan-oil"/>
+        <rdf:li resource="https://asia.nikkei.com/spotlight/environment/japan-decarbonization-agency-invests-in-us-metal-recycling-startup"/>
+        <rdf:li resource="https://asia.nikkei.com/business/markets/trading-asia/crypto-exchange-s-collapse-hits-chinese-investors-hunting-for-yield"/>
+        <rdf:li resource="https://asia.nikkei.com/opinion/japan-s-new-spy-bureau-faces-a-long-road-to-five-eyes"/>
+        <rdf:li resource="https://asia.nikkei.com/business/automobiles/chinese-automakers-lead-japanese-rivals-in-39-markets-aided-by-evs"/>
+        <rdf:li resource="https://asia.nikkei.com/business/materials/corporate-japan-races-to-revive-rare-earth-supply-chain-amid-china-curbs"/>
+        <rdf:li resource="https://asia.nikkei.com/spotlight/your-week-in-asia/laos-least-developed-status-shift-tata-meeting-taiwan-local-elections"/>
+        <rdf:li resource="https://asia.nikkei.com/economy/demography/world-bank-s-india-poverty-estimates-questioned-over-scale-of-gains"/>
+        <rdf:li resource="https://asia.nikkei.com/business/food-beverage/the-ramen-lectures-japan-company-tries-new-expansion-strategy"/>
+        <rdf:li resource="https://asia.nikkei.com/business/media-entertainment/hello-kitty-owner-sanrio-bets-on-games-to-expand-global-reach"/>
+        <rdf:li resource="https://asia.nikkei.com/business/travel-leisure/restored-okinawa-castle-to-reopen-with-extensive-fire-safety-measures"/>
+        <rdf:li resource="https://asia.nikkei.com/business/media-entertainment/ai-good-for-business-but-may-sap-joy-of-creation-game-creator-hideo-kojima"/>
+        <rdf:li resource="https://asia.nikkei.com/life-arts/life/destinations/bangkok-revisited-fresh-finds-and-old-favorites"/>
+        <rdf:li resource="https://asia.nikkei.com/opinion/bro-hugs-no-deals-why-shenzhen-was-a-win-for-beijing"/>
+        <rdf:li resource="https://asia.nikkei.com/politics/defense/japan-weighs-scaling-back-missile-and-warship-purchases"/>
+        <rdf:li resource="https://asia.nikkei.com/business/energy/global-crude-exports-hit-record-high-despite-hormuz-closure"/>
+        <rdf:li resource="https://asia.nikkei.com/business/companies/japan-stamp-maker-stomps-into-ai-realm-by-authenticating-videos-on-x"/>
+        <rdf:li resource="https://asia.nikkei.com/spotlight/comment/indonesian-leader-chases-sukarno-s-phantom-with-defiant-posture"/>
+        <rdf:li resource="https://asia.nikkei.com/editor-s-picks/interview/us-japan-should-lead-next-gen-transportation-trump-s-ex-transport-chief"/>
+        <rdf:li resource="https://asia.nikkei.com/life-arts/life/japan-s-listening-bars-find-a-global-audience"/>
+        <rdf:li resource="https://asia.nikkei.com/editor-s-picks/interview/peru-can-be-japan-s-gateway-for-south-america-investment-president-says"/>
+        <rdf:li resource="https://asia.nikkei.com/business/china-tech/chinese-3d-printer-maker-bambu-lab-scales-up-production-in-shenzhen"/>
+      </rdf:Seq>
+    </items>
+  </channel>
+  <item rdf:about="https://asia.nikkei.com/economy/trade/indonesia-eu-trade-deal-sparks-ambitious-hopes-and-transition-concerns">
+    <title><![CDATA[Indonesia-EU trade deal sparks 'ambitious' hopes and transition concerns]]></title>
+    <link>https://asia.nikkei.com/economy/trade/indonesia-eu-trade-deal-sparks-ambitious-hopes-and-transition-concerns</link>
+  </item>
+  <item rdf:about="https://asia.nikkei.com/spotlight/supply-chain/asia-s-nvidia-suppliers-give-cautious-welcome-to-huang-return">
+    <title><![CDATA[Asia's Nvidia suppliers give cautious welcome to Huang return]]></title>
+    <link>https://asia.nikkei.com/spotlight/supply-chain/asia-s-nvidia-suppliers-give-cautious-welcome-to-huang-return</link>
+  </item>
+  <item rdf:about="https://asia.nikkei.com/business/tech/semiconductors/us-to-place-megaspeed-on-trade-blacklist-amid-nvidia-scandal">
+    <title><![CDATA[US to place Megaspeed on trade blacklist amid Nvidia scandal]]></title>
+    <link>https://asia.nikkei.com/business/tech/semiconductors/us-to-place-megaspeed-on-trade-blacklist-amid-nvidia-scandal</link>
+  </item>
+  <item rdf:about="https://asia.nikkei.com/business/transportation/vietnam-awards-400m-high-speed-rail-study-to-french-led-consortium">
+    <title><![CDATA[Vietnam awards $400m high-speed rail study to French-led consortium]]></title>
+    <link>https://asia.nikkei.com/business/transportation/vietnam-awards-400m-high-speed-rail-study-to-french-led-consortium</link>
+  </item>
+  <item rdf:about="https://asia.nikkei.com/business/markets/asian-stocks-leap-on-return-of-nvidia-s-jensen-huang">
+    <title><![CDATA[Asian stocks leap on return of Nvidia's Jensen Huang]]></title>
+    <link>https://asia.nikkei.com/business/markets/asian-stocks-leap-on-return-of-nvidia-s-jensen-huang</link>
+  </item>
+</rdf:RDF>

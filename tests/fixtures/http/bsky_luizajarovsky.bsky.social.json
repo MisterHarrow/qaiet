@@ -1,0 +1,341 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:5cgsecd46mmzvlponsqwr6v7/app.bsky.feed.post/3n2yjxx6ubk2g",
+    "cid": "bafyreidqv6lpfb6niilidwodq4ju4vqpc6hyokfyqgwfff2gtpaaion6z4",
+    "author": {
+     "did": "did:plc:5cgsecd46mmzvlponsqwr6v7",
+     "handle": "luizajarovsky.bsky.social",
+     "displayName": "Luiza Jarovsky, PhD",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-12-30T18:19:31.784Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T16:21:18.451Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "",
+        "aspectRatio": {
+         "height": 1350,
+         "width": 1080
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreihwoqkeldb7kf7go2azug3vwhc2xvthyqd3aclasajinto4umonre"
+         },
+         "mimeType": "image/jpeg",
+         "size": 952172
+        }
+       }
+      ]
+     },
+     "langs": [
+      "pt"
+     ],
+     "text": "🚨 California’s governor announced plans to STRENGTHEN the state’s AI safety framework after new recommendations calling for:\n\n- mandatory AI safety standards\n- independent oversight\n- emergency shutdown authority\n- and limits on recursive self-improvement\n\nFull article below."
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:5cgsecd46mmzvlponsqwr6v7/bafkreihwoqkeldb7kf7go2azug3vwhc2xvthyqd3aclasajinto4umonre",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:5cgsecd46mmzvlponsqwr6v7/bafkreihwoqkeldb7kf7go2azug3vwhc2xvthyqd3aclasajinto4umonre",
+       "alt": "",
+       "aspectRatio": {
+        "height": 1350,
+        "width": 1080
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 1,
+    "repostCount": 0,
+    "likeCount": 3,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-23T16:21:20.943Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 2
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:5cgsecd46mmzvlponsqwr6v7/app.bsky.feed.post/3n2trm3etsk2m",
+    "cid": "bafyreihsqxtswyhicmofytkv4r7d4a7xs5fmhg3tnjjdtjtej2oub4zmeu",
+    "author": {
+     "did": "did:plc:5cgsecd46mmzvlponsqwr6v7",
+     "handle": "luizajarovsky.bsky.social",
+     "displayName": "Luiza Jarovsky, PhD",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-12-30T18:19:31.784Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-21T18:54:31.425Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "",
+        "aspectRatio": {
+         "height": 775,
+         "width": 1080
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreie5zpohenz4uxqau35snwjc2io3bdpujlfypmarbq5uy7qfbfg6uu"
+         },
+         "mimeType": "image/jpeg",
+         "size": 266201
+        }
+       }
+      ]
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "Geoffrey has a point."
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:5cgsecd46mmzvlponsqwr6v7/bafkreie5zpohenz4uxqau35snwjc2io3bdpujlfypmarbq5uy7qfbfg6uu",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:5cgsecd46mmzvlponsqwr6v7/bafkreie5zpohenz4uxqau35snwjc2io3bdpujlfypmarbq5uy7qfbfg6uu",
+       "alt": "",
+       "aspectRatio": {
+        "height": 775,
+        "width": 1080
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 1,
+    "replyCount": 1,
+    "repostCount": 16,
+    "likeCount": 32,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-21T18:54:35.051Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:5cgsecd46mmzvlponsqwr6v7/app.bsky.feed.post/3n2qshbizlc2s",
+    "cid": "bafyreiao3l2gu74oiii6j2ff425ro74uvq5kcph7njbid4xzlt45bulqfe",
+    "author": {
+     "did": "did:plc:5cgsecd46mmzvlponsqwr6v7",
+     "handle": "luizajarovsky.bsky.social",
+     "displayName": "Luiza Jarovsky, PhD",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-12-30T18:19:31.784Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-20T14:31:44.614Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "",
+        "aspectRatio": {
+         "height": 1350,
+         "width": 1080
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreichq2h3sdsf7dk2ra5bd7bg7a6y7ytjsslsaqa3tq6m5qvvp3niza"
+         },
+         "mimeType": "image/jpeg",
+         "size": 760779
+        }
+       }
+      ]
+     },
+     "langs": [
+      "pt"
+     ],
+     "text": "🚨 America's AI safety rules are about to change, and a new bill reveals just how far federal oversight could go (and that's GREAT news).\n\nI predict the U.S. will soon regulate AI much more thoroughly and strictly than the EU, at both the state and federal levels.\n\n👉 My full article below."
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:5cgsecd46mmzvlponsqwr6v7/bafkreichq2h3sdsf7dk2ra5bd7bg7a6y7ytjsslsaqa3tq6m5qvvp3niza",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:5cgsecd46mmzvlponsqwr6v7/bafkreichq2h3sdsf7dk2ra5bd7bg7a6y7ytjsslsaqa3tq6m5qvvp3niza",
+       "alt": "",
+       "aspectRatio": {
+        "height": 1350,
+        "width": 1080
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 1,
+    "replyCount": 1,
+    "repostCount": 1,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-20T14:31:47.146Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 2
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:5cgsecd46mmzvlponsqwr6v7/app.bsky.feed.post/3n2oie6kcls2e",
+    "cid": "bafyreig5qa4vf4wgprfxoteg4hblj2w5bzmouwfgfb2q7wztv5nwuayafi",
+    "author": {
+     "did": "did:plc:5cgsecd46mmzvlponsqwr6v7",
+     "handle": "luizajarovsky.bsky.social",
+     "displayName": "Luiza Jarovsky, PhD",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-12-30T18:19:31.784Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-19T16:25:43.956Z",
+     "embed": {
+      "$type": "app.bsky.embed.video",
+      "aspectRatio": {
+       "height": 1080,
+       "width": 608
+      },
+      "presentation": "default",
+      "video": {
+       "$type": "blob",
+       "ref": {
+        "$link": "bafkreic6r7tjx2brkf2jo3wy25vgwwfebkzaok343n5fhx2mqmrby6ak3q"
+       },
+       "mimeType": "video/mp4",
+       "size": 30068332
+      }
+     },
+     "langs": [
+      "pt"
+     ],
+     "text": "As AI cyberattacks continue to rise (and everyone is distracted by Anthropic's IPO), the public should know that AI has a major transparency problem. I explain in 1 minute:"
+    },
+    "embed": {
+     "cid": "bafkreic6r7tjx2brkf2jo3wy25vgwwfebkzaok343n5fhx2mqmrby6ak3q",
+     "playlist": "https://video.bsky.app/watch/did%3Aplc%3A5cgsecd46mmzvlponsqwr6v7/bafkreic6r7tjx2brkf2jo3wy25vgwwfebkzaok343n5fhx2mqmrby6ak3q/playlist.m3u8",
+     "aspectRatio": {
+      "height": 1080,
+      "width": 608
+     },
+     "presentation": "default",
+     "$type": "app.bsky.embed.video#view"
+    },
+    "bookmarkCount": 2,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 1,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-19T16:25:47.052Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:5cgsecd46mmzvlponsqwr6v7/app.bsky.feed.post/3n2j5yy3bgk2s",
+    "cid": "bafyreidebqgro7zlxg7ukoxjwso4u47yl5vbvyiyp6256rkvczvfsdjj7i",
+    "author": {
+     "did": "did:plc:5cgsecd46mmzvlponsqwr6v7",
+     "handle": "luizajarovsky.bsky.social",
+     "displayName": "Luiza Jarovsky, PhD",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-12-30T18:19:31.784Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-17T13:37:11.961Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "",
+        "aspectRatio": {
+         "height": 985,
+         "width": 2000
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreid3ncun6kxfvx5wz7kw7gfodbh5icwjzxvoemiwmjvwx2yoabsfw4"
+         },
+         "mimeType": "image/jpeg",
+         "size": 627386
+        }
+       }
+      ]
+     },
+     "langs": [
+      "pt"
+     ],
+     "text": "United States: \"We are not seeing the footprints of a cyberattack\""
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:5cgsecd46mmzvlponsqwr6v7/bafkreid3ncun6kxfvx5wz7kw7gfodbh5icwjzxvoemiwmjvwx2yoabsfw4",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:5cgsecd46mmzvlponsqwr6v7/bafkreid3ncun6kxfvx5wz7kw7gfodbh5icwjzxvoemiwmjvwx2yoabsfw4",
+       "alt": "",
+       "aspectRatio": {
+        "height": 985,
+        "width": 2000
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 1,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-17T13:37:14.656Z"
+   }
+  }
+ ],
+ "cursor": "2026-10-23T14:18:55.268Z"
+}

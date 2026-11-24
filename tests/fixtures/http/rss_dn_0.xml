@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>DN.se - Dagens Nyheter</title>
+    <link>https://www.dn.se/</link>
+    <description>Dagens Nyheter – en trovärdig och kvalitativ nyhetskälla med prisad bildjournalistik och granskningar som gör skillnad.</description>
+    <copyright>© Dagens Nyheter AB 2026</copyright>
+    <language>sv-se</language>
+    <image>
+      <title>DN.se - Dagens Nyheter</title>
+      <url>https://static.bonniernews.se/gcs/bilder/dn-asset/dn-red-192x192.png</url>
+      <link>https://www.dn.se/</link>
+    </image>
+    <item>
+      <title>Så bryter du höstdepressionen</title>
+      <link>https://www.dn.se/ekonomi/sa-bryter-du-hostdepressionen/</link>
+      <description>Tröttheten tar över, vännerna väljs bort och tv-soffan blir allt svårare att lämna. För den som drabbas av årstidsbunden depression kan höstens mörker sätta i gång en nedåtgående spiral. Psykologen och författaren Agnes Mellstrand berättar hur den kan brytas, steg för steg.</description>
+      <guid>https://www.dn.se/ekonomi/sa-bryter-du-hostdepressionen/</guid>
+      <pubDate>Tue, 24 Nov 2026 08:44:22 +0100</pubDate>
+      <dc:creator>Jill Bederoff</dc:creator>
+      <media:content type="image/jpeg" url="https://static.bonniernews.se/ba/a09a67ea-831f-4231-92f2-d05ac4b04445.jpeg?io=1&amp;width=1000">
+        <media:credit scheme="urn:ebu"></media:credit>
+        <media:description>Dagsljus, träning och sociala aktiviteter kan hjälpa till att bryta höstdepression, säger psykologen och författaren Agnes Mellstrand</media:description>
+      </media:content>
+    </item>
+    <item>
+      <title>Tio år efter fredsavtalet – här har kriget aldrig tagit slut</title>
+      <link>https://www.dn.se/varlden/tio-ar-efter-fredsavtalet-har-har-kriget-aldrig-tagit-slut/</link>
+      <description>RIO DE JANEIRO. I dag är det tio år sedan fredsavtalet med Farc-gerillan undertecknades i Colombia. Men i provinsen Chocó vid Stillahavskusten har kriget aldrig tagit slut. Andra väpnade grupper har fyllt tomrummet efter Farc och fortsätter att värva ungdomssoldater.</description>
+      <guid>https://www.dn.se/varlden/tio-ar-efter-fredsavtalet-har-har-kriget-aldrig-tagit-slut/</guid>
+      <pubDate>Tue, 24 Nov 2026 08:34:52 +0100</pubDate>
+      <dc:creator>Henrik Brandão Jönsson</dc:creator>
+      <media:content type="image/jpeg" url="https://static.bonniernews.se/ba/f335725f-3046-4247-b32b-f08fd1cd9bbf.jpeg?io=1&amp;width=1000">
+        <media:credit scheme="urn:ebu">Privat</media:credit>
+        <media:description>Edinson Cuesta Roja, 30, är ordförande för en organisation som arbetar mot rekrytering av ungdomar till väpnade grupper.</media:description>
+      </media:content>
+    </item>
+    <item>
+      <title>Danjel Nam: Sanningen om de adopterade finns i en arkivkartong som inte får öppnas</title>
+      <link>https://www.dn.se/kultur/danjel-nam-sanningen-om-de-adopterade-finns-i-en-arkivkartong-som-inte-far-oppnas/</link>
+      <description>I Sydkorea blev adoptioner ett billigt alternativ till välfärdssystem. Men ”hittebarnen” hade ofta en mamma. Danjel Nam skriver om att återvända till landet där han föddes i jakt på försoning.</description>
+      <guid>https://www.dn.se/kultur/danjel-nam-sanningen-om-de-adopterade-finns-i-en-arkivkartong-som-inte-far-oppnas/</guid>
+      <pubDate>Tue, 24 Nov 2026 08:22:44 +0100</pubDate>
+      <media:content type="image/jpeg" url="https://static.bonniernews.se/ba/3cf564bc-113f-4b57-9025-53a375dcb45c.jpeg?io=1&amp;width=1000">
+        <media:credit scheme="urn:ebu">Ahn Young-joon/AP</media:credit>
+        <media:description>I staden Paju finns nu en vägg med namn på människor som adopterats från Sydkorea.</media:description>
+      </media:content>
+    </item>
+    <item>
+      <title>Ranta: Plötsligt blev jag en gammelmormor och ”vanilj”</title>
+      <link>https://www.dn.se/kultur/ranta-plotsligt-blev-jag-en-gammelmormor-och-vanilj/</link>
+      <description>Ranta sitter yrvaken vid frukostbordet. Och råkar få en sexartikel upptryckt i ansiktet. Hur kommer det sig att vi pratar så mycket om sex – men så lite om ömhet?</description>
+      <guid>https://www.dn.se/kultur/ranta-plotsligt-blev-jag-en-gammelmormor-och-vanilj/</guid>
+      <pubDate>Tue, 24 Nov 2026 07:30:00 +0100</pubDate>
+      <dc:creator>Nadia Jebril</dc:creator>
+      <media:content type="image/jpeg" url="https://static.bonniernews.se/ba/dbfa965b-6fb9-44a5-b5b3-2c0d778a602e.jpeg?io=1&amp;width=1000">
+        <media:credit scheme="urn:ebu">Alamy</media:credit>
+        <media:description>Klassisk ömhet.</media:description>
+      </media:content>
+    </item>
+    <item>
+      <title>Nathan Shachar: Förmågan att skämmas är demokratins viktigaste beståndsdel</title>
+      <link>https://www.dn.se/ledare/nathan-shachar-formagan-att-skammas-ar-demokratins-viktigaste-bestandsdel/</link>
+      <description>Protesterna som har urartat runtom i Europa sägs bero på att upploppsmakarna saknar resurser. Men påståendet tål inte närmare i granskning. KOLUMNEN. Nathan Shachar är DN:s korrespondent i Jerusalem, författare och fristående kolumnist på ledarsidan.</description>
+      <guid>https://www.dn.se/ledare/nathan-shachar-formagan-att-skammas-ar-demokratins-viktigaste-bestandsdel/</guid>
+      <pubDate>Tue, 24 Nov 2026 07:26:05 +0100</pubDate>
+      <dc:creator>Nathan Shachar</dc:creator>
+      <media:content type="image/jpeg" url="https://static.bonniernews.se/ba/34585088-dd7c-4125-baf8-52d4b7d693a5.jpeg?io=1&amp;width=1000">
+        <media:credit scheme="urn:ebu">Christophe Archambault/AFP</media:credit>
+        <media:description>November i Paris.</media:description>
+      </media:content>
+    </item>
+  </channel>
+</rss>

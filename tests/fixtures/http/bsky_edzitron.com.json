@@ -1,0 +1,656 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:qc6xzgctorfsm35w6i3vdebx/app.bsky.feed.post/3n325xs2ojc2s",
+    "cid": "bafyreig7wxvueerqn7z4krqmvtxbw6xztqtswx5dbjwwmadm7eivtf6huy",
+    "author": {
+     "did": "did:plc:qc6xzgctorfsm35w6i3vdebx",
+     "handle": "edzitron.com",
+     "displayName": "Ed Zitron",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "none"
+      }
+     },
+     "createdAt": "2023-04-25T19:18:06.530Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lsurwobudr26",
+        "isValid": true,
+        "createdAt": "2025-07-01T03:45:20.965Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-24T07:51:47.650Z",
+     "langs": [
+      "en"
+     ],
+     "text": "really enjoying GTA6, it's very well made, looks great, and so customizable that it handles exactly how I want it to, with plenty of quality of life features too. Didn't really pay attention to anything about it before it came out and have been delighted. Autodrive rocks"
+    },
+    "bookmarkCount": 3,
+    "replyCount": 4,
+    "repostCount": 1,
+    "likeCount": 125,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-24T07:51:48.145Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:qc6xzgctorfsm35w6i3vdebx/app.bsky.feed.post/3n2zvxp5vek2o",
+    "cid": "bafyreifldnzay5r7wefanylpvuwn3uxprrk4jw2ogc34o2wthkjh5dqhby",
+    "author": {
+     "did": "did:plc:qc6xzgctorfsm35w6i3vdebx",
+     "handle": "edzitron.com",
+     "displayName": "Ed Zitron",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "none"
+      }
+     },
+     "createdAt": "2023-04-25T19:18:06.530Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lsurwobudr26",
+        "isValid": true,
+        "createdAt": "2025-07-01T03:45:20.965Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-24T05:28:34.672Z",
+     "embed": {
+      "$type": "app.bsky.embed.record",
+      "record": {
+       "cid": "bafyreifvkbkxmjidcqsvmjfthrw4afivzw2nskbs6zxdpacme7d4rzuf5i",
+       "uri": "at://did:plc:qc6xzgctorfsm35w6i3vdebx/app.bsky.feed.post/3n2zjpj4cfc2f"
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "I have heard from a lot of people today who are scared about this being some sort of salve for the AI industry. This is an act of desperation that threatens to fracture the GOP and is months from dealing with a Democrat majority, all as the existential economic threats multiply"
+    },
+    "embed": {
+     "record": {
+      "uri": "at://did:plc:qc6xzgctorfsm35w6i3vdebx/app.bsky.feed.post/3n2zjpj4cfc2f",
+      "cid": "bafyreifvkbkxmjidcqsvmjfthrw4afivzw2nskbs6zxdpacme7d4rzuf5i",
+      "author": {
+       "did": "did:plc:qc6xzgctorfsm35w6i3vdebx",
+       "handle": "edzitron.com",
+       "displayName": "Ed Zitron",
+       "associated": {
+        "chat": {
+         "allowIncoming": "all"
+        },
+        "activitySubscription": {
+         "allowSubscriptions": "none"
+        }
+       },
+       "createdAt": "2023-04-25T19:18:06.530Z",
+       "verification": {
+        "verifications": [
+         {
+          "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+          "issuerDisplayName": "Bluesky",
+          "issuerHandle": "bsky.app",
+          "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lsurwobudr26",
+          "isValid": true,
+          "createdAt": "2025-07-01T03:45:20.965Z"
+         }
+        ],
+        "verifiedStatus": "valid",
+        "trustedVerifierStatus": "none"
+       }
+      },
+      "value": {
+       "$type": "app.bsky.feed.post",
+       "createdAt": "2026-11-24T01:49:14.993Z",
+       "embed": {
+        "$type": "app.bsky.embed.recordWithMedia",
+        "media": {
+         "$type": "app.bsky.embed.images",
+         "images": [
+          {
+           "alt": "They are going to run this thing into the ground, and do everything they can to pretend that we’re “back on track,” whatever that means. This situation will embolden them to take more risk, burn more money, ignore more warnings, be more brazen, and burn themselves out far faster and harder than you’d ever imagine. And when you listen to them talk, they speak from a place of fear and the mindset of peasants, desperate to kiss up to whatever authority figure they see as most dominant at any given …",
+           "aspectRatio": {
+            "height": 1308,
+            "width": 2172
+           },
+           "image": {
+            "$type": "blob",
+            "ref": {
+             "$link": "bafkreibpzll6uw7tb2nhtg34gpxshqaw3iojkyqh4ulqofshjvd6puuvk4"
+            },
+            "mimeType": "image/jpeg",
+            "size": 843746
+           }
+          }
+         ]
+        },
+        "record": {
+         "$type": "app.bsky.embed.record",
+         "record": {
+          "cid": "bafyreibyvrqsgaigx6maw3obgkeeiod7dxz7e4gd6wnssjt3ehpgvrkw4q",
+          "uri": "at://did:plc:qc6xzgctorfsm35w6i3vdebx/app.bsky.feed.post/3n2zjhsookc2f"
+         }
+        }
+       },
+       "langs": [
+        "en"
+       ],
+       "text": "Tomorrow's newsletter: the pervert bounce doesn't change a thing - it doesn't make OpenAI more solvent, it doesn't fix the funding problems, it doesn't fix Anthropic's stock, and it all closed a loophole worth $44bn+ to NVIDIA.\n\nThe worst people in the tech industry are scared. Keep pushing."
+      },
+      "likeCount": 1359,
+      "replyCount": 33,
+      "repostCount": 268,
+      "quoteCount": 13,
+      "indexedAt": "2026-11-24T01:49:18.347Z",
+      "embeds": [
+       {
+        "media": {
+         "images": [
+          {
+           "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:qc6xzgctorfsm35w6i3vdebx/bafkreibpzll6uw7tb2nhtg34gpxshqaw3iojkyqh4ulqofshjvd6puuvk4",
+           "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:qc6xzgctorfsm35w6i3vdebx/bafkreibpzll6uw7tb2nhtg34gpxshqaw3iojkyqh4ulqofshjvd6puuvk4",
+           "alt": "They are going to run this thing into the ground, and do everything they can to pretend that we’re “back on track,” whatever that means. This situation will embolden them to take more risk, burn more money, ignore more warnings, be more brazen, and burn themselves out far faster and harder than you’d ever imagine. And when you listen to them talk, they speak from a place of fear and the mindset of peasants, desperate to kiss up to whatever authority figure they see as most dominant at any given …",
+           "aspectRatio": {
+            "height": 1308,
+            "width": 2172
+           }
+          }
+         ],
+         "$type": "app.bsky.embed.images#view"
+        },
+        "record": {
+         "record": {
+          "uri": "at://did:plc:qc6xzgctorfsm35w6i3vdebx/app.bsky.feed.post/3n2zjhsookc2f",
+          "cid": "bafyreibyvrqsgaigx6maw3obgkeeiod7dxz7e4gd6wnssjt3ehpgvrkw4q",
+          "author": {
+           "did": "did:plc:qc6xzgctorfsm35w6i3vdebx",
+           "handle": "edzitron.com",
+           "displayName": "Ed Zitron",
+           "associated": {
+            "chat": {
+             "allowIncoming": "all"
+            },
+            "activitySubscription": {
+             "allowSubscriptions": "none"
+            }
+           },
+           "createdAt": "2023-04-25T19:18:06.530Z",
+           "verification": {
+            "verifications": [
+             {
+              "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+              "issuerDisplayName": "Bluesky",
+              "issuerHandle": "bsky.app",
+              "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lsurwobudr26",
+              "isValid": true,
+              "createdAt": "2025-07-01T03:45:20.965Z"
+             }
+            ],
+            "verifiedStatus": "valid",
+            "trustedVerifierStatus": "none"
+           }
+          },
+          "value": {
+           "$type": "app.bsky.feed.post",
+           "createdAt": "2026-11-24T01:44:56.597Z",
+           "embed": {
+            "$type": "app.bsky.embed.images",
+            "images": [
+             {
+              "alt": "pages 5 words 2370 characters 13839 (word count of a newsletter)",
+              "aspectRatio": {
+               "height": 694,
+               "width": 752
+              },
+              "image": {
+               "$type": "blob",
+               "ref": {
+                "$link": "bafkreia67hdyzoj3ry7se5ow5wau52xelzv5d655msmzi55lswdk3fa67q"
+               },
+               "mimeType": "image/jpeg",
+               "size": 74803
+              }
+             }
+            ]
+           },
+           "langs": [
+            "en"
+           ],
+           "text": "fuck it"
+          },
+          "likeCount": 512,
+          "replyCount": 28,
+          "repostCount": 6,
+          "quoteCount": 3,
+          "indexedAt": "2026-11-24T01:44:57.845Z",
+          "$type": "app.bsky.embed.record#viewRecord"
+         }
+        },
+        "$type": "app.bsky.embed.recordWithMedia#view"
+       }
+      ],
+      "$type": "app.bsky.embed.record#viewRecord"
+     },
+     "$type": "app.bsky.embed.record#view"
+    },
+    "bookmarkCount": 41,
+    "replyCount": 23,
+    "repostCount": 187,
+    "likeCount": 962,
+    "quoteCount": 5,
+    "indexedAt": "2026-11-24T05:28:35.145Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 4
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:qc6xzgctorfsm35w6i3vdebx/app.bsky.feed.post/3n2zjpj4cfc2f",
+    "cid": "bafyreifvkbkxmjidcqsvmjfthrw4afivzw2nskbs6zxdpacme7d4rzuf5i",
+    "author": {
+     "did": "did:plc:qc6xzgctorfsm35w6i3vdebx",
+     "handle": "edzitron.com",
+     "displayName": "Ed Zitron",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "none"
+      }
+     },
+     "createdAt": "2023-04-25T19:18:06.530Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lsurwobudr26",
+        "isValid": true,
+        "createdAt": "2025-07-01T03:45:20.965Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-24T01:49:14.993Z",
+     "embed": {
+      "$type": "app.bsky.embed.recordWithMedia",
+      "media": {
+       "$type": "app.bsky.embed.images",
+       "images": [
+        {
+         "alt": "They are going to run this thing into the ground, and do everything they can to pretend that we’re “back on track,” whatever that means. This situation will embolden them to take more risk, burn more money, ignore more warnings, be more brazen, and burn themselves out far faster and harder than you’d ever imagine. And when you listen to them talk, they speak from a place of fear and the mindset of peasants, desperate to kiss up to whatever authority figure they see as most dominant at any given …",
+         "aspectRatio": {
+          "height": 1308,
+          "width": 2172
+         },
+         "image": {
+          "$type": "blob",
+          "ref": {
+           "$link": "bafkreibpzll6uw7tb2nhtg34gpxshqaw3iojkyqh4ulqofshjvd6puuvk4"
+          },
+          "mimeType": "image/jpeg",
+          "size": 843746
+         }
+        }
+       ]
+      },
+      "record": {
+       "$type": "app.bsky.embed.record",
+       "record": {
+        "cid": "bafyreibyvrqsgaigx6maw3obgkeeiod7dxz7e4gd6wnssjt3ehpgvrkw4q",
+        "uri": "at://did:plc:qc6xzgctorfsm35w6i3vdebx/app.bsky.feed.post/3n2zjhsookc2f"
+       }
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "Tomorrow's newsletter: the pervert bounce doesn't change a thing - it doesn't make OpenAI more solvent, it doesn't fix the funding problems, it doesn't fix Anthropic's stock, and it all closed a loophole worth $44bn+ to NVIDIA.\n\nThe worst people in the tech industry are scared. Keep pushing."
+    },
+    "embed": {
+     "media": {
+      "images": [
+       {
+        "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:qc6xzgctorfsm35w6i3vdebx/bafkreibpzll6uw7tb2nhtg34gpxshqaw3iojkyqh4ulqofshjvd6puuvk4",
+        "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:qc6xzgctorfsm35w6i3vdebx/bafkreibpzll6uw7tb2nhtg34gpxshqaw3iojkyqh4ulqofshjvd6puuvk4",
+        "alt": "They are going to run this thing into the ground, and do everything they can to pretend that we’re “back on track,” whatever that means. This situation will embolden them to take more risk, burn more money, ignore more warnings, be more brazen, and burn themselves out far faster and harder than you’d ever imagine. And when you listen to them talk, they speak from a place of fear and the mindset of peasants, desperate to kiss up to whatever authority figure they see as most dominant at any given …",
+        "aspectRatio": {
+         "height": 1308,
+         "width": 2172
+        }
+       }
+      ],
+      "$type": "app.bsky.embed.images#view"
+     },
+     "record": {
+      "record": {
+       "uri": "at://did:plc:qc6xzgctorfsm35w6i3vdebx/app.bsky.feed.post/3n2zjhsookc2f",
+       "cid": "bafyreibyvrqsgaigx6maw3obgkeeiod7dxz7e4gd6wnssjt3ehpgvrkw4q",
+       "author": {
+        "did": "did:plc:qc6xzgctorfsm35w6i3vdebx",
+        "handle": "edzitron.com",
+        "displayName": "Ed Zitron",
+        "associated": {
+         "chat": {
+          "allowIncoming": "all"
+         },
+         "activitySubscription": {
+          "allowSubscriptions": "none"
+         }
+        },
+        "createdAt": "2023-04-25T19:18:06.530Z",
+        "verification": {
+         "verifications": [
+          {
+           "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+           "issuerDisplayName": "Bluesky",
+           "issuerHandle": "bsky.app",
+           "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lsurwobudr26",
+           "isValid": true,
+           "createdAt": "2025-07-01T03:45:20.965Z"
+          }
+         ],
+         "verifiedStatus": "valid",
+         "trustedVerifierStatus": "none"
+        }
+       },
+       "value": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-11-24T01:44:56.597Z",
+        "embed": {
+         "$type": "app.bsky.embed.images",
+         "images": [
+          {
+           "alt": "pages 5 words 2370 characters 13839 (word count of a newsletter)",
+           "aspectRatio": {
+            "height": 694,
+            "width": 752
+           },
+           "image": {
+            "$type": "blob",
+            "ref": {
+             "$link": "bafkreia67hdyzoj3ry7se5ow5wau52xelzv5d655msmzi55lswdk3fa67q"
+            },
+            "mimeType": "image/jpeg",
+            "size": 74803
+           }
+          }
+         ]
+        },
+        "langs": [
+         "en"
+        ],
+        "text": "fuck it"
+       },
+       "likeCount": 512,
+       "replyCount": 28,
+       "repostCount": 6,
+       "quoteCount": 3,
+       "indexedAt": "2026-11-24T01:44:57.845Z",
+       "embeds": [
+        {
+         "images": [
+          {
+           "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:qc6xzgctorfsm35w6i3vdebx/bafkreia67hdyzoj3ry7se5ow5wau52xelzv5d655msmzi55lswdk3fa67q",
+           "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:qc6xzgctorfsm35w6i3vdebx/bafkreia67hdyzoj3ry7se5ow5wau52xelzv5d655msmzi55lswdk3fa67q",
+           "alt": "pages 5 words 2370 characters 13839 (word count of a newsletter)",
+           "aspectRatio": {
+            "height": 694,
+            "width": 752
+           }
+          }
+         ],
+         "$type": "app.bsky.embed.images#view"
+        }
+       ],
+       "$type": "app.bsky.embed.record#viewRecord"
+      }
+     },
+     "$type": "app.bsky.embed.recordWithMedia#view"
+    },
+    "bookmarkCount": 38,
+    "replyCount": 33,
+    "repostCount": 268,
+    "likeCount": 1359,
+    "quoteCount": 13,
+    "indexedAt": "2026-11-24T01:49:18.347Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:qc6xzgctorfsm35w6i3vdebx/app.bsky.feed.post/3n2zjhsookc2f",
+    "cid": "bafyreibyvrqsgaigx6maw3obgkeeiod7dxz7e4gd6wnssjt3ehpgvrkw4q",
+    "author": {
+     "did": "did:plc:qc6xzgctorfsm35w6i3vdebx",
+     "handle": "edzitron.com",
+     "displayName": "Ed Zitron",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "none"
+      }
+     },
+     "createdAt": "2023-04-25T19:18:06.530Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lsurwobudr26",
+        "isValid": true,
+        "createdAt": "2025-07-01T03:45:20.965Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-24T01:44:56.597Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "pages 5 words 2370 characters 13839 (word count of a newsletter)",
+        "aspectRatio": {
+         "height": 694,
+         "width": 752
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreia67hdyzoj3ry7se5ow5wau52xelzv5d655msmzi55lswdk3fa67q"
+         },
+         "mimeType": "image/jpeg",
+         "size": 74803
+        }
+       }
+      ]
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "fuck it"
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:qc6xzgctorfsm35w6i3vdebx/bafkreia67hdyzoj3ry7se5ow5wau52xelzv5d655msmzi55lswdk3fa67q",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:qc6xzgctorfsm35w6i3vdebx/bafkreia67hdyzoj3ry7se5ow5wau52xelzv5d655msmzi55lswdk3fa67q",
+       "alt": "pages 5 words 2370 characters 13839 (word count of a newsletter)",
+       "aspectRatio": {
+        "height": 694,
+        "width": 752
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 28,
+    "repostCount": 6,
+    "likeCount": 512,
+    "quoteCount": 3,
+    "indexedAt": "2026-11-24T01:44:57.845Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:tu6c7n74k6qa7tktsdzlmhzp/app.bsky.feed.post/3n2yr52ayxs2b",
+    "cid": "bafyreidwafrsyg33hd4voq77fzhlpt5hgffzu322bfwoffivex6cxemvzm",
+    "author": {
+     "did": "did:plc:tu6c7n74k6qa7tktsdzlmhzp",
+     "handle": "davelee.me",
+     "displayName": "Dave Lee",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-27T22:42:48.577Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T18:29:25.634Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "",
+        "aspectRatio": {
+         "height": 344,
+         "width": 1140
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreihd3ipxxagcn6dp7f65qt7c4gngaiqw37qm3rptoizvxoqkiupwwm"
+         },
+         "mimeType": "image/jpeg",
+         "size": 169971
+        }
+       }
+      ]
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:b6mnpvsrd67pony7nbxreqsn"
+        }
+       ],
+       "index": {
+        "byteEnd": 66,
+        "byteStart": 47
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "The view from the UK, as per fmr BBC tech corr @rorycj.bsky.social"
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:tu6c7n74k6qa7tktsdzlmhzp/bafkreihd3ipxxagcn6dp7f65qt7c4gngaiqw37qm3rptoizvxoqkiupwwm",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:tu6c7n74k6qa7tktsdzlmhzp/bafkreihd3ipxxagcn6dp7f65qt7c4gngaiqw37qm3rptoizvxoqkiupwwm",
+       "alt": "",
+       "aspectRatio": {
+        "height": 344,
+        "width": 1140
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 14,
+    "replyCount": 6,
+    "repostCount": 98,
+    "likeCount": 445,
+    "quoteCount": 3,
+    "indexedAt": "2026-11-23T18:29:26.641Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:qc6xzgctorfsm35w6i3vdebx",
+     "handle": "edzitron.com",
+     "displayName": "Ed Zitron",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "none"
+      }
+     },
+     "createdAt": "2023-04-25T19:18:06.530Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lsurwobudr26",
+        "isValid": true,
+        "createdAt": "2025-07-01T03:45:20.965Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:qc6xzgctorfsm35w6i3vdebx/app.bsky.feed.repost/3n2z2r3ljys2v",
+    "cid": "bafyreiesbre64pt6h62cywzvoynwhgnxfqivy6niimiekcxdml4gxtmvgy",
+    "indexedAt": "2026-11-23T21:21:41.950Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 2
+  }
+ ],
+ "cursor": "2026-11-20T17:35:59.729Z"
+}

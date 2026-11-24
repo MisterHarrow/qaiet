@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[OpenAI News]]></title>
+        <description><![CDATA[The OpenAI blog]]></description>
+        <link>https://openai.com/news</link>
+        <image>
+            <url>https://openai.com/apple-icon.png</url>
+            <title>OpenAI News</title>
+            <link>https://openai.com/news</link>
+        </image>
+        <generator>OpenAI</generator>
+        <lastBuildDate>Tue, 24 Nov 2026 08:17:11 GMT</lastBuildDate>
+        <atom:link href="https://openai.com/news/rss.xml" rel="self" type="application/rss+xml"/>
+        <language><![CDATA[en-US]]></language>
+        <item>
+            <title><![CDATA[OpenAI and Cisco introduce Shirudo]]></title>
+            <description><![CDATA[OpenAI and Cisco introduce Shirudo, an open-source runtime for Linux. It helps teams protect running systems while they roll out patches.]]></description>
+            <link>https://openai.com/index/introducing-shirudo</link>
+            <guid isPermaLink="true">https://openai.com/index/introducing-shirudo</guid>
+            <category><![CDATA[Security]]></category>
+            <pubDate>Mon, 23 Nov 2026 21:20:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Connected intelligence for in-house legal]]></title>
+            <description><![CDATA[Watch OpenAI’s Stacey Wang and Craig Bruney, Mary O’Carroll of LECG, and Cooley’s Richard Segal explore how AI can help in-house legal teams connect business context, build reusable workflows and get more from outside counsel.]]></description>
+            <link>https://openai.com/business/learn/connected-intelligence-for-in-house-legal</link>
+            <guid isPermaLink="true">https://openai.com/business/learn/connected-intelligence-for-in-house-legal</guid>
+            <category><![CDATA[Webinars]]></category>
+            <pubDate>Mon, 23 Nov 2026 08:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Richpanel helps companies automate 50% of support in 30 days]]></title>
+            <description><![CDATA[Richpanel uses GPT-6 Astra and GPT-6.1 Sol to equip its AI support agents with tools and procedures, and GPT-6 Luna for their conversations.]]></description>
+            <link>https://openai.com/business/customer-stories/richpanel-ai-customer-support</link>
+            <guid isPermaLink="true">https://openai.com/business/customer-stories/richpanel-ai-customer-support</guid>
+            <category><![CDATA[Startup]]></category>
+            <pubDate>Mon, 23 Nov 2026 08:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Perplexity and Intelligence]]></title>
+            <description><![CDATA[How perplexity measures progress in AI models, and why it could help developers establish a shared approach to evaluating emerging capabilities.]]></description>
+            <link>https://openai.com/index/perplexity-and-intelligence</link>
+            <guid isPermaLink="true">https://openai.com/index/perplexity-and-intelligence</guid>
+            <category><![CDATA[Research]]></category>
+            <pubDate>Sun, 22 Nov 2026 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Combatting adversarial distillation]]></title>
+            <description><![CDATA[OpenAI’s layered approach to adversarial distillation combines model training, safeguards, detection, and enforcement to protect against capability extraction.]]></description>
+            <link>https://openai.com/index/combatting-adversarial-distillation</link>
+            <guid isPermaLink="true">https://openai.com/index/combatting-adversarial-distillation</guid>
+            <pubDate>Fri, 20 Nov 2026 10:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>

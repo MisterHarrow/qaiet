@@ -1,0 +1,756 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:3s5wtzqrvrsvbxl6afiko2yw/app.bsky.feed.post/3n2zlnbros22f",
+    "cid": "bafyreihr5ihh3vvuzufdeplrb4sea5t5alwu4odh2f4qvmh6ndot53cpme",
+    "author": {
+     "did": "did:plc:3s5wtzqrvrsvbxl6afiko2yw",
+     "handle": "nameshiv.bsky.social",
+     "displayName": "Shiv Ramdas Mens Rice Activist",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-06-08T20:03:33.350Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mip4kuyf5r2z",
+        "isValid": true,
+        "createdAt": "2026-04-04T20:53:53.992Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-24T02:23:47.680Z",
+     "embed": {
+      "$type": "app.bsky.embed.record",
+      "record": {
+       "cid": "bafyreiaru2ais5pxjzk74urjyo6w2bmr3eduvajkpvrmazqakynaj6r2pq",
+       "uri": "at://did:plc:7qiuhllywd7skoiqadlya3ry/app.bsky.feed.post/3m6fypqlkes2p"
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "You want a food grudge?  I got one for you. Oldie but goldie.\n\nWhen my Gran died her daughters fought for days over which one would inherit her recipe book till they finally agreed that they would share it so they opened it together & there was only 1 entry which said \"Book I pretend has recipes\""
+    },
+    "embed": {
+     "record": {
+      "uri": "at://did:plc:7qiuhllywd7skoiqadlya3ry/app.bsky.feed.post/3m6fypqlkes2p",
+      "cid": "bafyreiaru2ais5pxjzk74urjyo6w2bmr3eduvajkpvrmazqakynaj6r2pq",
+      "author": {
+       "did": "did:plc:7qiuhllywd7skoiqadlya3ry",
+       "handle": "clairewillett.bsky.social",
+       "displayName": "Claire Willett",
+       "pronouns": "she/her",
+       "associated": {
+        "chat": {
+         "allowIncoming": "following"
+        },
+        "activitySubscription": {
+         "allowSubscriptions": "mutuals"
+        }
+       },
+       "createdAt": "2023-05-21T05:15:56.311Z"
+      },
+      "value": {
+       "$type": "app.bsky.feed.post",
+       "createdAt": "2025-11-24T23:39:08.615Z",
+       "langs": [
+        "en"
+       ],
+       "text": "yes, hello, I would like to place an order for everyone’s funniest stories of holiday food-related family grudges / drama / chaotic incidents / lore\n\nI feel like we need this"
+      },
+      "likeCount": 3368,
+      "replyCount": 1087,
+      "repostCount": 914,
+      "quoteCount": 951,
+      "indexedAt": "2025-11-24T23:39:08.835Z",
+      "embeds": [],
+      "$type": "app.bsky.embed.record#viewRecord"
+     },
+     "$type": "app.bsky.embed.record#view"
+    },
+    "bookmarkCount": 149,
+    "replyCount": 103,
+    "repostCount": 817,
+    "likeCount": 4918,
+    "quoteCount": 48,
+    "indexedAt": "2026-11-24T02:23:48.143Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:m4fvxlyv4gqpugzszzp4cjxf",
+     "handle": "alexhanna.bsky.social",
+     "displayName": "Alex Hanna",
+     "pronouns": "she/هي",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-06-10T22:02:30.145Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mzj2yb6jfo23",
+        "isValid": true,
+        "createdAt": "2026-11-04T19:17:54.923Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:m4fvxlyv4gqpugzszzp4cjxf/app.bsky.feed.repost/3n2zo7akawd2y",
+    "cid": "bafyreia5tbmpuene7xecvq2hfi3xjjh5gbtt3r7dpqmi4ltvnq2vyknzeu",
+    "indexedAt": "2026-11-24T03:09:37.947Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:qfwinostecndnbvwwunsmihi/app.bsky.feed.post/3n2zcntmew22m",
+    "cid": "bafyreieauxjs7sjietacetonamnzxnlwfgrwlqhmcmek4dzjsq4nbo3jum",
+    "author": {
+     "did": "did:plc:qfwinostecndnbvwwunsmihi",
+     "handle": "beijingpalmer.bsky.social",
+     "displayName": "BeijingPalmer",
+     "pronouns": "he/him",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-22T02:31:16.985Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T23:43:02.704Z",
+     "embed": {
+      "$type": "app.bsky.embed.record",
+      "record": {
+       "cid": "bafyreicvde47t7vzr7ud7jmvej4mz7arec2ryq3tcn64x64ls27fw2bs2y",
+       "uri": "at://did:plc:ejihld4sywvvqwe67cdkn4jq/app.bsky.feed.post/3n2zcn2hrts2s"
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "putting this one in my 'gender studies is a better guide to the world than international relations' piece"
+    },
+    "embed": {
+     "record": {
+      "uri": "at://did:plc:ejihld4sywvvqwe67cdkn4jq/app.bsky.feed.post/3n2zcn2hrts2s",
+      "cid": "bafyreicvde47t7vzr7ud7jmvej4mz7arec2ryq3tcn64x64ls27fw2bs2y",
+      "author": {
+       "did": "did:plc:ejihld4sywvvqwe67cdkn4jq",
+       "handle": "marisakabas.bsky.social",
+       "displayName": "Marisa Kabas",
+       "associated": {
+        "chat": {
+         "allowIncoming": "following"
+        },
+        "activitySubscription": {
+         "allowSubscriptions": "followers"
+        }
+       },
+       "createdAt": "2023-05-04T02:14:27.863Z",
+       "verification": {
+        "verifications": [
+         {
+          "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+          "issuerDisplayName": "Bluesky",
+          "issuerHandle": "bsky.app",
+          "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lndpz2yrw32x",
+          "isValid": true,
+          "createdAt": "2025-04-21T10:49:40.502Z"
+         }
+        ],
+        "verifiedStatus": "valid",
+        "trustedVerifierStatus": "none"
+       }
+      },
+      "value": {
+       "$type": "app.bsky.feed.post",
+       "createdAt": "2026-11-23T23:42:36.339Z",
+       "embed": {
+        "$type": "app.bsky.embed.recordWithMedia",
+        "media": {
+         "$type": "app.bsky.embed.images",
+         "images": [
+          {
+           "alt": "",
+           "aspectRatio": {
+            "height": 310,
+            "width": 1000
+           },
+           "image": {
+            "$type": "blob",
+            "ref": {
+             "$link": "bafkreigz54a24bb7wrj3oluqhbgz3pzzugqterpxzl2wuxa7bctop6r3tq"
+            },
+            "mimeType": "image/jpeg",
+            "size": 72234
+           }
+          }
+         ]
+        },
+        "record": {
+         "$type": "app.bsky.embed.record",
+         "record": {
+          "cid": "bafyreifgjqjvzoohufcd6w6rucamaeeajzfcoifdpjju6jej4d2hftmzly",
+          "uri": "at://did:plc:hfjravhji4k4oehia5kyjbxz/app.bsky.feed.post/3n2yyr5sw3c2f"
+         }
+        }
+       },
+       "facets": [
+        {
+         "features": [
+          {
+           "$type": "app.bsky.richtext.facet#link",
+           "uri": "https://images.nvidia.com/aem-dam/Solutions/documents/NVIDIA-Sustainability-Report-Fiscal-Year-2026.pdf"
+          }
+         ],
+         "index": {
+          "byteEnd": 169,
+          "byteStart": 136
+         }
+        }
+       ],
+       "langs": [
+        "en"
+       ],
+       "text": "the hooting and hollering for jensen huang upon his return to nvidia makes more sense when you consider the company's gender breakdown: images.nvidia.com/aem-dam/Solu..."
+      },
+      "likeCount": 3062,
+      "replyCount": 194,
+      "repostCount": 577,
+      "quoteCount": 46,
+      "indexedAt": "2026-11-23T23:42:37.245Z",
+      "embeds": [
+       {
+        "media": {
+         "images": [
+          {
+           "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ejihld4sywvvqwe67cdkn4jq/bafkreigz54a24bb7wrj3oluqhbgz3pzzugqterpxzl2wuxa7bctop6r3tq",
+           "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:ejihld4sywvvqwe67cdkn4jq/bafkreigz54a24bb7wrj3oluqhbgz3pzzugqterpxzl2wuxa7bctop6r3tq",
+           "alt": "",
+           "aspectRatio": {
+            "height": 310,
+            "width": 1000
+           }
+          }
+         ],
+         "$type": "app.bsky.embed.images#view"
+        },
+        "record": {
+         "record": {
+          "uri": "at://did:plc:hfjravhji4k4oehia5kyjbxz/app.bsky.feed.post/3n2yyr5sw3c2f",
+          "cid": "bafyreifgjqjvzoohufcd6w6rucamaeeajzfcoifdpjju6jej4d2hftmzly",
+          "author": {
+           "did": "did:plc:hfjravhji4k4oehia5kyjbxz",
+           "handle": "nbcbayarea.com",
+           "displayName": "NBC Bay Area",
+           "associated": {
+            "chat": {
+             "allowIncoming": "none"
+            },
+            "activitySubscription": {
+             "allowSubscriptions": "followers"
+            }
+           },
+           "createdAt": "2024-11-11T21:22:33.102Z",
+           "verification": {
+            "verifications": [
+             {
+              "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+              "issuerDisplayName": "Bluesky",
+              "issuerHandle": "bsky.app",
+              "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mbyra6zajn2k",
+              "isValid": true,
+              "createdAt": "2026-01-09T15:01:20.239Z"
+             }
+            ],
+            "verifiedStatus": "valid",
+            "trustedVerifierStatus": "none"
+           }
+          },
+          "value": {
+           "$type": "app.bsky.feed.post",
+           "createdAt": "2026-11-23T20:45:56.649Z",
+           "embed": {
+            "$type": "app.bsky.embed.video",
+            "aspectRatio": {
+             "height": 1920,
+             "width": 1080
+            },
+            "presentation": "default",
+            "video": {
+             "$type": "blob",
+             "ref": {
+              "$link": "bafkreiegrnszt56oafc5np6zi63jrum2rjsyqd7rgrwm5cj67k7zblfhva"
+             },
+             "mimeType": "video/mp4",
+             "size": 6278945
+            }
+           },
+           "facets": [
+            {
+             "features": [
+              {
+               "$type": "app.bsky.richtext.facet#link",
+               "uri": "http://nbcbay.com/zvjW1zi"
+              }
+             ],
+             "index": {
+              "byteEnd": 170,
+              "byteStart": 152
+             }
+            }
+           ],
+           "langs": [
+            "en"
+           ],
+           "text": "Nvidia employees cheered and chanted Jensen Huang’s name as he returned to the company’s headquarters in Santa Clara after being reinstated as CEO. nbcbay.com/zvjW1zi"
+          },
+          "likeCount": 294,
+          "replyCount": 645,
+          "repostCount": 66,
+          "quoteCount": 1139,
+          "indexedAt": "2026-11-23T20:45:58.054Z",
+          "$type": "app.bsky.embed.record#viewRecord"
+         }
+        },
+        "$type": "app.bsky.embed.recordWithMedia#view"
+       }
+      ],
+      "$type": "app.bsky.embed.record#viewRecord"
+     },
+     "$type": "app.bsky.embed.record#view"
+    },
+    "bookmarkCount": 45,
+    "replyCount": 9,
+    "repostCount": 290,
+    "likeCount": 1639,
+    "quoteCount": 2,
+    "indexedAt": "2026-11-23T23:43:03.153Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:m4fvxlyv4gqpugzszzp4cjxf",
+     "handle": "alexhanna.bsky.social",
+     "displayName": "Alex Hanna",
+     "pronouns": "she/هي",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-06-10T22:02:30.145Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mzj2yb6jfo23",
+        "isValid": true,
+        "createdAt": "2026-11-04T19:17:54.923Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:m4fvxlyv4gqpugzszzp4cjxf/app.bsky.feed.repost/3n2znbqn5mr2p",
+    "cid": "bafyreigfrrpjkjqu7xhuit55k7sjrw3f2bm4tezpj3svqm6xjqbmpiajtq",
+    "indexedAt": "2026-11-24T02:53:08.250Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:vwzwgnygau7ed7b7wt5ux7y2/app.bsky.feed.post/3n2zdarrjvk2f",
+    "cid": "bafyreig6rfc7zxa3jc57tqt7jxlqpdc5xh2lalt3duidacuky2dlkjrwfq",
+    "author": {
+     "did": "did:plc:vwzwgnygau7ed7b7wt5ux7y2",
+     "handle": "retr0.id",
+     "displayName": "David Buchanan",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-27T09:23:54.423Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lndpxt7ur22f",
+        "isValid": true,
+        "createdAt": "2025-04-21T10:48:58.775Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T23:53:38.310Z",
+     "embed": {
+      "$type": "app.bsky.embed.video",
+      "aspectRatio": {
+       "height": 1080,
+       "width": 1920
+      },
+      "presentation": "default",
+      "video": {
+       "$type": "blob",
+       "ref": {
+        "$link": "bafkreidgo5gacfv62n2bdhkp4l2tk4wazvftloraqxdkelx76zmmhxsscy"
+       },
+       "mimeType": "video/mp4",
+       "size": 17009120
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "it's cool that people are debloating their smart tv home screens or whatever but nobody is thinking big enough yet"
+    },
+    "embed": {
+     "cid": "bafkreidgo5gacfv62n2bdhkp4l2tk4wazvftloraqxdkelx76zmmhxsscy",
+     "playlist": "https://video.bsky.app/watch/did%3Aplc%3Avwzwgnygau7ed7b7wt5ux7y2/bafkreidgo5gacfv62n2bdhkp4l2tk4wazvftloraqxdkelx76zmmhxsscy/playlist.m3u8",
+     "aspectRatio": {
+      "height": 1080,
+      "width": 1920
+     },
+     "presentation": "default",
+     "$type": "app.bsky.embed.video#view"
+    },
+    "bookmarkCount": 32,
+    "replyCount": 27,
+    "repostCount": 47,
+    "likeCount": 357,
+    "quoteCount": 1,
+    "indexedAt": "2026-11-23T23:53:39.756Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:m4fvxlyv4gqpugzszzp4cjxf",
+     "handle": "alexhanna.bsky.social",
+     "displayName": "Alex Hanna",
+     "pronouns": "she/هي",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-06-10T22:02:30.145Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mzj2yb6jfo23",
+        "isValid": true,
+        "createdAt": "2026-11-04T19:17:54.923Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:m4fvxlyv4gqpugzszzp4cjxf/app.bsky.feed.repost/3n2zkpz2cxk22",
+    "cid": "bafyreif4xnsesqidnf5oqqryteijmsxq65hf67m5poih5u2k4axkj2y6q4",
+    "indexedAt": "2026-11-24T02:07:25.642Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:m4fvxlyv4gqpugzszzp4cjxf/app.bsky.feed.post/3n2zjkllrjc2v",
+    "cid": "bafyreigttfsjma6xobseeubykod77xdrlr7bjcle3ixa4mqg3p2catuynq",
+    "author": {
+     "did": "did:plc:m4fvxlyv4gqpugzszzp4cjxf",
+     "handle": "alexhanna.bsky.social",
+     "displayName": "Alex Hanna",
+     "pronouns": "she/هي",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-06-10T22:02:30.145Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mzj2yb6jfo23",
+        "isValid": true,
+        "createdAt": "2026-11-04T19:17:54.923Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-24T01:46:29.826Z",
+     "embed": {
+      "$type": "app.bsky.embed.record",
+      "record": {
+       "cid": "bafyreidi3g4dw5qokjwxj73bp67j7g53szkeir5elbj4qz4py7pyxzdyfu",
+       "uri": "at://did:plc:3573wl3cnxaacwl4ew3jhx22/app.bsky.feed.post/3n2zjb72bqs2r"
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "Love this -- \"The goal is stated on the slides: you will not win Thanksgiving. Nobody does. The goal is to leave the table with a relative who understands one study a little better and still wants to talk to you.\""
+    },
+    "embed": {
+     "record": {
+      "uri": "at://did:plc:3573wl3cnxaacwl4ew3jhx22/app.bsky.feed.post/3n2zjb72bqs2r",
+      "cid": "bafyreidi3g4dw5qokjwxj73bp67j7g53szkeir5elbj4qz4py7pyxzdyfu",
+      "author": {
+       "did": "did:plc:3573wl3cnxaacwl4ew3jhx22",
+       "handle": "minedogucu.com",
+       "displayName": "Mine Doğucu",
+       "pronouns": "she/they",
+       "associated": {
+        "activitySubscription": {
+         "allowSubscriptions": "followers"
+        }
+       },
+       "createdAt": "2024-02-17T22:19:51.809Z"
+      },
+      "value": {
+       "$type": "app.bsky.feed.post",
+       "createdAt": "2026-11-24T01:41:14.678Z",
+       "embed": {
+        "$type": "app.bsky.embed.record",
+        "record": {
+         "cid": "bafyreic4ryjv7zc6sos4bni25oyeiwglrahm75myvvqb5qvfu3jecosmtu",
+         "uri": "at://did:plc:3573wl3cnxaacwl4ew3jhx22/app.bsky.feed.post/3n2ro5vxafc2d"
+        }
+       },
+       "facets": [
+        {
+         "features": [
+          {
+           "$type": "app.bsky.richtext.facet#link",
+           "uri": "https://bsky.app/profile/minedogucu.com/post/3n2ro5vxafc2d"
+          }
+         ],
+         "index": {
+          "byteEnd": 200,
+          "byteStart": 176
+         }
+        }
+       ],
+       "langs": [
+        "en"
+       ],
+       "text": "Today with my students I did a role-playing activity focused on “how to talk to your extended family about statistics/science”. Perhaps for next year I can consider LLMs.\n\nbsky.app/profile/mine..."
+      },
+      "likeCount": 24,
+      "replyCount": 2,
+      "repostCount": 8,
+      "quoteCount": 2,
+      "indexedAt": "2026-11-24T01:41:15.845Z",
+      "embeds": [
+       {
+        "record": {
+         "uri": "at://did:plc:3573wl3cnxaacwl4ew3jhx22/app.bsky.feed.post/3n2ro5vxafc2d",
+         "cid": "bafyreic4ryjv7zc6sos4bni25oyeiwglrahm75myvvqb5qvfu3jecosmtu",
+         "author": {
+          "did": "did:plc:3573wl3cnxaacwl4ew3jhx22",
+          "handle": "minedogucu.com",
+          "displayName": "Mine Doğucu",
+          "pronouns": "she/they",
+          "associated": {
+           "activitySubscription": {
+            "allowSubscriptions": "followers"
+           }
+          },
+          "createdAt": "2024-02-17T22:19:51.809Z"
+         },
+         "value": {
+          "$type": "app.bsky.feed.post",
+          "createdAt": "2026-11-20T22:47:35.281Z",
+          "embed": {
+           "$type": "app.bsky.embed.external",
+           "external": {
+            "description": "Students practice explaining one study to a relative",
+            "title": "The Thanksgiving Table: A Role-Play Activity for Statistical Communication – Data Pedagogy",
+            "uri": "https://www.datapedagogy.com/posts/2026-11-20-thanksgiving-table/thanksgiving-table.html"
+           }
+          },
+          "facets": [
+           {
+            "features": [
+             {
+              "$type": "app.bsky.richtext.facet#link",
+              "uri": "https://www.datapedagogy.com/posts/2026-11-20-thanksgiving-table/thanksgiving-table.html"
+             }
+            ],
+            "index": {
+             "byteEnd": 207,
+             "byteStart": 171
+            }
+           },
+           {
+            "features": [
+             {
+              "$type": "app.bsky.richtext.facet#tag",
+              "tag": "statistics"
+             }
+            ],
+            "index": {
+             "byteEnd": 220,
+             "byteStart": 209
+            }
+           },
+           {
+            "features": [
+             {
+              "$type": "app.bsky.richtext.facet#tag",
+              "tag": "datascience"
+             }
+            ],
+            "index": {
+             "byteEnd": 233,
+             "byteStart": 221
+            }
+           }
+          ],
+          "langs": [
+           "en"
+          ],
+          "text": "On Monday, my students will role-play explaining a real study to a skeptical relative at the Thanksgiving table. \n\nRule 1: listen first.\n\nBlog post with course materials:\nwww.datapedagogy.com/posts/2026-1...\n\n#statistics #datascience"
+         },
+         "likeCount": 28,
+         "replyCount": 1,
+         "repostCount": 7,
+         "quoteCount": 2,
+         "indexedAt": "2026-11-20T22:47:35.841Z",
+         "$type": "app.bsky.embed.record#viewRecord"
+        },
+        "$type": "app.bsky.embed.record#view"
+       }
+      ],
+      "$type": "app.bsky.embed.record#viewRecord"
+     },
+     "$type": "app.bsky.embed.record#view"
+    },
+    "bookmarkCount": 3,
+    "replyCount": 0,
+    "repostCount": 3,
+    "likeCount": 29,
+    "quoteCount": 1,
+    "indexedAt": "2026-11-24T01:46:30.451Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:m4fvxlyv4gqpugzszzp4cjxf/app.bsky.feed.post/3n2zixhnxe22v",
+    "cid": "bafyreia5nf4imyskig2lk7vpkw4fzib3xwqcoqnuvrw33p5uca4orsg4mu",
+    "author": {
+     "did": "did:plc:m4fvxlyv4gqpugzszzp4cjxf",
+     "handle": "alexhanna.bsky.social",
+     "displayName": "Alex Hanna",
+     "pronouns": "she/هي",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-06-10T22:02:30.145Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mzj2yb6jfo23",
+        "isValid": true,
+        "createdAt": "2026-11-04T19:17:54.923Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-24T01:35:48.168Z",
+     "langs": [
+      "en"
+     ],
+     "text": "Anyone develop a \"how to talk to your extended family about AI\" Thanksgiving guide yet?"
+    },
+    "bookmarkCount": 3,
+    "replyCount": 17,
+    "repostCount": 15,
+    "likeCount": 111,
+    "quoteCount": 2,
+    "indexedAt": "2026-11-24T01:35:50.346Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 2
+  }
+ ],
+ "cursor": "2026-11-22T19:38:35.57Z"
+}

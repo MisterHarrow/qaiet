@@ -1,0 +1,738 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:uej7fn7o7qlj7mll43nzym5q/app.bsky.feed.post/3n2yddoh7ms2w",
+    "cid": "bafyreiht5c5eyvkitixjdj7nfyhbm5svm7jpto2hb4wd4wluljtjvdlwxm",
+    "author": {
+     "did": "did:plc:uej7fn7o7qlj7mll43nzym5q",
+     "handle": "marietjeschaake.bsky.social",
+     "displayName": "Marietje Schaake",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-22T03:57:56.779Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lwh3xlahic2q",
+        "isValid": true,
+        "createdAt": "2025-08-15T14:48:19.147Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T14:22:35.744Z",
+     "embed": {
+      "$type": "app.bsky.embed.record",
+      "record": {
+       "cid": "bafyreih64czqdfg6ycj3t5h3blsagob6w5gyryiqcl6lxfnwif5hghzc7u",
+       "uri": "at://did:plc:tm256llkpggffiiuwk4tgiej/app.bsky.feed.post/3n2yd4zq3is2t"
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "In a country where the Epstein files remain undisclosed and perpetrators remain unaccountable. The President himself has made billions for himself and family and Musk remade the government with a chainsaw, no mandate and no accountability, this is entirely in line ↘️"
+    },
+    "embed": {
+     "record": {
+      "uri": "at://did:plc:tm256llkpggffiiuwk4tgiej/app.bsky.feed.post/3n2yd4zq3is2t",
+      "cid": "bafyreih64czqdfg6ycj3t5h3blsagob6w5gyryiqcl6lxfnwif5hghzc7u",
+      "author": {
+       "did": "did:plc:tm256llkpggffiiuwk4tgiej",
+       "handle": "peterbakernyt.bsky.social",
+       "displayName": "Peter Baker",
+       "associated": {
+        "activitySubscription": {
+         "allowSubscriptions": "followers"
+        }
+       },
+       "createdAt": "2024-11-19T17:52:42.678Z",
+       "verification": {
+        "verifications": [
+         {
+          "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+          "issuerDisplayName": "Bluesky",
+          "issuerHandle": "bsky.app",
+          "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3m3uwxsf3wu2o",
+          "isValid": true,
+          "createdAt": "2025-10-23T18:02:12.347Z"
+         }
+        ],
+        "verifiedStatus": "valid",
+        "trustedVerifierStatus": "none"
+       }
+      },
+      "value": {
+       "$type": "app.bsky.feed.post",
+       "createdAt": "2026-11-23T14:18:52.694Z",
+       "embed": {
+        "$type": "app.bsky.embed.external",
+        "external": {
+         "description": "Mr. Huang resigned from Nvidia on Nov. 12 after revelations of multiple extramarital relationships.",
+         "thumb": {
+          "$type": "blob",
+          "ref": {
+           "$link": "bafkreicz4myvftoixxeeayxxp5zwilt5rmctnb23gznw2q6zl6pyyzupuy"
+          },
+          "mimeType": "image/jpeg",
+          "size": 437546
+         },
+         "title": "Nvidia Reinstates Jensen Huang as Chief Executive",
+         "uri": "https://www.nytimes.com/2026/11/23/business/nvidia-jensen-huang.html"
+        }
+       },
+       "facets": [
+        {
+         "$type": "app.bsky.richtext.facet",
+         "features": [
+          {
+           "$type": "app.bsky.richtext.facet#mention",
+           "did": "did:plc:ycqh6dppqgnvmdmczyqzrtvd"
+          }
+         ],
+         "index": {
+          "byteEnd": 224,
+          "byteStart": 200
+         }
+        },
+        {
+         "features": [
+          {
+           "$type": "app.bsky.richtext.facet#link",
+           "uri": "https://www.nytimes.com/2026/11/23/business/nvidia-jensen-huang.html"
+          }
+         ],
+         "index": {
+          "byteEnd": 256,
+          "byteStart": 225
+         }
+        }
+       ],
+       "langs": [
+        "en"
+       ],
+       "text": "Nvidia's board of directors reinstates Jensen Huang as chief executive less than two weeks after he was forced out for having an affair with a woman believed by U.S. intelligence to be a Chinese spy. @trippmickle.bsky.social www.nytimes.com/2026/11/23/b..."
+      },
+      "likeCount": 69,
+      "replyCount": 26,
+      "repostCount": 18,
+      "quoteCount": 17,
+      "indexedAt": "2026-11-23T14:18:54.846Z",
+      "embeds": [
+       {
+        "external": {
+         "uri": "https://www.nytimes.com/2026/11/23/business/nvidia-jensen-huang.html",
+         "title": "Nvidia Reinstates Jensen Huang as Chief Executive",
+         "description": "Mr. Huang resigned from Nvidia on Nov. 12 after revelations of multiple extramarital relationships.",
+         "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:tm256llkpggffiiuwk4tgiej/bafkreicz4myvftoixxeeayxxp5zwilt5rmctnb23gznw2q6zl6pyyzupuy"
+        },
+        "$type": "app.bsky.embed.external#view"
+       }
+      ],
+      "$type": "app.bsky.embed.record#viewRecord"
+     },
+     "$type": "app.bsky.embed.record#view"
+    },
+    "bookmarkCount": 3,
+    "replyCount": 4,
+    "repostCount": 45,
+    "likeCount": 120,
+    "quoteCount": 2,
+    "indexedAt": "2026-11-23T14:22:36.243Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:uej7fn7o7qlj7mll43nzym5q/app.bsky.feed.post/3n2vsk2xjds2n",
+    "cid": "bafyreiev64rgv3j6g5ujrxnamrjmuyyxyk62cui63dzm67b7u7acwu2ori",
+    "author": {
+     "did": "did:plc:uej7fn7o7qlj7mll43nzym5q",
+     "handle": "marietjeschaake.bsky.social",
+     "displayName": "Marietje Schaake",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-22T03:57:56.779Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lwh3xlahic2q",
+        "isValid": true,
+        "createdAt": "2025-08-15T14:48:19.147Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-22T14:16:37.103Z",
+     "embed": {
+      "$type": "app.bsky.embed.record",
+      "record": {
+       "cid": "bafyreiaw7l6j5rrel2ukzhskjykabwuzq7w2knsyfqqr4jargplpbrvt5i",
+       "uri": "at://did:plc:zgh42tgpzddqoi3awnsetwau/app.bsky.feed.post/3n2o7s63xxs2t"
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "Aha the existential AI risk everyone is warning about…. Oh wait ↘️"
+    },
+    "embed": {
+     "record": {
+      "uri": "at://did:plc:zgh42tgpzddqoi3awnsetwau/app.bsky.feed.post/3n2o7s63xxs2t",
+      "cid": "bafyreiaw7l6j5rrel2ukzhskjykabwuzq7w2knsyfqqr4jargplpbrvt5i",
+      "author": {
+       "did": "did:plc:zgh42tgpzddqoi3awnsetwau",
+       "handle": "kostyack.bsky.social",
+       "displayName": "John Kostyack",
+       "associated": {
+        "chat": {
+         "allowIncoming": "following"
+        },
+        "activitySubscription": {
+         "allowSubscriptions": "followers"
+        }
+       },
+       "createdAt": "2023-08-21T21:44:47.172Z"
+      },
+      "value": {
+       "$type": "app.bsky.feed.post",
+       "createdAt": "2026-11-19T13:52:29.571Z",
+       "embed": {
+        "$type": "app.bsky.embed.recordWithMedia",
+        "media": {
+         "$type": "app.bsky.embed.external",
+         "external": {
+          "description": "A case study of Anthropic’s total power use and emissions. We find the company could emit 32 million metric tons of carbon dioxide in 2028.",
+          "thumb": {
+           "$type": "blob",
+           "ref": {
+            "$link": "bafkreigfls3ucrtr4ra77mj3mpglpj6um7kde5jjirv7yemgt42upk5rse"
+           },
+           "mimeType": "image/jpeg",
+           "size": 198268
+          },
+          "title": "How AI is powered: a breakdown of BYOP and grid power",
+          "uri": "https://betterdatacenterproject.com/2026/11/16/how-ai-is-powered-a-breakdown-of-byop-and-grid-power/"
+         }
+        },
+        "record": {
+         "$type": "app.bsky.embed.record",
+         "record": {
+          "cid": "bafyreic3sgzklzk5k2aidrvq2s7zoqjslpvfaeima3y5t2rcnenytvdaam",
+          "uri": "at://did:plc:zgh42tgpzddqoi3awnsetwau/app.bsky.feed.post/3n2o5kgumk22i"
+         }
+        }
+       },
+       "langs": [
+        "en"
+       ],
+       "text": "In 2028, 87% of Anthropic’s power will come from gas, 11% will come from coal. Anthropic has made no commitments to transition to renewable energy. The largest IPO in history is a large-scale investment in climate dystopia."
+      },
+      "likeCount": 2442,
+      "replyCount": 34,
+      "repostCount": 1277,
+      "quoteCount": 154,
+      "indexedAt": "2026-11-19T16:52:48.548Z",
+      "embeds": [
+       {
+        "media": {
+         "external": {
+          "uri": "https://betterdatacenterproject.com/2026/11/16/how-ai-is-powered-a-breakdown-of-byop-and-grid-power/",
+          "title": "How AI is powered: a breakdown of BYOP and grid power",
+          "description": "A case study of Anthropic’s total power use and emissions. We find the company could emit 32 million metric tons of carbon dioxide in 2028.",
+          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:zgh42tgpzddqoi3awnsetwau/bafkreigfls3ucrtr4ra77mj3mpglpj6um7kde5jjirv7yemgt42upk5rse"
+         },
+         "$type": "app.bsky.embed.external#view"
+        },
+        "record": {
+         "record": {
+          "uri": "at://did:plc:zgh42tgpzddqoi3awnsetwau/app.bsky.feed.post/3n2o5kgumk22i",
+          "cid": "bafyreic3sgzklzk5k2aidrvq2s7zoqjslpvfaeima3y5t2rcnenytvdaam",
+          "author": {
+           "did": "did:plc:zgh42tgpzddqoi3awnsetwau",
+           "handle": "kostyack.bsky.social",
+           "displayName": "John Kostyack",
+           "associated": {
+            "chat": {
+             "allowIncoming": "following"
+            },
+            "activitySubscription": {
+             "allowSubscriptions": "followers"
+            }
+           },
+           "createdAt": "2023-08-21T21:44:47.172Z"
+          },
+          "value": {
+           "$type": "app.bsky.feed.post",
+           "createdAt": "2026-11-19T13:12:22.848Z",
+           "embed": {
+            "$type": "app.bsky.embed.external",
+            "external": {
+             "description": "Plus: How Europe got hooked on Chinese clean tech, what the ‘Super El Niño’ means for this year’s ski season and an energy-security boost for coal demand",
+             "thumb": {
+              "$type": "blob",
+              "ref": {
+               "$link": "bafkreicd5aitzk6mveztsrqcacmeseluiczegorepioqyfe7pzpxarpnei"
+              },
+              "mimeType": "image/jpeg",
+              "size": 483491
+             },
+             "title": "Why Anthropic Is Hiring a $400,000-a-Year Natural-Gas Supply Manager",
+             "uri": "https://www.wsj.com/business/energy-oil/why-anthropic-is-hiring-a-400-000-a-year-natural-gas-supply-manager-7c871e93?mod=djemclimate"
+            }
+           },
+           "langs": [
+            "en"
+           ],
+           "text": "In its IPO documents & this hiring notice, Anthropic makes clear it plans to undertake a massive data center buildout powered by fossil gas. Without new guardrails, this will be done largely on private grids powered entirely by gas, and then ultimately on public grids powered mostly by fossil gas."
+          },
+          "likeCount": 259,
+          "replyCount": 6,
+          "repostCount": 112,
+          "quoteCount": 32,
+          "opThreadPostIndex": 1,
+          "opThreadPostCount": 2,
+          "indexedAt": "2026-11-19T16:12:41.346Z",
+          "$type": "app.bsky.embed.record#viewRecord"
+         }
+        },
+        "$type": "app.bsky.embed.recordWithMedia#view"
+       }
+      ],
+      "$type": "app.bsky.embed.record#viewRecord"
+     },
+     "$type": "app.bsky.embed.record#view"
+    },
+    "bookmarkCount": 7,
+    "replyCount": 0,
+    "repostCount": 15,
+    "likeCount": 29,
+    "quoteCount": 1,
+    "indexedAt": "2026-11-22T14:16:37.745Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:zgh42tgpzddqoi3awnsetwau/app.bsky.feed.post/3n2o7s63xxs2t",
+    "cid": "bafyreiaw7l6j5rrel2ukzhskjykabwuzq7w2knsyfqqr4jargplpbrvt5i",
+    "author": {
+     "did": "did:plc:zgh42tgpzddqoi3awnsetwau",
+     "handle": "kostyack.bsky.social",
+     "displayName": "John Kostyack",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-08-21T21:44:47.172Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-19T13:52:29.571Z",
+     "embed": {
+      "$type": "app.bsky.embed.recordWithMedia",
+      "media": {
+       "$type": "app.bsky.embed.external",
+       "external": {
+        "description": "A case study of Anthropic’s total power use and emissions. We find the company could emit 32 million metric tons of carbon dioxide in 2028.",
+        "thumb": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreigfls3ucrtr4ra77mj3mpglpj6um7kde5jjirv7yemgt42upk5rse"
+         },
+         "mimeType": "image/jpeg",
+         "size": 198268
+        },
+        "title": "How AI is powered: a breakdown of BYOP and grid power",
+        "uri": "https://betterdatacenterproject.com/2026/11/16/how-ai-is-powered-a-breakdown-of-byop-and-grid-power/"
+       }
+      },
+      "record": {
+       "$type": "app.bsky.embed.record",
+       "record": {
+        "cid": "bafyreic3sgzklzk5k2aidrvq2s7zoqjslpvfaeima3y5t2rcnenytvdaam",
+        "uri": "at://did:plc:zgh42tgpzddqoi3awnsetwau/app.bsky.feed.post/3n2o5kgumk22i"
+       }
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "In 2028, 87% of Anthropic’s power will come from gas, 11% will come from coal. Anthropic has made no commitments to transition to renewable energy. The largest IPO in history is a large-scale investment in climate dystopia."
+    },
+    "embed": {
+     "media": {
+      "external": {
+       "uri": "https://betterdatacenterproject.com/2026/11/16/how-ai-is-powered-a-breakdown-of-byop-and-grid-power/",
+       "title": "How AI is powered: a breakdown of BYOP and grid power",
+       "description": "A case study of Anthropic’s total power use and emissions. We find the company could emit 32 million metric tons of carbon dioxide in 2028.",
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:zgh42tgpzddqoi3awnsetwau/bafkreigfls3ucrtr4ra77mj3mpglpj6um7kde5jjirv7yemgt42upk5rse"
+      },
+      "$type": "app.bsky.embed.external#view"
+     },
+     "record": {
+      "record": {
+       "uri": "at://did:plc:zgh42tgpzddqoi3awnsetwau/app.bsky.feed.post/3n2o5kgumk22i",
+       "cid": "bafyreic3sgzklzk5k2aidrvq2s7zoqjslpvfaeima3y5t2rcnenytvdaam",
+       "author": {
+        "did": "did:plc:zgh42tgpzddqoi3awnsetwau",
+        "handle": "kostyack.bsky.social",
+        "displayName": "John Kostyack",
+        "associated": {
+         "chat": {
+          "allowIncoming": "following"
+         },
+         "activitySubscription": {
+          "allowSubscriptions": "followers"
+         }
+        },
+        "createdAt": "2023-08-21T21:44:47.172Z"
+       },
+       "value": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-11-19T13:12:22.848Z",
+        "embed": {
+         "$type": "app.bsky.embed.external",
+         "external": {
+          "description": "Plus: How Europe got hooked on Chinese clean tech, what the ‘Super El Niño’ means for this year’s ski season and an energy-security boost for coal demand",
+          "thumb": {
+           "$type": "blob",
+           "ref": {
+            "$link": "bafkreicd5aitzk6mveztsrqcacmeseluiczegorepioqyfe7pzpxarpnei"
+           },
+           "mimeType": "image/jpeg",
+           "size": 483491
+          },
+          "title": "Why Anthropic Is Hiring a $400,000-a-Year Natural-Gas Supply Manager",
+          "uri": "https://www.wsj.com/business/energy-oil/why-anthropic-is-hiring-a-400-000-a-year-natural-gas-supply-manager-7c871e93?mod=djemclimate"
+         }
+        },
+        "langs": [
+         "en"
+        ],
+        "text": "In its IPO documents & this hiring notice, Anthropic makes clear it plans to undertake a massive data center buildout powered by fossil gas. Without new guardrails, this will be done largely on private grids powered entirely by gas, and then ultimately on public grids powered mostly by fossil gas."
+       },
+       "likeCount": 259,
+       "replyCount": 6,
+       "repostCount": 112,
+       "quoteCount": 32,
+       "opThreadPostIndex": 1,
+       "opThreadPostCount": 2,
+       "indexedAt": "2026-11-19T16:12:41.346Z",
+       "embeds": [
+        {
+         "external": {
+          "uri": "https://www.wsj.com/business/energy-oil/why-anthropic-is-hiring-a-400-000-a-year-natural-gas-supply-manager-7c871e93?mod=djemclimate",
+          "title": "Why Anthropic Is Hiring a $400,000-a-Year Natural-Gas Supply Manager",
+          "description": "Plus: How Europe got hooked on Chinese clean tech, what the ‘Super El Niño’ means for this year’s ski season and an energy-security boost for coal demand",
+          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:zgh42tgpzddqoi3awnsetwau/bafkreicd5aitzk6mveztsrqcacmeseluiczegorepioqyfe7pzpxarpnei"
+         },
+         "$type": "app.bsky.embed.external#view"
+        }
+       ],
+       "$type": "app.bsky.embed.record#viewRecord"
+      }
+     },
+     "$type": "app.bsky.embed.recordWithMedia#view"
+    },
+    "bookmarkCount": 234,
+    "replyCount": 34,
+    "repostCount": 1277,
+    "likeCount": 2442,
+    "quoteCount": 154,
+    "indexedAt": "2026-11-19T16:52:48.548Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:uej7fn7o7qlj7mll43nzym5q",
+     "handle": "marietjeschaake.bsky.social",
+     "displayName": "Marietje Schaake",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-22T03:57:56.779Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lwh3xlahic2q",
+        "isValid": true,
+        "createdAt": "2025-08-15T14:48:19.147Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:uej7fn7o7qlj7mll43nzym5q/app.bsky.feed.repost/3n2vsj2yxkx2h",
+    "cid": "bafyreihsyygmm3pjy34ubre5ld3hafmopjoslmlph6kgiu2khgph2ql3ii",
+    "indexedAt": "2026-11-22T14:16:03.748Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:ri3ciinceco5himlcykqomh7/app.bsky.feed.post/3n2twyzonos2d",
+    "cid": "bafyreiatf5n4rczvrbmfo6pbdjuh47zajbiczbf5qgw2tsdk5roy4za6tq",
+    "author": {
+     "did": "did:plc:ri3ciinceco5himlcykqomh7",
+     "handle": "benbraun.social",
+     "displayName": "Benjamin Braun",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      },
+      "germ": {
+       "showButtonTo": "usersIFollow",
+       "messageMeUrl": "https://landing.ger.mx/newUser"
+      }
+     },
+     "createdAt": "2023-08-26T13:57:08.771Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-21T20:31:14.575Z",
+     "embed": {
+      "$type": "app.bsky.embed.video",
+      "alt": "Illustration of the Megaspeed chip smuggling network from the linked FT article",
+      "aspectRatio": {
+       "height": 880,
+       "width": 1246
+      },
+      "presentation": "default",
+      "video": {
+       "$type": "blob",
+       "ref": {
+        "$link": "bafkreifslcvzqq7vue237j7a4xi3p37jxudgiib3apputv3dyq574q624y"
+       },
+       "mimeType": "video/mp4",
+       "size": 3014394
+      }
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://www.ft.com/content/f3ad8a81-3890-4a8a-8853-ff0a94b08ba9?syn-25a6b1a6=1"
+        }
+       ],
+       "index": {
+        "byteEnd": 115,
+        "byteStart": 89
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "The FT investigation into the Megaspeed chip smuggling operation is ... very thorough. \n\nwww.ft.com/content/f3ad..."
+    },
+    "embed": {
+     "cid": "bafkreifslcvzqq7vue237j7a4xi3p37jxudgiib3apputv3dyq574q624y",
+     "playlist": "https://video.bsky.app/watch/did%3Aplc%3Ari3ciinceco5himlcykqomh7/bafkreifslcvzqq7vue237j7a4xi3p37jxudgiib3apputv3dyq574q624y/playlist.m3u8",
+     "alt": "Illustration of the Megaspeed chip smuggling network from the linked FT article",
+     "aspectRatio": {
+      "height": 880,
+      "width": 1246
+     },
+     "presentation": "default",
+     "$type": "app.bsky.embed.video#view"
+    },
+    "bookmarkCount": 57,
+    "replyCount": 5,
+    "repostCount": 86,
+    "likeCount": 231,
+    "quoteCount": 15,
+    "indexedAt": "2026-11-21T20:31:15.151Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:uej7fn7o7qlj7mll43nzym5q",
+     "handle": "marietjeschaake.bsky.social",
+     "displayName": "Marietje Schaake",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-22T03:57:56.779Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lwh3xlahic2q",
+        "isValid": true,
+        "createdAt": "2025-08-15T14:48:19.147Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:uej7fn7o7qlj7mll43nzym5q/app.bsky.feed.repost/3n2tzb5yphs2r",
+    "cid": "bafyreifta64zcpwjemdzinmwgm6m65li4x63a2st5jwuynpokgzn3zfpga",
+    "indexedAt": "2026-11-21T21:11:35.146Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:znlaa4exy7aubaobgk2ttoys/app.bsky.feed.post/3n2tyazt2zc2u",
+    "cid": "bafyreifam2t7o6g6nnte5mj6aneh6bbvywvrbmeczq5poc47qjkpgleami",
+    "author": {
+     "did": "did:plc:znlaa4exy7aubaobgk2ttoys",
+     "handle": "pierocastellano.com",
+     "displayName": "Piero Castellano 🇪🇺",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-08-15T17:45:10.430Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-21T20:53:36.898Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "US Defense ​Secretary Pete ‌Hegseth imposed ​new ​restrictions on the ⁠US-Canada ​defense ​relationship in a memo ​issued ​last week, the ‌Washington ⁠Post reported on ​Friday, ​citing ⁠officials fami...",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreibvfy4jszswppytksccwdvlkc77rbzqftnuyyz74jsnljhfsyf3hm"
+        },
+        "mimeType": "image/jpeg",
+        "size": 535571
+       },
+       "title": "US Defense Secretary Hegseth restricts military ties with Canada, Washington Post reports",
+       "uri": "https://www.reuters.com/world/americas/us-defense-secretary-hegseth-restricts-military-ties-with-canada-washington-post-2026-11-20/"
+      }
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://www.reuters.com/world/americas/us-defense-secretary-hegseth-restricts-military-ties-with-canada-washington-post-2026-11-20/"
+        }
+       ],
+       "index": {
+        "byteEnd": 121,
+        "byteStart": 90
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "US Defense Secretary Hegseth restricts military ties with Canada, Washington Post reports\nwww.reuters.com/world/americ..."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://www.reuters.com/world/americas/us-defense-secretary-hegseth-restricts-military-ties-with-canada-washington-post-2026-11-20/",
+      "title": "US Defense Secretary Hegseth restricts military ties with Canada, Washington Post reports",
+      "description": "US Defense ​Secretary Pete ‌Hegseth imposed ​new ​restrictions on the ⁠US-Canada ​defense ​relationship in a memo ​issued ​last week, the ‌Washington ⁠Post reported on ​Friday, ​citing ⁠officials fami...",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:znlaa4exy7aubaobgk2ttoys/bafkreibvfy4jszswppytksccwdvlkc77rbzqftnuyyz74jsnljhfsyf3hm"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 3,
+    "repostCount": 9,
+    "likeCount": 7,
+    "quoteCount": 2,
+    "indexedAt": "2026-11-21T20:53:37.845Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:uej7fn7o7qlj7mll43nzym5q",
+     "handle": "marietjeschaake.bsky.social",
+     "displayName": "Marietje Schaake",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-22T03:57:56.779Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lwh3xlahic2q",
+        "isValid": true,
+        "createdAt": "2025-08-15T14:48:19.147Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:uej7fn7o7qlj7mll43nzym5q/app.bsky.feed.repost/3n2tywk7imh2i",
+    "cid": "bafyreib5l7pcme5ygy2skzjcncpklmqqdrypbtm5cp4onu7cpmsyoxuclq",
+    "indexedAt": "2026-11-21T21:05:38.843Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  }
+ ],
+ "cursor": "2026-11-05T21:07:26.662Z"
+}

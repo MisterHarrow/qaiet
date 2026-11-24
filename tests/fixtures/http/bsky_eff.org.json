@@ -1,0 +1,636 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:lr36xv2l64jwtnyoaqem6z2z/app.bsky.feed.post/3n2ypd4nhzc2n",
+    "cid": "bafyreiayo7hxntptzxdikmovaubrlaklcapweugexgf26fd3yabm2rfufa",
+    "author": {
+     "did": "did:plc:lr36xv2l64jwtnyoaqem6z2z",
+     "handle": "eff.org",
+     "displayName": "Electronic Frontier Foundation",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-25T23:17:38.490Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lvc2x5zttu2s",
+        "isValid": true,
+        "createdAt": "2025-07-31T21:21:41.079Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     },
+     "status": {
+      "uri": "at://did:plc:lr36xv2l64jwtnyoaqem6z2z/app.bsky.actor.status/self",
+      "cid": "bafyreibvb3nfqufcotdnbgr4eg7yfpoobvegun63lucm7at5afdqywpt2a",
+      "record": {
+       "$type": "app.bsky.actor.status",
+       "createdAt": "2026-11-05T18:59:38.567Z",
+       "durationMinutes": 60,
+       "embed": {
+        "$type": "app.bsky.embed.external",
+        "external": {
+         "$type": "app.bsky.embed.external#external",
+         "description": "The Electronic Frontier Foundation (EFF) is the first line of defense when your rights in the digital world come under attack. Comments are welcome, but uncivil or off-topic posts may be deleted. — EF...",
+         "thumb": {
+          "$type": "blob",
+          "ref": {
+           "$link": "bafkreialwkuxysksy4vonto6vjprb5mftkcfavbmntrbuis75rfcev6kfm"
+          },
+          "mimeType": "image/jpeg",
+          "size": 14223
+         },
+         "title": "EFFLive - Twitch",
+         "uri": "https://www.twitch.tv/efflive"
+        }
+       },
+       "status": "app.bsky.actor.status#live"
+      },
+      "status": "app.bsky.actor.status#live",
+      "embed": {
+       "external": {
+        "uri": "https://www.twitch.tv/efflive",
+        "title": "EFFLive - Twitch",
+        "description": "The Electronic Frontier Foundation (EFF) is the first line of defense when your rights in the digital world come under attack. Comments are welcome, but uncivil or off-topic posts may be deleted. — EF...",
+        "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:lr36xv2l64jwtnyoaqem6z2z/bafkreialwkuxysksy4vonto6vjprb5mftkcfavbmntrbuis75rfcev6kfm"
+       },
+       "$type": "app.bsky.embed.external#view"
+      },
+      "expiresAt": "2026-11-05T19:59:38.567Z",
+      "isActive": false
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T17:57:01.941875+00:00",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "$type": "app.bsky.embed.images#image",
+        "alt": "Bold text reads \"EFFECTING CHANGE\" against a black background, with curvy red and white lines creating a dynamic visual effect.",
+        "aspectRatio": {
+         "$type": "app.bsky.embed.defs#aspectRatio",
+         "height": 600,
+         "width": 1200
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreigwoohoszglowk2ezo66yyrrj3kf4ojq6d6u6bgow3ocd4dwwz6vu"
+         },
+         "mimeType": "image/png",
+         "size": 118140
+        }
+       }
+      ]
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://eff.org/livestream-ealpr"
+        }
+       ],
+       "index": {
+        "$type": "app.bsky.richtext.facet#byteSlice",
+        "byteEnd": 215,
+        "byteStart": 193
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "Every passing car gets photographed, logged, and stored, building a record of where the driving public goes and when. Check out EFF's panel on license plate reader cameras on 12/3 at 11 AM PT. eff.org/livestream-..."
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:lr36xv2l64jwtnyoaqem6z2z/bafkreigwoohoszglowk2ezo66yyrrj3kf4ojq6d6u6bgow3ocd4dwwz6vu",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:lr36xv2l64jwtnyoaqem6z2z/bafkreigwoohoszglowk2ezo66yyrrj3kf4ojq6d6u6bgow3ocd4dwwz6vu",
+       "alt": "Bold text reads \"EFFECTING CHANGE\" against a black background, with curvy red and white lines creating a dynamic visual effect.",
+       "aspectRatio": {
+        "$type": "app.bsky.embed.defs#aspectRatio",
+        "height": 600,
+        "width": 1200
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 2,
+    "replyCount": 4,
+    "repostCount": 18,
+    "likeCount": 46,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-23T17:57:02.144Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:lr36xv2l64jwtnyoaqem6z2z/app.bsky.feed.post/3n2x376z33z2f",
+    "cid": "bafyreibvqpblipzw4ohfsdn3t2cvhqie7aqlt56lzhmfezgh6bbljqhpba",
+    "author": {
+     "did": "did:plc:lr36xv2l64jwtnyoaqem6z2z",
+     "handle": "eff.org",
+     "displayName": "Electronic Frontier Foundation",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-25T23:17:38.490Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lvc2x5zttu2s",
+        "isValid": true,
+        "createdAt": "2025-07-31T21:21:41.079Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     },
+     "status": {
+      "uri": "at://did:plc:lr36xv2l64jwtnyoaqem6z2z/app.bsky.actor.status/self",
+      "cid": "bafyreibvb3nfqufcotdnbgr4eg7yfpoobvegun63lucm7at5afdqywpt2a",
+      "record": {
+       "$type": "app.bsky.actor.status",
+       "createdAt": "2026-11-05T18:59:38.567Z",
+       "durationMinutes": 60,
+       "embed": {
+        "$type": "app.bsky.embed.external",
+        "external": {
+         "$type": "app.bsky.embed.external#external",
+         "description": "The Electronic Frontier Foundation (EFF) is the first line of defense when your rights in the digital world come under attack. Comments are welcome, but uncivil or off-topic posts may be deleted. — EF...",
+         "thumb": {
+          "$type": "blob",
+          "ref": {
+           "$link": "bafkreialwkuxysksy4vonto6vjprb5mftkcfavbmntrbuis75rfcev6kfm"
+          },
+          "mimeType": "image/jpeg",
+          "size": 14223
+         },
+         "title": "EFFLive - Twitch",
+         "uri": "https://www.twitch.tv/efflive"
+        }
+       },
+       "status": "app.bsky.actor.status#live"
+      },
+      "status": "app.bsky.actor.status#live",
+      "embed": {
+       "external": {
+        "uri": "https://www.twitch.tv/efflive",
+        "title": "EFFLive - Twitch",
+        "description": "The Electronic Frontier Foundation (EFF) is the first line of defense when your rights in the digital world come under attack. Comments are welcome, but uncivil or off-topic posts may be deleted. — EF...",
+        "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:lr36xv2l64jwtnyoaqem6z2z/bafkreialwkuxysksy4vonto6vjprb5mftkcfavbmntrbuis75rfcev6kfm"
+       },
+       "$type": "app.bsky.embed.external#view"
+      },
+      "expiresAt": "2026-11-05T19:59:38.567Z",
+      "isActive": false
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T02:24:15.598764+00:00",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "$type": "app.bsky.embed.external#external",
+       "description": "Software patents are mostly vague, hard to define, and widely abused. Most tech patent lawsuits aren’t filed by companies that make real products. They’re filed by patent trolls, companies that",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreiakbhfra2jczlwobj5etadw5bikm6umkgbgomsmocav5sv37lhn4m"
+        },
+        "mimeType": "image/webp",
+        "size": 107634
+       },
+       "title": "The Justice Department Wants To Give Patent Trolls More Power ",
+       "uri": "https://www.eff.org/deeplinks/2026/11/justice-department-wants-give-patent-trolls-more-power"
+      }
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://www.eff.org/deeplinks/2026/11/justice-department-wants-give-patent-trolls-more-power"
+        }
+       ],
+       "index": {
+        "$type": "app.bsky.richtext.facet#byteSlice",
+        "byteEnd": 194,
+        "byteStart": 168
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "Courts calculate patent damages all the time. The fact that those calculations can be complex shouldn’t become a shortcut to an injunction that blocks product sales. www.eff.org/deeplinks/2..."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://www.eff.org/deeplinks/2026/11/justice-department-wants-give-patent-trolls-more-power",
+      "title": "The Justice Department Wants To Give Patent Trolls More Power ",
+      "description": "Software patents are mostly vague, hard to define, and widely abused. Most tech patent lawsuits aren’t filed by companies that make real products. They’re filed by patent trolls, companies that",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:lr36xv2l64jwtnyoaqem6z2z/bafkreiakbhfra2jczlwobj5etadw5bikm6umkgbgomsmocav5sv37lhn4m"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 8,
+    "replyCount": 3,
+    "repostCount": 18,
+    "likeCount": 75,
+    "quoteCount": 1,
+    "indexedAt": "2026-11-23T02:24:15.844Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:lr36xv2l64jwtnyoaqem6z2z/app.bsky.feed.post/3n2w3zd5p3s2f",
+    "cid": "bafyreic7hylqzilkhsrymacn6y7phqzrwuxzopb6hrh33ay66wjlcqs35u",
+    "author": {
+     "did": "did:plc:lr36xv2l64jwtnyoaqem6z2z",
+     "handle": "eff.org",
+     "displayName": "Electronic Frontier Foundation",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-25T23:17:38.490Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lvc2x5zttu2s",
+        "isValid": true,
+        "createdAt": "2025-07-31T21:21:41.079Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     },
+     "status": {
+      "uri": "at://did:plc:lr36xv2l64jwtnyoaqem6z2z/app.bsky.actor.status/self",
+      "cid": "bafyreibvb3nfqufcotdnbgr4eg7yfpoobvegun63lucm7at5afdqywpt2a",
+      "record": {
+       "$type": "app.bsky.actor.status",
+       "createdAt": "2026-11-05T18:59:38.567Z",
+       "durationMinutes": 60,
+       "embed": {
+        "$type": "app.bsky.embed.external",
+        "external": {
+         "$type": "app.bsky.embed.external#external",
+         "description": "The Electronic Frontier Foundation (EFF) is the first line of defense when your rights in the digital world come under attack. Comments are welcome, but uncivil or off-topic posts may be deleted. — EF...",
+         "thumb": {
+          "$type": "blob",
+          "ref": {
+           "$link": "bafkreialwkuxysksy4vonto6vjprb5mftkcfavbmntrbuis75rfcev6kfm"
+          },
+          "mimeType": "image/jpeg",
+          "size": 14223
+         },
+         "title": "EFFLive - Twitch",
+         "uri": "https://www.twitch.tv/efflive"
+        }
+       },
+       "status": "app.bsky.actor.status#live"
+      },
+      "status": "app.bsky.actor.status#live",
+      "embed": {
+       "external": {
+        "uri": "https://www.twitch.tv/efflive",
+        "title": "EFFLive - Twitch",
+        "description": "The Electronic Frontier Foundation (EFF) is the first line of defense when your rights in the digital world come under attack. Comments are welcome, but uncivil or off-topic posts may be deleted. — EF...",
+        "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:lr36xv2l64jwtnyoaqem6z2z/bafkreialwkuxysksy4vonto6vjprb5mftkcfavbmntrbuis75rfcev6kfm"
+       },
+       "$type": "app.bsky.embed.external#view"
+      },
+      "expiresAt": "2026-11-05T19:59:38.567Z",
+      "isActive": false
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-22T17:06:12.691Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "It's the story of the lawyers who fought for your privacy, the government that lied about spying on you, and the whistleblower who blew it all wide open.",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreid3ghtfve4w5buywieu24uad3fvhtcg6pl6yxy3x4sdmhp4otm6ji"
+        },
+        "mimeType": "image/jpeg",
+        "size": 984904
+       },
+       "title": "Privacy's Defenders Podcast: Snowden Exposes NSA’s Lies",
+       "uri": "https://www.eff.org/deeplinks/2026/11/privacys-defenders-podcast-snowden-exposes-nsas-lies"
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "For EFF and its clients, Edward Snowden’s documents were proof of the secret surveillance the government had spent years refusing to confirm: “We were struggling along in the mud, and we felt like somebody gave us wings.”   \nHear E4 of our Privacy’s Defenders podcast: “Snowden Exposes NSA’s Lies.”"
+    },
+    "embed": {
+     "external": {
+      "uri": "https://www.eff.org/deeplinks/2026/11/privacys-defenders-podcast-snowden-exposes-nsas-lies",
+      "title": "Privacy's Defenders Podcast: Snowden Exposes NSA’s Lies",
+      "description": "It's the story of the lawyers who fought for your privacy, the government that lied about spying on you, and the whistleblower who blew it all wide open.",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:lr36xv2l64jwtnyoaqem6z2z/bafkreid3ghtfve4w5buywieu24uad3fvhtcg6pl6yxy3x4sdmhp4otm6ji"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 6,
+    "replyCount": 2,
+    "repostCount": 20,
+    "likeCount": 79,
+    "quoteCount": 1,
+    "indexedAt": "2026-11-22T17:06:15.045Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 2
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:lr36xv2l64jwtnyoaqem6z2z/app.bsky.feed.post/3n2ts64pwwk2x",
+    "cid": "bafyreigv3xwkglbxjlc4vk363iu7ighcyxi75wgtjtatcfgc7durccu6qi",
+    "author": {
+     "did": "did:plc:lr36xv2l64jwtnyoaqem6z2z",
+     "handle": "eff.org",
+     "displayName": "Electronic Frontier Foundation",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-25T23:17:38.490Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lvc2x5zttu2s",
+        "isValid": true,
+        "createdAt": "2025-07-31T21:21:41.079Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     },
+     "status": {
+      "uri": "at://did:plc:lr36xv2l64jwtnyoaqem6z2z/app.bsky.actor.status/self",
+      "cid": "bafyreibvb3nfqufcotdnbgr4eg7yfpoobvegun63lucm7at5afdqywpt2a",
+      "record": {
+       "$type": "app.bsky.actor.status",
+       "createdAt": "2026-11-05T18:59:38.567Z",
+       "durationMinutes": 60,
+       "embed": {
+        "$type": "app.bsky.embed.external",
+        "external": {
+         "$type": "app.bsky.embed.external#external",
+         "description": "The Electronic Frontier Foundation (EFF) is the first line of defense when your rights in the digital world come under attack. Comments are welcome, but uncivil or off-topic posts may be deleted. — EF...",
+         "thumb": {
+          "$type": "blob",
+          "ref": {
+           "$link": "bafkreialwkuxysksy4vonto6vjprb5mftkcfavbmntrbuis75rfcev6kfm"
+          },
+          "mimeType": "image/jpeg",
+          "size": 14223
+         },
+         "title": "EFFLive - Twitch",
+         "uri": "https://www.twitch.tv/efflive"
+        }
+       },
+       "status": "app.bsky.actor.status#live"
+      },
+      "status": "app.bsky.actor.status#live",
+      "embed": {
+       "external": {
+        "uri": "https://www.twitch.tv/efflive",
+        "title": "EFFLive - Twitch",
+        "description": "The Electronic Frontier Foundation (EFF) is the first line of defense when your rights in the digital world come under attack. Comments are welcome, but uncivil or off-topic posts may be deleted. — EF...",
+        "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:lr36xv2l64jwtnyoaqem6z2z/bafkreialwkuxysksy4vonto6vjprb5mftkcfavbmntrbuis75rfcev6kfm"
+       },
+       "$type": "app.bsky.embed.external#view"
+      },
+      "expiresAt": "2026-11-05T19:59:38.567Z",
+      "isActive": false
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-21T19:04:36.826Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "Playstation’s decision to kill physical game discs is the latest attack on our diminishing rights to access and engage with culture digitally. Rent-seeking corporations and negligent lawmakers share t...",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreifexqhi5efd2ertv6jkahqjpbim25q3alabiyjsu5garkvlsabfl4"
+        },
+        "mimeType": "image/jpeg",
+        "size": 157463
+       },
+       "title": "Sony Nerfs Videogame Ownership",
+       "uri": "https://www.eff.org/deeplinks/2026/07/sony-nerfs-videogame-ownership"
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "This week marked not only GTA VI Day, but also Nintendo Wii’s 20th anniversary. Remember when games were on discs and once you bought it you were sure you really owned it? Yeah, that was cool. (sigh)"
+    },
+    "embed": {
+     "external": {
+      "uri": "https://www.eff.org/deeplinks/2026/07/sony-nerfs-videogame-ownership",
+      "title": "Sony Nerfs Videogame Ownership",
+      "description": "Playstation’s decision to kill physical game discs is the latest attack on our diminishing rights to access and engage with culture digitally. Rent-seeking corporations and negligent lawmakers share t...",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:lr36xv2l64jwtnyoaqem6z2z/bafkreifexqhi5efd2ertv6jkahqjpbim25q3alabiyjsu5garkvlsabfl4"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 8,
+    "replyCount": 7,
+    "repostCount": 46,
+    "likeCount": 195,
+    "quoteCount": 6,
+    "indexedAt": "2026-11-21T19:04:38.852Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 2
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:lr36xv2l64jwtnyoaqem6z2z/app.bsky.feed.post/3n2tgdrl4u32t",
+    "cid": "bafyreidxjb6sndkgdrd7sr2kqjuuwaomjppbwg5x24wgl766rpxsay6ewy",
+    "author": {
+     "did": "did:plc:lr36xv2l64jwtnyoaqem6z2z",
+     "handle": "eff.org",
+     "displayName": "Electronic Frontier Foundation",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-25T23:17:38.490Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lvc2x5zttu2s",
+        "isValid": true,
+        "createdAt": "2025-07-31T21:21:41.079Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     },
+     "status": {
+      "uri": "at://did:plc:lr36xv2l64jwtnyoaqem6z2z/app.bsky.actor.status/self",
+      "cid": "bafyreibvb3nfqufcotdnbgr4eg7yfpoobvegun63lucm7at5afdqywpt2a",
+      "record": {
+       "$type": "app.bsky.actor.status",
+       "createdAt": "2026-11-05T18:59:38.567Z",
+       "durationMinutes": 60,
+       "embed": {
+        "$type": "app.bsky.embed.external",
+        "external": {
+         "$type": "app.bsky.embed.external#external",
+         "description": "The Electronic Frontier Foundation (EFF) is the first line of defense when your rights in the digital world come under attack. Comments are welcome, but uncivil or off-topic posts may be deleted. — EF...",
+         "thumb": {
+          "$type": "blob",
+          "ref": {
+           "$link": "bafkreialwkuxysksy4vonto6vjprb5mftkcfavbmntrbuis75rfcev6kfm"
+          },
+          "mimeType": "image/jpeg",
+          "size": 14223
+         },
+         "title": "EFFLive - Twitch",
+         "uri": "https://www.twitch.tv/efflive"
+        }
+       },
+       "status": "app.bsky.actor.status#live"
+      },
+      "status": "app.bsky.actor.status#live",
+      "embed": {
+       "external": {
+        "uri": "https://www.twitch.tv/efflive",
+        "title": "EFFLive - Twitch",
+        "description": "The Electronic Frontier Foundation (EFF) is the first line of defense when your rights in the digital world come under attack. Comments are welcome, but uncivil or off-topic posts may be deleted. — EF...",
+        "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:lr36xv2l64jwtnyoaqem6z2z/bafkreialwkuxysksy4vonto6vjprb5mftkcfavbmntrbuis75rfcev6kfm"
+       },
+       "$type": "app.bsky.embed.external#view"
+      },
+      "expiresAt": "2026-11-05T19:59:38.567Z",
+      "isActive": false
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-21T15:33:01.518626+00:00",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "$type": "app.bsky.embed.external#external",
+       "description": "It's been a tough couple of weeks for anyone trying to use email, fly, spend money, use an Apple device*, or do signals intelligence. Technical service outages are nothing new, but why do so many big",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreiezs6zt7fowljz4c3yvftd3maydv5ikj6mrl6dkdw5ggdzwwtbzr4"
+        },
+        "mimeType": "image/webp",
+        "size": 13114
+       },
+       "title": "Outage Chaos: Who Turned Off All The Computer?",
+       "uri": "https://www.eff.org/deeplinks/2026/11/outage-chaos-who-turned-all-computer"
+      }
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://www.eff.org/deeplinks/2026/11/outage-chaos-who-turned-all-computer"
+        }
+       ],
+       "index": {
+        "$type": "app.bsky.richtext.facet#byteSlice",
+        "byteEnd": 183,
+        "byteStart": 157
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "AI has only made it more critical to reinvest in the people and systems needed to keep our software, networks, governments, and interconnected world stable. www.eff.org/deeplinks/2..."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://www.eff.org/deeplinks/2026/11/outage-chaos-who-turned-all-computer",
+      "title": "Outage Chaos: Who Turned Off All The Computer?",
+      "description": "It's been a tough couple of weeks for anyone trying to use email, fly, spend money, use an Apple device*, or do signals intelligence. Technical service outages are nothing new, but why do so many big",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:lr36xv2l64jwtnyoaqem6z2z/bafkreiezs6zt7fowljz4c3yvftd3maydv5ikj6mrl6dkdw5ggdzwwtbzr4"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 6,
+    "replyCount": 1,
+    "repostCount": 29,
+    "likeCount": 88,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-21T15:33:01.842Z"
+   }
+  }
+ ],
+ "cursor": "2026-11-17T23:33:46.698Z"
+}

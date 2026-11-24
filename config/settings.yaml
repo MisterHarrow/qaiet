@@ -1,0 +1,73 @@
+# quiet-ai settings. Sources live in sources.yaml and accounts.yaml.
+
+db_path: data/quiet-ai.db
+
+http:
+  # Sent with every request. Add a contact URL once the repo is public, e.g.
+  # "quiet-ai/0.1 (+https://github.com/<owner>/quiet-ai)".
+  user_agent: "quiet-ai/0.1 (daily AI news digest; respects robots.txt)"
+  robots_token: quiet-ai          # name matched against robots.txt User-agent groups
+  respect_robots: true
+  timeout_s: 20
+  max_retries: 2                  # on 429, 5xx and network errors
+  backoff_base_s: 2
+  max_retry_wait_s: 30
+  min_interval_s: 1.0             # minimum gap between two requests to the same host
+  host_min_interval_s:
+    api.gdeltproject.org: 6       # GDELT asks for at most one request per 5 s
+    public.api.bsky.app: 0.3
+    huggingface.co: 0.5
+  workers: 8                      # different hosts are fetched in parallel
+
+ingest:
+  title_max_chars: 300
+  summary_max_chars: 500          # we store a short summary only, never full text
+  max_age_days: 14                # skip dated items older than this (feeds often carry years of backlog);
+                                  # repos/models/datasets/spaces are exempt (their date is a creation date)
+
+github:
+  # Search API: 10 requests/min without a token, 30/min with GITHUB_TOKEN.
+  min_interval_s_unauthenticated: 6.5
+  min_interval_s_token: 2.2
+  per_page: 50
+  created_within_days: 14         # "new repos" queries
+  topics: [llm, large-language-models, ai-agents, generative-ai, mcp, rag, llm-inference, diffusion-models]
+  established_topics: [llm, ai-agents]   # big repos still moving, for star velocity
+  established_min_stars: 1000
+  established_pushed_within_days: 2
+
+huggingface:
+  trending_limit: 50
+  papers_days: 2                  # today and yesterday
+  posts_limit: 50
+
+hackernews:
+  window_hours: 48
+  min_points: 20
+  max_hits: 500
+
+bluesky:
+  posts_per_account: 30
+  only_active: true               # poll only accounts with bluesky_active: true
+
+openrouter:
+  max_age_days: 14                # only models added in this window
+
+gdelt:
+  enabled: true
+  timespan: 1d
+  max_records: 250
+  max_query_chars: 180            # longer queries are rejected; domains are split across queries
+  # GDELT rejects very short keywords, so no bare "AI".
+  terms: ['"artificial intelligence"', OpenAI, chatbot, Nvidia, DeepSeek]
+
+# Used from M3 on.
+llm:
+  item_model: claude-haiku-5-5
+  story_model: claude-sonnet-5-5
+  monthly_budget_usd: 30
+
+schedule:
+  every_hours: 2
+  edition_timezone: Europe/Stockholm
+  edition_cutoff: "00:00"

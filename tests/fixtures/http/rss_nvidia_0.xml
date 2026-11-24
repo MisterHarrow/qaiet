@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	xmlns:media="http://search.yahoo.com/mrss/">
+
+<channel>
+	<title>NVIDIA Blog</title>
+	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
+	<link>https://blogs.nvidia.com/</link>
+	<description></description>
+	<lastBuildDate>Mon, 23 Nov 2026 18:13:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=7.1.5</generator>
+	<item>
+		<title>Merry Making: Play, Build and Create With NVIDIA Technologies This Holiday Season</title>
+		<link>https://blogs.nvidia.com/blog/nvidia-technologies-holidays-2026/</link>
+		
+		<dc:creator><![CDATA[NVIDIA Writers]]></dc:creator>
+		<pubDate>Mon, 23 Nov 2026 17:00:08 +0000</pubDate>
+				<category><![CDATA[AI]]></category>
+		<category><![CDATA[Gaming]]></category>
+		<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[Robotics]]></category>
+		<category><![CDATA[Software]]></category>
+		<category><![CDATA[GeForce NOW]]></category>
+		<category><![CDATA[GeForce RTX]]></category>
+		<category><![CDATA[Jetson]]></category>
+		<category><![CDATA[NVIDIA RTX]]></category>
+		<category><![CDATA[NVIDIA Studio]]></category>
+		<category><![CDATA[OpenShell]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=100141</guid>
+
+					<description><![CDATA[The elves don’t have to be the only ones busy in the workshop this holiday season. With the lights twinkling and the gift wrap out, it’s the perfect time to give someone — or yourself — a spark to take a hobby to the next level. For some, that means diving into a new game. [&#8230;]]]></description>
+										
+					
+		
+		
+				<media:content url="https://blogs.nvidia.com/wp-content/uploads/2026/11/nvidia-holiday26-gfn-nv-blog-preview-1280x680-1.jpg" type="image/jpeg" width="1280" height="680">
+			<media:thumbnail url="https://blogs.nvidia.com/wp-content/uploads/2026/11/nvidia-holiday26-gfn-nv-blog-preview-1280x680-1-842x450.jpg" width="842" height="450" />
+			<media:title type="html"><![CDATA[Merry Making: Play, Build and Create With NVIDIA Technologies This Holiday Season]]></media:title>
+			<media:description type="html"></media:description>
+		</media:content>
+	</item>
+		<item>
+		<title>NVIDIA and Microsoft Expand Accelerated Computing From Azure to Windows PCs</title>
+		<link>https://blogs.nvidia.com/blog/microsoft-ignite-accelerated-computing-azure-windows-pcs/</link>
+		
+		<dc:creator><![CDATA[Dave Salvator]]></dc:creator>
+		<pubDate>Thu, 19 Nov 2026 20:00:15 +0000</pubDate>
+				<category><![CDATA[AI Infrastructure]]></category>
+		<category><![CDATA[Cloud]]></category>
+		<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[Software]]></category>
+		<category><![CDATA[Cosmos]]></category>
+		<category><![CDATA[Inference]]></category>
+		<category><![CDATA[Jetson]]></category>
+		<category><![CDATA[Nemotron]]></category>
+		<category><![CDATA[NVIDIA Blackwell]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=100047</guid>
+
+					<description><![CDATA[NVIDIA and Microsoft are extending their full-stack collaboration to help organizations build, customize and deploy intelligent applications — from next-generation infrastructure on Azure to industrial systems and Windows PCs. At Microsoft Ignite, the companies are expanding access to Azure virtual machines powered by NVIDIA Vera Rubin NVL72 systems, as well as adding customer availability to [&#8230;]]]></description>
+										
+					
+		
+		
+				<media:content url="https://blogs.nvidia.com/wp-content/uploads/2026/11/nvidia-microsoft.png" type="image/png" width="1280" height="680">
+			<media:thumbnail url="https://blogs.nvidia.com/wp-content/uploads/2026/11/nvidia-microsoft-842x450.png" width="842" height="450" />
+			<media:title type="html"><![CDATA[NVIDIA and Microsoft Expand Accelerated Computing From Azure to Windows PCs]]></media:title>
+			<media:description type="html"></media:description>
+		</media:content>
+	</item>
+		<item>
+		<title>Into the Omniverse: How Developers Turn Ideas Into Simulations With Frontier AI Agents</title>
+		<link>https://blogs.nvidia.com/blog/developers-simulation-frontier-ai-agents/</link>
+		
+		<dc:creator><![CDATA[NVIDIA Writers]]></dc:creator>
+		<pubDate>Thu, 19 Nov 2026 17:00:35 +0000</pubDate>
+				<category><![CDATA[Robotics]]></category>
+		<category><![CDATA[Agentic AI]]></category>
+		<category><![CDATA[Into the Omniverse]]></category>
+		<category><![CDATA[NVIDIA Isaac Sim]]></category>
+		<category><![CDATA[Omniverse]]></category>
+		<category><![CDATA[OpenUSD]]></category>
+		<category><![CDATA[Physical AI]]></category>
+		<category><![CDATA[Simulation]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=98677</guid>
+
+					<description><![CDATA[Turning a simulation idea into a working application means assembling assets, connecting physics and rendering, and checking that the scene behaves as intended. Developers are combining frontier AI models with NVIDIA Omniverse libraries to help carry out that work — building applications for exploring scenarios, investigating failures and improving designs. Developers direct AI agents through [&#8230;]]]></description>
+										
+					
+		
+		<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2026/10/Humanoid-Warehouse.mp4" length="9339145" type="video/mp4" />
+<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2026/10/zero-to-alpamayo-under-10MB.mp4" length="9692557" type="video/mp4" />
+<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2026/10/0_00-0_004-hubble_rivermark_Real_Sim_no_loop.mp4" length="6517882" type="video/mp4" />
+<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2026/10/Infra-scale-demo-20260914_144614-Meeting-Recording.mp4" length="6815937" type="video/mp4" />
+<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2026/10/scurve_rl_vs_astra_side_by_side.mp4" length="6145836" type="video/mp4" />
+<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2026/10/relay-video-v14-1080p.mp4" length="9557112" type="video/mp4" />
+<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2026/10/Turbine-Lab-RTX-and-What-If-under-10MB-1.mp4" length="9387027" type="video/mp4" />
+<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2026/10/kitchen_final_blog_with_music.mp4" length="9974240" type="video/mp4" />
+<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2026/10/Robot_Hand_Video_Omniverse.mp4" length="7901725" type="video/mp4" />
+<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2026/11/Robotic_Dissasembly_Omniverse.mp4" length="8670789" type="video/mp4" />
+<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2026/11/Nyhamna_footage_take5_30s.mp4" length="8295167" type="video/mp4" />
+<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2026/11/microducks-icu-pathtraced-16x9-1920x1080-1.mp4" length="9510200" type="video/mp4" />
+
+				<media:content url="https://blogs.nvidia.com/wp-content/uploads/2026/10/Copy-of-nvidia-ov-x-astra-4up-KV-r1-press-4k-r2-scaled.png" type="image/png" width="2048" height="1152">
+			<media:thumbnail url="https://blogs.nvidia.com/wp-content/uploads/2026/10/Copy-of-nvidia-ov-x-astra-4up-KV-r1-press-4k-r2-842x450.png" width="842" height="450" />
+			<media:title type="html"><![CDATA[Into the Omniverse: How Developers Turn Ideas Into Simulations With Frontier AI Agents]]></media:title>
+			<media:description type="html"></media:description>
+		</media:content>
+	</item>
+		<item>
+		<title>Season’s Streamings and Savings: Black Friday Deals Come to GeForce NOW</title>
+		<link>https://blogs.nvidia.com/blog/geforce-now-thursday-black-friday-2026/</link>
+		
+		<dc:creator><![CDATA[GeForce NOW Community]]></dc:creator>
+		<pubDate>Thu, 19 Nov 2026 14:00:12 +0000</pubDate>
+				<category><![CDATA[Gaming]]></category>
+		<category><![CDATA[Cloud Gaming]]></category>
+		<category><![CDATA[GeForce NOW]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=100100</guid>
+
+					<description><![CDATA[GeForce NOW is kicking off Black Friday with more reasons to make time for gaming. Six-month memberships are back for a limited time. Save 30% on the first six-month term of a Performance or Ultimate membership. Big gaming plans, smaller price tag.  Keep the holiday savings going: Check out more NVIDIA holiday deals for gamers, [&#8230;]]]></description>
+										
+					
+		
+		
+				<media:content url="https://blogs.nvidia.com/wp-content/uploads/2026/11/GFN_Thursday_November_19.jpg" type="image/jpeg" width="1920" height="1080">
+			<media:thumbnail url="https://blogs.nvidia.com/wp-content/uploads/2026/11/GFN_Thursday_November_19-842x450.jpg" width="842" height="450" />
+			<media:title type="html"><![CDATA[Season’s Streamings and Savings: Black Friday Deals Come to GeForce NOW]]></media:title>
+			<media:description type="html"></media:description>
+		</media:content>
+	</item>
+		<item>
+		<title>NVIDIA RTX Spark Compact Desktops Out Now</title>
+		<link>https://blogs.nvidia.com/blog/rtx-spark-desktop-local-ai-available-now/</link>
+		
+		<dc:creator><![CDATA[Justin Walker]]></dc:creator>
+		<pubDate>Wed, 18 Nov 2026 14:00:31 +0000</pubDate>
+				<category><![CDATA[AI]]></category>
+		<category><![CDATA[Agentic AI]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[DGX Spark]]></category>
+		<category><![CDATA[Local AI]]></category>
+		<category><![CDATA[NVIDIA RTX]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[RTX Spark]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=100079</guid>
+
+					<description><![CDATA[New NVIDIA RTX Spark compact desktops from ASUS, Dell and MSI are available today, bringing local AI agents, image and video generation, and model fine-tuning to a dedicated Windows PC. With up to 128GB of unified memory and NVIDIA’s AI software stack, these systems provide room for larger local models alongside RTX-accelerated creative and development [&#8230;]]]></description>
+										
+					
+		
+		
+				<media:content url="https://blogs.nvidia.com/wp-content/uploads/2026/11/nv-blog-1280x680-2-1.jpg" type="image/jpeg" width="1280" height="680">
+			<media:thumbnail url="https://blogs.nvidia.com/wp-content/uploads/2026/11/nv-blog-1280x680-2-1-842x450.jpg" width="842" height="450" />
+			<media:title type="html"><![CDATA[NVIDIA RTX Spark Compact Desktops Out Now]]></media:title>
+			<media:description type="html"></media:description>
+		</media:content>
+	</item>
+	</channel>
+</rss>

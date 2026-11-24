@@ -1,0 +1,457 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3n2zbiqydh22d",
+    "cid": "bafyreidgvwpcz3uvuloq4z2iyt6xicv75j7mu5x7gzmjxfgozs6avel3ru",
+    "author": {
+     "did": "did:plc:kft6lu4trxowqmter2b6vg6z",
+     "handle": "simonwillison.net",
+     "displayName": "Simon Willison",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-25T16:08:31.603Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lndpy5yj3c2f",
+        "isValid": true,
+        "createdAt": "2025-04-21T10:49:10.070Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T23:22:18.436Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "A charting plugin for Datasette",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreibhv3vhl54sjyehtk72mpidjx3fwiba6b6kfh67gei6yyxy43n4da"
+        },
+        "mimeType": "image/jpeg",
+        "size": 587306
+       },
+       "title": "Release: datasette-charts 0.1a0",
+       "uri": "https://simonwillison.net/2026/Nov/23/datasette-charts/"
+      }
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://simonwillison.net/2026/Nov/23/datasette-charts/"
+        }
+       ],
+       "index": {
+        "byteEnd": 235,
+        "byteStart": 202
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "I built (with a lot of help from Fable 5.2) a new datasette-charts plugin, which is my best attempt yet at having Datasette automatically pick credible visualizations for any data you might throw at it simonwillison.net/2026/Nov/23/..."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://simonwillison.net/2026/Nov/23/datasette-charts/",
+      "title": "Release: datasette-charts 0.1a0",
+      "description": "A charting plugin for Datasette",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreibhv3vhl54sjyehtk72mpidjx3fwiba6b6kfh67gei6yyxy43n4da"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 21,
+    "replyCount": 4,
+    "repostCount": 7,
+    "likeCount": 68,
+    "quoteCount": 1,
+    "indexedAt": "2026-11-23T23:22:20.045Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 3
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3n2z5f6wby22o",
+    "cid": "bafyreigpc54dkb6a67iu5e2quafagi5ytzh2kgszcmsp2j6hd4lo6quqie",
+    "author": {
+     "did": "did:plc:kft6lu4trxowqmter2b6vg6z",
+     "handle": "simonwillison.net",
+     "displayName": "Simon Willison",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-25T16:08:31.603Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lndpy5yj3c2f",
+        "isValid": true,
+        "createdAt": "2025-04-21T10:49:10.070Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T22:08:43.862Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "Ladybird is an astonishingly ambitious project: a new browser, in 2026, with its own implementation of most of the key components—HTML parsing, CSS engine, layout, JavaScript, even WebAssembly. It sti...",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreihvh5siyw5tome54dplb327csbe2giarsm7yqv6yb74unaszymutu"
+        },
+        "mimeType": "image/jpeg",
+        "size": 890313
+       },
+       "title": "Ladybird’s first alpha release",
+       "uri": "https://simonwillison.net/2026/Nov/23/ladybird/"
+      }
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://simonwillison.net/2026/Nov/23/ladybird/"
+        }
+       ],
+       "index": {
+        "byteEnd": 229,
+        "byteStart": 196
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "I've been trying out the first Ladybird browser alpha release - a from-scratch implementation of most of what it means to be a browser (CSS, HTML, JS, even WebAssembly) - and it's very impressive simonwillison.net/2026/Nov/23/..."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://simonwillison.net/2026/Nov/23/ladybird/",
+      "title": "Ladybird’s first alpha release",
+      "description": "Ladybird is an astonishingly ambitious project: a new browser, in 2026, with its own implementation of most of the key components—HTML parsing, CSS engine, layout, JavaScript, even WebAssembly. It sti...",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreihvh5siyw5tome54dplb327csbe2giarsm7yqv6yb74unaszymutu"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 9,
+    "replyCount": 2,
+    "repostCount": 8,
+    "likeCount": 61,
+    "quoteCount": 3,
+    "indexedAt": "2026-11-23T22:08:45.941Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3n2uxw3563224",
+    "cid": "bafyreievia5ezuuwwdvqebu544ahdy4miud53ycgde6zkslse2jpz74xvm",
+    "author": {
+     "did": "did:plc:kft6lu4trxowqmter2b6vg6z",
+     "handle": "simonwillison.net",
+     "displayName": "Simon Willison",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-25T16:08:31.603Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lndpy5yj3c2f",
+        "isValid": true,
+        "createdAt": "2025-04-21T10:49:10.070Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-22T06:20:08.909Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "An excellent California brown pelican swimming in front of a dock - it must be a young one because it has brown feathers, no white ",
+        "aspectRatio": {
+         "height": 2666,
+         "width": 4000
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreihyuiv25fxxlkgbtlsls473xk4ssdeanei4yhciebnbluurv3xiem"
+         },
+         "mimeType": "image/jpeg",
+         "size": 1966980
+        }
+       }
+      ]
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "Saw an excellent pelican in the harbor today"
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreihyuiv25fxxlkgbtlsls473xk4ssdeanei4yhciebnbluurv3xiem",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreihyuiv25fxxlkgbtlsls473xk4ssdeanei4yhciebnbluurv3xiem",
+       "alt": "An excellent California brown pelican swimming in front of a dock - it must be a young one because it has brown feathers, no white ",
+       "aspectRatio": {
+        "height": 2666,
+        "width": 4000
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 1,
+    "replyCount": 11,
+    "repostCount": 0,
+    "likeCount": 168,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-22T06:20:13.641Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 2
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3n2tsb6pguk27",
+    "cid": "bafyreicte4u64lwtyhdcetwg7setlygesapw3nprsvagjaa4haaifc3bra",
+    "author": {
+     "did": "did:plc:kft6lu4trxowqmter2b6vg6z",
+     "handle": "simonwillison.net",
+     "displayName": "Simon Willison",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-25T16:08:31.603Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lndpy5yj3c2f",
+        "isValid": true,
+        "createdAt": "2025-04-21T10:49:10.070Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-21T19:06:19.565Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "A competent but quite plain pelican riding a bicycle - frame is correct shape, pelican has necessary pelican pieces, but it's a bit bland to look at. high: 40 input tokens, 5,311 output = 3.99 cents · 19s",
+        "aspectRatio": {
+         "height": 882,
+         "width": 1036
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreicxjd7jm3jl4psm6moc25xanfnt6jh2ts6acdxpctwvo4qsg4wxie"
+         },
+         "mimeType": "image/jpeg",
+         "size": 299739
+        }
+       },
+       {
+        "alt": "More gradients. Nicer background. Bicycle has more detail and a bit more character. Pelican now has a basket with some fish. xhigh: 40 input tokens, 31,477 output = 23.61 cents · 2m 36s",
+        "aspectRatio": {
+         "height": 828,
+         "width": 1036
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreifb2rzna7t6dmhvtvptxtgcbdvy3o32d2g6wdvhisczomcfh2chfq"
+         },
+         "mimeType": "image/jpeg",
+         "size": 708999
+        }
+       }
+      ]
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "Gemini 4 tip: the difference between Gemini 4 Hydrogen on \"high\" thinking effort and that same model on \"xhigh\" is VERY significant\n\nHere's the high v.s. the xhigh pelican - high cost 3.99 cents and used 5,311 output tokens, xhigh cost 23.61 cents and used 31,477 output tokens"
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreicxjd7jm3jl4psm6moc25xanfnt6jh2ts6acdxpctwvo4qsg4wxie",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreicxjd7jm3jl4psm6moc25xanfnt6jh2ts6acdxpctwvo4qsg4wxie",
+       "alt": "A competent but quite plain pelican riding a bicycle - frame is correct shape, pelican has necessary pelican pieces, but it's a bit bland to look at. high: 40 input tokens, 5,311 output = 3.99 cents · 19s",
+       "aspectRatio": {
+        "height": 882,
+        "width": 1036
+       }
+      },
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreifb2rzna7t6dmhvtvptxtgcbdvy3o32d2g6wdvhisczomcfh2chfq",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreifb2rzna7t6dmhvtvptxtgcbdvy3o32d2g6wdvhisczomcfh2chfq",
+       "alt": "More gradients. Nicer background. Bicycle has more detail and a bit more character. Pelican now has a basket with some fish. xhigh: 40 input tokens, 31,477 output = 23.61 cents · 2m 36s",
+       "aspectRatio": {
+        "height": 828,
+        "width": 1036
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 8,
+    "replyCount": 17,
+    "repostCount": 8,
+    "likeCount": 88,
+    "quoteCount": 2,
+    "indexedAt": "2026-11-21T19:06:21.841Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 2
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3n2nhnbueh22q",
+    "cid": "bafyreiblllamz3vp2hjcu4fw6dcdbqnefhpvlmspjv2bv52k4zoofbwd6m",
+    "author": {
+     "did": "did:plc:kft6lu4trxowqmter2b6vg6z",
+     "handle": "simonwillison.net",
+     "displayName": "Simon Willison",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-25T16:08:31.603Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lndpy5yj3c2f",
+        "isValid": true,
+        "createdAt": "2025-04-21T10:49:10.070Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-19T06:40:15.930Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "Comparison grid of nine flat vector-style illustrations of a pelican riding a red bicycle, arranged as a table with three model columns and three thinking-level rows. Column headers: Thinking, gemini-4-carbon, gemini-4-neon, gemini-4-hydrogen. Row HIGH: gemini-4-carbon is the most detailed of all, a pelican in a sailor cap on a red cruiser bike with fenders, chain guard and a wicker basket holding a fish, on a beach promenade with ocean, sun, clouds and distant birds, captioned \"40 input tokens,…",
+        "aspectRatio": {
+         "height": 1435,
+         "width": 1800
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreiclxzsxqxi3pemaurkmdfzy6od7ynhpt676ms4sxq7anlj3ehjziu"
+         },
+         "mimeType": "image/jpeg",
+         "size": 1473997
+        }
+       }
+      ]
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "The most useful thing about the pelican riding a bicycle test continues to be illustrating the differences between models in the same family running at different effort levels - here's Gemini 4 Carbon, the new Gemini 4 Neon, and Gemini 4 Hydrogen at low, medium, and high"
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiclxzsxqxi3pemaurkmdfzy6od7ynhpt676ms4sxq7anlj3ehjziu",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiclxzsxqxi3pemaurkmdfzy6od7ynhpt676ms4sxq7anlj3ehjziu",
+       "alt": "Comparison grid of nine flat vector-style illustrations of a pelican riding a red bicycle, arranged as a table with three model columns and three thinking-level rows. Column headers: Thinking, gemini-4-carbon, gemini-4-neon, gemini-4-hydrogen. Row HIGH: gemini-4-carbon is the most detailed of all, a pelican in a sailor cap on a red cruiser bike with fenders, chain guard and a wicker basket holding a fish, on a beach promenade with ocean, sun, clouds and distant birds, captioned \"40 input tokens,…",
+       "aspectRatio": {
+        "height": 1435,
+        "width": 1800
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 11,
+    "replyCount": 8,
+    "repostCount": 5,
+    "likeCount": 139,
+    "quoteCount": 2,
+    "indexedAt": "2026-11-19T06:40:18.844Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 3
+  }
+ ],
+ "cursor": "2026-10-07T20:58:36.48Z"
+}

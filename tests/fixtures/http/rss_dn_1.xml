@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>DN.se - Ekonomi</title>
+    <link>https://www.dn.se/ekonomi/</link>
+    <description>Nyheter om bostadsmarknaden, privatekonomi och det ekonomiska läget i Sverige och världen.</description>
+    <copyright>© Dagens Nyheter AB 2026</copyright>
+    <language>sv-se</language>
+    <image>
+      <title>DN.se - Ekonomi</title>
+      <url>https://static.bonniernews.se/gcs/bilder/dn-asset/dn-red-192x192.png</url>
+      <link>https://www.dn.se/ekonomi/</link>
+    </image>
+    <item>
+      <title>Så bryter du höstdepressionen</title>
+      <link>https://www.dn.se/ekonomi/sa-bryter-du-hostdepressionen/</link>
+      <description>Tröttheten tar över, vännerna väljs bort och tv-soffan blir allt svårare att lämna. För den som drabbas av årstidsbunden depression kan höstens mörker sätta i gång en nedåtgående spiral. Psykologen och författaren Agnes Mellstrand berättar hur den kan brytas, steg för steg.</description>
+      <guid>https://www.dn.se/ekonomi/sa-bryter-du-hostdepressionen/</guid>
+      <pubDate>Tue, 24 Nov 2026 08:44:22 +0100</pubDate>
+      <dc:creator>Jill Bederoff</dc:creator>
+      <media:content type="image/jpeg" url="https://static.bonniernews.se/ba/a09a67ea-831f-4231-92f2-d05ac4b04445.jpeg?io=1&amp;width=1000">
+        <media:credit scheme="urn:ebu"></media:credit>
+        <media:description>Dagsljus, träning och sociala aktiviteter kan hjälpa till att bryta höstdepression, säger psykologen och författaren Agnes Mellstrand</media:description>
+      </media:content>
+    </item>
+    <item>
+      <title>Expert om Huangs comeback: &quot;Har gått väldigt fort&quot;</title>
+      <link>https://www.dn.se/ekonomi/efter-huangs-comeback-det-har-gatt-valdigt-fort/</link>
+      <description>Mycket överraskande och väldigt positivt för AI-bolagen. Den bedömningen gör börsexperterna om Jensen Huangs återkomst. – Det är en dramatisk comeback, säger Maria Landeborn på Danske Bank.</description>
+      <guid>https://www.dn.se/ekonomi/efter-huangs-comeback-det-har-gatt-valdigt-fort/</guid>
+      <pubDate>Mon, 23 Nov 2026 17:38:15 +0100</pubDate>
+      <dc:creator>Mathilda Svensson</dc:creator>
+      <dc:creator>Hasse Eriksson</dc:creator>
+      <media:content type="image/jpeg" url="https://static.bonniernews.se/ba/c799ac83-0aa8-4217-a75c-1be6d5b55840.jpeg?io=1&amp;width=1000">
+        <media:credit scheme="urn:ebu">TT</media:credit>
+        <media:description>Nvidia har fått en nygammal vd.</media:description>
+      </media:content>
+    </item>
+    <item>
+      <title>Linus Larsson: Jensen Huang kan tacka Trump för jobbet</title>
+      <link>https://www.dn.se/ekonomi/linus-larsson-jensen-huang-kan-tacka-trump-for-jobbet/</link>
+      <description>Nvidia kovänder och låter Jensen Huang komma tillbaka som vd. Styrelsen gör ingen hemlighet av orsaken: Den amerikanska staten gav grönt ljus.</description>
+      <guid>https://www.dn.se/ekonomi/linus-larsson-jensen-huang-kan-tacka-trump-for-jobbet/</guid>
+      <pubDate>Mon, 23 Nov 2026 16:09:30 +0100</pubDate>
+      <dc:creator>Linus Larsson</dc:creator>
+      <media:content type="image/jpeg" url="https://static.bonniernews.se/ba/3bc4f201-d8de-4e65-bee1-5704242277fd.jpeg?io=1&amp;width=1000">
+        <media:credit scheme="urn:ebu">Julia Demaree Nikhinson/AP</media:credit>
+        <media:description>Utan stödet från Donald Trump hade Jensen Huang knappast kunnat återvända till vd-stolen på AI-jätten.</media:description>
+      </media:content>
+    </item>
+    <item>
+      <title>Jensen Huang tillbaka som vd för Nvidia</title>
+      <link>https://www.dn.se/ekonomi/jensen-huang-tillbaka-som-vd-for-nvidia/</link>
+      <description>Nvidia meddelar att Jensen Huang kommer tillbaka som vd för chipjätten med omedelbar verkan, 1,5 vecka efter att han lämnade bolaget på dagen. Aktien rusar över 30 procent och lyfter Nasdaq-indexet nästan 7 procent. USA:s president Donald Trump hyllar beslutet.</description>
+      <guid>https://www.dn.se/ekonomi/jensen-huang-tillbaka-som-vd-for-nvidia/</guid>
+      <pubDate>Mon, 23 Nov 2026 15:19:57 +0100</pubDate>
+      <dc:creator>Mathilda Svensson</dc:creator>
+      <media:content type="image/jpeg" url="https://static.bonniernews.se/ba/405d478a-7fb9-455f-aedf-e8ce7eee1cc2.jpeg?io=1&amp;width=1000">
+        <media:credit scheme="urn:ebu">Philip Fong/AFP</media:credit>
+        <media:description>Jensen Huang gör comeback.</media:description>
+      </media:content>
+    </item>
+    <item>
+      <title>Strategen om AI-raset: ”Historiskt har det alltid varit köpläge”</title>
+      <link>https://www.dn.se/ekonomi/strategen-om-ai-raset-historiskt-har-det-alltid-varit-koplage/</link>
+      <description>Det blev en blodig vecka på Wall Street när AI-frossan bet sig fast på marknaden. Börsens skräckindex rusade samtidigt som det tekniktunga Nasdaq-indexet utraderade årets uppgång när AI-bolagen rasade tvåsiffrigt. – Sentimentet är extremt nedkört just nu, säger Ålandsbankens Anders Rudolfsson.</description>
+      <guid>https://www.dn.se/ekonomi/strategen-om-ai-raset-historiskt-har-det-alltid-varit-koplage/</guid>
+      <pubDate>Mon, 23 Nov 2026 13:30:22 +0100</pubDate>
+      <dc:creator>Mathilda Svensson</dc:creator>
+      <media:content type="image/jpeg" url="https://static.bonniernews.se/ba/8828a271-61e5-45b6-8b50-b56d581f84af.jpeg?io=1&amp;width=1000">
+        <media:credit scheme="urn:ebu">Gorm Kallestad/TT</media:credit>
+        <media:description></media:description>
+      </media:content>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,456 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:xmchrx23ioerjmgjhj3jzw7l/app.bsky.feed.post/3n2gouynjvk2q",
+    "cid": "bafyreib56nxwngeob5zqkasczytiu3wavbuinoee4jnvzpqwi57yfgcmey",
+    "author": {
+     "did": "did:plc:xmchrx23ioerjmgjhj3jzw7l",
+     "handle": "leverhulme.ac.uk",
+     "displayName": "Leverhulme Trust",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-10-25T09:00:56.954Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-16T14:01:12.717Z",
+     "embed": {
+      "$type": "app.bsky.embed.video",
+      "aspectRatio": {
+       "height": 1080,
+       "width": 1080
+      },
+      "video": {
+       "$type": "blob",
+       "ref": {
+        "$link": "bafkreig4kl2mz76uayigyua5embwdcvof5nxt4mm7b2ovlycigsjxw7ek4"
+       },
+       "mimeType": "video/mp4",
+       "size": 1502341
+      }
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:iil3dm4kn4zmdhkjm2nwyyr3"
+        }
+       ],
+       "index": {
+        "byteEnd": 140,
+        "byteStart": 117
+       }
+      },
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:5de7vfuikgx4jvrf6uypj7nv"
+        }
+       ],
+       "index": {
+        "byteEnd": 184,
+        "byteStart": 156
+       }
+      },
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://media.leverhulme.ac.uk/podcast/field-reid"
+        }
+       ],
+       "index": {
+        "byteEnd": 311,
+        "byteStart": 273
+       }
+      }
+     ],
+     "text": "‘The social media ban is not the end game.’ \n\nICYMI: In the latest from the We Society, Will Hutton is joined by @octavia-fr.bsky.social to discuss the @adalovelaceinst.bsky.social’s research on young people’s experience of growing up in an online world. \n\n🎙️ media.leverhulme.ac.uk/podcast/fiel..."
+    },
+    "embed": {
+     "cid": "bafkreig4kl2mz76uayigyua5embwdcvof5nxt4mm7b2ovlycigsjxw7ek4",
+     "playlist": "https://video.bsky.app/watch/did%3Aplc%3Axmchrx23ioerjmgjhj3jzw7l/bafkreig4kl2mz76uayigyua5embwdcvof5nxt4mm7b2ovlycigsjxw7ek4/playlist.m3u8",
+     "aspectRatio": {
+      "height": 1080,
+      "width": 1080
+     },
+     "$type": "app.bsky.embed.video#view"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 1,
+    "repostCount": 2,
+    "likeCount": 2,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-16T14:01:13.645Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:5de7vfuikgx4jvrf6uypj7nv",
+     "handle": "adalovelaceinst.bsky.social",
+     "displayName": "Ada Lovelace Institute",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-11-06T12:47:31.285Z"
+    },
+    "uri": "at://did:plc:5de7vfuikgx4jvrf6uypj7nv/app.bsky.feed.repost/3n2j33rqj6m2p",
+    "cid": "bafyreic5p3jbxogsv5lzx2axl66c7d4zo23jsaycrl2ofrnqz3uq3ac3cq",
+    "indexedAt": "2026-11-17T12:45:04.943Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 2
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:wh5vebnzohjcib7bss5ljx2e/app.bsky.feed.post/3mzzu4tkcsd26",
+    "cid": "bafyreidtpmyppru4qxdigtm6o3c6zzy7mljhwgidd2tgemogxzybbksnmu",
+    "author": {
+     "did": "did:plc:wh5vebnzohjcib7bss5ljx2e",
+     "handle": "acadsocsciences.bsky.social",
+     "displayName": "Academy of Social Sciences",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2025-01-15T10:46:07.545Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-11T11:30:27.913Z",
+     "embed": {
+      "$type": "app.bsky.embed.video",
+      "aspectRatio": {
+       "height": 1080,
+       "width": 1080
+      },
+      "video": {
+       "$type": "blob",
+       "ref": {
+        "$link": "bafkreidsc5kc524i4qylmkyb73hypv4zewyhsty2lafrhygig3u5irapt4"
+       },
+       "mimeType": "video/mp4",
+       "size": 1107458
+      }
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:iil3dm4kn4zmdhkjm2nwyyr3"
+        }
+       ],
+       "index": {
+        "byteEnd": 101,
+        "byteStart": 78
+       }
+      },
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:5de7vfuikgx4jvrf6uypj7nv"
+        }
+       ],
+       "index": {
+        "byteEnd": 131,
+        "byteStart": 103
+       }
+      },
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://podfollow.com/the-we-society/episode/dbc08d333fe52e35554b15077556cdb443e8994c/view"
+        }
+       ],
+       "index": {
+        "byteEnd": 301,
+        "byteStart": 272
+       }
+      }
+     ],
+     "text": "Is a social media ban the answer to protecting children against online harms? @octavia-fr.bsky.social, @adalovelaceinst.bsky.social, joins Will Hutton on the We Society to discuss the Institute’s research on young people’s experience of growing up in an online world. podfollow.com/the-we-socie..."
+    },
+    "embed": {
+     "cid": "bafkreidsc5kc524i4qylmkyb73hypv4zewyhsty2lafrhygig3u5irapt4",
+     "playlist": "https://video.bsky.app/watch/did%3Aplc%3Awh5vebnzohjcib7bss5ljx2e/bafkreidsc5kc524i4qylmkyb73hypv4zewyhsty2lafrhygig3u5irapt4/playlist.m3u8",
+     "aspectRatio": {
+      "height": 1080,
+      "width": 1080
+     },
+     "$type": "app.bsky.embed.video#view"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 1,
+    "repostCount": 2,
+    "likeCount": 2,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-11T11:30:28.774Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:5de7vfuikgx4jvrf6uypj7nv",
+     "handle": "adalovelaceinst.bsky.social",
+     "displayName": "Ada Lovelace Institute",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-11-06T12:47:31.285Z"
+    },
+    "uri": "at://did:plc:5de7vfuikgx4jvrf6uypj7nv/app.bsky.feed.repost/3mzzvotmemv2m",
+    "cid": "bafyreid6od33rrio5x2xk4tybjpkk7y3ibutw6lsvmuw64l3sa23gfdcga",
+    "indexedAt": "2026-11-11T11:58:25.976Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 2
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:5de7vfuikgx4jvrf6uypj7nv/app.bsky.feed.post/3mzkrlyq3y22e",
+    "cid": "bafyreih5owpwuo7bk4yakryf6iuyaqlte2eb26uyrhx43wfe5cbxylrar4",
+    "author": {
+     "did": "did:plc:5de7vfuikgx4jvrf6uypj7nv",
+     "handle": "adalovelaceinst.bsky.social",
+     "displayName": "Ada Lovelace Institute",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-11-06T12:47:31.285Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-05T11:35:19.384Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "The UK government has announced the creation of an independent watchdog and a specific law to provide oversight of police use of facial recognition.",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreifkg64cfpsa67d2hwpo4bcpetw5ptc6q5g4j3jgw5igl5eu5wk6g4"
+        },
+        "mimeType": "image/jpeg",
+        "size": 940172
+       },
+       "title": "Ada Lovelace Institute response to Home Office announcement on police facial recognition legislation",
+       "uri": "https://www.adalovelaceinstitute.org/press-release/home-office-announcement-on-police-facial-recognition-legislation/"
+      }
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://www.adalovelaceinstitute.org/press-release/home-office-announcement-on-police-facial-recognition-legislation/"
+        }
+       ],
+       "index": {
+        "byteEnd": 250,
+        "byteStart": 206
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "The UK government has announced the creation of an independent watchdog and a specific law to provide oversight of police use of facial recognition technology – a significant moment. \n\nRead our response: www.adalovelaceinstitute.org/press-releas..."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://www.adalovelaceinstitute.org/press-release/home-office-announcement-on-police-facial-recognition-legislation/",
+      "title": "Ada Lovelace Institute response to Home Office announcement on police facial recognition legislation",
+      "description": "The UK government has announced the creation of an independent watchdog and a specific law to provide oversight of police use of facial recognition.",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:5de7vfuikgx4jvrf6uypj7nv/bafkreifkg64cfpsa67d2hwpo4bcpetw5ptc6q5g4j3jgw5igl5eu5wk6g4"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 1,
+    "replyCount": 2,
+    "repostCount": 3,
+    "likeCount": 10,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-05T11:35:27.680Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 4
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:5de7vfuikgx4jvrf6uypj7nv/app.bsky.feed.post/3mzfvlmpivc22",
+    "cid": "bafyreift7dcmk3fxlxzi25wcsgj3ukkvbwpzi56h2dd7cnfi7k35gtgum4",
+    "author": {
+     "did": "did:plc:5de7vfuikgx4jvrf6uypj7nv",
+     "handle": "adalovelaceinst.bsky.social",
+     "displayName": "Ada Lovelace Institute",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-11-06T12:47:31.285Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-03T13:03:23.057Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "Recommendations for a researcher access-to-data framework for UK secondary legislation",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreiaccvu5irifcd3hhzqvehz523epk5pholvicx2strrtm4gzntzwqm"
+        },
+        "mimeType": "image/jpeg",
+        "size": 69144
+       },
+       "title": "Research unlocked",
+       "uri": "https://www.adalovelaceinstitute.org/report/data-access-framework/"
+      }
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://www.adalovelaceinstitute.org/report/data-access-framework/"
+        }
+       ],
+       "index": {
+        "byteEnd": 308,
+        "byteStart": 264
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "Independent research on platform data is a key part of digital governance. Our new report identifies current challenges to researcher access to data and makes recommendations for building an effective access-to-data framework.\n\nRead ‘Research unlocked’ ➡️ www.adalovelaceinstitute.org/report/data-..."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://www.adalovelaceinstitute.org/report/data-access-framework/",
+      "title": "Research unlocked",
+      "description": "Recommendations for a researcher access-to-data framework for UK secondary legislation",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:5de7vfuikgx4jvrf6uypj7nv/bafkreiaccvu5irifcd3hhzqvehz523epk5pholvicx2strrtm4gzntzwqm"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 1,
+    "replyCount": 1,
+    "repostCount": 1,
+    "likeCount": 4,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-03T13:03:29.386Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 4
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:5de7vfuikgx4jvrf6uypj7nv/app.bsky.feed.post/3myhfrutzh22j",
+    "cid": "bafyreia6ishuyuph7zuysbmmjfxttuaago7wst7x2f2obe5ughufyy7cly",
+    "author": {
+     "did": "did:plc:5de7vfuikgx4jvrf6uypj7nv",
+     "handle": "adalovelaceinst.bsky.social",
+     "displayName": "Ada Lovelace Institute",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-11-06T12:47:31.285Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-10-22T10:00:40.900Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "Building on the EU digital rulebook to cover Advanced AI Assistants and protect user autonomy, democracy and economic markets",
+       "title": "Minding your business",
+       "uri": "https://www.adalovelaceinstitute.org/policy-briefing/minding-your-business/"
+      }
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://www.adalovelaceinstitute.org/policy-briefing/minding-your-business/"
+        }
+       ],
+       "index": {
+        "byteEnd": 317,
+        "byteStart": 273
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "Our new policy briefing looks at how the EU digital rulebook covers Advanced AI Assistants and their impact on:\n\n1️⃣ Individual autonomy\n2️⃣ Democracy\n3️⃣ Economic markets\n\nWe make recommendations to address gaps in rules that weren't necessarily made for AI.\n\nwww.adalovelaceinstitute.org/policy-brief..."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://www.adalovelaceinstitute.org/policy-briefing/minding-your-business/",
+      "title": "Minding your business",
+      "description": "Building on the EU digital rulebook to cover Advanced AI Assistants and protect user autonomy, democracy and economic markets"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 2,
+    "replyCount": 2,
+    "repostCount": 0,
+    "likeCount": 3,
+    "quoteCount": 0,
+    "indexedAt": "2026-10-22T10:00:41.836Z"
+   }
+  }
+ ],
+ "cursor": "2026-04-01T11:19:25.043Z"
+}

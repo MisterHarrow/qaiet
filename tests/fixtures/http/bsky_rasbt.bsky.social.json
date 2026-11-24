@@ -1,0 +1,420 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:oxbzsf2flrqyobhxemowaceh/app.bsky.feed.post/3mtygzbbb5c2k",
+    "cid": "bafyreibdnglshc77okoh7xxzup55oottm45ja2vaqqbhwggo3wsrg6tyv4",
+    "author": {
+     "did": "did:plc:oxbzsf2flrqyobhxemowaceh",
+     "handle": "rasbt.bsky.social",
+     "displayName": "Sebastian Raschka (rasbt)",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-24T12:42:57.362Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-08-26T13:31:59.953Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "A 48-minute video walkthrough of token sampling, watermark detection, and removal",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreieu7ssfs3gedqezwogy4xs67fz7tbujoa3audipv37aelxag2xnfy"
+        },
+        "mimeType": "image/jpeg",
+        "size": 615229
+       },
+       "title": "How Claude Watermarks AI-Generated Text",
+       "uri": "https://magazine.sebastianraschka.com/p/claude-watermarking"
+      }
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://magazine.sebastianraschka.com/p/claude-watermarking"
+        }
+       ],
+       "index": {
+        "byteEnd": 294,
+        "byteStart": 249
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "A little walkthrough explaining how Claude's new text watermarking works:\n\n- How watermarking relates to the regular LLM sampling process\n- Whether watermarking makes text \"worse\"\n- How to remove watermarks\n- How new text is checked for watermarks\n\nmagazine.sebastianraschka.com/p/claude-wat..."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://magazine.sebastianraschka.com/p/claude-watermarking",
+      "title": "How Claude Watermarks AI-Generated Text",
+      "description": "A 48-minute video walkthrough of token sampling, watermark detection, and removal",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:oxbzsf2flrqyobhxemowaceh/bafkreieu7ssfs3gedqezwogy4xs67fz7tbujoa3audipv37aelxag2xnfy"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 8,
+    "replyCount": 4,
+    "repostCount": 3,
+    "likeCount": 27,
+    "quoteCount": 1,
+    "indexedAt": "2026-08-26T13:32:05.282Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:web:fry69.dev/app.bsky.feed.post/3mly44oh3622q",
+    "cid": "bafyreif3z6reap6szh2ftpfmfbqemn47tbfn5wgxqngn3awr47qnfye7j4",
+    "author": {
+     "did": "did:web:fry69.dev",
+     "handle": "fry69.dev",
+     "displayName": "fry69",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2025-11-12T12:51:11.755Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-05-16T14:55:30.257Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "From Gemma 4 to DeepSeek V4, How New Open-Weight LLMs Are Reducing Long-Context Costs",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreifv3xhi4eqlxvrnjwgysi3oarxg3gs6paqaclkeac5pbasl3o7rhq"
+        },
+        "mimeType": "image/jpeg",
+        "size": 588842
+       },
+       "title": "Recent Developments in LLM Architectures: KV Sharing, mHC, and Compressed Attention",
+       "uri": "https://magazine.sebastianraschka.com/p/recent-developments-in-llm-architectures"
+      }
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:oxbzsf2flrqyobhxemowaceh"
+        }
+       ],
+       "index": {
+        "byteEnd": 57,
+        "byteStart": 39
+       }
+      },
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://magazine.sebastianraschka.com/p/recent-developments-in-llm-architectures"
+        }
+       ],
+       "index": {
+        "byteEnd": 195,
+        "byteStart": 150
+       }
+      },
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#tag",
+         "tag": "MLsky"
+        }
+       ],
+       "index": {
+        "byteEnd": 203,
+        "byteStart": 197
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "A new, highly recommended article from @rasbt.bsky.social:\n\n\"Recent Developments in LLM Architectures: KV Sharing, mHC, and Compressed Attention\"\n\n-> magazine.sebastianraschka.com/p/recent-dev...\n\n#MLsky"
+    },
+    "embed": {
+     "external": {
+      "uri": "https://magazine.sebastianraschka.com/p/recent-developments-in-llm-architectures",
+      "title": "Recent Developments in LLM Architectures: KV Sharing, mHC, and Compressed Attention",
+      "description": "From Gemma 4 to DeepSeek V4, How New Open-Weight LLMs Are Reducing Long-Context Costs",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:web:fry69.dev/bafkreifv3xhi4eqlxvrnjwgysi3oarxg3gs6paqaclkeac5pbasl3o7rhq"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 6,
+    "replyCount": 1,
+    "repostCount": 4,
+    "likeCount": 25,
+    "quoteCount": 2,
+    "indexedAt": "2026-05-16T14:55:31.176Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:oxbzsf2flrqyobhxemowaceh",
+     "handle": "rasbt.bsky.social",
+     "displayName": "Sebastian Raschka (rasbt)",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-24T12:42:57.362Z"
+    },
+    "uri": "at://did:plc:oxbzsf2flrqyobhxemowaceh/app.bsky.feed.repost/3mlytrduy6s2o",
+    "cid": "bafyreiallwkce2clyuskou2kvtkc74p43rlpzglnw7biazcpw7mhzctvoq",
+    "indexedAt": "2026-05-16T21:58:40.071Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:oxbzsf2flrqyobhxemowaceh/app.bsky.feed.post/3miwrqfzegc2p",
+    "cid": "bafyreidqvsezhdk6ntwxvjzitoimokexekmtw4tvgity3xrg43j73acv2m",
+    "author": {
+     "did": "did:plc:oxbzsf2flrqyobhxemowaceh",
+     "handle": "rasbt.bsky.social",
+     "displayName": "Sebastian Raschka (rasbt)",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-24T12:42:57.362Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-04-07T22:01:26.726Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "How coding agents use tools, memory, and repo context to make LLMs work better in practice",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreibht25ttw2ovdysgzr7vyy7gnv55hlhu25rvbibsszcq4qxgzmjre"
+        },
+        "mimeType": "image/jpeg",
+        "size": 477273
+       },
+       "title": "Components of A Coding Agent",
+       "uri": "https://magazine.sebastianraschka.com/p/components-of-a-coding-agent"
+      }
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://magazine.sebastianraschka.com/p/components-of-a-coding-agent"
+        }
+       ],
+       "index": {
+        "byteEnd": 200,
+        "byteStart": 155
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "Components of a coding agent: a little write-up on the building blocks behind coding agents, from repo context and tool use to memory and delegation\nLink: magazine.sebastianraschka.com/p/components..."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://magazine.sebastianraschka.com/p/components-of-a-coding-agent",
+      "title": "Components of A Coding Agent",
+      "description": "How coding agents use tools, memory, and repo context to make LLMs work better in practice",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:oxbzsf2flrqyobhxemowaceh/bafkreibht25ttw2ovdysgzr7vyy7gnv55hlhu25rvbibsszcq4qxgzmjre"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 14,
+    "replyCount": 7,
+    "repostCount": 6,
+    "likeCount": 38,
+    "quoteCount": 1,
+    "indexedAt": "2026-04-07T22:01:28.651Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:oxbzsf2flrqyobhxemowaceh/app.bsky.feed.post/3mi4tcobngc2y",
+    "cid": "bafyreiabarbz7rey5yikqmxxntzg4xo6x77xgpqng2f4lyaa5wpp4hurjm",
+    "author": {
+     "did": "did:plc:oxbzsf2flrqyobhxemowaceh",
+     "handle": "rasbt.bsky.social",
+     "displayName": "Sebastian Raschka (rasbt)",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-24T12:42:57.362Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-03-28T14:20:19.910Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "A gallery that collects architecture figures from The Big LLM Architecture Comparison and related articles, with fact sheets and links back to the original sections.",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreiarzmfl357ahsjojmpr3pe3hetvco3aph6o6q2pf72kgrvu62h6yq"
+        },
+        "mimeType": "image/jpeg",
+        "size": 948012
+       },
+       "title": "LLM Architecture Gallery",
+       "uri": "https://sebastianraschka.com/llm-architecture-gallery/"
+      }
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://sebastianraschka.com/llm-architecture-gallery/"
+        }
+       ],
+       "index": {
+        "byteEnd": 285,
+        "byteStart": 249
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "I put together a visual LLM Architecture Gallery that collects (~50) recent open-weight model designs in one place.\n\nArchitecture diagrams, config links, tech reports, explainers... you name it!\n\nHopefully useful as a reference & learning resource:\nsebastianraschka.com/llm-architec..."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://sebastianraschka.com/llm-architecture-gallery/",
+      "title": "LLM Architecture Gallery",
+      "description": "A gallery that collects architecture figures from The Big LLM Architecture Comparison and related articles, with fact sheets and links back to the original sections.",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:oxbzsf2flrqyobhxemowaceh/bafkreiarzmfl357ahsjojmpr3pe3hetvco3aph6o6q2pf72kgrvu62h6yq"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 24,
+    "replyCount": 4,
+    "repostCount": 10,
+    "likeCount": 82,
+    "quoteCount": 1,
+    "indexedAt": "2026-03-28T14:20:23.049Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:brkj2yocng7vtggmyujy4khq/app.bsky.feed.post/3mdqwmlm3u22f",
+    "cid": "bafyreibzggovlxvpoxzvv2o2lhmqa5ze4aleiqtajizvacw3yraiben3ie",
+    "author": {
+     "did": "did:plc:brkj2yocng7vtggmyujy4khq",
+     "handle": "natolambert.bsky.social",
+     "displayName": "Nathan Lambert",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-30T14:13:55.490Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-01-31T23:06:50.502Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "YouTube video by Lex Fridman",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreiaxr455aufqz76wd76375m4giz2rsenbdh4owwu5k3ikzkg4t3okm"
+        },
+        "mimeType": "image/jpeg",
+        "size": 94805
+       },
+       "title": "State of AI in 2026: LLMs, Coding, Scaling Laws, China, Agents, GPUs, AGI | Lex Fridman Podcast #490",
+       "uri": "https://youtu.be/EV7WhVT270Q?si=7QpPX2lnvqDQq60o"
+      }
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://youtu.be/EV7WhVT270Q?si=7QpPX2lnvqDQq60o"
+        }
+       ],
+       "index": {
+        "byteEnd": 108,
+        "byteStart": 84
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "Recorded a podcast, think it’s pretty good and comprehensive, hope you like it ;) youtu.be/EV7WhVT270Q?..."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://youtu.be/EV7WhVT270Q?si=7QpPX2lnvqDQq60o",
+      "title": "State of AI in 2026: LLMs, Coding, Scaling Laws, China, Agents, GPUs, AGI | Lex Fridman Podcast #490",
+      "description": "YouTube video by Lex Fridman",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:brkj2yocng7vtggmyujy4khq/bafkreiaxr455aufqz76wd76375m4giz2rsenbdh4owwu5k3ikzkg4t3okm"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 8,
+    "replyCount": 2,
+    "repostCount": 4,
+    "likeCount": 42,
+    "quoteCount": 1,
+    "indexedAt": "2026-01-31T23:06:51.652Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:oxbzsf2flrqyobhxemowaceh",
+     "handle": "rasbt.bsky.social",
+     "displayName": "Sebastian Raschka (rasbt)",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-24T12:42:57.362Z"
+    },
+    "uri": "at://did:plc:oxbzsf2flrqyobhxemowaceh/app.bsky.feed.repost/3me4qy2ag4p2c",
+    "cid": "bafyreiapypb4ihieb5r2cxfeuxzcdimgcv5qavl7vens7x7ufvsvxksdta",
+    "indexedAt": "2026-02-05T15:57:49.453Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  }
+ ],
+ "cursor": "2025-10-11T13:46:51.121Z"
+}

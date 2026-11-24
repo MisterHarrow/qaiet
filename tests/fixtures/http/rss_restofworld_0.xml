@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="/wp-content/themes/orbis/static-assets/feed/feed.css"?>
+<rss version="2.0" 
+	xmlns:media="http://search.yahoo.com/mrss/"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/">
+<channel>
+	<script xmlns="http://www.w3.org/1999/xhtml" src="/wp-content/themes/orbis/static-assets/feed/feed.js"></script>
+	<title>Rest of World - Latest</title>
+	<atom:link href="https://restofworld.org/feed/latest/" rel="self" type="application/rss+xml" />
+	<link>https://restofworld.org</link>
+	<description>A continuous stream of the latest articles published from Rest of World</description>
+	<lastBuildDate>Tue, 24 Nov 2026 06:04:24 +0000</lastBuildDate>
+	<copyright>Copyright 2026 Rest of World</copyright>
+	<sy:updatePeriod>daily</sy:updatePeriod>
+	<sy:updateFrequency>2</sy:updateFrequency>
+	<item>
+		<title>The catch in IBM’s offer to relocate its U.S.-based immigrant workers</title>
+		<link>https://restofworld.org/2026/ibm-consulting-ends-us-visa-green-card-sponsorship/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=feeds</link>
+		<pubDate>Mon, 23 Nov 2026 11:00:00 +0000</pubDate>
+		<dc:creator>Ananya Bhattacharya</dc:creator>
+		<guid>https://restofworld.org/2026/ibm-consulting-ends-us-visa-green-card-sponsorship/</guid>
+		<description><![CDATA[Ending U.S. visa sponsorship and shifting roles abroad helps the company retain talent, but leaves employees paying a steep financial and personal price.]]></description>
+		
+		<media:content medium="image" url="https://fastly.restofworld.org/uploads/2026/11/IBM-Green-card-3-scaled.jpg?width=380&amp;dpr=2&amp;crop=16:9" width="760" height="428" />
+	<media:thumbnail url="https://fastly.restofworld.org/uploads/2026/11/IBM-Green-card-3-scaled.jpg?width=160&amp;dpr=2&amp;crop=1:1" />
+	<media:credit>Rest of World/iStock</media:credit>
+		</item>
+	<item>
+		<title>AI isn’t replacing your job. It’s turning it into low-paid gig work</title>
+		<link>https://restofworld.org/2026/ai-jobs-skills-gig-work/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=feeds</link>
+		<pubDate>Thu, 19 Nov 2026 11:00:00 +0000</pubDate>
+		<dc:creator>Julián Posada</dc:creator>
+		<guid>https://restofworld.org/2026/ai-jobs-skills-gig-work/</guid>
+		<description><![CDATA[Platform companies are luring doctors, lawyers, and Ph.D.s with top rates, but then use the same tactics of pay cuts and sudden ghosting that have plagued global data workers. ]]></description>
+		
+		<media:content medium="image" url="https://fastly.restofworld.org/uploads/2026/11/GettyImages-2279457745.jpg?width=380&amp;dpr=2&amp;crop=16:9" width="760" height="428" />
+	<media:thumbnail url="https://fastly.restofworld.org/uploads/2026/11/GettyImages-2279457745.jpg?width=160&amp;dpr=2&amp;crop=1:1" />
+	<media:credit>James Manning/ Getty Images</media:credit>
+	<media:description>Surgeon Kapil Sahnan uses a DaVinci Robot during surgery on a woman, 2026. </media:description>
+		</item>
+	<item>
+		<title>The small African lab sounding the alarm on AI bioweapons</title>
+		<link>https://restofworld.org/2026/ghana-ai-lab-minohealth-bioweapons-threat-dna-synthesis-regulation/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=feeds</link>
+		<pubDate>Mon, 16 Nov 2026 11:00:23 +0000</pubDate>
+		<dc:creator>Danai Nesta Kupemba</dc:creator>
+		<guid>https://restofworld.org/2026/ghana-ai-lab-minohealth-bioweapons-threat-dna-synthesis-regulation/</guid>
+		<description><![CDATA[MinoHealth researchers in Ghana jailbroke their own LLM as a test. What emerged were thousands of toxin recipes—and an urgent push for regulation.]]></description>
+		
+		<media:content medium="image" url="https://fastly.restofworld.org/uploads/2026/11/20261105_Mino-AI-Lab-29-scaled.jpg?width=380&amp;dpr=2&amp;crop=16:9" width="760" height="428" />
+	<media:thumbnail url="https://fastly.restofworld.org/uploads/2026/11/20261105_Mino-AI-Lab-29-scaled.jpg?width=160&amp;dpr=2&amp;crop=1:1" />
+	<media:credit>Agbongua Kwadwo Buenortey for Rest of World</media:credit>
+	<media:description>Photograph showing Georgina an AI Engineer building and working on the user interface of the new model Moremi.</media:description>
+		</item>
+	<item>
+		<title>How Jensen Huang’s exit from Nvidia impacts China’s AI supply chain</title>
+		<link>https://restofworld.org/2026/jensen-huang-nvidia-exit-china-ai-chip-impact/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=feeds</link>
+		<pubDate>Fri, 13 Nov 2026 16:24:10 +0000</pubDate>
+		<dc:creator>Rest of World Staff</dc:creator>
+		<guid>https://restofworld.org/2026/jensen-huang-nvidia-exit-china-ai-chip-impact/</guid>
+		<description><![CDATA[The founder’s stunning departure removes Beijing’s biggest advocate in Silicon Valley, accelerates chip stockpiling, and leaves Asian suppliers bracing for what comes next.]]></description>
+		
+		<media:content medium="image" url="https://fastly.restofworld.org/uploads/2026/11/GettyImages-2299248530.jpg?width=380&amp;dpr=2&amp;crop=16:9" width="760" height="428" />
+	<media:thumbnail url="https://fastly.restofworld.org/uploads/2026/11/GettyImages-2299248530.jpg?width=160&amp;dpr=2&amp;crop=1:1" />
+	<media:credit>Win McNamee/Getty Images</media:credit>
+	<media:description>Nvidia CEO Jensen Huang attends a summit at the Institute of Peace on October 8, 2026 in Washington, DC. </media:description>
+		</item>
+	<item>
+		<title>The promise and peril of AI in government</title>
+		<link>https://restofworld.org/2026/ai-government-ethics-bias-risk/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=feeds</link>
+		<pubDate>Thu, 12 Nov 2026 11:00:00 +0000</pubDate>
+		<dc:creator>Beth Simone Noveck</dc:creator>
+		<guid>https://restofworld.org/2026/ai-government-ethics-bias-risk/</guid>
+		<description><![CDATA[In her new book “Reboot: AI and the Race to Save Democracy,” writer Beth Simone Noveck warns that while AI can increase efficiency, predictive models pose significant ethical and societal risks.
+]]></description>
+		
+		<media:content medium="image" url="https://fastly.restofworld.org/uploads/2026/11/illo_ai_democracy_sketch.jpg?width=380&amp;dpr=2&amp;crop=16:9" width="760" height="428" />
+	<media:thumbnail url="https://fastly.restofworld.org/uploads/2026/11/illo_ai_democracy_sketch.jpg?width=160&amp;dpr=2&amp;crop=1:1" />
+	<media:credit>Rest of World/iStock</media:credit>
+		</item>
+	</channel>
+</rss>

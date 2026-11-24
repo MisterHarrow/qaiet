@@ -1,0 +1,791 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:3gxyh4elwykcdnpci7gmqrvh/app.bsky.feed.post/3n2yvisxew22y",
+    "cid": "bafyreicfrfysqeiub5af6bceokoctckutsdng3fjswsnklqe7vjnd4fy3m",
+    "author": {
+     "did": "did:plc:3gxyh4elwykcdnpci7gmqrvh",
+     "handle": "katelynburns.com",
+     "displayName": "Katelyn Burns",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following",
+       "allowGroupInvites": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-02T12:25:40.737Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3m4ppfowinz2n",
+        "isValid": true,
+        "createdAt": "2025-11-03T09:28:41.524Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     },
+     "status": {
+      "uri": "at://did:plc:3gxyh4elwykcdnpci7gmqrvh/app.bsky.actor.status/self",
+      "cid": "bafyreiei4ppt5benks4siphnh4mrbp74xuejitthgt52pwmsbewrk2hssy",
+      "record": {
+       "$type": "app.bsky.actor.status",
+       "createdAt": "2026-11-10T22:57:10.004Z",
+       "durationMinutes": 190,
+       "embed": {
+        "$type": "app.bsky.embed.external",
+        "external": {
+         "$type": "app.bsky.embed.external#external",
+         "description": "Politics Writer Breaks Down Election News | Streaming just chatting.",
+         "thumb": {
+          "$type": "blob",
+          "ref": {
+           "$link": "bafkreidyaopse4bffgbmgo3kix7gjfbvzz32gxb3u5ipnucrqhcub3tzgu"
+          },
+          "mimeType": "image/jpeg",
+          "size": 50158
+         },
+         "title": "ktabz2 - Live on Twitch",
+         "uri": "https://twitch.tv/ktabz2"
+        }
+       },
+       "status": "app.bsky.actor.status#live"
+      },
+      "status": "app.bsky.actor.status#live",
+      "embed": {
+       "external": {
+        "uri": "https://twitch.tv/ktabz2",
+        "title": "ktabz2 - Live on Twitch",
+        "description": "Politics Writer Breaks Down Election News | Streaming just chatting.",
+        "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:3gxyh4elwykcdnpci7gmqrvh/bafkreidyaopse4bffgbmgo3kix7gjfbvzz32gxb3u5ipnucrqhcub3tzgu"
+       },
+       "$type": "app.bsky.embed.external#view"
+      },
+      "expiresAt": "2026-11-11T02:07:10.004Z",
+      "isActive": false
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T19:47:35.599Z",
+     "embed": {
+      "$type": "app.bsky.embed.record",
+      "record": {
+       "cid": "bafyreicmvmamgw6tsp4b4xd2svc5sggbpbq3en6hcj3itr4rralnxrbx5i",
+       "uri": "at://did:plc:m65ifh7vn5zdgs7izcmht4gy/app.bsky.feed.post/3n2yuclfi4c2o"
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "Yeah I'm going to be real. This cis did this to themselves. It's on them. We're not fixing your fuck up."
+    },
+    "embed": {
+     "record": {
+      "uri": "at://did:plc:m65ifh7vn5zdgs7izcmht4gy/app.bsky.feed.post/3n2yuclfi4c2o",
+      "cid": "bafyreicmvmamgw6tsp4b4xd2svc5sggbpbq3en6hcj3itr4rralnxrbx5i",
+      "author": {
+       "did": "did:plc:m65ifh7vn5zdgs7izcmht4gy",
+       "handle": "erininthemorning.com",
+       "displayName": "Erin Reed",
+       "associated": {
+        "chat": {
+         "allowIncoming": "none",
+         "allowGroupInvites": "none"
+        },
+        "activitySubscription": {
+         "allowSubscriptions": "followers"
+        }
+       },
+       "createdAt": "2023-04-28T01:48:53.591Z",
+       "verification": {
+        "verifications": [
+         {
+          "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+          "issuerDisplayName": "Bluesky",
+          "issuerHandle": "bsky.app",
+          "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lruf26z44x2f",
+          "isValid": true,
+          "createdAt": "2025-06-18T06:29:29.046Z"
+         }
+        ],
+        "verifiedStatus": "valid",
+        "trustedVerifierStatus": "none"
+       }
+      },
+      "value": {
+       "$type": "app.bsky.feed.post",
+       "createdAt": "2026-11-23T19:26:12.605Z",
+       "embed": {
+        "$type": "app.bsky.embed.external",
+        "external": {
+         "description": "Doctors are likely unable to complete their forms in time for the law to take effect.",
+         "thumb": {
+          "$type": "blob",
+          "ref": {
+           "$link": "bafkreiduwwd2arj7xuaqtxxduelttiufdetcxs2u43k5hygf3mjecjbtxq"
+          },
+          "mimeType": "image/jpeg",
+          "size": 594508
+         },
+         "title": "Chaos In Washington As Parents Struggle To Find Doctors To Complete “Biological Sex” Exams",
+         "uri": "https://www.erininthemorning.com/p/chaos-in-washington-as-parents-struggle"
+        }
+       },
+       "langs": [
+        "en"
+       ],
+       "text": "It’s chaos in Washington. To play sports, every girl now needs a doctor to sign off on her “biological sex.”\n\nThe deadline is Dec. 3. It's Thanksgiving, Doctors are on vacation.\n\nThe season’s already underway.\n\nSupporters are upset, feel they weren't warned.\n\nSubscribe to support our journalism."
+      },
+      "likeCount": 3749,
+      "replyCount": 564,
+      "repostCount": 985,
+      "quoteCount": 763,
+      "indexedAt": "2026-11-23T19:26:14.340Z",
+      "embeds": [
+       {
+        "external": {
+         "uri": "https://www.erininthemorning.com/p/chaos-in-washington-as-parents-struggle",
+         "title": "Chaos In Washington As Parents Struggle To Find Doctors To Complete “Biological Sex” Exams",
+         "description": "Doctors are likely unable to complete their forms in time for the law to take effect.",
+         "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:m65ifh7vn5zdgs7izcmht4gy/bafkreiduwwd2arj7xuaqtxxduelttiufdetcxs2u43k5hygf3mjecjbtxq"
+        },
+        "$type": "app.bsky.embed.external#view"
+       }
+      ],
+      "$type": "app.bsky.embed.record#viewRecord"
+     },
+     "$type": "app.bsky.embed.record#view"
+    },
+    "bookmarkCount": 58,
+    "replyCount": 33,
+    "repostCount": 465,
+    "likeCount": 2800,
+    "quoteCount": 15,
+    "indexedAt": "2026-11-23T19:47:35.846Z",
+    "threadgate": {
+     "uri": "at://did:plc:3gxyh4elwykcdnpci7gmqrvh/app.bsky.feed.threadgate/3n2yvisxew22y",
+     "cid": "bafyreifljhfmshcsdl3w7zhei6sobp452bglsbeqvlibtd7lo7loben7pq",
+     "record": {
+      "$type": "app.bsky.feed.threadgate",
+      "allow": [
+       {
+        "$type": "app.bsky.feed.threadgate#followerRule"
+       }
+      ],
+      "createdAt": "2026-11-23T19:47:35.615Z",
+      "hiddenReplies": [],
+      "post": "at://did:plc:3gxyh4elwykcdnpci7gmqrvh/app.bsky.feed.post/3n2yvisxew22y"
+     },
+     "lists": []
+    }
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:26hkfmtr7jrchexamh7hk6rz",
+     "handle": "abeba.blacksky.app",
+     "displayName": "Dr Abeba Birhane",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-03T17:13:19.413Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mma4urytbz2w",
+        "isValid": true,
+        "createdAt": "2026-05-19T19:30:16.838Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:26hkfmtr7jrchexamh7hk6rz/app.bsky.feed.repost/3n2yxwnejmjbn",
+    "cid": "bafyreig2bdemcsesdgfhtch7qes3wxwobke6ce3n3dmf6lwulphgo4ixya",
+    "indexedAt": "2026-11-23T20:31:07.055Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:ma72lceltwgsljaa32aklntf/app.bsky.feed.post/3n2yur5lca227",
+    "cid": "bafyreiag2gufaonxuyhppgpngvbr4mo5hvi27qmfg32rik7i654rrqo3dy",
+    "author": {
+     "did": "did:plc:ma72lceltwgsljaa32aklntf",
+     "handle": "louisathelast.bsky.social",
+     "displayName": "Louisa",
+     "pronouns": "she/her",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-01T19:32:54.841Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T19:34:21.431Z",
+     "embed": {
+      "$type": "app.bsky.embed.record",
+      "record": {
+       "cid": "bafyreihb5kk4gpy63v57l4sqxn5xn7wvzax4ryxg4vfg3es7ssvskh3rni",
+       "uri": "at://did:plc:vcj6dt7m2ag7obaiu5klpyaj/app.bsky.feed.post/3n2ytlof3mk27"
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "Having been one of the lucky ones to go from minimum wage and blue collar work to office jobs in my career, I can confidently say that the less you are paid and the harder the work is, the more you’ll be surveilled and nitpicked to death"
+    },
+    "embed": {
+     "record": {
+      "uri": "at://did:plc:vcj6dt7m2ag7obaiu5klpyaj/app.bsky.feed.post/3n2ytlof3mk27",
+      "cid": "bafyreihb5kk4gpy63v57l4sqxn5xn7wvzax4ryxg4vfg3es7ssvskh3rni",
+      "author": {
+       "did": "did:plc:vcj6dt7m2ag7obaiu5klpyaj",
+       "handle": "stumptoemerald.bsky.social",
+       "displayName": "Robert Getch",
+       "associated": {
+        "chat": {
+         "allowIncoming": "all"
+        },
+        "activitySubscription": {
+         "allowSubscriptions": "followers"
+        }
+       },
+       "createdAt": "2023-06-14T23:58:58.810Z"
+      },
+      "value": {
+       "$type": "app.bsky.feed.post",
+       "createdAt": "2026-11-23T19:13:23.987Z",
+       "langs": [
+        "en"
+       ],
+       "text": "We literally hold people working an entry-level job at McDonald’s more accountable than most CEOs."
+      },
+      "likeCount": 3540,
+      "replyCount": 53,
+      "repostCount": 734,
+      "quoteCount": 62,
+      "indexedAt": "2026-11-23T19:13:24.839Z",
+      "embeds": [],
+      "$type": "app.bsky.embed.record#viewRecord"
+     },
+     "$type": "app.bsky.embed.record#view"
+    },
+    "bookmarkCount": 133,
+    "replyCount": 118,
+    "repostCount": 1786,
+    "likeCount": 7907,
+    "quoteCount": 56,
+    "indexedAt": "2026-11-23T19:34:21.741Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:26hkfmtr7jrchexamh7hk6rz",
+     "handle": "abeba.blacksky.app",
+     "displayName": "Dr Abeba Birhane",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-03T17:13:19.413Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mma4urytbz2w",
+        "isValid": true,
+        "createdAt": "2026-05-19T19:30:16.838Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:26hkfmtr7jrchexamh7hk6rz/app.bsky.feed.repost/3n2yxrcitdtfs",
+    "cid": "bafyreiej3ytfmkhzpx2hnhpta6ouumwtq64i4anxkgadh7ikra7q3xcbiq",
+    "indexedAt": "2026-11-23T20:28:08.051Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:k4jt6heuiamymgi46yeuxtpt/app.bsky.feed.post/3n2y6upf3hk2m",
+    "cid": "bafyreihujg24mgbjeakprjnvuc6aw76uk7y5o4y7levoorbbfpgf6nphdu",
+    "author": {
+     "did": "did:plc:k4jt6heuiamymgi46yeuxtpt",
+     "handle": "propublica.org",
+     "displayName": "ProPublica",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-07-07T02:56:43.623Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lndpusocme2u",
+        "isValid": true,
+        "createdAt": "2025-04-21T10:47:17.543Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T13:02:38.443Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "The Trump administration has criticized the Smithsonian’s National Museum of American History for promoting “radical activist ideology.” Now, on a crowded Metro car, a staffer has — inadvertently — re...",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreiamq5gi3xc5upxn53p27uqpij6rvjyb7xpiawh3u6waa2dcpms4ay"
+        },
+        "mimeType": "image/jpeg",
+        "size": 690244
+       },
+       "title": "Spotted on the D.C. Metro: Trump Staffer Accidentally Reveals Plan for Smithsonian Overhaul",
+       "uri": "https://www.propublica.org/article/dc-metro-smithsonian-american-history-plan?utm_source=bluesky&utm_medium=social&utm_campaign=propublica-bsky"
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "NEW: A commuter spotted a plan to overhaul the Smithsonian’s National Museum of American History while commuting on a crowded Metro train. \n\nThey sent us photos of the list.\n\nHere’s what’s what we learned:"
+    },
+    "embed": {
+     "external": {
+      "uri": "https://www.propublica.org/article/dc-metro-smithsonian-american-history-plan?utm_source=bluesky&utm_medium=social&utm_campaign=propublica-bsky",
+      "title": "Spotted on the D.C. Metro: Trump Staffer Accidentally Reveals Plan for Smithsonian Overhaul",
+      "description": "The Trump administration has criticized the Smithsonian’s National Museum of American History for promoting “radical activist ideology.” Now, on a crowded Metro car, a staffer has — inadvertently — re...",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:k4jt6heuiamymgi46yeuxtpt/bafkreiamq5gi3xc5upxn53p27uqpij6rvjyb7xpiawh3u6waa2dcpms4ay"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 173,
+    "replyCount": 133,
+    "repostCount": 1664,
+    "likeCount": 3001,
+    "quoteCount": 191,
+    "indexedAt": "2026-11-23T13:02:39.847Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:26hkfmtr7jrchexamh7hk6rz",
+     "handle": "abeba.blacksky.app",
+     "displayName": "Dr Abeba Birhane",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-03T17:13:19.413Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mma4urytbz2w",
+        "isValid": true,
+        "createdAt": "2026-05-19T19:30:16.838Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:26hkfmtr7jrchexamh7hk6rz/app.bsky.feed.repost/3n2yxqfzzudxm",
+    "cid": "bafyreiaybcgww7vsrzndivm7qghhggcf3zhbushsl2b3mrjqbe6lr4xfv4",
+    "indexedAt": "2026-11-23T20:27:38.052Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:sefgphqp2xqwh2hawaixykwz/app.bsky.feed.post/3n2yhjoybn22k",
+    "cid": "bafyreiaefuem7jbpizhwfdzoeovmkxixcmu2whqds5krnzm5yr2kyt5n7i",
+    "author": {
+     "did": "did:plc:sefgphqp2xqwh2hawaixykwz",
+     "handle": "esqueer.net",
+     "displayName": "Alejandra Caraballo",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "mutuals"
+      }
+     },
+     "createdAt": "2023-04-20T05:18:54.299Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lwi5kokxst2s",
+        "isValid": true,
+        "createdAt": "2025-08-16T00:49:33.607Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T15:37:32.597Z",
+     "embed": {
+      "$type": "app.bsky.embed.record",
+      "record": {
+       "cid": "bafyreiegs6ezfow5qwe7wmmghlkhvxhlwdpzh7jea6h5otvggzo4ynyxai",
+       "uri": "at://did:plc:sefgphqp2xqwh2hawaixykwz/app.bsky.feed.post/3n2ycx567jc2k"
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "The number one rule of capitalism is that wealthy people can never be held accountable."
+    },
+    "embed": {
+     "record": {
+      "uri": "at://did:plc:sefgphqp2xqwh2hawaixykwz/app.bsky.feed.post/3n2ycx567jc2k",
+      "cid": "bafyreiegs6ezfow5qwe7wmmghlkhvxhlwdpzh7jea6h5otvggzo4ynyxai",
+      "author": {
+       "did": "did:plc:sefgphqp2xqwh2hawaixykwz",
+       "handle": "esqueer.net",
+       "displayName": "Alejandra Caraballo",
+       "associated": {
+        "chat": {
+         "allowIncoming": "all"
+        },
+        "activitySubscription": {
+         "allowSubscriptions": "mutuals"
+        }
+       },
+       "createdAt": "2023-04-20T05:18:54.299Z",
+       "verification": {
+        "verifications": [
+         {
+          "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+          "issuerDisplayName": "Bluesky",
+          "issuerHandle": "bsky.app",
+          "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lwi5kokxst2s",
+          "isValid": true,
+          "createdAt": "2025-08-16T00:49:33.607Z"
+         }
+        ],
+        "verifiedStatus": "valid",
+        "trustedVerifierStatus": "none"
+       }
+      },
+      "value": {
+       "$type": "app.bsky.feed.post",
+       "createdAt": "2026-11-23T14:15:34.976Z",
+       "embed": {
+        "$type": "app.bsky.embed.images",
+        "images": [
+         {
+          "alt": "",
+          "aspectRatio": {
+           "height": 487,
+           "width": 679
+          },
+          "image": {
+           "$type": "blob",
+           "ref": {
+            "$link": "bafkreiaantf5oke5o27je3lvmlt4wy3ijqvkzxibb5flfqkd2vatmay2he"
+           },
+           "mimeType": "image/jpeg",
+           "size": 160714
+          }
+         }
+        ]
+       },
+       "langs": [
+        "en"
+       ],
+       "text": "Nvidia reinstates Jensen Huang as president and CEO."
+      },
+      "likeCount": 297,
+      "replyCount": 51,
+      "repostCount": 52,
+      "quoteCount": 61,
+      "indexedAt": "2026-11-23T14:15:36.640Z",
+      "embeds": [
+       {
+        "images": [
+         {
+          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:sefgphqp2xqwh2hawaixykwz/bafkreiaantf5oke5o27je3lvmlt4wy3ijqvkzxibb5flfqkd2vatmay2he",
+          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:sefgphqp2xqwh2hawaixykwz/bafkreiaantf5oke5o27je3lvmlt4wy3ijqvkzxibb5flfqkd2vatmay2he",
+          "alt": "",
+          "aspectRatio": {
+           "height": 487,
+           "width": 679
+          }
+         }
+        ],
+        "$type": "app.bsky.embed.images#view"
+       }
+      ],
+      "$type": "app.bsky.embed.record#viewRecord"
+     },
+     "$type": "app.bsky.embed.record#view"
+    },
+    "bookmarkCount": 24,
+    "replyCount": 41,
+    "repostCount": 319,
+    "likeCount": 1823,
+    "quoteCount": 12,
+    "indexedAt": "2026-11-23T15:37:33.152Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:26hkfmtr7jrchexamh7hk6rz",
+     "handle": "abeba.blacksky.app",
+     "displayName": "Dr Abeba Birhane",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-03T17:13:19.413Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mma4urytbz2w",
+        "isValid": true,
+        "createdAt": "2026-05-19T19:30:16.838Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:26hkfmtr7jrchexamh7hk6rz/app.bsky.feed.repost/3n2ysk36dyuz5",
+    "cid": "bafyreihwpc64i5izfjjjdtw3lt26j32yalonl6szvhwq6bu5qesxhppr3y",
+    "indexedAt": "2026-11-23T18:54:36.745Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:756gaaeewovgn4axja34ajne/app.bsky.feed.post/3n2ynukdce223",
+    "cid": "bafyreibqfohzh5wn4b3qeoyzrkc2rq7gylwzpgf23twe5yuqqxt5ha3hou",
+    "author": {
+     "did": "did:plc:756gaaeewovgn4axja34ajne",
+     "handle": "nicholasgrossman.bsky.social",
+     "displayName": "Nicholas Grossman",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all",
+       "allowGroupInvites": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-02T16:22:35.083Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3m6ox7qhspx2v",
+        "isValid": true,
+        "createdAt": "2025-11-28T13:06:15.185Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T17:30:59.272Z",
+     "embed": {
+      "$type": "app.bsky.embed.record",
+      "record": {
+       "cid": "bafyreib724mfpwt2gzppbltbvikzlm4l2anx26zuqujbxr2yndhvujdlfe",
+       "uri": "at://did:plc:ifsuximqaivczh4fie2opnuk/app.bsky.feed.post/3n2yih7lnys2m"
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "The Nvidia board becoming the latest American elites choosing to throw away whatever semblance of ethics, legal compliance, and spine they had—even after seeing the midterm results—is yet another reminder that the corrupt, anti-democracy forces roiling our society won't stop. They must be stopped."
+    },
+    "embed": {
+     "record": {
+      "uri": "at://did:plc:ifsuximqaivczh4fie2opnuk/app.bsky.feed.post/3n2yih7lnys2m",
+      "cid": "bafyreib724mfpwt2gzppbltbvikzlm4l2anx26zuqujbxr2yndhvujdlfe",
+      "author": {
+       "did": "did:plc:ifsuximqaivczh4fie2opnuk",
+       "handle": "liberalcurrents.com",
+       "displayName": "Liberal Currents",
+       "associated": {
+        "chat": {
+         "allowIncoming": "following"
+        },
+        "activitySubscription": {
+         "allowSubscriptions": "followers"
+        }
+       },
+       "createdAt": "2023-05-12T01:53:52.787Z",
+       "verification": {
+        "verifications": [
+         {
+          "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+          "issuerDisplayName": "Bluesky",
+          "issuerHandle": "bsky.app",
+          "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lvcmegr5ew2m",
+          "isValid": true,
+          "createdAt": "2025-08-01T02:33:20.122Z"
+         }
+        ],
+        "verifiedStatus": "valid",
+        "trustedVerifierStatus": "none"
+       }
+      },
+      "value": {
+       "$type": "app.bsky.feed.post",
+       "createdAt": "2026-11-23T15:54:03.095Z",
+       "embed": {
+        "$type": "app.bsky.embed.external",
+        "external": {
+         "description": "Democrats must hold business and institutional elites accountable for the corruption of the second Trump term.",
+         "thumb": {
+          "$type": "blob",
+          "ref": {
+           "$link": "bafkreicuddwx3e4iwbgbwx5sdfi25wubfu43hsjoj6tjtkocjdwmzgxy54"
+          },
+          "mimeType": "image/jpeg",
+          "size": 547508
+         },
+         "title": "NVIDIA Caves Like It's 2025",
+         "uri": "https://www.liberalcurrents.com/nvidia-caves-like-its-2025/"
+        }
+       },
+       "langs": [
+        "en"
+       ],
+       "text": "“Democrats just achieved a midterm victory not seen in 50 years…And still, Nvidia's board is too terrified of what the administration may do to it over the next two years, or too greedy for profits and unafraid of what Democrats may do in response, to do their actual professional duty”"
+      },
+      "likeCount": 510,
+      "replyCount": 37,
+      "repostCount": 142,
+      "quoteCount": 33,
+      "indexedAt": "2026-11-23T15:54:04.552Z",
+      "embeds": [
+       {
+        "external": {
+         "uri": "https://www.liberalcurrents.com/nvidia-caves-like-its-2025/",
+         "title": "NVIDIA Caves Like It's 2025",
+         "description": "Democrats must hold business and institutional elites accountable for the corruption of the second Trump term.",
+         "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ifsuximqaivczh4fie2opnuk/bafkreicuddwx3e4iwbgbwx5sdfi25wubfu43hsjoj6tjtkocjdwmzgxy54"
+        },
+        "$type": "app.bsky.embed.external#view"
+       }
+      ],
+      "$type": "app.bsky.embed.record#viewRecord"
+     },
+     "$type": "app.bsky.embed.record#view"
+    },
+    "bookmarkCount": 50,
+    "replyCount": 53,
+    "repostCount": 625,
+    "likeCount": 2600,
+    "quoteCount": 18,
+    "indexedAt": "2026-11-23T17:30:59.558Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:26hkfmtr7jrchexamh7hk6rz",
+     "handle": "abeba.blacksky.app",
+     "displayName": "Dr Abeba Birhane",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-03T17:13:19.413Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mma4urytbz2w",
+        "isValid": true,
+        "createdAt": "2026-05-19T19:30:16.838Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:26hkfmtr7jrchexamh7hk6rz/app.bsky.feed.repost/3n2ynzw6c7fdj",
+    "cid": "bafyreicewvlttqsgbn4hulnt4tnp7cyadncdtp4oikjyt3miebqtwwjfti",
+    "indexedAt": "2026-11-23T17:33:59.645Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  }
+ ],
+ "cursor": "2026-11-21T10:37:27.496Z"
+}

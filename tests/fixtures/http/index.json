@@ -1,0 +1,1148 @@
+{
+ "bsky:abeba.blacksky.app": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_abeba.blacksky.app.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=abeba.blacksky.app&limit=30&filter=posts_no_replies"
+ },
+ "bsky:adalovelaceinst.bsky.social": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_adalovelaceinst.bsky.social.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=adalovelaceinst.bsky.social&limit=30&filter=posts_no_replies"
+ },
+ "bsky:ai2.bsky.social": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_ai2.bsky.social.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=ai2.bsky.social&limit=30&filter=posts_no_replies"
+ },
+ "bsky:ainowinstitute.bsky.social": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_ainowinstitute.bsky.social.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=ainowinstitute.bsky.social&limit=30&filter=posts_no_replies"
+ },
+ "bsky:alexhanna.bsky.social": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_alexhanna.bsky.social.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=alexhanna.bsky.social&limit=30&filter=posts_no_replies"
+ },
+ "bsky:ambakak.bsky.social": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_ambakak.bsky.social.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=ambakak.bsky.social&limit=30&filter=posts_no_replies"
+ },
+ "bsky:bcmerchant.bsky.social": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_bcmerchant.bsky.social.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=bcmerchant.bsky.social&limit=30&filter=posts_no_replies"
+ },
+ "bsky:booch.com": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_booch.com.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=booch.com&limit=30&filter=posts_no_replies"
+ },
+ "bsky:caseynewton.bsky.social": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_caseynewton.bsky.social.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=caseynewton.bsky.social&limit=30&filter=posts_no_replies"
+ },
+ "bsky:cwarzel.bsky.social": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_cwarzel.bsky.social.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=cwarzel.bsky.social&limit=30&filter=posts_no_replies"
+ },
+ "bsky:dairinstitute.bsky.social": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_dairinstitute.bsky.social.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=dairinstitute.bsky.social&limit=30&filter=posts_no_replies"
+ },
+ "bsky:daphnek.bsky.social": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_daphnek.bsky.social.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=daphnek.bsky.social&limit=30&filter=posts_no_replies"
+ },
+ "bsky:doctorow.pluralistic.net": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_doctorow.pluralistic.net.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=doctorow.pluralistic.net&limit=30&filter=posts_no_replies"
+ },
+ "bsky:edzitron.com": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_edzitron.com.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=edzitron.com&limit=30&filter=posts_no_replies"
+ },
+ "bsky:eff.org": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_eff.org.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=eff.org&limit=30&filter=posts_no_replies"
+ },
+ "bsky:emilymbender.bsky.social": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_emilymbender.bsky.social.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=emilymbender.bsky.social&limit=30&filter=posts_no_replies"
+ },
+ "bsky:emollick.bsky.social": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_emollick.bsky.social.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=emollick.bsky.social&limit=30&filter=posts_no_replies"
+ },
+ "bsky:epochai.bsky.social": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_epochai.bsky.social.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=epochai.bsky.social&limit=30&filter=posts_no_replies"
+ },
+ "bsky:erikbryn.bsky.social": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_erikbryn.bsky.social.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=erikbryn.bsky.social&limit=30&filter=posts_no_replies"
+ },
+ "bsky:futureoflife.org": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_futureoflife.org.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=futureoflife.org&limit=30&filter=posts_no_replies"
+ },
+ "bsky:garymarcus.bsky.social": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_garymarcus.bsky.social.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=garymarcus.bsky.social&limit=30&filter=posts_no_replies"
+ },
+ "bsky:geomblog.bsky.social": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_geomblog.bsky.social.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=geomblog.bsky.social&limit=30&filter=posts_no_replies"
+ },
+ "bsky:gergely.pragmaticengineer.com": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_gergely.pragmaticengineer.com.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=gergely.pragmaticengineer.com&limit=30&filter=posts_no_replies"
+ },
+ "bsky:hamel.bsky.social": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_hamel.bsky.social.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=hamel.bsky.social&limit=30&filter=posts_no_replies"
+ },
+ "bsky:jasonkoebler.bsky.social": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_jasonkoebler.bsky.social.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=jasonkoebler.bsky.social&limit=30&filter=posts_no_replies"
+ },
+ "bsky:justinhendrix.bsky.social": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_justinhendrix.bsky.social.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=justinhendrix.bsky.social&limit=30&filter=posts_no_replies"
+ },
+ "bsky:justinwolfers.bsky.social": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_justinwolfers.bsky.social.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=justinwolfers.bsky.social&limit=30&filter=posts_no_replies"
+ },
+ "bsky:karenhao.bsky.social": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_karenhao.bsky.social.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=karenhao.bsky.social&limit=30&filter=posts_no_replies"
+ },
+ "bsky:luizajarovsky.bsky.social": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_luizajarovsky.bsky.social.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=luizajarovsky.bsky.social&limit=30&filter=posts_no_replies"
+ },
+ "bsky:marietjeschaake.bsky.social": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_marietjeschaake.bsky.social.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=marietjeschaake.bsky.social&limit=30&filter=posts_no_replies"
+ },
+ "bsky:masnick.com": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_masnick.com.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=masnick.com&limit=30&filter=posts_no_replies"
+ },
+ "bsky:melaniemitchell.bsky.social": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_melaniemitchell.bsky.social.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=melaniemitchell.bsky.social&limit=30&filter=posts_no_replies"
+ },
+ "bsky:meredithmeredith.bsky.social": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_meredithmeredith.bsky.social.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=meredithmeredith.bsky.social&limit=30&filter=posts_no_replies"
+ },
+ "bsky:mmitchell.bsky.social": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_mmitchell.bsky.social.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=mmitchell.bsky.social&limit=30&filter=posts_no_replies"
+ },
+ "bsky:molly.wiki": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_molly.wiki.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=molly.wiki&limit=30&filter=posts_no_replies"
+ },
+ "bsky:msftresearch.bsky.social": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_msftresearch.bsky.social.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=msftresearch.bsky.social&limit=30&filter=posts_no_replies"
+ },
+ "bsky:natolambert.bsky.social": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_natolambert.bsky.social.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=natolambert.bsky.social&limit=30&filter=posts_no_replies"
+ },
+ "bsky:parismarx.com": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_parismarx.com.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=parismarx.com&limit=30&filter=posts_no_replies"
+ },
+ "bsky:pkrugman.bsky.social": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_pkrugman.bsky.social.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=pkrugman.bsky.social&limit=30&filter=posts_no_replies"
+ },
+ "bsky:randomwalker.bsky.social": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_randomwalker.bsky.social.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=randomwalker.bsky.social&limit=30&filter=posts_no_replies"
+ },
+ "bsky:rao2z.bsky.social": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_rao2z.bsky.social.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=rao2z.bsky.social&limit=30&filter=posts_no_replies"
+ },
+ "bsky:rasbt.bsky.social": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_rasbt.bsky.social.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=rasbt.bsky.social&limit=30&filter=posts_no_replies"
+ },
+ "bsky:sakanaai.bsky.social": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_sakanaai.bsky.social.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=sakanaai.bsky.social&limit=30&filter=posts_no_replies"
+ },
+ "bsky:simonwillison.net": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_simonwillison.net.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=simonwillison.net&limit=30&filter=posts_no_replies"
+ },
+ "bsky:smw.bsky.social": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_smw.bsky.social.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=smw.bsky.social&limit=30&filter=posts_no_replies"
+ },
+ "bsky:stellaathena.bsky.social": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_stellaathena.bsky.social.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=stellaathena.bsky.social&limit=30&filter=posts_no_replies"
+ },
+ "bsky:techpolicypress.bsky.social": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_techpolicypress.bsky.social.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=techpolicypress.bsky.social&limit=30&filter=posts_no_replies"
+ },
+ "bsky:thezvi.bsky.social": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_thezvi.bsky.social.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=thezvi.bsky.social&limit=30&filter=posts_no_replies"
+ },
+ "bsky:timnitgebru.blacksky.app": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_timnitgebru.blacksky.app.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=timnitgebru.blacksky.app&limit=30&filter=posts_no_replies"
+ },
+ "bsky:weisenthal.bsky.social": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_weisenthal.bsky.social.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=weisenthal.bsky.social&limit=30&filter=posts_no_replies"
+ },
+ "bsky:yoshuabengio.bsky.social": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "bsky_yoshuabengio.bsky.social.json",
+  "status": 200,
+  "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=yoshuabengio.bsky.social&limit=30&filter=posts_no_replies"
+ },
+ "gdelt:artlist:0": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "gdelt_artlist_0.json",
+  "status": 200,
+  "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial+intelligence%22+OR+OpenAI+OR+chatbot+OR+Nvidia+OR+DeepSeek%29+%28domain%3Areuters.com+OR+domain%3Aapnews.com+OR+domain%3Acnn.com+OR+domain%3Axinhuanet.com+OR+domain%3Anews.cn%29&mode=artlist&format=json&maxrecords=250&timespan=1d&sort=datedesc"
+ },
+ "gdelt:artlist:1": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "gdelt_artlist_1.json",
+  "status": 200,
+  "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial+intelligence%22+OR+OpenAI+OR+chatbot+OR+Nvidia+OR+DeepSeek%29+%28domain%3Achinadaily.com.cn+OR+domain%3Aglobaltimes.cn+OR+domain%3Acgtn.com%29&mode=artlist&format=json&maxrecords=250&timespan=1d&sort=datedesc"
+ },
+ "github:established:ai-agents": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "github_established_ai-agents.json",
+  "status": 200,
+  "url": "https://api.github.com/search/repositories?q=topic%3Aai-agents+stars%3A%3E%3D1000+pushed%3A%3E2026-11-22&sort=stars&order=desc&per_page=50"
+ },
+ "github:established:llm": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "github_established_llm.json",
+  "status": 200,
+  "url": "https://api.github.com/search/repositories?q=topic%3Allm+stars%3A%3E%3D1000+pushed%3A%3E2026-11-22&sort=stars&order=desc&per_page=50"
+ },
+ "github:new:ai-agents": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "github_new_ai-agents.json",
+  "status": 200,
+  "url": "https://api.github.com/search/repositories?q=topic%3Aai-agents+created%3A%3E2026-11-10&sort=stars&order=desc&per_page=50"
+ },
+ "github:new:diffusion-models": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "github_new_diffusion-models.json",
+  "status": 200,
+  "url": "https://api.github.com/search/repositories?q=topic%3Adiffusion-models+created%3A%3E2026-11-10&sort=stars&order=desc&per_page=50"
+ },
+ "github:new:generative-ai": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "github_new_generative-ai.json",
+  "status": 200,
+  "url": "https://api.github.com/search/repositories?q=topic%3Agenerative-ai+created%3A%3E2026-11-10&sort=stars&order=desc&per_page=50"
+ },
+ "github:new:large-language-models": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "github_new_large-language-models.json",
+  "status": 200,
+  "url": "https://api.github.com/search/repositories?q=topic%3Alarge-language-models+created%3A%3E2026-11-10&sort=stars&order=desc&per_page=50"
+ },
+ "github:new:llm": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "github_new_llm.json",
+  "status": 200,
+  "url": "https://api.github.com/search/repositories?q=topic%3Allm+created%3A%3E2026-11-10&sort=stars&order=desc&per_page=50"
+ },
+ "github:new:llm-inference": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "github_new_llm-inference.json",
+  "status": 200,
+  "url": "https://api.github.com/search/repositories?q=topic%3Allm-inference+created%3A%3E2026-11-10&sort=stars&order=desc&per_page=50"
+ },
+ "github:new:mcp": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "github_new_mcp.json",
+  "status": 200,
+  "url": "https://api.github.com/search/repositories?q=topic%3Amcp+created%3A%3E2026-11-10&sort=stars&order=desc&per_page=50"
+ },
+ "github:new:rag": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "github_new_rag.json",
+  "status": 200,
+  "url": "https://api.github.com/search/repositories?q=topic%3Arag+created%3A%3E2026-11-10&sort=stars&order=desc&per_page=50"
+ },
+ "hf:datasets": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "hf_datasets.json",
+  "status": 200,
+  "url": "https://huggingface.co/api/datasets?sort=trendingScore&limit=50"
+ },
+ "hf:models": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "hf_models.json",
+  "status": 200,
+  "url": "https://huggingface.co/api/models?sort=trendingScore&limit=50"
+ },
+ "hf:papers:0": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "hf_papers_0.json",
+  "status": 200,
+  "url": "https://huggingface.co/api/daily_papers?date=2026-11-24&limit=100"
+ },
+ "hf:papers:1": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "hf_papers_1.json",
+  "status": 200,
+  "url": "https://huggingface.co/api/daily_papers?date=2026-11-23&limit=100"
+ },
+ "hf:posts": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "hf_posts.json",
+  "status": 200,
+  "url": "https://huggingface.co/api/posts?sort=trending&limit=50"
+ },
+ "hf:spaces": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "hf_spaces.json",
+  "status": 200,
+  "url": "https://huggingface.co/api/spaces?sort=trendingScore&limit=50"
+ },
+ "hn:stories": {
+  "content_type": "application/json",
+  "file": "hn_stories.json",
+  "status": 200,
+  "url": "https://hn.algolia.com/api/v1/search_by_date?tags=story&numericFilters=created_at_i%3E1795335576%2Cpoints%3E%3D20&hitsPerPage=500"
+ },
+ "openrouter:models": {
+  "content_type": "application/json",
+  "file": "openrouter_models.json",
+  "status": 200,
+  "url": "https://openrouter.ai/api/v1/models"
+ },
+ "rss:404media:0": {
+  "content_type": "application/rss+xml; charset=utf-8",
+  "file": "rss_404media_0.xml",
+  "status": 200,
+  "url": "https://www.404media.co/rss/"
+ },
+ "rss:abcau:0": {
+  "content_type": "application/rss+xml",
+  "file": "rss_abcau_0.xml",
+  "status": 200,
+  "url": "https://www.abc.net.au/news/feed/51120/rss.xml"
+ },
+ "rss:aheadofai:0": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_aheadofai_0.xml",
+  "status": 200,
+  "url": "https://magazine.sebastianraschka.com/feed"
+ },
+ "rss:ai2:0": {
+  "content_type": "application/xml;charset=utf-8",
+  "file": "rss_ai2_0.xml",
+  "status": 200,
+  "url": "https://allenai.org/rss.xml"
+ },
+ "rss:ainews:0": {
+  "content_type": "application/rss+xml; charset=utf-8",
+  "file": "rss_ainews_0.xml",
+  "status": 200,
+  "url": "https://latent.space/feeds/all.xml"
+ },
+ "rss:aljazeera:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_aljazeera_0.xml",
+  "status": 200,
+  "url": "https://www.aljazeera.com/xml/rss/all.xml"
+ },
+ "rss:appleml:0": {
+  "content_type": "text/xml",
+  "file": "rss_appleml_0.xml",
+  "status": 200,
+  "url": "https://machinelearning.apple.com/rss.xml"
+ },
+ "rss:ars:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_ars_0.xml",
+  "status": 200,
+  "url": "https://arstechnica.com/ai/feed/"
+ },
+ "rss:atlantic:0": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_atlantic_0.xml",
+  "status": 200,
+  "url": "https://www.theatlantic.com/feed/channel/technology/"
+ },
+ "rss:awsml:0": {
+  "content_type": "application/rss+xml;charset=UTF-8",
+  "file": "rss_awsml_0.xml",
+  "status": 200,
+  "url": "https://aws.amazon.com/blogs/machine-learning/feed/"
+ },
+ "rss:bbc:0": {
+  "content_type": "text/xml; charset=utf-8",
+  "file": "rss_bbc_0.xml",
+  "status": 200,
+  "url": "https://feeds.bbci.co.uk/news/technology/rss.xml"
+ },
+ "rss:bensbites:0": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_bensbites_0.xml",
+  "status": 200,
+  "url": "https://www.bensbites.com/feed"
+ },
+ "rss:bi:0": {
+  "content_type": "application/atom+xml",
+  "file": "rss_bi_0.xml",
+  "status": 200,
+  "url": "https://feeds.businessinsider.com/custom/all"
+ },
+ "rss:bitm:0": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_bitm_0.xml",
+  "status": 200,
+  "url": "https://www.bloodinthemachine.com/feed"
+ },
+ "rss:bloomberg:0": {
+  "content_type": "text/xml; charset=utf-8",
+  "file": "rss_bloomberg_0.xml",
+  "status": 200,
+  "url": "https://feeds.bloomberg.com/technology/news.rss"
+ },
+ "rss:breakit:0": {
+  "content_type": "application/xml",
+  "file": "rss_breakit_0.xml",
+  "status": 200,
+  "url": "https://www.breakit.se/feed/artiklar"
+ },
+ "rss:breitbart:0": {
+  "content_type": "text/xml; charset=utf-8",
+  "file": "rss_breitbart_0.xml",
+  "status": 200,
+  "url": "https://www.breitbart.com/tech/feed/"
+ },
+ "rss:chinai:0": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_chinai_0.xml",
+  "status": 200,
+  "url": "https://chinai.substack.com/feed"
+ },
+ "rss:chinatalk:0": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_chinatalk_0.xml",
+  "status": 200,
+  "url": "https://www.chinatalk.media/feed"
+ },
+ "rss:cnbc:0": {
+  "content_type": "application/xml",
+  "file": "rss_cnbc_0.xml",
+  "status": 200,
+  "url": "https://www.cnbc.com/id/19854910/device/rss/rss.html"
+ },
+ "rss:dailycaller:0": {
+  "content_type": "text/xml; charset=UTF-8",
+  "file": "rss_dailycaller_0.xml",
+  "status": 200,
+  "url": "https://dailycaller.com/feed/"
+ },
+ "rss:deepmind:0": {
+  "content_type": "application/xml",
+  "file": "rss_deepmind_0.xml",
+  "status": 200,
+  "url": "https://deepmind.google/blog/rss.xml"
+ },
+ "rss:di:0": {
+  "content_type": "application/rss+xml; charset=utf-8",
+  "file": "rss_di_0.xml",
+  "status": 200,
+  "url": "https://www.di.se/rss"
+ },
+ "rss:dn:0": {
+  "content_type": "application/rss+xml; charset=utf-8",
+  "file": "rss_dn_0.xml",
+  "status": 200,
+  "url": "https://www.dn.se/rss/"
+ },
+ "rss:dn:1": {
+  "content_type": "application/rss+xml; charset=utf-8",
+  "file": "rss_dn_1.xml",
+  "status": 200,
+  "url": "https://www.dn.se/rss/ekonomi/"
+ },
+ "rss:dw:0": {
+  "content_type": "text/xml; charset=UTF-8",
+  "file": "rss_dw_0.xml",
+  "status": 200,
+  "url": "https://rss.dw.com/rdf/rss-en-all"
+ },
+ "rss:dwarkesh:0": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_dwarkesh_0.xml",
+  "status": 200,
+  "url": "https://www.dwarkesh.com/feed"
+ },
+ "rss:economist:0": {
+  "content_type": "text/xml",
+  "file": "rss_economist_0.xml",
+  "status": 200,
+  "url": "https://www.economist.com/business/rss.xml"
+ },
+ "rss:economist:1": {
+  "content_type": "text/xml",
+  "file": "rss_economist_1.xml",
+  "status": 200,
+  "url": "https://www.economist.com/science-and-technology/rss.xml"
+ },
+ "rss:elpais:0": {
+  "content_type": "application/xml",
+  "file": "rss_elpais_0.xml",
+  "status": 200,
+  "url": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/tecnologia/portada"
+ },
+ "rss:epoch:0": {
+  "content_type": "application/xml",
+  "file": "rss_epoch_0.xml",
+  "status": 200,
+  "url": "https://epoch.ai/atom.xml"
+ },
+ "rss:et:0": {
+  "content_type": "text/xml;charset=UTF-8",
+  "file": "rss_et_0.xml",
+  "status": 200,
+  "url": "https://economictimes.indiatimes.com/tech/rssfeeds/13357270.cms"
+ },
+ "rss:expview:0": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_expview_0.xml",
+  "status": 200,
+  "url": "https://www.exponentialview.co/feed"
+ },
+ "rss:fortune:0": {
+  "content_type": "application/xml; charset=UTF-8",
+  "file": "rss_fortune_0.xml",
+  "status": 200,
+  "url": "https://fortune.com/feed/"
+ },
+ "rss:fox:0": {
+  "content_type": "text/xml;charset=utf-8",
+  "file": "rss_fox_0.xml",
+  "status": 200,
+  "url": "https://moxie.foxnews.com/google-publisher/tech.xml"
+ },
+ "rss:france24:0": {
+  "content_type": "application/rss+xml; charset=utf-8",
+  "file": "rss_france24_0.xml",
+  "status": 200,
+  "url": "https://www.france24.com/en/rss"
+ },
+ "rss:freepress:0": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_freepress_0.xml",
+  "status": 200,
+  "url": "https://www.thefp.com/feed"
+ },
+ "rss:ft:0": {
+  "content_type": "text/xml; charset=utf-8",
+  "file": "rss_ft_0.xml",
+  "status": 200,
+  "url": "https://www.ft.com/artificial-intelligence?format=rss"
+ },
+ "rss:googleai:0": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_googleai_0.xml",
+  "status": 200,
+  "url": "https://blog.google/technology/ai/rss/"
+ },
+ "rss:googleresearch:0": {
+  "content_type": "application/rss+xml; charset=utf-8",
+  "file": "rss_googleresearch_0.xml",
+  "status": 200,
+  "url": "https://research.google/blog/rss/"
+ },
+ "rss:guardian:0": {
+  "content_type": "text/xml; charset=UTF-8",
+  "file": "rss_guardian_0.xml",
+  "status": 200,
+  "url": "https://www.theguardian.com/technology/artificialintelligenceai/rss"
+ },
+ "rss:guardian:1": {
+  "content_type": "text/xml; charset=UTF-8",
+  "file": "rss_guardian_1.xml",
+  "status": 200,
+  "url": "https://www.theguardian.com/us/technology/rss"
+ },
+ "rss:handelsblatt:0": {
+  "content_type": "application/rss+xml; charset=utf-8",
+  "file": "rss_handelsblatt_0.xml",
+  "status": 200,
+  "url": "https://www.handelsblatt.com/contentexport/feed/technologie"
+ },
+ "rss:heise:0": {
+  "content_type": "application/atom+xml; charset=UTF-8",
+  "file": "rss_heise_0.xml",
+  "status": 200,
+  "url": "https://www.heise.de/rss/heise-atom.xml"
+ },
+ "rss:hfblog:0": {
+  "content_type": "application/rss+xml; charset=utf-8",
+  "file": "rss_hfblog_0.xml",
+  "status": 200,
+  "url": "https://huggingface.co/blog/feed.xml"
+ },
+ "rss:hyperdimensional:0": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_hyperdimensional_0.xml",
+  "status": 200,
+  "url": "https://www.hyperdimensional.co/feed"
+ },
+ "rss:ieee:0": {
+  "content_type": "application/rss+xml; charset=utf-8",
+  "file": "rss_ieee_0.xml",
+  "status": 200,
+  "url": "https://spectrum.ieee.org/feeds/topic/artificial-intelligence.rss"
+ },
+ "rss:importai:0": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_importai_0.xml",
+  "status": 200,
+  "url": "https://importai.substack.com/feed"
+ },
+ "rss:interconnects:0": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_interconnects_0.xml",
+  "status": 200,
+  "url": "https://www.interconnects.ai/feed"
+ },
+ "rss:koreaherald:0": {
+  "content_type": "xml;charset=UTF-8",
+  "file": "rss_koreaherald_0.xml",
+  "status": 200,
+  "url": "https://www.koreaherald.com/rss/newsAll"
+ },
+ "rss:lastweekinai:0": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_lastweekinai_0.xml",
+  "status": 200,
+  "url": "https://lastweekin.ai/feed"
+ },
+ "rss:lemonde:0": {
+  "content_type": "application/xml; charset=UTF-8",
+  "file": "rss_lemonde_0.xml",
+  "status": 200,
+  "url": "https://www.lemonde.fr/intelligence-artificielle/rss_full.xml"
+ },
+ "rss:marcus:0": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_marcus_0.xml",
+  "status": 200,
+  "url": "https://garymarcus.substack.com/feed"
+ },
+ "rss:marktechpost:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_marktechpost_0.xml",
+  "status": 200,
+  "url": "https://www.marktechpost.com/feed/"
+ },
+ "rss:memeorandum:0": {
+  "content_type": "text/xml",
+  "file": "rss_memeorandum_0.xml",
+  "status": 200,
+  "url": "https://www.memeorandum.com/feed.xml"
+ },
+ "rss:mistral:0": {
+  "content_type": "text/plain; charset=UTF-8",
+  "file": "rss_mistral_0.txt",
+  "status": 200,
+  "url": "https://mistral.ai/rss.xml"
+ },
+ "rss:mittr:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_mittr_0.xml",
+  "status": 200,
+  "url": "https://www.technologyreview.com/topic/artificial-intelligence/feed"
+ },
+ "rss:msr:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_msr_0.xml",
+  "status": 200,
+  "url": "https://www.microsoft.com/en-us/research/feed/"
+ },
+ "rss:nation:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_nation_0.xml",
+  "status": 200,
+  "url": "https://www.thenation.com/subject/technology/feed/"
+ },
+ "rss:natreview:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_natreview_0.xml",
+  "status": 200,
+  "url": "https://www.nationalreview.com/feed/"
+ },
+ "rss:nikkei:0": {
+  "content_type": "application/rss+xml",
+  "file": "rss_nikkei_0.xml",
+  "status": 200,
+  "url": "https://asia.nikkei.com/rss/feed/nar"
+ },
+ "rss:normaltech:0": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_normaltech_0.xml",
+  "status": 200,
+  "url": "https://www.normaltech.ai/feed"
+ },
+ "rss:npr:0": {
+  "content_type": "text/xml;charset=UTF-8",
+  "file": "rss_npr_0.xml",
+  "status": 200,
+  "url": "https://feeds.npr.org/1019/rss.xml"
+ },
+ "rss:nvidia:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_nvidia_0.xml",
+  "status": 200,
+  "url": "https://blogs.nvidia.com/feed/"
+ },
+ "rss:nypost:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_nypost_0.xml",
+  "status": 200,
+  "url": "https://nypost.com/tech/feed/"
+ },
+ "rss:nyt:0": {
+  "content_type": "application/xml",
+  "file": "rss_nyt_0.xml",
+  "status": 200,
+  "url": "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml"
+ },
+ "rss:nyteknik:0": {
+  "content_type": "text/xml;charset=UTF-8",
+  "file": "rss_nyteknik_0.xml",
+  "status": 200,
+  "url": "https://www.nyteknik.se/digitalisering?lab_viewport=rss"
+ },
+ "rss:oneuseful:0": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_oneuseful_0.xml",
+  "status": 200,
+  "url": "https://www.oneusefulthing.org/feed"
+ },
+ "rss:openai:0": {
+  "content_type": "text/xml; charset=utf-8",
+  "file": "rss_openai_0.xml",
+  "status": 200,
+  "url": "https://openai.com/news/rss.xml"
+ },
+ "rss:pandaily:0": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_pandaily_0.xml",
+  "status": 200,
+  "url": "https://pandaily.com/feed/"
+ },
+ "rss:platformer:0": {
+  "content_type": "application/rss+xml; charset=utf-8",
+  "file": "rss_platformer_0.xml",
+  "status": 200,
+  "url": "https://www.platformer.news/rss/"
+ },
+ "rss:politico:0": {
+  "content_type": "application/xml;charset=UTF-8",
+  "file": "rss_politico_0.xml",
+  "status": 200,
+  "url": "https://rss.politico.com/technology.xml"
+ },
+ "rss:politico_eu:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_politico_eu_0.xml",
+  "status": 200,
+  "url": "https://www.politico.eu/section/technology/feed/"
+ },
+ "rss:pragmatic:0": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_pragmatic_0.xml",
+  "status": 200,
+  "url": "https://newsletter.pragmaticengineer.com/feed"
+ },
+ "rss:producthunt_ai:0": {
+  "content_type": "application/atom+xml; charset=utf-8",
+  "file": "rss_producthunt_ai_0.xml",
+  "status": 200,
+  "url": "https://www.producthunt.com/feed?category=artificial-intelligence"
+ },
+ "rss:reason:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_reason_0.xml",
+  "status": 200,
+  "url": "https://reason.com/feed/"
+ },
+ "rss:restofworld:0": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_restofworld_0.xml",
+  "status": 200,
+  "url": "https://restofworld.org/feed/latest/"
+ },
+ "rss:rundown:0": {
+  "content_type": "application/rss+xml; charset=utf-8",
+  "file": "rss_rundown_0.xml",
+  "status": 200,
+  "url": "https://www.therundown.ai/feed"
+ },
+ "rss:scmp:0": {
+  "content_type": "text/xml; charset=utf-8",
+  "file": "rss_scmp_0.xml",
+  "status": 200,
+  "url": "https://www.scmp.com/rss/320663/feed"
+ },
+ "rss:semafor:0": {
+  "content_type": "application/xml",
+  "file": "rss_semafor_0.xml",
+  "status": 200,
+  "url": "https://www.semafor.com/rss.xml"
+ },
+ "rss:semianalysis:0": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_semianalysis_0.xml",
+  "status": 200,
+  "url": "https://newsletter.semianalysis.com/feed"
+ },
+ "rss:sifted:0": {
+  "content_type": "application/rss+xml",
+  "file": "rss_sifted_0.xml",
+  "status": 200,
+  "url": "https://sifted.eu/feed"
+ },
+ "rss:slate:0": {
+  "content_type": "text/rss+xml; charset=utf-8",
+  "file": "rss_slate_0.xml",
+  "status": 200,
+  "url": "https://slate.com/feeds/technology.rss"
+ },
+ "rss:spiegel:0": {
+  "content_type": "application/rss+xml; charset=utf-8",
+  "file": "rss_spiegel_0.xml",
+  "status": 200,
+  "url": "https://www.spiegel.de/thema/kuenstliche_intelligenz/index.rss"
+ },
+ "rss:straitstimes:0": {
+  "content_type": "application/rss+xml; charset=utf-8",
+  "file": "rss_straitstimes_0.xml",
+  "status": 200,
+  "url": "https://www.straitstimes.com/news/business/rss.xml"
+ },
+ "rss:svd:0": {
+  "content_type": "application/xml",
+  "file": "rss_svd_0.xml",
+  "status": 200,
+  "url": "https://www.svd.se/feed/articles.rss"
+ },
+ "rss:svt:0": {
+  "content_type": "application/xml;charset=utf-8",
+  "file": "rss_svt_0.xml",
+  "status": 200,
+  "url": "https://www.svt.se/nyheter/rss.xml"
+ },
+ "rss:svt:1": {
+  "content_type": "application/xml;charset=utf-8",
+  "file": "rss_svt_1.xml",
+  "status": 200,
+  "url": "https://www.svt.se/nyheter/ekonomi/rss.xml"
+ },
+ "rss:techcrunch:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_techcrunch_0.xml",
+  "status": 200,
+  "url": "https://techcrunch.com/category/artificial-intelligence/feed/"
+ },
+ "rss:techmeme:0": {
+  "content_type": "text/xml",
+  "file": "rss_techmeme_0.xml",
+  "status": 200,
+  "url": "https://www.techmeme.com/feed.xml"
+ },
+ "rss:technode:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_technode_0.xml",
+  "status": 200,
+  "url": "https://technode.com/feed/"
+ },
+ "rss:telegraph:0": {
+  "content_type": "text/xml; charset=utf-8",
+  "file": "rss_telegraph_0.xml",
+  "status": 200,
+  "url": "https://www.telegraph.co.uk/business/rss.xml"
+ },
+ "rss:thehill:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_thehill_0.xml",
+  "status": 200,
+  "url": "https://thehill.com/policy/technology/feed/"
+ },
+ "rss:tldrai:0": {
+  "content_type": "text/xml",
+  "file": "rss_tldrai_0.xml",
+  "status": 200,
+  "url": "https://tldr.tech/api/rss/ai"
+ },
+ "rss:tnr:0": {
+  "content_type": "text/xml; charset=utf-8",
+  "file": "rss_tnr_0.xml",
+  "status": 200,
+  "url": "https://newrepublic.com/rss.xml"
+ },
+ "rss:transformer:0": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_transformer_0.xml",
+  "status": 200,
+  "url": "https://www.transformernews.ai/feed"
+ },
+ "rss:understandingai:0": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_understandingai_0.xml",
+  "status": 200,
+  "url": "https://www.understandingai.org/feed"
+ },
+ "rss:verge:0": {
+  "content_type": "application/xml; charset=UTF-8",
+  "file": "rss_verge_0.xml",
+  "status": 200,
+  "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"
+ },
+ "rss:vox:0": {
+  "content_type": "application/xml; charset=UTF-8",
+  "file": "rss_vox_0.xml",
+  "status": 200,
+  "url": "https://www.vox.com/rss/technology/index.xml"
+ },
+ "rss:wapo:0": {
+  "content_type": "text/xml; charset=utf-8",
+  "file": "rss_wapo_0.xml",
+  "status": 200,
+  "url": "https://feeds.washingtonpost.com/rss/business/technology"
+ },
+ "rss:wex:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_wex_0.xml",
+  "status": 200,
+  "url": "https://www.washingtonexaminer.com/tag/technology/feed/"
+ },
+ "rss:willison:0": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_willison_0.xml",
+  "status": 200,
+  "url": "https://simonwillison.net/atom/everything/"
+ },
+ "rss:wired:0": {
+  "content_type": "application/xml",
+  "file": "rss_wired_0.xml",
+  "status": 200,
+  "url": "https://www.wired.com/feed/tag/ai/latest/rss"
+ },
+ "rss:wsj:0": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_wsj_0.xml",
+  "status": 200,
+  "url": "https://feeds.content.dowjones.io/public/rss/RSSWSJD"
+ },
+ "rss:zitron:0": {
+  "content_type": "application/rss+xml; charset=utf-8",
+  "file": "rss_zitron_0.xml",
+  "status": 200,
+  "url": "https://www.wheresyoured.at/rss/"
+ },
+ "rss:zvi:0": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_zvi_0.xml",
+  "status": 200,
+  "url": "https://thezvi.substack.com/feed"
+ },
+ "sitemap:thebatch": {
+  "content_type": "application/xml",
+  "file": "sitemap_thebatch.xml",
+  "status": 200,
+  "url": "https://www.deeplearning.ai/sitemap.xml"
+ },
+ "sitemap:thebatch:page:0d1242459f2d": {
+  "content_type": "text/html; charset=utf-8",
+  "file": "sitemap_thebatch_page_0d1242459f2d.txt",
+  "status": 200,
+  "url": "https://www.deeplearning.ai/the-batch/anthropic-releases-new-top-models"
+ },
+ "sitemap:thebatch:page:19fd6749bd6b": {
+  "content_type": "text/html; charset=utf-8",
+  "file": "sitemap_thebatch_page_19fd6749bd6b.txt",
+  "status": 200,
+  "url": "https://www.deeplearning.ai/the-batch/claude-fable-gets-a-price-cut"
+ },
+ "sitemap:thebatch:page:1b8cb4d16490": {
+  "content_type": "text/html; charset=utf-8",
+  "file": "sitemap_thebatch_page_1b8cb4d16490.txt",
+  "status": 200,
+  "url": "https://www.deeplearning.ai/the-batch/jensen-huang-resigns-as-nvidia-ceo"
+ },
+ "sitemap:thebatch:page:2e20a46a8eec": {
+  "content_type": "text/html; charset=utf-8",
+  "file": "sitemap_thebatch_page_2e20a46a8eec.txt",
+  "status": 200,
+  "url": "https://www.deeplearning.ai/the-batch/how-to-build-an-agent-harness-in-one-prompt"
+ },
+ "sitemap:thebatch:page:35b183dfc676": {
+  "content_type": "text/html; charset=utf-8",
+  "file": "sitemap_thebatch_page_35b183dfc676.txt",
+  "status": 200,
+  "url": "https://www.deeplearning.ai/the-batch/gpt-6-2-astra-sol-cut-prices-to-match-claude"
+ },
+ "sitemap:thebatch:page:54069553eaf4": {
+  "content_type": "text/html; charset=utf-8",
+  "file": "sitemap_thebatch_page_54069553eaf4.txt",
+  "status": 200,
+  "url": "https://www.deeplearning.ai/the-batch/jensen-huangs-legacy-and-future"
+ },
+ "sitemap:thebatch:page:5cef5805f56a": {
+  "content_type": "text/html; charset=utf-8",
+  "file": "sitemap_thebatch_page_5cef5805f56a.txt",
+  "status": 200,
+  "url": "https://www.deeplearning.ai/the-batch/adaptive-memory-management"
+ },
+ "sitemap:thebatch:page:8c15a3025d92": {
+  "content_type": "text/html; charset=utf-8",
+  "file": "sitemap_thebatch_page_8c15a3025d92.txt",
+  "status": 200,
+  "url": "https://www.deeplearning.ai/the-batch/llms-can-fine-tune-neural-networks"
+ },
+ "sitemap:thebatch:page:8e40fa274a66": {
+  "content_type": "text/html; charset=utf-8",
+  "file": "sitemap_thebatch_page_8e40fa274a66.txt",
+  "status": 200,
+  "url": "https://www.deeplearning.ai/the-batch/amds-world-model-arrives"
+ },
+ "sitemap:thebatch:page:9e9fed92abb0": {
+  "content_type": "text/html; charset=utf-8",
+  "file": "sitemap_thebatch_page_9e9fed92abb0.txt",
+  "status": 200,
+  "url": "https://www.deeplearning.ai/the-batch/retrieval-for-rag-resistant-docs"
+ },
+ "sitemap:thebatch:page:a7149fb5d30b": {
+  "content_type": "text/html; charset=utf-8",
+  "file": "sitemap_thebatch_page_a7149fb5d30b.txt",
+  "status": 200,
+  "url": "https://www.deeplearning.ai/the-batch/search-engine-wars-ai-edition"
+ },
+ "sitemap:thebatch:page:e47c8dc4de60": {
+  "content_type": "text/html; charset=utf-8",
+  "file": "sitemap_thebatch_page_e47c8dc4de60.txt",
+  "status": 200,
+  "url": "https://www.deeplearning.ai/the-batch/gemini-4-hydrogen-balances-accuracy-and-speed"
+ },
+ "sitemap:thebatch:page:f4956af9e451": {
+  "content_type": "text/html; charset=utf-8",
+  "file": "sitemap_thebatch_page_f4956af9e451.txt",
+  "status": 200,
+  "url": "https://www.deeplearning.ai/the-batch/gpt-6-cyber-patches-more-security-flaws-for-less-cost"
+ }
+}

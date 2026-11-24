@@ -1,0 +1,275 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:mray7klv7leelnlkynuk57up/app.bsky.feed.post/3n2ops25vmc2y",
+    "cid": "bafyreidnfietduvqhg3nzgrphuaxa6yb4h6pyzlb2gyl7z6p537inn5ria",
+    "author": {
+     "did": "did:plc:mray7klv7leelnlkynuk57up",
+     "handle": "stellaathena.bsky.social",
+     "displayName": "Stella Biderman",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-04T17:56:31.752Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-19T18:38:45.309Z",
+     "langs": [
+      "en"
+     ],
+     "text": "News media coverage of the GTA 6 release is a fascinating example of news manufacturing views of the world as they need to pretend that video games are a niche hobby.\n\nConsumer spending on video games is over 5x what it is on movies and comparable to spending on TV and music."
+    },
+    "bookmarkCount": 0,
+    "replyCount": 3,
+    "repostCount": 11,
+    "likeCount": 58,
+    "quoteCount": 1,
+    "indexedAt": "2026-11-19T18:38:45.555Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:mray7klv7leelnlkynuk57up/app.bsky.feed.post/3mzns4eiczk2w",
+    "cid": "bafyreihajwhsqbxz6b5gpf2fywdcm6t3fbxlp6rmjwyzq6zp6keguxepcm",
+    "author": {
+     "did": "did:plc:mray7klv7leelnlkynuk57up",
+     "handle": "stellaathena.bsky.social",
+     "displayName": "Stella Biderman",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-04T17:56:31.752Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-06T16:22:27.797Z",
+     "langs": [
+      "en"
+     ],
+     "text": "We publish A at a workshop.\n\nWe collab w/ people to write B, which goes on arXiv\n\nWe update A and submit it to ICLR\n\nReviewer calls us out on claiming novelty for things that were in B. They were also in the workshop version and are in B b/c of us\n\nHow would you approach this?"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 8,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-06T16:22:28.076Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:mray7klv7leelnlkynuk57up/app.bsky.feed.post/3mzlbauqvak2s",
+    "cid": "bafyreif242j2sd6kmydcekpbvcmzzy377qfgmnxewcm2v57atczzrrd2g4",
+    "author": {
+     "did": "did:plc:mray7klv7leelnlkynuk57up",
+     "handle": "stellaathena.bsky.social",
+     "displayName": "Stella Biderman",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-04T17:56:31.752Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-05T16:15:25.986Z",
+     "langs": [
+      "en"
+     ],
+     "text": "If the Democrats do an above average job of being leaders and are willing to put being real liberals and making the world a better place as their #1 priority it would be the end of the Republican Party as a political force in the US."
+    },
+    "bookmarkCount": 0,
+    "replyCount": 1,
+    "repostCount": 0,
+    "likeCount": 2,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-05T16:15:31.577Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 5
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:mray7klv7leelnlkynuk57up/app.bsky.feed.post/3mxz76feeg226",
+    "cid": "bafyreidxivoj2zpptg6lptw4uq2ped7jjlttfcraofsipt5kq6g5limhye",
+    "author": {
+     "did": "did:plc:mray7klv7leelnlkynuk57up",
+     "handle": "stellaathena.bsky.social",
+     "displayName": "Stella Biderman",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-04T17:56:31.752Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-10-16T18:25:08.335Z",
+     "embed": {
+      "$type": "app.bsky.embed.record",
+      "record": {
+       "cid": "bafyreifr4givfi3g6i75mjnclhbnddakbntaac5wwmmnac5mkm6nbseet4",
+       "uri": "at://did:plc:b3fxohzyjeq6qu76tuoq74vt/app.bsky.feed.post/3mxwioxv2yk25"
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "One of the more frustrating aspects of engaging in AI policy is that many things about the internet or technology in general have been suddenly thrust into the spotlight due to AI, and people instinctually rally against them without any regard for the collateral damage."
+    },
+    "embed": {
+     "record": {
+      "uri": "at://did:plc:b3fxohzyjeq6qu76tuoq74vt/app.bsky.feed.post/3mxwioxv2yk25",
+      "cid": "bafyreifr4givfi3g6i75mjnclhbnddakbntaac5wwmmnac5mkm6nbseet4",
+      "author": {
+       "did": "did:plc:b3fxohzyjeq6qu76tuoq74vt",
+       "handle": "recreatecoalition.bsky.social",
+       "displayName": "Re:Create Coalition",
+       "associated": {
+        "activitySubscription": {
+         "allowSubscriptions": "followers"
+        }
+       },
+       "createdAt": "2024-12-04T22:10:49.746Z"
+      },
+      "value": {
+       "$type": "app.bsky.feed.post",
+       "createdAt": "2026-10-15T16:37:29.081Z",
+       "embed": {
+        "$type": "app.bsky.embed.images",
+        "images": [
+         {
+          "alt": "",
+          "aspectRatio": {
+           "height": 1999,
+           "width": 1545
+          },
+          "image": {
+           "$type": "blob",
+           "ref": {
+            "$link": "bafkreigzixbuzblp57wqk2j6bf6qxhmqxdva7bosgpvqvyx77wxndqkxhy"
+           },
+           "mimeType": "image/jpeg",
+           "size": 1949935
+          }
+         }
+        ]
+       },
+       "facets": [
+        {
+         "features": [
+          {
+           "$type": "app.bsky.richtext.facet#link",
+           "uri": "https://recreatecoalition.org/infographic/banning-ai-bots-wont-protect-journalism"
+          }
+         ],
+         "index": {
+          "byteEnd": 304,
+          "byteStart": 267
+         }
+        }
+       ],
+       "langs": [
+        "en"
+       ],
+       "text": "Journalists have used web scraping for 20+ years to expose corruption, track lobbyists, and reveal discrimination.\n\nCrawler bans like the Stealth Bot Prohibition Act risk cutting off tools newsrooms use to hold power accountable.\n\nOur infographic explains why ➡️ recreatecoalition.org/infographic/..."
+      },
+      "likeCount": 25,
+      "replyCount": 0,
+      "repostCount": 3,
+      "quoteCount": 5,
+      "indexedAt": "2026-10-15T16:37:34.565Z",
+      "embeds": [
+       {
+        "images": [
+         {
+          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:b3fxohzyjeq6qu76tuoq74vt/bafkreigzixbuzblp57wqk2j6bf6qxhmqxdva7bosgpvqvyx77wxndqkxhy",
+          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:b3fxohzyjeq6qu76tuoq74vt/bafkreigzixbuzblp57wqk2j6bf6qxhmqxdva7bosgpvqvyx77wxndqkxhy",
+          "alt": "",
+          "aspectRatio": {
+           "height": 1999,
+           "width": 1545
+          }
+         }
+        ],
+        "$type": "app.bsky.embed.images#view"
+       }
+      ],
+      "$type": "app.bsky.embed.record#viewRecord"
+     },
+     "$type": "app.bsky.embed.record#view"
+    },
+    "bookmarkCount": 3,
+    "replyCount": 1,
+    "repostCount": 10,
+    "likeCount": 41,
+    "quoteCount": 2,
+    "indexedAt": "2026-10-16T18:25:11.160Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 7
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:mray7klv7leelnlkynuk57up/app.bsky.feed.post/3mxwy5h55qc2u",
+    "cid": "bafyreidtezgi7srg6ozyrw4r3iiurozazzkqsrm6cxzgapg73j5tn4c5sy",
+    "author": {
+     "did": "did:plc:mray7klv7leelnlkynuk57up",
+     "handle": "stellaathena.bsky.social",
+     "displayName": "Stella Biderman",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-04T17:56:31.752Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-10-15T21:14:00.971Z",
+     "langs": [
+      "en"
+     ],
+     "text": "Everyone else claims that AI is massively accelerating their research and meanwhile my ChatGPT can’t update a spreadsheet without both breaking the formatting and changing the convention I had been using for the past 100+ rows.\n\nHow do I get the version that works :("
+    },
+    "bookmarkCount": 0,
+    "replyCount": 1,
+    "repostCount": 0,
+    "likeCount": 3,
+    "quoteCount": 0,
+    "indexedAt": "2026-10-15T21:14:01.254Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 2
+  }
+ ],
+ "cursor": "2026-06-19T10:19:50.211Z"
+}

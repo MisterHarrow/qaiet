@@ -1,0 +1,495 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:axkqsfza7eh2v3kabrip7vvg/app.bsky.feed.post/3n2qx6cbenk2g",
+    "cid": "bafyreie4qg5ausrq5hvqmsgzfuvarg6ldyulkf6gkma63l7vap7hxqldsa",
+    "author": {
+     "did": "did:plc:axkqsfza7eh2v3kabrip7vvg",
+     "handle": "rooseveltinstitute.org",
+     "displayName": "Roosevelt Institute",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-07-05T17:56:20.428Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mbz6ik33sd2q",
+        "isValid": true,
+        "createdAt": "2026-01-09T18:58:38.922Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-20T15:56:12.133Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "Through original interviews with 29 “gig” nurses and nursing assistants, Katie J. Wells and Funda Ustek Spilda find that on-demand nursing companies encourage nurses to work for less pay, fail to prov...",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreicnqhjtfop3vma5q6nrlwwadnncrhxzb4cjmvmhrb54ymb4othv5m"
+        },
+        "mimeType": "image/jpeg",
+        "size": 334808
+       },
+       "title": "Uber for Nursing: How an AI-Powered Gig Model Is Threatening Health Care - Roosevelt Institute",
+       "uri": "https://rooseveltinstitute.org/publications/uber-for-nursing/"
+      }
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:7jzrbduixf2frnb6cde544cm"
+        }
+       ],
+       "index": {
+        "byteEnd": 215,
+        "byteStart": 191
+       }
+      },
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:ttfnjf4pyq7at3uluybfidc7"
+        }
+       ],
+       "index": {
+        "byteEnd": 240,
+        "byteStart": 217
+       }
+      },
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:ploub7siu45j4aazlumn6hfz"
+        }
+       ],
+       "index": {
+        "byteEnd": 285,
+        "byteStart": 258
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "Interviews with 29 gig nurses show these apps push pay down, put nurses in unfamiliar facilities with no onboarding, and lobby to dodge labor law.\n\nCatch up on the full research, courtesy of @katiejwells.bsky.social, @fundaustek.bsky.social, and the team at @ainowinstitute.bsky.social:"
+    },
+    "embed": {
+     "external": {
+      "uri": "https://rooseveltinstitute.org/publications/uber-for-nursing/",
+      "title": "Uber for Nursing: How an AI-Powered Gig Model Is Threatening Health Care - Roosevelt Institute",
+      "description": "Through original interviews with 29 “gig” nurses and nursing assistants, Katie J. Wells and Funda Ustek Spilda find that on-demand nursing companies encourage nurses to work for less pay, fail to prov...",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:axkqsfza7eh2v3kabrip7vvg/bafkreicnqhjtfop3vma5q6nrlwwadnncrhxzb4cjmvmhrb54ymb4othv5m"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 2,
+    "replyCount": 0,
+    "repostCount": 6,
+    "likeCount": 10,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-20T15:56:12.843Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:ploub7siu45j4aazlumn6hfz",
+     "handle": "ainowinstitute.bsky.social",
+     "displayName": "AI Now Institute",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-07-12T16:58:22.424Z"
+    },
+    "uri": "at://did:plc:ploub7siu45j4aazlumn6hfz/app.bsky.feed.repost/3n2r2kufda32m",
+    "cid": "bafyreiakfwodjrxcnbddb5u4rowakyrba24zejhkuf7bpvjyovqwr7c2im",
+    "indexedAt": "2026-11-20T16:56:55.151Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   },
+   "opThreadPostIndex": 2,
+   "opThreadPostCount": 2
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:ploub7siu45j4aazlumn6hfz/app.bsky.feed.post/3n2ou4vbyck2k",
+    "cid": "bafyreihcs7hfw3ban2oi5ghdvecfidjf33vz7ywskq5dedngr3zp2gmq5m",
+    "author": {
+     "did": "did:plc:ploub7siu45j4aazlumn6hfz",
+     "handle": "ainowinstitute.bsky.social",
+     "displayName": "AI Now Institute",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-07-12T16:58:22.424Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-19T19:56:24.265Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "Introduction “Our mission is to build AI responsibly to benefit humanity” – Google DeepMind “Our primary ﬁduciary duty is to humanity” – OpenAI  “The specific public benefit that the Corporation will ...",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreicissd7ic47g4zgle6aibhgoqkureaqie4qffoz7sggj7p2onrvfi"
+        },
+        "mimeType": "image/jpeg",
+        "size": 747308
+       },
+       "title": "Public Good or Private Gain? - AI Now Institute",
+       "uri": "https://ainowinstitute.org/reports/public-good-private-gain"
+      }
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:ylcuezlnuualgqvjabt3mbdq"
+        }
+       ],
+       "index": {
+        "byteEnd": 197,
+        "byteStart": 175
+       }
+      },
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://ainowinstitute.org/reports/public-good-private-gain"
+        }
+       ],
+       "index": {
+        "byteEnd": 294,
+        "byteStart": 260
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "Anthropic IPOs today as a public benefit corp, a bespoke corporate structure designed, in theory, to rein in corporate behavior. A new guest report from Professor of Law & AI @maroussia.bsky.social interrogates this structure against Anthropic's track record: ainowinstitute.org/reports/publ..."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://ainowinstitute.org/reports/public-good-private-gain",
+      "title": "Public Good or Private Gain? - AI Now Institute",
+      "description": "Introduction “Our mission is to build AI responsibly to benefit humanity” – Google DeepMind “Our primary ﬁduciary duty is to humanity” – OpenAI  “The specific public benefit that the Corporation will ...",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ploub7siu45j4aazlumn6hfz/bafkreicissd7ic47g4zgle6aibhgoqkureaqie4qffoz7sggj7p2onrvfi"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 4,
+    "replyCount": 0,
+    "repostCount": 2,
+    "likeCount": 13,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-19T19:56:25.250Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:ylcuezlnuualgqvjabt3mbdq/app.bsky.feed.post/3n2opkpkt2c2i",
+    "cid": "bafyreiezze7r73nwxchgqe4cqeedwjju6twvvygfimiqgaumhl5p3x2osi",
+    "author": {
+     "did": "did:plc:ylcuezlnuualgqvjabt3mbdq",
+     "handle": "maroussia.bsky.social",
+     "displayName": "Maroussia Lévesque",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-16T13:25:50.834Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-19T18:34:39.317Z",
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:ploub7siu45j4aazlumn6hfz"
+        }
+       ],
+       "index": {
+        "byteEnd": 66,
+        "byteStart": 39
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "What started as a side quest is now an @ainowinstitute.bsky.social guest report covering:\n1- How do AI companies actually work, including Anthropic’s mechanics as detailed in IPO filings. \n2- Whether their conduct varies on regulation, safety and military contracts\n[...]"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 1,
+    "repostCount": 3,
+    "likeCount": 3,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-19T18:34:38.560Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:ploub7siu45j4aazlumn6hfz",
+     "handle": "ainowinstitute.bsky.social",
+     "displayName": "AI Now Institute",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-07-12T16:58:22.424Z"
+    },
+    "uri": "at://did:plc:ploub7siu45j4aazlumn6hfz/app.bsky.feed.repost/3n2oq5y5hke2i",
+    "cid": "bafyreicuywmfwi43x5g2dpt5dsglrffezosrwzbwgvlwcwa736bf2ho7wa",
+    "indexedAt": "2026-11-19T18:45:25.954Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   },
+   "opThreadPostIndex": 3,
+   "opThreadPostCount": 7
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:ploub7siu45j4aazlumn6hfz/app.bsky.feed.post/3n2om5pk2ps25",
+    "cid": "bafyreid4ykszquhrni7f73mk6flavhw32wqt2pu2k6nxf5xtjigt4igzfa",
+    "author": {
+     "did": "did:plc:ploub7siu45j4aazlumn6hfz",
+     "handle": "ainowinstitute.bsky.social",
+     "displayName": "AI Now Institute",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-07-12T16:58:22.424Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-19T17:33:41.858Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "Introduction “Our mission is to build AI responsibly to benefit humanity” – Google DeepMind “Our primary ﬁduciary duty is to humanity” – OpenAI  “The specific public benefit that the Corporation will ...",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreicissd7ic47g4zgle6aibhgoqkureaqie4qffoz7sggj7p2onrvfi"
+        },
+        "mimeType": "image/jpeg",
+        "size": 747308
+       },
+       "title": "Public Good or Private Gain? - AI Now Institute",
+       "uri": "https://ainowinstitute.org/reports/public-good-private-gain?share"
+      }
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:ylcuezlnuualgqvjabt3mbdq"
+        }
+       ],
+       "index": {
+        "byteEnd": 138,
+        "byteStart": 116
+       }
+      },
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://ainowinstitute.org/reports/public-good-private-gain"
+        }
+       ],
+       "index": {
+        "byteEnd": 295,
+        "byteStart": 261
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "NEW: In a guest report examining the corporate structure and conduct of leading AI companies, Professor of Law & AI @maroussia.bsky.social examines Google DeepMind, OpenAI and Anthropic and how their missions are challenged in pursuit of investment. Read more: ainowinstitute.org/reports/publ..."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://ainowinstitute.org/reports/public-good-private-gain?share",
+      "title": "Public Good or Private Gain? - AI Now Institute",
+      "description": "Introduction “Our mission is to build AI responsibly to benefit humanity” – Google DeepMind “Our primary ﬁduciary duty is to humanity” – OpenAI  “The specific public benefit that the Corporation will ...",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ploub7siu45j4aazlumn6hfz/bafkreicissd7ic47g4zgle6aibhgoqkureaqie4qffoz7sggj7p2onrvfi"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 1,
+    "repostCount": 2,
+    "likeCount": 10,
+    "quoteCount": 1,
+    "indexedAt": "2026-11-19T17:33:44.146Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:ploub7siu45j4aazlumn6hfz/app.bsky.feed.post/3n2mcy2xxhc23",
+    "cid": "bafyreicdj2uhncyuihrc7lf5yzplqordlyjb3wlshnkedgopm4xhis27ia",
+    "author": {
+     "did": "did:plc:ploub7siu45j4aazlumn6hfz",
+     "handle": "ainowinstitute.bsky.social",
+     "displayName": "AI Now Institute",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-07-12T16:58:22.424Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-18T19:44:09.368Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "Nurses who took part in a new report on artificial intelligence in hospitals say a scheduling program has put them on six shifts in a row, ignored their requests for days off and, in one case, severel...",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreigdexuvix57qkmpoeloo5afq65n2qpasb6iaqmzylu7bngedr5gxe"
+        },
+        "mimeType": "image/jpeg",
+        "size": 434792
+       },
+       "title": "Union Nurses Tell Researchers That AI Can Make Their Jobs Harder",
+       "uri": "https://www.bloomberg.com/news/articles/2026-11-18/union-nurses-tell-researchers-that-ai-can-make-their-jobs-harder"
+      }
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:7jzrbduixf2frnb6cde544cm"
+        }
+       ],
+       "index": {
+        "byteEnd": 126,
+        "byteStart": 102
+       }
+      },
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:p2gx4zjzdv3t55mll7iiuov3"
+        }
+       ],
+       "index": {
+        "byteEnd": 150,
+        "byteStart": 132
+       }
+      },
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:uewxgchsjy4kmtu7dcxa77us"
+        }
+       ],
+       "index": {
+        "byteEnd": 167,
+        "byteStart": 153
+       }
+      },
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://www.bloomberg.com/news/articles/2026-11-18/union-nurses-tell-researchers-that-ai-can-make-their-jobs-harder"
+        }
+       ],
+       "index": {
+        "byteEnd": 299,
+        "byteStart": 266
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "AI is being sold to \"save healthcare\" but may in fact be degrading healthcare workers' jobs, AI Now's @katiejwells.bsky.social told @davey.bsky.social / @bloomberg.com. Nurses are expected to train, refine & ultimately bear the costs of AI tools they didn't choose:\nwww.bloomberg.com/news/article..."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://www.bloomberg.com/news/articles/2026-11-18/union-nurses-tell-researchers-that-ai-can-make-their-jobs-harder",
+      "title": "Union Nurses Tell Researchers That AI Can Make Their Jobs Harder",
+      "description": "Nurses who took part in a new report on artificial intelligence in hospitals say a scheduling program has put them on six shifts in a row, ignored their requests for days off and, in one case, severel...",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ploub7siu45j4aazlumn6hfz/bafkreigdexuvix57qkmpoeloo5afq65n2qpasb6iaqmzylu7bngedr5gxe"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 5,
+    "replyCount": 1,
+    "repostCount": 9,
+    "likeCount": 16,
+    "quoteCount": 2,
+    "indexedAt": "2026-11-18T19:44:11.343Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 2
+  }
+ ],
+ "cursor": "2026-10-27T17:06:30.872Z"
+}

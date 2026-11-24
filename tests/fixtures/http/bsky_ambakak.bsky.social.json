@@ -1,0 +1,555 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:32lvgu3krzhhw3h6k3pme72r/app.bsky.feed.post/3n27ld23sjc2u",
+    "cid": "bafyreiajp4roczp4glp2tpi7zasetyp7flquhtradd5inouxo35azokv6m",
+    "author": {
+     "did": "did:plc:32lvgu3krzhhw3h6k3pme72r",
+     "handle": "alexisgoldstein.bsky.social",
+     "displayName": "Alexis Goldstein",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2025-01-06T06:34:21.943Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-13T18:08:50.878Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "The AI Now Institute has released a statement outlining concerns with the Bipartisan American Affordability and Jobs Act (BAAJA), which serves as a backdoor bailout of the AI industry. The statement’s...",
+       "title": "AI Now Statement on the Bipartisan American Affordability and Jobs Act (BAAJA) to US Congress - AI Now Institute",
+       "uri": "https://ainowinstitute.org/news/announcement/ai-now-statement-on-the-bipartisan-american-affordability-and-jobs-act-baaja-to-us-congress"
+      }
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:ploub7siu45j4aazlumn6hfz"
+        }
+       ],
+       "index": {
+        "byteEnd": 47,
+        "byteStart": 20
+       }
+      },
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#tag",
+         "tag": "BAAJA"
+        }
+       ],
+       "index": {
+        "byteEnd": 66,
+        "byteStart": 60
+       }
+      },
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://ainowinstitute.org/news/announcement/ai-now-statement-on-the-bipartisan-american-affordability-and-jobs-act-baaja-to-us-congress"
+        }
+       ],
+       "index": {
+        "byteEnd": 160,
+        "byteStart": 126
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "Urgent warning from @ainowinstitute.bsky.social: a vote for #BAAJA is a vote for a “backdoor bailout” of the AI industry: ainowinstitute.org/news/announc..."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://ainowinstitute.org/news/announcement/ai-now-statement-on-the-bipartisan-american-affordability-and-jobs-act-baaja-to-us-congress",
+      "title": "AI Now Statement on the Bipartisan American Affordability and Jobs Act (BAAJA) to US Congress - AI Now Institute",
+      "description": "The AI Now Institute has released a statement outlining concerns with the Bipartisan American Affordability and Jobs Act (BAAJA), which serves as a backdoor bailout of the AI industry. The statement’s..."
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 3,
+    "replyCount": 0,
+    "repostCount": 15,
+    "likeCount": 22,
+    "quoteCount": 1,
+    "indexedAt": "2026-11-13T18:08:51.685Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:tpuat3ljcylhre4p7ioud2px",
+     "handle": "ambakak.bsky.social",
+     "displayName": "Amba Kak",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-07-01T20:55:59.434Z"
+    },
+    "uri": "at://did:plc:tpuat3ljcylhre4p7ioud2px/app.bsky.feed.repost/3n27vcfpodh2y",
+    "cid": "bafyreigyuwjhy2ceogd4yeuimgoaqresyyw6udd2lksmfamhxlhmx5626y",
+    "indexedAt": "2026-11-13T21:07:27.172Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:ploub7siu45j4aazlumn6hfz/app.bsky.feed.post/3n27p7s3wzc2v",
+    "cid": "bafyreihyzs2teipyimuznpkq35umed5qthbpsjgy5k5b67lz6mz6ojykre",
+    "author": {
+     "did": "did:plc:ploub7siu45j4aazlumn6hfz",
+     "handle": "ainowinstitute.bsky.social",
+     "displayName": "AI Now Institute",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-07-12T16:58:22.424Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-13T19:18:36.799Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "",
+        "aspectRatio": {
+         "height": 3604,
+         "width": 4000
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreif5yrrspkrknmpm2ntzov64sudgm5cnhpvwxb5pspwd5xiuyhrjgq"
+         },
+         "mimeType": "image/jpeg",
+         "size": 1826101
+        }
+       }
+      ]
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "BAAJA is a backdoor bailout of the AI industry and would strip communities of tools to check Big Tech’s fast-tracking of data centers. Congress can do Silicon Valley’s bidding or stand with communities to shape their own future. Our statement:"
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ploub7siu45j4aazlumn6hfz/bafkreif5yrrspkrknmpm2ntzov64sudgm5cnhpvwxb5pspwd5xiuyhrjgq",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:ploub7siu45j4aazlumn6hfz/bafkreif5yrrspkrknmpm2ntzov64sudgm5cnhpvwxb5pspwd5xiuyhrjgq",
+       "alt": "",
+       "aspectRatio": {
+        "height": 3604,
+        "width": 4000
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 14,
+    "replyCount": 6,
+    "repostCount": 120,
+    "likeCount": 191,
+    "quoteCount": 19,
+    "indexedAt": "2026-11-13T19:18:55.379Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:tpuat3ljcylhre4p7ioud2px",
+     "handle": "ambakak.bsky.social",
+     "displayName": "Amba Kak",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-07-01T20:55:59.434Z"
+    },
+    "uri": "at://did:plc:tpuat3ljcylhre4p7ioud2px/app.bsky.feed.repost/3n27pelwcxn2x",
+    "cid": "bafyreialx4ewlptg5qzqsondjkbz7hv3uklsnjc7sykfowfglyycsuonlq",
+    "indexedAt": "2026-11-13T19:21:18.372Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 2
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:tpuat3ljcylhre4p7ioud2px/app.bsky.feed.post/3myah75n5oc2y",
+    "cid": "bafyreia5morojrcrwvi52yhvsvgj5ddnkbthfp6z42qeqdszgi2cnqvgne",
+    "author": {
+     "did": "did:plc:tpuat3ljcylhre4p7ioud2px",
+     "handle": "ambakak.bsky.social",
+     "displayName": "Amba Kak",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-07-01T20:55:59.434Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-10-19T15:37:21.886Z",
+     "embed": {
+      "$type": "app.bsky.embed.record",
+      "record": {
+       "cid": "bafyreiftxn4lnn7gphuvoqtm6723aqrhzu35lnsaw5j6ac7ny7zzwgz7dm",
+       "uri": "at://did:plc:ploub7siu45j4aazlumn6hfz/app.bsky.feed.post/3myagod4lc22m"
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "Spread the word to all in person attendees 📣"
+    },
+    "embed": {
+     "record": {
+      "uri": "at://did:plc:ploub7siu45j4aazlumn6hfz/app.bsky.feed.post/3myagod4lc22m",
+      "cid": "bafyreiftxn4lnn7gphuvoqtm6723aqrhzu35lnsaw5j6ac7ny7zzwgz7dm",
+      "author": {
+       "did": "did:plc:ploub7siu45j4aazlumn6hfz",
+       "handle": "ainowinstitute.bsky.social",
+       "displayName": "AI Now Institute",
+       "associated": {
+        "chat": {
+         "allowIncoming": "none"
+        },
+        "activitySubscription": {
+         "allowSubscriptions": "followers"
+        }
+       },
+       "createdAt": "2023-07-12T16:58:22.424Z"
+      },
+      "value": {
+       "$type": "app.bsky.feed.post",
+       "createdAt": "2026-10-19T15:27:33.816Z",
+       "embed": {
+        "$type": "app.bsky.embed.images",
+        "images": [
+         {
+          "alt": "Maroon background with white text: The People's AI Assembly. Important information for tonight's event: Ticket DOES NOT guarantee entry. Seating is first come, first serve. We are expecting full capacityDoors open at 6pm EST. We strongly recommend arriving at this time. ",
+          "aspectRatio": {
+           "height": 675,
+           "width": 1200
+          },
+          "image": {
+           "$type": "blob",
+           "ref": {
+            "$link": "bafkreiexsbsdl6sdp6z2ula26vnuud3fxnmskydp4y2nwvhw52karbxuce"
+           },
+           "mimeType": "image/jpeg",
+           "size": 423948
+          }
+         }
+        ]
+       },
+       "langs": [
+        "en"
+       ],
+       "text": "If you registered to attend in person, please review this important information for Webster Hall:\n\n▪️ Ticket DOES NOT guarantee entry\n▪️ Seating is first come, first serve\n▪️ We are expecting full capacity\n▪️ Doors open at 6pm EST. We strongly recommend arriving at this time"
+      },
+      "likeCount": 1,
+      "replyCount": 0,
+      "repostCount": 2,
+      "quoteCount": 1,
+      "opThreadPostIndex": 2,
+      "opThreadPostCount": 2,
+      "indexedAt": "2026-10-19T15:28:01.157Z",
+      "embeds": [
+       {
+        "images": [
+         {
+          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ploub7siu45j4aazlumn6hfz/bafkreiexsbsdl6sdp6z2ula26vnuud3fxnmskydp4y2nwvhw52karbxuce",
+          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:ploub7siu45j4aazlumn6hfz/bafkreiexsbsdl6sdp6z2ula26vnuud3fxnmskydp4y2nwvhw52karbxuce",
+          "alt": "Maroon background with white text: The People's AI Assembly. Important information for tonight's event: Ticket DOES NOT guarantee entry. Seating is first come, first serve. We are expecting full capacityDoors open at 6pm EST. We strongly recommend arriving at this time. ",
+          "aspectRatio": {
+           "height": 675,
+           "width": 1200
+          }
+         }
+        ],
+        "$type": "app.bsky.embed.images#view"
+       }
+      ],
+      "$type": "app.bsky.embed.record#viewRecord"
+     },
+     "$type": "app.bsky.embed.record#view"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 1,
+    "likeCount": 4,
+    "quoteCount": 0,
+    "indexedAt": "2026-10-19T15:37:11.756Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:ploub7siu45j4aazlumn6hfz/app.bsky.feed.post/3myagod4lc22m",
+    "cid": "bafyreiftxn4lnn7gphuvoqtm6723aqrhzu35lnsaw5j6ac7ny7zzwgz7dm",
+    "author": {
+     "did": "did:plc:ploub7siu45j4aazlumn6hfz",
+     "handle": "ainowinstitute.bsky.social",
+     "displayName": "AI Now Institute",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-07-12T16:58:22.424Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-10-19T15:27:33.816Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "Maroon background with white text: The People's AI Assembly. Important information for tonight's event: Ticket DOES NOT guarantee entry. Seating is first come, first serve. We are expecting full capacityDoors open at 6pm EST. We strongly recommend arriving at this time. ",
+        "aspectRatio": {
+         "height": 675,
+         "width": 1200
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreiexsbsdl6sdp6z2ula26vnuud3fxnmskydp4y2nwvhw52karbxuce"
+         },
+         "mimeType": "image/jpeg",
+         "size": 423948
+        }
+       }
+      ]
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "If you registered to attend in person, please review this important information for Webster Hall:\n\n▪️ Ticket DOES NOT guarantee entry\n▪️ Seating is first come, first serve\n▪️ We are expecting full capacity\n▪️ Doors open at 6pm EST. We strongly recommend arriving at this time"
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ploub7siu45j4aazlumn6hfz/bafkreiexsbsdl6sdp6z2ula26vnuud3fxnmskydp4y2nwvhw52karbxuce",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:ploub7siu45j4aazlumn6hfz/bafkreiexsbsdl6sdp6z2ula26vnuud3fxnmskydp4y2nwvhw52karbxuce",
+       "alt": "Maroon background with white text: The People's AI Assembly. Important information for tonight's event: Ticket DOES NOT guarantee entry. Seating is first come, first serve. We are expecting full capacityDoors open at 6pm EST. We strongly recommend arriving at this time. ",
+       "aspectRatio": {
+        "height": 675,
+        "width": 1200
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 2,
+    "likeCount": 1,
+    "quoteCount": 1,
+    "indexedAt": "2026-10-19T15:28:01.157Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:tpuat3ljcylhre4p7ioud2px",
+     "handle": "ambakak.bsky.social",
+     "displayName": "Amba Kak",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-07-01T20:55:59.434Z"
+    },
+    "uri": "at://did:plc:tpuat3ljcylhre4p7ioud2px/app.bsky.feed.repost/3myah3c3ig32p",
+    "cid": "bafyreia7cse52vdp6dts5jdk5grkvm74mpemcnwys3ac5arfqgrw2digsy",
+    "indexedAt": "2026-10-19T15:35:12.464Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   },
+   "opThreadPostIndex": 2,
+   "opThreadPostCount": 2
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:jwiu7iyac6pi3vzktwjxtkv2/app.bsky.feed.post/3mxyuzja2ss2u",
+    "cid": "bafyreibher3jgiz22eh6uzoszfndakj3ath54ttbfucb2moacqzhiqn55q",
+    "author": {
+     "did": "did:plc:jwiu7iyac6pi3vzktwjxtkv2",
+     "handle": "alondra.bsky.social",
+     "displayName": "Alondra Nelson",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "mutuals"
+      }
+     },
+     "createdAt": "2023-05-02T03:31:06.071Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3m6hcnsmvmn2n",
+        "isValid": true,
+        "createdAt": "2025-11-25T12:09:40.527Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-10-16T15:23:27.199Z",
+     "embed": {
+      "$type": "app.bsky.embed.record",
+      "record": {
+       "cid": "bafyreidu5n2zvyw4rb36u4pt75glyqiukk5xgktcitipzhwmllqd4rv2km",
+       "uri": "at://did:plc:26hkfmtr7jrchexamh7hk6rz/app.bsky.feed.post/3mxwr63e2ok2y"
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "Yes, this.\n\n“While there is so much debate about what AI can and cannot do for humans, there is too little talk about what it’s doing to humans.”"
+    },
+    "embed": {
+     "record": {
+      "uri": "at://did:plc:26hkfmtr7jrchexamh7hk6rz/app.bsky.feed.post/3mxwr63e2ok2y",
+      "cid": "bafyreidu5n2zvyw4rb36u4pt75glyqiukk5xgktcitipzhwmllqd4rv2km",
+      "author": {
+       "did": "did:plc:26hkfmtr7jrchexamh7hk6rz",
+       "handle": "abeba.blacksky.app",
+       "displayName": "Dr Abeba Birhane",
+       "associated": {
+        "chat": {
+         "allowIncoming": "none",
+         "allowGroupInvites": "none"
+        },
+        "activitySubscription": {
+         "allowSubscriptions": "followers"
+        }
+       },
+       "createdAt": "2023-05-03T17:13:19.413Z",
+       "verification": {
+        "verifications": [
+         {
+          "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+          "issuerDisplayName": "Bluesky",
+          "issuerHandle": "bsky.app",
+          "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mma4urytbz2w",
+          "isValid": true,
+          "createdAt": "2026-05-19T19:30:16.838Z"
+         }
+        ],
+        "verifiedStatus": "valid",
+        "trustedVerifierStatus": "none"
+       }
+      },
+      "value": {
+       "$type": "app.bsky.feed.post",
+       "createdAt": "2026-10-15T19:09:05.978Z",
+       "embed": {
+        "$type": "app.bsky.embed.external",
+        "external": {
+         "description": "Artificial intelligence is capitalism’s final destination",
+         "thumb": {
+          "$type": "blob",
+          "ref": {
+           "$link": "bafkreihkwuakovjvnyvxfrx4veo75mvvkopj6l4lzoizdzvi6tbqfjz3yq"
+          },
+          "mimeType": "image/jpeg",
+          "size": 344159
+         },
+         "title": "Apocalypse Now and Then • EQUATOR",
+         "uri": "https://www.equator.org/articles/arundhati-roy-artificial-intelligence"
+        }
+       },
+       "facets": [
+        {
+         "features": [
+          {
+           "$type": "app.bsky.richtext.facet#link",
+           "uri": "https://www.equator.org/articles/arundhati-roy-artificial-intelligence"
+          }
+         ],
+         "index": {
+          "byteEnd": 110,
+          "byteStart": 79
+         }
+        }
+       ],
+       "langs": [
+        "en"
+       ],
+       "text": "Artificial intelligence is capitalism’s final destination -- Arundhati Roy\n\n www.equator.org/articles/aru... \n\n🧵"
+      },
+      "likeCount": 358,
+      "replyCount": 9,
+      "repostCount": 183,
+      "quoteCount": 40,
+      "opThreadPostIndex": 1,
+      "opThreadPostCount": 37,
+      "indexedAt": "2026-10-15T19:09:15.664Z",
+      "embeds": [
+       {
+        "external": {
+         "uri": "https://www.equator.org/articles/arundhati-roy-artificial-intelligence",
+         "title": "Apocalypse Now and Then • EQUATOR",
+         "description": "Artificial intelligence is capitalism’s final destination",
+         "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:26hkfmtr7jrchexamh7hk6rz/bafkreihkwuakovjvnyvxfrx4veo75mvvkopj6l4lzoizdzvi6tbqfjz3yq"
+        },
+        "$type": "app.bsky.embed.external#view"
+       }
+      ],
+      "$type": "app.bsky.embed.record#viewRecord"
+     },
+     "$type": "app.bsky.embed.record#view"
+    },
+    "bookmarkCount": 10,
+    "replyCount": 0,
+    "repostCount": 26,
+    "likeCount": 65,
+    "quoteCount": 1,
+    "indexedAt": "2026-10-16T15:23:27.452Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:tpuat3ljcylhre4p7ioud2px",
+     "handle": "ambakak.bsky.social",
+     "displayName": "Amba Kak",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-07-01T20:55:59.434Z"
+    },
+    "uri": "at://did:plc:tpuat3ljcylhre4p7ioud2px/app.bsky.feed.repost/3mxyxy3jivu2n",
+    "cid": "bafyreibtrstrle253m4ovdv4ykdea6c6yw4evjeohmopdp6sovxuaxgh2q",
+    "indexedAt": "2026-10-16T16:16:20.654Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  }
+ ],
+ "cursor": "2025-11-13T15:00:06.842Z"
+}

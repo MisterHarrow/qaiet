@@ -1,0 +1,7 @@
+<html><head>
+<title>Anthropic releases Claude Fable and Mythos 5.2 shortly before record-breaking IPO</title>
+<meta name="description" content="Anthropic updated its most capable public model and removed safeguards for its private twin, opening Claude Mythos to more organizations that..."/>
+<meta property="og:title" content="Anthropic releases Claude Fable and Mythos 5.2 shortly before record-breaking IPO"/>
+<meta property="og:description" content="Anthropic updated its most capable public model and removed safeguards for its private twin, opening Claude Mythos to more organizations that..."/>
+<meta property="article:published_time" content="2026-11-20T08:05:00.000-08:00"/>
+</head></html>

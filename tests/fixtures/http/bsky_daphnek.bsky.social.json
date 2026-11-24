@@ -1,0 +1,516 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:bus26ndf2mk5zvitmmovvbh3/app.bsky.feed.post/3n2ugihicns2u",
+    "cid": "bafyreicruigrnmh5rfq5fbhqmniij7ryw2qbagp3q2sfp5tvrtqdg7xy24",
+    "author": {
+     "did": "did:plc:bus26ndf2mk5zvitmmovvbh3",
+     "handle": "hbwhbwhbw.bsky.social",
+     "displayName": "Hannah BW",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-06-08T01:57:46.503Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-22T01:08:18.490Z",
+     "embed": {
+      "$type": "app.bsky.embed.record",
+      "record": {
+       "cid": "bafyreiabfkwe2znkwvkmzqiiztxw4wcugorr3zt257omm2xauxlg2bmutm",
+       "uri": "at://did:plc:nsttbhhihov4y5yejsri2zlr/app.bsky.feed.post/3n2tfqom5g22v"
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "another for the jawboning files"
+    },
+    "embed": {
+     "record": {
+      "uri": "at://did:plc:nsttbhhihov4y5yejsri2zlr/app.bsky.feed.post/3n2tfqom5g22v",
+      "cid": "bafyreiabfkwe2znkwvkmzqiiztxw4wcugorr3zt257omm2xauxlg2bmutm",
+      "author": {
+       "did": "did:plc:nsttbhhihov4y5yejsri2zlr",
+       "handle": "nancylevinestearns.bsky.social",
+       "displayName": "Nancy Levine Stearns",
+       "pronouns": "she/her",
+       "associated": {
+        "activitySubscription": {
+         "allowSubscriptions": "followers"
+        }
+       },
+       "createdAt": "2024-10-24T15:10:04.312Z",
+       "verification": {
+        "verifications": [
+         {
+          "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+          "issuerDisplayName": "Bluesky",
+          "issuerHandle": "bsky.app",
+          "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3m6mpaxlkqs2r",
+          "isValid": true,
+          "createdAt": "2025-11-27T15:38:26.845Z"
+         }
+        ],
+        "verifiedStatus": "valid",
+        "trustedVerifierStatus": "none"
+       }
+      },
+      "value": {
+       "$type": "app.bsky.feed.post",
+       "createdAt": "2026-11-21T15:22:20.912Z",
+       "embed": {
+        "$type": "app.bsky.embed.external",
+        "external": {
+         "description": "So here is what I’m asking of you: Consider whether the financial institution you trust with your dollars aligns with your values.",
+         "thumb": {
+          "$type": "blob",
+          "ref": {
+           "$link": "bafkreifujzdbc5xldizhuviwm3urpqgprk62ivvgfeg6muoa3276ybypxy"
+          },
+          "mimeType": "image/jpeg",
+          "size": 839159
+         },
+         "title": "SPLC president and CEO urges donors to choose whose side their money is on",
+         "uri": "https://www.splcenter.org/resources/hopewatch/president-ceo-donor-advised-funds/"
+        }
+       },
+       "facets": [
+        {
+         "features": [
+          {
+           "$type": "app.bsky.richtext.facet#link",
+           "uri": "https://www.splcenter.org/resources/hopewatch/president-ceo-donor-advised-funds/"
+          }
+         ],
+         "index": {
+          "byteEnd": 296,
+          "byteStart": 263
+         }
+        }
+       ],
+       "langs": [
+        "en"
+       ],
+       "text": "Southern Poverty Law Center has been deplatformed for charitable donations by nonprofit arms of Fidelity, Vanguard, and Schwab -- after Trump's DoJ targeted SPLC.\n\nSPLC CEO: \"It’s past time to hold these financial institutions accountable,\" wrote Mr. Haygood.\n\nwww.splcenter.org/resources/ho..."
+      },
+      "likeCount": 228,
+      "replyCount": 8,
+      "repostCount": 112,
+      "quoteCount": 4,
+      "opThreadPostIndex": 1,
+      "opThreadPostCount": 2,
+      "indexedAt": "2026-11-21T15:22:22.841Z",
+      "embeds": [
+       {
+        "external": {
+         "uri": "https://www.splcenter.org/resources/hopewatch/president-ceo-donor-advised-funds/",
+         "title": "SPLC president and CEO urges donors to choose whose side their money is on",
+         "description": "So here is what I’m asking of you: Consider whether the financial institution you trust with your dollars aligns with your values.",
+         "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:nsttbhhihov4y5yejsri2zlr/bafkreifujzdbc5xldizhuviwm3urpqgprk62ivvgfeg6muoa3276ybypxy"
+        },
+        "$type": "app.bsky.embed.external#view"
+       }
+      ],
+      "$type": "app.bsky.embed.record#viewRecord"
+     },
+     "$type": "app.bsky.embed.record#view"
+    },
+    "bookmarkCount": 4,
+    "replyCount": 0,
+    "repostCount": 6,
+    "likeCount": 16,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-22T01:08:18.949Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:7zwztfs4yywggefayx7oid35",
+     "handle": "daphnek.bsky.social",
+     "displayName": "Daphne Keller",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-01T22:04:17.591Z"
+    },
+    "uri": "at://did:plc:7zwztfs4yywggefayx7oid35/app.bsky.feed.repost/3n2vvqa7mnj2q",
+    "cid": "bafyreibrm4eusv4qdbauezrkkljolf7xguxwg3mrzfgwckj7rwb7xsmgvy",
+    "indexedAt": "2026-11-22T15:13:45.342Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:t4ajdi5kxxppgki47pgefvs3/app.bsky.feed.post/3n2uqvovsfs25",
+    "cid": "bafyreihipylqc234mzzjsd4nfvdhhbqjbxoy2cwui3sjsctwycjs2xhbga",
+    "author": {
+     "did": "did:plc:t4ajdi5kxxppgki47pgefvs3",
+     "handle": "orinkerr.bsky.social",
+     "displayName": "Orin Kerr",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-11-13T05:36:06.189Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mk66ctbstj23",
+        "isValid": true,
+        "createdAt": "2026-04-23T14:00:19.011Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-22T04:14:39.898Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "",
+        "aspectRatio": {
+         "height": 1200,
+         "width": 988
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreidjpzs3ggbd7zulel2drruu6hvalbi3cl4ug33pui2ux7uiftgto4"
+         },
+         "mimeType": "image/jpeg",
+         "size": 679030
+        }
+       },
+       {
+        "alt": "",
+        "aspectRatio": {
+         "height": 1034,
+         "width": 972
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreibo7f5riodpzuk2i42bhknvlmkyzuyy6pc5dfzop7g76f4523u5ne"
+         },
+         "mimeType": "image/jpeg",
+         "size": 625036
+        }
+       }
+      ]
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://coloradofoic.org/wp-content/uploads/2026/11/26.11.18-Order-Denying-Motion-to-Dismiss.pdf"
+        }
+       ],
+       "index": {
+        "byteEnd": 285,
+        "byteStart": 253
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "Colorado trial judge refuses to dismiss civil suit claiming that the existence of the Flock camera network in Boulder is a search, even if the data is never queried, under the Colorado state constitution (which is broader than the federal 4th Amend).  \ncoloradofoic.org/wp-content/u..."
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:t4ajdi5kxxppgki47pgefvs3/bafkreidjpzs3ggbd7zulel2drruu6hvalbi3cl4ug33pui2ux7uiftgto4",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:t4ajdi5kxxppgki47pgefvs3/bafkreidjpzs3ggbd7zulel2drruu6hvalbi3cl4ug33pui2ux7uiftgto4",
+       "alt": "",
+       "aspectRatio": {
+        "height": 1200,
+        "width": 988
+       }
+      },
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:t4ajdi5kxxppgki47pgefvs3/bafkreibo7f5riodpzuk2i42bhknvlmkyzuyy6pc5dfzop7g76f4523u5ne",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:t4ajdi5kxxppgki47pgefvs3/bafkreibo7f5riodpzuk2i42bhknvlmkyzuyy6pc5dfzop7g76f4523u5ne",
+       "alt": "",
+       "aspectRatio": {
+        "height": 1034,
+        "width": 972
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 13,
+    "replyCount": 5,
+    "repostCount": 70,
+    "likeCount": 260,
+    "quoteCount": 6,
+    "indexedAt": "2026-11-22T04:14:53.950Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:7zwztfs4yywggefayx7oid35",
+     "handle": "daphnek.bsky.social",
+     "displayName": "Daphne Keller",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-01T22:04:17.591Z"
+    },
+    "uri": "at://did:plc:7zwztfs4yywggefayx7oid35/app.bsky.feed.repost/3n2vvouwcky2q",
+    "cid": "bafyreie2d7v434ifugj5v5ydw2s7pybrldxviyqdnov3kyoy2lvaoyfa6e",
+    "indexedAt": "2026-11-22T15:12:59.848Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:cyddt6zzenrf2tfncggrhovi/app.bsky.feed.post/3n2e5tu6df22j",
+    "cid": "bafyreifdswg6iin6cec76jz3phhebkpfpolrwm6xhqlgl2yq6fa5m32wja",
+    "author": {
+     "did": "did:plc:cyddt6zzenrf2tfncggrhovi",
+     "handle": "theworldsgreatestwriter.com",
+     "displayName": "June Martin",
+     "pronouns": "she/her",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all",
+       "allowGroupInvites": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-06T23:54:42.854Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-15T13:51:01.404Z",
+     "langs": [
+      "en"
+     ],
+     "text": "do not quote laws to men with Tactical Katana Manganese Steel Sharp Hand Forged Samurai Sword Battle Ready $59"
+    },
+    "bookmarkCount": 12,
+    "replyCount": 2,
+    "repostCount": 201,
+    "likeCount": 1397,
+    "quoteCount": 10,
+    "indexedAt": "2026-11-15T13:51:01.953Z",
+    "threadgate": {
+     "uri": "at://did:plc:cyddt6zzenrf2tfncggrhovi/app.bsky.feed.threadgate/3n2e5tu6df22j",
+     "cid": "bafyreiezg46xv6i7bsorbbdalszlim4lqkgvy6n7llortmjdmlkcc4afle",
+     "record": {
+      "$type": "app.bsky.feed.threadgate",
+      "allow": [
+       {
+        "$type": "app.bsky.feed.threadgate#mentionRule"
+       },
+       {
+        "$type": "app.bsky.feed.threadgate#followingRule"
+       },
+       {
+        "$type": "app.bsky.feed.threadgate#followerRule"
+       }
+      ],
+      "createdAt": "2026-11-15T13:51:01.417Z",
+      "hiddenReplies": [],
+      "post": "at://did:plc:cyddt6zzenrf2tfncggrhovi/app.bsky.feed.post/3n2e5tu6df22j"
+     },
+     "lists": []
+    }
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:7zwztfs4yywggefayx7oid35",
+     "handle": "daphnek.bsky.social",
+     "displayName": "Daphne Keller",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-01T22:04:17.591Z"
+    },
+    "uri": "at://did:plc:7zwztfs4yywggefayx7oid35/app.bsky.feed.repost/3n2eoy2npg42w",
+    "cid": "bafyreiazo4e5gpfjt6w4xby2vadaj3ea7mhqhmtixrgn33lwtpuzuqqudi",
+    "indexedAt": "2026-11-15T18:57:36.153Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:a4n6zqm2ufqrdbyszo5gvgyq/app.bsky.feed.post/3n27vnvdv722j",
+    "cid": "bafyreifzpgpoppzx54hmb6vzl4hhhidcj6lhar42ipzrfb6q2fyt7pibsq",
+    "author": {
+     "did": "did:plc:a4n6zqm2ufqrdbyszo5gvgyq",
+     "handle": "esquiring.bsky.social",
+     "displayName": "a small circle of freds 🦇☠️💾✨️",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-07-15T09:06:56.472Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-13T21:13:52.415Z",
+     "langs": [
+      "en"
+     ],
+     "text": "first Outlook, now airplanes? \n\nAre no portmanteaus safe these days‽"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 2,
+    "repostCount": 5,
+    "likeCount": 17,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-13T21:13:57.076Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:7zwztfs4yywggefayx7oid35",
+     "handle": "daphnek.bsky.social",
+     "displayName": "Daphne Keller",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-01T22:04:17.591Z"
+    },
+    "uri": "at://did:plc:7zwztfs4yywggefayx7oid35/app.bsky.feed.repost/3n27w4wculz2r",
+    "cid": "bafyreifmonugfhbe7lpc7x22wdh7vscysb7abhy4mtom527ipizihoow3i",
+    "indexedAt": "2026-11-13T21:22:16.879Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:7zwztfs4yywggefayx7oid35/app.bsky.feed.post/3n22pcwt7fc2t",
+    "cid": "bafyreid46o3cqpvln375bijmsuazkaifbtfkjn4hi5gfzszqsnmlnv6kli",
+    "author": {
+     "did": "did:plc:7zwztfs4yywggefayx7oid35",
+     "handle": "daphnek.bsky.social",
+     "displayName": "Daphne Keller",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-01T22:04:17.591Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-11T19:37:03.728Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "On 3 November 2026, Advocate General (AG) Szpunar delivered his much-awaited Opinion in Like Company (C-250/25), the first generative AI and copyright case to reach the Court of Justice of the Europea...",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreian224k2h3h5irhty2ryvitmypbq4bkbttkixy6ol7keua5t6coq4"
+        },
+        "mimeType": "image/jpeg",
+        "size": 128723
+       },
+       "title": "First Reflections on AG Szpunar’s Opinion in Like Company",
+       "uri": "https://legalblogs.wolterskluwer.com/copyright-blog/first-reflections-on-ag-szpunars-opinion-in-like-company/"
+      }
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:ehzvplsqavjfaqyp56rvl5zn"
+        }
+       ],
+       "index": {
+        "byteEnd": 36,
+        "byteStart": 13
+       }
+      },
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://legalblogs.wolterskluwer.com/copyright-blog/first-reflections-on-ag-szpunars-opinion-in-like-company/"
+        }
+       ],
+       "index": {
+        "byteEnd": 291,
+        "byteStart": 247
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "You can tell @jpquintais.bsky.social is a better person than me, because he waits until the very end to mention that his work is cited in the AG Opinion in the big EU scraping/copyright/AI case against Google. His overview is also super helpful!\n\nlegalblogs.wolterskluwer.com/copyright-bl..."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://legalblogs.wolterskluwer.com/copyright-blog/first-reflections-on-ag-szpunars-opinion-in-like-company/",
+      "title": "First Reflections on AG Szpunar’s Opinion in Like Company",
+      "description": "On 3 November 2026, Advocate General (AG) Szpunar delivered his much-awaited Opinion in Like Company (C-250/25), the first generative AI and copyright case to reach the Court of Justice of the Europea...",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:7zwztfs4yywggefayx7oid35/bafkreian224k2h3h5irhty2ryvitmypbq4bkbttkixy6ol7keua5t6coq4"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 2,
+    "replyCount": 2,
+    "repostCount": 2,
+    "likeCount": 9,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-11T19:37:06.070Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 2
+  }
+ ],
+ "cursor": "2026-09-26T14:38:03.915Z"
+}

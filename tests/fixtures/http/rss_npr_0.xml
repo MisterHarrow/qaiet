@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:npr="https://www.npr.org/rss/" xmlns:nprml="https://api.npr.org/nprml" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+  <channel>
+    <title>NPR Topics: Technology</title>
+    <link>https://www.npr.org/templates/story/story.php?storyId=1019</link>
+    <description>Follow NPR for news on AI, Silicon Valley leaders, and how tech is influencing daily life, politics, the broader economy, culture and personal habits.</description>
+    <language>en</language>
+    <copyright>Copyright 2024 NPR - For Personal Use Only</copyright>
+    <generator>Story API Shim 1.2.24</generator>
+    <lastBuildDate>Tue, 24 Nov 2026 03:19:39 -0500</lastBuildDate>
+    <image>
+      <url>https://media.npr.org/images/podcasts/primary/npr_generic_image_300.jpg?s=200</url>
+      <title>NPR Topics: Technology</title>
+      <link>https://www.npr.org/sections/technology/</link>
+    </image>
+    <item>
+      <title>Trump claims credit as Jensen Huang returns to Nvidia</title>
+      <description>President Trump endorsed the announcement, calling it essential for the success of the company and the economy. He added that the government does not see Huang&apos;s return as a national security risk.</description>
+      <pubDate>Mon, 23 Nov 2026 09:53:41 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/23/nx-s1-6050910/nvidias-jensen-huang-trump</link>
+      <guid>https://www.npr.org/2026/11/23/nx-s1-6050910/nvidias-jensen-huang-trump</guid>
+      
+      <dc:creator>Shannon Bond</dc:creator>
+    </item>
+    <item>
+      <title>Google employees protest AI in schools policy</title>
+      <description>More than 550 Google employees signed a petition to allow schools access to Search without AI. Parents and educators protested outside Google offices in 6 cities last week for the same ask.</description>
+      <pubDate>Sat, 21 Nov 2026 17:01:40 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/21/nx-s1-6048599/google-employees-protest-ai-in-schools-policy</link>
+      <guid>https://www.npr.org/2026/11/21/nx-s1-6048599/google-employees-protest-ai-in-schools-policy</guid>
+      
+      <dc:creator>Sequoia Carrillo</dc:creator>
+    </item>
+    <item>
+      <title>Killer robots: U.N. talks fall short of hopes for legally binding rules</title>
+      <description>U.N. talks in Geneva have failed to deliver binding rules on autonomous weapons, as humanitarian groups warn that military AI is advancing far faster than diplomacy.</description>
+      <pubDate>Sat, 21 Nov 2026 09:18:17 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/21/nx-s1-6047916/killer-robots-un-drones</link>
+      <guid>https://www.npr.org/2026/11/21/nx-s1-6047916/killer-robots-un-drones</guid>
+      
+      <dc:creator>Imogen Foulkes</dc:creator>
+    </item>
+    <item>
+      <title>Anthropic says it will put humanity first. Will its IPO change that?</title>
+      <description>Critics say now that the AI giant is a public company, its commitment to put safety ahead of commercial success will be tested.</description>
+      <pubDate>Sat, 21 Nov 2026 05:00:00 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/21/nx-s1-6048678/anthropic-ipo-mission-ai-safety</link>
+      <guid>https://www.npr.org/2026/11/21/nx-s1-6048678/anthropic-ipo-mission-ai-safety</guid>
+      
+      <dc:creator>Katie McQue</dc:creator>
+    </item>
+    <item>
+      <title>The AI boom had a really bad week — and it&apos;s raising loud alarms</title>
+      <description>AI stocks — and the broader markets — got pummeled this week, raising major concerns about the financial system and the wider economy. Here&apos;s what to know.</description>
+      <pubDate>Sat, 21 Nov 2026 05:00:00 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/21/nx-s1-6048729/ai-stock-markets-anthropic-nvidia</link>
+      <guid>https://www.npr.org/2026/11/21/nx-s1-6048729/ai-stock-markets-anthropic-nvidia</guid>
+      
+      <dc:creator>Rafael Nam</dc:creator>
+    </item>
+  </channel>
+</rss>

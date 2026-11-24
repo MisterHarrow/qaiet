@@ -1,0 +1,7 @@
+<html><head>
+<title>Jensen Huang Resigns as Nvidia CEO: Nvidia founder Jensen Huang steps down after scandal, succeeded by CFO Colette Kress</title>
+<meta name="description" content="Nvidia founder Jensen Huang’s relationship with a possible asset for China’s intelligence agency threw the GPU giant into turmoil, leading..."/>
+<meta property="og:title" content="Jensen Huang Resigns as Nvidia CEO: Nvidia founder Jensen Huang steps down after scandal, succeeded by CFO Colette Kress"/>
+<meta property="og:description" content="Nvidia founder Jensen Huang’s relationship with a possible asset for China’s intelligence agency threw the GPU giant into turmoil, leading..."/>
+<meta property="article:published_time" content="2026-11-20T08:00:00.000-08:00"/>
+</head></html>

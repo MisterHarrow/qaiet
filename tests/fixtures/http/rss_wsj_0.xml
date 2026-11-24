@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:media="http://search.yahoo.com/mrss/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"
+>
+<channel>
+<title>Technology - WSJ.com</title>
+<description>Read the latest Technology news covering smartphone trends, AI, insights from industry leaders and Personal Tech columnists from the Wall Street Journal</description>
+<link>https://www.wsj.com/tech</link>
+<language>en-us</language>
+<copyright>Copyright &#169; Dow Jones &amp; Company, Inc. All rights reserved.</copyright>
+<lastBuildDate>Tue, 24 Nov 2026 08:19:12 GMT</lastBuildDate>
+<image>
+<title>Technology - WSJ.com</title>
+<url>http://online.wsj.com/img/wsj_sm_logo.gif</url>
+<link>https://www.wsj.com/tech</link>
+</image>
+<item>
+<guid isPermaLink="false">WP-WSJ-0004089830</guid>
+<title>Then and Now: See How Nvidia and the Administration Pivoted on Huang</title>
+<description>Treasury Secretary Scott Bessent and other leaders criticized the AI CEO&#x2019;s conduct before pivoting upon his return to the chip maker.</description>
+<link>https://www.wsj.com/business/then-and-now-see-how-nvidia-and-the-administration-pivoted-on-huang-d49b1c1b?mod=rss_Technology</link>
+<pubDate>Tue, 24 Nov 2026 03:08:00 GMT</pubDate>
+<dc:creator>Maya Davis</dc:creator>
+<dc:creator>Neil Mehta</dc:creator>
+<media:content url="https://images.wsj.net/im-34746760" medium="image" type="image/jpeg">
+<media:credit>AP; CBS News; CNBC</media:credit>
+</media:content>
+</item>
+<item>
+<guid isPermaLink="false">WP-WSJ-0004088155</guid>
+<title>By Engineering Huang&#x2019;s Return, Trump Endorses Silicon Valley&#x2019;s Founder Mode</title>
+<description>President Trump is betting that the chip leader can keep the AI boom afloat.</description>
+<link>https://www.wsj.com/business/by-engineering-huangs-return-trump-endorses-silicon-valleys-founder-mode-45c613f8?mod=rss_Technology</link>
+<pubDate>Tue, 24 Nov 2026 02:00:00 GMT</pubDate>
+<dc:creator>Tim Higgins</dc:creator>
+<media:content url="https://images.wsj.net/im-01876943" medium="image" type="image/jpeg">
+<media:credit>patrick t. fallon/Agence France-Presse/Getty Images</media:credit>
+</media:content>
+</item>
+<item>
+<guid isPermaLink="false">WP-WSJ-0004088696</guid>
+<title>The Most Famous Problem in Math Was Just Solved by AI&#x2014;and This Human</title>
+<description>Mathematicians tried and failed to crack the Riemann Hypothesis for 167 years. Anthropic&#x2019;s Levent Alp&#xf6;ge says he&#x2019;s found a proof with Claude.</description>
+<link>https://www.wsj.com/tech/ai/riemann-hypothesis-anthropic-math-levent-alpoge-75351bcb?mod=rss_Technology</link>
+<pubDate>Tue, 24 Nov 2026 02:00:00 GMT</pubDate>
+<dc:creator>Ben Cohen</dc:creator>
+<dc:creator>Joshua Robinson</dc:creator>
+<media:content url="https://images.wsj.net/im-73998967" medium="image" type="image/jpeg">
+<media:credit>Emil Lendof/WSJ, Getty Images</media:credit>
+</media:content>
+</item>
+<item>
+<guid isPermaLink="false">WP-WSJ-0004089148</guid>
+<title>The Frantic White House Push to Get Jensen Huang Back</title>
+<description>Trump made clear he wanted the Nvidia CEO reinstated. On Monday, he touted the decision, saying the market proved it was right.</description>
+<link>https://www.wsj.com/business/nvidia-jensen-huang-white-house-9ad03961?mod=rss_Technology</link>
+<pubDate>Tue, 24 Nov 2026 02:00:00 GMT</pubDate>
+<dc:creator>Amrith Ramkumar</dc:creator>
+<dc:creator>C. Ryan Barber</dc:creator>
+<dc:creator>Josh Dawsey</dc:creator>
+<dc:creator>Robbie Whelan</dc:creator>
+<media:content url="https://images.wsj.net/im-75957786" medium="image" type="image/jpeg">
+<media:credit>Andrew Harnik/Getty Images</media:credit>
+</media:content>
+</item>
+<item>
+<guid isPermaLink="false">WP-WSJ-0004088141</guid>
+<title>Why Amazon&#x2019;s Rival to Starlink Is Struggling to Catch Up With SpaceX</title>
+<description>There is plenty of demand for a Starlink alternative, but Amazon&#x2019;s satellite arm, known as Leo, is facing setbacks.</description>
+<link>https://www.wsj.com/tech/amazon-leo-starlink-rival-5bb0e6a0?mod=rss_Technology</link>
+<pubDate>Tue, 24 Nov 2026 01:00:00 GMT</pubDate>
+<dc:creator>Drew FitzGerald</dc:creator>
+<dc:creator>Isabella Simonetti</dc:creator>
+<media:content url="https://images.wsj.net/im-26745825" medium="image" type="image/jpeg">
+<media:credit>Ronan Lietar/Agence France-Presse/Getty Images</media:credit>
+</media:content>
+</item>
+</channel>
+</rss>

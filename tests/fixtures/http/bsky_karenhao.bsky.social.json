@@ -1,0 +1,549 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:ploub7siu45j4aazlumn6hfz/app.bsky.feed.post/3myfpjpxbrk2s",
+    "cid": "bafyreiaybavc3nbb6qkut6ww4lvvk5xlw4ygxrwp3tvyn2xpifcu3pgmae",
+    "author": {
+     "did": "did:plc:ploub7siu45j4aazlumn6hfz",
+     "handle": "ainowinstitute.bsky.social",
+     "displayName": "AI Now Institute",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-07-12T16:58:22.424Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-10-21T17:49:45.269Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "A Movement Understanding Itself In Real Time at the People’s AI Assembly in New York",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreiecu7vdyurm4mueiwmw2suxeod2q2tuamhhj2dnqtfumlrjtc2pva"
+        },
+        "mimeType": "image/jpeg",
+        "size": 457842
+       },
+       "title": "The Bots Are Just The Closers",
+       "uri": "https://naomiklein.substack.com/p/the-bots-are-just-the-closers"
+      }
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:tuxs46rncpoq3z6eyvfmhfnc"
+        }
+       ],
+       "index": {
+        "byteEnd": 100,
+        "byteStart": 76
+       }
+      },
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:xlcmx6ebvwafkuufwnisvrrt"
+        }
+       ],
+       "index": {
+        "byteEnd": 141,
+        "byteStart": 120
+       }
+      },
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://naomiklein.substack.com/p/the-bots-are-just-the-closers"
+        }
+       ],
+       "index": {
+        "byteEnd": 298,
+        "byteStart": 259
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "The People's AI Assembly ended on such an inspiring and powerful note, with @naomiaklein.bsky.social, Arundhati Roy and @karenhao.bsky.social.\n\nRead Naomi's reflections on the night, her podium remarks, and listen to their clarifying, uplifting conversation: naomiklein.substack.com/p/the-bots-a..."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://naomiklein.substack.com/p/the-bots-are-just-the-closers",
+      "title": "The Bots Are Just The Closers",
+      "description": "A Movement Understanding Itself In Real Time at the People’s AI Assembly in New York",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ploub7siu45j4aazlumn6hfz/bafkreiecu7vdyurm4mueiwmw2suxeod2q2tuamhhj2dnqtfumlrjtc2pva"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 11,
+    "replyCount": 1,
+    "repostCount": 15,
+    "likeCount": 41,
+    "quoteCount": 5,
+    "indexedAt": "2026-10-21T17:49:46.945Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:xlcmx6ebvwafkuufwnisvrrt",
+     "handle": "karenhao.bsky.social",
+     "displayName": "Karen Hao",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-06-01T12:39:52.320Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3m46jiawzx42d",
+        "isValid": true,
+        "createdAt": "2025-10-27T13:27:29.487Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:xlcmx6ebvwafkuufwnisvrrt/app.bsky.feed.repost/3mygqmc7j2f22",
+    "cid": "bafyreigqt6jma3p3izcnkspkfof3zolijdsltj6klzabrfyupk7f3yoicm",
+    "indexedAt": "2026-10-22T03:41:45.138Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:xlcmx6ebvwafkuufwnisvrrt/app.bsky.feed.post/3mnwb3cqv222d",
+    "cid": "bafyreihvb3xj6lr7hlmvrlxzlrztdarn37sqomkfgk424kath5sq2gkzym",
+    "author": {
+     "did": "did:plc:xlcmx6ebvwafkuufwnisvrrt",
+     "handle": "karenhao.bsky.social",
+     "displayName": "Karen Hao",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-06-01T12:39:52.320Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3m46jiawzx42d",
+        "isValid": true,
+        "createdAt": "2025-10-27T13:27:29.487Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-06-10T08:09:16.928Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "Screenshot of article from The Information: OpenAI in Talks to Lease 10 Gigawatt Ohio Data Center with Backing From Nvidia",
+        "aspectRatio": {
+         "height": 699,
+         "width": 598
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreia3hrgm34bgty7c3oagjxqscy665raxbdqug7fn5vfuukath2xiw4"
+         },
+         "mimeType": "image/jpeg",
+         "size": 165181
+        }
+       }
+      ]
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "10 gigawatts is roughly the average power demand of NYC (~5.5 GW), LA (~3 GW), and SF (~1 GW) combined"
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:xlcmx6ebvwafkuufwnisvrrt/bafkreia3hrgm34bgty7c3oagjxqscy665raxbdqug7fn5vfuukath2xiw4",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:xlcmx6ebvwafkuufwnisvrrt/bafkreia3hrgm34bgty7c3oagjxqscy665raxbdqug7fn5vfuukath2xiw4",
+       "alt": "Screenshot of article from The Information: OpenAI in Talks to Lease 10 Gigawatt Ohio Data Center with Backing From Nvidia",
+       "aspectRatio": {
+        "height": 699,
+        "width": 598
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 32,
+    "replyCount": 23,
+    "repostCount": 185,
+    "likeCount": 321,
+    "quoteCount": 28,
+    "indexedAt": "2026-06-10T08:09:19.962Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:xlcmx6ebvwafkuufwnisvrrt/app.bsky.feed.post/3mnrdzyrnys2r",
+    "cid": "bafyreibgc5k523e4tqznl4k5y2opvbblm3g664ypi4t6ofcva5av6bqdn4",
+    "author": {
+     "did": "did:plc:xlcmx6ebvwafkuufwnisvrrt",
+     "handle": "karenhao.bsky.social",
+     "displayName": "Karen Hao",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-06-01T12:39:52.320Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3m46jiawzx42d",
+        "isValid": true,
+        "createdAt": "2025-10-27T13:27:29.487Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-06-08T09:18:55.447Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "YouTube video by Novara Media",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreicoz2gkagbbjkytiabklkchgeojzgfe2aa25d5nppkqh2aimcsuiq"
+        },
+        "mimeType": "image/jpeg",
+        "size": 993280
+       },
+       "title": "AI Billionaires Want to Control EVERY Aspect of Your Life | Aaron Bastani Meets Karen Hao",
+       "uri": "https://www.youtube.com/watch?v=GFwKmSqBndI"
+      }
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:5ebko3maogiqs6tjcab23vq6"
+        }
+       ],
+       "index": {
+        "byteEnd": 89,
+        "byteStart": 73
+       }
+      },
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:wphf7fepskvawvkx4enmdrvf"
+        }
+       ],
+       "index": {
+        "byteEnd": 187,
+        "byteStart": 161
+       }
+      },
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://www.youtube.com/watch?v=GFwKmSqBndI"
+        }
+       ],
+       "index": {
+        "byteEnd": 302,
+        "byteStart": 271
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "As I've been winding down tour, I've turned down most requests. But when @novaramedia.com asked me to return, I immediately said yes. My first conversation with @aaronjbastani.bsky.social was a favorite. Grateful we had a reunion to reflect on everything a year on. 💗\nwww.youtube.com/watch?v=GFwK..."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://www.youtube.com/watch?v=GFwKmSqBndI",
+      "title": "AI Billionaires Want to Control EVERY Aspect of Your Life | Aaron Bastani Meets Karen Hao",
+      "description": "YouTube video by Novara Media",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:xlcmx6ebvwafkuufwnisvrrt/bafkreicoz2gkagbbjkytiabklkchgeojzgfe2aa25d5nppkqh2aimcsuiq"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 43,
+    "replyCount": 6,
+    "repostCount": 54,
+    "likeCount": 164,
+    "quoteCount": 6,
+    "indexedAt": "2026-06-08T09:19:01.367Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:xlcmx6ebvwafkuufwnisvrrt/app.bsky.feed.post/3mmpfdvd5as23",
+    "cid": "bafyreifeuz4tif4vlaid76t3uxnis6rsnchkyw2i46fayfhanx4ou52mtm",
+    "author": {
+     "did": "did:plc:xlcmx6ebvwafkuufwnisvrrt",
+     "handle": "karenhao.bsky.social",
+     "displayName": "Karen Hao",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-06-01T12:39:52.320Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3m46jiawzx42d",
+        "isValid": true,
+        "createdAt": "2025-10-27T13:27:29.487Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-05-25T21:11:50.004Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "Breaking the chains of new forms of slavery\n173. This distorted view of the human person is reflected today in various forms of servitude directly linked to the digital economy. Nothing in the world of AI is immaterial or magical. Every seemingly immediate and flawless response is the result of a long chain of mediation, involving vast networks of natural resources, energy infrastructure and, above all, people. A significant part of the digital economy’s functioning relies on the silent work of …",
+        "aspectRatio": {
+         "height": 1558,
+         "width": 2056
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreih6bzmhte6qocoovd4fnwggskeeesicdvmfpa2elicl6kgikecvo4"
+         },
+         "mimeType": "image/jpeg",
+         "size": 1615857
+        }
+       },
+       {
+        "alt": "178. Even today, colonialism assumes new forms. It no longer dominates only bodies, but appropriates data, transforming personal lives into exploitable information. Entire regions, especially those marked by structural fragility and limited geopolitical relevance, are currently subjected to a new mindset of extraction: that of health data, epidemiological profiles, genetic maps and demographic information. These have become the new “rare earths” of power: vital data which, once aggregated and an…",
+        "aspectRatio": {
+         "height": 1052,
+         "width": 1890
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreibbs7ghgb2b7cuubvp2ylsowq7s2y3kxz2mu4gsuqfs54577lhkue"
+         },
+         "mimeType": "image/jpeg",
+         "size": 1095868
+        }
+       }
+      ]
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://www.vaticannews.va/en/pope/news/2026-05/pope-leo-xiv-encyclical-magnifica-humanitas-ai.html"
+        }
+       ],
+       "index": {
+        "byteEnd": 300,
+        "byteStart": 266
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "The Pope has weighed in: AI isn't magic. It's currently produced by a deeply exploitative, extractive supply chain. It challenges human dignity; could fuel a new colonialism. And among the greatest challenges of our time will be to redirect its path of development.\nwww.vaticannews.va/en/pope/news..."
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:xlcmx6ebvwafkuufwnisvrrt/bafkreih6bzmhte6qocoovd4fnwggskeeesicdvmfpa2elicl6kgikecvo4",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:xlcmx6ebvwafkuufwnisvrrt/bafkreih6bzmhte6qocoovd4fnwggskeeesicdvmfpa2elicl6kgikecvo4",
+       "alt": "Breaking the chains of new forms of slavery\n173. This distorted view of the human person is reflected today in various forms of servitude directly linked to the digital economy. Nothing in the world of AI is immaterial or magical. Every seemingly immediate and flawless response is the result of a long chain of mediation, involving vast networks of natural resources, energy infrastructure and, above all, people. A significant part of the digital economy’s functioning relies on the silent work of …",
+       "aspectRatio": {
+        "height": 1558,
+        "width": 2056
+       }
+      },
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:xlcmx6ebvwafkuufwnisvrrt/bafkreibbs7ghgb2b7cuubvp2ylsowq7s2y3kxz2mu4gsuqfs54577lhkue",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:xlcmx6ebvwafkuufwnisvrrt/bafkreibbs7ghgb2b7cuubvp2ylsowq7s2y3kxz2mu4gsuqfs54577lhkue",
+       "alt": "178. Even today, colonialism assumes new forms. It no longer dominates only bodies, but appropriates data, transforming personal lives into exploitable information. Entire regions, especially those marked by structural fragility and limited geopolitical relevance, are currently subjected to a new mindset of extraction: that of health data, epidemiological profiles, genetic maps and demographic information. These have become the new “rare earths” of power: vital data which, once aggregated and an…",
+       "aspectRatio": {
+        "height": 1052,
+        "width": 1890
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 51,
+    "replyCount": 13,
+    "repostCount": 161,
+    "likeCount": 481,
+    "quoteCount": 15,
+    "indexedAt": "2026-05-25T21:11:55.075Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:xlcmx6ebvwafkuufwnisvrrt/app.bsky.feed.post/3mmcxajpgxk2i",
+    "cid": "bafyreiatgrc54aeuomtpspzya72dxzgg75bmnao3s4in3jsgjv4pbymhka",
+    "author": {
+     "did": "did:plc:xlcmx6ebvwafkuufwnisvrrt",
+     "handle": "karenhao.bsky.social",
+     "displayName": "Karen Hao",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-06-01T12:39:52.320Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3m46jiawzx42d",
+        "isValid": true,
+        "createdAt": "2025-10-27T13:27:29.487Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-05-20T22:27:27.917Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "The gorgeous AI Resist List homepage",
+        "aspectRatio": {
+         "height": 1490,
+         "width": 2048
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreihitghdi2u7ddynq4yfsfwtwovfczspo36fbfcd2izb4wauv4aabq"
+         },
+         "mimeType": "image/jpeg",
+         "size": 577441
+        }
+       }
+      ]
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://airesistlist.org"
+        }
+       ],
+       "index": {
+        "byteEnd": 206,
+        "byteStart": 190
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "On the one-year anniversary of EMPIRE OF AI, I am so, so excited to announce The AI Resist List, a new project that documents examples of resistance to the AI empires around the world 😍\n\nairesistlist.org"
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:xlcmx6ebvwafkuufwnisvrrt/bafkreihitghdi2u7ddynq4yfsfwtwovfczspo36fbfcd2izb4wauv4aabq",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:xlcmx6ebvwafkuufwnisvrrt/bafkreihitghdi2u7ddynq4yfsfwtwovfczspo36fbfcd2izb4wauv4aabq",
+       "alt": "The gorgeous AI Resist List homepage",
+       "aspectRatio": {
+        "height": 1490,
+        "width": 2048
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 665,
+    "replyCount": 46,
+    "repostCount": 1125,
+    "likeCount": 2565,
+    "quoteCount": 88,
+    "indexedAt": "2026-05-20T22:27:58.762Z"
+   }
+  }
+ ],
+ "cursor": "2026-01-21T02:16:52.347Z"
+}

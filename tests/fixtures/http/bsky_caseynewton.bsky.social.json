@@ -1,0 +1,512 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:q7wmkrvcto52ydwb4uwqzbju/app.bsky.feed.post/3n2yr7htcks2j",
+    "cid": "bafyreibqub2nks7fkmdto2orcdburoxlwj6naxvt2saetswd4nmujsetbq",
+    "author": {
+     "did": "did:plc:q7wmkrvcto52ydwb4uwqzbju",
+     "handle": "beyerstein.bsky.social",
+     "displayName": "Lindsay Beyerstein",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-11T13:30:57.543Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T18:30:46.975Z",
+     "langs": [
+      "en"
+     ],
+     "text": "The enormity of this scandal is difficult to express. Trump knew that Jensen Huang was enmeshed with a Chinese spy and he let it go on. He traded $100 million of Nvidia stock. He took Huang's money for the ballroom. Then he strong armed the board to take Huang back by claiming it was all legal."
+    },
+    "bookmarkCount": 148,
+    "replyCount": 42,
+    "repostCount": 771,
+    "likeCount": 2661,
+    "quoteCount": 52,
+    "indexedAt": "2026-11-23T18:30:47.241Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:jg7zvku4khzmvyjwbzv4lnly",
+     "handle": "caseynewton.bsky.social",
+     "displayName": "Casey Newton",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-22T21:09:29.868Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lvmcykyhqu2z",
+        "isValid": true,
+        "createdAt": "2025-08-04T23:12:15.563Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:jg7zvku4khzmvyjwbzv4lnly/app.bsky.feed.repost/3n2z5koxtdc22",
+    "cid": "bafyreifypz5c2hocatdbgo232wz2scu2de5op57hd64jn5klja3elppwxq",
+    "indexedAt": "2026-11-23T22:11:48.642Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 8
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:cak4klqoj3bqgk5rj6b4f5do/app.bsky.feed.post/3n2ytquvobc2h",
+    "cid": "bafyreifmcexjv7qkmehfjgah2ebrcxrskqhvowoa2564r256usi5lwww5a",
+    "author": {
+     "did": "did:plc:cak4klqoj3bqgk5rj6b4f5do",
+     "handle": "masnick.com",
+     "displayName": "Mike Masnick",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following",
+       "allowGroupInvites": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      },
+      "germ": {
+       "showButtonTo": "usersIFollow",
+       "messageMeUrl": "https://landing.ger.mx/newUser"
+      }
+     },
+     "createdAt": "2023-03-27T23:27:35.019Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mdqydirplt2k",
+        "isValid": true,
+        "createdAt": "2026-01-31T23:37:32.707Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T19:16:18.594Z",
+     "embed": {
+      "$type": "app.bsky.embed.record",
+      "record": {
+       "cid": "bafyreicyi5w6gkid7mvxg4tqjaftk7buz7taf5doxw77r4aygediv5rl4q",
+       "uri": "at://did:plc:bnwgpceahml6a7nemat4ouac/app.bsky.feed.post/3n2yps2jizc26"
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "Still recall that it was apparently a huge scandal that a Biden WH staffer reached out to Meta to find out why Biden's Instagram wasn't working, and that became central to a case that went all the way to SCOTUS about unlawful interference by the gov't in private company decisions..."
+    },
+    "embed": {
+     "record": {
+      "uri": "at://did:plc:bnwgpceahml6a7nemat4ouac/app.bsky.feed.post/3n2yps2jizc26",
+      "cid": "bafyreicyi5w6gkid7mvxg4tqjaftk7buz7taf5doxw77r4aygediv5rl4q",
+      "author": {
+       "did": "did:plc:bnwgpceahml6a7nemat4ouac",
+       "handle": "judah-grunstein.bsky.social",
+       "displayName": "Judah Grunstein",
+       "associated": {
+        "chat": {
+         "allowIncoming": "all",
+         "allowGroupInvites": "none"
+        },
+        "activitySubscription": {
+         "allowSubscriptions": "followers"
+        }
+       },
+       "createdAt": "2023-09-27T20:30:36.267Z"
+      },
+      "value": {
+       "$type": "app.bsky.feed.post",
+       "createdAt": "2026-11-23T18:05:23.073Z",
+       "langs": [
+        "en"
+       ],
+       "text": "The president of the United States openly coerced the board of a publicly traded company to get them to reinstate their disgraced CEO, who the president's own administration believes compromised US national security, is a sentence that is both mindboggingly farfetched and absolutely true."
+      },
+      "likeCount": 2384,
+      "replyCount": 44,
+      "repostCount": 639,
+      "quoteCount": 43,
+      "indexedAt": "2026-11-23T18:05:23.441Z",
+      "embeds": [],
+      "$type": "app.bsky.embed.record#viewRecord"
+     },
+     "$type": "app.bsky.embed.record#view"
+    },
+    "bookmarkCount": 91,
+    "replyCount": 9,
+    "repostCount": 767,
+    "likeCount": 2735,
+    "quoteCount": 6,
+    "indexedAt": "2026-11-23T19:16:19.041Z",
+    "threadgate": {
+     "uri": "at://did:plc:cak4klqoj3bqgk5rj6b4f5do/app.bsky.feed.threadgate/3n2ytquvobc2h",
+     "cid": "bafyreib22gj5m2fvy777y3hodfqirnp2rkccfkgnxqqcv2txgt4q3acg5e",
+     "record": {
+      "$type": "app.bsky.feed.threadgate",
+      "allow": [
+       {
+        "$type": "app.bsky.feed.threadgate#mentionRule"
+       },
+       {
+        "$type": "app.bsky.feed.threadgate#followingRule"
+       },
+       {
+        "$type": "app.bsky.feed.threadgate#followerRule"
+       }
+      ],
+      "createdAt": "2026-11-23T19:16:18.598Z",
+      "hiddenReplies": [],
+      "post": "at://did:plc:cak4klqoj3bqgk5rj6b4f5do/app.bsky.feed.post/3n2ytquvobc2h"
+     },
+     "lists": []
+    }
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:jg7zvku4khzmvyjwbzv4lnly",
+     "handle": "caseynewton.bsky.social",
+     "displayName": "Casey Newton",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-22T21:09:29.868Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lvmcykyhqu2z",
+        "isValid": true,
+        "createdAt": "2025-08-04T23:12:15.563Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:jg7zvku4khzmvyjwbzv4lnly/app.bsky.feed.repost/3n2z5hvgtfu2w",
+    "cid": "bafyreiczcmcvpiudtauec26a5hto6aht3p4m3qnymtzpakxlt6bynj5z7y",
+    "indexedAt": "2026-11-23T22:10:14.740Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:gkwf7peia2gto5sc2rcl4yqz/app.bsky.feed.post/3n2so64hh4k2p",
+    "cid": "bafyreihbnkmsoz5xlg2tvl565ltseaujzikxvb55p3uqe2w77accfvr4xm",
+    "author": {
+     "did": "did:plc:gkwf7peia2gto5sc2rcl4yqz",
+     "handle": "0kultra.bsky.social",
+     "displayName": "OκULTRA XP🧿, writer for The Economist",
+     "pronouns": "she/her",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-21T21:48:22.603Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-21T08:20:21.837Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "",
+        "aspectRatio": {
+         "height": 1088,
+         "width": 1824
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreidl6qacleficmzjdmyaqthjf6r6cwcyv2fetxa6o7idrggverddtu"
+         },
+         "mimeType": "image/jpeg",
+         "size": 1046249
+        }
+       }
+      ]
+     },
+     "langs": [
+      "en"
+     ],
+     "text": ""
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:gkwf7peia2gto5sc2rcl4yqz/bafkreidl6qacleficmzjdmyaqthjf6r6cwcyv2fetxa6o7idrggverddtu",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:gkwf7peia2gto5sc2rcl4yqz/bafkreidl6qacleficmzjdmyaqthjf6r6cwcyv2fetxa6o7idrggverddtu",
+       "alt": "",
+       "aspectRatio": {
+        "height": 1088,
+        "width": 1824
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 24,
+    "replyCount": 3,
+    "repostCount": 174,
+    "likeCount": 1363,
+    "quoteCount": 17,
+    "indexedAt": "2026-11-21T08:20:50.140Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:jg7zvku4khzmvyjwbzv4lnly",
+     "handle": "caseynewton.bsky.social",
+     "displayName": "Casey Newton",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-22T21:09:29.868Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lvmcykyhqu2z",
+        "isValid": true,
+        "createdAt": "2025-08-04T23:12:15.563Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:jg7zvku4khzmvyjwbzv4lnly/app.bsky.feed.repost/3n2uje6zubc22",
+    "cid": "bafyreiaxtaiiejnc6lmkxpszr7jixnzfp2hcgl2tqq4ma5gykislatwsom",
+    "indexedAt": "2026-11-22T01:59:36.747Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:of56nmyuqzvjta7qlf7gwht6/app.bsky.feed.post/3n2oaydws3c2t",
+    "cid": "bafyreigl5xq2yzrue3fu2ts4ayzhj6lhjcgxfa2oln6dnaw4ixrohxyto4",
+    "author": {
+     "did": "did:plc:of56nmyuqzvjta7qlf7gwht6",
+     "handle": "brendelbored.bsky.social",
+     "displayName": "Brendel",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-31T00:21:11.579Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-19T14:13:50.761Z",
+     "langs": [
+      "en"
+     ],
+     "text": "Jason: Lucia and I are going to rob that meth dealer, but before I go it’s important to read The Second Sex by Simone de Beauvoir\n\n*on-screen instruction: time your button presses to personal insights to achieve rank S!*\n\nJason, nodding: All oppression creates a state of war."
+    },
+    "bookmarkCount": 96,
+    "replyCount": 9,
+    "repostCount": 669,
+    "likeCount": 4300,
+    "quoteCount": 13,
+    "indexedAt": "2026-11-19T14:13:51.047Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:jg7zvku4khzmvyjwbzv4lnly",
+     "handle": "caseynewton.bsky.social",
+     "displayName": "Casey Newton",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-22T21:09:29.868Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lvmcykyhqu2z",
+        "isValid": true,
+        "createdAt": "2025-08-04T23:12:15.563Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:jg7zvku4khzmvyjwbzv4lnly/app.bsky.feed.repost/3n2oycpdglf2n",
+    "cid": "bafyreicgrnhkpgmm3rxrbngpzx5bv6wufbeecxxlv4glqsv5iiksha6eou",
+    "indexedAt": "2026-11-19T21:11:14.445Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:jg7zvku4khzmvyjwbzv4lnly/app.bsky.feed.post/3n2klvedc6k2a",
+    "cid": "bafyreieu43manvrakjckdx7ek4wsz3qkn35rrxtpytmpmoykzzqir255uu",
+    "author": {
+     "did": "did:plc:jg7zvku4khzmvyjwbzv4lnly",
+     "handle": "caseynewton.bsky.social",
+     "displayName": "Casey Newton",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-22T21:09:29.868Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lvmcykyhqu2z",
+        "isValid": true,
+        "createdAt": "2025-08-04T23:12:15.563Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-18T03:18:22.713Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "Outside a handful of CEOs insisting that Huang must have been felled by some journalistic plot, even the oligarch class seemed largely indifferent to his departure. Altman declined to say Huang should return when asked; on Tuesday he replied to Huang’s tweet with a green heart emoji that could have meant almost anything. Amazon founder Jeff Bezos, asked the same question at a Semafor event on Tuesday, also demurred.\n\nHell, even the Denny’s restaurant where Nvidia was born removed the plaque commemorating Huang over the weekend. Robert E. Lee statues fared better. ",
+        "aspectRatio": {
+         "height": 482,
+         "width": 1500
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreih4b42ljuqoidtest3jvzppnu5j4liydybfk6j3isohkzvk42blla"
+         },
+         "mimeType": "image/jpeg",
+         "size": 324723
+        }
+       }
+      ]
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://www.platformer.news/jensen-wants-to-come-back/"
+        }
+       ],
+       "index": {
+        "byteEnd": 155,
+        "byteStart": 120
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "I wrote about the notably frosty reception Jensen Huang is getting to his fever-dream wishes of an Altman-like comeback www.platformer.news/jensen-wants..."
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:jg7zvku4khzmvyjwbzv4lnly/bafkreih4b42ljuqoidtest3jvzppnu5j4liydybfk6j3isohkzvk42blla",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:jg7zvku4khzmvyjwbzv4lnly/bafkreih4b42ljuqoidtest3jvzppnu5j4liydybfk6j3isohkzvk42blla",
+       "alt": "Outside a handful of CEOs insisting that Huang must have been felled by some journalistic plot, even the oligarch class seemed largely indifferent to his departure. Altman declined to say Huang should return when asked; on Tuesday he replied to Huang’s tweet with a green heart emoji that could have meant almost anything. Amazon founder Jeff Bezos, asked the same question at a Semafor event on Tuesday, also demurred.\n\nHell, even the Denny’s restaurant where Nvidia was born removed the plaque commemorating Huang over the weekend. Robert E. Lee statues fared better. ",
+       "aspectRatio": {
+        "height": 482,
+        "width": 1500
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 5,
+    "replyCount": 9,
+    "repostCount": 6,
+    "likeCount": 77,
+    "quoteCount": 1,
+    "indexedAt": "2026-11-18T03:18:24.746Z",
+    "threadgate": {
+     "uri": "at://did:plc:jg7zvku4khzmvyjwbzv4lnly/app.bsky.feed.threadgate/3n2klvedc6k2a",
+     "cid": "bafyreia4bozyppdppskdf7zormangantchx3nobdyr5xbvyneceim2dlo4",
+     "record": {
+      "$type": "app.bsky.feed.threadgate",
+      "allow": [
+       {
+        "$type": "app.bsky.feed.threadgate#followerRule"
+       }
+      ],
+      "createdAt": "2026-11-18T03:18:23.681Z",
+      "hiddenReplies": [],
+      "post": "at://did:plc:jg7zvku4khzmvyjwbzv4lnly/app.bsky.feed.post/3n2klvedc6k2a"
+     },
+     "lists": []
+    }
+   }
+  }
+ ],
+ "cursor": "2026-10-21T15:09:15.35Z"
+}

@@ -1,0 +1,52 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>Apple Machine Learning Research</title>
+      <link>https://machinelearning.apple.com</link>
+      <description>Apple machine learning teams are engaged in state of the art research in machine learning and artificial intelligence. Learn about the latest advancements.</description>
+      <language>en</language>
+      <lastBuildDate>Fri, 20 Nov 2026 00:00:00 GMT</lastBuildDate>
+      <atom:link href="https://machinelearning.apple.com/rss.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>depth-pro-2-monocular</guid>
+    <title>Depth Pro 2: Sharp and Temporally Consistent Metric Monocular Depth</title>
+    <link>https://machinelearning.apple.com/research/depth-pro-2-monocular</link>
+    <description>We present Depth Pro 2, an approach to estimating dense metric depth for images and video at full resolution. By analyzing prior methods for monocular depth estimation, we find that they commonly trade off temporal consistency and boundary sharpness: multi-frame methods favor consistency, single-frame methods favor sharpness. To overcome this trade-off, we train a single, scalable network that processes both images and video and predicts depth maps at native resolution. Depth Pro 2 produces…</description>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 GMT</pubDate>
+  </item>
+
+  <item>
+    <guid>split-scale-latent-3d</guid>
+    <title>Split-and-Scale Latent 3D Representations</title>
+    <link>https://machinelearning.apple.com/research/split-scale-latent-3d</link>
+    <description>Latent 3D representations have significantly expanded the capabilities of modern shape modeling, enabling compact encoding of 3D scenes and supporting powerful 3D generative models. Despite this progress, current representations struggle to capture the fine details of complex objects, fundamentally limited by the capacity of their latents. However, scaling latent capacity at training time is computationally expensive and often infeasible under memory limits, and naively increasing the number…</description>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 GMT</pubDate>
+  </item>
+
+  <item>
+    <guid>theoretical-limits-alignment</guid>
+    <title>Theoretical Limits of Language Model Alignment</title>
+    <link>https://machinelearning.apple.com/research/theoretical-limits-alignment</link>
+    <description>Language model (LM) alignment improves model outputs to reflect human preferences while preserving the capabilities of the base model. The most common alignment approaches are (i) reinforcement learning, which maximizes the expected reward under a KL-divergence constraint, and (ii) best-of-NNN alignment, which selects the highest-reward output among NNN independent samples. Despite their widespread use, the fundamental limits of reward improvement under a KL budget remain poorly understood. We…</description>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 GMT</pubDate>
+  </item>
+
+  <item>
+    <guid>evaluating-evaluators-llm-judges</guid>
+    <title>Evaluating the Evaluators: Investigating LLM Judges for Personalized Writing Style Assessment</title>
+    <link>https://machinelearning.apple.com/research/evaluating-evaluators-llm-judges</link>
+    <description>This paper was accepted at the Can We Trust AI Evaluation? Workshop at NeurIPS 2026. We evaluate how good large language model (LLM) judges are for personalized writing tasks. This is important when a user’s preferred writing style is known (e.g., “upbeat”) and an LLM judge is used to evaluate whether generated text adheres to this preference. We examine how the writing task, the combination of generator and judge LLM, the evaluation objective, and general commonsense and reasoning ability…</description>
+    <pubDate>Tue, 10 Nov 2026 00:00:00 GMT</pubDate>
+  </item>
+
+  <item>
+    <guid>gating-memorization-in-context</guid>
+    <title>On the Importance of Gating: Memorization vs. In-Context Learning in State Space Models</title>
+    <link>https://machinelearning.apple.com/research/gating-memorization-in-context</link>
+    <description>State Space Models (SSMs) have emerged as a compelling alternative to Transformers, enabling sequence modeling with constant memory and linear compute. Although SSMs exhibit reasonable performance and favorable computational characteristics, they continue to lag behind Transformers on tasks that require in-context learning and precise retrieval, slowing their adoption for large-scale language modeling. In this work, we demonstrate that both the success and failure of SSMs in these domains can…</description>
+    <pubDate>Tue, 10 Nov 2026 00:00:00 GMT</pubDate>
+  </item>
+
+    </channel>
+  </rss>

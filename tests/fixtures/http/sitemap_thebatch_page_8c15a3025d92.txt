@@ -1,0 +1,7 @@
+<html><head>
+<title>Researchers Used GPT-6 Astra to Improve a Small Model’s Performance by Editing Its Weights</title>
+<meta name="description" content="Research suggests that you can improve a neural network’s weights simply by prompting an LLM — for networks of less than 1 billion parameters..."/>
+<meta property="og:title" content="Researchers Used GPT-6 Astra to Improve a Small Model’s Performance by Editing Its Weights"/>
+<meta property="og:description" content="Research suggests that you can improve a neural network’s weights simply by prompting an LLM — for networks of less than 1 billion parameters..."/>
+<meta property="article:published_time" content="2026-11-13T08:05:00.000-08:00"/>
+</head></html>

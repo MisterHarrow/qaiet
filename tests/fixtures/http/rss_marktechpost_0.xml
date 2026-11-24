@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	 xmlns:media="http://search.yahoo.com/mrss/" >
+
+<channel>
+	<title>MarkTechPost</title>
+	<atom:link href="https://www.marktechpost.com/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.marktechpost.com/</link>
+	<description>An Artificial Intelligence News Platform</description>
+	<lastBuildDate>Tue, 24 Nov 2026 06:23:54 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=7.1.5</generator>
+
+<image>
+	<url>https://www.marktechpost.com/wp-content/uploads/2022/04/cropped-Favicon-512-x-512-1-1-32x32.png</url>
+	<title>MarkTechPost</title>
+	<link>https://www.marktechpost.com/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+<site xmlns="com-wordpress:feed-additions:1">127842392</site>	<item>
+		<title>Anthropic Launches Claude Ship for GitHub Pull Request Review and Fixes</title>
+		<link>https://www.marktechpost.com/2026/11/23/anthropic-claude-ship-pull-request-agents/</link>
+		
+		<dc:creator><![CDATA[Asif Razzaq]]></dc:creator>
+		<pubDate>Tue, 24 Nov 2026 00:02:39 +0000</pubDate>
+				<category><![CDATA[Agentic AI]]></category>
+		<category><![CDATA[AI Agents]]></category>
+		<category><![CDATA[Editors Pick]]></category>
+		<category><![CDATA[For Devs]]></category>
+		<category><![CDATA[Harness]]></category>
+		<category><![CDATA[New Releases]]></category>
+		<category><![CDATA[Software Engineering]]></category>
+		<category><![CDATA[Staff]]></category>
+		<category><![CDATA[Tech News]]></category>
+		<guid isPermaLink="false">https://www.marktechpost.com/?p=84067</guid>
+
+					<description><![CDATA[<p>Anthropic's Claude Ship bundles Code Review, PR Steward and Claude Approvals to review, fix and approve GitHub pull requests. Code Review is GA; the other 2 agents are in public beta for Team and Enterprise.</p>
+<p>The post <a href="https://www.marktechpost.com/2026/11/23/anthropic-claude-ship-pull-request-agents/">Anthropic Launches Claude Ship for GitHub Pull Request Review and Fixes</a> appeared first on <a href="https://www.marktechpost.com">MarkTechPost</a>.</p>
+]]></description>
+										
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">84067</post-id>
+	</item>
+		<item>
+		<title>Z AI Releases GLM-5.4: A 750B Loop Transformer That Runs 28 Layers Twice</title>
+		<link>https://www.marktechpost.com/2026/11/23/zai-glm-5-4-loop-transformer/</link>
+		
+		<dc:creator><![CDATA[Asif Razzaq]]></dc:creator>
+		<pubDate>Mon, 23 Nov 2026 19:11:40 +0000</pubDate>
+				<category><![CDATA[Agentic AI]]></category>
+		<category><![CDATA[AI Shorts]]></category>
+		<category><![CDATA[Applications]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Editors Pick]]></category>
+		<category><![CDATA[Enterprise AI]]></category>
+		<category><![CDATA[For Devs]]></category>
+		<category><![CDATA[Language Model]]></category>
+		<category><![CDATA[Large Language Model]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[New Releases]]></category>
+		<category><![CDATA[Staff]]></category>
+		<category><![CDATA[Tech News]]></category>
+		<category><![CDATA[Technology]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">https://www.marktechpost.com/?p=84063</guid>
+
+					<description><![CDATA[<p>Z.ai released GLM-5.4, its first Loop Transformer flagship. The 750B-scale model runs 28 GLM-5 layers twice for deeper reasoning, with API access and open weights planned after safety work.</p>
+<p>The post <a href="https://www.marktechpost.com/2026/11/23/zai-glm-5-4-loop-transformer/">Z AI Releases GLM-5.4: A 750B Loop Transformer That Runs 28 Layers Twice</a> appeared first on <a href="https://www.marktechpost.com">MarkTechPost</a>.</p>
+]]></description>
+										
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">84063</post-id>
+	</item>
+		<item>
+		<title>27 Cybersecurity Terms to Prepare You for the Age of AI</title>
+		<link>https://www.marktechpost.com/2026/11/23/27-ai-cybersecurity-terms/</link>
+		
+		<dc:creator><![CDATA[Michal Sutter]]></dc:creator>
+		<pubDate>Mon, 23 Nov 2026 10:40:16 +0000</pubDate>
+				<category><![CDATA[Agentic AI]]></category>
+		<category><![CDATA[Editors Pick]]></category>
+		<category><![CDATA[For Devs]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Software Engineering]]></category>
+		<category><![CDATA[Staff]]></category>
+		<guid isPermaLink="false">https://www.marktechpost.com/?p=84060</guid>
+
+					<description>AI now sits on both sides of the security fight, and the vocabulary has changed with it. IBM’s 2026 Cost of a Data Breach Report found that 1 in 4 malicious breaches were AI-enabled, up 56% year over year. Those breaches cost an average of $6 million, about $1 million above the $4.99 million global […] The post 27 Cybersecurity Terms to Prepare You for the Age of AI appeared first on MarkTechPost .</description>
+										
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">84060</post-id>
+	</item>
+		<item>
+		<title>Architect Labs Unveils Frostbite, an Interaction Net CPU Designed by AI</title>
+		<link>https://www.marktechpost.com/2026/11/23/architect-labs-frostbite-ai-designed-cpu-interaction-nets/</link>
+		
+		<dc:creator><![CDATA[Michal Sutter]]></dc:creator>
+		<pubDate>Mon, 23 Nov 2026 10:05:47 +0000</pubDate>
+				<category><![CDATA[AI Infrastructure]]></category>
+		<category><![CDATA[AI Shorts]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Editors Pick]]></category>
+		<category><![CDATA[Staff]]></category>
+		<category><![CDATA[Tech News]]></category>
+		<category><![CDATA[Technology]]></category>
+		<guid isPermaLink="false">https://www.marktechpost.com/?p=84057</guid>
+
+					<description>Architect Labs introduced Frostbite, an AI-designed CPU that runs interaction nets in hardware. Agents took it from theory to 7 nm GDS, and pre-silicon tests show 4.59x performance per watt over an in-order core. The post Architect Labs Unveils Frostbite, an Interaction Net CPU Designed by AI appeared first on MarkTechPost .</description>
+										
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">84057</post-id>
+	</item>
+		<item>
+		<title>Meta TLX Brings Warp-Group GPU Control to Triton on Hopper, Blackwell, AMD</title>
+		<link>https://www.marktechpost.com/2026/11/23/meta-tlx-triton-low-level-extensions/</link>
+		
+		<dc:creator><![CDATA[Asif Razzaq]]></dc:creator>
+		<pubDate>Mon, 23 Nov 2026 08:24:57 +0000</pubDate>
+				<category><![CDATA[Agentic AI]]></category>
+		<category><![CDATA[AI Infrastructure]]></category>
+		<category><![CDATA[AI Paper Summary]]></category>
+		<category><![CDATA[AI Shorts]]></category>
+		<category><![CDATA[Applications]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Editors Pick]]></category>
+		<category><![CDATA[New Releases]]></category>
+		<category><![CDATA[Staff]]></category>
+		<category><![CDATA[Tech News]]></category>
+		<category><![CDATA[Technology]]></category>
+		<guid isPermaLink="false">https://www.marktechpost.com/?p=84054</guid>
+
+					<description><![CDATA[<p>Meta has detailed TLX, its Triton Low-Level Extensions that add warp-group, barrier, TMA and cluster control to Python Triton kernels. It runs Meta's ads and LLM workloads on Hopper, Blackwell and AMD MI350 GPUs.</p>
+<p>The post <a href="https://www.marktechpost.com/2026/11/23/meta-tlx-triton-low-level-extensions/">Meta TLX Brings Warp-Group GPU Control to Triton on Hopper, Blackwell, AMD</a> appeared first on <a href="https://www.marktechpost.com">MarkTechPost</a>.</p>
+]]></description>
+										
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">84054</post-id>
+	</item>
+	</channel>
+</rss>

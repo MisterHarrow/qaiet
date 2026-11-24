@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:mi="http://schemas.ingestion.microsoft.com/common/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/" xmlns:slate="https://slate.com">
+	<channel>
+		<title>Technology - Slate Magazine</title>
+		<description>Slate RSS - Technology section</description>
+		<link>https://slate.com/technology</link>
+		<lastBuildDate>Tue, 24 Nov 2026 07:42:10 +0000</lastBuildDate>
+		<docs>http://blogs.law.harvard.edu/tech/rss</docs>
+		<copyright>2026</copyright>
+		<generator>Feed delivered by Clay</generator>
+		<category>Artificial Intelligence,Donald Trump,Silicon Valley,Stock Market</category>
+		<category>Research,Video Games</category>
+		<category>Artificial Intelligence,China,Donald Trump</category>
+		<category>Politics,Silicon Valley,Elon Musk,2026 Midterms</category>
+		<category>Climate Change,Democrats,Donald Trump,Energy,Environment,Oil Industry,Republicans</category>
+		<category>Constitution,Law,Social Media,YouTube,Illinois</category>
+		<category>Democrats,Donald Trump,Gambling,2026 Midterms</category>
+		<category>Instagram,Internet,Internet Culture,Relationships,Social Media,Video,Friendship</category>
+		<category>Artificial Intelligence,China</category>
+		<category>Artificial Intelligence,China,Economy,Foreign Policy,Silicon Valley,Stock Market,Taiwan</category>
+		<category>Children,History,Medicine,Cancer</category>
+		<category>Artificial Intelligence,Economy,Foreign Policy,International,Racism,Relationships,Silicon Valley,Stock Market</category>
+		<category>Mental Health,Research,Men</category>
+		<category>Artificial Intelligence,Elections,Silicon Valley,Elon Musk,2026 Midterms</category>
+		<category>Health,History,Neuroscience,Psychology,Research,Science</category>
+		<category>Self-Driving Cars,Transportation,Elon Musk,Cars</category>
+		<category>Food,Research,Science,Drink</category>
+		<category>Internet,Journalism,Magazines,Media</category>
+		<category>Artificial Intelligence,Elon Musk,2026 Midterms</category>
+		<category>Internet,Workplace,One Thing</category>
+		<category>Health,Health Care,Medicine,Research,Vaccines</category>
+		<category>Artificial Intelligence,Stock Market</category>
+		<category>Artificial Intelligence,Department of Education,Harry Potter,Internet,Social Media,Memes</category>
+		<category>Facebook,Mark Zuckerberg,Social Media,Virtual Reality</category>
+		<category>Health,Medicine,Research,Women</category>
+		<item>
+			<slate:id>cmwtnmny10050n9kqoy2ua0y7</slate:id>
+			<title><![CDATA[Trump’s Latest Move Is a “Modern-Day Watergate”]]></title>
+			<link>https://slate.com/technology/2026/11/jensen-huang-nvidia-return-trump-ai-economy.html?via=rss</link>
+			<pubDate>Mon, 23 Nov 2026 19:40:15 GMT</pubDate>
+			<guid isPermaLink="true">https://slate.com/technology/2026/11/jensen-huang-nvidia-return-trump-ai-economy.html</guid>
+			<description><![CDATA[The stock market’s success rests on one man—and a president eager to bail him out.]]></description>
+			<dc:creator>Nitish Pahwa</dc:creator>
+			<category>Artificial Intelligence</category>
+			<category>Donald Trump</category>
+			<category>Silicon Valley</category>
+			<category>Stock Market</category>
+			<media:content url="https://compote.slate.com/images/051cd6cb-0ee6-412b-b8e1-5dd2ad276d31.jpeg?crop=1560%2C1040%2Cx0%2Cy0" medium="image" type="image/jpeg">
+				<media:credit><![CDATA[Photo illustration by Slate. Photo by Heather Diehl/Getty Images and Spencer Platt/Getty Images.]]></media:credit>
+				<media:description>Jensen Huang.</media:description>
+			</media:content>
+		</item>
+		<item>
+			<slate:id>cmwpfds4h0027n9ksnrimy341</slate:id>
+			<title><![CDATA[There’s a Myth About <em>Grand Theft Auto</em> That Started in 1997. This is What the Research Actually Says.]]></title>
+			<link>https://slate.com/technology/2026/11/grand-theft-auto-violent-videogame-consequences-research.html?via=rss</link>
+			<pubDate>Sat, 21 Nov 2026 15:00:00 GMT</pubDate>
+			<guid isPermaLink="true">https://slate.com/technology/2026/11/grand-theft-auto-violent-videogame-consequences-research.html</guid>
+			<description><![CDATA[Here's what the research says about violent video games.]]></description>
+			<dc:creator>Steve Magness</dc:creator>
+			<category>Research</category>
+			<category>Video Games</category>
+			<media:content url="https://compote.slate.com/images/a03688f6-ed2f-433d-b663-240128688183.jpeg?crop=1560%2C1040%2Cx0%2Cy0" medium="image" type="image/jpeg">
+				<media:credit><![CDATA[Rockstar Games]]></media:credit>
+				<media:description>Two women in ski masks holding assault rifles in Grand Theft Auto 6.</media:description>
+			</media:content>
+		</item>
+		<item>
+			<slate:id>cmwo3hwlv003j4dmde7sz9rro</slate:id>
+			<title><![CDATA[Flaming Hot Chip War]]></title>
+			<link>https://slate.com/podcasts/what-next-tbd/2026/11/what-jensen-huang-cost-china?via=rss</link>
+			<pubDate>Fri, 20 Nov 2026 10:20:00 GMT</pubDate>
+			<guid isPermaLink="true">https://slate.com/podcasts/what-next-tbd/2026/11/what-jensen-huang-cost-china</guid>
+			<description><![CDATA[For A.I. firms, China is both a desirable customer and a convenient boogeyman.]]></description>
+			<dc:creator>Lizzie O’Leary</dc:creator>
+			<category>Artificial Intelligence</category>
+			<category>China</category>
+			<category>Donald Trump</category>
+			<media:content url="https://compote.slate.com/images/ef89fac6-eb4d-4a4e-9acb-ad123b193812.jpeg?crop=4500%2C3000%2Cx0%2Cy0" medium="image" type="image/jpeg">
+			</media:content>
+		</item>
+		<item>
+			<slate:id>cmwny100a0019bim0zzguy654</slate:id>
+			<title><![CDATA[Tech Billionaires Really Do Think We’re All Idiots, Don’t They?]]></title>
+			<link>https://slate.com/technology/2026/11/alex-karp-palantir-progressive-politics.html?via=rss</link>
+			<pubDate>Thu, 19 Nov 2026 20:28:10 GMT</pubDate>
+			<guid isPermaLink="true">https://slate.com/technology/2026/11/alex-karp-palantir-progressive-politics.html</guid>
+			<description><![CDATA[Tech billionaires are rediscovering their liberal credentials. I have a modest proposal for making them prove it.]]></description>
+			<dc:creator>Steffi Cao</dc:creator>
+			<category>Politics</category>
+			<category>Silicon Valley</category>
+			<category>Elon Musk</category>
+			<category>2026 Midterms</category>
+			<media:content url="https://compote.slate.com/images/28f72d04-9560-49c1-aae6-532409dcf59f.jpeg?crop=1560%2C1040%2Cx0%2Cy0" medium="image" type="image/jpeg">
+				<media:credit><![CDATA[Finn Gomez/Getty Images]]></media:credit>
+				<media:title type="html"><![CDATA[Palantir CEO Alex Karp.]]></media:title>
+				<media:description>Palantir&apos;s Alex Karp wearing a baseball cap and suit jacket and holding up a peace sign.</media:description>
+			</media:content>
+		</item>
+		<item>
+			<slate:id>cmwmc88sb001k62ky1yg11obi</slate:id>
+			<title><![CDATA[Trump and Democrats Finally Agree on Something. Unfortunately, It’s Bad News for Us All.]]></title>
+			<link>https://slate.com/technology/2026/11/trump-democrats-energy-bill-baaja.html?via=rss</link>
+			<pubDate>Wed, 18 Nov 2026 19:39:34 GMT</pubDate>
+			<guid isPermaLink="true">https://slate.com/technology/2026/11/trump-democrats-energy-bill-baaja.html</guid>
+			<description><![CDATA[A bipartisan energy bill promises to speed up clean power—but rollbacks of environmental protections may be its bigger legacy.]]></description>
+			<dc:creator>Nitish Pahwa</dc:creator>
+			<category>Climate Change</category>
+			<category>Democrats</category>
+			<category>Donald Trump</category>
+			<category>Energy</category>
+			<category>Environment</category>
+			<category>Oil Industry</category>
+			<category>Republicans</category>
+			<media:content url="https://compote.slate.com/images/d9960b32-bfbe-4c06-8d87-3e932176a3b2.jpeg?crop=1560%2C1040%2Cx0%2Cy0" medium="image" type="image/jpeg">
+				<media:credit><![CDATA[Bill Clark/CQ Roll Call/Sipa USA via Reuters Connect]]></media:credit>
+				<media:description>A news conference on the Bipartisan American Affordability and Jobs Act in the U.S. Capitol.</media:description>
+			</media:content>
+		</item>
+	</channel>
+</rss>

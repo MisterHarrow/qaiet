@@ -1,0 +1,505 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:3ezp6hkpykqzyexh2kzjybij/app.bsky.feed.post/3myfax2vx7c2g",
+    "cid": "bafyreidi247pfoo62x3spqhhowa7hvhabry4kmbfiwe4edzmoi5v6rwvxm",
+    "author": {
+     "did": "did:plc:3ezp6hkpykqzyexh2kzjybij",
+     "handle": "yoshuabengio.bsky.social",
+     "displayName": "Yoshua Bengio",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-11-19T18:56:17.917Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mqsaxsy2f32n",
+        "isValid": true,
+        "createdAt": "2026-07-16T22:12:15.376Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-10-21T13:28:46.840Z",
+     "embed": {
+      "$type": "app.bsky.embed.record",
+      "record": {
+       "cid": "bafyreies6kwzms7hkrm2wqskzqnz4nkyr5hqmqc4moyxkto5nk3u7senry",
+       "uri": "at://did:plc:yiwxijbeyioxmvbtbclppgga/app.bsky.feed.post/3mycurdtutc2z"
+      }
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:yiwxijbeyioxmvbtbclppgga"
+        }
+       ],
+       "index": {
+        "byteEnd": 180,
+        "byteStart": 160
+       }
+      }
+     ],
+     "langs": [
+      "fr"
+     ],
+     "text": "Misuse by malicious actors is a risk with any powerful technology; but in the case of AI, the consequences could be catastrophic.\n\nVery interesting analysis by @scasper.bsky.social on how AI developers' decisions can influence cyber, bio, and chemical terrorism risks."
+    },
+    "embed": {
+     "record": {
+      "uri": "at://did:plc:yiwxijbeyioxmvbtbclppgga/app.bsky.feed.post/3mycurdtutc2z",
+      "cid": "bafyreies6kwzms7hkrm2wqskzqnz4nkyr5hqmqc4moyxkto5nk3u7senry",
+      "author": {
+       "did": "did:plc:yiwxijbeyioxmvbtbclppgga",
+       "handle": "scasper.bsky.social",
+       "displayName": "Cas (Stephen Casper)",
+       "associated": {
+        "activitySubscription": {
+         "allowSubscriptions": "followers"
+        }
+       },
+       "createdAt": "2025-02-17T18:05:04.844Z"
+      },
+      "value": {
+       "$type": "app.bsky.feed.post",
+       "createdAt": "2026-10-20T14:45:30.503Z",
+       "embed": {
+        "$type": "app.bsky.embed.images",
+        "images": [
+         {
+          "alt": "",
+          "aspectRatio": {
+           "height": 1140,
+           "width": 1370
+          },
+          "image": {
+           "$type": "blob",
+           "ref": {
+            "$link": "bafkreify6uqbkzhx276tesff4obidw5kttezan7t5eoklmifr2fuoux2fa"
+           },
+           "mimeType": "image/jpeg",
+           "size": 474325
+          }
+         },
+         {
+          "alt": "",
+          "aspectRatio": {
+           "height": 870,
+           "width": 1736
+          },
+          "image": {
+           "$type": "blob",
+           "ref": {
+            "$link": "bafkreicyag44xpuoyitcjx4ch6ud3owpwkj7fd2mf6lngf66scj7s2steu"
+           },
+           "mimeType": "image/jpeg",
+           "size": 840536
+          }
+         }
+        ]
+       },
+       "facets": [
+        {
+         "$type": "app.bsky.richtext.facet",
+         "features": [
+          {
+           "$type": "app.bsky.richtext.facet#mention",
+           "did": "did:plc:26zwmxyoorzqmd6z3t4c4u2e"
+          }
+         ],
+         "index": {
+          "byteEnd": 280,
+          "byteStart": 259
+         }
+        }
+       ],
+       "langs": [
+        "en"
+       ],
+       "text": "🚨New paper (possibly the most important one I have written yet).\n\nWe think that as early as 2027 or 2028, there might be a major AI-enabled terrorism event. We conducted a pre-mortem, made 9 falsifiable predictions, and wrote 2 concrete scenarios.\n\nLed by @kamachee.bsky.social"
+      },
+      "likeCount": 11,
+      "replyCount": 2,
+      "repostCount": 4,
+      "quoteCount": 3,
+      "opThreadPostIndex": 1,
+      "opThreadPostCount": 10,
+      "indexedAt": "2026-10-20T14:45:41.346Z",
+      "embeds": [
+       {
+        "images": [
+         {
+          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:yiwxijbeyioxmvbtbclppgga/bafkreify6uqbkzhx276tesff4obidw5kttezan7t5eoklmifr2fuoux2fa",
+          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:yiwxijbeyioxmvbtbclppgga/bafkreify6uqbkzhx276tesff4obidw5kttezan7t5eoklmifr2fuoux2fa",
+          "alt": "",
+          "aspectRatio": {
+           "height": 1140,
+           "width": 1370
+          }
+         },
+         {
+          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:yiwxijbeyioxmvbtbclppgga/bafkreicyag44xpuoyitcjx4ch6ud3owpwkj7fd2mf6lngf66scj7s2steu",
+          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:yiwxijbeyioxmvbtbclppgga/bafkreicyag44xpuoyitcjx4ch6ud3owpwkj7fd2mf6lngf66scj7s2steu",
+          "alt": "",
+          "aspectRatio": {
+           "height": 870,
+           "width": 1736
+          }
+         }
+        ],
+        "$type": "app.bsky.embed.images#view"
+       }
+      ],
+      "$type": "app.bsky.embed.record#viewRecord"
+     },
+     "$type": "app.bsky.embed.record#view"
+    },
+    "bookmarkCount": 3,
+    "replyCount": 1,
+    "repostCount": 5,
+    "likeCount": 10,
+    "quoteCount": 0,
+    "indexedAt": "2026-10-21T13:28:47.237Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:3ezp6hkpykqzyexh2kzjybij/app.bsky.feed.post/3mxzfvjcer22i",
+    "cid": "bafyreietatwpj4gjcsmxzyezzxwgu7jjgczamehjnxaxm2eqhlrgw7gtma",
+    "author": {
+     "did": "did:plc:3ezp6hkpykqzyexh2kzjybij",
+     "handle": "yoshuabengio.bsky.social",
+     "displayName": "Yoshua Bengio",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-11-19T18:56:17.917Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mqsaxsy2f32n",
+        "isValid": true,
+        "createdAt": "2026-07-16T22:12:15.376Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-10-16T20:25:26.668Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "The company flagged two new incidents as “critical,” yet did not discover or disclose them until months later.",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreihwuvvzk462gxvijbgiyr3l35vsbab2sqik6m4gegxq5aqbbwh4ze"
+        },
+        "mimeType": "image/jpeg",
+        "size": 276247
+       },
+       "title": "OpenAI discloses four more rogue AI incidents involving financial, medical, and government data | Fortune",
+       "uri": "https://fortune.com/2026/10/16/openai-discloses-four-more-rogue-incidents-involving-financial-medical-and-government-data/"
+      }
+     },
+     "langs": [
+      "fr"
+     ],
+     "text": "Until we solve the alignment problem at its source, AI models will continue to optimize for the wrong goals, and increasingly impactful real-world consequences may occur, beyond the ones described here. This is a critical issue I discussed in my blogpost last month, which is cited in the article."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://fortune.com/2026/10/16/openai-discloses-four-more-rogue-incidents-involving-financial-medical-and-government-data/",
+      "title": "OpenAI discloses four more rogue AI incidents involving financial, medical, and government data | Fortune",
+      "description": "The company flagged two new incidents as “critical,” yet did not discover or disclose them until months later.",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:3ezp6hkpykqzyexh2kzjybij/bafkreihwuvvzk462gxvijbgiyr3l35vsbab2sqik6m4gegxq5aqbbwh4ze"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 2,
+    "replyCount": 2,
+    "repostCount": 8,
+    "likeCount": 17,
+    "quoteCount": 1,
+    "indexedAt": "2026-10-16T20:25:29.259Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 2
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:3ezp6hkpykqzyexh2kzjybij/app.bsky.feed.post/3mxyrt3pnxk2z",
+    "cid": "bafyreihflpccuqhmyt6wkxrjhe7slustgf34rl5avylx2merjwf7nkg6kq",
+    "author": {
+     "did": "did:plc:3ezp6hkpykqzyexh2kzjybij",
+     "handle": "yoshuabengio.bsky.social",
+     "displayName": "Yoshua Bengio",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-11-19T18:56:17.917Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mqsaxsy2f32n",
+        "isValid": true,
+        "createdAt": "2026-07-16T22:12:15.376Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-10-16T14:26:10.478Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "Each student at Mila is supervised by one of our affiliated professors. Applicants are selected through the supervision request process.",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreic2s4iqbf6uvp5dwc2betxvxxdpq7e6quc25od4topsh36ct5cg5i"
+        },
+        "mimeType": "image/jpeg",
+        "size": 239619
+       },
+       "title": "Supervision Requests | Mila",
+       "uri": "https://mila.quebec/en/prospective-students-and-postdocs/research-programs/request-supervisor"
+      }
+     },
+     "langs": [
+      "fr"
+     ],
+     "text": "Mila’s annual supervision request process is open for MSc and PhD applications for Fall 2027 admission. While I won’t be taking on new students for supervision this cycle, I encourage you to apply to join Mila’s brilliant deep learning research community."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://mila.quebec/en/prospective-students-and-postdocs/research-programs/request-supervisor",
+      "title": "Supervision Requests | Mila",
+      "description": "Each student at Mila is supervised by one of our affiliated professors. Applicants are selected through the supervision request process.",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:3ezp6hkpykqzyexh2kzjybij/bafkreic2s4iqbf6uvp5dwc2betxvxxdpq7e6quc25od4topsh36ct5cg5i"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 1,
+    "replyCount": 1,
+    "repostCount": 4,
+    "likeCount": 5,
+    "quoteCount": 0,
+    "indexedAt": "2026-10-16T14:26:12.858Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 2
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:3ezp6hkpykqzyexh2kzjybij/app.bsky.feed.post/3mxrkxf6vos2l",
+    "cid": "bafyreig2ogpq22sgg6xqtiydtxsgd2vr4bqgxtvfawlofw3q4av7ahvg6y",
+    "author": {
+     "did": "did:plc:3ezp6hkpykqzyexh2kzjybij",
+     "handle": "yoshuabengio.bsky.social",
+     "displayName": "Yoshua Bengio",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-11-19T18:56:17.917Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mqsaxsy2f32n",
+        "isValid": true,
+        "createdAt": "2026-07-16T22:12:15.376Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-10-13T17:34:40.271Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "",
+        "aspectRatio": {
+         "height": 2250,
+         "width": 3999
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreid337wqn3wzzm4dyaa5lbgwrxjxzomzcwntktfhtzwoekxbaw556y"
+         },
+         "mimeType": "image/jpeg",
+         "size": 1275272
+        }
+       }
+      ]
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://ai-security-letter.org/"
+        }
+       ],
+       "index": {
+        "byteEnd": 257,
+        "byteStart": 235
+       }
+      }
+     ],
+     "langs": [
+      "fr"
+     ],
+     "text": "Over 400 researchers and I have signed this open letter calling for the AI and security communities to come together to improve alignment and containment approaches in order to protect our critical infrastructure and digital systems.\n\nai-security-letter.org"
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:3ezp6hkpykqzyexh2kzjybij/bafkreid337wqn3wzzm4dyaa5lbgwrxjxzomzcwntktfhtzwoekxbaw556y",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:3ezp6hkpykqzyexh2kzjybij/bafkreid337wqn3wzzm4dyaa5lbgwrxjxzomzcwntktfhtzwoekxbaw556y",
+       "alt": "",
+       "aspectRatio": {
+        "height": 2250,
+        "width": 3999
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 7,
+    "replyCount": 1,
+    "repostCount": 15,
+    "likeCount": 34,
+    "quoteCount": 3,
+    "indexedAt": "2026-10-13T17:34:49.458Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:3ezp6hkpykqzyexh2kzjybij/app.bsky.feed.post/3mxrkjwxi322l",
+    "cid": "bafyreiag3esyrohv3mf5zoo4iy3vy5mqpod7s5m3dvyzcgiai5jx6g3uzi",
+    "author": {
+     "did": "did:plc:3ezp6hkpykqzyexh2kzjybij",
+     "handle": "yoshuabengio.bsky.social",
+     "displayName": "Yoshua Bengio",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-11-19T18:56:17.917Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mqsaxsy2f32n",
+        "isValid": true,
+        "createdAt": "2026-07-16T22:12:15.376Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-10-13T17:27:09.140Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "Lawrence Lessig and Yoshua Bengio suggest how to reduce serious risks without abandoning American technological leadership",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreiere5bygx3gjfac5kk6rctidwalnnzujtzuy45rvnu7nksq5ey2qe"
+        },
+        "mimeType": "image/jpeg",
+        "size": 298545
+       },
+       "title": "What Congress can do to prevent an AI catastrophe",
+       "uri": "https://www.economist.com/by-invitation/2026/10/13/what-congress-can-do-to-prevent-an-ai-catastrophe"
+      }
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:3kd35ole3bezzdmiyhnfde6d"
+        }
+       ],
+       "index": {
+        "byteEnd": 81,
+        "byteStart": 62
+       }
+      }
+     ],
+     "langs": [
+      "fr"
+     ],
+     "text": "I've had so many insightful conversations over the years with @lessig.bsky.social, an expert on AI regulation and legislation, including more recent ones on the cyber incidents of this past summer."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://www.economist.com/by-invitation/2026/10/13/what-congress-can-do-to-prevent-an-ai-catastrophe",
+      "title": "What Congress can do to prevent an AI catastrophe",
+      "description": "Lawrence Lessig and Yoshua Bengio suggest how to reduce serious risks without abandoning American technological leadership",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:3ezp6hkpykqzyexh2kzjybij/bafkreiere5bygx3gjfac5kk6rctidwalnnzujtzuy45rvnu7nksq5ey2qe"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 2,
+    "replyCount": 1,
+    "repostCount": 3,
+    "likeCount": 9,
+    "quoteCount": 0,
+    "indexedAt": "2026-10-13T17:27:12.164Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 2
+  }
+ ],
+ "cursor": "2026-07-29T17:38:21.169Z"
+}

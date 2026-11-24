@@ -1,0 +1,450 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3n2zykguajs2g",
+    "cid": "bafyreiaaq3ymytomtld6my6sdpq377azxmhrivb4uem2p2cavwdyw52gl4",
+    "author": {
+     "did": "did:plc:flxq4uyjfotciovpw3x3fxnu",
+     "handle": "emollick.bsky.social",
+     "displayName": "Ethan Mollick",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-09-07T14:28:46.419Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mqpbvcfwy422",
+        "isValid": true,
+        "createdAt": "2026-07-15T17:50:45.436Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-24T06:14:50.987Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "A coordinated AI agent fleet is attacking P vs NP in the open. Watch it live: every step, every refutation, every dead end is kept.",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreigjpstxurgpya2x2efjh2ijw5gwnnzvm52qunbf2fma3dwtfn3hj4"
+        },
+        "mimeType": "image/jpeg",
+        "size": 105430
+       },
+       "title": "Does P = NP? An AI agent fleet is attacking it, live",
+       "uri": "https://pequalnp.com/"
+      }
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://pequalnp.com/"
+        }
+       ],
+       "index": {
+        "byteEnd": 213,
+        "byteStart": 201
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "Two kinds of people: those watching the AI agent swarm trying to crack P=NP and those watching the AI agent swarm trying to (illegally) port the Xbox version of GTA 6 to the PC.\n\nHere is the P=NP one: pequalnp.com"
+    },
+    "embed": {
+     "external": {
+      "uri": "https://pequalnp.com/",
+      "title": "Does P = NP? An AI agent fleet is attacking it, live",
+      "description": "A coordinated AI agent fleet is attacking P vs NP in the open. Watch it live: every step, every refutation, every dead end is kept.",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigjpstxurgpya2x2efjh2ijw5gwnnzvm52qunbf2fma3dwtfn3hj4"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 12,
+    "replyCount": 5,
+    "repostCount": 12,
+    "likeCount": 79,
+    "quoteCount": 5,
+    "indexedAt": "2026-11-24T06:14:51.145Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3n2zw35rhxs2g",
+    "cid": "bafyreicfoco3cbj2wb4yqc6xu4edqs2da4zeoyhugjh2hles75w2cg2gay",
+    "author": {
+     "did": "did:plc:flxq4uyjfotciovpw3x3fxnu",
+     "handle": "emollick.bsky.social",
+     "displayName": "Ethan Mollick",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-09-07T14:28:46.419Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mqpbvcfwy422",
+        "isValid": true,
+        "createdAt": "2026-07-15T17:50:45.436Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-24T05:30:30.659Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "",
+        "aspectRatio": {
+         "height": 1563,
+         "width": 1920
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreibut3ux5r76qltoj4dj3zbr26t5juwhzyk5u2iduvo5q3v66fwuim"
+         },
+         "mimeType": "image/jpeg",
+         "size": 567419
+        }
+       }
+      ]
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://www.anthropic.com/research/working-with-ai"
+        }
+       ],
+       "index": {
+        "byteEnd": 298,
+        "byteStart": 265
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "Two big points from this new Anthropic paper:\n1) The most AI value comes from changing the organization & roles\n2) There is wide worker resistance to AI adoption (partially due to point 1)\n\nChanges that expand what workers do & share AI gains with them could help. www.anthropic.com/research/wor..."
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreibut3ux5r76qltoj4dj3zbr26t5juwhzyk5u2iduvo5q3v66fwuim",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreibut3ux5r76qltoj4dj3zbr26t5juwhzyk5u2iduvo5q3v66fwuim",
+       "alt": "",
+       "aspectRatio": {
+        "height": 1563,
+        "width": 1920
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 32,
+    "replyCount": 1,
+    "repostCount": 4,
+    "likeCount": 41,
+    "quoteCount": 1,
+    "indexedAt": "2026-11-24T05:30:33.329Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3n2yixn4gps2g",
+    "cid": "bafyreigemjz2nn6hctrzmzxu2o7v7ul3comwxytma7aomxg7kumccuglay",
+    "author": {
+     "did": "did:plc:flxq4uyjfotciovpw3x3fxnu",
+     "handle": "emollick.bsky.social",
+     "displayName": "Ethan Mollick",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-09-07T14:28:46.419Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mqpbvcfwy422",
+        "isValid": true,
+        "createdAt": "2026-07-15T17:50:45.436Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T16:03:14.146Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "",
+        "aspectRatio": {
+         "height": 1101,
+         "width": 2240
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreibkot6eaehxrrajp6yq3af6hu3sdykevl6tinjpuwqhwdh4tumpfy"
+         },
+         "mimeType": "image/jpeg",
+         "size": 569380
+        }
+       },
+       {
+        "alt": "",
+        "aspectRatio": {
+         "height": 1100,
+         "width": 1754
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreiac6ddcwqccepdjpmmmzpeflfmd5yxmwyqorozkig5j5qz7tl2yqa"
+         },
+         "mimeType": "image/jpeg",
+         "size": 619368
+        }
+       },
+       {
+        "alt": "",
+        "aspectRatio": {
+         "height": 1228,
+         "width": 1316
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreignnz63bwvmvff5yqnprku6pm4cdhrs5uecz55x7k6t7mohagzjq4"
+         },
+         "mimeType": "image/jpeg",
+         "size": 456802
+        }
+       }
+      ]
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "Walmart seems determined not to make the same mistake with agentic commerce that it did with ecommerce. While Amazon is blocking agents, Walmart is embracing them - quite a reversal.\n\nAnd the new data from Stripe suggests agentic shopping may actually be kicking off & is suprisingly sticky."
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreibkot6eaehxrrajp6yq3af6hu3sdykevl6tinjpuwqhwdh4tumpfy",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreibkot6eaehxrrajp6yq3af6hu3sdykevl6tinjpuwqhwdh4tumpfy",
+       "alt": "",
+       "aspectRatio": {
+        "height": 1101,
+        "width": 2240
+       }
+      },
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreiac6ddcwqccepdjpmmmzpeflfmd5yxmwyqorozkig5j5qz7tl2yqa",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreiac6ddcwqccepdjpmmmzpeflfmd5yxmwyqorozkig5j5qz7tl2yqa",
+       "alt": "",
+       "aspectRatio": {
+        "height": 1100,
+        "width": 1754
+       }
+      },
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreignnz63bwvmvff5yqnprku6pm4cdhrs5uecz55x7k6t7mohagzjq4",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreignnz63bwvmvff5yqnprku6pm4cdhrs5uecz55x7k6t7mohagzjq4",
+       "alt": "",
+       "aspectRatio": {
+        "height": 1228,
+        "width": 1316
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 15,
+    "replyCount": 5,
+    "repostCount": 6,
+    "likeCount": 105,
+    "quoteCount": 3,
+    "indexedAt": "2026-11-23T16:03:18.151Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3n2xc6e3yec2m",
+    "cid": "bafyreidbekjuxz6alvychz65aifynvnwtulfsuucb3bnjl3ieeomaxq5qe",
+    "author": {
+     "did": "did:plc:flxq4uyjfotciovpw3x3fxnu",
+     "handle": "emollick.bsky.social",
+     "displayName": "Ethan Mollick",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-09-07T14:28:46.419Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mqpbvcfwy422",
+        "isValid": true,
+        "createdAt": "2026-07-15T17:50:45.436Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T04:29:03.646Z",
+     "langs": [
+      "en"
+     ],
+     "text": "Not that AI discourse has ever been great, but \"of course LLMs are good at math\" both misses that \"good at math\" is an *slight* understatement in the context of solving the Reimann Hypothesis & also ignores the fact that LLMs were not actually \"good at math\" until very recent breakthroughs."
+    },
+    "bookmarkCount": 5,
+    "replyCount": 11,
+    "repostCount": 20,
+    "likeCount": 275,
+    "quoteCount": 5,
+    "indexedAt": "2026-11-23T04:29:03.340Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3n2x4fwduu22m",
+    "cid": "bafyreifcifmye6rfkfecms6v4ik427lqwrp732asdc7t2mh4xififwgfua",
+    "author": {
+     "did": "did:plc:flxq4uyjfotciovpw3x3fxnu",
+     "handle": "emollick.bsky.social",
+     "displayName": "Ethan Mollick",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-09-07T14:28:46.419Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mqpbvcfwy422",
+        "isValid": true,
+        "createdAt": "2026-07-15T17:50:45.436Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T02:45:55.208Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "",
+        "aspectRatio": {
+         "height": 2376,
+         "width": 3240
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreigrgidmchhykzjv3kzgpbotl266pa2urzdexsny6rddqdkn2iohgu"
+         },
+         "mimeType": "image/jpeg",
+         "size": 1371842
+        }
+       }
+      ]
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "Yes, it is reasonable to expect AI models struggle more with unverifiable domains, but I do think it is worth noting that we also see very large gains in domains without automatic verification as well\n\nHere are humans evaluations of AI in writing, business problems, design, and doing freelance tasks"
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigrgidmchhykzjv3kzgpbotl266pa2urzdexsny6rddqdkn2iohgu",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigrgidmchhykzjv3kzgpbotl266pa2urzdexsny6rddqdkn2iohgu",
+       "alt": "",
+       "aspectRatio": {
+        "height": 2376,
+        "width": 3240
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 16,
+    "replyCount": 6,
+    "repostCount": 5,
+    "likeCount": 93,
+    "quoteCount": 2,
+    "indexedAt": "2026-11-23T02:45:58.650Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 2
+  }
+ ],
+ "cursor": "2026-11-12T22:34:59.292Z"
+}

@@ -1,0 +1,716 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:vcepp6trx4vpe5ourxso4tjl/app.bsky.feed.post/3n2ytweed7k2g",
+    "cid": "bafyreif62xof4ubt6t4bekxd6hqjiqn2vwcslg24rnmjekakdg75kkahkq",
+    "author": {
+     "did": "did:plc:vcepp6trx4vpe5ourxso4tjl",
+     "handle": "404media.co",
+     "displayName": "404 Media",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-08-21T15:29:50.454Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lu4344lgbh2c",
+        "isValid": true,
+        "createdAt": "2025-07-16T18:43:17.388Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T19:19:22.574Z",
+     "embed": {
+      "$type": "app.bsky.embed.video",
+      "aspectRatio": {
+       "height": 1920,
+       "width": 1080
+      },
+      "presentation": "default",
+      "video": {
+       "$type": "blob",
+       "ref": {
+        "$link": "bafkreidg7qglltkdb2lzyimxzdeiwhecgbpjiolenomob7hczkjusuthxe"
+       },
+       "mimeType": "video/mp4",
+       "size": 38439310
+      }
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:444u3bebrvvf6blip35ezn77"
+        }
+       ],
+       "index": {
+        "byteEnd": 222,
+        "byteStart": 199
+       }
+      },
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:cjfcz3t36f6nrprarkhkycxo"
+        }
+       ],
+       "index": {
+        "byteEnd": 259,
+        "byteStart": 234
+       }
+      },
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://www.404media.co/google-wants-to-make-a-24-7-ai-tv-channel-youll-be-the-main-character/"
+        }
+       ],
+       "index": {
+        "byteEnd": 298,
+        "byteStart": 267
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "google wants to take your demographic info, your watch history (presumably from youtube)  to make a 24/7 AI-generated \"channel\" where YOU are the protagonist that also feeds you AI customized ads... @evystadium.bsky.social has more.\n\n@jasonkoebler.bsky.social story: www.404media.co/google-wants..."
+    },
+    "embed": {
+     "cid": "bafkreidg7qglltkdb2lzyimxzdeiwhecgbpjiolenomob7hczkjusuthxe",
+     "playlist": "https://video.bsky.app/watch/did%3Aplc%3Avcepp6trx4vpe5ourxso4tjl/bafkreidg7qglltkdb2lzyimxzdeiwhecgbpjiolenomob7hczkjusuthxe/playlist.m3u8",
+     "aspectRatio": {
+      "height": 1920,
+      "width": 1080
+     },
+     "presentation": "default",
+     "$type": "app.bsky.embed.video#view"
+    },
+    "bookmarkCount": 163,
+    "replyCount": 301,
+    "repostCount": 329,
+    "likeCount": 859,
+    "quoteCount": 557,
+    "indexedAt": "2026-11-23T19:19:25.951Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:cjfcz3t36f6nrprarkhkycxo",
+     "handle": "jasonkoebler.bsky.social",
+     "displayName": "Jason Koebler",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-03T14:43:13.627Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lu42ybefci2g",
+        "isValid": true,
+        "createdAt": "2025-07-16T18:41:08.185Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:cjfcz3t36f6nrprarkhkycxo/app.bsky.feed.repost/3n2yxlgg2a325",
+    "cid": "bafyreiemsr23gokmi7e4enznylfa4dzkefi32gckbg7iow5upsqmdm4eae",
+    "indexedAt": "2026-11-23T20:24:50.948Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:cjfcz3t36f6nrprarkhkycxo/app.bsky.feed.post/3n2xgsn3xbc2m",
+    "cid": "bafyreieg4fqazi3bc7ga754es5gr4c5gwi4qg6zeicm5rfzrb4hsooiayu",
+    "author": {
+     "did": "did:plc:cjfcz3t36f6nrprarkhkycxo",
+     "handle": "jasonkoebler.bsky.social",
+     "displayName": "Jason Koebler",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-03T14:43:13.627Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lu42ybefci2g",
+        "isValid": true,
+        "createdAt": "2025-07-16T18:41:08.185Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T05:51:59.138Z",
+     "embed": {
+      "$type": "app.bsky.embed.record",
+      "record": {
+       "cid": "bafyreibdosa3ffnmzuude5vpbaadeyltkajzilwutiosmit3kyrbdqcllu",
+       "uri": "at://did:plc:nmvatxh4p3d4azda32sbhze6/app.bsky.feed.post/3n2xepham3s2w"
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "we're blowing up all the lead and making the air toxic the day before thanksgiving"
+    },
+    "embed": {
+     "record": {
+      "uri": "at://did:plc:nmvatxh4p3d4azda32sbhze6/app.bsky.feed.post/3n2xepham3s2w",
+      "cid": "bafyreibdosa3ffnmzuude5vpbaadeyltkajzilwutiosmit3kyrbdqcllu",
+      "author": {
+       "did": "did:plc:nmvatxh4p3d4azda32sbhze6",
+       "handle": "carolinefan.bsky.social",
+       "displayName": "Caroline Fan",
+       "pronouns": "she/her",
+       "associated": {
+        "activitySubscription": {
+         "allowSubscriptions": "followers"
+        }
+       },
+       "createdAt": "2023-05-24T09:31:56.228Z"
+      },
+      "value": {
+       "$type": "app.bsky.feed.post",
+       "createdAt": "2026-11-23T05:14:24.851Z",
+       "embed": {
+        "$type": "app.bsky.embed.external",
+        "external": {
+         "description": "The Army says it will detonate nearly five tons of unstable lead azide in Middletown on Wednesday to allow for more favorable weather and time to put safety measures in place.",
+         "thumb": {
+          "$type": "blob",
+          "ref": {
+           "$link": "bafkreibig3f43fzb6qj6ihjmdt7qy6nspncngail2b5ozit4ek64wa6pxu"
+          },
+          "mimeType": "image/jpeg",
+          "size": 323556
+         },
+         "title": "Army reschedules southeast Iowa lead azide blasts for Wednesday",
+         "uri": "https://www.iowapublicradio.org/ipr-news/2026-11-22/southeast-iowa-lead-azide-explosion-wednesday-army"
+        }
+       },
+       "facets": [
+        {
+         "features": [
+          {
+           "$type": "app.bsky.richtext.facet#link",
+           "uri": "https://www.iowapublicradio.org/ipr-news/2026-11-22/southeast-iowa-lead-azide-explosion-wednesday-army"
+          }
+         ],
+         "index": {
+          "byteEnd": 284,
+          "byteStart": 245
+         }
+        }
+       ],
+       "langs": [
+        "en"
+       ],
+       "text": "You're supposed to keep windows and doors closed for 24-48 hours after the detonation. \n\nSo yeah, blow up lead the day before EVERYONE leaves their homes. Esp kiddos to see grandma. \n\nStg, I think they're trying to kill us (short or long term)\n\nwww.iowapublicradio.org/ipr-news/202..."
+      },
+      "likeCount": 175,
+      "replyCount": 15,
+      "repostCount": 80,
+      "quoteCount": 26,
+      "opThreadPostIndex": 2,
+      "opThreadPostCount": 6,
+      "indexedAt": "2026-11-23T05:14:26.249Z",
+      "embeds": [
+       {
+        "external": {
+         "uri": "https://www.iowapublicradio.org/ipr-news/2026-11-22/southeast-iowa-lead-azide-explosion-wednesday-army",
+         "title": "Army reschedules southeast Iowa lead azide blasts for Wednesday",
+         "description": "The Army says it will detonate nearly five tons of unstable lead azide in Middletown on Wednesday to allow for more favorable weather and time to put safety measures in place.",
+         "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:nmvatxh4p3d4azda32sbhze6/bafkreibig3f43fzb6qj6ihjmdt7qy6nspncngail2b5ozit4ek64wa6pxu"
+        },
+        "$type": "app.bsky.embed.external#view"
+       }
+      ],
+      "$type": "app.bsky.embed.record#viewRecord"
+     },
+     "$type": "app.bsky.embed.record#view"
+    },
+    "bookmarkCount": 4,
+    "replyCount": 10,
+    "repostCount": 99,
+    "likeCount": 264,
+    "quoteCount": 4,
+    "indexedAt": "2026-11-23T05:51:59.944Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:cjfcz3t36f6nrprarkhkycxo/app.bsky.feed.post/3n2r752ja2s2s",
+    "cid": "bafyreieqhx7rsaacocduiais5efb63sezc5g27v3el5xuekczvgzhkramm",
+    "author": {
+     "did": "did:plc:cjfcz3t36f6nrprarkhkycxo",
+     "handle": "jasonkoebler.bsky.social",
+     "displayName": "Jason Koebler",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-03T14:43:13.627Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lu42ybefci2g",
+        "isValid": true,
+        "createdAt": "2025-07-16T18:41:08.185Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-20T18:18:40.383Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "YouTube video by Slate",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreibs4mf4ncqo4kkpvy2ltgu33t2bcpevgqjtb7zwf2aekwlwuwr2oi"
+        },
+        "mimeType": "image/jpeg",
+        "size": 159011
+       },
+       "title": "Our Tech Landscape Has Gotten Worse—and Is Breaking Down in Real Time. Feat. 404's Jason Koebler",
+       "uri": "https://www.youtube.com/watch?v=ElOQKgTrQnI"
+      }
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://www.youtube.com/watch?v=ElOQKgTrQnI"
+        }
+       ],
+       "index": {
+        "byteEnd": 46,
+        "byteStart": 15
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "This was fun!\n\nwww.youtube.com/watch?v=ElOQ..."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://www.youtube.com/watch?v=ElOQKgTrQnI",
+      "title": "Our Tech Landscape Has Gotten Worse—and Is Breaking Down in Real Time. Feat. 404's Jason Koebler",
+      "description": "YouTube video by Slate",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:cjfcz3t36f6nrprarkhkycxo/bafkreibs4mf4ncqo4kkpvy2ltgu33t2bcpevgqjtb7zwf2aekwlwuwr2oi"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 9,
+    "replyCount": 0,
+    "repostCount": 8,
+    "likeCount": 31,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-20T18:18:48.764Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:yqgzmitxlttnrddy5fqh6yzw/app.bsky.feed.post/3n2r4plglyc2k",
+    "cid": "bafyreig2qe7o2oixzlnwj4hfvrmkwwfa7kwitbox74uqxjsdlhvrsfqcni",
+    "author": {
+     "did": "did:plc:yqgzmitxlttnrddy5fqh6yzw",
+     "handle": "maryharris.bsky.social",
+     "displayName": "Mary Harris",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-10-13T02:22:53.116Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-20T17:35:20.876Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "YouTube video by Slate",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreibs4mf4ncqo4kkpvy2ltgu33t2bcpevgqjtb7zwf2aekwlwuwr2oi"
+        },
+        "mimeType": "image/jpeg",
+        "size": 159011
+       },
+       "title": "Our Tech Landscape Has Gotten Worse—and Is Breaking Down in Real Time. Feat. 404's Jason Koebler",
+       "uri": "https://www.youtube.com/watch?v=ElOQKgTrQnI"
+      }
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:cjfcz3t36f6nrprarkhkycxo"
+        }
+       ],
+       "index": {
+        "byteEnd": 59,
+        "byteStart": 34
+       }
+      },
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://www.youtube.com/watch?v=ElOQKgTrQnI"
+        }
+       ],
+       "index": {
+        "byteEnd": 181,
+        "byteStart": 150
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "It's Monday's show... today! with @jasonkoebler.bsky.social (thank you art team for finding the face I make when i think about the internet breaking) www.youtube.com/watch?v=ElOQ..."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://www.youtube.com/watch?v=ElOQKgTrQnI",
+      "title": "Our Tech Landscape Has Gotten Worse—and Is Breaking Down in Real Time. Feat. 404's Jason Koebler",
+      "description": "YouTube video by Slate",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:yqgzmitxlttnrddy5fqh6yzw/bafkreibs4mf4ncqo4kkpvy2ltgu33t2bcpevgqjtb7zwf2aekwlwuwr2oi"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 2,
+    "likeCount": 10,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-20T17:35:21.854Z",
+    "threadgate": {
+     "uri": "at://did:plc:yqgzmitxlttnrddy5fqh6yzw/app.bsky.feed.threadgate/3n2r4plglyc2k",
+     "cid": "bafyreidi4m6aanmwmwz7j2oaqsitnvzqppxuvsogp5grjzfzxdpmuypcy4",
+     "record": {
+      "$type": "app.bsky.feed.threadgate",
+      "allow": [
+       {
+        "$type": "app.bsky.feed.threadgate#followerRule"
+       }
+      ],
+      "createdAt": "2026-11-20T17:35:21.176Z",
+      "hiddenReplies": [],
+      "post": "at://did:plc:yqgzmitxlttnrddy5fqh6yzw/app.bsky.feed.post/3n2r4plglyc2k"
+     },
+     "lists": []
+    }
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:cjfcz3t36f6nrprarkhkycxo",
+     "handle": "jasonkoebler.bsky.social",
+     "displayName": "Jason Koebler",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-03T14:43:13.627Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lu42ybefci2g",
+        "isValid": true,
+        "createdAt": "2025-07-16T18:41:08.185Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:cjfcz3t36f6nrprarkhkycxo/app.bsky.feed.repost/3n2r74cfup626",
+    "cid": "bafyreifwfznrw3ewpwzqogq5ff6gqmlv6lnwtkt4uk7uqng65evumurfxe",
+    "indexedAt": "2026-11-20T18:18:15.250Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:cjfcz3t36f6nrprarkhkycxo/app.bsky.feed.post/3n2r726trx22s",
+    "cid": "bafyreielkdlstfg473k4om5kqsjlrlazt2ialx24ftqp6xymeuhtp3zkuq",
+    "author": {
+     "did": "did:plc:cjfcz3t36f6nrprarkhkycxo",
+     "handle": "jasonkoebler.bsky.social",
+     "displayName": "Jason Koebler",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-03T14:43:13.627Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lu42ybefci2g",
+        "isValid": true,
+        "createdAt": "2025-07-16T18:41:08.185Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-20T18:17:04.260Z",
+     "embed": {
+      "$type": "app.bsky.embed.recordWithMedia",
+      "media": {
+       "$type": "app.bsky.embed.images",
+       "images": [
+        {
+         "alt": "After this article was published (and three days after we initially asked for comment), an AptDeco spokesperson gave 404 Media a convoluted explanation involving “bot swarms,” which it blamed for the delays in seller payouts. “Over the past few months, we’ve been dealing with an unprecedented volume of bot activity, some of it malicious. This has created a myriad of challenges that we’ve been actively working to address.These bot swarms, along with the broader cybersecurity challenges of an AI-e…",
+         "aspectRatio": {
+          "height": 956,
+          "width": 1076
+         },
+         "image": {
+          "$type": "blob",
+          "ref": {
+           "$link": "bafkreicog7oecyjxsjcvbulf5yhbfdytpj7l7w2maqszcfke72hhaheqyu"
+          },
+          "mimeType": "image/jpeg",
+          "size": 428712
+         }
+        },
+        {
+         "alt": "When I asked for clarification because it was not clear how bot swarms would affect payouts, the spokesperson said “the bot swarm did not affect seller payouts.”\n\n“We deployed code to further improve protections for our customers (given the bot swarms) which inadvertently impacted seller payout processing. Providing additional technical context would require a detailed understanding of our codebase and would likely be more information than is relevant or useful to readers,” they added. “That sai…",
+         "aspectRatio": {
+          "height": 626,
+          "width": 1058
+         },
+         "image": {
+          "$type": "blob",
+          "ref": {
+           "$link": "bafkreic3ntaftwnaeoptus3u6s4v5bkmxyjnvn344hw4cmq4isavfsb67a"
+          },
+          "mimeType": "image/jpeg",
+          "size": 271109
+         }
+        }
+       ]
+      },
+      "record": {
+       "$type": "app.bsky.embed.record",
+       "record": {
+        "cid": "bafyreiepq33mdmkcgruozkscjpu6drpd6ygieefxo7t6njlwxijtzvfs6q",
+        "uri": "at://did:plc:cjfcz3t36f6nrprarkhkycxo/app.bsky.feed.post/3n2ofjnc3lc2e"
+       }
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "AptDeco sent me a bizarre statement blaming AI bot swarms for not paying people, then saying it wasn't the bot swarms but that they broke payouts trying to combat AI but didn't tell anyone about it because it's too complicated you wouldn't understand. also they're being sued by American Express"
+    },
+    "embed": {
+     "media": {
+      "images": [
+       {
+        "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:cjfcz3t36f6nrprarkhkycxo/bafkreicog7oecyjxsjcvbulf5yhbfdytpj7l7w2maqszcfke72hhaheqyu",
+        "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:cjfcz3t36f6nrprarkhkycxo/bafkreicog7oecyjxsjcvbulf5yhbfdytpj7l7w2maqszcfke72hhaheqyu",
+        "alt": "After this article was published (and three days after we initially asked for comment), an AptDeco spokesperson gave 404 Media a convoluted explanation involving “bot swarms,” which it blamed for the delays in seller payouts. “Over the past few months, we’ve been dealing with an unprecedented volume of bot activity, some of it malicious. This has created a myriad of challenges that we’ve been actively working to address.These bot swarms, along with the broader cybersecurity challenges of an AI-e…",
+        "aspectRatio": {
+         "height": 956,
+         "width": 1076
+        }
+       },
+       {
+        "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:cjfcz3t36f6nrprarkhkycxo/bafkreic3ntaftwnaeoptus3u6s4v5bkmxyjnvn344hw4cmq4isavfsb67a",
+        "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:cjfcz3t36f6nrprarkhkycxo/bafkreic3ntaftwnaeoptus3u6s4v5bkmxyjnvn344hw4cmq4isavfsb67a",
+        "alt": "When I asked for clarification because it was not clear how bot swarms would affect payouts, the spokesperson said “the bot swarm did not affect seller payouts.”\n\n“We deployed code to further improve protections for our customers (given the bot swarms) which inadvertently impacted seller payout processing. Providing additional technical context would require a detailed understanding of our codebase and would likely be more information than is relevant or useful to readers,” they added. “That sai…",
+        "aspectRatio": {
+         "height": 626,
+         "width": 1058
+        }
+       }
+      ],
+      "$type": "app.bsky.embed.images#view"
+     },
+     "record": {
+      "record": {
+       "uri": "at://did:plc:cjfcz3t36f6nrprarkhkycxo/app.bsky.feed.post/3n2ofjnc3lc2e",
+       "cid": "bafyreiepq33mdmkcgruozkscjpu6drpd6ygieefxo7t6njlwxijtzvfs6q",
+       "author": {
+        "did": "did:plc:cjfcz3t36f6nrprarkhkycxo",
+        "handle": "jasonkoebler.bsky.social",
+        "displayName": "Jason Koebler",
+        "associated": {
+         "chat": {
+          "allowIncoming": "all"
+         },
+         "activitySubscription": {
+          "allowSubscriptions": "followers"
+         }
+        },
+        "createdAt": "2023-05-03T14:43:13.627Z",
+        "verification": {
+         "verifications": [
+          {
+           "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+           "issuerDisplayName": "Bluesky",
+           "issuerHandle": "bsky.app",
+           "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lu42ybefci2g",
+           "isValid": true,
+           "createdAt": "2025-07-16T18:41:08.185Z"
+          }
+         ],
+         "verifiedStatus": "valid",
+         "trustedVerifierStatus": "none"
+        }
+       },
+       "value": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-11-19T15:35:05.961Z",
+        "embed": {
+         "$type": "app.bsky.embed.external",
+         "external": {
+          "description": "“It genuinely feels like I’ve had something stolen from me.”",
+          "thumb": {
+           "$type": "blob",
+           "ref": {
+            "$link": "bafkreic34gupt4vkvcecmbh3ks3h4slki4onbnlpd65rzcppcldx5v6aky"
+           },
+           "mimeType": "image/jpeg",
+           "size": 531053
+          },
+          "title": "High-End Furniture Marketplace AptDeco Is Taking People’s Furniture and Not Paying Them",
+          "uri": "https://www.404media.co/high-end-furniture-marketplace-aptdeco-is-taking-peoples-furniture-and-not-paying-them/"
+         }
+        },
+        "facets": [
+         {
+          "features": [
+           {
+            "$type": "app.bsky.richtext.facet#link",
+            "uri": "https://www.404media.co/high-end-furniture-marketplace-aptdeco-is-taking-peoples-furniture-and-not-paying-them/"
+           }
+          ],
+          "index": {
+           "byteEnd": 259,
+           "byteStart": 228
+          }
+         }
+        ],
+        "langs": [
+         "en"
+        ],
+        "text": "New: The high-end furniture marketplace AptDeco has been taking sellers' furniture, telling them they'd get paid within 10 days, then putting them in an endless customer support loop. Some sellers have not been paid for months\n\nwww.404media.co/high-end-fur..."
+       },
+       "likeCount": 85,
+       "replyCount": 5,
+       "repostCount": 24,
+       "quoteCount": 9,
+       "opThreadPostIndex": 1,
+       "opThreadPostCount": 3,
+       "indexedAt": "2026-11-19T15:35:08.256Z",
+       "embeds": [
+        {
+         "external": {
+          "uri": "https://www.404media.co/high-end-furniture-marketplace-aptdeco-is-taking-peoples-furniture-and-not-paying-them/",
+          "title": "High-End Furniture Marketplace AptDeco Is Taking People’s Furniture and Not Paying Them",
+          "description": "“It genuinely feels like I’ve had something stolen from me.”",
+          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:cjfcz3t36f6nrprarkhkycxo/bafkreic34gupt4vkvcecmbh3ks3h4slki4onbnlpd65rzcppcldx5v6aky"
+         },
+         "$type": "app.bsky.embed.external#view"
+        }
+       ],
+       "$type": "app.bsky.embed.record#viewRecord"
+      }
+     },
+     "$type": "app.bsky.embed.recordWithMedia#view"
+    },
+    "bookmarkCount": 6,
+    "replyCount": 6,
+    "repostCount": 36,
+    "likeCount": 136,
+    "quoteCount": 4,
+    "indexedAt": "2026-11-20T18:17:22.040Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 2
+  }
+ ],
+ "cursor": "2026-11-09T21:35:19.158Z"
+}

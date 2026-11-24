@@ -1,0 +1,596 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:3n5xhy6vl7smssmwxq5wgqa6/app.bsky.feed.post/3n2y5arjbkk2i",
+    "cid": "bafyreigf2hmth2ht6aewzfbrdrkpx6eqdbnceu7xz2g5eujlq2tnz5rjna",
+    "author": {
+     "did": "did:plc:3n5xhy6vl7smssmwxq5wgqa6",
+     "handle": "gergely.pragmaticengineer.com",
+     "displayName": "Gergely Orosz",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-26T13:26:43.113Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lv44o5vdyt2g",
+        "isValid": true,
+        "createdAt": "2025-07-29T12:36:28.069Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T12:33:35.848Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "",
+        "aspectRatio": {
+         "height": 1676,
+         "width": 1598
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreiht6xniui5jq4gsewmp234uy7gi7ws7sgmcgv7z4d72rmeaqe3o4m"
+         },
+         "mimeType": "image/jpeg",
+         "size": 400588
+        }
+       }
+      ]
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:3y5mmnrkhxkv37szj7twlc6n"
+        }
+       ],
+       "index": {
+        "byteEnd": 103,
+        "byteStart": 81
+       }
+      },
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://newsletter.pragmaticengineer.com/p/forward-deployed-engineers"
+        }
+       ],
+       "index": {
+        "byteEnd": 240,
+        "byteStart": 192
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "Everyone is talking about Forward Deployed Engineers\n\nI wrote a paid deepdive in @pragmaticengineer.com, when the role started to get popular, more than a year ago\n\nMade it free today\n\nEnjoy: newsletter.pragmaticengineer.com/p/forward-de..."
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:3n5xhy6vl7smssmwxq5wgqa6/bafkreiht6xniui5jq4gsewmp234uy7gi7ws7sgmcgv7z4d72rmeaqe3o4m",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:3n5xhy6vl7smssmwxq5wgqa6/bafkreiht6xniui5jq4gsewmp234uy7gi7ws7sgmcgv7z4d72rmeaqe3o4m",
+       "alt": "",
+       "aspectRatio": {
+        "height": 1676,
+        "width": 1598
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 10,
+    "replyCount": 3,
+    "repostCount": 1,
+    "likeCount": 32,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-23T12:33:37.748Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:3n5xhy6vl7smssmwxq5wgqa6/app.bsky.feed.post/3n2m7sbxlrc2p",
+    "cid": "bafyreih5jycnxjqohozwhfmeoqqxtc766xnilnixp7t4nhcd3rfeakwcni",
+    "author": {
+     "did": "did:plc:3n5xhy6vl7smssmwxq5wgqa6",
+     "handle": "gergely.pragmaticengineer.com",
+     "displayName": "Gergely Orosz",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-26T13:26:43.113Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lv44o5vdyt2g",
+        "isValid": true,
+        "createdAt": "2025-07-29T12:36:28.069Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-18T18:47:14.145Z",
+     "embed": {
+      "$type": "app.bsky.embed.video",
+      "aspectRatio": {
+       "height": 1080,
+       "width": 1920
+      },
+      "presentation": "default",
+      "video": {
+       "$type": "blob",
+       "ref": {
+        "$link": "bafkreihudbbfqpppbyly2eexwjh2ijfgpisn2mc27o4f4xnd2lxji5rpq4"
+       },
+       "mimeType": "video/mp4",
+       "size": 19154929
+      }
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://youtu.be/4Cjb7691GJ8"
+        }
+       ],
+       "index": {
+        "byteEnd": 208,
+        "byteStart": 188
+       }
+      },
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://open.spotify.com/episode/4UgVFWty2I8hGAgSvT7pjC"
+        }
+       ],
+       "index": {
+        "byteEnd": 257,
+        "byteStart": 225
+       }
+      },
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://podcasts.apple.com/us/podcast/software-factories-and-code-reviews-with-harjot-gill/id1769051199?i=1000802762675"
+        }
+       ],
+       "index": {
+        "byteEnd": 306,
+        "byteStart": 272
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "How does a truly \"AI-pilled\" startup work? Harjot Gill spent $250K last month on AI agents, shipped 5,000 PRs and explains why this all makes sense -at least for CodeRabbit.\n\n• YouTube: youtu.be/4Cjb7691GJ8 \n\n• Spotify: open.spotify.com/episode/4UgV... \n\n• Apple: podcasts.apple.com/us/podcast/s..."
+    },
+    "embed": {
+     "cid": "bafkreihudbbfqpppbyly2eexwjh2ijfgpisn2mc27o4f4xnd2lxji5rpq4",
+     "playlist": "https://video.bsky.app/watch/did%3Aplc%3A3n5xhy6vl7smssmwxq5wgqa6/bafkreihudbbfqpppbyly2eexwjh2ijfgpisn2mc27o4f4xnd2lxji5rpq4/playlist.m3u8",
+     "aspectRatio": {
+      "height": 1080,
+      "width": 1920
+     },
+     "presentation": "default",
+     "$type": "app.bsky.embed.video#view"
+    },
+    "bookmarkCount": 8,
+    "replyCount": 3,
+    "repostCount": 2,
+    "likeCount": 12,
+    "quoteCount": 2,
+    "indexedAt": "2026-11-18T18:47:15.948Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 3
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:3n5xhy6vl7smssmwxq5wgqa6/app.bsky.feed.post/3n2hpy7okw22k",
+    "cid": "bafyreibj3hvc3ekwigd3jhsvhxzicy4w4wk5zxraf4m5fztnzdui5ym6o4",
+    "author": {
+     "did": "did:plc:3n5xhy6vl7smssmwxq5wgqa6",
+     "handle": "gergely.pragmaticengineer.com",
+     "displayName": "Gergely Orosz",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-26T13:26:43.113Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lv44o5vdyt2g",
+        "isValid": true,
+        "createdAt": "2025-07-29T12:36:28.069Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-16T23:53:34.257Z",
+     "embed": {
+      "$type": "app.bsky.embed.record",
+      "record": {
+       "cid": "bafyreib2y5yllfxrrvhxwk2asvwhvzk5ibbbe5sy2xlembfz6q72wmo67i",
+       "uri": "at://did:plc:3n5xhy6vl7smssmwxq5wgqa6/app.bsky.feed.post/3n2grurhfis23"
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "In case you missed the gist:\n\n- Microsoft is pro open weight models and Satya thinks every co should use them. \"It's the strategy that has legs.\"\n\n- Satya claims MS is one of the biggest-ever open source contributors. Pro open source \n\n- Pro local AI models: both for open and closed models!"
+    },
+    "embed": {
+     "record": {
+      "uri": "at://did:plc:3n5xhy6vl7smssmwxq5wgqa6/app.bsky.feed.post/3n2grurhfis23",
+      "cid": "bafyreib2y5yllfxrrvhxwk2asvwhvzk5ibbbe5sy2xlembfz6q72wmo67i",
+      "author": {
+       "did": "did:plc:3n5xhy6vl7smssmwxq5wgqa6",
+       "handle": "gergely.pragmaticengineer.com",
+       "displayName": "Gergely Orosz",
+       "associated": {
+        "chat": {
+         "allowIncoming": "all"
+        },
+        "activitySubscription": {
+         "allowSubscriptions": "followers"
+        }
+       },
+       "createdAt": "2023-04-26T13:26:43.113Z",
+       "verification": {
+        "verifications": [
+         {
+          "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+          "issuerDisplayName": "Bluesky",
+          "issuerHandle": "bsky.app",
+          "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lv44o5vdyt2g",
+          "isValid": true,
+          "createdAt": "2025-07-29T12:36:28.069Z"
+         }
+        ],
+        "verifiedStatus": "valid",
+        "trustedVerifierStatus": "none"
+       }
+      },
+      "value": {
+       "$type": "app.bsky.feed.post",
+       "createdAt": "2026-11-16T14:54:46.424Z",
+       "embed": {
+        "$type": "app.bsky.embed.video",
+        "aspectRatio": {
+         "height": 1080,
+         "width": 1920
+        },
+        "presentation": "default",
+        "video": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreiapvokts6zcskxaqpxllfbwskoq4wkyd25yz45odvkgackpnrdd2q"
+         },
+         "mimeType": "video/mp4",
+         "size": 21441958
+        }
+       },
+       "facets": [
+        {
+         "features": [
+          {
+           "$type": "app.bsky.richtext.facet#link",
+           "uri": "https://youtu.be/0NE89Nzfk20"
+          }
+         ],
+         "index": {
+          "byteEnd": 160,
+          "byteStart": 140
+         }
+        },
+        {
+         "features": [
+          {
+           "$type": "app.bsky.richtext.facet#link",
+           "uri": "https://open.spotify.com/episode/5ygCxO9NxH38Ns7ghTBDDm"
+          }
+         ],
+         "index": {
+          "byteEnd": 208,
+          "byteStart": 176
+         }
+        },
+        {
+         "features": [
+          {
+           "$type": "app.bsky.richtext.facet#link",
+           "uri": "https://podcasts.apple.com/us/podcast/software-engineering-after-code-becomes-cheap-with/id1769051199?i=1000802276487"
+          }
+         ],
+         "index": {
+          "byteEnd": 256,
+          "byteStart": 222
+         }
+        }
+       ],
+       "langs": [
+        "en"
+       ],
+       "text": "What does software engineering look like when generating  code becomes cheap but verifying it remans hard? With Satya Nadella\n\n• YouTube: youtu.be/0NE89Nzfk20 \n\n• Spotify: open.spotify.com/episode/5ygC... \n\n• Apple: podcasts.apple.com/us/podcast/s... \n\n(cont'd)"
+      },
+      "likeCount": 47,
+      "replyCount": 1,
+      "repostCount": 3,
+      "quoteCount": 5,
+      "opThreadPostIndex": 1,
+      "opThreadPostCount": 3,
+      "indexedAt": "2026-11-16T14:54:48.250Z",
+      "embeds": [
+       {
+        "cid": "bafkreiapvokts6zcskxaqpxllfbwskoq4wkyd25yz45odvkgackpnrdd2q",
+        "playlist": "https://video.bsky.app/watch/did%3Aplc%3A3n5xhy6vl7smssmwxq5wgqa6/bafkreiapvokts6zcskxaqpxllfbwskoq4wkyd25yz45odvkgackpnrdd2q/playlist.m3u8",
+        "aspectRatio": {
+         "height": 1080,
+         "width": 1920
+        },
+        "presentation": "default",
+        "$type": "app.bsky.embed.video#view"
+       }
+      ],
+      "$type": "app.bsky.embed.record#viewRecord"
+     },
+     "$type": "app.bsky.embed.record#view"
+    },
+    "bookmarkCount": 6,
+    "replyCount": 5,
+    "repostCount": 3,
+    "likeCount": 50,
+    "quoteCount": 1,
+    "indexedAt": "2026-11-16T23:53:35.142Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:3n5xhy6vl7smssmwxq5wgqa6/app.bsky.feed.post/3n2grurhfis23",
+    "cid": "bafyreib2y5yllfxrrvhxwk2asvwhvzk5ibbbe5sy2xlembfz6q72wmo67i",
+    "author": {
+     "did": "did:plc:3n5xhy6vl7smssmwxq5wgqa6",
+     "handle": "gergely.pragmaticengineer.com",
+     "displayName": "Gergely Orosz",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-26T13:26:43.113Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lv44o5vdyt2g",
+        "isValid": true,
+        "createdAt": "2025-07-29T12:36:28.069Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-16T14:54:46.424Z",
+     "embed": {
+      "$type": "app.bsky.embed.video",
+      "aspectRatio": {
+       "height": 1080,
+       "width": 1920
+      },
+      "presentation": "default",
+      "video": {
+       "$type": "blob",
+       "ref": {
+        "$link": "bafkreiapvokts6zcskxaqpxllfbwskoq4wkyd25yz45odvkgackpnrdd2q"
+       },
+       "mimeType": "video/mp4",
+       "size": 21441958
+      }
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://youtu.be/0NE89Nzfk20"
+        }
+       ],
+       "index": {
+        "byteEnd": 160,
+        "byteStart": 140
+       }
+      },
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://open.spotify.com/episode/5ygCxO9NxH38Ns7ghTBDDm"
+        }
+       ],
+       "index": {
+        "byteEnd": 208,
+        "byteStart": 176
+       }
+      },
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://podcasts.apple.com/us/podcast/software-engineering-after-code-becomes-cheap-with/id1769051199?i=1000802276487"
+        }
+       ],
+       "index": {
+        "byteEnd": 256,
+        "byteStart": 222
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "What does software engineering look like when generating  code becomes cheap but verifying it remans hard? With Satya Nadella\n\n• YouTube: youtu.be/0NE89Nzfk20 \n\n• Spotify: open.spotify.com/episode/5ygC... \n\n• Apple: podcasts.apple.com/us/podcast/s... \n\n(cont'd)"
+    },
+    "embed": {
+     "cid": "bafkreiapvokts6zcskxaqpxllfbwskoq4wkyd25yz45odvkgackpnrdd2q",
+     "playlist": "https://video.bsky.app/watch/did%3Aplc%3A3n5xhy6vl7smssmwxq5wgqa6/bafkreiapvokts6zcskxaqpxllfbwskoq4wkyd25yz45odvkgackpnrdd2q/playlist.m3u8",
+     "aspectRatio": {
+      "height": 1080,
+      "width": 1920
+     },
+     "presentation": "default",
+     "$type": "app.bsky.embed.video#view"
+    },
+    "bookmarkCount": 21,
+    "replyCount": 1,
+    "repostCount": 3,
+    "likeCount": 47,
+    "quoteCount": 5,
+    "indexedAt": "2026-11-16T14:54:48.250Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 3
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:3n5xhy6vl7smssmwxq5wgqa6/app.bsky.feed.post/3n2efzs3tbk27",
+    "cid": "bafyreihcvqnn22aufeturba673jjjikl7zslmvergv2t6mz32antgebmn4",
+    "author": {
+     "did": "did:plc:3n5xhy6vl7smssmwxq5wgqa6",
+     "handle": "gergely.pragmaticengineer.com",
+     "displayName": "Gergely Orosz",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-26T13:26:43.113Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lv44o5vdyt2g",
+        "isValid": true,
+        "createdAt": "2025-07-29T12:36:28.069Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-15T16:17:30.482Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "",
+        "aspectRatio": {
+         "height": 2048,
+         "width": 1232
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreiaay56jqud5nugxth5tqmwhmgmv4khs3xifefqgecmumh4a27sa3a"
+         },
+         "mimeType": "image/jpeg",
+         "size": 1968193
+        }
+       }
+      ]
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "Tomorrow on The Pragmatic Engineer podcast\n\nThere’s not many Big Tech CEOs who started out as IC software engineers, Satya is one of the very very few"
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:3n5xhy6vl7smssmwxq5wgqa6/bafkreiaay56jqud5nugxth5tqmwhmgmv4khs3xifefqgecmumh4a27sa3a",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:3n5xhy6vl7smssmwxq5wgqa6/bafkreiaay56jqud5nugxth5tqmwhmgmv4khs3xifefqgecmumh4a27sa3a",
+       "alt": "",
+       "aspectRatio": {
+        "height": 2048,
+        "width": 1232
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 3,
+    "replyCount": 7,
+    "repostCount": 2,
+    "likeCount": 80,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-15T16:17:33.642Z"
+   }
+  }
+ ],
+ "cursor": "2026-09-23T20:53:52.249Z"
+}

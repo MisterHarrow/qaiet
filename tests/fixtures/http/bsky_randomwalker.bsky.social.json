@@ -1,0 +1,453 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:k3sjdodbk2cofbfzxucculeb/app.bsky.feed.post/3mzyn7ji67p23",
+    "cid": "bafyreiaxkdeagbjcveor7zcpjkkwoum6rq5lzsulzxdet64zrjgkpx3zw4",
+    "author": {
+     "did": "did:plc:k3sjdodbk2cofbfzxucculeb",
+     "handle": "techpolicypress.bsky.social",
+     "displayName": "Tech Policy Press",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-29T17:14:27.614Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lv7ff3ykk62m",
+        "isValid": true,
+        "createdAt": "2025-07-30T19:50:27.019Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-10T23:54:01.314Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "Investigations focused on model behavior rather than the design environment and management’s decisions risk building the company’s defense for it.",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreiab2ewelkiwowfo3b3curthy3bocbeqao6kpljpdwwcbjy5l7igeu"
+        },
+        "mimeType": "image/png",
+        "size": 966302
+       },
+       "title": "Don’t Let ‘Misaligned’ and ‘Rogue’ Agents Obscure Corporate Accountability in OpenAI–Hugging Face Probes",
+       "uri": "https://buff.ly/IaHBN5H"
+      }
+     },
+     "text": "In the OpenAI-Hugging Face incident, Stephanie T. Nguyen, Erie Meyer, Adam Pickersgill and Mihir Kshirsagar see “conventional failures of operational and technical safeguards for which companies can be held accountable,” per their Princeton CITP Tech Policy Clinic report."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://buff.ly/IaHBN5H",
+      "title": "Don’t Let ‘Misaligned’ and ‘Rogue’ Agents Obscure Corporate Accountability in OpenAI–Hugging Face Probes",
+      "description": "Investigations focused on model behavior rather than the design environment and management’s decisions risk building the company’s defense for it.",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:k3sjdodbk2cofbfzxucculeb/bafkreiab2ewelkiwowfo3b3curthy3bocbeqao6kpljpdwwcbjy5l7igeu"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 8,
+    "replyCount": 2,
+    "repostCount": 10,
+    "likeCount": 55,
+    "quoteCount": 1,
+    "indexedAt": "2026-11-10T23:54:02.286Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:h3imi5zmcoqinwouamcnuh7m",
+     "handle": "randomwalker.bsky.social",
+     "displayName": "Arvind Narayanan",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-06-21T20:07:42.669Z"
+    },
+    "uri": "at://did:plc:h3imi5zmcoqinwouamcnuh7m/app.bsky.feed.repost/3mzyq3okjro2o",
+    "cid": "bafyreid2op4taidxkxn5igf34en2ze7z4jxyf47j7hvszjgh3kpmalbpsa",
+    "indexedAt": "2026-11-11T00:45:34.783Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:ldc2wu7h57ks63hpjmosislw/app.bsky.feed.post/3mzxq2bjyck2g",
+    "cid": "bafyreihdqwqsbw4iqsdktejqhmzk7wumzsqitfs7cgocg4juxmezgvj3fa",
+    "author": {
+     "did": "did:plc:ldc2wu7h57ks63hpjmosislw",
+     "handle": "manoelhortaribeiro.bsky.social",
+     "displayName": "Manoel Horta Ribeiro",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-07-05T23:07:55.306Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-10T15:12:07.481Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "",
+        "aspectRatio": {
+         "height": 2160,
+         "width": 3840
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreicvhv2x2hdpuwm7uxkvddjtspobe4hiofrjqk4sglyc5vs3ao5bzq"
+         },
+         "mimeType": "image/jpeg",
+         "size": 1560704
+        }
+       }
+      ]
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://elections.citp.princeton.edu/2026/11/09/what-does-chatgpt-say-about-the-election-it-depends-on-whos-asking/"
+        }
+       ],
+       "index": {
+        "byteEnd": 295,
+        "byteStart": 251
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "What does ChatGPT tell folks about the midterm elections? It depends on who's asking!\n\nWe audited ChatGPT inside 160 real users' own accounts in the days before the midterms. With memory on, we find that answers shifted toward each user's own party!\n\nelections.citp.princeton.edu/2026/11/09/w..."
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ldc2wu7h57ks63hpjmosislw/bafkreicvhv2x2hdpuwm7uxkvddjtspobe4hiofrjqk4sglyc5vs3ao5bzq",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:ldc2wu7h57ks63hpjmosislw/bafkreicvhv2x2hdpuwm7uxkvddjtspobe4hiofrjqk4sglyc5vs3ao5bzq",
+       "alt": "",
+       "aspectRatio": {
+        "height": 2160,
+        "width": 3840
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 7,
+    "replyCount": 1,
+    "repostCount": 20,
+    "likeCount": 41,
+    "quoteCount": 1,
+    "indexedAt": "2026-11-10T15:12:38.778Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:h3imi5zmcoqinwouamcnuh7m",
+     "handle": "randomwalker.bsky.social",
+     "displayName": "Arvind Narayanan",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-06-21T20:07:42.669Z"
+    },
+    "uri": "at://did:plc:h3imi5zmcoqinwouamcnuh7m/app.bsky.feed.repost/3mzxqnas6mg2u",
+    "cid": "bafyreieqblkgbxs6te5i6gwociiu72yjttepdh2i7vwhgn4kf3v6bpbxze",
+    "indexedAt": "2026-11-10T15:22:44.372Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 7
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:wk7sybhegd37i7ljsltxbef6/app.bsky.feed.post/3mzh4t3jzck2b",
+    "cid": "bafyreifaojzrknazqfuv22dqyxg6565dwrbfvrww74pa7gvaplzizu72oq",
+    "author": {
+     "did": "did:plc:wk7sybhegd37i7ljsltxbef6",
+     "handle": "justinhendrix.bsky.social",
+     "displayName": "Justin Hendrix",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-28T00:53:22.305Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lv7fgd345f2t",
+        "isValid": true,
+        "createdAt": "2025-07-30T19:51:07.899Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-04T00:45:29.419Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "Investigations focused on model behavior rather than the design environment and management’s decisions risk building the company’s defense for it.",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreigjelnwn3aqolkfqmfogu5yhnlucnaxdzhl2fhzkog3bm4fmnc5fm"
+        },
+        "mimeType": "image/jpeg",
+        "size": 567941
+       },
+       "title": "Don’t Let ‘Misaligned’ and ‘Rogue’ Agents Obscure Corporate Accountability in OpenAI–Hugging Face Probes",
+       "uri": "https://techpolicy.press/dont-let-misaligned-and-rogue-agents-obscure-corporate-accountability-in-openai-hugging-face-probes"
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "In the OpenAI-Hugging Face incident, Stephanie T. Nguyen, Erie Meyer, Adam Pickersgill and Mihir Kshirsagar see “conventional failures of operational and technical safeguards for which companies can be held accountable,” per their Princeton CITP Tech Policy Clinic report."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://techpolicy.press/dont-let-misaligned-and-rogue-agents-obscure-corporate-accountability-in-openai-hugging-face-probes",
+      "title": "Don’t Let ‘Misaligned’ and ‘Rogue’ Agents Obscure Corporate Accountability in OpenAI–Hugging Face Probes",
+      "description": "Investigations focused on model behavior rather than the design environment and management’s decisions risk building the company’s defense for it.",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:wk7sybhegd37i7ljsltxbef6/bafkreigjelnwn3aqolkfqmfogu5yhnlucnaxdzhl2fhzkog3bm4fmnc5fm"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 11,
+    "replyCount": 0,
+    "repostCount": 21,
+    "likeCount": 51,
+    "quoteCount": 1,
+    "indexedAt": "2026-11-04T00:45:30.671Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:h3imi5zmcoqinwouamcnuh7m",
+     "handle": "randomwalker.bsky.social",
+     "displayName": "Arvind Narayanan",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-06-21T20:07:42.669Z"
+    },
+    "uri": "at://did:plc:h3imi5zmcoqinwouamcnuh7m/app.bsky.feed.repost/3mzhdcpanz72u",
+    "cid": "bafyreihkixo7hw2emne7tghzyuypubmvhfks76gbsmthyezoqha7nckec4",
+    "indexedAt": "2026-11-04T02:41:35.992Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:h3imi5zmcoqinwouamcnuh7m/app.bsky.feed.post/3mze4crdf6c2d",
+    "cid": "bafyreifp2t4dx7gece7yln5r32oi26cblbdd44nab5gpbxqxy4sfik4jna",
+    "author": {
+     "did": "did:plc:h3imi5zmcoqinwouamcnuh7m",
+     "handle": "randomwalker.bsky.social",
+     "displayName": "Arvind Narayanan",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-06-21T20:07:42.669Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-02T19:58:22.628Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "",
+        "aspectRatio": {
+         "height": 1720,
+         "width": 2600
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreid5kqxormrjzohszfo7zevmjarxgg7csdv6plssaevar65pkmdqta"
+         },
+         "mimeType": "image/jpeg",
+         "size": 624202
+        }
+       }
+      ]
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://substack.com/@aisnakeoil/note/c-376617176"
+        }
+       ],
+       "index": {
+        "byteEnd": 226,
+        "byteStart": 198
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "As AI labs race toward Recursive Self Improvement, there’s a possibility that what they are actually racing toward is Recursive Self Extinction — of their business model. Here’s my reasoning. substack.com/@aisnakeoil/..."
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:h3imi5zmcoqinwouamcnuh7m/bafkreid5kqxormrjzohszfo7zevmjarxgg7csdv6plssaevar65pkmdqta",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:h3imi5zmcoqinwouamcnuh7m/bafkreid5kqxormrjzohszfo7zevmjarxgg7csdv6plssaevar65pkmdqta",
+       "alt": "",
+       "aspectRatio": {
+        "height": 1720,
+        "width": 2600
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 11,
+    "replyCount": 5,
+    "repostCount": 8,
+    "likeCount": 36,
+    "quoteCount": 1,
+    "indexedAt": "2026-11-02T19:58:25.674Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:o653h7vj7yv4bikpqnmccja6/app.bsky.feed.post/3myv72jnuak2m",
+    "cid": "bafyreifphqjo3ne7ydwmermke6ukepre6j77cq3oemoddiew2mfayewzwq",
+    "author": {
+     "did": "did:plc:o653h7vj7yv4bikpqnmccja6",
+     "handle": "natematias.bsky.social",
+     "displayName": "J. Nathan Matias",
+     "pronouns": "he/him",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-07-04T23:37:51.746Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-10-27T21:37:31.297Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "New court documents make clearer than ever that Meta has been working hard to control the scientific narrative on their products",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreiemwhgs5knddqxrzosdv42lmiyp55ft5b72g7orzxghkkjghjrxwu"
+        },
+        "mimeType": "image/jpeg",
+        "size": 653535
+       },
+       "title": "It’s now official, tech is the new tobacco",
+       "uri": "https://cailinoconnor.substack.com/p/its-now-official-tech-is-the-new?r=3lzuf&utm_campaign=post&utm_medium=web"
+      }
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://cailinoconnor.substack.com/p/its-now-official-tech-is-the-new"
+        }
+       ],
+       "index": {
+        "byteEnd": 299,
+        "byteStart": 257
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "This release of Meta documents is a deeply shocking look at how tech tries to steer & control science.\n\nIt's normal for crisis comms teams to ask how to counter scientists who criticize their employers. But here's what's especially shocking in these docs:\n\ncailinoconnor.substack.com/p/its-now-of..."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://cailinoconnor.substack.com/p/its-now-official-tech-is-the-new?r=3lzuf&utm_campaign=post&utm_medium=web",
+      "title": "It’s now official, tech is the new tobacco",
+      "description": "New court documents make clearer than ever that Meta has been working hard to control the scientific narrative on their products",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:o653h7vj7yv4bikpqnmccja6/bafkreiemwhgs5knddqxrzosdv42lmiyp55ft5b72g7orzxghkkjghjrxwu"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 195,
+    "replyCount": 3,
+    "repostCount": 382,
+    "likeCount": 706,
+    "quoteCount": 39,
+    "indexedAt": "2026-10-27T21:37:34.276Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:h3imi5zmcoqinwouamcnuh7m",
+     "handle": "randomwalker.bsky.social",
+     "displayName": "Arvind Narayanan",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-06-21T20:07:42.669Z"
+    },
+    "uri": "at://did:plc:h3imi5zmcoqinwouamcnuh7m/app.bsky.feed.repost/3mywmcgcnbr2w",
+    "cid": "bafyreif5wyeuo77aaqudyopep5cc3enksrhuiwo3emd2cnpj3tkp2iuzr4",
+    "indexedAt": "2026-10-28T11:07:14.775Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 11
+  }
+ ],
+ "cursor": "2026-01-12T16:12:17.757Z"
+}

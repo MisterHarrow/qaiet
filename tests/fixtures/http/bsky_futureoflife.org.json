@@ -1,0 +1,371 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:zdjwjzhpt7lt7jvzmowsrygc/app.bsky.feed.post/3mxvyw3udg223",
+    "cid": "bafyreibkalni7syvyjiz7rbn5qeb5piim646na2xvl2wmarl3xab4iw5x4",
+    "author": {
+     "did": "did:plc:zdjwjzhpt7lt7jvzmowsrygc",
+     "handle": "futureoflife.org",
+     "displayName": "Future of Life Institute",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-11-15T16:05:12.421Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-10-15T11:55:08.271Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "",
+        "aspectRatio": {
+         "height": 1440,
+         "width": 1080
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreihygwknrcpudwbkpvbucokhubeipwo3oth7hd67qnc2cq5ocl3ctm"
+         },
+         "mimeType": "image/jpeg",
+         "size": 230763
+        }
+       },
+       {
+        "alt": "",
+        "aspectRatio": {
+         "height": 1440,
+         "width": 1080
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreiacvnfc2ds4wcbwuax7mkd4p5m6rpvzjwsduvv7kyk4pqhpayfo5y"
+         },
+         "mimeType": "image/jpeg",
+         "size": 236076
+        }
+       },
+       {
+        "alt": "",
+        "aspectRatio": {
+         "height": 1440,
+         "width": 1080
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreicgqvnwjq7dxd5v5ygcpr32hab55b2bppjbzcbiyqfyzgeupq545i"
+         },
+         "mimeType": "image/jpeg",
+         "size": 246213
+        }
+       }
+      ]
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "🚨📈 9 in 10 people in the UK, France and Germany want a global treaty on AI weapons.\n\nNew polling, commissioned by the Future of Life Institute, shows citizens are overwhelmingly concerned by the rising use of AI in warfare."
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:zdjwjzhpt7lt7jvzmowsrygc/bafkreihygwknrcpudwbkpvbucokhubeipwo3oth7hd67qnc2cq5ocl3ctm",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:zdjwjzhpt7lt7jvzmowsrygc/bafkreihygwknrcpudwbkpvbucokhubeipwo3oth7hd67qnc2cq5ocl3ctm",
+       "alt": "",
+       "aspectRatio": {
+        "height": 1440,
+        "width": 1080
+       }
+      },
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:zdjwjzhpt7lt7jvzmowsrygc/bafkreiacvnfc2ds4wcbwuax7mkd4p5m6rpvzjwsduvv7kyk4pqhpayfo5y",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:zdjwjzhpt7lt7jvzmowsrygc/bafkreiacvnfc2ds4wcbwuax7mkd4p5m6rpvzjwsduvv7kyk4pqhpayfo5y",
+       "alt": "",
+       "aspectRatio": {
+        "height": 1440,
+        "width": 1080
+       }
+      },
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:zdjwjzhpt7lt7jvzmowsrygc/bafkreicgqvnwjq7dxd5v5ygcpr32hab55b2bppjbzcbiyqfyzgeupq545i",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:zdjwjzhpt7lt7jvzmowsrygc/bafkreicgqvnwjq7dxd5v5ygcpr32hab55b2bppjbzcbiyqfyzgeupq545i",
+       "alt": "",
+       "aspectRatio": {
+        "height": 1440,
+        "width": 1080
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 1,
+    "repostCount": 3,
+    "likeCount": 6,
+    "quoteCount": 0,
+    "indexedAt": "2026-10-15T11:55:20.256Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 3
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:zdjwjzhpt7lt7jvzmowsrygc/app.bsky.feed.post/3mxrgo4zqh222",
+    "cid": "bafyreifgjl7atluybsz346b7sripifznqnonfhygmouqp4whnbfyugmeba",
+    "author": {
+     "did": "did:plc:zdjwjzhpt7lt7jvzmowsrygc",
+     "handle": "futureoflife.org",
+     "displayName": "Future of Life Institute",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-11-15T16:05:12.421Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-10-13T16:17:54.756Z",
+     "embed": {
+      "$type": "app.bsky.embed.video",
+      "aspectRatio": {
+       "height": 1280,
+       "width": 720
+      },
+      "presentation": "default",
+      "video": {
+       "$type": "blob",
+       "ref": {
+        "$link": "bafkreigkblpwymiyorjfux7l7kvbkexzc6zxtmsb6fqmkhu2n63geb4vzi"
+       },
+       "mimeType": "video/mp4",
+       "size": 8932887
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "The first technology that can make itself more powerful without prompting…\n\nDelisted shows us what could go wrong with AI if we don’t set hard guardrails now."
+    },
+    "embed": {
+     "cid": "bafkreigkblpwymiyorjfux7l7kvbkexzc6zxtmsb6fqmkhu2n63geb4vzi",
+     "playlist": "https://video.bsky.app/watch/did%3Aplc%3Azdjwjzhpt7lt7jvzmowsrygc/bafkreigkblpwymiyorjfux7l7kvbkexzc6zxtmsb6fqmkhu2n63geb4vzi/playlist.m3u8",
+     "aspectRatio": {
+      "height": 1280,
+      "width": 720
+     },
+     "presentation": "default",
+     "$type": "app.bsky.embed.video#view"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 1,
+    "repostCount": 1,
+    "likeCount": 3,
+    "quoteCount": 0,
+    "indexedAt": "2026-10-13T16:17:57.956Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 3
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:zdjwjzhpt7lt7jvzmowsrygc/app.bsky.feed.post/3mxhnxs4ww22e",
+    "cid": "bafyreihuk52azw6tdgugmdkfvcpvkr7wpzobq2g3a7dno7o76ig3ydak34",
+    "author": {
+     "did": "did:plc:zdjwjzhpt7lt7jvzmowsrygc",
+     "handle": "futureoflife.org",
+     "displayName": "Future of Life Institute",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-11-15T16:05:12.421Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-10-09T19:01:57.680Z",
+     "embed": {
+      "$type": "app.bsky.embed.video",
+      "aspectRatio": {
+       "height": 1280,
+       "width": 720
+      },
+      "presentation": "default",
+      "video": {
+       "$type": "blob",
+       "ref": {
+        "$link": "bafkreicunmwtffjbkwyoh6gy6zfcswgp3sprbse4b2lnqr747ve4m6nbhe"
+       },
+       "mimeType": "video/mp4",
+       "size": 6539766
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "Governments around the globe are using AI to surveil their citizens.\n\nAI companies are signing on.\n\n🚨 Delisted shows what’s at stake if we don’t draw red lines now."
+    },
+    "embed": {
+     "cid": "bafkreicunmwtffjbkwyoh6gy6zfcswgp3sprbse4b2lnqr747ve4m6nbhe",
+     "playlist": "https://video.bsky.app/watch/did%3Aplc%3Azdjwjzhpt7lt7jvzmowsrygc/bafkreicunmwtffjbkwyoh6gy6zfcswgp3sprbse4b2lnqr747ve4m6nbhe/playlist.m3u8",
+     "aspectRatio": {
+      "height": 1280,
+      "width": 720
+     },
+     "presentation": "default",
+     "$type": "app.bsky.embed.video#view"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 1,
+    "repostCount": 2,
+    "likeCount": 2,
+    "quoteCount": 0,
+    "indexedAt": "2026-10-09T19:02:00.464Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 3
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:zdjwjzhpt7lt7jvzmowsrygc/app.bsky.feed.post/3mxevyiqrjk2u",
+    "cid": "bafyreibgivic5cmoj7kjoyi54aveej3hy3pqxyblexalrkexuianawbemq",
+    "author": {
+     "did": "did:plc:zdjwjzhpt7lt7jvzmowsrygc",
+     "handle": "futureoflife.org",
+     "displayName": "Future of Life Institute",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-11-15T16:05:12.421Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-10-08T16:47:32.118Z",
+     "embed": {
+      "$type": "app.bsky.embed.video",
+      "aspectRatio": {
+       "height": 1080,
+       "width": 1920
+      },
+      "presentation": "default",
+      "video": {
+       "$type": "blob",
+       "ref": {
+        "$link": "bafkreihomid5r4aiyhibkvovz33374zqw44jq2qaekyrjvyxbjwq2e65te"
+       },
+       "mimeType": "video/mp4",
+       "size": 36606710
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "“We cannot delegate matters of life and death to an algorithm.”\n\nAutonomous weapons systems are already being used on battlefields. This November, the UN CCW review conference must launch negotiations on legally binding rules.\n\n🤝 🇳🇬 🇦🇹 🇧🇪 🇵🇭 🇲🇽 🇧🇷 🇺🇳🌐"
+    },
+    "embed": {
+     "cid": "bafkreihomid5r4aiyhibkvovz33374zqw44jq2qaekyrjvyxbjwq2e65te",
+     "playlist": "https://video.bsky.app/watch/did%3Aplc%3Azdjwjzhpt7lt7jvzmowsrygc/bafkreihomid5r4aiyhibkvovz33374zqw44jq2qaekyrjvyxbjwq2e65te/playlist.m3u8",
+     "aspectRatio": {
+      "height": 1080,
+      "width": 1920
+     },
+     "presentation": "default",
+     "$type": "app.bsky.embed.video#view"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 1,
+    "repostCount": 1,
+    "likeCount": 2,
+    "quoteCount": 0,
+    "indexedAt": "2026-10-08T16:47:35.765Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 3
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:zdjwjzhpt7lt7jvzmowsrygc/app.bsky.feed.post/3mx7edcwlgs2w",
+    "cid": "bafyreihzn2yndzekuypl5emaquu66h2rgnsquskncirkt2mkqw2rzsprbu",
+    "author": {
+     "did": "did:plc:zdjwjzhpt7lt7jvzmowsrygc",
+     "handle": "futureoflife.org",
+     "displayName": "Future of Life Institute",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-11-15T16:05:12.421Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-10-06T11:48:09.071Z",
+     "embed": {
+      "$type": "app.bsky.embed.video",
+      "aspectRatio": {
+       "height": 1080,
+       "width": 1920
+      },
+      "presentation": "default",
+      "video": {
+       "$type": "blob",
+       "ref": {
+        "$link": "bafkreigpuyczdz4nxqovnzlsmyruyetej6crkrli7txa6trhrg6p2lmf3e"
+       },
+       "mimeType": "video/mp4",
+       "size": 13430215
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "What if the government could digitally delete you?\n\nWatch DELISTED, streaming TODAY.\n\nWhen AI-driven job loss sparks mass protests, the government's response isn't force - it's erasure. \n\nDissenters are Delisted: wiped from every financial, digital and legal system.\n\nCatch DELISTED at the link below"
+    },
+    "embed": {
+     "cid": "bafkreigpuyczdz4nxqovnzlsmyruyetej6crkrli7txa6trhrg6p2lmf3e",
+     "playlist": "https://video.bsky.app/watch/did%3Aplc%3Azdjwjzhpt7lt7jvzmowsrygc/bafkreigpuyczdz4nxqovnzlsmyruyetej6crkrli7txa6trhrg6p2lmf3e/playlist.m3u8",
+     "aspectRatio": {
+      "height": 1080,
+      "width": 1920
+     },
+     "presentation": "default",
+     "$type": "app.bsky.embed.video#view"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 1,
+    "repostCount": 1,
+    "likeCount": 5,
+    "quoteCount": 0,
+    "indexedAt": "2026-10-06T11:48:11.459Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 3
+  }
+ ],
+ "cursor": "2025-02-24T22:55:30.484Z"
+}

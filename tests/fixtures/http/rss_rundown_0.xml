@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>The Rundown AI</title>
+    <link>https://www.therundown.ai</link>
+    <atom:link href="https://www.therundown.ai/feed" rel="self" type="application/rss+xml"/>
+    <description>Get the latest AI news, understand why it matters, and learn how to apply it in your work.</description>
+    <language>en</language>
+    <item>
+      <title>Claude helps solve math's biggest open problem</title>
+      <link>https://www.therundown.ai/articles/claude-helps-solve-math-s-biggest-open-problem</link>
+      <guid isPermaLink="true">https://www.therundown.ai/articles/claude-helps-solve-math-s-biggest-open-problem</guid>
+      <pubDate>Mon, 23 Nov 2026 11:00:00 GMT</pubDate>
+      <description>PLUS: Test Gemini 4 Neon on finding billing errors</description>
+      <category>ai</category>
+    </item>
+    <item>
+      <title>GTA 6 rakes in $2.4B overnight</title>
+      <link>https://www.therundown.ai/articles/gta-6-rakes-in-2-4b-overnight</link>
+      <guid isPermaLink="true">https://www.therundown.ai/articles/gta-6-rakes-in-2-4b-overnight</guid>
+      <pubDate>Fri, 20 Nov 2026 15:30:00 GMT</pubDate>
+      <description>PLUS: Google’s space data centers find a ride</description>
+      <category>tech</category>
+    </item>
+    <item>
+      <title>Anthropic pulls off the biggest IPO ever</title>
+      <link>https://www.therundown.ai/articles/anthropic-pulls-off-the-biggest-ipo-ever</link>
+      <guid isPermaLink="true">https://www.therundown.ai/articles/anthropic-pulls-off-the-biggest-ipo-ever</guid>
+      <pubDate>Fri, 20 Nov 2026 10:00:00 GMT</pubDate>
+      <description>PLUS: Use AI to find a job and prepare to get hired</description>
+      <category>ai</category>
+    </item>
+    <item>
+      <title>Waymo shuts down freeway rides everywhere</title>
+      <link>https://www.therundown.ai/articles/waymo-shuts-down-freeway-rides-everywhere</link>
+      <guid isPermaLink="true">https://www.therundown.ai/articles/waymo-shuts-down-freeway-rides-everywhere</guid>
+      <pubDate>Thu, 19 Nov 2026 15:30:00 GMT</pubDate>
+      <description>PLUS: Atlas gets a new gig at a chip factory</description>
+      <category>robotics</category>
+    </item>
+    <item>
+      <title>Google’s shipping spree continues with Neon </title>
+      <link>https://www.therundown.ai/articles/google-shipping-spree-continues-with-neon</link>
+      <guid isPermaLink="true">https://www.therundown.ai/articles/google-shipping-spree-continues-with-neon</guid>
+      <pubDate>Thu, 19 Nov 2026 10:00:00 GMT</pubDate>
+      <description>PLUS: Use AI to rework your LinkedIn profile</description>
+      <category>ai</category>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,337 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:owwudjbdv2jkbmdcev774kax/app.bsky.feed.post/3n2zhj7gmhs27",
+    "cid": "bafyreicx7togll5wg33tnqofgnlrbgx3pjsnq4x3d6eohyqoiebjxom4wm",
+    "author": {
+     "did": "did:plc:owwudjbdv2jkbmdcev774kax",
+     "handle": "fieldsmeyer.com",
+     "displayName": "Ami Fields-Meyer",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-11-11T12:49:03.685Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-24T01:09:56.035Z",
+     "embed": {
+      "$type": "app.bsky.embed.video",
+      "aspectRatio": {
+       "height": 1920,
+       "width": 1080
+      },
+      "presentation": "default",
+      "video": {
+       "$type": "blob",
+       "ref": {
+        "$link": "bafkreibb2kvplh3s32qilswove3ammgpozpq5p6iev52sai5zqjlvm2jmu"
+       },
+       "mimeType": "video/mp4",
+       "size": 28814378
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "When I worked on AI policy the White House, we spent meeting after meeting thinking through how to protect the public from the excesses of corporations.\n\nThe biggest scandal of the Jensen affair is that this government has deep, profound resentment for the public it’s charged to protect. Astounding."
+    },
+    "embed": {
+     "cid": "bafkreibb2kvplh3s32qilswove3ammgpozpq5p6iev52sai5zqjlvm2jmu",
+     "playlist": "https://video.bsky.app/watch/did%3Aplc%3Aowwudjbdv2jkbmdcev774kax/bafkreibb2kvplh3s32qilswove3ammgpozpq5p6iev52sai5zqjlvm2jmu/playlist.m3u8",
+     "aspectRatio": {
+      "height": 1920,
+      "width": 1080
+     },
+     "presentation": "default",
+     "$type": "app.bsky.embed.video#view"
+    },
+    "bookmarkCount": 6,
+    "replyCount": 2,
+    "repostCount": 18,
+    "likeCount": 43,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-24T01:09:58.353Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:7fouwor2wfe2655joawn6omm",
+     "handle": "geomblog.bsky.social",
+     "displayName": "Suresh Venkatasubramanian ",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-07-03T12:13:26.845Z"
+    },
+    "uri": "at://did:plc:7fouwor2wfe2655joawn6omm/app.bsky.feed.repost/3n2ztzqmgeq2x",
+    "cid": "bafyreiey5zdaetu54hy22zzzxjrx6ejulagpxhndhtarehpttd5pvegjua",
+    "indexedAt": "2026-11-24T04:53:55.944Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:ppxzeec7mddu2zh57wjqzquy/app.bsky.feed.post/3n2zb3ilxpk2m",
+    "cid": "bafyreiepf3euvtue3u3p2w4u3lceyq6tfca24nk5x4miejekvgogrpvoaa",
+    "author": {
+     "did": "did:plc:ppxzeec7mddu2zh57wjqzquy",
+     "handle": "lance.fortnow.com",
+     "displayName": "Lance Fortnow",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-08-31T13:18:02.707Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lv3peyodvj24",
+        "isValid": true,
+        "createdAt": "2025-07-29T08:38:41.961Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T23:14:52.000Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "Contribute to anthropics/formal-math development by creating an account on GitHub.",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreid6as6sajj5rdqswgt66spzzy7c5ritcsf6j245rtymn3wc2il6cu"
+        },
+        "mimeType": "image/png",
+        "size": 38409
+       },
+       "title": "formal-math/vp-vnp/README.md at main · anthropics/formal-math",
+       "uri": "https://github.com/anthropics/formal-math/blob/main/vp-vnp/README.md"
+      }
+     },
+     "facets": [],
+     "langs": [],
+     "text": "Anthropic just dropped VP ≠ VNP. If it holds up this means there aren't polynomial-size circuits for permanent over the reals using addition and multiplication gates and arbitrary constants. This doesn't settle P v NP."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://github.com/anthropics/formal-math/blob/main/vp-vnp/README.md",
+      "title": "formal-math/vp-vnp/README.md at main · anthropics/formal-math",
+      "description": "Contribute to anthropics/formal-math development by creating an account on GitHub.",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ppxzeec7mddu2zh57wjqzquy/bafkreid6as6sajj5rdqswgt66spzzy7c5ritcsf6j245rtymn3wc2il6cu"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 3,
+    "replyCount": 3,
+    "repostCount": 10,
+    "likeCount": 29,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-23T23:14:53.953Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:7fouwor2wfe2655joawn6omm",
+     "handle": "geomblog.bsky.social",
+     "displayName": "Suresh Venkatasubramanian ",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-07-03T12:13:26.845Z"
+    },
+    "uri": "at://did:plc:7fouwor2wfe2655joawn6omm/app.bsky.feed.repost/3n2zgeqqy2w2x",
+    "cid": "bafyreierj7b4g7vynnoglkh72224hdp2pugern6r73zg76hmrxwujwybh4",
+    "indexedAt": "2026-11-24T00:49:32.846Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 2
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:ryte53nplawpk4ysqhza4az5/app.bsky.feed.post/3n2rzugzt2d2n",
+    "cid": "bafyreieqkv5asulsxtzjwmhgsiq7hl7u67al7uiv2bvaho56cv2d3w55ea",
+    "author": {
+     "did": "did:plc:ryte53nplawpk4ysqhza4az5",
+     "handle": "angelamczhou.bsky.social",
+     "displayName": "angela zhou",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-09-24T02:13:04.539Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-21T02:17:02.021Z",
+     "langs": [
+      "en"
+     ],
+     "text": "I actually think there is a lot of concrete value in researchers talking to researchers about what better AI governance looks like, and encouraging them to get involved in ensuring that AI companies don't get to self-regulate, in a personal/political capacity drawing on their technical expertise"
+    },
+    "bookmarkCount": 1,
+    "replyCount": 2,
+    "repostCount": 1,
+    "likeCount": 5,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-21T02:17:03.047Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:7fouwor2wfe2655joawn6omm",
+     "handle": "geomblog.bsky.social",
+     "displayName": "Suresh Venkatasubramanian ",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-07-03T12:13:26.845Z"
+    },
+    "uri": "at://did:plc:7fouwor2wfe2655joawn6omm/app.bsky.feed.repost/3n2s2njuuua2y",
+    "cid": "bafyreiap35vcr6lzfyrdih7hxndpjcnz6isoturf2dk3wrikfjjc6qqpte",
+    "indexedAt": "2026-11-21T02:31:04.540Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:3igkkqe5nkm66olc4y2syzpy/app.bsky.feed.post/3n2ruapcwob2u",
+    "cid": "bafyreiajfszwxmuivh7yniveetwoxwer3orxskw4wfgj6l67z2ezuvj53u",
+    "author": {
+     "did": "did:plc:3igkkqe5nkm66olc4y2syzpy",
+     "handle": "markriedl.bsky.social",
+     "displayName": "Mark Riedl",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-08-23T20:41:32.672Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-21T00:36:31.313Z",
+     "text": "Me. I dropped it. Totally gave up and moved on to other things. "
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 1,
+    "likeCount": 2,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-21T00:36:31.548Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:7fouwor2wfe2655joawn6omm",
+     "handle": "geomblog.bsky.social",
+     "displayName": "Suresh Venkatasubramanian ",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-07-03T12:13:26.845Z"
+    },
+    "uri": "at://did:plc:7fouwor2wfe2655joawn6omm/app.bsky.feed.repost/3n2s2i4kjlb2b",
+    "cid": "bafyreihvtvqaabzejaayenm7kwn3a2lctvgqzadbwvsvcth64olzoh7yfu",
+    "indexedAt": "2026-11-21T02:28:02.744Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:62gdkmpwa7xme36getyqnem3/app.bsky.feed.post/3n2rnoqosac2v",
+    "cid": "bafyreifmzdfa3edzkcjiiwrx5hvi4ngpv55nwuqppkuubk5xuj2xuyokki",
+    "author": {
+     "did": "did:plc:62gdkmpwa7xme36getyqnem3",
+     "handle": "astrokatie.com",
+     "displayName": "Katie Mack",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-21T05:03:00.394Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lygy6xr4aa2z",
+        "isValid": true,
+        "createdAt": "2025-09-10T00:31:15.416Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-20T22:39:06.446Z",
+     "langs": [
+      "en"
+     ],
+     "text": "Can't imagine how mathematicians feel right now. AI companies aren't passionate about pure math; they're using math problems to show how powerful their models are. It's as if an arms dealer kept bombing houses in your neighborhood just so people would buy their bombs to use on more valuable targets."
+    },
+    "bookmarkCount": 145,
+    "replyCount": 114,
+    "repostCount": 824,
+    "likeCount": 4429,
+    "quoteCount": 66,
+    "indexedAt": "2026-11-20T22:39:06.750Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:7fouwor2wfe2655joawn6omm",
+     "handle": "geomblog.bsky.social",
+     "displayName": "Suresh Venkatasubramanian ",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-07-03T12:13:26.845Z"
+    },
+    "uri": "at://did:plc:7fouwor2wfe2655joawn6omm/app.bsky.feed.repost/3n2rpnlw6jc2y",
+    "cid": "bafyreifi6hsixrfduyphzf7c7pziqs5fh5cude6fktjynzkdzoy5mdft2u",
+    "indexedAt": "2026-11-20T23:14:15.551Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 3
+  }
+ ],
+ "cursor": "2026-11-14T15:25:57.393Z"
+}

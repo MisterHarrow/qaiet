@@ -1,0 +1,7 @@
+<html><head>
+<title>Google Makes Less Money on LLM-Powered Search Even as OpenAI Works to Attract Its Users</title>
+<meta name="description" content="Google is turning its search engine into a chatbot, and OpenAI is turning its chatbot into a search engine."/>
+<meta property="og:title" content="Google Makes Less Money on LLM-Powered Search Even as OpenAI Works to Attract Its Users"/>
+<meta property="og:description" content="Google is turning its search engine into a chatbot, and OpenAI is turning its chatbot into a search engine."/>
+<meta property="article:published_time" content="2026-11-13T08:10:00.000-08:00"/>
+</head></html>

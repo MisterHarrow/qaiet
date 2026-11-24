@@ -1,0 +1,422 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:i4kytxgsu3yfsrt2ml3o7tgq/app.bsky.feed.post/3n2yoavxtg32c",
+    "cid": "bafyreihcfg37byincc3x4fhjoq3nbewsqwylsyhsd2ewqmpc2jfdriganq",
+    "author": {
+     "did": "did:plc:i4kytxgsu3yfsrt2ml3o7tgq",
+     "handle": "ai2.bsky.social",
+     "displayName": "Ai2",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-10-12T22:38:57.278Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T17:37:54.104Z",
+     "embed": {
+      "$type": "app.bsky.embed.video",
+      "aspectRatio": {
+       "height": 1080,
+       "width": 1920
+      },
+      "video": {
+       "$type": "blob",
+       "ref": {
+        "$link": "bafkreift5scdctbta3e3cnjrrjapzimv6cyxiu7qvfcvaw4sd3huaf6ue4"
+       },
+       "mimeType": "video/mp4",
+       "size": 7679370
+      }
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://buff.ly/84Kvlv9"
+        }
+       ],
+       "index": {
+        "byteEnd": 240,
+        "byteStart": 225
+       }
+      }
+     ],
+     "text": "Following a pipette tip or an object in a robot’s gripper gets harder when it disappears from view.\n\nRoboTrack brings together an eval & training data for point tracking in robotic manipulation + new tracking models. 🧵\n\nbuff.ly/84Kvlv9"
+    },
+    "embed": {
+     "cid": "bafkreift5scdctbta3e3cnjrrjapzimv6cyxiu7qvfcvaw4sd3huaf6ue4",
+     "playlist": "https://video.bsky.app/watch/did%3Aplc%3Ai4kytxgsu3yfsrt2ml3o7tgq/bafkreift5scdctbta3e3cnjrrjapzimv6cyxiu7qvfcvaw4sd3huaf6ue4/playlist.m3u8",
+     "aspectRatio": {
+      "height": 1080,
+      "width": 1920
+     },
+     "$type": "app.bsky.embed.video#view"
+    },
+    "bookmarkCount": 3,
+    "replyCount": 1,
+    "repostCount": 4,
+    "likeCount": 10,
+    "quoteCount": 1,
+    "indexedAt": "2026-11-23T17:37:55.042Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 6
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:i4kytxgsu3yfsrt2ml3o7tgq/app.bsky.feed.post/3n2oicd3gnz2c",
+    "cid": "bafyreiacqaxyo2vrwipbukrzzuz53yxqneixbpbmmwl5warrdgqcifengi",
+    "author": {
+     "did": "did:plc:i4kytxgsu3yfsrt2ml3o7tgq",
+     "handle": "ai2.bsky.social",
+     "displayName": "Ai2",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-10-12T22:38:57.278Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-19T16:24:41.576Z",
+     "embed": {
+      "$type": "app.bsky.embed.video",
+      "aspectRatio": {
+       "height": 810,
+       "width": 1440
+      },
+      "video": {
+       "$type": "blob",
+       "ref": {
+        "$link": "bafkreicyahxxxdsl6fpei6ke3ugihso2gkd2zlwuzs2fpstd5vv3xqwa6m"
+       },
+       "mimeType": "video/mp4",
+       "size": 49077798
+      }
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:257mlmai5nguufse56vjeqmr"
+        }
+       ],
+       "index": {
+        "byteEnd": 135,
+        "byteStart": 116
+       }
+      }
+     ],
+     "text": "Theorizer is now available in Asta. It draws on published research to propose theories scientists can test. \n\nWatch @alleninstitute.org neuroscientist Jérôme Lecoq explain how he used an early version to explore a link between neurons and vision. 🧵"
+    },
+    "embed": {
+     "cid": "bafkreicyahxxxdsl6fpei6ke3ugihso2gkd2zlwuzs2fpstd5vv3xqwa6m",
+     "playlist": "https://video.bsky.app/watch/did%3Aplc%3Ai4kytxgsu3yfsrt2ml3o7tgq/bafkreicyahxxxdsl6fpei6ke3ugihso2gkd2zlwuzs2fpstd5vv3xqwa6m/playlist.m3u8",
+     "aspectRatio": {
+      "height": 810,
+      "width": 1440
+     },
+     "$type": "app.bsky.embed.video#view"
+    },
+    "bookmarkCount": 3,
+    "replyCount": 1,
+    "repostCount": 5,
+    "likeCount": 12,
+    "quoteCount": 1,
+    "indexedAt": "2026-11-19T16:24:44.949Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 2
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:i4kytxgsu3yfsrt2ml3o7tgq/app.bsky.feed.post/3n2lu5ajfdt2w",
+    "cid": "bafyreifaebmhw6jo3lpn73oqttub4ochcazudtrz4gab36beox6a7xj444",
+    "author": {
+     "did": "did:plc:i4kytxgsu3yfsrt2ml3o7tgq",
+     "handle": "ai2.bsky.social",
+     "displayName": "Ai2",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-10-12T22:38:57.278Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-18T15:18:36.817Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "",
+        "aspectRatio": {
+         "height": 1463,
+         "width": 2048
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreigfjxxw5xmmooiejsyf45slwgr6xbvbrcngp6jnk4gc77pyhvjgh4"
+         },
+         "mimeType": "image/png",
+         "size": 914679
+        }
+       }
+      ]
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://buff.ly/pO8pNA0"
+        }
+       ],
+       "index": {
+        "byteEnd": 250,
+        "byteStart": 235
+       }
+      }
+     ],
+     "text": "Geospatial AI is moving fast, and putting it to work for the public good takes more than any one group can do alone.\n\nAi2 and Taylor Geospatial are teaming up on open benchmarks, models, and data that practitioners can build on. 🧵\n\nbuff.ly/pO8pNA0"
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:i4kytxgsu3yfsrt2ml3o7tgq/bafkreigfjxxw5xmmooiejsyf45slwgr6xbvbrcngp6jnk4gc77pyhvjgh4",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:i4kytxgsu3yfsrt2ml3o7tgq/bafkreigfjxxw5xmmooiejsyf45slwgr6xbvbrcngp6jnk4gc77pyhvjgh4",
+       "alt": "",
+       "aspectRatio": {
+        "height": 1463,
+        "width": 2048
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 6,
+    "replyCount": 1,
+    "repostCount": 4,
+    "likeCount": 9,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-18T15:18:37.558Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 4
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:i4kytxgsu3yfsrt2ml3o7tgq/app.bsky.feed.post/3n27jcjmwrv2e",
+    "cid": "bafyreidkrn7ngh746bcebdkcryyv2ylvgs55p7vpoxssogywnbzun4zyve",
+    "author": {
+     "did": "did:plc:i4kytxgsu3yfsrt2ml3o7tgq",
+     "handle": "ai2.bsky.social",
+     "displayName": "Ai2",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-10-12T22:38:57.278Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-13T17:32:46.124Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "",
+        "aspectRatio": {
+         "height": 1080,
+         "width": 1512
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreibc523ul5mlp2toajvxic73iq5i4s7aqckhustwi6ugf6nwbf22ji"
+         },
+         "mimeType": "image/png",
+         "size": 54776
+        }
+       }
+      ]
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://buff.ly/cu7Bgwm"
+        }
+       ],
+       "index": {
+        "byteEnd": 273,
+        "byteStart": 258
+       }
+      }
+     ],
+     "text": "Asking how to thicken frosting sliding off warm cupcakes? 🧁 Let them cool first! \n\nThat’s the XY problem: seeking a fix that misses the real issue. XYBench tests whether LLMs spot & address it. \n\n🏆 It won the Best Resource Award at EMNLP 2026! 🧵\n\nbuff.ly/cu7Bgwm"
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:i4kytxgsu3yfsrt2ml3o7tgq/bafkreibc523ul5mlp2toajvxic73iq5i4s7aqckhustwi6ugf6nwbf22ji",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:i4kytxgsu3yfsrt2ml3o7tgq/bafkreibc523ul5mlp2toajvxic73iq5i4s7aqckhustwi6ugf6nwbf22ji",
+       "alt": "",
+       "aspectRatio": {
+        "height": 1080,
+        "width": 1512
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 3,
+    "replyCount": 1,
+    "repostCount": 2,
+    "likeCount": 4,
+    "quoteCount": 1,
+    "indexedAt": "2026-11-13T17:32:46.778Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 7
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:wzhjna25kl74w3rywz6fn4ln/app.bsky.feed.post/3n22lcbvznh2l",
+    "cid": "bafyreihefmtuuefl322av5huet4qqditef5pudr4sacpjsp5goc427djse",
+    "author": {
+     "did": "did:plc:wzhjna25kl74w3rywz6fn4ln",
+     "handle": "nextcloud.bsky.social",
+     "displayName": "Nextcloud",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2025-01-29T13:55:12.943Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-11T18:25:05.932Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "Nextcloud chose Olmo 3 for fully open, self-hosted AI, earning its highest Ethical AI rating while making local AI practical on consumer hardware.",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreidkxrml2vwko7jbdexl5yayzc7lyy6tfuqampvbzwps4vucevr3le"
+        },
+        "mimeType": "image/png",
+        "size": 98631
+       },
+       "title": "How Olmo 3 earned the highest ethical rating from Nextcloud  | Ai2",
+       "uri": "https://allenai.org/blog/nextcloud"
+      }
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:i4kytxgsu3yfsrt2ml3o7tgq"
+        }
+       ],
+       "index": {
+        "byteEnd": 60,
+        "byteStart": 44
+       }
+      },
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#tag",
+         "tag": "NextcloudAssistant"
+        }
+       ],
+       "index": {
+        "byteEnd": 243,
+        "byteStart": 224
+       }
+      },
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://allenai.org/blog/nextcloud"
+        }
+       ],
+       "index": {
+        "byteEnd": 281,
+        "byteStart": 255
+       }
+      }
+     ],
+     "text": "Olmo 3 joins the club! 🟢 The AI model by @ai2.bsky.social earns Nextcloud’s highest Ethical AI rating: \n\nOpen source \nSelf-hostable \nAccessible training data\n\nRun it on your own hardware via llm2 and use it inside your #NextcloudAssistant.\n\nArticle: allenai.org/blog/nextcloud"
+    },
+    "embed": {
+     "external": {
+      "uri": "https://allenai.org/blog/nextcloud",
+      "title": "How Olmo 3 earned the highest ethical rating from Nextcloud  | Ai2",
+      "description": "Nextcloud chose Olmo 3 for fully open, self-hosted AI, earning its highest Ethical AI rating while making local AI practical on consumer hardware.",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:wzhjna25kl74w3rywz6fn4ln/bafkreidkxrml2vwko7jbdexl5yayzc7lyy6tfuqampvbzwps4vucevr3le"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 4,
+    "replyCount": 1,
+    "repostCount": 4,
+    "likeCount": 19,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-11T18:25:08.378Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:i4kytxgsu3yfsrt2ml3o7tgq",
+     "handle": "ai2.bsky.social",
+     "displayName": "Ai2",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-10-12T22:38:57.278Z"
+    },
+    "uri": "at://did:plc:i4kytxgsu3yfsrt2ml3o7tgq/app.bsky.feed.repost/3n22zjgjrcz2r",
+    "cid": "bafyreicyls3wviakbivg5wxn7zn4n3k6er6dogespkllec4dkx7ptt437u",
+    "indexedAt": "2026-11-11T22:39:39.077Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  }
+ ],
+ "cursor": "2026-10-05T13:50:13.176Z"
+}

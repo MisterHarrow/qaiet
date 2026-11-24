@@ -1,0 +1,401 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:4kshoaytrzhgsziro6ywozul/app.bsky.feed.post/3n2yxya3utm2f",
+    "cid": "bafyreibjgndanpdtdtbmgxcmxqgpl5gflnfgzqj6zm6rfwss3scmdnhfba",
+    "author": {
+     "did": "did:plc:4kshoaytrzhgsziro6ywozul",
+     "handle": "justinwolfers.bsky.social",
+     "displayName": "Justin Wolfers",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-03T23:53:58.552Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mbyr5vjuk325",
+        "isValid": true,
+        "createdAt": "2026-01-09T15:00:03.192Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T20:32:00.070Z",
+     "embed": {
+      "$type": "app.bsky.embed.video",
+      "aspectRatio": {
+       "height": 720,
+       "width": 1280
+      },
+      "video": {
+       "$type": "blob",
+       "ref": {
+        "$link": "bafkreihhp65myhp3bcnhphg2tgf23hx2iw3p2eejzbc5zvefsya2crlgj4"
+       },
+       "mimeType": "video/mp4",
+       "size": 15320495
+      }
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:lsums46ve5bqodxtmhybu6aq"
+        }
+       ],
+       "index": {
+        "byteEnd": 129,
+        "byteStart": 105
+       }
+      }
+     ],
+     "text": "Economists call this \"adverse selection\". The worst options can also be the easiest to find.⁣\n⁣\nWith @svaneksmith.bsky.social on Platypus Economics, aired Nov 20, 2026"
+    },
+    "embed": {
+     "cid": "bafkreihhp65myhp3bcnhphg2tgf23hx2iw3p2eejzbc5zvefsya2crlgj4",
+     "playlist": "https://video.bsky.app/watch/did%3Aplc%3A4kshoaytrzhgsziro6ywozul/bafkreihhp65myhp3bcnhphg2tgf23hx2iw3p2eejzbc5zvefsya2crlgj4/playlist.m3u8",
+     "aspectRatio": {
+      "height": 720,
+      "width": 1280
+     },
+     "$type": "app.bsky.embed.video#view"
+    },
+    "bookmarkCount": 6,
+    "replyCount": 3,
+    "repostCount": 19,
+    "likeCount": 109,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-23T20:32:01.750Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:4kshoaytrzhgsziro6ywozul/app.bsky.feed.post/3n2ykkiusev2f",
+    "cid": "bafyreigsvy75d32cjngxq7y4r3y6djdxjgjaudjkbllgh7qblfrky7tk5y",
+    "author": {
+     "did": "did:plc:4kshoaytrzhgsziro6ywozul",
+     "handle": "justinwolfers.bsky.social",
+     "displayName": "Justin Wolfers",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-03T23:53:58.552Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mbyr5vjuk325",
+        "isValid": true,
+        "createdAt": "2026-01-09T15:00:03.192Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T16:31:40.873Z",
+     "embed": {
+      "$type": "app.bsky.embed.video",
+      "aspectRatio": {
+       "height": 720,
+       "width": 1280
+      },
+      "video": {
+       "$type": "blob",
+       "ref": {
+        "$link": "bafkreiexbckveimkaeha36luusgfouz3dmclff42nmnqi3oltaxrd7rygi"
+       },
+       "mimeType": "video/mp4",
+       "size": 14457328
+      }
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:lsums46ve5bqodxtmhybu6aq"
+        }
+       ],
+       "index": {
+        "byteEnd": 225,
+        "byteStart": 201
+       }
+      }
+     ],
+     "text": "The cost of unreliable systems isn’t just what happens when they fail. It’s everything we do to prepare for the possibility that they might.⁣\n⁣\nFrom Friday's episode of Platypus Economics with @svaneksmith.bsky.social"
+    },
+    "embed": {
+     "cid": "bafkreiexbckveimkaeha36luusgfouz3dmclff42nmnqi3oltaxrd7rygi",
+     "playlist": "https://video.bsky.app/watch/did%3Aplc%3A4kshoaytrzhgsziro6ywozul/bafkreiexbckveimkaeha36luusgfouz3dmclff42nmnqi3oltaxrd7rygi/playlist.m3u8",
+     "aspectRatio": {
+      "height": 720,
+      "width": 1280
+     },
+     "$type": "app.bsky.embed.video#view"
+    },
+    "bookmarkCount": 7,
+    "replyCount": 4,
+    "repostCount": 25,
+    "likeCount": 135,
+    "quoteCount": 2,
+    "indexedAt": "2026-11-23T16:31:42.040Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:4kshoaytrzhgsziro6ywozul/app.bsky.feed.post/3n2yeuwrhn22v",
+    "cid": "bafyreif3ni7qke2qm4tdlswby7johdxujnql6bamo23uy3vlsn2iuotaoq",
+    "author": {
+     "did": "did:plc:4kshoaytrzhgsziro6ywozul",
+     "handle": "justinwolfers.bsky.social",
+     "displayName": "Justin Wolfers",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-03T23:53:58.552Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mbyr5vjuk325",
+        "isValid": true,
+        "createdAt": "2026-01-09T15:00:03.192Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T14:50:08.629Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "",
+        "aspectRatio": {
+         "height": 264,
+         "width": 570
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreihfkiy53nsjktbxywbww6nrcbd2vpbaa72fv5nnounsdp356ocoie"
+         },
+         "mimeType": "image/png",
+         "size": 29237
+        }
+       }
+      ]
+     },
+     "text": "Zohran Mamdani wants to open some government-run grocery stores. Also, the President just told one of the world's largest companies who to pick as CEO, and hours later it did -- after, it says, \"input from senior levels of the United States government.\""
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:4kshoaytrzhgsziro6ywozul/bafkreihfkiy53nsjktbxywbww6nrcbd2vpbaa72fv5nnounsdp356ocoie",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:4kshoaytrzhgsziro6ywozul/bafkreihfkiy53nsjktbxywbww6nrcbd2vpbaa72fv5nnounsdp356ocoie",
+       "alt": "",
+       "aspectRatio": {
+        "height": 264,
+        "width": 570
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 14,
+    "replyCount": 52,
+    "repostCount": 205,
+    "likeCount": 893,
+    "quoteCount": 13,
+    "indexedAt": "2026-11-23T14:50:09.240Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 2
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:4kshoaytrzhgsziro6ywozul/app.bsky.feed.post/3n2ydh5dwn22f",
+    "cid": "bafyreihygzhuhgus7xhk26iikp2n3clpkymdnmweeeewkebupz7qxvjtna",
+    "author": {
+     "did": "did:plc:4kshoaytrzhgsziro6ywozul",
+     "handle": "justinwolfers.bsky.social",
+     "displayName": "Justin Wolfers",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-03T23:53:58.552Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mbyr5vjuk325",
+        "isValid": true,
+        "createdAt": "2026-01-09T15:00:03.192Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T14:24:32.021Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "Line chart titled \"A rollercoaster month at Nvidia\" showing percent change in Nvidia stock over the past month ending November 23, 2026. The stock experienced extreme volatility, initially rising 3.6% by late October before plunging to 41% below its starting point by mid-November. The chart's most striking feature is a dramatic single-day recovery on November 23, when the stock surged approximately 17 percentage points in just a few hours following the board's reinstatement of CEO Jensen Huang, closing the month down 22.3% from its starting point.",
+        "aspectRatio": {
+         "height": 3000,
+         "width": 3000
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreibnmp43hqygloiawfhrjfki37mvrl7ptlwleuwebyi32zb3owtwmq"
+         },
+         "mimeType": "image/png",
+         "size": 357367
+        }
+       }
+      ]
+     },
+     "text": "Affair with a spy. Affair with a staffer. Lie to the board. Abuse staff. Chips get to China.\n\nNow this: The board just reinstated Jensen Huang."
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:4kshoaytrzhgsziro6ywozul/bafkreibnmp43hqygloiawfhrjfki37mvrl7ptlwleuwebyi32zb3owtwmq",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:4kshoaytrzhgsziro6ywozul/bafkreibnmp43hqygloiawfhrjfki37mvrl7ptlwleuwebyi32zb3owtwmq",
+       "alt": "Line chart titled \"A rollercoaster month at Nvidia\" showing percent change in Nvidia stock over the past month ending November 23, 2026. The stock experienced extreme volatility, initially rising 3.6% by late October before plunging to 41% below its starting point by mid-November. The chart's most striking feature is a dramatic single-day recovery on November 23, when the stock surged approximately 17 percentage points in just a few hours following the board's reinstatement of CEO Jensen Huang, closing the month down 22.3% from its starting point.",
+       "aspectRatio": {
+        "height": 3000,
+        "width": 3000
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 21,
+    "replyCount": 178,
+    "repostCount": 369,
+    "likeCount": 1181,
+    "quoteCount": 83,
+    "indexedAt": "2026-11-23T14:24:32.545Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:4kshoaytrzhgsziro6ywozul/app.bsky.feed.post/3n2warsittc2f",
+    "cid": "bafyreic5qzbsexwdpxcjdpz5xwpph4qpeaszrqbhdrqb6n66iba62lc7xu",
+    "author": {
+     "did": "did:plc:4kshoaytrzhgsziro6ywozul",
+     "handle": "justinwolfers.bsky.social",
+     "displayName": "Justin Wolfers",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-03T23:53:58.552Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mbyr5vjuk325",
+        "isValid": true,
+        "createdAt": "2026-01-09T15:00:03.192Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-22T18:31:28.922Z",
+     "embed": {
+      "$type": "app.bsky.embed.video",
+      "aspectRatio": {
+       "height": 1440,
+       "width": 2560
+      },
+      "video": {
+       "$type": "blob",
+       "ref": {
+        "$link": "bafkreicxnty7m2ervdb4tiy2xdefxnehv6ib5mhgoywpvzxmziyjncx7oq"
+       },
+       "mimeType": "video/mp4",
+       "size": 20672212
+      }
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://newsletter.platypuseconomics.com/p/if-something-cannot-go-on-forever"
+        }
+       ],
+       "index": {
+        "byteEnd": 187,
+        "byteStart": 111
+       }
+      }
+     ],
+     "text": "Inflating away your debt is default by another name. Lenders know it, so we'd only get to play that game once. https://newsletter.platypuseconomics.com/p/if-something-cannot-go-on-forever"
+    },
+    "embed": {
+     "cid": "bafkreicxnty7m2ervdb4tiy2xdefxnehv6ib5mhgoywpvzxmziyjncx7oq",
+     "playlist": "https://video.bsky.app/watch/did%3Aplc%3A4kshoaytrzhgsziro6ywozul/bafkreicxnty7m2ervdb4tiy2xdefxnehv6ib5mhgoywpvzxmziyjncx7oq/playlist.m3u8",
+     "aspectRatio": {
+      "height": 1440,
+      "width": 2560
+     },
+     "$type": "app.bsky.embed.video#view"
+    },
+    "bookmarkCount": 7,
+    "replyCount": 10,
+    "repostCount": 54,
+    "likeCount": 196,
+    "quoteCount": 1,
+    "indexedAt": "2026-11-22T18:31:30.156Z"
+   }
+  }
+ ],
+ "cursor": "2026-11-11T12:46:59.494Z"
+}

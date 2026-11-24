@@ -1,0 +1,875 @@
+# Feed sources for quiet-ai (news outlets, aggregators, newsletters, lab blogs). Draft from M0 verification on 2026-11-24.
+# Every feed below was fetched and parsed on that date and is allowed by the site's robots.txt.
+# type: mainstream | trade | business | opinion | state-aligned | public-broadcaster
+# group: which seed-list bucket in the brief it came from (for the bias audit, never shown as a label).
+# Round 2 (same day): X and paid sources dropped; aggregators, newsletters and lab blogs added.
+# llm: false = never send this source's text to the LLM (publisher opted out via Content-Signal).
+# gdelt_outlets: outlets with no usable feed, read through the GDELT DOC API instead (headline, URL, date only).
+#   Rate-limited from the dev machine on 2026-11-24; retest from GitHub Actions.
+# type also allows `wire` (news agencies).
+# sitemap: for sources with no feed. Only URLs modified within ingest.max_age_days and not seen before are read.
+verified_at: '2026-11-24'
+sources:
+- id: nyt
+  name: The New York Times
+  country: US
+  language: en
+  type: mainstream
+  group: us-mainstream
+  feeds:
+  - https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml
+- id: wapo
+  name: The Washington Post
+  country: US
+  language: en
+  type: mainstream
+  group: us-mainstream
+  feeds:
+  - https://feeds.washingtonpost.com/rss/business/technology
+- id: wsj
+  name: The Wall Street Journal
+  country: US
+  language: en
+  type: business
+  group: us-mainstream
+  feeds:
+  - https://feeds.content.dowjones.io/public/rss/RSSWSJD
+  notes: Old feeds.a.dj.com URL is frozen; this is the live Dow Jones feed.
+- id: bloomberg
+  name: Bloomberg
+  country: US
+  language: en
+  type: business
+  group: us-mainstream
+  feeds:
+  - https://feeds.bloomberg.com/technology/news.rss
+- id: cnbc
+  name: CNBC
+  country: US
+  language: en
+  type: business
+  group: us-mainstream
+  feeds:
+  - https://www.cnbc.com/id/19854910/device/rss/rss.html
+- id: npr
+  name: NPR
+  country: US
+  language: en
+  type: public-broadcaster
+  group: us-mainstream
+  feeds:
+  - https://feeds.npr.org/1019/rss.xml
+- id: politico
+  name: Politico
+  country: US
+  language: en
+  type: mainstream
+  group: us-mainstream
+  feeds:
+  - https://rss.politico.com/technology.xml
+- id: semafor
+  name: Semafor
+  country: US
+  language: en
+  type: mainstream
+  group: us-mainstream
+  feeds:
+  - https://www.semafor.com/rss.xml
+  notes: All-news feed.
+- id: thehill
+  name: The Hill
+  country: US
+  language: en
+  type: mainstream
+  group: us-mainstream
+  feeds:
+  - https://thehill.com/policy/technology/feed/
+- id: fortune
+  name: Fortune
+  country: US
+  language: en
+  type: business
+  group: us-mainstream
+  feeds:
+  - https://fortune.com/feed/
+  notes: All-news feed, only 10 items per fetch.
+- id: bi
+  name: Business Insider
+  country: US
+  language: en
+  type: business
+  group: us-mainstream
+  feeds:
+  - https://feeds.businessinsider.com/custom/all
+  notes: All-news feed.
+- id: atlantic
+  name: The Atlantic
+  country: US
+  language: en
+  type: opinion
+  group: us-left
+  feeds:
+  - https://www.theatlantic.com/feed/channel/technology/
+  llm: false
+  notes: 'robots.txt Content-Signal: ai-input=no. Headlines are listed and counted, never sent to the LLM, so no stance label.'
+- id: vox
+  name: Vox
+  country: US
+  language: en
+  type: opinion
+  group: us-left
+  feeds:
+  - https://www.vox.com/rss/technology/index.xml
+- id: slate
+  name: Slate
+  country: US
+  language: en
+  type: opinion
+  group: us-left
+  feeds:
+  - https://slate.com/feeds/technology.rss
+- id: tnr
+  name: The New Republic
+  country: US
+  language: en
+  type: opinion
+  group: us-left
+  feeds:
+  - https://newrepublic.com/rss.xml
+  notes: All-news feed.
+- id: nation
+  name: The Nation
+  country: US
+  language: en
+  type: opinion
+  group: us-left
+  feeds:
+  - https://www.thenation.com/subject/technology/feed/
+- id: fox
+  name: Fox News
+  country: US
+  language: en
+  type: mainstream
+  group: us-right
+  feeds:
+  - https://moxie.foxnews.com/google-publisher/tech.xml
+- id: nypost
+  name: New York Post
+  country: US
+  language: en
+  type: mainstream
+  group: us-right
+  feeds:
+  - https://nypost.com/tech/feed/
+- id: wex
+  name: Washington Examiner
+  country: US
+  language: en
+  type: mainstream
+  group: us-right
+  feeds:
+  - https://www.washingtonexaminer.com/tag/technology/feed/
+- id: natreview
+  name: National Review
+  country: US
+  language: en
+  type: opinion
+  group: us-right
+  feeds:
+  - https://www.nationalreview.com/feed/
+  notes: All-news feed; AI tag feed 404s.
+- id: freepress
+  name: The Free Press
+  country: US
+  language: en
+  type: opinion
+  group: us-right
+  feeds:
+  - https://www.thefp.com/feed
+- id: reason
+  name: Reason
+  country: US
+  language: en
+  type: opinion
+  group: us-right
+  feeds:
+  - https://reason.com/feed/
+  notes: All-news feed; AI tag feed 404s.
+- id: breitbart
+  name: Breitbart
+  country: US
+  language: en
+  type: mainstream
+  group: us-right
+  feeds:
+  - https://www.breitbart.com/tech/feed/
+- id: dailycaller
+  name: Daily Caller
+  country: US
+  language: en
+  type: mainstream
+  group: us-right
+  feeds:
+  - https://dailycaller.com/feed/
+  notes: All-news feed; tech section feed 404s.
+- id: verge
+  name: The Verge
+  country: US
+  language: en
+  type: trade
+  group: tech
+  feeds:
+  - https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+- id: techcrunch
+  name: TechCrunch
+  country: US
+  language: en
+  type: trade
+  group: tech
+  feeds:
+  - https://techcrunch.com/category/artificial-intelligence/feed/
+- id: wired
+  name: Wired
+  country: US
+  language: en
+  type: trade
+  group: tech
+  feeds:
+  - https://www.wired.com/feed/tag/ai/latest/rss
+- id: ars
+  name: Ars Technica
+  country: US
+  language: en
+  type: trade
+  group: tech
+  feeds:
+  - https://arstechnica.com/ai/feed/
+- id: mittr
+  name: MIT Technology Review
+  country: US
+  language: en
+  type: trade
+  group: tech
+  feeds:
+  - https://www.technologyreview.com/topic/artificial-intelligence/feed
+- id: ieee
+  name: IEEE Spectrum
+  country: US
+  language: en
+  type: trade
+  group: tech
+  feeds:
+  - https://spectrum.ieee.org/feeds/topic/artificial-intelligence.rss
+  notes: Low volume (a few per week).
+- id: 404media
+  name: 404 Media
+  country: US
+  language: en
+  type: trade
+  group: tech
+  feeds:
+  - https://www.404media.co/rss/
+- id: bbc
+  name: BBC News
+  country: GB
+  language: en
+  type: public-broadcaster
+  group: uk-eu
+  feeds:
+  - https://feeds.bbci.co.uk/news/technology/rss.xml
+- id: guardian
+  name: The Guardian
+  country: GB
+  language: en
+  type: mainstream
+  group: uk-eu
+  feeds:
+  - https://www.theguardian.com/technology/artificialintelligenceai/rss
+  - https://www.theguardian.com/us/technology/rss
+  notes: Guardian US merged in (same newsroom; counting it twice would double its coverage).
+- id: ft
+  name: Financial Times
+  country: GB
+  language: en
+  type: business
+  group: uk-eu
+  feeds:
+  - https://www.ft.com/artificial-intelligence?format=rss
+  notes: Paywalled; headline + summary only.
+- id: economist
+  name: The Economist
+  country: GB
+  language: en
+  type: business
+  group: uk-eu
+  feeds:
+  - https://www.economist.com/business/rss.xml
+  - https://www.economist.com/science-and-technology/rss.xml
+  notes: Weekly rhythm.
+- id: telegraph
+  name: The Telegraph
+  country: GB
+  language: en
+  type: mainstream
+  group: uk-eu
+  feeds:
+  - https://www.telegraph.co.uk/business/rss.xml
+  notes: Technology feed frozen since 2023; business feed used.
+- id: politico_eu
+  name: Politico Europe
+  country: BE
+  language: en
+  type: mainstream
+  group: uk-eu
+  feeds:
+  - https://www.politico.eu/section/technology/feed/
+- id: lemonde
+  name: Le Monde
+  country: FR
+  language: fr
+  type: mainstream
+  group: uk-eu
+  feeds:
+  - https://www.lemonde.fr/intelligence-artificielle/rss_full.xml
+  notes: English edition feed also exists (lemonde.fr/en/pixels).
+- id: spiegel
+  name: Der Spiegel
+  country: DE
+  language: de
+  type: mainstream
+  group: uk-eu
+  feeds:
+  - https://www.spiegel.de/thema/kuenstliche_intelligenz/index.rss
+- id: handelsblatt
+  name: Handelsblatt
+  country: DE
+  language: de
+  type: business
+  group: uk-eu
+  feeds:
+  - https://www.handelsblatt.com/contentexport/feed/technologie
+- id: elpais
+  name: El País
+  country: ES
+  language: es
+  type: mainstream
+  group: uk-eu
+  feeds:
+  - https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/tecnologia/portada
+- id: dn
+  name: Dagens Nyheter
+  country: SE
+  language: sv
+  type: mainstream
+  group: nordics
+  feeds:
+  - https://www.dn.se/rss/
+  - https://www.dn.se/rss/ekonomi/
+  notes: All-news + business feeds.
+- id: svd
+  name: Svenska Dagbladet
+  country: SE
+  language: sv
+  type: mainstream
+  group: nordics
+  feeds:
+  - https://www.svd.se/feed/articles.rss
+  notes: All-news feed.
+- id: svt
+  name: SVT Nyheter
+  country: SE
+  language: sv
+  type: public-broadcaster
+  group: nordics
+  feeds:
+  - https://www.svt.se/nyheter/rss.xml
+  - https://www.svt.se/nyheter/ekonomi/rss.xml
+- id: breakit
+  name: Breakit
+  country: SE
+  language: sv
+  type: trade
+  group: nordics
+  feeds:
+  - https://www.breakit.se/feed/artiklar
+- id: nyteknik
+  name: Ny Teknik
+  country: SE
+  language: sv
+  type: trade
+  group: nordics
+  feeds:
+  - https://www.nyteknik.se/digitalisering?lab_viewport=rss
+  notes: Labrador CMS feed (lab_viewport=rss), linked from the site's own pages.
+- id: scmp
+  name: South China Morning Post
+  country: HK
+  language: en
+  type: mainstream
+  group: asia-me
+  feeds:
+  - https://www.scmp.com/rss/320663/feed
+- id: nikkei
+  name: Nikkei Asia
+  country: JP
+  language: en
+  type: business
+  group: asia-me
+  feeds:
+  - https://asia.nikkei.com/rss/feed/nar
+  notes: Items carry no dates; use first-seen time.
+- id: straitstimes
+  name: The Straits Times
+  country: SG
+  language: en
+  type: mainstream
+  group: asia-me
+  feeds:
+  - https://www.straitstimes.com/news/business/rss.xml
+  notes: Tech section feed returns 400; business feed used.
+- id: et
+  name: The Economic Times
+  country: IN
+  language: en
+  type: business
+  group: asia-me
+  feeds:
+  - https://economictimes.indiatimes.com/tech/rssfeeds/13357270.cms
+- id: koreaherald
+  name: The Korea Herald
+  country: KR
+  language: en
+  type: mainstream
+  group: asia-me
+  feeds:
+  - https://www.koreaherald.com/rss/newsAll
+  notes: All-news firehose (~200/day), mostly non-AI.
+- id: aljazeera
+  name: Al Jazeera
+  country: QA
+  language: en
+  type: mainstream
+  group: asia-me
+  feeds:
+  - https://www.aljazeera.com/xml/rss/all.xml
+  notes: Qatari state-funded. All-news feed.
+- id: restofworld
+  name: Rest of World
+  country: US
+  language: en
+  type: trade
+  group: global
+  feeds:
+  - https://restofworld.org/feed/latest/
+  notes: Tech outside the US and Europe. Added in round 2.
+- id: sifted
+  name: Sifted
+  country: GB
+  language: en
+  type: trade
+  group: uk-eu
+  feeds:
+  - https://sifted.eu/feed
+  notes: European startups and funding. Added in round 2.
+- id: dw
+  name: Deutsche Welle
+  country: DE
+  language: en
+  type: public-broadcaster
+  group: uk-eu
+  feeds:
+  - https://rss.dw.com/rdf/rss-en-all
+  notes: English all-news feed. Added in round 2.
+- id: france24
+  name: France 24
+  country: FR
+  language: en
+  type: public-broadcaster
+  group: uk-eu
+  feeds:
+  - https://www.france24.com/en/rss
+  notes: English all-news feed. Added in round 2.
+- id: heise
+  name: heise online
+  country: DE
+  language: de
+  type: trade
+  group: uk-eu
+  feeds:
+  - https://www.heise.de/rss/heise-atom.xml
+  notes: Added in round 2.
+- id: di
+  name: Dagens industri
+  country: SE
+  language: sv
+  type: business
+  group: nordics
+  feeds:
+  - https://www.di.se/rss
+  notes: Added in round 2.
+- id: technode
+  name: TechNode
+  country: CN
+  language: en
+  type: trade
+  group: asia-me
+  feeds:
+  - https://technode.com/feed/
+  notes: China tech, privately owned. Feed returns ~2000 items per fetch, so use conditional GET. Added in round 2.
+- id: pandaily
+  name: Pandaily
+  country: CN
+  language: en
+  type: trade
+  group: asia-me
+  feeds:
+  - https://pandaily.com/feed/
+  notes: China tech, privately owned. Added in round 2.
+- id: cbc
+  name: CBC
+  country: CA
+  language: en
+  type: public-broadcaster
+  group: americas
+  feeds:
+  - https://www.cbc.ca/webfeed/rss/rss-technology
+  notes: 'Disabled 2026-11-24: cbc.ca drops connections from our client (worked during M0 with a different user agent). Not working around it.'
+  enabled: false
+- id: abcau
+  name: ABC News (Australia)
+  country: AU
+  language: en
+  type: public-broadcaster
+  group: asia-me
+  feeds:
+  - https://www.abc.net.au/news/feed/51120/rss.xml
+  notes: All-news feed. Added in round 2.
+gdelt_outlets:
+- id: reuters
+  name: Reuters
+  country: GB
+  language: en
+  type: wire
+  domains:
+  - reuters.com
+- id: ap
+  name: Associated Press
+  country: US
+  language: en
+  type: wire
+  domains:
+  - apnews.com
+- id: cnn
+  name: CNN
+  country: US
+  language: en
+  type: mainstream
+  domains:
+  - cnn.com
+- id: xinhua
+  name: Xinhua
+  country: CN
+  language: en
+  type: state-aligned
+  domains:
+  - xinhuanet.com
+  - news.cn
+- id: chinadaily
+  name: China Daily
+  country: CN
+  language: en
+  type: state-aligned
+  domains:
+  - chinadaily.com.cn
+- id: globaltimes
+  name: Global Times
+  country: CN
+  language: en
+  type: state-aligned
+  domains:
+  - globaltimes.cn
+- id: cgtn
+  name: CGTN
+  country: CN
+  language: en
+  type: state-aligned
+  domains:
+  - cgtn.com
+aggregators:
+- id: techmeme
+  name: Techmeme
+  feeds:
+  - https://www.techmeme.com/feed.xml
+  use: Editor-picked lead tech stories. Each item names the lead outlet. Used as a momentum signal, not counted as an outlet.
+- id: memeorandum
+  name: Memeorandum
+  feeds:
+  - https://www.memeorandum.com/feed.xml
+  use: Same for US politics (same publisher as Techmeme). Momentum signal for the Political track.
+newsletters:
+- id: ainews
+  name: AINews (Latent Space)
+  feeds:
+  - https://latent.space/feeds/all.xml
+  role: digest
+  notes: 'Keep only items titled ''[AINews] ...''. Daily recap of AI X/Reddit/Discord: the free stand-in for X builder chatter.'
+  include_title: ^\[AINews\]
+- id: tldrai
+  name: TLDR AI
+  feeds:
+  - https://tldr.tech/api/rss/ai
+  role: digest
+- id: rundown
+  name: The Rundown AI
+  feeds:
+  - https://www.therundown.ai/feed
+  role: digest
+- id: lastweekinai
+  name: Last Week in AI
+  feeds:
+  - https://lastweekin.ai/feed
+  role: digest
+- id: bensbites
+  name: Ben's Bites
+  feeds:
+  - https://www.bensbites.com/feed
+  role: digest
+  notes: Low frequency (newest item ~5 days old).
+- id: importai
+  name: Import AI (Jack Clark)
+  feeds:
+  - https://importai.substack.com/feed
+  role: digest
+- id: thebatch
+  name: The Batch (DeepLearning.AI)
+  role: digest
+  sitemap: https://www.deeplearning.ai/sitemap.xml
+  sitemap_include: ^https://www\.deeplearning\.ai/the-batch/(?!tag/|issue-|page/)[^/]+/?$
+  notes: 'No RSS. New article URLs come from the sitemap; title, summary and date from each page''s og: tags. (ai.lounge.ai''s archive is behind a Vercel bot checkpoint.)'
+- id: marktechpost
+  name: MarkTechPost
+  feeds:
+  - https://www.marktechpost.com/feed/
+  role: digest
+  notes: Paper and release write-ups, several per day.
+- id: willison
+  name: Simon Willison
+  feeds:
+  - https://simonwillison.net/atom/everything/
+  role: commentary
+  notes: Builder; links and notes several times a day.
+- id: interconnects
+  name: Interconnects (Nathan Lambert)
+  feeds:
+  - https://www.interconnects.ai/feed
+  role: commentary
+  notes: Open models, post-training.
+- id: aheadofai
+  name: Ahead of AI (Sebastian Raschka)
+  feeds:
+  - https://magazine.sebastianraschka.com/feed
+  role: commentary
+- id: oneuseful
+  name: One Useful Thing (Ethan Mollick)
+  feeds:
+  - https://www.oneusefulthing.org/feed
+  role: commentary
+- id: understandingai
+  name: Understanding AI (Timothy B. Lee)
+  feeds:
+  - https://www.understandingai.org/feed
+  role: commentary
+- id: normaltech
+  name: AI as Normal Technology (Narayanan & Kapoor)
+  feeds:
+  - https://www.normaltech.ai/feed
+  role: commentary
+- id: transformer
+  name: Transformer (Shakeel Hashim)
+  feeds:
+  - https://www.transformernews.ai/feed
+  role: commentary
+  notes: AI policy weekly.
+- id: hyperdimensional
+  name: Hyperdimensional (Dean Ball)
+  feeds:
+  - https://www.hyperdimensional.co/feed
+  role: commentary
+  notes: Policy, pro-innovation.
+- id: zvi
+  name: Don't Worry About the Vase (Zvi Mowshowitz)
+  feeds:
+  - https://thezvi.substack.com/feed
+  role: commentary
+  notes: Very long weekly roundups; safety-focused.
+- id: marcus
+  name: Marcus on AI (Gary Marcus)
+  feeds:
+  - https://garymarcus.substack.com/feed
+  role: commentary
+  notes: Skeptic.
+- id: zitron
+  name: Where's Your Ed At (Ed Zitron)
+  feeds:
+  - https://www.wheresyoured.at/rss/
+  role: commentary
+  notes: Skeptic; AI economics.
+- id: bitm
+  name: Blood in the Machine (Brian Merchant)
+  feeds:
+  - https://www.bloodinthemachine.com/feed
+  role: commentary
+  notes: Labor and AI.
+- id: platformer
+  name: Platformer (Casey Newton)
+  feeds:
+  - https://www.platformer.news/rss/
+  role: commentary
+  notes: Partly paywalled; headline + summary only.
+- id: expview
+  name: Exponential View (Azeem Azhar)
+  feeds:
+  - https://www.exponentialview.co/feed
+  role: commentary
+  notes: Economics.
+- id: semianalysis
+  name: SemiAnalysis
+  feeds:
+  - https://newsletter.semianalysis.com/feed
+  role: commentary
+  notes: Chips and data centers; many posts paywalled, use headline + summary only.
+- id: chinai
+  name: ChinAI (Jeffrey Ding)
+  feeds:
+  - https://chinai.substack.com/feed
+  role: commentary
+  notes: Translations of Chinese AI writing.
+- id: chinatalk
+  name: ChinaTalk
+  feeds:
+  - https://www.chinatalk.media/feed
+  role: commentary
+  notes: US-China tech policy.
+- id: pragmatic
+  name: The Pragmatic Engineer
+  feeds:
+  - https://newsletter.pragmaticengineer.com/feed
+  role: commentary
+  notes: AI in software engineering.
+- id: dwarkesh
+  name: Dwarkesh Podcast
+  feeds:
+  - https://www.dwarkesh.com/feed
+  role: commentary
+- id: epoch
+  name: Epoch AI
+  feeds:
+  - https://epoch.ai/atom.xml
+  role: commentary
+  notes: 'Research org: compute, trends, benchmarks.'
+labs:
+- id: openai
+  name: OpenAI News
+  feeds:
+  - https://openai.com/news/rss.xml
+- id: deepmind
+  name: Google DeepMind Blog
+  feeds:
+  - https://deepmind.google/blog/rss.xml
+- id: googleai
+  name: 'Google: AI (The Keyword)'
+  feeds:
+  - https://blog.google/technology/ai/rss/
+- id: googleresearch
+  name: Google Research Blog
+  feeds:
+  - https://research.google/blog/rss/
+- id: msr
+  name: Microsoft Research Blog
+  feeds:
+  - https://www.microsoft.com/en-us/research/feed/
+- id: nvidia
+  name: NVIDIA Blog
+  feeds:
+  - https://blogs.nvidia.com/feed/
+- id: hfblog
+  name: Hugging Face Blog
+  feeds:
+  - https://huggingface.co/blog/feed.xml
+- id: ai2
+  name: Ai2 Blog
+  feeds:
+  - https://allenai.org/rss.xml
+- id: awsml
+  name: AWS Machine Learning Blog
+  feeds:
+  - https://aws.amazon.com/blogs/machine-learning/feed/
+- id: appleml
+  name: Apple Machine Learning Research
+  feeds:
+  - https://machinelearning.apple.com/rss.xml
+- id: mistral
+  name: Mistral AI News
+  feeds:
+  - https://mistral.ai/rss.xml
+builder_feeds:
+- id: producthunt_ai
+  name: 'Product Hunt: AI'
+  feeds:
+  - https://www.producthunt.com/feed?category=artificial-intelligence
+  notes: Consumer and indie AI launches.
+dropped:
+- name: Axios
+  country: US
+  reason: robots.txt on api.axios.com (the only feed host) disallows all generic bots.
+- name: Fox Business
+  country: US
+  reason: robots.txt disallows the working feeds; the few allowed feed URLs return 400.
+- name: The Register
+  country: GB
+  reason: 'robots.txt disallows the whole site for generic bots (User-agent: * / Disallow: /).'
+- name: Euractiv
+  country: BE
+  reason: robots.txt disallows /feed/ for generic bots; section feeds also return 403.
+- name: Computer Sweden
+  country: SE
+  reason: robots.txt disallows /feed/ for generic bots.
+- name: CNN
+  country: US
+  reason: Every CNN RSS feed is frozen (newest items from 2018-2019). No official replacement.
+- name: VentureBeat
+  country: US
+  reason: Feeds return 429 to any non-browser client (Vercel bot protection). Not working around it.
+- name: Caixin Global
+  country: CN
+  reason: Feed endpoint returns 406; no other official feed found.
+- name: China Daily
+  country: CN
+  reason: All documented RSS URLs return 404.
+- name: Global Times
+  country: CN
+  reason: Only feed found (outbrain.xml) stopped updating ~45 days ago.
+- name: Xinhua
+  country: CN
+  reason: Official English RSS list exists but every feed stopped in 2017-2018.
+- name: Google News RSS
+  country: '-'
+  reason: robots.txt disallows everything for generic bots. Would have covered Reuters/AP/CNN.
+- name: The Decoder
+  country: DE
+  reason: robots.txt disallows */feed/.
+- name: Lobsters
+  country: '-'
+  reason: robots.txt disallows generic bots and sets Content-Signal ai-input=no.
+- name: Anthropic News, Meta AI Blog
+  country: US
+  reason: No RSS feed.
+- name: Qwen Blog
+  country: CN
+  reason: Feed stopped in 2025.
+- name: KrASIA
+  country: SG
+  reason: Feed returns 404.
+- name: Tech Policy Press
+  country: US
+  reason: Feed returns no items.

@@ -1,0 +1,658 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:5rxcpjus3ple6jpbuafvm4og/app.bsky.feed.post/3n2xlfmaews2m",
+    "cid": "bafyreiev7alqnrueojutqmwq625shxbzhpaqo6ebqi7xcejggaa6dh4eje",
+    "author": {
+     "did": "did:plc:5rxcpjus3ple6jpbuafvm4og",
+     "handle": "parismarx.com",
+     "displayName": "Paris Marx",
+     "pronouns": "he/him",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-27T14:54:58.375Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lwkv2r7r4f2o",
+        "isValid": true,
+        "createdAt": "2025-08-17T02:55:28.761Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T07:14:10.729Z",
+     "langs": [
+      "en"
+     ],
+     "text": "still wild to me that amazon gave two guys with no official writing credits an eye-watering budget to make a shitty lotr fanfic tv show"
+    },
+    "bookmarkCount": 2,
+    "replyCount": 7,
+    "repostCount": 11,
+    "likeCount": 145,
+    "quoteCount": 1,
+    "indexedAt": "2026-11-23T07:14:11.249Z",
+    "threadgate": {
+     "uri": "at://did:plc:5rxcpjus3ple6jpbuafvm4og/app.bsky.feed.threadgate/3n2xlfmaews2m",
+     "cid": "bafyreihvvsvsqjnvpz7qhffcjyj54zz3dbo4xzbyqv3d5xr3piq5uur6cy",
+     "record": {
+      "$type": "app.bsky.feed.threadgate",
+      "allow": [
+       {
+        "$type": "app.bsky.feed.threadgate#followerRule"
+       },
+       {
+        "$type": "app.bsky.feed.threadgate#mentionRule"
+       },
+       {
+        "$type": "app.bsky.feed.threadgate#followingRule"
+       }
+      ],
+      "createdAt": "2026-11-23T07:14:10.748Z",
+      "hiddenReplies": [],
+      "post": "at://did:plc:5rxcpjus3ple6jpbuafvm4og/app.bsky.feed.post/3n2xlfmaews2m"
+     },
+     "lists": []
+    }
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 2
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:5rxcpjus3ple6jpbuafvm4og/app.bsky.feed.post/3n2xf2iyfik2f",
+    "cid": "bafyreieuswerzckhbciqbqdbiraqsqko5jxsl3ltzyt2vvm27iqhjeochu",
+    "author": {
+     "did": "did:plc:5rxcpjus3ple6jpbuafvm4og",
+     "handle": "parismarx.com",
+     "displayName": "Paris Marx",
+     "pronouns": "he/him",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-27T14:54:58.375Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lwkv2r7r4f2o",
+        "isValid": true,
+        "createdAt": "2025-08-17T02:55:28.761Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T05:20:35.777Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "Journalist Paris Marx unpacks his new book \"Hyperscale.\"",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreidxaaexhnxbxvq44vwxocfqusudi57yzcqfmcfimef3i7emfxd7ae"
+        },
+        "mimeType": "image/jpeg",
+        "size": 376327
+       },
+       "title": "Why data centers are at the center of the Big Tech backlash | TechCrunch",
+       "uri": "https://techcrunch.com/2026/11/22/why-data-centers-are-at-the-center-of-the-big-tech-backlash/"
+      }
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:tui2e2i7qre574w36qpqilxd"
+        }
+       ],
+       "index": {
+        "byteEnd": 290,
+        "byteStart": 268
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "“When a data center is coming to set up shop in your community, … it’s very material. It doesn’t matter what side of the political spectrum that you’re on. You are going to feel the effects of that in your quality of life, in your power bill.”\n\nI spoke to @anthonyha.bsky.social about HYPERCALE!"
+    },
+    "embed": {
+     "external": {
+      "uri": "https://techcrunch.com/2026/11/22/why-data-centers-are-at-the-center-of-the-big-tech-backlash/",
+      "title": "Why data centers are at the center of the Big Tech backlash | TechCrunch",
+      "description": "Journalist Paris Marx unpacks his new book \"Hyperscale.\"",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:5rxcpjus3ple6jpbuafvm4og/bafkreidxaaexhnxbxvq44vwxocfqusudi57yzcqfmcfimef3i7emfxd7ae"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 9,
+    "replyCount": 3,
+    "repostCount": 40,
+    "likeCount": 96,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-23T05:20:37.447Z",
+    "threadgate": {
+     "uri": "at://did:plc:5rxcpjus3ple6jpbuafvm4og/app.bsky.feed.threadgate/3n2xf2iyfik2f",
+     "cid": "bafyreihzuevboqdusky6bwkzlyqquimtie2m3k62udqeyv422kxstg6gvy",
+     "record": {
+      "$type": "app.bsky.feed.threadgate",
+      "allow": [
+       {
+        "$type": "app.bsky.feed.threadgate#followerRule"
+       },
+       {
+        "$type": "app.bsky.feed.threadgate#mentionRule"
+       },
+       {
+        "$type": "app.bsky.feed.threadgate#followingRule"
+       }
+      ],
+      "createdAt": "2026-11-23T05:20:36.674Z",
+      "hiddenReplies": [],
+      "post": "at://did:plc:5rxcpjus3ple6jpbuafvm4og/app.bsky.feed.post/3n2xf2iyfik2f"
+     },
+     "lists": []
+    }
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:5rxcpjus3ple6jpbuafvm4og/app.bsky.feed.post/3n2xbgcgtkc2s",
+    "cid": "bafyreidbiocru6habvumz4ek6txkzfyxum5meoappcgmolhcvpdyapcqcq",
+    "author": {
+     "did": "did:plc:5rxcpjus3ple6jpbuafvm4og",
+     "handle": "parismarx.com",
+     "displayName": "Paris Marx",
+     "pronouns": "he/him",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-27T14:54:58.375Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lwkv2r7r4f2o",
+        "isValid": true,
+        "createdAt": "2025-08-17T02:55:28.761Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T04:15:36.597Z",
+     "langs": [
+      "en"
+     ],
+     "text": "imo it says a lot about the amazon lotr series that despite being a huge lotr fan i didn’t even know the new season was out until just now"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 14,
+    "repostCount": 0,
+    "likeCount": 92,
+    "quoteCount": 1,
+    "indexedAt": "2026-11-23T04:15:37.143Z",
+    "threadgate": {
+     "uri": "at://did:plc:5rxcpjus3ple6jpbuafvm4og/app.bsky.feed.threadgate/3n2xbgcgtkc2s",
+     "cid": "bafyreib3xej6gvvkqt76nt2j7xwbegxfkj7byhc7ncv74ilxsjdsmtc7la",
+     "record": {
+      "$type": "app.bsky.feed.threadgate",
+      "allow": [
+       {
+        "$type": "app.bsky.feed.threadgate#followerRule"
+       },
+       {
+        "$type": "app.bsky.feed.threadgate#mentionRule"
+       },
+       {
+        "$type": "app.bsky.feed.threadgate#followingRule"
+       }
+      ],
+      "createdAt": "2026-11-23T04:15:36.611Z",
+      "hiddenReplies": [],
+      "post": "at://did:plc:5rxcpjus3ple6jpbuafvm4og/app.bsky.feed.post/3n2xbgcgtkc2s"
+     },
+     "lists": []
+    }
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:5rxcpjus3ple6jpbuafvm4og/app.bsky.feed.post/3n2w3ywcnrk2q",
+    "cid": "bafyreigkypv7byapylz27gweyqxtaax5hjy7d52vknhcyrl5a5srzxjfmq",
+    "author": {
+     "did": "did:plc:5rxcpjus3ple6jpbuafvm4og",
+     "handle": "parismarx.com",
+     "displayName": "Paris Marx",
+     "pronouns": "he/him",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-27T14:54:58.375Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lwkv2r7r4f2o",
+        "isValid": true,
+        "createdAt": "2025-08-17T02:55:28.761Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-22T17:05:59.217Z",
+     "embed": {
+      "$type": "app.bsky.embed.record",
+      "record": {
+       "cid": "bafyreigelihkwdnrnh4fmgaskryj4go2yjdmwwvz75dl2mmluy2vdoyb54",
+       "uri": "at://did:plc:5rxcpjus3ple6jpbuafvm4og/app.bsky.feed.post/3n22xxa3mjc2f"
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "Don’t miss the HYPERSCALE launch in Calgary today!\n\nThere’s a market happening at the venue at 3:30pm, and the actual event starts at 5pm. Book signing a little after 6pm."
+    },
+    "embed": {
+     "record": {
+      "uri": "at://did:plc:5rxcpjus3ple6jpbuafvm4og/app.bsky.feed.post/3n22xxa3mjc2f",
+      "cid": "bafyreigelihkwdnrnh4fmgaskryj4go2yjdmwwvz75dl2mmluy2vdoyb54",
+      "author": {
+       "did": "did:plc:5rxcpjus3ple6jpbuafvm4og",
+       "handle": "parismarx.com",
+       "displayName": "Paris Marx",
+       "pronouns": "he/him",
+       "associated": {
+        "chat": {
+         "allowIncoming": "following"
+        },
+        "activitySubscription": {
+         "allowSubscriptions": "followers"
+        }
+       },
+       "createdAt": "2023-04-27T14:54:58.375Z",
+       "verification": {
+        "verifications": [
+         {
+          "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+          "issuerDisplayName": "Bluesky",
+          "issuerHandle": "bsky.app",
+          "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lwkv2r7r4f2o",
+          "isValid": true,
+          "createdAt": "2025-08-17T02:55:28.761Z"
+         }
+        ],
+        "verifiedStatus": "valid",
+        "trustedVerifierStatus": "none"
+       }
+      },
+      "value": {
+       "$type": "app.bsky.feed.post",
+       "createdAt": "2026-11-11T22:11:34.465Z",
+       "embed": {
+        "$type": "app.bsky.embed.images",
+        "images": [
+         {
+          "alt": "HYPERSCALE in CALGARY: an afternoon with author Paris Marx and Zac Trolley",
+          "aspectRatio": {
+           "height": 800,
+           "width": 800
+          },
+          "image": {
+           "$type": "blob",
+           "ref": {
+            "$link": "bafkreictdsplhx24svgttgmn4dh4mb4xtjpj54myz6zmalcetjla5jhq5y"
+           },
+           "mimeType": "image/jpeg",
+           "size": 307123
+          }
+         }
+        ]
+       },
+       "facets": [
+        {
+         "$type": "app.bsky.richtext.facet",
+         "features": [
+          {
+           "$type": "app.bsky.richtext.facet#mention",
+           "did": "did:plc:4vilxhmxmvc3nxxy7f76wpab"
+          }
+         ],
+         "index": {
+          "byteEnd": 75,
+          "byteStart": 60
+         }
+        },
+        {
+         "features": [
+          {
+           "$type": "app.bsky.richtext.facet#link",
+           "uri": "https://www.zeffy.com/en-CA/ticketing/hyperscale-in-calgary-an-afternoon-with-author-paris-marx-local-ai-data-centre-organizers"
+          }
+         ],
+         "index": {
+          "byteEnd": 235,
+          "byteStart": 206
+         }
+        }
+       ],
+       "langs": [
+        "en"
+       ],
+       "text": "Then I’ll be making the jump to Alberta for an event with @zactrolley.com in Calgary on November 22 to discuss HYPERSCALE and what’s playing out with data centres in that province.\n\nRSVP and more info: www.zeffy.com/en-CA/ticket..."
+      },
+      "likeCount": 3,
+      "replyCount": 1,
+      "repostCount": 1,
+      "quoteCount": 2,
+      "opThreadPostIndex": 8,
+      "opThreadPostCount": 10,
+      "indexedAt": "2026-11-11T22:11:40.386Z",
+      "embeds": [
+       {
+        "images": [
+         {
+          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:5rxcpjus3ple6jpbuafvm4og/bafkreictdsplhx24svgttgmn4dh4mb4xtjpj54myz6zmalcetjla5jhq5y",
+          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:5rxcpjus3ple6jpbuafvm4og/bafkreictdsplhx24svgttgmn4dh4mb4xtjpj54myz6zmalcetjla5jhq5y",
+          "alt": "HYPERSCALE in CALGARY: an afternoon with author Paris Marx and Zac Trolley",
+          "aspectRatio": {
+           "height": 800,
+           "width": 800
+          }
+         }
+        ],
+        "$type": "app.bsky.embed.images#view"
+       }
+      ],
+      "$type": "app.bsky.embed.record#viewRecord"
+     },
+     "$type": "app.bsky.embed.record#view"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 2,
+    "likeCount": 16,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-22T17:05:59.747Z",
+    "threadgate": {
+     "uri": "at://did:plc:5rxcpjus3ple6jpbuafvm4og/app.bsky.feed.threadgate/3n2w3ywcnrk2q",
+     "cid": "bafyreigxfat7y2slgj5z44hmt2ouv3n5gkn5fgjyzifxesl6o6ullfcs5u",
+     "record": {
+      "$type": "app.bsky.feed.threadgate",
+      "allow": [
+       {
+        "$type": "app.bsky.feed.threadgate#followerRule"
+       },
+       {
+        "$type": "app.bsky.feed.threadgate#mentionRule"
+       },
+       {
+        "$type": "app.bsky.feed.threadgate#followingRule"
+       }
+      ],
+      "createdAt": "2026-11-22T17:05:59.233Z",
+      "hiddenReplies": [],
+      "post": "at://did:plc:5rxcpjus3ple6jpbuafvm4og/app.bsky.feed.post/3n2w3ywcnrk2q"
+     },
+     "lists": []
+    }
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:5rxcpjus3ple6jpbuafvm4og/app.bsky.feed.post/3n2vt6cchbk2i",
+    "cid": "bafyreif2zipf26da2az4lzoq7t6jk4ivkbw2azyfbuanvwwg7xepeuqsue",
+    "author": {
+     "did": "did:plc:5rxcpjus3ple6jpbuafvm4og",
+     "handle": "parismarx.com",
+     "displayName": "Paris Marx",
+     "pronouns": "he/him",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-27T14:54:58.375Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lwkv2r7r4f2o",
+        "isValid": true,
+        "createdAt": "2025-08-17T02:55:28.761Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-22T14:27:55.894Z",
+     "embed": {
+      "$type": "app.bsky.embed.record",
+      "record": {
+       "cid": "bafyreiaw7l6j5rrel2ukzhskjykabwuzq7w2knsyfqqr4jargplpbrvt5i",
+       "uri": "at://did:plc:zgh42tgpzddqoi3awnsetwau/app.bsky.feed.post/3n2o7s63xxs2t"
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "No wonder Dario wants us talking about the big spooky AI. He doesn’t want us to look at the fossil fuels powering his version of it."
+    },
+    "embed": {
+     "record": {
+      "uri": "at://did:plc:zgh42tgpzddqoi3awnsetwau/app.bsky.feed.post/3n2o7s63xxs2t",
+      "cid": "bafyreiaw7l6j5rrel2ukzhskjykabwuzq7w2knsyfqqr4jargplpbrvt5i",
+      "author": {
+       "did": "did:plc:zgh42tgpzddqoi3awnsetwau",
+       "handle": "kostyack.bsky.social",
+       "displayName": "John Kostyack",
+       "associated": {
+        "chat": {
+         "allowIncoming": "following"
+        },
+        "activitySubscription": {
+         "allowSubscriptions": "followers"
+        }
+       },
+       "createdAt": "2023-08-21T21:44:47.172Z"
+      },
+      "value": {
+       "$type": "app.bsky.feed.post",
+       "createdAt": "2026-11-19T13:52:29.571Z",
+       "embed": {
+        "$type": "app.bsky.embed.recordWithMedia",
+        "media": {
+         "$type": "app.bsky.embed.external",
+         "external": {
+          "description": "A case study of Anthropic’s total power use and emissions. We find the company could emit 32 million metric tons of carbon dioxide in 2028.",
+          "thumb": {
+           "$type": "blob",
+           "ref": {
+            "$link": "bafkreigfls3ucrtr4ra77mj3mpglpj6um7kde5jjirv7yemgt42upk5rse"
+           },
+           "mimeType": "image/jpeg",
+           "size": 198268
+          },
+          "title": "How AI is powered: a breakdown of BYOP and grid power",
+          "uri": "https://betterdatacenterproject.com/2026/11/16/how-ai-is-powered-a-breakdown-of-byop-and-grid-power/"
+         }
+        },
+        "record": {
+         "$type": "app.bsky.embed.record",
+         "record": {
+          "cid": "bafyreic3sgzklzk5k2aidrvq2s7zoqjslpvfaeima3y5t2rcnenytvdaam",
+          "uri": "at://did:plc:zgh42tgpzddqoi3awnsetwau/app.bsky.feed.post/3n2o5kgumk22i"
+         }
+        }
+       },
+       "langs": [
+        "en"
+       ],
+       "text": "In 2028, 87% of Anthropic’s power will come from gas, 11% will come from coal. Anthropic has made no commitments to transition to renewable energy. The largest IPO in history is a large-scale investment in climate dystopia."
+      },
+      "likeCount": 2442,
+      "replyCount": 34,
+      "repostCount": 1277,
+      "quoteCount": 154,
+      "indexedAt": "2026-11-19T16:52:48.548Z",
+      "embeds": [
+       {
+        "media": {
+         "external": {
+          "uri": "https://betterdatacenterproject.com/2026/11/16/how-ai-is-powered-a-breakdown-of-byop-and-grid-power/",
+          "title": "How AI is powered: a breakdown of BYOP and grid power",
+          "description": "A case study of Anthropic’s total power use and emissions. We find the company could emit 32 million metric tons of carbon dioxide in 2028.",
+          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:zgh42tgpzddqoi3awnsetwau/bafkreigfls3ucrtr4ra77mj3mpglpj6um7kde5jjirv7yemgt42upk5rse"
+         },
+         "$type": "app.bsky.embed.external#view"
+        },
+        "record": {
+         "record": {
+          "uri": "at://did:plc:zgh42tgpzddqoi3awnsetwau/app.bsky.feed.post/3n2o5kgumk22i",
+          "cid": "bafyreic3sgzklzk5k2aidrvq2s7zoqjslpvfaeima3y5t2rcnenytvdaam",
+          "author": {
+           "did": "did:plc:zgh42tgpzddqoi3awnsetwau",
+           "handle": "kostyack.bsky.social",
+           "displayName": "John Kostyack",
+           "associated": {
+            "chat": {
+             "allowIncoming": "following"
+            },
+            "activitySubscription": {
+             "allowSubscriptions": "followers"
+            }
+           },
+           "createdAt": "2023-08-21T21:44:47.172Z"
+          },
+          "value": {
+           "$type": "app.bsky.feed.post",
+           "createdAt": "2026-11-19T13:12:22.848Z",
+           "embed": {
+            "$type": "app.bsky.embed.external",
+            "external": {
+             "description": "Plus: How Europe got hooked on Chinese clean tech, what the ‘Super El Niño’ means for this year’s ski season and an energy-security boost for coal demand",
+             "thumb": {
+              "$type": "blob",
+              "ref": {
+               "$link": "bafkreicd5aitzk6mveztsrqcacmeseluiczegorepioqyfe7pzpxarpnei"
+              },
+              "mimeType": "image/jpeg",
+              "size": 483491
+             },
+             "title": "Why Anthropic Is Hiring a $400,000-a-Year Natural-Gas Supply Manager",
+             "uri": "https://www.wsj.com/business/energy-oil/why-anthropic-is-hiring-a-400-000-a-year-natural-gas-supply-manager-7c871e93?mod=djemclimate"
+            }
+           },
+           "langs": [
+            "en"
+           ],
+           "text": "In its IPO documents & this hiring notice, Anthropic makes clear it plans to undertake a massive data center buildout powered by fossil gas. Without new guardrails, this will be done largely on private grids powered entirely by gas, and then ultimately on public grids powered mostly by fossil gas."
+          },
+          "likeCount": 259,
+          "replyCount": 6,
+          "repostCount": 112,
+          "quoteCount": 32,
+          "opThreadPostIndex": 1,
+          "opThreadPostCount": 2,
+          "indexedAt": "2026-11-19T16:12:41.346Z",
+          "$type": "app.bsky.embed.record#viewRecord"
+         }
+        },
+        "$type": "app.bsky.embed.recordWithMedia#view"
+       }
+      ],
+      "$type": "app.bsky.embed.record#viewRecord"
+     },
+     "$type": "app.bsky.embed.record#view"
+    },
+    "bookmarkCount": 19,
+    "replyCount": 7,
+    "repostCount": 98,
+    "likeCount": 320,
+    "quoteCount": 1,
+    "indexedAt": "2026-11-22T14:27:56.247Z",
+    "threadgate": {
+     "uri": "at://did:plc:5rxcpjus3ple6jpbuafvm4og/app.bsky.feed.threadgate/3n2vt6cchbk2i",
+     "cid": "bafyreick6xlmagv3wzc26scsbmxhpvi7iucc7g4f5l67pr66okn4355dyy",
+     "record": {
+      "$type": "app.bsky.feed.threadgate",
+      "allow": [
+       {
+        "$type": "app.bsky.feed.threadgate#followerRule"
+       },
+       {
+        "$type": "app.bsky.feed.threadgate#mentionRule"
+       },
+       {
+        "$type": "app.bsky.feed.threadgate#followingRule"
+       }
+      ],
+      "createdAt": "2026-11-22T14:27:55.901Z",
+      "hiddenReplies": [],
+      "post": "at://did:plc:5rxcpjus3ple6jpbuafvm4og/app.bsky.feed.post/3n2vt6cchbk2i"
+     },
+     "lists": []
+    }
+   }
+  }
+ ],
+ "cursor": "2026-11-16T16:25:38.167Z"
+}

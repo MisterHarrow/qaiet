@@ -1,0 +1,429 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:6umh2rqttv3dxohq7gaxjk36/app.bsky.feed.post/3mwjfjowbh22l",
+    "cid": "bafyreida6g3ip3s2ktzk4u66iqy7o2tmdhbyqhnyzhlpyluqjinzfgl2l4",
+    "author": {
+     "did": "did:plc:6umh2rqttv3dxohq7gaxjk36",
+     "handle": "hamel.bsky.social",
+     "displayName": "Hamel Husain",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-02-07T20:55:55.471Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-09-27T18:11:02.464Z",
+     "langs": [
+      "en"
+     ],
+     "text": "I know we are all focused on AI agents \n\nBut a good human agent (w/AI skills + taste + agency) can transform your business much more.  There is unreasonable alpha in finding these human agents maybe now more than ever."
+    },
+    "bookmarkCount": 1,
+    "replyCount": 0,
+    "repostCount": 1,
+    "likeCount": 16,
+    "quoteCount": 0,
+    "indexedAt": "2026-09-27T18:11:04.571Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:6umh2rqttv3dxohq7gaxjk36/app.bsky.feed.post/3mue4hyknc22u",
+    "cid": "bafyreibvodvthku2wbrdo4wayzskoj3o62pvgnt32ehqepfckydjezdzqu",
+    "author": {
+     "did": "did:plc:6umh2rqttv3dxohq7gaxjk36",
+     "handle": "hamel.bsky.social",
+     "displayName": "Hamel Husain",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-02-07T20:55:55.471Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-08-31T04:55:19.839Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "",
+        "aspectRatio": {
+         "height": 1166,
+         "width": 1200
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreiel4thk7uztomcpo36sgecmp6sx2zpkdxk7lk3gxqifhk6qqklfkm"
+         },
+         "mimeType": "image/jpeg",
+         "size": 486047
+        }
+       }
+      ]
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:gwnfwxbiwrriq2azrzfiwexs"
+        }
+       ],
+       "index": {
+        "byteEnd": 37,
+        "byteStart": 17
+       }
+      },
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://hamel.dev/notes/llm/ai-product-engineering/"
+        }
+       ],
+       "index": {
+        "byteEnd": 266,
+        "byteStart": 241
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "Over the summer, @sh-reya.bsky.social and I hosted 13 sessions on AI Engineering topics like retrieval, post-training, inference, and evals.\n\nI've summarized all the sessions, organized by theme, with links to the source materials. \n\nEnjoy! hamel.dev/notes/llm/ai..."
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:6umh2rqttv3dxohq7gaxjk36/bafkreiel4thk7uztomcpo36sgecmp6sx2zpkdxk7lk3gxqifhk6qqklfkm",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:6umh2rqttv3dxohq7gaxjk36/bafkreiel4thk7uztomcpo36sgecmp6sx2zpkdxk7lk3gxqifhk6qqklfkm",
+       "alt": "",
+       "aspectRatio": {
+        "height": 1166,
+        "width": 1200
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 5,
+    "replyCount": 2,
+    "repostCount": 3,
+    "likeCount": 14,
+    "quoteCount": 1,
+    "indexedAt": "2026-08-31T04:55:23.200Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:5lwweotr4gfb7bbz2fqwdthf/app.bsky.feed.post/3muaqqrnqzs23",
+    "cid": "bafyreihoyulzgrzanihq2lx6vjmkfgnigndde3z3rgzi7qlydsjypjklhq",
+    "author": {
+     "did": "did:plc:5lwweotr4gfb7bbz2fqwdthf",
+     "handle": "jeremy.lewi.us",
+     "displayName": "Jeremy Lewi",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-24T02:20:19.597Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-08-29T20:47:30.471Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreihc3prba7hgptqyumo7gk7cun4mtu3udqjsgz3ioqyy5phdkh5n7e"
+        },
+        "mimeType": "image/jpeg",
+        "size": 6111
+       },
+       "title": "",
+       "uri": "https://web.runme.dev"
+      }
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#tag",
+         "tag": "Webmcp"
+        }
+       ],
+       "index": {
+        "byteEnd": 32,
+        "byteStart": 25
+       }
+      },
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://web.runme.dev"
+        }
+       ],
+       "index": {
+        "byteEnd": 50,
+        "byteStart": 37
+       }
+      },
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:6umh2rqttv3dxohq7gaxjk36"
+        }
+       ],
+       "index": {
+        "byteEnd": 253,
+        "byteStart": 235
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "Time to do some evals of #Webmcp and web.runme.dev; first step is kicking of Codex to analyze all my traces over the past two weeks to find example invocations and problem areas. First step in evals is always to look at the data. 🎩 @hamel.bsky.social"
+    },
+    "embed": {
+     "external": {
+      "uri": "https://web.runme.dev",
+      "title": "",
+      "description": "",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:5lwweotr4gfb7bbz2fqwdthf/bafkreihc3prba7hgptqyumo7gk7cun4mtu3udqjsgz3ioqyy5phdkh5n7e"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 1,
+    "repostCount": 1,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2026-08-29T20:47:30.076Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:6umh2rqttv3dxohq7gaxjk36",
+     "handle": "hamel.bsky.social",
+     "displayName": "Hamel Husain",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-02-07T20:55:55.471Z"
+    },
+    "uri": "at://did:plc:6umh2rqttv3dxohq7gaxjk36/app.bsky.feed.repost/3mucj2o4nde2g",
+    "cid": "bafyreif4wni22m65wdwx7bowrjwsq54544stijhzyhbejqcbeukr33m4re",
+    "indexedAt": "2026-08-30T13:35:12.075Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 2
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:tsp6lfo25kjtulmjeafrqbkr/app.bsky.feed.post/3mrfgd2ttx22f",
+    "cid": "bafyreic53uf42fxy7fnlvfkkff2dzzlmyzzp5j4i22y5n4dzmbondg2a3i",
+    "author": {
+     "did": "did:plc:tsp6lfo25kjtulmjeafrqbkr",
+     "handle": "pamelafox.bsky.social",
+     "displayName": "",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-10-29T15:55:41.909Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-07-24T13:08:36.740Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "Screenshot of results",
+        "aspectRatio": {
+         "height": 928,
+         "width": 2272
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreiamuzfpoz43tjbwfz6v3amoo5carj7hsx3xici77vleiexllewgse"
+         },
+         "mimeType": "image/jpeg",
+         "size": 301543
+        }
+       }
+      ]
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://parlance-labs.com/blog/posts/auto-evals/?ck_subscriber_id=3545905957"
+        }
+       ],
+       "index": {
+        "byteEnd": 60,
+        "byteStart": 27
+       }
+      },
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:6umh2rqttv3dxohq7gaxjk36"
+        }
+       ],
+       "index": {
+        "byteEnd": 80,
+        "byteStart": 62
+       }
+      },
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:55y7wqvrhp2q6xhxn3nr7vzy"
+        }
+       ],
+       "index": {
+        "byteEnd": 113,
+        "byteStart": 85
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "\"Do automated evals work?\"\nparlance-labs.com/blog/posts/a...\n\n@hamel.bsky.social and @doesdatmaksense.bsky.social use multiple LLM-powered tools to identify failures in app traces and compare results to labels from a domain expert."
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:tsp6lfo25kjtulmjeafrqbkr/bafkreiamuzfpoz43tjbwfz6v3amoo5carj7hsx3xici77vleiexllewgse",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:tsp6lfo25kjtulmjeafrqbkr/bafkreiamuzfpoz43tjbwfz6v3amoo5carj7hsx3xici77vleiexllewgse",
+       "alt": "Screenshot of results",
+       "aspectRatio": {
+        "height": 928,
+        "width": 2272
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 1,
+    "replyCount": 1,
+    "repostCount": 1,
+    "likeCount": 5,
+    "quoteCount": 0,
+    "indexedAt": "2026-07-24T13:08:39.374Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:6umh2rqttv3dxohq7gaxjk36",
+     "handle": "hamel.bsky.social",
+     "displayName": "Hamel Husain",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-02-07T20:55:55.471Z"
+    },
+    "uri": "at://did:plc:6umh2rqttv3dxohq7gaxjk36/app.bsky.feed.repost/3mrgworfp5e2y",
+    "cid": "bafyreifjm2dcbfbuhtm6jea36ezaz7sdlx2oxneu4hhxk5owsub3ulcc3y",
+    "indexedAt": "2026-07-25T03:34:09.270Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:6umh2rqttv3dxohq7gaxjk36/app.bsky.feed.post/3m5536dlkss2h",
+    "cid": "bafyreieavt7scjpriui76wkxc3h7w6yxrg7vqbboi3x7isqtzpxad53nyu",
+    "author": {
+     "did": "did:plc:6umh2rqttv3dxohq7gaxjk36",
+     "handle": "hamel.bsky.social",
+     "displayName": "Hamel Husain",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-02-07T20:55:55.471Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2025-11-08T17:03:56.505Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "",
+        "aspectRatio": {
+         "height": 1511,
+         "width": 1152
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreibfwae76ogzlp6fbi5jm5r3rlrltfweiamhgkh2tniuvyptnqv6xe"
+         },
+         "mimeType": "image/jpeg",
+         "size": 643770
+        }
+       }
+      ]
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "👀 Animals have been assigned.   \n\nScheduled to print fall 2026!\n\nWe have iterated on this with over 3k students (and continue to do so).   We give our students access to the full draft as part of our evals course (link in bio)"
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:6umh2rqttv3dxohq7gaxjk36/bafkreibfwae76ogzlp6fbi5jm5r3rlrltfweiamhgkh2tniuvyptnqv6xe",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:6umh2rqttv3dxohq7gaxjk36/bafkreibfwae76ogzlp6fbi5jm5r3rlrltfweiamhgkh2tniuvyptnqv6xe",
+       "alt": "",
+       "aspectRatio": {
+        "height": 1511,
+        "width": 1152
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 4,
+    "replyCount": 1,
+    "repostCount": 1,
+    "likeCount": 28,
+    "quoteCount": 0,
+    "indexedAt": "2025-11-08T17:03:59.663Z"
+   }
+  }
+ ],
+ "cursor": "2025-04-07T13:54:49.12Z"
+}

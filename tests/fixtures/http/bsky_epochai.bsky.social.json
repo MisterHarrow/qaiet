@@ -1,0 +1,447 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:enqyiq55ungiw6isng5amift/app.bsky.feed.post/3n2ytrmfdui2g",
+    "cid": "bafyreigvxmqrpyw3y6t2kq7d4f4hgrdlvnnlxnqw2pdoonplgkngz4azva",
+    "author": {
+     "did": "did:plc:enqyiq55ungiw6isng5amift",
+     "handle": "epochai.bsky.social",
+     "displayName": "Epoch AI",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-11-22T23:44:09.746Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T19:16:43.184837+00:00",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "$type": "app.bsky.embed.images#image",
+        "alt": "",
+        "aspectRatio": {
+         "$type": "app.bsky.embed.defs#aspectRatio",
+         "height": 1200,
+         "width": 1200
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreifcqfusdgcnmpwzonbg7dl4qh3hblmrtx2kokwsfqizq4mcxmb3sm"
+         },
+         "mimeType": "image/png",
+         "size": 66155
+        }
+       }
+      ]
+     },
+     "facets": [],
+     "langs": [
+      "en"
+     ],
+     "text": "We are publishing 4 new benchmark reviews: 1 benchmark is Verified, 3 are Flawed. Another 4 benchmarks lacked sufficient information to assign a verdict.\n\nDetails from Verified and Flawed reviews, along with a link to our full rubric, below."
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:enqyiq55ungiw6isng5amift/bafkreifcqfusdgcnmpwzonbg7dl4qh3hblmrtx2kokwsfqizq4mcxmb3sm",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:enqyiq55ungiw6isng5amift/bafkreifcqfusdgcnmpwzonbg7dl4qh3hblmrtx2kokwsfqizq4mcxmb3sm",
+       "alt": "",
+       "aspectRatio": {
+        "$type": "app.bsky.embed.defs#aspectRatio",
+        "height": 1200,
+        "width": 1200
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 2,
+    "replyCount": 1,
+    "repostCount": 0,
+    "likeCount": 6,
+    "quoteCount": 1,
+    "indexedAt": "2026-11-23T19:16:43.945Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 12
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:enqyiq55ungiw6isng5amift/app.bsky.feed.post/3n2r5nqblu72j",
+    "cid": "bafyreicrurlzdznu4kwihkn5umg6yqrwo3nufpbvv3q2h6xwwzg5a3dqym",
+    "author": {
+     "did": "did:plc:enqyiq55ungiw6isng5amift",
+     "handle": "epochai.bsky.social",
+     "displayName": "Epoch AI",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-11-22T23:44:09.746Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-20T17:52:12.551170+00:00",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "$type": "app.bsky.embed.images#image",
+        "alt": "",
+        "aspectRatio": {
+         "$type": "app.bsky.embed.defs#aspectRatio",
+         "height": 1283,
+         "width": 1026
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreiado5p5g4mr4kwjrppvwibzzbu5zsnq6jbc4ojgyu3fukiquknbaq"
+         },
+         "mimeType": "image/png",
+         "size": 147909
+        }
+       }
+      ]
+     },
+     "facets": [],
+     "langs": [
+      "en"
+     ],
+     "text": "Jensen Huang’s resignation has put a spotlight on a big question: how are advanced Nvidia chips reaching China despite US export controls?"
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:enqyiq55ungiw6isng5amift/bafkreiado5p5g4mr4kwjrppvwibzzbu5zsnq6jbc4ojgyu3fukiquknbaq",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:enqyiq55ungiw6isng5amift/bafkreiado5p5g4mr4kwjrppvwibzzbu5zsnq6jbc4ojgyu3fukiquknbaq",
+       "alt": "",
+       "aspectRatio": {
+        "$type": "app.bsky.embed.defs#aspectRatio",
+        "height": 1283,
+        "width": 1026
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 1,
+    "replyCount": 2,
+    "repostCount": 1,
+    "likeCount": 12,
+    "quoteCount": 1,
+    "indexedAt": "2026-11-20T17:52:13.342Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 14
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:enqyiq55ungiw6isng5amift/app.bsky.feed.post/3n2mhdzreyz2y",
+    "cid": "bafyreiayvx3ebciujl5d53qh2nodxvbvbpym4ksnk4k3chidvivfhp4aty",
+    "author": {
+     "did": "did:plc:enqyiq55ungiw6isng5amift",
+     "handle": "epochai.bsky.social",
+     "displayName": "Epoch AI",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-11-22T23:44:09.746Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-18T21:02:25.714914+00:00",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "$type": "app.bsky.embed.images#image",
+        "alt": "Line chart of annualized compute spending. Anthropic grows 4.0x per year (90% CI: 3.6x to 4.5x), reaching about $40 billion in late 2026. OpenAI grows 3x per year (90% CI: 2x to 5x), with a 2026 forecast of about $50 billion.",
+        "aspectRatio": {
+         "$type": "app.bsky.embed.defs#aspectRatio",
+         "height": 1803,
+         "width": 1999
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreihjdlpmkqwu4vdvxbxa3pjivz2dpz7lbqsv34zgiohtpsk46rg2uq"
+         },
+         "mimeType": "image/png",
+         "size": 358233
+        }
+       }
+      ]
+     },
+     "facets": [],
+     "langs": [
+      "en"
+     ],
+     "text": "Anthropic’s compute spending is increasing by 4x per year, outpacing OpenAI’s 3x.\n\nPer its S-1, Anthropic spent $10 billion on compute and infrastructure in Q3 2026 alone, or $40 billion annualized, compared to $433 million in all of 2023."
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:enqyiq55ungiw6isng5amift/bafkreihjdlpmkqwu4vdvxbxa3pjivz2dpz7lbqsv34zgiohtpsk46rg2uq",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:enqyiq55ungiw6isng5amift/bafkreihjdlpmkqwu4vdvxbxa3pjivz2dpz7lbqsv34zgiohtpsk46rg2uq",
+       "alt": "Line chart of annualized compute spending. Anthropic grows 4.0x per year (90% CI: 3.6x to 4.5x), reaching about $40 billion in late 2026. OpenAI grows 3x per year (90% CI: 2x to 5x), with a 2026 forecast of about $50 billion.",
+       "aspectRatio": {
+        "$type": "app.bsky.embed.defs#aspectRatio",
+        "height": 1803,
+        "width": 1999
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 2,
+    "replyCount": 1,
+    "repostCount": 4,
+    "likeCount": 15,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-18T21:02:26.554Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 3
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:enqyiq55ungiw6isng5amift/app.bsky.feed.post/3n2m56n4r5g2c",
+    "cid": "bafyreiajhspttc67rev2jix5rc2hqbmnjqff5d4ofxthvbyfdzb3tvmjtm",
+    "author": {
+     "did": "did:plc:enqyiq55ungiw6isng5amift",
+     "handle": "epochai.bsky.social",
+     "displayName": "Epoch AI",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-11-22T23:44:09.746Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-18T18:00:27.265299+00:00",
+     "embed": {
+      "$type": "app.bsky.embed.recordWithMedia",
+      "media": {
+       "$type": "app.bsky.embed.images",
+       "images": [
+        {
+         "$type": "app.bsky.embed.images#image",
+         "alt": "Stacked bar chart of the agentic inference capacity of AI chips sold to date, by quarter from Q2 2025 to Q2 2026 and by chip designer (Nvidia, Google, other). Two lines show inference capacity growing 4.6× and compute capacity 2.6× over the year.",
+         "aspectRatio": {
+          "$type": "app.bsky.embed.defs#aspectRatio",
+          "height": 1500,
+          "width": 1200
+         },
+         "image": {
+          "$type": "blob",
+          "ref": {
+           "$link": "bafkreieqzytpvlobxpdk5linnx5bqgxwsofg3wji2w2vvjwr57u2pxk3la"
+          },
+          "mimeType": "image/png",
+          "size": 136236
+         }
+        }
+       ]
+      },
+      "record": {
+       "$type": "app.bsky.embed.record",
+       "record": {
+        "$type": "com.atproto.repo.strongRef",
+        "cid": "bafyreiaijewe53ptyse4vtusg7zkxay5wg7seih5cqsm554wb5j3lzetai",
+        "uri": "at://did:plc:enqyiq55ungiw6isng5amift/app.bsky.feed.post/3mzvmoxn7ol2y"
+       }
+      }
+     },
+     "facets": [],
+     "langs": [
+      "en"
+     ],
+     "text": "Agentic inference capacity grew 4.6× from Q2 2025 to Q2 2026. This compares with just 2.6× growth in compute, according to our Inference Performance Index (IPI)."
+    },
+    "embed": {
+     "media": {
+      "images": [
+       {
+        "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:enqyiq55ungiw6isng5amift/bafkreieqzytpvlobxpdk5linnx5bqgxwsofg3wji2w2vvjwr57u2pxk3la",
+        "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:enqyiq55ungiw6isng5amift/bafkreieqzytpvlobxpdk5linnx5bqgxwsofg3wji2w2vvjwr57u2pxk3la",
+        "alt": "Stacked bar chart of the agentic inference capacity of AI chips sold to date, by quarter from Q2 2025 to Q2 2026 and by chip designer (Nvidia, Google, other). Two lines show inference capacity growing 4.6× and compute capacity 2.6× over the year.",
+        "aspectRatio": {
+         "$type": "app.bsky.embed.defs#aspectRatio",
+         "height": 1500,
+         "width": 1200
+        }
+       }
+      ],
+      "$type": "app.bsky.embed.images#view"
+     },
+     "record": {
+      "record": {
+       "uri": "at://did:plc:enqyiq55ungiw6isng5amift/app.bsky.feed.post/3mzvmoxn7ol2y",
+       "cid": "bafyreiaijewe53ptyse4vtusg7zkxay5wg7seih5cqsm554wb5j3lzetai",
+       "author": {
+        "did": "did:plc:enqyiq55ungiw6isng5amift",
+        "handle": "epochai.bsky.social",
+        "displayName": "Epoch AI",
+        "associated": {
+         "activitySubscription": {
+          "allowSubscriptions": "followers"
+         }
+        },
+        "createdAt": "2024-11-22T23:44:09.746Z"
+       },
+       "value": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-11-09T19:06:47.288210+00:00",
+        "embed": {
+         "$type": "app.bsky.embed.images",
+         "images": [
+          {
+           "$type": "app.bsky.embed.images#image",
+           "alt": "Horizontal bar chart ranking AI chips by modeled inference performance index normalized to Nvidia GB300=1, showing up to 72× higher inference capacity for newer chips than Nvidia H100.",
+           "aspectRatio": {
+            "$type": "app.bsky.embed.defs#aspectRatio",
+            "height": 1500,
+            "width": 1200
+           },
+           "image": {
+            "$type": "blob",
+            "ref": {
+             "$link": "bafkreicqlhyl3jpljdaoidtexmyrxpwrhadhylqzsuqq75xcl2fubp57x4"
+            },
+            "mimeType": "image/png",
+            "size": 120789
+           }
+          }
+         ]
+        },
+        "facets": [],
+        "langs": [
+         "en"
+        ],
+        "text": "We estimate that FLOP/s alone understates GB300’s inference advantage over H100 by 10×. The standard AI chip comparison misses most of what matters for inference."
+       },
+       "likeCount": 33,
+       "replyCount": 1,
+       "repostCount": 4,
+       "quoteCount": 7,
+       "opThreadPostIndex": 1,
+       "opThreadPostCount": 4,
+       "indexedAt": "2026-11-09T19:06:48.175Z",
+       "embeds": [
+        {
+         "images": [
+          {
+           "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:enqyiq55ungiw6isng5amift/bafkreicqlhyl3jpljdaoidtexmyrxpwrhadhylqzsuqq75xcl2fubp57x4",
+           "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:enqyiq55ungiw6isng5amift/bafkreicqlhyl3jpljdaoidtexmyrxpwrhadhylqzsuqq75xcl2fubp57x4",
+           "alt": "Horizontal bar chart ranking AI chips by modeled inference performance index normalized to Nvidia GB300=1, showing up to 72× higher inference capacity for newer chips than Nvidia H100.",
+           "aspectRatio": {
+            "$type": "app.bsky.embed.defs#aspectRatio",
+            "height": 1500,
+            "width": 1200
+           }
+          }
+         ],
+         "$type": "app.bsky.embed.images#view"
+        }
+       ],
+       "$type": "app.bsky.embed.record#viewRecord"
+      }
+     },
+     "$type": "app.bsky.embed.recordWithMedia#view"
+    },
+    "bookmarkCount": 3,
+    "replyCount": 1,
+    "repostCount": 5,
+    "likeCount": 19,
+    "quoteCount": 1,
+    "indexedAt": "2026-11-18T18:00:28.346Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 4
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:enqyiq55ungiw6isng5amift/app.bsky.feed.post/3n2jzabrd7c2b",
+    "cid": "bafyreicnzj7f6c73wu5x6l5xct7u6eopdglnc5yvwip44fbylg6sei3jzi",
+    "author": {
+     "did": "did:plc:enqyiq55ungiw6isng5amift",
+     "handle": "epochai.bsky.social",
+     "displayName": "Epoch AI",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-11-22T23:44:09.746Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-17T21:44:28.022971+00:00",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "$type": "app.bsky.embed.images#image",
+        "alt": "Bar chart of average scores on Epoch Automation Reports tasks. Claude Fable 5.2 leads at about 82%, followed by Claude Opus 5.5, Gemini 4 Argon, GPT-6.2 Astra, Claude Fable 5.1, and GPT-6 Astra. No model reaches 100%, the standard expected of Epoch employees.",
+        "aspectRatio": {
+         "$type": "app.bsky.embed.defs#aspectRatio",
+         "height": 1500,
+         "width": 1200
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreidgtfevdkveq7qhwimoxzcwcvawjtimyyssay2hljhy3eaizfr62m"
+         },
+         "mimeType": "image/png",
+         "size": 80818
+        }
+       }
+      ]
+     },
+     "facets": [],
+     "langs": [
+      "en"
+     ],
+     "text": "Can the most capable LLMs match humans at real work? Not yet, at least not on the kind of work we do at Epoch."
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:enqyiq55ungiw6isng5amift/bafkreidgtfevdkveq7qhwimoxzcwcvawjtimyyssay2hljhy3eaizfr62m",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:enqyiq55ungiw6isng5amift/bafkreidgtfevdkveq7qhwimoxzcwcvawjtimyyssay2hljhy3eaizfr62m",
+       "alt": "Bar chart of average scores on Epoch Automation Reports tasks. Claude Fable 5.2 leads at about 82%, followed by Claude Opus 5.5, Gemini 4 Argon, GPT-6.2 Astra, Claude Fable 5.1, and GPT-6 Astra. No model reaches 100%, the standard expected of Epoch employees.",
+       "aspectRatio": {
+        "$type": "app.bsky.embed.defs#aspectRatio",
+        "height": 1500,
+        "width": 1200
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 1,
+    "replyCount": 1,
+    "repostCount": 3,
+    "likeCount": 17,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-17T21:44:28.858Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 13
+  }
+ ],
+ "cursor": "2026-10-06T16:06:03.962Z"
+}

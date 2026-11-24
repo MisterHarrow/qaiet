@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:media="http://search.yahoo.com/mrss/" >
+    <channel>
+        <title>AI - Ars Technica</title>
+        <atom:link href="https://arstechnica.com/ai/feed/" rel="self" type="application/rss+xml" />
+        <link>https://arstechnica.com</link>
+        <description>Serving the Technologist since 1998. News, reviews, and analysis.</description>
+        <lastBuildDate>Mon, 23 Nov 2026 22:28:58 +0000</lastBuildDate>
+        <language>en-US</language>
+        <sy:updatePeriod>
+            hourly        </sy:updatePeriod>
+        <sy:updateFrequency>
+            1        </sy:updateFrequency>
+        
+<image>
+	<url>https://cdn.arstechnica.net/wp-content/uploads/2016/10/cropped-ars-logo-512_480-60x60.png</url>
+	<title>AI - Ars Technica</title>
+	<link>https://arstechnica.com</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+            <item>
+                <title>States sue SpaceX to stop Grok from generating child sex images, revenge porn</title>
+                <link>https://arstechnica.com/tech-policy/2026/11/states-sue-spacex-to-stop-grok-from-generating-child-sex-images-revenge-porn/</link>
+                                    <comments>https://arstechnica.com/tech-policy/2026/11/states-sue-spacex-to-stop-grok-from-generating-child-sex-images-revenge-porn/#comments</comments>
+                
+                <dc:creator>
+                    <![CDATA[Ashley Belanger]]>
+                </dc:creator>
+                <pubDate>Mon, 23 Nov 2026 21:30:44 +0000</pubDate>
+                		<category><![CDATA[AI]]></category>
+		<category><![CDATA[Policy]]></category>
+		<category><![CDATA[child sexual abuse materials]]></category>
+		<category><![CDATA[csam]]></category>
+		<category><![CDATA[Elon Musk]]></category>
+		<category><![CDATA[grok]]></category>
+		<category><![CDATA[revenge porn]]></category>
+		<category><![CDATA[spacex]]></category>
+		<category><![CDATA[SpaceXAI]]></category>
+		<category><![CDATA[spacexsi]]></category>
+		<category><![CDATA[xAI]]></category>
+                <guid isPermaLink="true">https://arstechnica.com/tech-policy/2026/11/states-sue-spacex-to-stop-grok-from-generating-child-sex-images-revenge-porn/</guid>
+
+                                    <description>
+                        <![CDATA[X says every Grok output is screened, but state AGs say Grok is still making CSAM.]]>
+                    </description>
+                                                                
+                                    
+                                    <slash:comments>64</slash:comments>
+                
+                
+                <media:content url="https://cdn.arstechnica.net/wp-content/uploads/2026/11/GettyImages-2284791219-1024x648.jpg" type="image/jpeg" medium="image" width="1024" height="648">
+<media:thumbnail url="https://cdn.arstechnica.net/wp-content/uploads/2026/11/GettyImages-2284791219-500x500.jpg" width="500" height="500" />
+<media:credit>NurPhoto / Contributor | NurPhoto</media:credit></media:content>
+            </item>
+                    <item>
+                <title>Jensen Huang reinstated as Nvidia CEO, board chair</title>
+                <link>https://arstechnica.com/ai/2026/11/jensen-huang-reinstated-as-nvidia-ceo-board-chair/</link>
+                                    <comments>https://arstechnica.com/ai/2026/11/jensen-huang-reinstated-as-nvidia-ceo-board-chair/#comments</comments>
+                
+                <dc:creator>
+                    <![CDATA[Kyle Orland]]>
+                </dc:creator>
+                <pubDate>Mon, 23 Nov 2026 15:46:18 +0000</pubDate>
+                		<category><![CDATA[AI]]></category>
+		<category><![CDATA[CEO]]></category>
+		<category><![CDATA[huang]]></category>
+		<category><![CDATA[Jensen Huang]]></category>
+		<category><![CDATA[NVIDIA]]></category>
+                <guid isPermaLink="true">https://arstechnica.com/ai/2026/11/jensen-huang-reinstated-as-nvidia-ceo-board-chair/</guid>
+
+                                    <description>
+                        <![CDATA[Trump says he spoke to the board and that Huang "did nothing wrong."]]>
+                    </description>
+                                                                
+                                    
+                                    <slash:comments>649</slash:comments>
+                
+                
+                <media:content url="https://cdn.arstechnica.net/wp-content/uploads/2026/11/GettyImages-2301328096-1024x648.jpg" type="image/jpeg" medium="image" width="1024" height="648">
+<media:thumbnail url="https://cdn.arstechnica.net/wp-content/uploads/2026/11/GettyImages-2301328096-500x500.jpg" width="500" height="500" />
+<media:credit>Getty Images</media:credit><media:text>Re-enter, stage left</media:text></media:content>
+            </item>
+                    <item>
+                <title>Review: The Asus ProArt P16 offers a glimpse of a future powered by local AI</title>
+                <link>https://arstechnica.com/reviews/2026/11/review-the-asus-proart-p16-offers-a-glimpse-of-a-future-powered-by-local-ai/</link>
+                                    <comments>https://arstechnica.com/reviews/2026/11/review-the-asus-proart-p16-offers-a-glimpse-of-a-future-powered-by-local-ai/#comments</comments>
+                
+                <dc:creator>
+                    <![CDATA[Ryan Whitwam]]>
+                </dc:creator>
+                <pubDate>Mon, 23 Nov 2026 12:00:00 +0000</pubDate>
+                		<category><![CDATA[AI]]></category>
+		<category><![CDATA[Features]]></category>
+		<category><![CDATA[Reviews]]></category>
+		<category><![CDATA[ASUS]]></category>
+		<category><![CDATA[local AI]]></category>
+		<category><![CDATA[RTX Spark]]></category>
+		<category><![CDATA[Windows]]></category>
+                <guid isPermaLink="true">https://arstechnica.com/reviews/2026/11/review-the-asus-proart-p16-offers-a-glimpse-of-a-future-powered-by-local-ai/</guid>
+
+                                    <description>
+                        <![CDATA[The new Asus ProArt laptop costs up to $7,000, but it can run a gaggle of local AI agents. ]]>
+                    </description>
+                                                                
+                                    
+                                    <slash:comments>82</slash:comments>
+                
+                
+                <media:content url="https://cdn.arstechnica.net/wp-content/uploads/2026/11/Asus-P16-3-1152x648.jpg" type="image/jpeg" medium="image" width="1152" height="648">
+<media:thumbnail url="https://cdn.arstechnica.net/wp-content/uploads/2026/11/Asus-P16-3-500x500.jpg" width="500" height="500" />
+<media:credit>Ryan Whitwam</media:credit><media:text>The Asus ProArt P16 looks like any high-end laptop, but it's got serious AI chops. </media:text></media:content>
+            </item>
+                    <item>
+                <title>Google rolls out new search homepage with AI chat history and no search button</title>
+                <link>https://arstechnica.com/ai/2026/11/googles-latest-search-page-redesign-drops-the-search-button-adds-ai-sidebar/</link>
+                                    <comments>https://arstechnica.com/ai/2026/11/googles-latest-search-page-redesign-drops-the-search-button-adds-ai-sidebar/#comments</comments>
+                
+                <dc:creator>
+                    <![CDATA[Ryan Whitwam]]>
+                </dc:creator>
+                <pubDate>Fri, 20 Nov 2026 21:58:29 +0000</pubDate>
+                		<category><![CDATA[AI]]></category>
+		<category><![CDATA[Google]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[google]]></category>
+		<category><![CDATA[search]]></category>
+                <guid isPermaLink="true">https://arstechnica.com/ai/2026/11/googles-latest-search-page-redesign-drops-the-search-button-adds-ai-sidebar/</guid>
+
+                                    <description>
+                        <![CDATA[Google search is making it even easier to access AI tools on the search page. ]]>
+                    </description>
+                                                                
+                                    
+                                    <slash:comments>90</slash:comments>
+                
+                
+                <media:content url="https://cdn.arstechnica.net/wp-content/uploads/2026/06/google-sign-logo-1152x648.jpg" type="image/jpeg" medium="image" width="1152" height="648">
+<media:thumbnail url="https://cdn.arstechnica.net/wp-content/uploads/2026/06/google-sign-logo-500x500-1780514708.jpg" width="500" height="500" />
+<media:credit>Getty Images | Bloomberg</media:credit><media:text>A sign at the Google I/O Developers Conference in Mountain View, California on Tuesday, May 19, 2026.</media:text></media:content>
+            </item>
+                    <item>
+                <title>Meta reconsiders 2030 net-zero goal amid record emissions from AI data centers</title>
+                <link>https://arstechnica.com/ai/2026/11/meta-reconsiders-2030-net-zero-goal-amid-record-emissions-from-ai-data-centers/</link>
+                                    <comments>https://arstechnica.com/ai/2026/11/meta-reconsiders-2030-net-zero-goal-amid-record-emissions-from-ai-data-centers/#comments</comments>
+                
+                <dc:creator>
+                    <![CDATA[Jeremy Hsu]]>
+                </dc:creator>
+                <pubDate>Fri, 20 Nov 2026 21:47:10 +0000</pubDate>
+                		<category><![CDATA[AI]]></category>
+		<category><![CDATA[ai data centers]]></category>
+		<category><![CDATA[big tech]]></category>
+		<category><![CDATA[carbon emissions]]></category>
+		<category><![CDATA[data centers]]></category>
+		<category><![CDATA[environmental sustainability]]></category>
+		<category><![CDATA[meta]]></category>
+		<category><![CDATA[sustainability]]></category>
+		<category><![CDATA[tech company]]></category>
+                <guid isPermaLink="true">https://arstechnica.com/ai/2026/11/meta-reconsiders-2030-net-zero-goal-amid-record-emissions-from-ai-data-centers/</guid>
+
+                                    <description>
+                        <![CDATA[Meta is “re-evaluating” 2030 sustainability goals. Will others follow?]]>
+                    </description>
+                                                                
+                                    
+                                    <slash:comments>67</slash:comments>
+                
+                
+                <media:content url="https://cdn.arstechnica.net/wp-content/uploads/2026/11/Meta-El-Paso-data-center-1152x648.jpg" type="image/jpeg" medium="image" width="1152" height="648">
+<media:thumbnail url="https://cdn.arstechnica.net/wp-content/uploads/2026/11/Meta-El-Paso-data-center-500x500.jpg" width="500" height="500" />
+<media:credit> Brandon Bell/Getty Images</media:credit><media:text>The $10 billion Meta El Paso Data Center is seen in the midst of construction on August 13, 2026 in El Paso, Texas.</media:text></media:content>
+            </item>
+            </channel>
+</rss>

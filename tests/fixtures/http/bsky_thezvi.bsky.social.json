@@ -1,0 +1,88 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:otaorgzgidzlbzsb7ia2rwwj/app.bsky.feed.post/3mzv6h4zdo226",
+    "cid": "bafyreibcjryykuo6w2sy3av2znd3rmbbv2jrcz6lsxcwylvzvk2q6ajblu",
+    "author": {
+     "did": "did:plc:otaorgzgidzlbzsb7ia2rwwj",
+     "handle": "thezvi.bsky.social",
+     "displayName": "Zvi Mowshowitz",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-07-06T11:16:55.567Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-09T14:51:42.698Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "METR came out with an extensive report on how much AI is accelerating AI R&D at Anthropic, and thus how close we might be to recursive self-improvement (RSI) and how far that might go.",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreih7osa6f6ax5jvibfv55nvsjgynvwr5uemsn4kcxf42zo4nwcos34"
+        },
+        "mimeType": "image/jpeg",
+        "size": 48062
+       },
+       "title": "AI R&D Is Accelerating Towards Potential RSI in 2027",
+       "uri": "https://thezvi.substack.com/p/ai-r-and-d-is-accelerating-towards"
+      }
+     },
+     "text": "AI R&D Is Accelerating Towards Potential RSI in 2027"
+    },
+    "embed": {
+     "external": {
+      "uri": "https://thezvi.substack.com/p/ai-r-and-d-is-accelerating-towards",
+      "title": "AI R&D Is Accelerating Towards Potential RSI in 2027",
+      "description": "METR came out with an extensive report on how much AI is accelerating AI R&D at Anthropic, and thus how close we might be to recursive self-improvement (RSI) and how far that might go.",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:otaorgzgidzlbzsb7ia2rwwj/bafkreih7osa6f6ax5jvibfv55nvsjgynvwr5uemsn4kcxf42zo4nwcos34"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 2,
+    "likeCount": 9,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-09T14:51:52.790Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:otaorgzgidzlbzsb7ia2rwwj/app.bsky.feed.post/3msizzktc4k2f",
+    "cid": "bafyreiedjnyccmemlb35a5waaytmlmrlveh2vlhuqfvckjsp5i7vwml6a4",
+    "author": {
+     "did": "did:plc:otaorgzgidzlbzsb7ia2rwwj",
+     "handle": "thezvi.bsky.social",
+     "displayName": "Zvi Mowshowitz",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-07-06T11:16:55.567Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-08-07T17:04:23.634Z",
+     "langs": [
+      "en"
+     ],
+     "text": "Like this post if you would substantially benefit from me cross-posting my blog posts here on BlueSky.\n\n(With the understanding that I would by default not be otherwise posting here, including not responding to comments)"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 1,
+    "likeCount": 58,
+    "quoteCount": 1,
+    "indexedAt": "2026-08-07T17:05:12.970Z"
+   }
+  }
+ ]
+}

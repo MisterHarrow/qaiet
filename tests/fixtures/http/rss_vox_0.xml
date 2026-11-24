@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?><feed
+	xmlns="http://www.w3.org/2005/Atom"
+	xmlns:thr="http://purl.org/syndication/thread/1.0"
+	xml:lang="en-US"
+	>
+	<title type="text">Technology | Vox</title>
+	<subtitle type="text">Our world has too much noise and too little context. Vox helps you understand what matters.</subtitle>
+
+	<updated>2026-11-23T21:24:32+00:00</updated>
+
+	<link rel="alternate" type="text/html" href="https://www.vox.com/technology" />
+	<id>https://www.vox.com/rss/technology/index.xml</id>
+	<link rel="self" type="application/atom+xml" href="https://www.vox.com/rss/technology/index.xml" />
+
+	<icon>https://platform.vox.com/wp-content/uploads/sites/2/2024/08/vox_logo_rss_light_mode.png?w=150&amp;h=100&amp;crop=1</icon>
+		<entry>
+			
+			<author>
+				<name>Cameron Peters</name>
+			</author>
+			
+			<title type="html"><![CDATA[Why Trump saved Jensen Huang]]></title>
+			<link rel="alternate" type="text/html" href="https://www.vox.com/the-logoff-newsletter-trump/511773/trump-jensen-huang-nvidia-board-why" />
+			<id>https://www.vox.com/511773/the-logoff-template</id>
+			<updated>2026-11-23T16:24:32-05:00</updated>
+			<published>2026-11-23T17:00:00-05:00</published>
+			<category scheme="https://www.vox.com" term="Artificial Intelligence" /><category scheme="https://www.vox.com" term="Donald Trump" /><category scheme="https://www.vox.com" term="Innovation" /><category scheme="https://www.vox.com" term="Politics" /><category scheme="https://www.vox.com" term="Technology" /><category scheme="https://www.vox.com" term="The Logoff" /><category scheme="https://www.vox.com" term="Trump Administration" />
+							<summary type="html"><![CDATA[This story appeared in&#160;The Logoff, a daily newsletter that helps you stay informed about the Trump administration without letting political news take over your life.&#160;Subscribe here. Welcome to The Logoff: Donald Trump is personally intervening to keep the AI industry afloat.&#160; What happened? Jensen Huang, the recently ousted Nvidia CEO, is back atop the company [&#8230;]]]></summary>
+			
+							
+			
+					</entry>
+			<entry>
+			
+			<author>
+				<name>Sigal Samuel</name>
+			</author>
+			
+			<title type="html"><![CDATA[How religion can help with AI anxiety]]></title>
+			<link rel="alternate" type="text/html" href="https://www.vox.com/advice/511400/ai-doom-anxiety-religion-faith-church" />
+			<id>https://www.vox.com/?p=511400</id>
+			<updated>2026-11-23T11:37:25-05:00</updated>
+			<published>2026-11-22T08:30:00-05:00</published>
+			<category scheme="https://www.vox.com" term="Advice" /><category scheme="https://www.vox.com" term="Artificial Intelligence" /><category scheme="https://www.vox.com" term="Future Perfect" /><category scheme="https://www.vox.com" term="Innovation" /><category scheme="https://www.vox.com" term="Life" /><category scheme="https://www.vox.com" term="Religion" /><category scheme="https://www.vox.com" term="Technology" /><category scheme="https://www.vox.com" term="Your Mileage May Vary" />
+							<summary type="html"><![CDATA[Your Mileage May Vary is an advice column offering you a unique framework for thinking through your moral dilemmas. It’s based on value pluralism — the idea that each of us has multiple values that are equally valid but that often conflict with each other. To submit a question, fill out this anonymous form. Here’s [&#8230;]]]></summary>
+			
+							
+			
+					</entry>
+			<entry>
+			
+			<author>
+				<name>Caitlin Dewey</name>
+			</author>
+			
+			<title type="html"><![CDATA[The world’s most powerful frenemies talk nuclear weapons]]></title>
+			<link rel="alternate" type="text/html" href="https://www.vox.com/today-explained-newsletter/511213/trump-xi-putin-shenzhen-trilateral" />
+			<id>https://www.vox.com/511213/tex-nl-site-template</id>
+			<updated>2026-11-19T17:07:50-05:00</updated>
+			<published>2026-11-19T17:15:00-05:00</published>
+			<category scheme="https://www.vox.com" term="AI and nuclear weapons" /><category scheme="https://www.vox.com" term="Artificial Intelligence" /><category scheme="https://www.vox.com" term="China" /><category scheme="https://www.vox.com" term="Donald Trump" /><category scheme="https://www.vox.com" term="Innovation" /><category scheme="https://www.vox.com" term="Politics" /><category scheme="https://www.vox.com" term="Russia" /><category scheme="https://www.vox.com" term="Technology" /><category scheme="https://www.vox.com" term="Today, Explained newsletter" /><category scheme="https://www.vox.com" term="World Politics" />
+							<summary type="html"><![CDATA[This story appeared in&#160;Today, Explained,&#160;a daily newsletter that helps you understand the most compelling news and stories of the day.&#160;Subscribe here. President Donald Trump is on his way back from China after a four-day Asia trip that included taking in a surreal cover of &#8220;Y.M.C.A.,&#8221; heaping praise on a noted kleptocrat, and making earnest — [&#8230;]]]></summary>
+			
+							
+			
+					</entry>
+			<entry>
+			
+			<author>
+				<name>Adam Clark Estes</name>
+			</author>
+			
+			<title type="html"><![CDATA[How Nvidia’s chaos trickles down to you]]></title>
+			<link rel="alternate" type="text/html" href="https://www.vox.com/technology/511229/nvidia-ai-jensen-huang-401k-bubble" />
+			<id>https://www.vox.com/?p=511229</id>
+			<updated>2026-11-18T18:29:14-05:00</updated>
+			<published>2026-11-19T08:00:00-05:00</published>
+			<category scheme="https://www.vox.com" term="Artificial Intelligence" /><category scheme="https://www.vox.com" term="Big Tech" /><category scheme="https://www.vox.com" term="Innovation" /><category scheme="https://www.vox.com" term="Technology" />
+							<summary type="html"><![CDATA[If you didn’t know a lot about Nvidia a month ago, what you know now is salacious, essential, and probably a little bit misleading.&#160; The multitrillion-dollar chipmaker has primarily been in the news because its co-founder and CEO Jensen Huang had a few affairs — one with a possible spy — and resigned. This has [&#8230;]]]></summary>
+			
+							
+			
+					</entry>
+			<entry>
+			
+			<author>
+				<name>Kylie Jones</name>
+			</author>
+			
+			<title type="html"><![CDATA[The US helped the world rein in nuclear weapons. Could it do the same for AI?]]></title>
+			<link rel="alternate" type="text/html" href="https://www.vox.com/future-perfect/511092/nuclear-weapons-ai-nonproliferation-safety-regulation" />
+			<id>https://www.vox.com/?p=511092</id>
+			<updated>2026-11-17T17:46:50-05:00</updated>
+			<published>2026-11-18T08:00:00-05:00</published>
+			<category scheme="https://www.vox.com" term="AI and nuclear weapons" /><category scheme="https://www.vox.com" term="Artificial Intelligence" /><category scheme="https://www.vox.com" term="Future Perfect" /><category scheme="https://www.vox.com" term="Innovation" /><category scheme="https://www.vox.com" term="Living in an AI world" /><category scheme="https://www.vox.com" term="Technology" />
+							<summary type="html"><![CDATA[When Illinois Gov. JB Pritzker talks about the threat of artificial intelligence, he offers an increasingly common point of comparison: it is a danger “on the level of nuclear weapons.”  The comparison is not far-fetched. If the international community found ways to constrain a potentially catastrophic technology once before, perhaps those arrangements can help us [&#8230;]]]></summary>
+			
+							
+			
+					</entry>
+	</feed>

@@ -1,0 +1,646 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:fyyczicblamlp2kqv4p2g5eh/app.bsky.feed.post/3mznejeugnc2r",
+    "cid": "bafyreidt4lejbql3iixjiuuvvl3c5afwihxq3cw7w3cp46dmirrbtog7wq",
+    "author": {
+     "did": "did:plc:fyyczicblamlp2kqv4p2g5eh",
+     "handle": "craigsj.bsky.social",
+     "displayName": "Craig Jenkins",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-06-12T04:50:15.334Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-06T12:19:12.016Z",
+     "embed": {
+      "$type": "app.bsky.embed.record",
+      "record": {
+       "cid": "bafyreih3bdpkoq3t4l2bd6vdnld4xh75gscq33bshnijednruarc64i4ne",
+       "uri": "at://did:plc:jbvnehrrdqoulco4rf5gxg5r/app.bsky.feed.post/3mzmykmgm6622"
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "explaining this incident to future generations in velvet underground terms: \"they didn't sell that many but everyone who bought one started a militia\""
+    },
+    "embed": {
+     "record": {
+      "uri": "at://did:plc:jbvnehrrdqoulco4rf5gxg5r/app.bsky.feed.post/3mzmykmgm6622",
+      "cid": "bafyreih3bdpkoq3t4l2bd6vdnld4xh75gscq33bshnijednruarc64i4ne",
+      "author": {
+       "did": "did:plc:jbvnehrrdqoulco4rf5gxg5r",
+       "handle": "reuters.com",
+       "displayName": "Reuters",
+       "associated": {
+        "chat": {
+         "allowIncoming": "none",
+         "allowGroupInvites": "none"
+        },
+        "activitySubscription": {
+         "allowSubscriptions": "followers"
+        }
+       },
+       "createdAt": "2024-11-12T21:07:25.505Z",
+       "verification": {
+        "verifications": [
+         {
+          "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+          "issuerDisplayName": "Bluesky",
+          "issuerHandle": "bsky.app",
+          "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lndpvhlcfj24",
+          "isValid": true,
+          "createdAt": "2025-04-21T10:47:39.459Z"
+         }
+        ],
+        "verifiedStatus": "valid",
+        "trustedVerifierStatus": "none"
+       }
+      },
+      "value": {
+       "$type": "app.bsky.feed.post",
+       "createdAt": "2026-11-06T08:45:08Z",
+       "embed": {
+        "$type": "app.bsky.embed.external",
+        "external": {
+         "description": "Tesla plans to wind down Cybertruck production at its Texas gigafactory ​around the middle of next year to accommodate ‌increased production of the Cybercab, CEO Elon Musk said in a post on X on Friday.",
+         "thumb": {
+          "$type": "blob",
+          "ref": {
+           "$link": "bafkreibxwgmh4nbalmfjvalqpavbekwtas6426ngqdycqeqkpufyzumkza"
+          },
+          "mimeType": "image/jpeg",
+          "size": 85668
+         },
+         "title": "Tesla to wind down Cybertruck production at Texas factory, Musk says",
+         "uri": "https://reut.rs/3Umo31v"
+        }
+       },
+       "facets": [
+        {
+         "features": [
+          {
+           "$type": "app.bsky.richtext.facet#link",
+           "uri": "https://reut.rs/3Umo31v"
+          }
+         ],
+         "index": {
+          "byteEnd": 84,
+          "byteStart": 69
+         }
+        }
+       ],
+       "text": "Tesla to wind down Cybertruck production at Texas factory, Musk says reut.rs/3Umo31v"
+      },
+      "likeCount": 405,
+      "replyCount": 85,
+      "repostCount": 105,
+      "quoteCount": 303,
+      "indexedAt": "2026-11-06T08:45:09.272Z",
+      "embeds": [
+       {
+        "external": {
+         "uri": "https://reut.rs/3Umo31v",
+         "title": "Tesla to wind down Cybertruck production at Texas factory, Musk says",
+         "description": "Tesla plans to wind down Cybertruck production at its Texas gigafactory ​around the middle of next year to accommodate ‌increased production of the Cybercab, CEO Elon Musk said in a post on X on Friday.",
+         "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:jbvnehrrdqoulco4rf5gxg5r/bafkreibxwgmh4nbalmfjvalqpavbekwtas6426ngqdycqeqkpufyzumkza"
+        },
+        "$type": "app.bsky.embed.external#view"
+       }
+      ],
+      "$type": "app.bsky.embed.record#viewRecord"
+     },
+     "$type": "app.bsky.embed.record#view"
+    },
+    "bookmarkCount": 10,
+    "replyCount": 10,
+    "repostCount": 71,
+    "likeCount": 511,
+    "quoteCount": 5,
+    "indexedAt": "2026-11-06T12:19:12.477Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:yddiyagux5ossyt5342u52fb",
+     "handle": "garymarcus.bsky.social",
+     "displayName": "Gary Marcus",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-10-03T14:02:37.332Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mqsacyjoz52i",
+        "isValid": true,
+        "createdAt": "2026-07-16T22:00:36.513Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:yddiyagux5ossyt5342u52fb/app.bsky.feed.repost/3mznv3msubl2q",
+    "cid": "bafyreidsdgkflq44v7eio42nd6xbayqmu2sazoixobsh2yaxcrw6jmuujy",
+    "indexedAt": "2026-11-06T17:15:44.282Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:t2twdzx7kiudzcad7qs4pydf/app.bsky.feed.post/3mz6msnwums24",
+    "cid": "bafyreicl2srxtisc52f5oymt2udur2dz4dtgd4njsmpf3nktp63kwygx4i",
+    "author": {
+     "did": "did:plc:t2twdzx7kiudzcad7qs4pydf",
+     "handle": "pheras.bsky.social",
+     "displayName": "Pedro de las Heras Quirós",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-02-06T14:57:49.261Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-10-31T15:37:37.383Z",
+     "embed": {
+      "$type": "app.bsky.embed.record",
+      "record": {
+       "cid": "bafyreigmz5nokxuquhmdnysqgqcmmfv42yqkskyyh4folwkrjmksd3anai",
+       "uri": "at://did:plc:yddiyagux5ossyt5342u52fb/app.bsky.feed.post/3mz6mdsckt22n"
+      }
+     },
+     "langs": [
+      "es"
+     ],
+     "text": "\"In my view, Pope Leo XIV is by far the clearest thinker on AI among prominent world leaders. It was a genuine thrill to meet him yesterday.\""
+    },
+    "embed": {
+     "record": {
+      "uri": "at://did:plc:yddiyagux5ossyt5342u52fb/app.bsky.feed.post/3mz6mdsckt22n",
+      "cid": "bafyreigmz5nokxuquhmdnysqgqcmmfv42yqkskyyh4folwkrjmksd3anai",
+      "author": {
+       "did": "did:plc:yddiyagux5ossyt5342u52fb",
+       "handle": "garymarcus.bsky.social",
+       "displayName": "Gary Marcus",
+       "associated": {
+        "chat": {
+         "allowIncoming": "following"
+        },
+        "activitySubscription": {
+         "allowSubscriptions": "followers"
+        }
+       },
+       "createdAt": "2023-10-03T14:02:37.332Z",
+       "verification": {
+        "verifications": [
+         {
+          "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+          "issuerDisplayName": "Bluesky",
+          "issuerHandle": "bsky.app",
+          "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mqsacyjoz52i",
+          "isValid": true,
+          "createdAt": "2026-07-16T22:00:36.513Z"
+         }
+        ],
+        "verifiedStatus": "valid",
+        "trustedVerifierStatus": "none"
+       }
+      },
+      "value": {
+       "$type": "app.bsky.feed.post",
+       "createdAt": "2026-10-31T15:29:18.644Z",
+       "embed": {
+        "$type": "app.bsky.embed.external",
+        "external": {
+         "description": "Yesterday I had the singular honor of meeting His Holiness, Pope Leo XIV",
+         "thumb": {
+          "$type": "blob",
+          "ref": {
+           "$link": "bafkreihw3ekv5tafgpjm2to3odr4xwh3cdnrhxq4hm2sywgzkl3m3mpfpe"
+          },
+          "mimeType": "image/jpeg",
+          "size": 452935
+         },
+         "title": "Report from the Vatican",
+         "uri": "https://garymarcus.substack.com/p/report-from-the-vatican?r=8tdk6&utm_medium=ios"
+        }
+       },
+       "facets": [
+        {
+         "features": [
+          {
+           "$type": "app.bsky.richtext.facet#link",
+           "uri": "https://garymarcus.substack.com/p/report-from-the-vatican?r=8tdk6&utm_medium=ios"
+          }
+         ],
+         "index": {
+          "byteEnd": 144,
+          "byteStart": 105
+         }
+        }
+       ],
+       "langs": [
+        "en"
+       ],
+       "text": "I got to meet Pope Leo XIV!  Highlights from his terrific speech yesterday and some thoughts of my own:\n\ngarymarcus.substack.com/p/report-fro..."
+      },
+      "likeCount": 77,
+      "replyCount": 2,
+      "repostCount": 13,
+      "quoteCount": 2,
+      "indexedAt": "2026-10-31T15:29:20.282Z",
+      "embeds": [
+       {
+        "external": {
+         "uri": "https://garymarcus.substack.com/p/report-from-the-vatican?r=8tdk6&utm_medium=ios",
+         "title": "Report from the Vatican",
+         "description": "Yesterday I had the singular honor of meeting His Holiness, Pope Leo XIV",
+         "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:yddiyagux5ossyt5342u52fb/bafkreihw3ekv5tafgpjm2to3odr4xwh3cdnrhxq4hm2sywgzkl3m3mpfpe"
+        },
+        "$type": "app.bsky.embed.external#view"
+       }
+      ],
+      "$type": "app.bsky.embed.record#viewRecord"
+     },
+     "$type": "app.bsky.embed.record#view"
+    },
+    "bookmarkCount": 1,
+    "replyCount": 0,
+    "repostCount": 3,
+    "likeCount": 26,
+    "quoteCount": 0,
+    "indexedAt": "2026-10-31T15:37:37.975Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:yddiyagux5ossyt5342u52fb",
+     "handle": "garymarcus.bsky.social",
+     "displayName": "Gary Marcus",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-10-03T14:02:37.332Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mqsacyjoz52i",
+        "isValid": true,
+        "createdAt": "2026-07-16T22:00:36.513Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:yddiyagux5ossyt5342u52fb/app.bsky.feed.repost/3mziz7mkrfc2a",
+    "cid": "bafyreihg573plat3ldozpyohithcbcrb6dsvw57bjtlegjd4lsltw4y4fu",
+    "indexedAt": "2026-11-04T18:46:14.569Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:zlv6yt7cye6eihhy6cl5gl6g/app.bsky.feed.post/3mziv6j7pme2x",
+    "cid": "bafyreichu4xkjnl7cndzuf5v7w57s74daunu37iiu2bb3j5bqvj436grsy",
+    "author": {
+     "did": "did:plc:zlv6yt7cye6eihhy6cl5gl6g",
+     "handle": "ianbremmer.com",
+     "displayName": "ian bremmer",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-11-11T15:45:48.380Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mcfvsmitt22k",
+        "isValid": true,
+        "createdAt": "2026-01-14T20:27:49.932Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "allow": [],
+     "createdAt": "2026-11-04T17:34:02.285630804Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "captions": [],
+      "external": null,
+      "images": [
+       {
+        "alt": "A scatter plot showing voting results on data center measures by state. The left section represents votes to restrict, and the right section shows votes to allow winning. States featured include Ohio, Maine, Illinois and Kansas.",
+        "aspectRatio": {
+         "height": 1616,
+         "width": 1606
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreih5wgkeiunjqtib3sofyg6puogpmhmuahd57jkfnw34hwe2l3kfm4"
+         },
+         "mimeType": "image/png",
+         "size": 311532
+        }
+       }
+      ],
+      "record": null,
+      "video": null
+     },
+     "hiddenReplies": [],
+     "text": "local-level midterm referendums restricted data center buildout (whether megawatt cap, zoning, outright ban, etc.) at nearly every opportunity.\n\nai oversight a top issue for incoming dem congress.."
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:zlv6yt7cye6eihhy6cl5gl6g/bafkreih5wgkeiunjqtib3sofyg6puogpmhmuahd57jkfnw34hwe2l3kfm4",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:zlv6yt7cye6eihhy6cl5gl6g/bafkreih5wgkeiunjqtib3sofyg6puogpmhmuahd57jkfnw34hwe2l3kfm4",
+       "alt": "A scatter plot showing voting results on data center measures by state. The left section represents votes to restrict, and the right section shows votes to allow winning. States featured include Ohio, Maine, Illinois and Kansas.",
+       "aspectRatio": {
+        "height": 1616,
+        "width": 1606
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 2,
+    "replyCount": 2,
+    "repostCount": 14,
+    "likeCount": 51,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-04T17:34:04.491Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:yddiyagux5ossyt5342u52fb",
+     "handle": "garymarcus.bsky.social",
+     "displayName": "Gary Marcus",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-10-03T14:02:37.332Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mqsacyjoz52i",
+        "isValid": true,
+        "createdAt": "2026-07-16T22:00:36.513Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:yddiyagux5ossyt5342u52fb/app.bsky.feed.repost/3mziz4mh7ls2i",
+    "cid": "bafyreiao7nwzhkgqfza7ida7fz5ushjiayg643u4rby6izbx7vd2qvr5oe",
+    "indexedAt": "2026-11-04T18:44:33.774Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:yddiyagux5ossyt5342u52fb/app.bsky.feed.post/3mz6mdsckt22n",
+    "cid": "bafyreigmz5nokxuquhmdnysqgqcmmfv42yqkskyyh4folwkrjmksd3anai",
+    "author": {
+     "did": "did:plc:yddiyagux5ossyt5342u52fb",
+     "handle": "garymarcus.bsky.social",
+     "displayName": "Gary Marcus",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-10-03T14:02:37.332Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mqsacyjoz52i",
+        "isValid": true,
+        "createdAt": "2026-07-16T22:00:36.513Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-10-31T15:29:18.644Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "Yesterday I had the singular honor of meeting His Holiness, Pope Leo XIV",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreihw3ekv5tafgpjm2to3odr4xwh3cdnrhxq4hm2sywgzkl3m3mpfpe"
+        },
+        "mimeType": "image/jpeg",
+        "size": 452935
+       },
+       "title": "Report from the Vatican",
+       "uri": "https://garymarcus.substack.com/p/report-from-the-vatican?r=8tdk6&utm_medium=ios"
+      }
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://garymarcus.substack.com/p/report-from-the-vatican?r=8tdk6&utm_medium=ios"
+        }
+       ],
+       "index": {
+        "byteEnd": 144,
+        "byteStart": 105
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "I got to meet Pope Leo XIV!  Highlights from his terrific speech yesterday and some thoughts of my own:\n\ngarymarcus.substack.com/p/report-fro..."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://garymarcus.substack.com/p/report-from-the-vatican?r=8tdk6&utm_medium=ios",
+      "title": "Report from the Vatican",
+      "description": "Yesterday I had the singular honor of meeting His Holiness, Pope Leo XIV",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:yddiyagux5ossyt5342u52fb/bafkreihw3ekv5tafgpjm2to3odr4xwh3cdnrhxq4hm2sywgzkl3m3mpfpe"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 4,
+    "replyCount": 2,
+    "repostCount": 13,
+    "likeCount": 77,
+    "quoteCount": 2,
+    "indexedAt": "2026-10-31T15:29:20.282Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:rdcy7jvcfagp3nfbnaun3xfq/app.bsky.feed.post/3mvuqjtusec2c",
+    "cid": "bafyreidvnfhcf47gqs63b7gxdp5326lxar6r4fcvp3lgsbsvr4sfz7eesu",
+    "author": {
+     "did": "did:plc:rdcy7jvcfagp3nfbnaun3xfq",
+     "handle": "neilturkewitz.bsky.social",
+     "displayName": "Neil Turkewitz",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2025-01-13T02:07:59.143Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-09-19T13:02:04.315Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "Listener beware",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreicovdqwh26q3mr65zcybmeemlx2b6dluvlilb22okzk7kcsulrmby"
+        },
+        "mimeType": "image/jpeg",
+        "size": 431704
+       },
+       "title": "Liability, regulation, and AI’s new false dichotomy",
+       "uri": "https://garymarcus.substack.com/p/liability-regulation-and-ais-new?r=6nqj6w&utm_medium=ios"
+      }
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:yddiyagux5ossyt5342u52fb"
+        }
+       ],
+       "index": {
+        "byteEnd": 153,
+        "byteStart": 130
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "When it comes to addressing the harms & risks of AI, should we be focusing on law (liability), regulation or business practices?\n\n@garymarcus.bsky.social says YES to all, and I couldn’t agree more!"
+    },
+    "embed": {
+     "external": {
+      "uri": "https://garymarcus.substack.com/p/liability-regulation-and-ais-new?r=6nqj6w&utm_medium=ios",
+      "title": "Liability, regulation, and AI’s new false dichotomy",
+      "description": "Listener beware",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:rdcy7jvcfagp3nfbnaun3xfq/bafkreicovdqwh26q3mr65zcybmeemlx2b6dluvlilb22okzk7kcsulrmby"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 2,
+    "replyCount": 1,
+    "repostCount": 5,
+    "likeCount": 23,
+    "quoteCount": 0,
+    "indexedAt": "2026-09-19T13:02:05.362Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:yddiyagux5ossyt5342u52fb",
+     "handle": "garymarcus.bsky.social",
+     "displayName": "Gary Marcus",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-10-03T14:02:37.332Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mqsacyjoz52i",
+        "isValid": true,
+        "createdAt": "2026-07-16T22:00:36.513Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:yddiyagux5ossyt5342u52fb/app.bsky.feed.repost/3mwjnpeiygx2h",
+    "cid": "bafyreicsi25alo4egiigu7kez6jrwfddeuhkfexqzs4r4qlvl2hz7h2nma",
+    "indexedAt": "2026-09-27T20:37:22.962Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 2
+  }
+ ],
+ "cursor": "2026-04-26T19:22:59.133Z"
+}

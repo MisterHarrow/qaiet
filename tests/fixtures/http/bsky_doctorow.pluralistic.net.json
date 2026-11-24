@@ -1,0 +1,644 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:web:pluralistic.net/app.bsky.feed.post/3n327ehjzms2v",
+    "cid": "bafyreia5umn6ro6og73zoqhtrivi62xwdelfzcynnlz4a34e6xpe4xqpjm",
+    "author": {
+     "did": "did:web:pluralistic.net",
+     "handle": "doctorow.pluralistic.net",
+     "displayName": "By Cory Doctorow (GPG 0xBF3D9110957E5F4C)",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2026-03-05T16:09:15.810Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mrpyfea56e22",
+        "isValid": true,
+        "createdAt": "2026-07-28T17:58:38.147Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-24T08:16:46.549Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "",
+        "aspectRatio": {
+         "height": 1136,
+         "width": 1280
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreidkwyfmq7ifiarmz6hljhhzbudphipxyd35vod66gukdoalcf5axe"
+         },
+         "mimeType": "image/jpeg",
+         "size": 852137
+        }
+       }
+      ]
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://www.tumblr.com/germanpostwarmodern/727012588575195136/former-premises-of-armitalia-1968-71-in"
+        }
+       ],
+       "index": {
+        "byteEnd": 152,
+        "byteStart": 122
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "Former premises of Armitalia (1968-71) in Cinisello Balsamo/Milan, Italy, by Angelo Mangiarotti. Photo by Giorgio Casali. www.tumblr.com/germanpostwa..."
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:web:pluralistic.net/bafkreidkwyfmq7ifiarmz6hljhhzbudphipxyd35vod66gukdoalcf5axe",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:web:pluralistic.net/bafkreidkwyfmq7ifiarmz6hljhhzbudphipxyd35vod66gukdoalcf5axe",
+       "alt": "",
+       "aspectRatio": {
+        "height": 1136,
+        "width": 1280
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 1,
+    "likeCount": 3,
+    "quoteCount": 1,
+    "indexedAt": "2026-11-24T08:16:49.847Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:web:pluralistic.net/app.bsky.feed.post/3n327crbbhc2q",
+    "cid": "bafyreif3h4jmcngoomndecgr5aec2dmbk6kxwfyryxih2ituyk4llxaa5a",
+    "author": {
+     "did": "did:web:pluralistic.net",
+     "handle": "doctorow.pluralistic.net",
+     "displayName": "By Cory Doctorow (GPG 0xBF3D9110957E5F4C)",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2026-03-05T16:09:15.810Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mrpyfea56e22",
+        "isValid": true,
+        "createdAt": "2026-07-28T17:58:38.147Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-24T08:15:49.658Z",
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#tag",
+         "tag": "dailywords"
+        }
+       ],
+       "index": {
+        "byteEnd": 139,
+        "byteStart": 128
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "408 words on “Once Is Enemy Action,” a science fiction novel about the origins of modern technofascism. (39176 words total) #dailywords"
+    },
+    "bookmarkCount": 1,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 3,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-24T08:15:51.540Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:kwpjnckadvpdadfy7u6ww3w5/app.bsky.feed.post/3n2shijizuc2k",
+    "cid": "bafyreieq4hxtzglfoxhgutk4k4wj3iyjsb6yicj7zmweorpptslhyjm77y",
+    "author": {
+     "did": "did:plc:kwpjnckadvpdadfy7u6ww3w5",
+     "handle": "wolfwings.us",
+     "displayName": "Wolf, Wings Not Included 💉v20.26 Upgrade Installed",
+     "pronouns": "he/they",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-07-03T03:57:37.808Z",
+     "status": {
+      "uri": "at://did:plc:kwpjnckadvpdadfy7u6ww3w5/app.bsky.actor.status/self",
+      "cid": "bafyreiavriczfszf3jz5ia7ufprhvwfhbqbir4ukej2pi7hkiebdfor4ky",
+      "record": {
+       "$type": "app.bsky.actor.status",
+       "createdAt": "2026-11-23T03:55:52.349Z",
+       "durationMinutes": 240,
+       "embed": {
+        "$type": "app.bsky.embed.external",
+        "external": {
+         "$type": "app.bsky.embed.external#external",
+         "description": "I've been playing video games for over 4 decades, mostly FPS games from the days of Ken's Labyrinth to todays best. Also known as WolfWings many places! — SanguinesOasis streams live on Twitch! Check ...",
+         "thumb": {
+          "$type": "blob",
+          "ref": {
+           "$link": "bafkreib43b7tpq3k54a6s72rtvvht2ssupsjiqtghn4zecdjrzao376tli"
+          },
+          "mimeType": "image/jpeg",
+          "size": 101602
+         },
+         "title": "SanguinesOasis - Twitch",
+         "uri": "https://www.twitch.tv/sanguinesoasis"
+        }
+       },
+       "status": "app.bsky.actor.status#live"
+      },
+      "status": "app.bsky.actor.status#live",
+      "embed": {
+       "external": {
+        "uri": "https://www.twitch.tv/sanguinesoasis",
+        "title": "SanguinesOasis - Twitch",
+        "description": "I've been playing video games for over 4 decades, mostly FPS games from the days of Ken's Labyrinth to todays best. Also known as WolfWings many places! — SanguinesOasis streams live on Twitch! Check ...",
+        "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:kwpjnckadvpdadfy7u6ww3w5/bafkreib43b7tpq3k54a6s72rtvvht2ssupsjiqtghn4zecdjrzao376tli"
+       },
+       "$type": "app.bsky.embed.external#view"
+      },
+      "expiresAt": "2026-11-23T07:55:52.349Z",
+      "isActive": false
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-21T06:20:54.865Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "Hey @vistaprint - I’d really love to know why my $1400 custom box order was altered by your company after we designed & approved our order.\n\nPicture of our design online VS what I received and now cannot use because CREATURE COMFORTS and USA TODAY BESTSELLING AUTHOR are now illegible.\n\nIt appears it was altered by AI before printing, bypassing my ORIGINAL APPROVAL and design.\n\nI have spent thousands with your company and have recommended you to many other authors for supplies. This is HORRENDOUS…",
+        "aspectRatio": {
+         "height": 4000,
+         "width": 4000
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreic2fzp4sdpjqdazwdsmuljqdhlje7lpnzpfifmxceequrtrgxwmma"
+         },
+         "mimeType": "image/jpeg",
+         "size": 1949777
+        }
+       },
+       {
+        "alt": "Vistaprint called me just now, asking questions about my business and what I’m using the products I bought for, so I quickly cut them off and told them I’d like to focus instead on why they’re using generative AI, consequently ruining customer designs and when I can expect an expedited replacement.\n\nAbsolutely no answers for me other than that I have a “ticket” in the system and it can take 24-48 hours for an update, and that she’d pass along my concerns (as well as all of threads).",
+        "aspectRatio": {
+         "height": 3859,
+         "width": 4000
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreiftmemu3qd3rmzuzfa32joriw4ydhavvn7e5zr46g6bpowjjkayiu"
+         },
+         "mimeType": "image/jpeg",
+         "size": 1961133
+        }
+       },
+       {
+        "alt": "Final update for now on VistaPrint:\n\nA call with corporate was had. I made it clear I’m not just looking for a resolution for myself, but for all of the artists that have had their design garbled by this process of theirs, and to protect future customers.\n\nNow we wait. The ball is in their court.\n\nHave a great weekend, threads family. Thank you for your backing on this and helping ensure they can’t ignore this. Together we can make meaningful change.\n\nLogging off to touch some grass this weekend",
+        "aspectRatio": {
+         "height": 1765,
+         "width": 4000
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreib56rb2mdamcyhndsnnutp2ntpvegbc6oyjdlyzm6nkly5ywb2b6u"
+         },
+         "mimeType": "image/jpeg",
+         "size": 1140537
+        }
+       },
+       {
+        "alt": "Full resolution photo of a delivered custom printed box from VistaPrint showing blatant AI \"upscale\" filtering which has completely mangled most of the text into gibberish and destroyed all of the filigree designs around the corners.",
+        "aspectRatio": {
+         "height": 4000,
+         "width": 3000
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreidrkune7dtx75o3rq2wmkyyytrlza6ib74vwgh2bmwztksehm6utq"
+         },
+         "mimeType": "image/jpeg",
+         "size": 1864294
+        }
+       }
+      ]
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://www.threads.com/@authorrlcaulder"
+        }
+       ],
+       "index": {
+        "byteEnd": 222,
+        "byteStart": 191
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "So... about this ongoing bullshit with VistaPrint blindly running everything through an AI \"clean up\" filter before printing it, here's the artist over on thread where they talked about it:\n\nwww.threads.com/@authorrlcau...\n\nAnd here's the relevant snippets, with alt-text of the text of each post."
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:kwpjnckadvpdadfy7u6ww3w5/bafkreic2fzp4sdpjqdazwdsmuljqdhlje7lpnzpfifmxceequrtrgxwmma",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:kwpjnckadvpdadfy7u6ww3w5/bafkreic2fzp4sdpjqdazwdsmuljqdhlje7lpnzpfifmxceequrtrgxwmma",
+       "alt": "Hey @vistaprint - I’d really love to know why my $1400 custom box order was altered by your company after we designed & approved our order.\n\nPicture of our design online VS what I received and now cannot use because CREATURE COMFORTS and USA TODAY BESTSELLING AUTHOR are now illegible.\n\nIt appears it was altered by AI before printing, bypassing my ORIGINAL APPROVAL and design.\n\nI have spent thousands with your company and have recommended you to many other authors for supplies. This is HORRENDOUS…",
+       "aspectRatio": {
+        "height": 4000,
+        "width": 4000
+       }
+      },
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:kwpjnckadvpdadfy7u6ww3w5/bafkreiftmemu3qd3rmzuzfa32joriw4ydhavvn7e5zr46g6bpowjjkayiu",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:kwpjnckadvpdadfy7u6ww3w5/bafkreiftmemu3qd3rmzuzfa32joriw4ydhavvn7e5zr46g6bpowjjkayiu",
+       "alt": "Vistaprint called me just now, asking questions about my business and what I’m using the products I bought for, so I quickly cut them off and told them I’d like to focus instead on why they’re using generative AI, consequently ruining customer designs and when I can expect an expedited replacement.\n\nAbsolutely no answers for me other than that I have a “ticket” in the system and it can take 24-48 hours for an update, and that she’d pass along my concerns (as well as all of threads).",
+       "aspectRatio": {
+        "height": 3859,
+        "width": 4000
+       }
+      },
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:kwpjnckadvpdadfy7u6ww3w5/bafkreib56rb2mdamcyhndsnnutp2ntpvegbc6oyjdlyzm6nkly5ywb2b6u",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:kwpjnckadvpdadfy7u6ww3w5/bafkreib56rb2mdamcyhndsnnutp2ntpvegbc6oyjdlyzm6nkly5ywb2b6u",
+       "alt": "Final update for now on VistaPrint:\n\nA call with corporate was had. I made it clear I’m not just looking for a resolution for myself, but for all of the artists that have had their design garbled by this process of theirs, and to protect future customers.\n\nNow we wait. The ball is in their court.\n\nHave a great weekend, threads family. Thank you for your backing on this and helping ensure they can’t ignore this. Together we can make meaningful change.\n\nLogging off to touch some grass this weekend",
+       "aspectRatio": {
+        "height": 1765,
+        "width": 4000
+       }
+      },
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:kwpjnckadvpdadfy7u6ww3w5/bafkreidrkune7dtx75o3rq2wmkyyytrlza6ib74vwgh2bmwztksehm6utq",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:kwpjnckadvpdadfy7u6ww3w5/bafkreidrkune7dtx75o3rq2wmkyyytrlza6ib74vwgh2bmwztksehm6utq",
+       "alt": "Full resolution photo of a delivered custom printed box from VistaPrint showing blatant AI \"upscale\" filtering which has completely mangled most of the text into gibberish and destroyed all of the filigree designs around the corners.",
+       "aspectRatio": {
+        "height": 4000,
+        "width": 3000
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 235,
+    "replyCount": 62,
+    "repostCount": 1575,
+    "likeCount": 3405,
+    "quoteCount": 221,
+    "indexedAt": "2026-11-21T06:21:07.748Z",
+    "threadgate": {
+     "uri": "at://did:plc:kwpjnckadvpdadfy7u6ww3w5/app.bsky.feed.threadgate/3n2shijizuc2k",
+     "cid": "bafyreic5xpbafgz23juu5hx7y3tsfgmxabo43yzyp7ndl73j4si37tivnq",
+     "record": {
+      "$type": "app.bsky.feed.threadgate",
+      "createdAt": "2026-11-22T06:04:36.496Z",
+      "hiddenReplies": [
+       "at://did:plc:lam5vzguax2tzysdguv737w6/app.bsky.feed.post/3n2shobshd62j",
+       "at://did:plc:adakmsc7fpehvn7ysm6h5tje/app.bsky.feed.post/3n2tubkj7422r"
+      ],
+      "post": "at://did:plc:kwpjnckadvpdadfy7u6ww3w5/app.bsky.feed.post/3n2shijizuc2k"
+     },
+     "lists": []
+    }
+   },
+   "reason": {
+    "by": {
+     "did": "did:web:pluralistic.net",
+     "handle": "doctorow.pluralistic.net",
+     "displayName": "By Cory Doctorow (GPG 0xBF3D9110957E5F4C)",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2026-03-05T16:09:15.810Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mrpyfea56e22",
+        "isValid": true,
+        "createdAt": "2026-07-28T17:58:38.147Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:web:pluralistic.net/app.bsky.feed.repost/3n2z6a5el7e2k",
+    "cid": "bafyreifqodwhjzmouosrs2tq3i3f3ioqlgdxnjr6x73kgh474zkxblhxz4",
+    "indexedAt": "2026-11-23T22:23:48.843Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 2
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:br2exufozfcxalp642gwcgon/app.bsky.feed.post/3n2rnlwlhn22h",
+    "cid": "bafyreicryuktgdt65vvnhon44fk5hxwzps4l3omiju6r2yz35k3wmrvyxq",
+    "author": {
+     "did": "did:plc:br2exufozfcxalp642gwcgon",
+     "handle": "unseenops.bsky.social",
+     "displayName": "Black 🇬🇱🏳️‍⚧️Site",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-06-22T06:43:40.325Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-20T22:37:31.963Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "",
+        "aspectRatio": {
+         "height": 354,
+         "width": 396
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreigd3wkfnwda43wfwgdwjmtcvnoby4sh6oiiwwsdwrawsb4vwyr2ie"
+         },
+         "mimeType": "image/jpeg",
+         "size": 71862
+        }
+       },
+       {
+        "alt": "",
+        "aspectRatio": {
+         "height": 254,
+         "width": 800
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreicu3ttymvhuzm2yvvpw7gs2hn375uviqb5u6x6uyksymqoavteg4e"
+         },
+         "mimeType": "image/jpeg",
+         "size": 113356
+        }
+       },
+       {
+        "alt": "",
+        "aspectRatio": {
+         "height": 384,
+         "width": 590
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreidv335n6yoq5fm3xtddp34b2upnq5hsfppcph6oi27k2waa7ourrm"
+         },
+         "mimeType": "image/jpeg",
+         "size": 104233
+        }
+       }
+      ]
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "The Department of Energy calling their sentry turret unit \"High Consequence Automation\" is still my favorite euphemism"
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:br2exufozfcxalp642gwcgon/bafkreigd3wkfnwda43wfwgdwjmtcvnoby4sh6oiiwwsdwrawsb4vwyr2ie",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:br2exufozfcxalp642gwcgon/bafkreigd3wkfnwda43wfwgdwjmtcvnoby4sh6oiiwwsdwrawsb4vwyr2ie",
+       "alt": "",
+       "aspectRatio": {
+        "height": 354,
+        "width": 396
+       }
+      },
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:br2exufozfcxalp642gwcgon/bafkreicu3ttymvhuzm2yvvpw7gs2hn375uviqb5u6x6uyksymqoavteg4e",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:br2exufozfcxalp642gwcgon/bafkreicu3ttymvhuzm2yvvpw7gs2hn375uviqb5u6x6uyksymqoavteg4e",
+       "alt": "",
+       "aspectRatio": {
+        "height": 254,
+        "width": 800
+       }
+      },
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:br2exufozfcxalp642gwcgon/bafkreidv335n6yoq5fm3xtddp34b2upnq5hsfppcph6oi27k2waa7ourrm",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:br2exufozfcxalp642gwcgon/bafkreidv335n6yoq5fm3xtddp34b2upnq5hsfppcph6oi27k2waa7ourrm",
+       "alt": "",
+       "aspectRatio": {
+        "height": 384,
+        "width": 590
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 14,
+    "replyCount": 2,
+    "repostCount": 16,
+    "likeCount": 101,
+    "quoteCount": 1,
+    "indexedAt": "2026-11-20T22:37:33.650Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:web:pluralistic.net",
+     "handle": "doctorow.pluralistic.net",
+     "displayName": "By Cory Doctorow (GPG 0xBF3D9110957E5F4C)",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2026-03-05T16:09:15.810Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mrpyfea56e22",
+        "isValid": true,
+        "createdAt": "2026-07-28T17:58:38.147Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:web:pluralistic.net/app.bsky.feed.repost/3n2z67zbsn42k",
+    "cid": "bafyreigbjjvsealf4dkpqemrjeucrwm3sgb3e66agync7cpgcaxvey4hgi",
+    "indexedAt": "2026-11-23T22:23:44.753Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:2jxiepcv6udfo64cqpgrrako/app.bsky.feed.post/3n2scfpzgac2g",
+    "cid": "bafyreigipdn55phe5ynmw2lndw43rt7hxlc3zinspt4rguoumxaqjravhy",
+    "author": {
+     "did": "did:plc:2jxiepcv6udfo64cqpgrrako",
+     "handle": "lauridonahue.bsky.social",
+     "displayName": "Lauri Donahue",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-07-30T11:55:40.229Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-21T04:49:52.333Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "Unbidden actions by Muse, which has been downloaded by more than 10 million people so far and is expected by Meta to generate billions, have prompted unnerved employees to raise concerns.",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreibk5uzt4yantq4pyzsq6d6ietchbarig7nnaj45gbvs3j275d4pku"
+        },
+        "mimeType": "image/jpeg",
+        "size": 367684
+       },
+       "title": "As Meta bets big on Muse AI agent, early safety mishaps surface",
+       "uri": "https://reut.rs/4zP5BNL"
+      }
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://reut.rs/4zP5BNL"
+        }
+       ],
+       "index": {
+        "byteEnd": 15,
+        "byteStart": 0
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "reut.rs/4zP5BNL\n\nMeta’s AI agent Muse accessed an employee’s encrypted Signal messages and sent staff chats seemingly meant for other people, according to internal company posts reviewed by @Reuters. Meta called the examples ‘isolated incidents’"
+    },
+    "embed": {
+     "external": {
+      "uri": "https://reut.rs/4zP5BNL",
+      "title": "As Meta bets big on Muse AI agent, early safety mishaps surface",
+      "description": "Unbidden actions by Muse, which has been downloaded by more than 10 million people so far and is expected by Meta to generate billions, have prompted unnerved employees to raise concerns.",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:2jxiepcv6udfo64cqpgrrako/bafkreibk5uzt4yantq4pyzsq6d6ietchbarig7nnaj45gbvs3j275d4pku"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 17,
+    "replyCount": 14,
+    "repostCount": 66,
+    "likeCount": 141,
+    "quoteCount": 17,
+    "indexedAt": "2026-11-21T04:49:54.549Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:web:pluralistic.net",
+     "handle": "doctorow.pluralistic.net",
+     "displayName": "By Cory Doctorow (GPG 0xBF3D9110957E5F4C)",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2026-03-05T16:09:15.810Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mrpyfea56e22",
+        "isValid": true,
+        "createdAt": "2026-07-28T17:58:38.147Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:web:pluralistic.net/app.bsky.feed.repost/3n2z67vyuae2k",
+    "cid": "bafyreifvmsr4vwt7x6nvdsw5omneovmrajjdn4qbph2padgmusjivg745a",
+    "indexedAt": "2026-11-23T22:23:40.749Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  }
+ ],
+ "cursor": "2026-11-21T17:22:34.644Z"
+}

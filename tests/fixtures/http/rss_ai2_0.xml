@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+  <rss version="2.0">
+    <channel>
+      <title>Ai2 Blog</title>
+      <link>https://allenai.org/blog</link>
+      <description>Latest updates</description>
+      
+      <item>
+        <guid isPermaLink="false">https://allenai.org/blog/robotrack</guid>
+        <title>RoboTrack: Point tracking for real-world robotic manipulation</title>
+        <link>https://allenai.org/blog/robotrack</link>
+        <pubDate>2026-11-23T00:00:00-08:00</pubDate>
+        <description>RoboTrack introduces a new benchmark, synthetic training dataset, and two models that improve how robots track objects during real-world manipulation tasks.</description>
+      </item>
+      
+      <item>
+        <guid isPermaLink="false">https://allenai.org/blog/theorizer-in-asta</guid>
+        <title>Theorizer comes to Asta</title>
+        <link>https://allenai.org/blog/theorizer-in-asta</link>
+        <pubDate>2026-11-19T00:00:00-08:00</pubDate>
+        <description>
+          <![CDATA[
+            <div style="display: flex; gap: 12px">
+              <div>Theorizer in Asta connects scientific literature to proposed explanations that researchers can examine and test.</div>
+              <img src="https://www.datocms-assets.com/64837/1795042518-theorizer-title-image-centered.png?w=200" width="200" alt="Theorizer comes to Asta" />
+            </div>
+          ]]>
+        </description>
+      </item>
+      
+      <item>
+        <guid isPermaLink="false">https://allenai.org/blog/taylor-geospatial-partnership</guid>
+        <title>Ai2 and Taylor Geospatial partner to make geospatial AI easier to compare, run, and build on</title>
+        <link>https://allenai.org/blog/taylor-geospatial-partnership</link>
+        <pubDate>2026-11-18T00:00:00-08:00</pubDate>
+        <description>Ai2 and Taylor Geospatial are partnering to make geospatial AI more accessible and useful for the public good through open models, shared benchmarks, and improved satellite imagery datasets for applications in conservation, agriculture, and humanitarian work.</description>
+      </item>
+      
+      <item>
+        <guid isPermaLink="false">https://allenai.org/blog/xybench</guid>
+        <title>XYBench: Helping with the problem behind the question</title>
+        <link>https://allenai.org/blog/xybench</link>
+        <pubDate>2026-11-13T00:00:00-08:00</pubDate>
+        <description>
+          <![CDATA[
+            <div style="display: flex; gap: 12px">
+              <div>XYBench is an 8,115-question benchmark testing whether LLMs spot misconceptions in user requests and redirect toward the user’s underlying goal.</div>
+              <img src="https://www.datocms-assets.com/64837/1794335088-xybench-featured.png?w=200" width="200" alt="XYBench: Helping with the problem behind the question" />
+            </div>
+          ]]>
+        </description>
+      </item>
+      
+      <item>
+        <guid isPermaLink="false">https://allenai.org/blog/toyblocks</guid>
+        <title>ToyBlocks: A controlled world for robot learning and evaluation</title>
+        <link>https://allenai.org/blog/toyblocks</link>
+        <pubDate>2026-11-06T00:00:00-08:00</pubDate>
+        <description>ToyBlocks is an open simulation framework for studying robot learning through automated task generation, training demonstrations, and evaluation in a controlled tabletop world.</description>
+      </item>
+      
+    </channel>
+  </rss>

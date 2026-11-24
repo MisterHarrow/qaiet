@@ -1,0 +1,61 @@
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/"
+	>
+	<channel>
+		<atom:link href="https://www.aljazeera.com/xml/rss/all.xml" rel="self" type="application/rss+xml"/>
+		<title>Al Jazeera &#8211; Breaking News, World News and Video from Al Jazeera</title>
+		<link>https://www.aljazeera.com</link>
+		<managingEditor>apps.support@aljazeera.net (Apps Support)</managingEditor>
+		<webMaster>apps.support@aljazeera.net (Apps Support)</webMaster>
+		<description>Breaking News, World News and Video from Al Jazeera</description>
+		<copyright>© 2026 Al Jazeera Media Network</copyright>
+		<lastBuildDate>Tue, 24 Nov 2026 07:52:44 +0000</lastBuildDate>
+		<language>en</language>
+		<image>
+			<url>https://www.aljazeera.com/images/logo_aje.png</url>
+			<title>Al Jazeera &#8211; Breaking News, World News and Video from Al Jazeera</title>
+			<link>https://www.aljazeera.com</link>
+			<description>Breaking News, World News and Video from Al Jazeera</description>
+		</image>
+		<generator>https://wordpress.org/?v=7.0.9</generator>
+<site xmlns="com-wordpress:feed-additions:1">213497099</site>			<item>
+				<link>https://www.aljazeera.com/news/2026/11/24/wars-choke-global-food-routes-threatening-aid-for-7-3-million-wfp-warns?traffic_source=rss</link>
+				<title>Wars choke global food routes, threatening aid for 7.3 million, WFP warns</title>
+				<description><![CDATA[WFP Executive Director Luke Lindberg decries ‘political problem’ as grain is &#039;not reaching the people who need it&#039;.]]></description>
+				<pubDate>Tue, 24 Nov 2026 07:52:44 +0000</pubDate>
+				<category>News</category>
+				<guid isPermaLink="false">https://www.aljazeera.com/?t=1795498891</guid>
+				<post-id xmlns="com-wordpress:feed-additions:1">5180911</post-id>			</item>
+					<item>
+				<link>https://www.aljazeera.com/news/2026/11/24/why-has-yemens-offensive-against-the-houthis-in-al-bayda-stalled?traffic_source=rss</link>
+				<title>Why has Yemen’s offensive against the Houthis in al-Bayda stalled?</title>
+				<description><![CDATA[Government forces made early gains in September, but Houthi fighting on multiple fronts has slowed the offensive.]]></description>
+				<pubDate>Tue, 24 Nov 2026 07:36:07 +0000</pubDate>
+				<category>News</category>
+				<guid isPermaLink="false">https://www.aljazeera.com/?t=1795447925</guid>
+				<post-id xmlns="com-wordpress:feed-additions:1">5180911</post-id>			</item>
+					<item>
+				<link>https://www.aljazeera.com/news/2026/11/24/sheikh-hasina-plans-to-return-to-bangladesh-from-exile-on-december-16?traffic_source=rss</link>
+				<title>Sheikh Hasina plans to return to Bangladesh from exile on December 16</title>
+				<description><![CDATA[Hasina urges Dhaka to arrange her return on the national airline, as government says she can only be extradited.]]></description>
+				<pubDate>Tue, 24 Nov 2026 07:35:02 +0000</pubDate>
+				<category>News</category>
+				<guid isPermaLink="false">https://www.aljazeera.com/?t=1795499804</guid>
+				<post-id xmlns="com-wordpress:feed-additions:1">5180911</post-id>			</item>
+					<item>
+				<link>https://www.aljazeera.com/opinions/2026/11/24/member-states-must-not-betray-the-icc?traffic_source=rss</link>
+				<title>Member states must not betray the ICC</title>
+				<description><![CDATA[Succumbing to US pressure to change the Rome Statute would be devastating for international justice.]]></description>
+				<pubDate>Tue, 24 Nov 2026 07:13:18 +0000</pubDate>
+				<category>Opinions</category>
+				<guid isPermaLink="false">https://www.aljazeera.com/?t=1795431439</guid>
+				<post-id xmlns="com-wordpress:feed-additions:1">5180911</post-id>			</item>
+					<item>
+				<link>https://www.aljazeera.com/news/2026/11/24/australia-warns-tech-giants-of-multibillion-dollar-fines-for-online-harm?traffic_source=rss</link>
+				<title>Australia warns tech giants of multibillion-dollar fines for online ‘harm’</title>
+				<description><![CDATA[New internet safety bill expected to pass this week could impose fines of up to 5 percent of firms&#039; global revenue.]]></description>
+				<pubDate>Tue, 24 Nov 2026 07:02:52 +0000</pubDate>
+				<category>News</category>
+				<guid isPermaLink="false">https://www.aljazeera.com/?t=1795500581</guid>
+				<post-id xmlns="com-wordpress:feed-additions:1">5180911</post-id>			</item>
+			</channel>
+</rss>

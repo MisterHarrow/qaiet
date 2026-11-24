@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" version="2.0">
+
+<channel>
+	<title>Artificial Intelligence</title>
+	<atom:link href="https://aws.amazon.com/blogs/machine-learning/feed/" rel="self" type="application/rss+xml"/>
+	<link>https://aws.amazon.com/blogs/machine-learning/</link>
+	<description>Official Machine Learning Blog of Amazon Web Services</description>
+	<lastBuildDate>Tue, 24 Nov 2026 05:04:40 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	
+	<item>
+		<title>Introducing the Amazon Bedrock Trusted Access API with Anthropic’s Enterprise Frontier Safeguards and Enterprise Data Controls</title>
+		<link>https://aws.amazon.com/blogs/machine-learning/introducing-the-amazon-bedrock-trusted-access-api-with-anthropics-enterprise-frontier-safeguards-and-enterprise-data-controls/</link>
+		
+		<dc:creator><![CDATA[Dani Mitchell]]></dc:creator>
+		<pubDate>Tue, 24 Nov 2026 05:01:14 +0000</pubDate>
+				<category><![CDATA[Amazon Bedrock]]></category>
+		<category><![CDATA[Announcements]]></category>
+		<category><![CDATA[Intermediate (200)]]></category>
+		<guid isPermaLink="false">76b2285b501c3518d9f413fc227aa9b97a5e6b72</guid>
+
+					<description>Amazon Bedrock now offers a trusted access program API: one place to discover, request, and enroll in model provider programs. The first two offerings, in public preview, are Anthropic's Enterprise Frontier Safeguards (EFS) and Enterprise Data Controls (EDC), which give you control over your data when you use Claude Fable models.</description>
+										
+					
+		
+		
+			</item>
+		<item>
+		<title>Meta ads is now available in AWS Quick</title>
+		<link>https://aws.amazon.com/blogs/machine-learning/meta-ads-is-now-available-in-aws-quick/</link>
+		
+		<dc:creator><![CDATA[Chris Geiger]]></dc:creator>
+		<pubDate>Sun, 22 Nov 2026 01:59:13 +0000</pubDate>
+				<category><![CDATA[Announcements]]></category>
+		<category><![CDATA[AWS Quick]]></category>
+		<category><![CDATA[Foundational (100)]]></category>
+		<guid isPermaLink="false">2f499b0fad46f2d46fc1c337c454cd6adc7edd47</guid>
+
+					<description>AWS Quick now has a Meta ads AI connector. Meta advertisers can use natural language in Quick to create, manage, and analyze campaigns while staying connected to the Meta ad management network, and combine Meta ad data with first- and third-party sources to build dashboards, documents, slide decks, and automated workflows.</description>
+										
+					
+		
+		<enclosure length="38682427" type="video/mp4" url="https://d2908q01vomqb2.cloudfront.net/artifacts/DBSBlogs/ML-22411/b46d9e222b1ec27f572a3e2ba0fc06ab8c1447b3be0e8fd10a7e101091d9191d.mp4"/>
+
+			</item>
+		<item>
+		<title>New in AWS Quick: More capable flows, an updated web experience, and agents that work together</title>
+		<link>https://aws.amazon.com/blogs/machine-learning/new-in-aws-quick-more-capable-flows-an-updated-web-experience-and-agents-that-work-together/</link>
+		
+		<dc:creator><![CDATA[Hillary Lovric]]></dc:creator>
+		<pubDate>Sat, 21 Nov 2026 01:06:42 +0000</pubDate>
+				<category><![CDATA[Announcements]]></category>
+		<category><![CDATA[AWS Quick]]></category>
+		<category><![CDATA[Foundational (100)]]></category>
+		<guid isPermaLink="false">02c52259bc83b8aa57b8410eb8c813a22ed5fd28</guid>
+
+					<description>AWS Quick is the AI workspace built only for work. Today we're releasing updates that help your team get more done: build and run business-process flows in chat, triage your day in the updated web app, get more complete answers from multiple agents at once, and connect new data sources like Meta ads and Amplitude.</description>
+										
+					
+		
+		
+			</item>
+		<item>
+		<title>Cut self-hosted LLM cost and latency with the distributed KV caching agent skill</title>
+		<link>https://aws.amazon.com/blogs/machine-learning/cut-self-hosted-llm-cost-and-latency-with-the-distributed-kv-caching-agent-skill/</link>
+		
+		<dc:creator><![CDATA[Ravi Yadav]]></dc:creator>
+		<pubDate>Sat, 21 Nov 2026 00:14:26 +0000</pubDate>
+				<category><![CDATA[Amazon ElastiCache]]></category>
+		<category><![CDATA[Expert (400)]]></category>
+		<category><![CDATA[Technical How-to]]></category>
+		<guid isPermaLink="false">d7bdb91bc1e6b32644ddf96aa43ed4840d83f174</guid>
+
+					<description>Self-hosting LLMs on GPUs means paying to recompute the same context on every turn. Distributed KV caching with Amazon ElastiCache can cut inference cost by up to 40% and time to first token by up to 80%. This post walks through the distributed KV caching skill in the Agent Toolkit for AWS, which evaluates and sets up the cache from your coding agent.</description>
+										
+					
+		
+		
+			</item>
+		<item>
+		<title>Introducing managed cluster extensions for observability and user management in Amazon SageMaker HyperPod Slurm</title>
+		<link>https://aws.amazon.com/blogs/machine-learning/introducing-managed-cluster-extensions-for-observability-and-user-management-in-amazon-sagemaker-hyperpod-slurm/</link>
+		
+		<dc:creator><![CDATA[Austin Cherian]]></dc:creator>
+		<pubDate>Fri, 20 Nov 2026 23:07:03 +0000</pubDate>
+				<category><![CDATA[Amazon SageMaker HyperPod]]></category>
+		<category><![CDATA[Announcements]]></category>
+		<category><![CDATA[Intermediate (200)]]></category>
+		<guid isPermaLink="false">d2380cae67e4f5d5655c6b63e914ed4170fdafd6</guid>
+
+					<description>Amazon SageMaker HyperPod now offers managed cluster extensions for observability and user management, bringing declarative, API- and console-driven configuration to the software running on Slurm cluster nodes. This post explains how the extensions work and follows a platform team through a quarter of running a shared Slurm cluster with them.</description>
+										
+					
+		
+		
+			</item>
+	</channel>
+</rss>

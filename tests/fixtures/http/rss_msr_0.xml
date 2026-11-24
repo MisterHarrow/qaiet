@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Microsoft Research</title>
+	<atom:link href="https://www.microsoft.com/en-us/research/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.microsoft.com/en-us/research/</link>
+	<description></description>
+	<lastBuildDate>Tue, 17 Nov 2026 23:29:22 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=7.1.5</generator>
+	<item>
+		<title>Can AI help build a healthier future?</title>
+		<link>https://www.microsoft.com/en-us/research/podcast/can-ai-help-build-a-healthier-future/</link>
+		
+		<dc:creator><![CDATA[Doug Burger, Ava Amini, Eric Horvitz, Dr. Eric Topol]]></dc:creator>
+		<pubDate>Tue, 17 Nov 2026 16:52:17 +0000</pubDate>
+				<category><![CDATA[Microsoft Research Podcast]]></category>
+		<guid isPermaLink="false">https://www.microsoft.com/en-us/research/?p=1194663</guid>
+
+					<description>What can AI enable in medicine, and how do we get there? Microsoft Research lead Doug Burger, Microsoft Principal Research Manager Ava Amini, Microsoft Chief Scientific Officer Eric Horvitz, and physician-scientist Eric Topol of Scripps Research explore these questions and more. The post Can AI help build a healthier future? appeared first on Microsoft Research .</description>
+										
+					
+		
+		
+			</item>
+		<item>
+		<title>TokenEconomizer: Learning from Experience to Make AI Coding Agents More Efficient</title>
+		<link>https://www.microsoft.com/en-us/research/blog/tokeneconomizer-learning-from-experience-to-make-ai-coding-agents-more-efficient/</link>
+		
+		<dc:creator><![CDATA[Aaron J. Li, Weijia Xu, Chandan Singh, Jeevana Priya Inala, Bin Yu, Ion Stoica, Michel Galley, Jianfeng Gao]]></dc:creator>
+		<pubDate>Mon, 16 Nov 2026 17:01:35 +0000</pubDate>
+				<category><![CDATA[Research Blog]]></category>
+		<guid isPermaLink="false">https://www.microsoft.com/en-us/research/?p=1194016</guid>
+
+					<description>AI coding agents can waste time and tokens relearning the same lessons. TokenEconomizer is an open-source plugin that builds on past sessions to cut costs while maintaining task success. It’s a path toward coding agents that learn not only how to solve tasks, but also how to spend computation more effectively. The post TokenEconomizer: Learning from Experience to Make AI Coding Agents More Efficient appeared first on Microsoft Research .</description>
+										
+					
+		
+		
+			</item>
+		<item>
+		<title>Microsoft Research Focus – Edition #98</title>
+		<link>https://www.microsoft.com/en-us/research/podcast/microsoft-research-focus-edition-98/</link>
+		
+		<dc:creator><![CDATA[Anson Ho]]></dc:creator>
+		<pubDate>Thu, 12 Nov 2026 21:31:57 +0000</pubDate>
+				<category><![CDATA[Microsoft Research Podcast]]></category>
+		<guid isPermaLink="false">https://www.microsoft.com/en-us/research/?p=1194401</guid>
+
+					<description>What's new in research at Microsoft? Host Anson Ho explores the latest, including AI-powered universal translation, a breakthrough in a 31-year-old mathematics challenge, and advances making AI coding agents faster and more efficient. The post Microsoft Research Focus – Edition #98 appeared first on Microsoft Research .</description>
+										
+					
+		
+		
+			</item>
+		<item>
+		<title>Lazare, veni foras: Reprogramming Dormant Neurons to Backdoor AI Agents</title>
+		<link>https://www.microsoft.com/en-us/research/blog/lazare-veni-foras-reprogramming-dormant-neurons-to-backdoor-ai-agents/</link>
+		
+		<dc:creator><![CDATA[Dimitris Papailiopoulos]]></dc:creator>
+		<pubDate>Tue, 10 Nov 2026 20:52:56 +0000</pubDate>
+				<category><![CDATA[Research Blog]]></category>
+		<guid isPermaLink="false">https://www.microsoft.com/en-us/research/?p=1194126</guid>
+
+					<description>Microsoft researchers have discovered “Lazarus,” a backdoor technique that can reprogram dormant neurons in an AI model, causing an otherwise normal AI agent to execute malicious commands when a hidden trigger appears. The threat is especially serious for AI agents with tool or terminal access. A triggered model could quietly download and run attacker code, […] The post Lazare, veni foras: Reprogramming Dormant Neurons to Backdoor AI Agents appeared first on Microsoft Research .</description>
+										
+					
+		
+		<enclosure url="https://www.microsoft.com/en-us/research/wp-content/uploads/2026/11/0-lazarus-riso-large.mp4" length="2057756" type="video/mp4" />
+
+			</item>
+		<item>
+		<title>Formally verifying agent-written full-stack web apps with PDD Kit</title>
+		<link>https://www.microsoft.com/en-us/research/blog/formally-verifying-agent-written-full-stack-web-apps-with-pdd-kit/</link>
+		
+		<dc:creator><![CDATA[Alex Lavaee, Matthai Philipose]]></dc:creator>
+		<pubDate>Thu, 05 Nov 2026 16:00:00 +0000</pubDate>
+				<category><![CDATA[Research Blog]]></category>
+		<guid isPermaLink="false">https://www.microsoft.com/en-us/research/?p=1191852</guid>
+
+					<description>AI agents can generate code at a scale that’s hard for humans to review line-by-line. PDD Kit helps ensure the code is doing what the developer intended by creating formal specifications and testing against them. It converts developer intent into a Verus specification, proves AI-generated code meets it for every input, and uses tests where proofs aren't practical. Developers review intent, not every line. The post Formally verifying agent-written full-stack web apps with PDD Kit appeared first…</description>
+										
+					
+		
+		
+			</item>
+	</channel>
+</rss>

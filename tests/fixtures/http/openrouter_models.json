@@ -1,0 +1,163 @@
+{
+ "data": [
+  {
+   "id": "thinkingmachines/inkling-2-mini",
+   "canonical_slug": "thinkingmachines/inkling-2-mini-20261120",
+   "hugging_face_id": "thinkingmachines/Inkling-2-Mini",
+   "name": "Thinking Machines: Inkling 2 Mini",
+   "created": 1795227585,
+   "description": "Inkling 2 Mini is an open-weight multimodal looped transformer from Thinking Machines Lab, with 3.4B active parameters out of 26.4B total (MoE). Its middle layers run three times with shared...",
+   "context_length": 1048576,
+   "pricing": {
+    "prompt": "0.000000075",
+    "completion": "0.0000003",
+    "input_cache_read": "0.000000015"
+   },
+   "supported_voices": null,
+   "knowledge_cutoff": null,
+   "expiration_date": null,
+   "links": {
+    "details": "/api/v1/models/thinkingmachines/inkling-2-mini-20261120/endpoints"
+   },
+   "reasoning": {
+    "mandatory": false,
+    "default_enabled": true,
+    "supported_efforts": [
+     "max",
+     "high",
+     "medium",
+     "low",
+     "minimal",
+     "none"
+    ],
+    "default_effort": "high"
+   }
+  },
+  {
+   "id": "radixark/daisyrose-27b",
+   "canonical_slug": "radixark/daisyrose-27b-20261120",
+   "hugging_face_id": "RadixArk/DaisyRose-27B",
+   "name": "RadixArk: DaisyRose 27B",
+   "created": 1795222188,
+   "description": "DaisyRose 27B is an open-weight multimodal reasoning model from RadixArk, trained from [Qwen3.8 27B](https://openrouter.ai/qwen/qwen3.8-27b) using reinforcement learning only on long-horizon agent tasks, with no supervised fine-tuning or distillation. It is...",
+   "context_length": 262144,
+   "pricing": {
+    "prompt": "0.00000015",
+    "completion": "0.000001875",
+    "input_cache_read": "0.0000000375"
+   },
+   "supported_voices": null,
+   "knowledge_cutoff": null,
+   "expiration_date": null,
+   "links": {
+    "details": "/api/v1/models/radixark/daisyrose-27b-20261120/endpoints"
+   },
+   "reasoning": {
+    "mandatory": false,
+    "default_enabled": true,
+    "supported_efforts": [
+     "xhigh",
+     "medium",
+     "low",
+     "none"
+    ],
+    "default_effort": "xhigh"
+   }
+  },
+  {
+   "id": "mistralai/pixtral-large-2502",
+   "canonical_slug": "mistralai/pixtral-large-2502",
+   "hugging_face_id": null,
+   "name": "Mistral: Pixtral Large 2502",
+   "created": 1795135865,
+   "description": "Pixtral Large 2502 is the February 2025 version of Mistral AI's large multimodal model, following [Pixtral Large 2411](https://openrouter.ai/mistralai/pixtral-large-2411). It accepts text and image input, including documents, charts, and natural images,...",
+   "context_length": 128000,
+   "pricing": {
+    "prompt": "0.000002",
+    "completion": "0.000006"
+   },
+   "supported_voices": null,
+   "knowledge_cutoff": null,
+   "expiration_date": null,
+   "links": {
+    "details": "/api/v1/models/mistralai/pixtral-large-2502/endpoints"
+   }
+  },
+  {
+   "id": "google/gemini-4-neon",
+   "canonical_slug": "google/gemini-4-neon-20261118",
+   "hugging_face_id": null,
+   "name": "Google: Gemini 4 Neon",
+   "created": 1795006977,
+   "description": "Gemini 4 Neon is a fast, mid-priced model in the Gemini 4 family from Google, built for coding and agentic work. It is suited for repository and terminal coding, web...",
+   "context_length": 1048576,
+   "pricing": {
+    "prompt": "0.000003",
+    "completion": "0.000015",
+    "image": "0.000003",
+    "audio": "0.000003",
+    "input_audio_cache": "0.00000015",
+    "web_search": "0.014",
+    "internal_reasoning": "0.000015",
+    "input_cache_read": "0.00000015",
+    "input_cache_write": "0.0000000833333333333333"
+   },
+   "supported_voices": null,
+   "knowledge_cutoff": null,
+   "expiration_date": null,
+   "links": {
+    "details": "/api/v1/models/google/gemini-4-neon-20261118/endpoints"
+   },
+   "reasoning": {
+    "mandatory": true,
+    "supported_efforts": [
+     "xhigh",
+     "high",
+     "medium",
+     "low"
+    ],
+    "default_effort": "medium"
+   }
+  },
+  {
+   "id": "google/gemini-4-neon:batch",
+   "canonical_slug": "google/gemini-4-neon-20261118",
+   "hugging_face_id": null,
+   "name": "Google: Gemini 4 Neon (batch)",
+   "created": 1795006977,
+   "description": "Gemini 4 Neon is a fast, mid-priced model in the Gemini 4 family from Google, built for coding and agentic work. It is suited for repository and terminal coding, web...",
+   "context_length": 1048576,
+   "pricing": {
+    "prompt": "0.0000015",
+    "completion": "0.0000075",
+    "image": "0.0000015",
+    "audio": "0.0000015",
+    "input_audio_cache": "0.000000075",
+    "web_search": "0.014",
+    "internal_reasoning": "0.0000075",
+    "input_cache_read": "0.000000075",
+    "input_cache_write": "0.0000000833333333333333"
+   },
+   "supported_voices": null,
+   "knowledge_cutoff": null,
+   "expiration_date": null,
+   "links": {
+    "details": "/api/v1/models/google/gemini-4-neon-20261118/endpoints"
+   },
+   "reasoning": {
+    "mandatory": true,
+    "supported_efforts": [
+     "xhigh",
+     "high",
+     "medium",
+     "low"
+    ],
+    "default_effort": "medium"
+   }
+  }
+ ],
+ "total_count": 473,
+ "links": {
+  "next": null
+ }
+}

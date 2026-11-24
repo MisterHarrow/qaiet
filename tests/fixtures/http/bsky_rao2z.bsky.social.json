@@ -1,0 +1,492 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:pug4wfnm4cmjosacpcveur5x/app.bsky.feed.post/3mysh7ah2yk2h",
+    "cid": "bafyreige76diobc75fj6y42iza37su5swh3rlwcp27dwd7etfdeeicnhvi",
+    "author": {
+     "did": "did:plc:pug4wfnm4cmjosacpcveur5x",
+     "handle": "rao2z.bsky.social",
+     "displayName": " Subbarao Kambhampati (కంభంపాటి సుబ్బారావు)",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-11-14T03:31:29.699Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-10-26T19:25:20.130Z",
+     "embed": {
+      "$type": "app.bsky.embed.recordWithMedia",
+      "media": {
+       "$type": "app.bsky.embed.external",
+       "external": {
+        "description": "YouTube video by Subbarao Kambhampati",
+        "thumb": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreidanrlcnq6zmo47jffjqcwgqd7smb3vanra6j4y7zlvrb3xi3v7xu"
+         },
+         "mimeType": "image/jpeg",
+         "size": 75875
+        },
+        "title": "On the Mythos of LLM \"Thinking Traces\" (Talk @ Tubingen Ellis/MPI 10/9/2026)",
+        "uri": "https://www.youtube.com/watch?v=mD32O9HU2aU"
+       }
+      },
+      "record": {
+       "$type": "app.bsky.embed.record",
+       "record": {
+        "cid": "bafyreidhf77n3va56si7wn5wrnbnpnv2h4ls7otd7mtx3j3dhfuksxgmmm",
+        "uri": "at://did:plc:fbyvkq5nj5oq35fjetpzhoks/app.bsky.feed.post/3mys5sdo4us2s"
+       }
+      }
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://www.youtube.com/watch?v=mD32O9HU2aU"
+        }
+       ],
+       "index": {
+        "byteEnd": 45,
+        "byteStart": 14
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "talk version: www.youtube.com/watch?v=mD32..."
+    },
+    "embed": {
+     "media": {
+      "external": {
+       "uri": "https://www.youtube.com/watch?v=mD32O9HU2aU",
+       "title": "On the Mythos of LLM \"Thinking Traces\" (Talk @ Tubingen Ellis/MPI 10/9/2026)",
+       "description": "YouTube video by Subbarao Kambhampati",
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:pug4wfnm4cmjosacpcveur5x/bafkreidanrlcnq6zmo47jffjqcwgqd7smb3vanra6j4y7zlvrb3xi3v7xu"
+      },
+      "$type": "app.bsky.embed.external#view"
+     },
+     "record": {
+      "record": {
+       "uri": "at://did:plc:fbyvkq5nj5oq35fjetpzhoks/app.bsky.feed.post/3mys5sdo4us2s",
+       "cid": "bafyreidhf77n3va56si7wn5wrnbnpnv2h4ls7otd7mtx3j3dhfuksxgmmm",
+       "author": {
+        "did": "did:plc:fbyvkq5nj5oq35fjetpzhoks",
+        "handle": "frankpasquale.bsky.social",
+        "displayName": "Frank Pasquale",
+        "associated": {
+         "activitySubscription": {
+          "allowSubscriptions": "followers"
+         }
+        },
+        "createdAt": "2023-05-07T02:12:49.095Z"
+       },
+       "value": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-10-26T16:37:03.622Z",
+        "embed": {
+         "$type": "app.bsky.embed.images",
+         "images": [
+          {
+           "alt": "",
+           "aspectRatio": {
+            "height": 1702,
+            "width": 3410
+           },
+           "image": {
+            "$type": "blob",
+            "ref": {
+             "$link": "bafkreibz3pnrs5i75mnb2fqufpepstjvokrjd43zvy5h77ml2m7ypggocu"
+            },
+            "mimeType": "image/jpeg",
+            "size": 1987981
+           }
+          }
+         ]
+        },
+        "facets": [
+         {
+          "$type": "app.bsky.richtext.facet",
+          "features": [
+           {
+            "$type": "app.bsky.richtext.facet#mention",
+            "did": "did:plc:pug4wfnm4cmjosacpcveur5x"
+           }
+          ],
+          "index": {
+           "byteEnd": 34,
+           "byteStart": 16
+          }
+         }
+        ],
+        "langs": [
+         "en"
+        ],
+        "text": "Good project by @rao2z.bsky.social on problematic anthropomorphization of AI."
+       },
+       "likeCount": 1,
+       "replyCount": 0,
+       "repostCount": 1,
+       "quoteCount": 1,
+       "indexedAt": "2026-10-26T16:37:16.947Z",
+       "embeds": [
+        {
+         "images": [
+          {
+           "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:fbyvkq5nj5oq35fjetpzhoks/bafkreibz3pnrs5i75mnb2fqufpepstjvokrjd43zvy5h77ml2m7ypggocu",
+           "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:fbyvkq5nj5oq35fjetpzhoks/bafkreibz3pnrs5i75mnb2fqufpepstjvokrjd43zvy5h77ml2m7ypggocu",
+           "alt": "",
+           "aspectRatio": {
+            "height": 1702,
+            "width": 3410
+           }
+          }
+         ],
+         "$type": "app.bsky.embed.images#view"
+        }
+       ],
+       "$type": "app.bsky.embed.record#viewRecord"
+      }
+     },
+     "$type": "app.bsky.embed.recordWithMedia#view"
+    },
+    "bookmarkCount": 6,
+    "replyCount": 1,
+    "repostCount": 2,
+    "likeCount": 3,
+    "quoteCount": 0,
+    "indexedAt": "2026-10-26T19:25:21.035Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:pug4wfnm4cmjosacpcveur5x/app.bsky.feed.post/3mxyl6y6ekk2o",
+    "cid": "bafyreihxs7lfn7wbqiwmmudx3je5miyar5uiq4twp36f53ssti6ynia55q",
+    "author": {
+     "did": "did:plc:pug4wfnm4cmjosacpcveur5x",
+     "handle": "rao2z.bsky.social",
+     "displayName": " Subbarao Kambhampati (కంభంపాటి సుబ్బారావు)",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-11-14T03:31:29.699Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-10-16T12:27:33.226Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "",
+        "aspectRatio": {
+         "height": 1904,
+         "width": 2204
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreifhtsrhfd35phfxabg3ygigccbviurjmeulx6muln6jo4knwdipze"
+         },
+         "mimeType": "image/jpeg",
+         "size": 1385428
+        }
+       }
+      ]
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "📣 New in the AAAI  AI Magazine (open access link 👉https://onlinelibrary.wiley.com/doi/epdf/10.1002/aaai.70113 )"
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:pug4wfnm4cmjosacpcveur5x/bafkreifhtsrhfd35phfxabg3ygigccbviurjmeulx6muln6jo4knwdipze",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:pug4wfnm4cmjosacpcveur5x/bafkreifhtsrhfd35phfxabg3ygigccbviurjmeulx6muln6jo4knwdipze",
+       "alt": "",
+       "aspectRatio": {
+        "height": 1904,
+        "width": 2204
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 2,
+    "quoteCount": 0,
+    "indexedAt": "2026-10-16T12:27:36.867Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:pug4wfnm4cmjosacpcveur5x/app.bsky.feed.post/3mxtvtpzgic2f",
+    "cid": "bafyreig64zr2w5iir2hy5tjbzgppicdyd3wq5bqh7sk4cquy2esli2cbee",
+    "author": {
+     "did": "did:plc:pug4wfnm4cmjosacpcveur5x",
+     "handle": "rao2z.bsky.social",
+     "displayName": " Subbarao Kambhampati (కంభంపాటి సుబ్బారావు)",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-11-14T03:31:29.699Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-10-14T15:54:48.044Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "YouTube video by Subbarao Kambhampati",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreidanrlcnq6zmo47jffjqcwgqd7smb3vanra6j4y7zlvrb3xi3v7xu"
+        },
+        "mimeType": "image/jpeg",
+        "size": 75875
+       },
+       "title": "On the Mythos of LLM \"Thinking Traces\" (Talk @ Tubingen Ellis/MPI 10/9/2026)",
+       "uri": "https://www.youtube.com/watch?v=mD32O9HU2aU"
+      }
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://www.youtube.com/watch?v=mD32O9HU2aU"
+        }
+       ],
+       "index": {
+        "byteEnd": 144,
+        "byteStart": 113
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "I am rather pleased with how this talk reflects my current thinking on a bunch of LLM reasoning related issues.\n\nwww.youtube.com/watch?v=mD32..."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://www.youtube.com/watch?v=mD32O9HU2aU",
+      "title": "On the Mythos of LLM \"Thinking Traces\" (Talk @ Tubingen Ellis/MPI 10/9/2026)",
+      "description": "YouTube video by Subbarao Kambhampati",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:pug4wfnm4cmjosacpcveur5x/bafkreidanrlcnq6zmo47jffjqcwgqd7smb3vanra6j4y7zlvrb3xi3v7xu"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 1,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 2,
+    "quoteCount": 0,
+    "indexedAt": "2026-10-14T15:54:49.859Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:pug4wfnm4cmjosacpcveur5x/app.bsky.feed.post/3mupgckvey22u",
+    "cid": "bafyreiasobqk3weaqdiey54t2ce37u52rehbtsjimycrbkpqlo2fwt4azu",
+    "author": {
+     "did": "did:plc:pug4wfnm4cmjosacpcveur5x",
+     "handle": "rao2z.bsky.social",
+     "displayName": " Subbarao Kambhampati (కంభంపాటి సుబ్బారావు)",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-11-14T03:31:29.699Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-09-04T16:50:32.280Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "In a recent harrowing development, a very normal routine experiment by the frontier company Ant went completely off the rails. 😱\n\nAnt put thousands of their ant agents in a pretty secure ant farm with...",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreicp5ebn6trxdo75lfgxhpasinnhht6ltqq43cx6xmztos4lcgruhe"
+        },
+        "mimeType": "image/jpeg",
+        "size": 537020
+       },
+       "title": "Subbarao Kambhampati (కంభంపాటి సుబ్బారావు) (@rao2z) on X",
+       "uri": "https://x.com/rao2z/status/2095710442954101123?s=20"
+      }
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://x.com/rao2z/status/2095710442954101123?s=20"
+        }
+       ],
+       "index": {
+        "byteEnd": 65,
+        "byteStart": 44
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "🐜🐜🐜ANThropomorphism..🐜🐜🐜\n\nx.com/rao2z/status..."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://x.com/rao2z/status/2095710442954101123?s=20",
+      "title": "Subbarao Kambhampati (కంభంపాటి సుబ్బారావు) (@rao2z) on X",
+      "description": "In a recent harrowing development, a very normal routine experiment by the frontier company Ant went completely off the rails. 😱\n\nAnt put thousands of their ant agents in a pretty secure ant farm with...",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:pug4wfnm4cmjosacpcveur5x/bafkreicp5ebn6trxdo75lfgxhpasinnhht6ltqq43cx6xmztos4lcgruhe"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 1,
+    "quoteCount": 0,
+    "indexedAt": "2026-09-04T16:50:34.964Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:p72jkscm4rt4xuep3lzv6doh/app.bsky.feed.post/3mry66zykak22",
+    "cid": "bafyreifavn54gl7ijchbiwd4ppl4k2q22z3vnkcyan3pmhjmmoirbztnmy",
+    "author": {
+     "did": "did:plc:p72jkscm4rt4xuep3lzv6doh",
+     "handle": "melaniemitchell.bsky.social",
+     "displayName": "Melanie Mitchell",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-29T03:04:07.127Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mqsag3g7m42k",
+        "isValid": true,
+        "createdAt": "2026-07-16T22:02:20.190Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-08-01T00:03:46.723Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "The idea that artificial intelligence can “reason” is more intuitive than ever. But intuitions can be wrong, and the science is far from settled.",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreigkgcgrucsf6qbqnazmszfc544lwjiqbm7yrjaj3bdmtrft7dgwz4"
+        },
+        "mimeType": "image/jpeg",
+        "size": 926016
+       },
+       "title": "Is AI Reasoning Right for the Wrong Reasons? | Quanta Magazine",
+       "uri": "https://www.quantamagazine.org/is-ai-reasoning-right-for-the-wrong-reasons-20260731/"
+      }
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:pug4wfnm4cmjosacpcveur5x"
+        }
+       ],
+       "index": {
+        "byteEnd": 170,
+        "byteStart": 152
+       }
+      },
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://www.quantamagazine.org/is-ai-reasoning-right-for-the-wrong-reasons-20260731/"
+        }
+       ],
+       "index": {
+        "byteEnd": 299,
+        "byteStart": 261
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "I recommend this article about AI reasoning, where the author lets us in on his struggles w/ AI cognitive dissonance.  Plus some priceless quotes from  @rao2z.bsky.social.  (My recommendation has *nothing* to do with the fact that I'm quoted in it too 😇)  \n\nwww.quantamagazine.org/is-ai-reason..."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://www.quantamagazine.org/is-ai-reasoning-right-for-the-wrong-reasons-20260731/",
+      "title": "Is AI Reasoning Right for the Wrong Reasons? | Quanta Magazine",
+      "description": "The idea that artificial intelligence can “reason” is more intuitive than ever. But intuitions can be wrong, and the science is far from settled.",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:p72jkscm4rt4xuep3lzv6doh/bafkreigkgcgrucsf6qbqnazmszfc544lwjiqbm7yrjaj3bdmtrft7dgwz4"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 54,
+    "replyCount": 5,
+    "repostCount": 34,
+    "likeCount": 110,
+    "quoteCount": 5,
+    "indexedAt": "2026-08-01T00:03:49.663Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:pug4wfnm4cmjosacpcveur5x",
+     "handle": "rao2z.bsky.social",
+     "displayName": " Subbarao Kambhampati (కంభంపాటి సుబ్బారావు)",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2024-11-14T03:31:29.699Z"
+    },
+    "uri": "at://did:plc:pug4wfnm4cmjosacpcveur5x/app.bsky.feed.repost/3mszw7jf7lm23",
+    "cid": "bafyreigpcajp25clqfxbyl7hxylmm6vstx2ycxl4viiyrymlqlohf7fumq",
+    "indexedAt": "2026-08-14T10:11:24.165Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  }
+ ],
+ "cursor": "2025-07-22T13:45:57.847Z"
+}

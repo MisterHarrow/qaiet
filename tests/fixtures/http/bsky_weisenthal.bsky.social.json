@@ -1,0 +1,503 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:kucj64i3zf4qswabir57ar7t/app.bsky.feed.post/3n2ob6g3thk27",
+    "cid": "bafyreigq2rjuk6zhtgt64vovrtr7wzmp5m3o5ixyn42cdeoaralynu25xq",
+    "author": {
+     "did": "did:plc:kucj64i3zf4qswabir57ar7t",
+     "handle": "xor.blue",
+     "displayName": "parker higgins",
+     "associated": {
+      "chat": {
+       "allowIncoming": "all"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-10T20:49:40.857Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-19T14:17:14.346Z",
+     "embed": {
+      "$type": "app.bsky.embed.record",
+      "record": {
+       "cid": "bafyreicp4d6r3ewnapdtdmuuh22xqpfwsgopimbr3os4eq3okvaqsxc7l4",
+       "uri": "at://did:plc:zaqrxdh3zpbpuiqyei7pxsp2/app.bsky.feed.post/3mzuqvxowbs24"
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "this was my favorite listen in a long time. recommended even if you're not an Odd Lots fan generally!"
+    },
+    "embed": {
+     "record": {
+      "uri": "at://did:plc:zaqrxdh3zpbpuiqyei7pxsp2/app.bsky.feed.post/3mzuqvxowbs24",
+      "cid": "bafyreicp4d6r3ewnapdtdmuuh22xqpfwsgopimbr3os4eq3okvaqsxc7l4",
+      "author": {
+       "did": "did:plc:zaqrxdh3zpbpuiqyei7pxsp2",
+       "handle": "weisenthal.bsky.social",
+       "displayName": "Joe Weisenthal",
+       "associated": {
+        "chat": {
+         "allowIncoming": "following"
+        },
+        "activitySubscription": {
+         "allowSubscriptions": "followers"
+        }
+       },
+       "createdAt": "2023-04-11T18:26:25.512Z",
+       "verification": {
+        "verifications": [
+         {
+          "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+          "issuerDisplayName": "Bluesky",
+          "issuerHandle": "bsky.app",
+          "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mhdlbs4a6b2g",
+          "isValid": true,
+          "createdAt": "2026-03-18T13:20:04.109Z"
+         }
+        ],
+        "verifiedStatus": "valid",
+        "trustedVerifierStatus": "none"
+       }
+      },
+      "value": {
+       "$type": "app.bsky.feed.post",
+       "createdAt": "2026-11-09T10:49:37.483Z",
+       "embed": {
+        "$type": "app.bsky.embed.external",
+        "external": {
+         "description": "Podcast Episode · Odd Lots · November 9 · 53m",
+         "thumb": {
+          "$type": "blob",
+          "ref": {
+           "$link": "bafkreia5sevc7u7ires5zgyyrz7psisydh6mfwbce6dtkjcgwwlfp4y74q"
+          },
+          "mimeType": "image/jpeg",
+          "size": 898126
+         },
+         "title": "This Is How New York City Takes Out Its Trash",
+         "uri": "https://podcasts.apple.com/us/podcast/odd-lots/id1056200096?i=1000800729523"
+        }
+       },
+       "facets": [
+        {
+         "features": [
+          {
+           "$type": "app.bsky.richtext.facet#link",
+           "uri": "https://podcasts.apple.com/us/podcast/odd-lots/id1056200096?i=1000800729523"
+          }
+         ],
+         "index": {
+          "byteEnd": 77,
+          "byteStart": 43
+         }
+        }
+       ],
+       "langs": [
+        "en"
+       ],
+       "text": "New episode on how NYC takes out the trash podcasts.apple.com/us/podcast/o..."
+      },
+      "likeCount": 69,
+      "replyCount": 7,
+      "repostCount": 8,
+      "quoteCount": 5,
+      "indexedAt": "2026-11-09T10:49:38.577Z",
+      "embeds": [
+       {
+        "external": {
+         "uri": "https://podcasts.apple.com/us/podcast/odd-lots/id1056200096?i=1000800729523",
+         "title": "This Is How New York City Takes Out Its Trash",
+         "description": "Podcast Episode · Odd Lots · November 9 · 53m",
+         "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:zaqrxdh3zpbpuiqyei7pxsp2/bafkreia5sevc7u7ires5zgyyrz7psisydh6mfwbce6dtkjcgwwlfp4y74q"
+        },
+        "$type": "app.bsky.embed.external#view"
+       }
+      ],
+      "$type": "app.bsky.embed.record#viewRecord"
+     },
+     "$type": "app.bsky.embed.record#view"
+    },
+    "bookmarkCount": 1,
+    "replyCount": 1,
+    "repostCount": 2,
+    "likeCount": 23,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-19T14:17:14.552Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:zaqrxdh3zpbpuiqyei7pxsp2",
+     "handle": "weisenthal.bsky.social",
+     "displayName": "Joe Weisenthal",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-11T18:26:25.512Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mhdlbs4a6b2g",
+        "isValid": true,
+        "createdAt": "2026-03-18T13:20:04.109Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:zaqrxdh3zpbpuiqyei7pxsp2/app.bsky.feed.repost/3n2ocoqihxx2u",
+    "cid": "bafyreidailpiwfqrvmo5anjiunhn6qstva7bdesmw2ww43hnsz7uur2y7y",
+    "indexedAt": "2026-11-19T14:44:16.045Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:zaqrxdh3zpbpuiqyei7pxsp2/app.bsky.feed.post/3n2oax6mbhs2t",
+    "cid": "bafyreigsvgfnzo4ecnpgrm6ylsxmnepn5vx3fefz4pemsi4iqb3x2tsmxu",
+    "author": {
+     "did": "did:plc:zaqrxdh3zpbpuiqyei7pxsp2",
+     "handle": "weisenthal.bsky.social",
+     "displayName": "Joe Weisenthal",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-11T18:26:25.512Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mhdlbs4a6b2g",
+        "isValid": true,
+        "createdAt": "2026-03-18T13:20:04.109Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-19T14:13:11.613Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "",
+        "aspectRatio": {
+         "height": 1027,
+         "width": 2000
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreiayjlml3uhrekboxxlfz3563u4vlge3dzg2ovmdaffpc7bvfm36j4"
+         },
+         "mimeType": "image/jpeg",
+         "size": 506187
+        }
+       }
+      ]
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://podcasts.apple.com/us/podcast/odd-lots/id1056200096?i=1000802889792"
+        }
+       ],
+       "index": {
+        "byteEnd": 219,
+        "byteStart": 185
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "NEW ODD LOTS:\n\nThe problem with AI’s most bullish chart.\n\nOn this day of the Anthropic IPO, we talk about why a continued rise in GPU prices may not be as good a sign as people think podcasts.apple.com/us/podcast/o..."
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:zaqrxdh3zpbpuiqyei7pxsp2/bafkreiayjlml3uhrekboxxlfz3563u4vlge3dzg2ovmdaffpc7bvfm36j4",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:zaqrxdh3zpbpuiqyei7pxsp2/bafkreiayjlml3uhrekboxxlfz3563u4vlge3dzg2ovmdaffpc7bvfm36j4",
+       "alt": "",
+       "aspectRatio": {
+        "height": 1027,
+        "width": 2000
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 4,
+    "replyCount": 3,
+    "repostCount": 5,
+    "likeCount": 59,
+    "quoteCount": 3,
+    "indexedAt": "2026-11-19T14:13:13.047Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:zaqrxdh3zpbpuiqyei7pxsp2/app.bsky.feed.post/3n2lj35gvx22d",
+    "cid": "bafyreigngtvvn7wn4fllvfgyygseqm7ubkp2bibjmnrbyy6waz6plu3e7a",
+    "author": {
+     "did": "did:plc:zaqrxdh3zpbpuiqyei7pxsp2",
+     "handle": "weisenthal.bsky.social",
+     "displayName": "Joe Weisenthal",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-11T18:26:25.512Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mhdlbs4a6b2g",
+        "isValid": true,
+        "createdAt": "2026-03-18T13:20:04.109Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-18T12:00:35.331Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "Podcast Episode · Odd Lots · November 18 · 51m",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreigikxbdjim6zw2xx24gdgvvavxdrshtgtipzbfho2j2dn6hcqdjoa"
+        },
+        "mimeType": "image/jpeg",
+        "size": 735865
+       },
+       "title": "How GTA VI Became the Most Expensive Video Game Ever Made",
+       "uri": "https://podcasts.apple.com/us/podcast/how-gta-vi-became-the-most-expensive-video-game-ever-made/id1056200096?i=1000802681486"
+      }
+     },
+     "facets": [
+      {
+       "$type": "app.bsky.richtext.facet",
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#mention",
+         "did": "did:plc:2mkgbhbhqvappkkorf2bzyrp"
+        }
+       ],
+       "index": {
+        "byteEnd": 261,
+        "byteStart": 235
+       }
+      },
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://podcasts.apple.com/us/podcast/how-gta-vi-became-the-most-expensive-video-game-ever-made/id1056200096?i=1000802681486"
+        }
+       ],
+       "index": {
+        "byteEnd": 296,
+        "byteStart": 262
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "NEW ODD LOTS:\n\nHow GTA IV became the most costly video game of all time. Years and years and billions of dollars having gone into.\n\nSo what happened, is this the future of the business, or one last hurrah?\n\nOn this episode we speak to @jasonschreier.bsky.social podcasts.apple.com/us/podcast/h..."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://podcasts.apple.com/us/podcast/how-gta-vi-became-the-most-expensive-video-game-ever-made/id1056200096?i=1000802681486",
+      "title": "How GTA VI Became the Most Expensive Video Game Ever Made",
+      "description": "Podcast Episode · Odd Lots · November 18 · 51m",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:zaqrxdh3zpbpuiqyei7pxsp2/bafkreigikxbdjim6zw2xx24gdgvvavxdrshtgtipzbfho2j2dn6hcqdjoa"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 3,
+    "replyCount": 3,
+    "repostCount": 13,
+    "likeCount": 78,
+    "quoteCount": 7,
+    "indexedAt": "2026-11-18T12:00:36.151Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 3
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:zaqrxdh3zpbpuiqyei7pxsp2/app.bsky.feed.post/3n2h73vf5722v",
+    "cid": "bafyreic2ox77vk33pwkh2e3cnisolidcbhdljhznbrrtgyrdaqgjznsoky",
+    "author": {
+     "did": "did:plc:zaqrxdh3zpbpuiqyei7pxsp2",
+     "handle": "weisenthal.bsky.social",
+     "displayName": "Joe Weisenthal",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-11T18:26:25.512Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mhdlbs4a6b2g",
+        "isValid": true,
+        "createdAt": "2026-03-18T13:20:04.109Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-16T18:51:24.068Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "A talk on the future U.S. growth model after Bidenonomics followed by the first DC performance from Light Sweet Crude",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreic53cipi3owkzgo7nylxmz6lo5fbo2gwkq6rs5xv2n3645lmqv6g4"
+        },
+        "mimeType": "image/jpeg",
+        "size": 204773
+       },
+       "title": "After Bidenomics w/ Joe Weisenthal and Light Sweet Crude performance",
+       "uri": "https://www.eventbrite.co.uk/e/after-bidenomics-w-joe-weisenthal-and-light-sweet-crude-performance-tickets-2004157629420"
+      }
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://www.eventbrite.co.uk/e/after-bidenomics-w-joe-weisenthal-and-light-sweet-crude-performance-tickets-2004157629420"
+        }
+       ],
+       "index": {
+        "byteEnd": 182,
+        "byteStart": 146
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "HEY DC FRIENDS:\n\nLight Sweet Crude is going to be playing in DC on Friday. Also going to be hosting a panel on economics.\n\nGet your tickets here. www.eventbrite.co.uk/e/after-bide..."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://www.eventbrite.co.uk/e/after-bidenomics-w-joe-weisenthal-and-light-sweet-crude-performance-tickets-2004157629420",
+      "title": "After Bidenomics w/ Joe Weisenthal and Light Sweet Crude performance",
+      "description": "A talk on the future U.S. growth model after Bidenonomics followed by the first DC performance from Light Sweet Crude",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:zaqrxdh3zpbpuiqyei7pxsp2/bafkreic53cipi3owkzgo7nylxmz6lo5fbo2gwkq6rs5xv2n3645lmqv6g4"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 2,
+    "repostCount": 5,
+    "likeCount": 44,
+    "quoteCount": 1,
+    "indexedAt": "2026-11-16T18:51:25.252Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:zaqrxdh3zpbpuiqyei7pxsp2/app.bsky.feed.post/3n2gpz6dd2s2v",
+    "cid": "bafyreid3p7ytinjc4dk6uvfni3vee3qvcqhidopymw43j7sf24ndj5sace",
+    "author": {
+     "did": "did:plc:zaqrxdh3zpbpuiqyei7pxsp2",
+     "handle": "weisenthal.bsky.social",
+     "displayName": "Joe Weisenthal",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-11T18:26:25.512Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mhdlbs4a6b2g",
+        "isValid": true,
+        "createdAt": "2026-03-18T13:20:04.109Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-16T14:21:26.656Z",
+     "langs": [
+      "en"
+     ],
+     "text": "Did anyone else in NYC see how clear venus was this morning in the sky?"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 8,
+    "repostCount": 5,
+    "likeCount": 50,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-16T14:21:26.852Z"
+   }
+  }
+ ],
+ "cursor": "2026-11-06T13:53:20.526Z"
+}

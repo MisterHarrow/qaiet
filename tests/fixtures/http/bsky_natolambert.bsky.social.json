@@ -1,0 +1,235 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:brkj2yocng7vtggmyujy4khq/app.bsky.feed.post/3n2yvdrupoj2m",
+    "cid": "bafyreidtmc5sbzbhap6navnpsg7abibt7hqfk6q2rrwj4azxu5e5fgre4e",
+    "author": {
+     "did": "did:plc:brkj2yocng7vtggmyujy4khq",
+     "handle": "natolambert.bsky.social",
+     "displayName": "Nathan Lambert",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-30T14:13:55.490Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T19:44:45.749Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "What does \"actually open AI\" look like?\n\nThis short documentary traces the inference layer of AI: the infrastructure that determines whether AI can run affordably and at scale. It follows the…",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreibypzy5oh6vw75nfxexiof2brxfcxcmf3hjywumkuhwaso3v7bvqq"
+        },
+        "mimeType": "image/jpeg",
+        "size": 76623
+       },
+       "title": "Open Intelligence: A mini documentary",
+       "uri": "https://www.youtube.com/watch?v=2Q31Q4Ougzs"
+      }
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://www.youtube.com/watch?v=2Q31Q4Ougzs"
+        }
+       ],
+       "index": {
+        "byteEnd": 167,
+        "byteStart": 136
+       }
+      }
+     ],
+     "text": "Happy to be a part of this open intelligence mini-doc by Modal. Very happy to get work on this mission with great friends in the space. www.youtube.com/watch?v=2Q31..."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://www.youtube.com/watch?v=2Q31Q4Ougzs",
+      "title": "Open Intelligence: A mini documentary",
+      "description": "What does \"actually open AI\" look like?\n\nThis short documentary traces the inference layer of AI: the infrastructure that determines whether AI can run affordably and at scale. It follows the…",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:brkj2yocng7vtggmyujy4khq/bafkreibypzy5oh6vw75nfxexiof2brxfcxcmf3hjywumkuhwaso3v7bvqq"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 6,
+    "replyCount": 1,
+    "repostCount": 3,
+    "likeCount": 15,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-23T19:44:47.240Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:brkj2yocng7vtggmyujy4khq/app.bsky.feed.post/3n2y7trwhy52z",
+    "cid": "bafyreiedsmj2nbskt575pbwmvh6bylccpjy4ux7dd7kh4r4solioic34b4",
+    "author": {
+     "did": "did:plc:brkj2yocng7vtggmyujy4khq",
+     "handle": "natolambert.bsky.social",
+     "displayName": "Nathan Lambert",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-30T14:13:55.490Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-23T13:20:01.277Z",
+     "text": "It is an inevitable path of optimization that interpretable chain of thought goes away. It being intelligible is an inefficiency brought about how we first discovered inference time reasoning (related to in-context learning). Looped architectures are the first step there."
+    },
+    "bookmarkCount": 4,
+    "replyCount": 2,
+    "repostCount": 3,
+    "likeCount": 30,
+    "quoteCount": 1,
+    "indexedAt": "2026-11-23T13:20:01.448Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:brkj2yocng7vtggmyujy4khq/app.bsky.feed.post/3n2ua4x2ydk2w",
+    "cid": "bafyreiaycbpmmsgdmg7l3t65gypfj6lil5zggpfd2lvhaxwokjcjuxmvja",
+    "author": {
+     "did": "did:plc:brkj2yocng7vtggmyujy4khq",
+     "handle": "natolambert.bsky.social",
+     "displayName": "Nathan Lambert",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-30T14:13:55.490Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-21T23:14:29.708Z",
+     "text": "Booked Dune 3 IMAX tickets today. Good reminder to do it now before all the reasonable seats are sold out :)"
+    },
+    "bookmarkCount": 1,
+    "replyCount": 1,
+    "repostCount": 0,
+    "likeCount": 9,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-21T23:14:29.948Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:brkj2yocng7vtggmyujy4khq/app.bsky.feed.post/3n2tdrggx2o27",
+    "cid": "bafyreibkkqx26zof6mnhzuvj3o6om6sehft2jsbdfz5lhtn5vwoyehrdle",
+    "author": {
+     "did": "did:plc:brkj2yocng7vtggmyujy4khq",
+     "handle": "natolambert.bsky.social",
+     "displayName": "Nathan Lambert",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-30T14:13:55.490Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-21T14:46:58.415Z",
+     "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+       {
+        "alt": "",
+        "aspectRatio": {
+         "height": 1440,
+         "width": 2560
+        },
+        "image": {
+         "$type": "blob",
+         "ref": {
+          "$link": "bafkreidhlsedn5dmukegxi6jmrdexo7ooqnpgxanz27qtcqnltjvttdtoy"
+         },
+         "mimeType": "image/png",
+         "size": 142382
+        }
+       }
+      ]
+     },
+     "text": "New slide deck on the biggest open problems in post-training and how the field got to where it is today. Largely, this is a statement of my goals with Trillium Labs (not that we can do every project at once). Stay in touch if you're working on any of these in the open!"
+    },
+    "embed": {
+     "images": [
+      {
+       "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:brkj2yocng7vtggmyujy4khq/bafkreidhlsedn5dmukegxi6jmrdexo7ooqnpgxanz27qtcqnltjvttdtoy",
+       "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:brkj2yocng7vtggmyujy4khq/bafkreidhlsedn5dmukegxi6jmrdexo7ooqnpgxanz27qtcqnltjvttdtoy",
+       "alt": "",
+       "aspectRatio": {
+        "height": 1440,
+        "width": 2560
+       }
+      }
+     ],
+     "$type": "app.bsky.embed.images#view"
+    },
+    "bookmarkCount": 18,
+    "replyCount": 2,
+    "repostCount": 3,
+    "likeCount": 47,
+    "quoteCount": 1,
+    "indexedAt": "2026-11-21T14:46:58.940Z"
+   },
+   "opThreadPostIndex": 1,
+   "opThreadPostCount": 3
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:brkj2yocng7vtggmyujy4khq/app.bsky.feed.post/3n2qhmcehf32z",
+    "cid": "bafyreifnfadylojfydlyu5n3qmgxomewfo5vpfnqjre2iaiscyjsya7inm",
+    "author": {
+     "did": "did:plc:brkj2yocng7vtggmyujy4khq",
+     "handle": "natolambert.bsky.social",
+     "displayName": "Nathan Lambert",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-30T14:13:55.490Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-20T11:17:42.110Z",
+     "text": "Tried Gemini Neon in Antigravity. Felt in distribution of Claude Code & Codex, in a good way. Excited to get to know these new models more!"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 6,
+    "repostCount": 1,
+    "likeCount": 24,
+    "quoteCount": 1,
+    "indexedAt": "2026-11-20T11:17:42.345Z"
+   }
+  }
+ ],
+ "cursor": "2026-10-21T17:35:20.015Z"
+}

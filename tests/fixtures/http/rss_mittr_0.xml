@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Artificial intelligence &#8211; MIT Technology Review</title>
+	<atom:link href="https://www.technologyreview.com/topic/artificial-intelligence/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.technologyreview.com</link>
+	<description></description>
+	<lastBuildDate>Mon, 23 Nov 2026 17:49:54 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=7.1.5</generator>
+
+<image>
+	<url>https://wp.technologyreview.com/wp-content/uploads/2024/09/cropped-TR-Logo-Block-Centered-R.png?w=32</url>
+	<title>Artificial intelligence &#8211; MIT Technology Review</title>
+	<link>https://www.technologyreview.com</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+<site xmlns="com-wordpress:feed-additions:1">172986898</site>	<item>
+		<title>A legendary philosopher isn’t buying Anthropic’s consciousness argument</title>
+		<link>https://www.technologyreview.com/2026/11/23/1149569/a-legendary-philosopher-isnt-buying-anthropics-consciousness-argument/</link>
+		
+		<dc:creator><![CDATA[James O'Donnell]]></dc:creator>
+		<pubDate>Mon, 23 Nov 2026 17:36:08 +0000</pubDate>
+				<category><![CDATA[Artificial intelligence]]></category>
+		<category><![CDATA[App]]></category>
+		<category><![CDATA[Summary]]></category>
+		<category><![CDATA[The Algorithm]]></category>
+		<guid isPermaLink="false">https://www.technologyreview.com/?p=1149569</guid>
+
+					<description><![CDATA[This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. Before going public last week, Anthropic named the possibility that AI could be conscious or sentient as a risk factor for anyone investing. Given “the way we approach model sentience and moral&#8230;]]></description>
+										
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1149569</post-id>	</item>
+		<item>
+		<title>The most misunderstood graph in AI just got a major update</title>
+		<link>https://www.technologyreview.com/2026/11/20/1149399/the-most-misunderstood-graph-in-ai-just-got-a-major-update/</link>
+		
+		<dc:creator><![CDATA[Grace Huckins]]></dc:creator>
+		<pubDate>Fri, 20 Nov 2026 18:15:15 +0000</pubDate>
+				<category><![CDATA[Artificial intelligence]]></category>
+		<category><![CDATA[App]]></category>
+		<category><![CDATA[Summary]]></category>
+		<guid isPermaLink="false">https://www.technologyreview.com/?p=1149399</guid>
+
+					<description><![CDATA[A new report from the AI evaluation nonprofit METR finds that some AI capabilities are continuing to improve along an exponential trajectory—but it also indicates that models aren’t quite as good at tasks that require judgment as they are at coding.  The report is an update to the organization’s time horizon plot, which was widely&#8230;]]></description>
+										
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1149399</post-id>	</item>
+		<item>
+		<title>The AI Hype Index: AI is everywhere</title>
+		<link>https://www.technologyreview.com/2026/11/18/1148650/ai-hype-index-ai-is-everywhere/</link>
+		
+		<dc:creator><![CDATA[Amit Katwala]]></dc:creator>
+		<pubDate>Wed, 18 Nov 2026 14:42:44 +0000</pubDate>
+				<category><![CDATA[Artificial intelligence]]></category>
+		<category><![CDATA[AI]]></category>
+		<category><![CDATA[AI Hype Index]]></category>
+		<category><![CDATA[App]]></category>
+		<guid isPermaLink="false">https://www.technologyreview.com/?p=1148650</guid>
+
+					<description><![CDATA[Like a nasty rash, AI seems to spread everywhere. Google crams AI Overviews down your throat even though it costs the company billions of dollars in lost ad revenue. Leave your apartment, and you might pass two people heaving an AI-powered humanoid robot up the stairs to clean someone’s rooms. Go to the supermarket, and&#8230;]]></description>
+										
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1148650</post-id>	</item>
+		<item>
+		<title>This smell startup says its AI nose is as good as a human’s</title>
+		<link>https://www.technologyreview.com/2026/11/18/1148816/smell-startup-osmo-ai-nose-good-as-humans/</link>
+		
+		<dc:creator><![CDATA[Amit Katwala]]></dc:creator>
+		<pubDate>Wed, 18 Nov 2026 10:20:30 +0000</pubDate>
+				<category><![CDATA[Artificial intelligence]]></category>
+		<category><![CDATA[App]]></category>
+		<category><![CDATA[artificial intelligence]]></category>
+		<category><![CDATA[Summary]]></category>
+		<guid isPermaLink="false">https://www.technologyreview.com/?p=1148816</guid>
+
+					<description><![CDATA[In a lab near Newark Airport in New Jersey, a team of around 30 experienced human sniffers are slowly working their way through every odor on Earth. Their careful notes—“nutty,” “peachy,” “marine”—are cross-referenced with a chemical analysis to create a rich set of training data for what AI startup Osmo calls the world’s first foundation&#8230;]]></description>
+										
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1148816</post-id>	</item>
+		<item>
+		<title>Research Reports</title>
+		<link>https://www.technologyreview.com/2026/11/17/1148203/research-reports/</link>
+		
+		<dc:creator><![CDATA[MIT Technology Review]]></dc:creator>
+		<pubDate>Tue, 17 Nov 2026 14:39:46 +0000</pubDate>
+				<category><![CDATA[Artificial intelligence]]></category>
+		<guid isPermaLink="false">https://www.technologyreview.com/?p=1148203</guid>
+
+					<description><![CDATA[To access a report, click on the corresponding image below.]]></description>
+										
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1148203</post-id>	</item>
+	</channel>
+</rss>

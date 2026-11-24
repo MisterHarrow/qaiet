@@ -1,0 +1,917 @@
+{
+ "feed": [
+  {
+   "post": {
+    "uri": "at://did:plc:2zp4ys4ruuuahm5k7xpa4sug/app.bsky.feed.post/3n2qyu7kf4s2m",
+    "cid": "bafyreidzp7mjzbkbpeuc3vrzl7qofm72ajqslei77aymncg4y7vzlqyjiu",
+    "author": {
+     "did": "did:plc:2zp4ys4ruuuahm5k7xpa4sug",
+     "handle": "craignewmark.bsky.social",
+     "displayName": "Craig Newmark",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-04-22T18:06:12.417Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lspdoyaxr22h",
+        "isValid": true,
+        "createdAt": "2025-06-28T23:47:12.086Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-20T16:26:21.223Z",
+     "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+       "description": "Privacy is our mission; it’s why we exist, and we do everything we can to protect it. This means that we are restricting the latest AI agents built into mobile operating systems from potentially captu...",
+       "thumb": {
+        "$type": "blob",
+        "ref": {
+         "$link": "bafkreidprrryppeprwtlso62wmbedxtpba2xns7egzthyzwhysyzkxzr6i"
+        },
+        "mimeType": "image/jpeg",
+        "size": 115063
+       },
+       "title": "Signal is Serious About Protecting Your Privacy",
+       "uri": "https://signal.org/blog/protecting-your-privacy/"
+      }
+     },
+     "facets": [
+      {
+       "features": [
+        {
+         "$type": "app.bsky.richtext.facet#link",
+         "uri": "https://signal.org/blog/protecting-your-privacy/"
+        }
+       ],
+       "index": {
+        "byteEnd": 198,
+        "byteStart": 172
+       }
+      }
+     ],
+     "langs": [
+      "en"
+     ],
+     "text": "Congratulations to Signal for launching a new default to prevent screenshots in the app, protecting messages from the latest agentic AI assistants. A real win for privacy! signal.org/blog/protect..."
+    },
+    "embed": {
+     "external": {
+      "uri": "https://signal.org/blog/protecting-your-privacy/",
+      "title": "Signal is Serious About Protecting Your Privacy",
+      "description": "Privacy is our mission; it’s why we exist, and we do everything we can to protect it. This means that we are restricting the latest AI agents built into mobile operating systems from potentially captu...",
+      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:2zp4ys4ruuuahm5k7xpa4sug/bafkreidprrryppeprwtlso62wmbedxtpba2xns7egzthyzwhysyzkxzr6i"
+     },
+     "$type": "app.bsky.embed.external#view"
+    },
+    "bookmarkCount": 3,
+    "replyCount": 2,
+    "repostCount": 31,
+    "likeCount": 137,
+    "quoteCount": 1,
+    "indexedAt": "2026-11-20T16:26:22.255Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:so5r7asbd26pmnnoerksklor",
+     "handle": "meredithmeredith.bsky.social",
+     "displayName": "Meredith Whittaker ",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-01T20:26:04.861Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3luxqj372s325",
+        "isValid": true,
+        "createdAt": "2025-07-27T18:48:13.693Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:so5r7asbd26pmnnoerksklor/app.bsky.feed.repost/3n2r7t6qd5t2v",
+    "cid": "bafyreihfrplmdqpsvfwdxag5ep2jkilfhaouzlz4cvpaw74v3jbdtdmy7e",
+    "indexedAt": "2026-11-20T18:31:03.142Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:n3t54gz6pastzesohxtpt6gh/app.bsky.feed.post/3n2qn5h5hh225",
+    "cid": "bafyreifu2izl3ejjxkdx3zzvkfzvovwspzi36j6ztkofy5niggisan5iiu",
+    "author": {
+     "did": "did:plc:n3t54gz6pastzesohxtpt6gh",
+     "handle": "brianhonan.bsky.social",
+     "displayName": "Brian Honan",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-07-31T08:23:00.107Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lujhbgu6qn2a",
+        "isValid": true,
+        "createdAt": "2025-07-22T02:25:37.458Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-20T12:56:46.277Z",
+     "embed": {
+      "$type": "app.bsky.embed.record",
+      "record": {
+       "cid": "bafyreibd3hiygjoqvx67jvnycttzt4ofnhzlv7fai5yfjgo3q3cjnvlrcy",
+       "uri": "at://did:plc:so5r7asbd26pmnnoerksklor/app.bsky.feed.post/3n2qe4p7qwc2a"
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "If you use Signal don't forget to donate in order to support the good work they do"
+    },
+    "embed": {
+     "record": {
+      "uri": "at://did:plc:so5r7asbd26pmnnoerksklor/app.bsky.feed.post/3n2qe4p7qwc2a",
+      "cid": "bafyreibd3hiygjoqvx67jvnycttzt4ofnhzlv7fai5yfjgo3q3cjnvlrcy",
+      "author": {
+       "did": "did:plc:so5r7asbd26pmnnoerksklor",
+       "handle": "meredithmeredith.bsky.social",
+       "displayName": "Meredith Whittaker ",
+       "associated": {
+        "chat": {
+         "allowIncoming": "none",
+         "allowGroupInvites": "none"
+        },
+        "activitySubscription": {
+         "allowSubscriptions": "followers"
+        }
+       },
+       "createdAt": "2023-05-01T20:26:04.861Z",
+       "verification": {
+        "verifications": [
+         {
+          "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+          "issuerDisplayName": "Bluesky",
+          "issuerHandle": "bsky.app",
+          "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3luxqj372s325",
+          "isValid": true,
+          "createdAt": "2025-07-27T18:48:13.693Z"
+         }
+        ],
+        "verifiedStatus": "valid",
+        "trustedVerifierStatus": "none"
+       }
+      },
+      "value": {
+       "$type": "app.bsky.feed.post",
+       "createdAt": "2026-11-20T10:15:17.509Z",
+       "embed": {
+        "$type": "app.bsky.embed.record",
+        "record": {
+         "cid": "bafyreifkql5r32lpqq2skpvui4wkibqaz2qsha5h7cspgkxd6mjn2fwg5i",
+         "uri": "at://did:plc:tovhrfml47r6u4idaitaxefk/app.bsky.feed.post/3n2qboicngk2z"
+        }
+       },
+       "langs": [
+        "en"
+       ],
+       "text": "AI agents in the OS, capturing sensitive data from apps like Signal, present an existential threat to privacy \n\nSadly, OS vendors are integrating agents recklessly, w/o giving Signal and other apps good ways to block AI data access and protect you \n\nSo, we're doing what we can w/ the tools we have👇"
+      },
+      "likeCount": 1149,
+      "replyCount": 37,
+      "repostCount": 474,
+      "quoteCount": 17,
+      "indexedAt": "2026-11-20T10:15:18.445Z",
+      "embeds": [
+       {
+        "record": {
+         "uri": "at://did:plc:tovhrfml47r6u4idaitaxefk/app.bsky.feed.post/3n2qboicngk2z",
+         "cid": "bafyreifkql5r32lpqq2skpvui4wkibqaz2qsha5h7cspgkxd6mjn2fwg5i",
+         "author": {
+          "did": "did:plc:tovhrfml47r6u4idaitaxefk",
+          "handle": "signal.org",
+          "displayName": "Signal",
+          "associated": {
+           "activitySubscription": {
+            "allowSubscriptions": "followers"
+           }
+          },
+          "createdAt": "2023-05-19T20:52:56.532Z",
+          "verification": {
+           "verifications": [
+            {
+             "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+             "issuerDisplayName": "Bluesky",
+             "issuerHandle": "bsky.app",
+             "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mdlzr5a54y26",
+             "isValid": true,
+             "createdAt": "2026-01-30T00:19:45.415Z"
+            }
+           ],
+           "verifiedStatus": "valid",
+           "trustedVerifierStatus": "none"
+          }
+         },
+         "value": {
+          "$type": "app.bsky.feed.post",
+          "createdAt": "2026-11-20T09:31:33.019Z",
+          "embed": {
+           "$type": "app.bsky.embed.external",
+           "external": {
+            "description": "Privacy is our mission; it’s why we exist, and we do everything we can to protect it. This means that we are restricting the latest AI agents built into mobile operating systems from potentially captu...",
+            "thumb": {
+             "$type": "blob",
+             "ref": {
+              "$link": "bafkreigtpsf263ucqrkownqvqhwbe47akrvk6hhbjahtmggyge35jzp5hu"
+             },
+             "mimeType": "image/jpeg",
+             "size": 183847
+            },
+            "title": "Signal is Serious About Protecting Your Privacy",
+            "uri": "https://signal.org/blog/protecting-your-privacy/"
+           }
+          },
+          "facets": [
+           {
+            "features": [
+             {
+              "$type": "app.bsky.richtext.facet#link",
+              "uri": "https://signal.org/blog/protecting-your-privacy/"
+             }
+            ],
+            "index": {
+             "byteEnd": 264,
+             "byteStart": 238
+            }
+           }
+          ],
+          "langs": [
+           "en"
+          ],
+          "text": "In order to protect your privacy in Signal from the latest agentic AI assistants on mobile operating systems, we are rolling out a new default to restrict screenshots in the Signal app. \n\nYou can re-enable screenshots in your settings. \n\nsignal.org/blog/protect..."
+         },
+         "likeCount": 1171,
+         "replyCount": 31,
+         "repostCount": 349,
+         "quoteCount": 50,
+         "indexedAt": "2026-11-20T09:31:35.748Z",
+         "$type": "app.bsky.embed.record#viewRecord"
+        },
+        "$type": "app.bsky.embed.record#view"
+       }
+      ],
+      "$type": "app.bsky.embed.record#viewRecord"
+     },
+     "$type": "app.bsky.embed.record#view"
+    },
+    "bookmarkCount": 1,
+    "replyCount": 2,
+    "repostCount": 28,
+    "likeCount": 98,
+    "quoteCount": 1,
+    "indexedAt": "2026-11-20T12:56:47.144Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:so5r7asbd26pmnnoerksklor",
+     "handle": "meredithmeredith.bsky.social",
+     "displayName": "Meredith Whittaker ",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-01T20:26:04.861Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3luxqj372s325",
+        "isValid": true,
+        "createdAt": "2025-07-27T18:48:13.693Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:so5r7asbd26pmnnoerksklor/app.bsky.feed.repost/3n2r7jcjiiz2a",
+    "cid": "bafyreiel264noprrubvbdziluimruzz7pqzrk23jwzccsqawdc77scarla",
+    "indexedAt": "2026-11-20T18:25:31.548Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:yizh3yeq6wcfggftrvf6ta5p/app.bsky.feed.post/3n2qh5bpmve2o",
+    "cid": "bafyreigoxu7keip7vo2fnada5edalqpxr3mdmxypwi5qj2ub2mauu3bur4",
+    "author": {
+     "did": "did:plc:yizh3yeq6wcfggftrvf6ta5p",
+     "handle": "opfuchs.gay",
+     "displayName": "Philo 🔜️ Pawska",
+     "pronouns": "he/lui/er",
+     "associated": {
+      "chat": {
+       "allowIncoming": "following",
+       "allowGroupInvites": "following"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-08-18T17:30:57.816Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-20T11:09:18.129Z",
+     "embed": {
+      "$type": "app.bsky.embed.recordWithMedia",
+      "media": {
+       "$type": "app.bsky.embed.images",
+       "images": [
+        {
+         "alt": "We continue to call on the major consumer operating system companies – Apple, Google, and Microsoft – to provide simple technical tools and accurate documentation that give developers like Signal ways to prevent AI agents from accessing sensitive application data. In particular, we are calling on these companies to provide two common-sense remedies that can protect the privacy so many millions of people rely on:\n\n1. Developers should have an easy and well-documented way to opt their app out of A…",
+         "aspectRatio": {
+          "height": 687,
+          "width": 996
+         },
+         "image": {
+          "$type": "blob",
+          "ref": {
+           "$link": "bafkreie4gkjrzugaatfyslvd4cl43yn2jravg26r6hv5737xfdvgjjdfze"
+          },
+          "mimeType": "image/jpeg",
+          "size": 383813
+         }
+        }
+       ]
+      },
+      "record": {
+       "$type": "app.bsky.embed.record",
+       "record": {
+        "cid": "bafyreifkql5r32lpqq2skpvui4wkibqaz2qsha5h7cspgkxd6mjn2fwg5i",
+        "uri": "at://did:plc:tovhrfml47r6u4idaitaxefk/app.bsky.feed.post/3n2qboicngk2z"
+       }
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "💯"
+    },
+    "embed": {
+     "media": {
+      "images": [
+       {
+        "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:yizh3yeq6wcfggftrvf6ta5p/bafkreie4gkjrzugaatfyslvd4cl43yn2jravg26r6hv5737xfdvgjjdfze",
+        "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:yizh3yeq6wcfggftrvf6ta5p/bafkreie4gkjrzugaatfyslvd4cl43yn2jravg26r6hv5737xfdvgjjdfze",
+        "alt": "We continue to call on the major consumer operating system companies – Apple, Google, and Microsoft – to provide simple technical tools and accurate documentation that give developers like Signal ways to prevent AI agents from accessing sensitive application data. In particular, we are calling on these companies to provide two common-sense remedies that can protect the privacy so many millions of people rely on:\n\n1. Developers should have an easy and well-documented way to opt their app out of A…",
+        "aspectRatio": {
+         "height": 687,
+         "width": 996
+        }
+       }
+      ],
+      "$type": "app.bsky.embed.images#view"
+     },
+     "record": {
+      "record": {
+       "uri": "at://did:plc:tovhrfml47r6u4idaitaxefk/app.bsky.feed.post/3n2qboicngk2z",
+       "cid": "bafyreifkql5r32lpqq2skpvui4wkibqaz2qsha5h7cspgkxd6mjn2fwg5i",
+       "author": {
+        "did": "did:plc:tovhrfml47r6u4idaitaxefk",
+        "handle": "signal.org",
+        "displayName": "Signal",
+        "associated": {
+         "activitySubscription": {
+          "allowSubscriptions": "followers"
+         }
+        },
+        "createdAt": "2023-05-19T20:52:56.532Z",
+        "verification": {
+         "verifications": [
+          {
+           "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+           "issuerDisplayName": "Bluesky",
+           "issuerHandle": "bsky.app",
+           "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mdlzr5a54y26",
+           "isValid": true,
+           "createdAt": "2026-01-30T00:19:45.415Z"
+          }
+         ],
+         "verifiedStatus": "valid",
+         "trustedVerifierStatus": "none"
+        }
+       },
+       "value": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-11-20T09:31:33.019Z",
+        "embed": {
+         "$type": "app.bsky.embed.external",
+         "external": {
+          "description": "Privacy is our mission; it’s why we exist, and we do everything we can to protect it. This means that we are restricting the latest AI agents built into mobile operating systems from potentially captu...",
+          "thumb": {
+           "$type": "blob",
+           "ref": {
+            "$link": "bafkreigtpsf263ucqrkownqvqhwbe47akrvk6hhbjahtmggyge35jzp5hu"
+           },
+           "mimeType": "image/jpeg",
+           "size": 183847
+          },
+          "title": "Signal is Serious About Protecting Your Privacy",
+          "uri": "https://signal.org/blog/protecting-your-privacy/"
+         }
+        },
+        "facets": [
+         {
+          "features": [
+           {
+            "$type": "app.bsky.richtext.facet#link",
+            "uri": "https://signal.org/blog/protecting-your-privacy/"
+           }
+          ],
+          "index": {
+           "byteEnd": 264,
+           "byteStart": 238
+          }
+         }
+        ],
+        "langs": [
+         "en"
+        ],
+        "text": "In order to protect your privacy in Signal from the latest agentic AI assistants on mobile operating systems, we are rolling out a new default to restrict screenshots in the Signal app. \n\nYou can re-enable screenshots in your settings. \n\nsignal.org/blog/protect..."
+       },
+       "likeCount": 1171,
+       "replyCount": 31,
+       "repostCount": 349,
+       "quoteCount": 50,
+       "indexedAt": "2026-11-20T09:31:35.748Z",
+       "embeds": [
+        {
+         "external": {
+          "uri": "https://signal.org/blog/protecting-your-privacy/",
+          "title": "Signal is Serious About Protecting Your Privacy",
+          "description": "Privacy is our mission; it’s why we exist, and we do everything we can to protect it. This means that we are restricting the latest AI agents built into mobile operating systems from potentially captu...",
+          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:tovhrfml47r6u4idaitaxefk/bafkreigtpsf263ucqrkownqvqhwbe47akrvk6hhbjahtmggyge35jzp5hu"
+         },
+         "$type": "app.bsky.embed.external#view"
+        }
+       ],
+       "$type": "app.bsky.embed.record#viewRecord"
+      }
+     },
+     "$type": "app.bsky.embed.recordWithMedia#view"
+    },
+    "bookmarkCount": 7,
+    "replyCount": 1,
+    "repostCount": 36,
+    "likeCount": 124,
+    "quoteCount": 1,
+    "indexedAt": "2026-11-20T11:09:19.649Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:so5r7asbd26pmnnoerksklor",
+     "handle": "meredithmeredith.bsky.social",
+     "displayName": "Meredith Whittaker ",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-01T20:26:04.861Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3luxqj372s325",
+        "isValid": true,
+        "createdAt": "2025-07-27T18:48:13.693Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:so5r7asbd26pmnnoerksklor/app.bsky.feed.repost/3n2qmcsbqoh2a",
+    "cid": "bafyreigstrmichast7bdvykgg3tjqaakcj4bfobsljpvm32semnc75q3tq",
+    "indexedAt": "2026-11-20T12:41:52.153Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:so5r7asbd26pmnnoerksklor/app.bsky.feed.post/3n2qe4p7qwc2a",
+    "cid": "bafyreibd3hiygjoqvx67jvnycttzt4ofnhzlv7fai5yfjgo3q3cjnvlrcy",
+    "author": {
+     "did": "did:plc:so5r7asbd26pmnnoerksklor",
+     "handle": "meredithmeredith.bsky.social",
+     "displayName": "Meredith Whittaker ",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-01T20:26:04.861Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3luxqj372s325",
+        "isValid": true,
+        "createdAt": "2025-07-27T18:48:13.693Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-20T10:15:17.509Z",
+     "embed": {
+      "$type": "app.bsky.embed.record",
+      "record": {
+       "cid": "bafyreifkql5r32lpqq2skpvui4wkibqaz2qsha5h7cspgkxd6mjn2fwg5i",
+       "uri": "at://did:plc:tovhrfml47r6u4idaitaxefk/app.bsky.feed.post/3n2qboicngk2z"
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "AI agents in the OS, capturing sensitive data from apps like Signal, present an existential threat to privacy \n\nSadly, OS vendors are integrating agents recklessly, w/o giving Signal and other apps good ways to block AI data access and protect you \n\nSo, we're doing what we can w/ the tools we have👇"
+    },
+    "embed": {
+     "record": {
+      "uri": "at://did:plc:tovhrfml47r6u4idaitaxefk/app.bsky.feed.post/3n2qboicngk2z",
+      "cid": "bafyreifkql5r32lpqq2skpvui4wkibqaz2qsha5h7cspgkxd6mjn2fwg5i",
+      "author": {
+       "did": "did:plc:tovhrfml47r6u4idaitaxefk",
+       "handle": "signal.org",
+       "displayName": "Signal",
+       "associated": {
+        "activitySubscription": {
+         "allowSubscriptions": "followers"
+        }
+       },
+       "createdAt": "2023-05-19T20:52:56.532Z",
+       "verification": {
+        "verifications": [
+         {
+          "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+          "issuerDisplayName": "Bluesky",
+          "issuerHandle": "bsky.app",
+          "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mdlzr5a54y26",
+          "isValid": true,
+          "createdAt": "2026-01-30T00:19:45.415Z"
+         }
+        ],
+        "verifiedStatus": "valid",
+        "trustedVerifierStatus": "none"
+       }
+      },
+      "value": {
+       "$type": "app.bsky.feed.post",
+       "createdAt": "2026-11-20T09:31:33.019Z",
+       "embed": {
+        "$type": "app.bsky.embed.external",
+        "external": {
+         "description": "Privacy is our mission; it’s why we exist, and we do everything we can to protect it. This means that we are restricting the latest AI agents built into mobile operating systems from potentially captu...",
+         "thumb": {
+          "$type": "blob",
+          "ref": {
+           "$link": "bafkreigtpsf263ucqrkownqvqhwbe47akrvk6hhbjahtmggyge35jzp5hu"
+          },
+          "mimeType": "image/jpeg",
+          "size": 183847
+         },
+         "title": "Signal is Serious About Protecting Your Privacy",
+         "uri": "https://signal.org/blog/protecting-your-privacy/"
+        }
+       },
+       "facets": [
+        {
+         "features": [
+          {
+           "$type": "app.bsky.richtext.facet#link",
+           "uri": "https://signal.org/blog/protecting-your-privacy/"
+          }
+         ],
+         "index": {
+          "byteEnd": 264,
+          "byteStart": 238
+         }
+        }
+       ],
+       "langs": [
+        "en"
+       ],
+       "text": "In order to protect your privacy in Signal from the latest agentic AI assistants on mobile operating systems, we are rolling out a new default to restrict screenshots in the Signal app. \n\nYou can re-enable screenshots in your settings. \n\nsignal.org/blog/protect..."
+      },
+      "likeCount": 1171,
+      "replyCount": 31,
+      "repostCount": 349,
+      "quoteCount": 50,
+      "indexedAt": "2026-11-20T09:31:35.748Z",
+      "embeds": [
+       {
+        "external": {
+         "uri": "https://signal.org/blog/protecting-your-privacy/",
+         "title": "Signal is Serious About Protecting Your Privacy",
+         "description": "Privacy is our mission; it’s why we exist, and we do everything we can to protect it. This means that we are restricting the latest AI agents built into mobile operating systems from potentially captu...",
+         "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:tovhrfml47r6u4idaitaxefk/bafkreigtpsf263ucqrkownqvqhwbe47akrvk6hhbjahtmggyge35jzp5hu"
+        },
+        "$type": "app.bsky.embed.external#view"
+       }
+      ],
+      "$type": "app.bsky.embed.record#viewRecord"
+     },
+     "$type": "app.bsky.embed.record#view"
+    },
+    "bookmarkCount": 79,
+    "replyCount": 37,
+    "repostCount": 474,
+    "likeCount": 1149,
+    "quoteCount": 17,
+    "indexedAt": "2026-11-20T10:15:18.445Z"
+   }
+  },
+  {
+   "post": {
+    "uri": "at://did:plc:32lvgu3krzhhw3h6k3pme72r/app.bsky.feed.post/3n2lgskl4r22m",
+    "cid": "bafyreic7shzgc4fmaiv5r763qtcjomfdpqyyfigpnlzxjz5cqpww5dpw3q",
+    "author": {
+     "did": "did:plc:32lvgu3krzhhw3h6k3pme72r",
+     "handle": "alexisgoldstein.bsky.social",
+     "displayName": "Alexis Goldstein",
+     "associated": {
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2025-01-06T06:34:21.943Z"
+    },
+    "record": {
+     "$type": "app.bsky.feed.post",
+     "createdAt": "2026-11-18T11:19:59.620Z",
+     "embed": {
+      "$type": "app.bsky.embed.record",
+      "record": {
+       "cid": "bafyreiejp7byfrdzypasbxzvbx4ztsiisjkewztjiobapp43uywtvggxgi",
+       "uri": "at://did:plc:so5r7asbd26pmnnoerksklor/app.bsky.feed.post/3lyfnd2ivy22a"
+      }
+     },
+     "langs": [
+      "en"
+     ],
+     "text": "One year ago, the President of Signal warned AI agents could “lead to an elimination of privacy and security” for software.\n\nSystemic issues (cyber threats, financial crises) have flare gun-bright warning signs (privacy intrusion, predatory lending) identified early by experts. \n\nWe should listen!"
+    },
+    "embed": {
+     "record": {
+      "uri": "at://did:plc:so5r7asbd26pmnnoerksklor/app.bsky.feed.post/3lyfnd2ivy22a",
+      "cid": "bafyreiejp7byfrdzypasbxzvbx4ztsiisjkewztjiobapp43uywtvggxgi",
+      "author": {
+       "did": "did:plc:so5r7asbd26pmnnoerksklor",
+       "handle": "meredithmeredith.bsky.social",
+       "displayName": "Meredith Whittaker ",
+       "associated": {
+        "chat": {
+         "allowIncoming": "none",
+         "allowGroupInvites": "none"
+        },
+        "activitySubscription": {
+         "allowSubscriptions": "followers"
+        }
+       },
+       "createdAt": "2023-05-01T20:26:04.861Z",
+       "verification": {
+        "verifications": [
+         {
+          "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+          "issuerDisplayName": "Bluesky",
+          "issuerHandle": "bsky.app",
+          "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3luxqj372s325",
+          "isValid": true,
+          "createdAt": "2025-07-27T18:48:13.693Z"
+         }
+        ],
+        "verifiedStatus": "valid",
+        "trustedVerifierStatus": "none"
+       }
+      },
+      "value": {
+       "$type": "app.bsky.feed.post",
+       "createdAt": "2025-09-09T11:44:01.879Z",
+       "embed": {
+        "$type": "app.bsky.embed.images",
+        "images": [
+         {
+          "alt": "An illustration of me, and the headline: \"AI agents are coming for your privacy, warns Meredith Whittaker\nThe Signal Foundation’s president worries they will also blunt competition and undermine cyber-security\"",
+          "aspectRatio": {
+           "height": 1124,
+           "width": 1132
+          },
+          "image": {
+           "$type": "blob",
+           "ref": {
+            "$link": "bafkreic4holzvsgt5inneup5ueegfz4rr32vp4zjjrcqckwnf7uc46ikzq"
+           },
+           "mimeType": "image/jpeg",
+           "size": 389287
+          }
+         },
+         {
+          "alt": "To put it bluntly, the path currently being taken towards agentic AI leads to an elimination of privacy and security at the application layer. It will not be possible for apps like Signal—the messaging app whose foundation I run—to continue to provide strong privacy guarantees, built on robust and openly validated encryption, if device-makers and OS developers insist on puncturing the metaphoric blood-brain barrier between apps and the OS. Feeding your sensitive Signal messages into an undiffere…",
+          "aspectRatio": {
+           "height": 544,
+           "width": 1426
+          },
+          "image": {
+           "$type": "blob",
+           "ref": {
+            "$link": "bafkreidk3chzon5tznmfywf42a75loemyovisuizxoiakf3wnumu5jblx4"
+           },
+           "mimeType": "image/jpeg",
+           "size": 343183
+          }
+         },
+         {
+          "alt": "Happily, it’s not too late. There is much that can still be done, particularly when it comes to protecting the sanctity of private data. What’s needed is a fundamental shift in how we approach the development and deployment of AI agents. First, privacy must be the default, and control must remain in the hands of application developers exercising agency on behalf of their users. Developers need the ability to designate applications as “sensitive” and mark them as off-limits to agents, at the OS l…",
+          "aspectRatio": {
+           "height": 652,
+           "width": 1094
+          },
+          "image": {
+           "$type": "blob",
+           "ref": {
+            "$link": "bafkreicupsixxona5p5xvdw4ezxk6372tbfi276s26swx6bb5n4bcjrhkq"
+           },
+           "mimeType": "image/jpeg",
+           "size": 328245
+          }
+         }
+        ]
+       },
+       "facets": [
+        {
+         "features": [
+          {
+           "$type": "app.bsky.richtext.facet#link",
+           "uri": "https://www.economist.com/by-invitation/2025/09/09/ai-agents-are-coming-for-your-privacy-warns-meredith-whittaker?giftId=859d3a46-a913-4ee0-a3d5-060b774c2501&utm_campaign=gifted_article"
+          }
+         ],
+         "index": {
+          "byteEnd": 202,
+          "byteStart": 169
+         }
+        }
+       ],
+       "langs": [
+        "en"
+       ],
+       "text": "📣 NEW -- In The Economist, discussing the privacy perils of AI agents and what AI companies and operating systems need to do--NOW--to protect Signal and much else! \n\nwww.economist.com/by-invitatio..."
+      },
+      "likeCount": 887,
+      "replyCount": 11,
+      "repostCount": 288,
+      "quoteCount": 32,
+      "indexedAt": "2025-09-09T11:44:06.016Z",
+      "embeds": [
+       {
+        "images": [
+         {
+          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:so5r7asbd26pmnnoerksklor/bafkreic4holzvsgt5inneup5ueegfz4rr32vp4zjjrcqckwnf7uc46ikzq",
+          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:so5r7asbd26pmnnoerksklor/bafkreic4holzvsgt5inneup5ueegfz4rr32vp4zjjrcqckwnf7uc46ikzq",
+          "alt": "An illustration of me, and the headline: \"AI agents are coming for your privacy, warns Meredith Whittaker\nThe Signal Foundation’s president worries they will also blunt competition and undermine cyber-security\"",
+          "aspectRatio": {
+           "height": 1124,
+           "width": 1132
+          }
+         },
+         {
+          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:so5r7asbd26pmnnoerksklor/bafkreidk3chzon5tznmfywf42a75loemyovisuizxoiakf3wnumu5jblx4",
+          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:so5r7asbd26pmnnoerksklor/bafkreidk3chzon5tznmfywf42a75loemyovisuizxoiakf3wnumu5jblx4",
+          "alt": "To put it bluntly, the path currently being taken towards agentic AI leads to an elimination of privacy and security at the application layer. It will not be possible for apps like Signal—the messaging app whose foundation I run—to continue to provide strong privacy guarantees, built on robust and openly validated encryption, if device-makers and OS developers insist on puncturing the metaphoric blood-brain barrier between apps and the OS. Feeding your sensitive Signal messages into an undiffere…",
+          "aspectRatio": {
+           "height": 544,
+           "width": 1426
+          }
+         },
+         {
+          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:so5r7asbd26pmnnoerksklor/bafkreicupsixxona5p5xvdw4ezxk6372tbfi276s26swx6bb5n4bcjrhkq",
+          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:so5r7asbd26pmnnoerksklor/bafkreicupsixxona5p5xvdw4ezxk6372tbfi276s26swx6bb5n4bcjrhkq",
+          "alt": "Happily, it’s not too late. There is much that can still be done, particularly when it comes to protecting the sanctity of private data. What’s needed is a fundamental shift in how we approach the development and deployment of AI agents. First, privacy must be the default, and control must remain in the hands of application developers exercising agency on behalf of their users. Developers need the ability to designate applications as “sensitive” and mark them as off-limits to agents, at the OS l…",
+          "aspectRatio": {
+           "height": 652,
+           "width": 1094
+          }
+         }
+        ],
+        "$type": "app.bsky.embed.images#view"
+       }
+      ],
+      "$type": "app.bsky.embed.record#viewRecord"
+     },
+     "$type": "app.bsky.embed.record#view"
+    },
+    "bookmarkCount": 16,
+    "replyCount": 1,
+    "repostCount": 36,
+    "likeCount": 118,
+    "quoteCount": 0,
+    "indexedAt": "2026-11-18T11:19:59.843Z"
+   },
+   "reason": {
+    "by": {
+     "did": "did:plc:so5r7asbd26pmnnoerksklor",
+     "handle": "meredithmeredith.bsky.social",
+     "displayName": "Meredith Whittaker ",
+     "associated": {
+      "chat": {
+       "allowIncoming": "none",
+       "allowGroupInvites": "none"
+      },
+      "activitySubscription": {
+       "allowSubscriptions": "followers"
+      }
+     },
+     "createdAt": "2023-05-01T20:26:04.861Z",
+     "verification": {
+      "verifications": [
+       {
+        "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "issuerDisplayName": "Bluesky",
+        "issuerHandle": "bsky.app",
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3luxqj372s325",
+        "isValid": true,
+        "createdAt": "2025-07-27T18:48:13.693Z"
+       }
+      ],
+      "verifiedStatus": "valid",
+      "trustedVerifierStatus": "none"
+     }
+    },
+    "uri": "at://did:plc:so5r7asbd26pmnnoerksklor/app.bsky.feed.repost/3n2lox4yice2v",
+    "cid": "bafyreihwladsqiq4rkrdky4nkq5rx2pnaulictc36lnspfmvobejv4frba",
+    "indexedAt": "2026-11-18T13:45:43.150Z",
+    "$type": "app.bsky.feed.defs#reasonRepost"
+   }
+  }
+ ],
+ "cursor": "2026-07-29T18:43:10.279Z"
+}

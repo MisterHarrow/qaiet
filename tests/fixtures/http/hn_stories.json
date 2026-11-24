@@ -1,0 +1,172 @@
+{
+ "exhaustive": {
+  "nbHits": true,
+  "typo": true
+ },
+ "exhaustiveNbHits": true,
+ "exhaustiveTypo": true,
+ "hits": [
+  {
+   "_tags": [
+    "story",
+    "author_petrosagg",
+    "story_50624929"
+   ],
+   "author": "petrosagg",
+   "children": [
+    50625175,
+    50625118,
+    50625143,
+    50625146
+   ],
+   "created_at": "2026-11-24T07:38:50Z",
+   "created_at_i": 1795505930,
+   "num_comments": 6,
+   "objectID": "50624929",
+   "points": 22,
+   "story_id": 50624929,
+   "title": "VP ≠ VNP over Every Field [pdf]",
+   "updated_at": "2026-11-24T08:19:52Z",
+   "url": "https://github.com/anthropics/formal-math/blob/vp-vnp/vp-vnp/paper.pdf"
+  },
+  {
+   "_tags": [
+    "story",
+    "author_thisislife2",
+    "story_50624487",
+    "front_page"
+   ],
+   "author": "thisislife2",
+   "children": [
+    50624772,
+    50624719,
+    50624792,
+    50624884,
+    50624701,
+    50624761,
+    50624869,
+    50624687,
+    50625091,
+    50624748,
+    50624738,
+    50624635
+   ],
+   "created_at": "2026-11-24T06:28:04Z",
+   "created_at_i": 1795501684,
+   "num_comments": 67,
+   "objectID": "50624487",
+   "points": 192,
+   "story_id": 50624487,
+   "title": "India's opposition storms Meta's offices to get its Instagram accounts back",
+   "updated_at": "2026-11-24T08:19:52Z",
+   "url": "https://korben.info/en/india-opposition-storms-meta-offices-instagram-accounts.html"
+  },
+  {
+   "_tags": [
+    "story",
+    "author_zdw",
+    "story_50624061",
+    "front_page"
+   ],
+   "author": "zdw",
+   "children": [
+    50624803,
+    50624757,
+    50624806,
+    50624784,
+    50625115
+   ],
+   "created_at": "2026-11-24T05:15:22Z",
+   "created_at_i": 1795497322,
+   "num_comments": 10,
+   "objectID": "50624061",
+   "points": 41,
+   "story_id": 50624061,
+   "title": "AMD EPYC Zen 6 vs. Zen 1 Performance: 12.1x Geo Mean in Less Than 10 Years",
+   "updated_at": "2026-11-24T08:16:07Z",
+   "url": "https://www.phoronix.com/review/amd-epyc-9006-7601"
+  },
+  {
+   "_tags": [
+    "story",
+    "author_uptrails",
+    "story_50623515",
+    "front_page"
+   ],
+   "author": "uptrails",
+   "children": [
+    50624879,
+    50625139,
+    50624485,
+    50624796,
+    50623816,
+    50624892,
+    50623778,
+    50624221,
+    50623967,
+    50624083
+   ],
+   "created_at": "2026-11-24T04:00:28Z",
+   "created_at_i": 1795492828,
+   "num_comments": 24,
+   "objectID": "50623515",
+   "points": 64,
+   "story_id": 50623515,
+   "title": "Drone Maps of Salvage Yards",
+   "updated_at": "2026-11-24T08:18:04Z",
+   "url": "https://salvageyarddrone.wordpress.com/"
+  },
+  {
+   "_tags": [
+    "story",
+    "author_andai",
+    "story_50622934",
+    "front_page"
+   ],
+   "author": "andai",
+   "children": [
+    50624032,
+    50624681,
+    50623941,
+    50623666,
+    50624954,
+    50624212,
+    50623674,
+    50623850,
+    50623840
+   ],
+   "created_at": "2026-11-24T02:46:54Z",
+   "created_at_i": 1795488414,
+   "num_comments": 19,
+   "objectID": "50622934",
+   "points": 61,
+   "story_id": 50622934,
+   "title": "Making a dumb TV just smart enough",
+   "updated_at": "2026-11-24T08:19:52Z",
+   "url": "https://qsantos.fr/2026/11/19/making-a-dumb-tv-just-smart-enough/"
+  }
+ ],
+ "hitsPerPage": 500,
+ "nbHits": 135,
+ "nbPages": 1,
+ "page": 0,
+ "params": "tags=story&numericFilters=created_at_i%3E1795335576%2Cpoints%3E%3D20&hitsPerPage=500&advancedSyntax=true&analyticsTags=backend",
+ "processingTimeMS": 2,
+ "processingTimingsMS": {
+  "_request": {
+   "roundTrip": 22
+  },
+  "afterFetch": {
+   "format": {
+    "highlighting": 2,
+    "total": 3
+   }
+  },
+  "fetch": {
+   "total": 1
+  },
+  "total": 2
+ },
+ "query": "",
+ "serverTimeMS": 6
+}

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	xmlns:dcterms="http://purl.org/dc/terms/"
+		xmlns:media="http://search.yahoo.com/mrss/"
+	>
+
+<channel>
+	<title>Latest Technology News | New York Post</title>
+	<atom:link href="https://nypost.com/tech/feed/" rel="self" type="application/rss+xml" />
+	<link>https://nypost.com</link>
+	<description>Your source for breaking news, news about New York, sports, business, entertainment, opinion, real estate, culture, fashion, and more.</description>
+	<lastBuildDate>Tue, 24 Nov 2026 03:34:28 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.8.13</generator>
+<site xmlns="com-wordpress:feed-additions:1">163456144</site>		<item>
+		<title>Silicon Valley&#8217;s &#8216;perfect baby&#8217; race now includes screening embryos for autism: &#8216;There&#8217;s a lot of autism in Silicon Valley&#8217;</title>
+		<comments>https://nypost.com/2026/11/23/tech/silicon-valleys-startup-screening-embryos-for-autism/#respond</comments>
+		<pubDate>Mon, 23 Nov 2026 19:04:03 -0500</pubDate>
+		<dcterms:modified>2026-11-23T22:34:21-05:00</dcterms:modified>
+						<link>https://nypost.com/2026/11/23/tech/silicon-valleys-startup-screening-embryos-for-autism/</link>
+			<dc:creator>Vivi Lin</dc:creator>
+		
+		<guid isPermaLink="false">https://nypost.com/?post_type=article&#038;p=42022529</guid>
+												<description><![CDATA[Last month, the embryo-testing startup Herasight launched NeuroRisk, a test it calls the first to screen embryos for autism and schizophrenia.]]></description>
+			
+								<enclosure url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fnewspress-collage-s1dg1cxz1-1795478588378.jpg?quality%3D90%26strip%3Dall%261795460630"
+						type="image/jpeg"
+						length="256258"
+					/>
+							<slash:comments>0</slash:comments>
+			<post-id xmlns="com-wordpress:feed-additions:1">42022529</post-id>
+		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fherasight-past-clients-babies-149849032.jpg?w%3D1024" medium="image">
+			<media:title type="html">Smiling baby lying on a pink and yellow blanket.</media:title>
+		</media:content>
+
+		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fcourtesy-photos-herasights-durham-north-149857526.jpg?w%3D1024" medium="image">
+			<media:title type="html">Jennifer Swift works in the lab in Durham, N.C.</media:title>
+		</media:content>
+
+		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fowner-elon-musk-holds-one-149828084.jpg?w%3D1024" medium="image">
+			<media:title type="html">Elon Musk carries one of his children on his shoulders while arriving at the Atreju event in Rome, Italy.</media:title>
+		</media:content>
+
+		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fwalter-isaacson-shares-photo-elon-30774014.jpg" medium="image">
+			<media:title type="html">Elon Musk and a toddler look at a humanoid robot suspended by cables, surrounded by engineers in a workshop.</media:title>
+		</media:content>
+
+		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fherasight-anomaly-lecture-jonathan-anomaly-149830206.jpg" medium="image">
+			<media:title type="html">Jonathan Anomaly delivers a lecture.</media:title>
+		</media:content>
+
+		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fcourtesy-photos-herasights-durham-north-149857523.jpg?w%3D1024" medium="image">
+			<media:title type="html">A lab technician analyzes embryo data at the Herasight lab in Durham, N.C.</media:title>
+		</media:content>
+
+		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fherasight-spencer-luciana-149830208.jpg" medium="image">
+			<media:title type="html">Spencer and Luciana smiling at each other outdoors.</media:title>
+		</media:content>
+
+		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fvictoria-fritz-husband-149830213.jpg?w%3D671" medium="image">
+			<media:title type="html">Victoria Fritz with husband in a park with a dog.</media:title>
+		</media:content>
+
+		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fherasight-past-clients-babies-149849037.jpg?w%3D764" medium="image">
+			<media:title type="html">A newborn baby wearing a striped hat and swaddled in a striped blanket smiles with eyes closed.</media:title>
+		</media:content>
+	</item>
+				<item>
+		<title>I interview people for a living, and this tiny AI note taker is my secret weapon — now 20% off</title>
+		<comments>https://nypost.com/2026/11/23/shopping/plaud-ai-note-takers-are-20-off-for-black-friday/#respond</comments>
+		<pubDate>Mon, 23 Nov 2026 16:33:41 -0500</pubDate>
+		<dcterms:modified>2026-11-23T16:33:51-05:00</dcterms:modified>
+						<link>https://nypost.com/2026/11/23/shopping/plaud-ai-note-takers-are-20-off-for-black-friday/</link>
+			<dc:creator>Nishka Dhawan</dc:creator>
+		
+		<guid isPermaLink="false">https://nypost.com/?post_type=article&#038;p=42070942</guid>
+												<description><![CDATA[Note-taking made easy.]]></description>
+			
+								<enclosure url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2F2000_1333-Note-Pro-1.png"
+						type="image/png"
+						length="5285623"
+					/>
+							<slash:comments>0</slash:comments>
+			<post-id xmlns="com-wordpress:feed-additions:1">42070942</post-id>
+		<media:thumbnail url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2F2000_1333-Note-Pro-1.png" />
+		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2F2000_1333-Note-Pro-1.png" medium="image">
+			<media:title type="html">Plaud</media:title>
+		</media:content>
+
+		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2FNotePin-S.png?w%3D1024" medium="image">
+			<media:title type="html">NotePin S device in gray.</media:title>
+		</media:content>
+
+		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2FNotePro.png?w%3D1024" medium="image">
+			<media:title type="html">NotePro device with the PLAUD logo.</media:title>
+		</media:content>
+	</item>
+				<item>
+		<title>Elizabeth Warren, lawmakers slam Nvidia&#8217;s &#8216;reckless&#8217; decision to reinstate Jensen Huang</title>
+		<comments>https://nypost.com/2026/11/23/business/elizabeth-warren-lawmakers-slam-nvidias-reckless-decision-to-reinstate-jensen-huang/#respond</comments>
+		<pubDate>Mon, 23 Nov 2026 11:27:29 -0500</pubDate>
+		<dcterms:modified>2026-11-23T14:53:24-05:00</dcterms:modified>
+						<link>https://nypost.com/2026/11/23/business/elizabeth-warren-lawmakers-slam-nvidias-reckless-decision-to-reinstate-jensen-huang/</link>
+			<dc:creator>Reuters</dc:creator>
+		
+		<guid isPermaLink="false">https://nypost.com/?post_type=article&#038;p=42060353</guid>
+												<description><![CDATA[Warren was joined by lawmakers on both sides of the aisle who criticized the move.]]></description>
+			
+								<enclosure url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Felizabeth-warren-jensen-huang.jpg?quality%3D90%26strip%3Dall%261795431234"
+						type="image/jpeg"
+						length="287338"
+					/>
+							<slash:comments>0</slash:comments>
+			<post-id xmlns="com-wordpress:feed-additions:1">42060353</post-id>
+		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fattends-senate-committee-armed-services-149104511.jpg?w%3D1024" medium="image">
+			<media:title type="html">U.S. Senator Elizabeth Warren attends a Senate Armed Services Committee hearing on Capitol Hill.</media:title>
+		</media:content>
+
+		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fd-ny-speaks-press-conference-149418494_8e66bd.jpg?w%3D1024" medium="image">
+			<media:title type="html">Senate Minority Leader Chuck Schumer speaks at a press conference at the U.S. Capitol.</media:title>
+		</media:content>
+
+		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2F2026-nvidia-november-23-reinstated-149816382.jpg?w%3D1024" medium="image">
+			<media:title type="html">Nvidia CEO Jensen Huang giving a thumbs up at a press conference with Fujitsu in Tokyo.</media:title>
+		</media:content>
+	</item>
+				<item>
+		<title>Why tech outages could be the new normal for months across the US</title>
+		<comments>https://nypost.com/2026/11/22/us-news/why-tech-outages-could-be-the-new-normal-for-months/#respond</comments>
+		<pubDate>Sun, 22 Nov 2026 15:14:31 -0500</pubDate>
+		<dcterms:modified>2026-11-22T15:35:01-05:00</dcterms:modified>
+						<link>https://nypost.com/2026/11/22/us-news/why-tech-outages-could-be-the-new-normal-for-months/</link>
+			<dc:creator>Alex Mitchell</dc:creator>
+		
+		<guid isPermaLink="false">https://nypost.com/?post_type=article&#038;p=41980065</guid>
+												<description><![CDATA[“In many cases, you’ve got AI-powered humans that are on offense, and you have traditional software-powered humans that are playing defense."]]></description>
+			
+								<enclosure url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2FOutages.jpg?quality%3D90%26strip%3Dall"
+						type="image/jpeg"
+						length="543786"
+					/>
+							<slash:comments>0</slash:comments>
+			<post-id xmlns="com-wordpress:feed-additions:1">41980065</post-id>
+		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2F2304612484.jpg?w%3D1024" medium="image">
+			<media:title type="html">Cyber experts fear that America&#039;s recent tech problems may be setting up a future, larger attack. The LaGuardia Airport departure board is shown one day after the FAA&#039;s historic ground stop on Nov. 13.</media:title>
+		</media:content>
+
+		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fshutterstock_editorial_Microsoft_outage_disrupts_UK_s_17274859h.jpg?w%3D1024" medium="image">
+			<media:title type="html">Some experts expect outages to continue for months.</media:title>
+		</media:content>
+
+		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2F2304593499.jpg?w%3D1024" medium="image">
+			<media:title type="html">US Transportation Secretary Sean Duffy (R) speaks alongside FAA Administrator Bryan Bedford (L) after the Nov. 13 ground stop.</media:title>
+		</media:content>
+
+		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2FAdobeStock_1055759939.jpg?w%3D1024" medium="image">
+			<media:title type="html">A person holding a smartphone surrounded by digital graphics of a red warning triangle, padlocks, and binary code, representing a cyberattack.</media:title>
+		</media:content>
+
+		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2F2304608447.jpg?w%3D1024" medium="image">
+			<media:title type="html">Air travel has been tremendously impacted by the outages. Seen is a lengthy line at Chicago O&#039;Hare International Airport.</media:title>
+		</media:content>
+	</item>
+				<item>
+		<title>Scientist warns officials against dismissing mystery object in solar system after mission is scrubbed</title>
+		<comments>https://nypost.com/2026/11/22/tech/mystery-object-in-solar-system-should-not-be-ignored-scientists-warn/#respond</comments>
+		<pubDate>Sun, 22 Nov 2026 12:12:58 -0500</pubDate>
+		<dcterms:modified>2026-11-22T12:13:02-05:00</dcterms:modified>
+						<link>https://nypost.com/2026/11/22/tech/mystery-object-in-solar-system-should-not-be-ignored-scientists-warn/</link>
+			<dc:creator>Fox News</dc:creator>
+		
+		<guid isPermaLink="false">https://nypost.com/?post_type=article&#038;p=42043374</guid>
+												<description><![CDATA[The Harvard astrophysicist claims the object may be a lost Soviet probe Phobos 1, not a natural asteroid]]></description>
+			
+								<enclosure url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2F149736652.jpg?quality%3D90%26strip%3Dall"
+						type="image/jpeg"
+						length="645624"
+					/>
+							<slash:comments>0</slash:comments>
+			<post-id xmlns="com-wordpress:feed-additions:1">42043374</post-id>
+		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Flarge-asteroid-closing-earth-large-148981446_195c2c.jpg?w%3D1024" medium="image">
+			<media:title type="html">Illustration of a large asteroid closing in on Earth.</media:title>
+		</media:content>
+
+		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Favi-loeb-frank-b-baird-148857584_985807.jpg?w%3D683" medium="image">
+			<media:title type="html">Avi Loeb speaks at the SALT conference in Manhattan, New York.</media:title>
+		</media:content>
+
+		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fabraham-avi-loeb-harvard-university-148857490.jpg?w%3D1024" medium="image">
+			<media:title type="html">Harvard astrophysicist Abraham &#039;Avi&#039; Loeb sits in a chair in his home office, smiling at the camera.</media:title>
+		</media:content>
+
+		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fasteroid-1998-149736562.jpg?w%3D1024" medium="image">
+			<media:title type="html">Asteroid 1998 KY26 against a black background.</media:title>
+		</media:content>
+	</item>
+			</channel>
+</rss>

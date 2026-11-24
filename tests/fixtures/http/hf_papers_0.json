@@ -1,0 +1,569 @@
+[
+ {
+  "paper": {
+   "id": "2611.29897",
+   "authors": [
+    {
+     "_id": "6b051f8ce7a4376c42cc8ed1",
+     "name": "Yue Huang",
+     "hidden": false
+    },
+    {
+     "_id": "6b051f8ce7a4376c42cc8ed2",
+     "name": "Tianshan Zhang",
+     "hidden": false
+    },
+    {
+     "_id": "6b051f8ce7a4376c42cc8ed3",
+     "name": "Zeyu Zhang",
+     "hidden": false
+    },
+    {
+     "_id": "6b051f8ce7a4376c42cc8ed4",
+     "name": "Jayeon Kang",
+     "hidden": false
+    },
+    {
+     "_id": "6b051f8ce7a4376c42cc8ed5",
+     "name": "Akide Liu",
+     "hidden": false
+    },
+    {
+     "_id": "6b051f8ce7a4376c42cc8ed6",
+     "name": "Sungjoon Choi",
+     "hidden": false
+    },
+    {
+     "_id": "6b051f8ce7a4376c42cc8ed7",
+     "name": "Dacheng Tao",
+     "hidden": false
+    },
+    {
+     "_id": "6b051f8ce7a4376c42cc8ed8",
+     "name": "Hao Tang",
+     "hidden": false
+    }
+   ],
+   "publishedAt": "2026-11-23T00:00:00.000Z",
+   "submittedOnDailyAt": "2026-11-24T00:00:00.000Z",
+   "title": "Motion Mamba 2.0: Autoregressive Diffusion Mamba for Long-Horizon Humanoid Control",
+   "summary": "Long-horizon, real-time controllable motion generation is essential for interactive animation and humanoid robotics, where an agent must respond to changing instructions and spatial goals while moving. Existing autoregressive diffusion methods generate motion incrementally, but bounded attention caches limit access to distant history, while repeated denoising introduces substantial inference overhead. We present Motion Mamba 2.0, a Mamba-based root-body diffusion architecture that integrates loc…",
+   "upvotes": 86,
+   "discussionId": "6b051f8ce7a4376c42cc8ed9",
+   "projectPage": "https://aigeeksgroup.github.io/MotionMamba2.0/",
+   "githubRepo": "https://github.com/AIGeeksGroup/MotionMamba2.0",
+   "githubRepoAddedBy": "user",
+   "githubStars": 3,
+   "organization": {
+    "_id": "61dcd8e344f59573371b5cb6",
+    "name": "PekingUniversity",
+    "fullname": "Peking University"
+   }
+  },
+  "publishedAt": "2026-11-22T19:00:00.000Z",
+  "title": "Motion Mamba 2.0: Autoregressive Diffusion Mamba for Long-Horizon Humanoid Control",
+  "summary": "Long-horizon, real-time controllable motion generation is essential for interactive animation and humanoid robotics, where an agent must respond to changing instructions and spatial goals while moving. Existing autoregressive diffusion methods generate motion incrementally, but bounded attention caches limit access to distant history, while repeated denoising introduces substantial inference overhead. We present Motion Mamba 2.0, a Mamba-based root-body diffusion architecture that integrates loc…",
+  "numComments": 2,
+  "submittedBy": {
+   "_id": "64ec877bb93654d4ca5c92e9",
+   "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/64ec877bb93654d4ca5c92e9/Tj6F58adBU7n1uUC8qwQH.jpeg",
+   "fullname": "Zeyu Zhang",
+   "name": "SteveZeyuZhang",
+   "type": "user",
+   "isPro": true,
+   "isHf": false,
+   "isHfAdmin": false,
+   "isMod": false,
+   "followerCount": 17,
+   "isUserFollowing": false
+  },
+  "organization": {
+   "_id": "61dcd8e344f59573371b5cb6",
+   "name": "PekingUniversity",
+   "fullname": "Peking University"
+  },
+  "isAuthorParticipating": false
+ },
+ {
+  "paper": {
+   "id": "2611.30013",
+   "authors": [
+    {
+     "_id": "6b0520e4e7a4376c42cc8ef0",
+     "name": "Bohan Zeng",
+     "hidden": false
+    },
+    {
+     "_id": "6b0520e4e7a4376c42cc8ef1",
+     "name": "Kaixin Zhu",
+     "hidden": false
+    },
+    {
+     "_id": "6b0520e4e7a4376c42cc8ef2",
+     "name": "Yifan Yang",
+     "hidden": false
+    },
+    {
+     "_id": "6b0520e4e7a4376c42cc8ef3",
+     "name": "Dongge Yu",
+     "hidden": false
+    },
+    {
+     "_id": "6b0520e4e7a4376c42cc8ef4",
+     "name": "Zihao Wu",
+     "hidden": false
+    },
+    {
+     "_id": "6b0520e4e7a4376c42cc8ef5",
+     "name": "Yifan Dai",
+     "hidden": false
+    },
+    {
+     "_id": "6b0520e4e7a4376c42cc8ef6",
+     "name": "Zhou Liu",
+     "hidden": false
+    },
+    {
+     "_id": "6b0520e4e7a4376c42cc8ef7",
+     "name": "Junbo Niu",
+     "hidden": false
+    },
+    {
+     "_id": "6b0520e4e7a4376c42cc8ef8",
+     "name": "Xiaochen Ma",
+     "hidden": false
+    },
+    {
+     "_id": "6b0520e4e7a4376c42cc8ef9",
+     "name": "Shiran Ge",
+     "hidden": false
+    },
+    {
+     "_id": "6b0520e4e7a4376c42cc8efa",
+     "name": "Zimo Meng",
+     "hidden": false
+    },
+    {
+     "_id": "6b0520e4e7a4376c42cc8efb",
+     "name": "Junzhu Liang",
+     "hidden": false
+    },
+    {
+     "_id": "6b0520e4e7a4376c42cc8efc",
+     "name": "Huanyao Zhang",
+     "hidden": false
+    },
+    {
+     "_id": "6b0520e4e7a4376c42cc8efd",
+     "name": "Jinhang Liu",
+     "hidden": false
+    },
+    {
+     "_id": "6b0520e4e7a4376c42cc8efe",
+     "name": "Tianqi Xiao",
+     "hidden": false
+    },
+    {
+     "_id": "6b0520e4e7a4376c42cc8eff",
+     "name": "Jinhao Zhang",
+     "hidden": false
+    },
+    {
+     "_id": "6b0520e4e7a4376c42cc8f00",
+     "name": "Tianyi Bai",
+     "hidden": false
+    },
+    {
+     "_id": "6b0520e4e7a4376c42cc8f01",
+     "name": "Zhixiong Zeng",
+     "hidden": false
+    },
+    {
+     "_id": "6b0520e4e7a4376c42cc8f02",
+     "name": "Penghao Zhao",
+     "hidden": false
+    },
+    {
+     "_id": "6b0520e4e7a4376c42cc8f03",
+     "name": "Yuanbo Peng",
+     "hidden": false
+    }
+   ],
+   "publishedAt": "2026-11-23T00:00:00.000Z",
+   "submittedOnDailyAt": "2026-11-24T00:00:00.000Z",
+   "title": "3AGameFactory-Motion: Agentic Rigging and Reliable Complex Motion Generation for Diverse 3D Assets",
+   "summary": "Animating arbitrary 3D assets from instructions requires both structural inference and motion control, yet existing motion benchmarks mostly cover conventional human or animal skeletons with simple instructions. We introduce DivDynBench, which evaluates rigging and motion generation across six morphology categories, with instructions requiring multi-phase part coordination and explicit timing, angle, repetition, and trajectory constraints. With large language models, we systematically compare th…",
+   "upvotes": 39,
+   "discussionId": "6b0520e5e7a4376c42cc8f06",
+   "githubRepo": "https://github.com/OpenDCAI/GameFactory-3A",
+   "githubRepoAddedBy": "user",
+   "ai_summary": "A new benchmark evaluates rigging and motion generation across six 3D morphology categories, compares specialized, video-based, and agent-driven paradigms, and proposes an agentic framework that writes compact parametric skeleton and motion programs executed deterministically for reliable control.",
+   "ai_keywords": [
+    "large language models",
+    "motion generation",
+    "rigging",
+    "motion recovery",
+    "agent-driven generation",
+    "Agentic Motion Framework",
+    "parametric skeleton programs",
+    "motion programs",
+    "deterministic executor",
+    "kinematic solving",
+    "geometric correction",
+    "cross-morphology adaptability",
+    "multi-phase part coordination",
+    "trajectory constraints",
+    "3D motion generation"
+   ],
+   "ai_summary_model": "deepseek-ai/DeepSeek-V4.1-Flash",
+   "githubStars": 1352,
+   "organization": {
+    "_id": "61dcd8e344f59573371b5cb6",
+    "name": "PekingUniversity",
+    "fullname": "Peking University"
+   }
+  },
+  "publishedAt": "2026-11-22T19:00:00.000Z",
+  "title": "3AGameFactory-Motion: Agentic Rigging and Reliable Complex Motion Generation for Diverse 3D Assets",
+  "summary": "Animating arbitrary 3D assets from instructions requires both structural inference and motion control, yet existing motion benchmarks mostly cover conventional human or animal skeletons with simple instructions. We introduce DivDynBench, which evaluates rigging and motion generation across six morphology categories, with instructions requiring multi-phase part coordination and explicit timing, angle, repetition, and trajectory constraints. With large language models, we systematically compare th…",
+  "numComments": 1,
+  "submittedBy": {
+   "_id": "6671214c92412fd4640714eb",
+   "avatarUrl": "/avatars/c1556168b703c9b87276fb679d044f61.svg",
+   "fullname": "Bohan Zeng",
+   "name": "zbhpku",
+   "type": "user",
+   "isPro": false,
+   "isHf": false,
+   "isHfAdmin": false,
+   "isMod": false,
+   "followerCount": 16,
+   "isUserFollowing": false
+  },
+  "organization": {
+   "_id": "61dcd8e344f59573371b5cb6",
+   "name": "PekingUniversity",
+   "fullname": "Peking University"
+  },
+  "isAuthorParticipating": false
+ },
+ {
+  "paper": {
+   "id": "2611.28202",
+   "authors": [
+    {
+     "_id": "6b04f981e7a4376c42cc8bf5",
+     "name": "Mark Zhao",
+     "hidden": false
+    },
+    {
+     "_id": "6b04f981e7a4376c42cc8bf6",
+     "name": "Pengcheng Wang",
+     "hidden": false
+    },
+    {
+     "_id": "6b04f981e7a4376c42cc8bf7",
+     "name": "Rui Yang",
+     "hidden": false
+    },
+    {
+     "_id": "6b04f981e7a4376c42cc8bf8",
+     "name": "Jiarui Yao",
+     "hidden": false
+    },
+    {
+     "_id": "6b04f981e7a4376c42cc8bf9",
+     "name": "Xirui Jiang",
+     "hidden": false
+    },
+    {
+     "_id": "6b04f981e7a4376c42cc8bfa",
+     "name": "Yuxi Chen",
+     "hidden": false
+    },
+    {
+     "_id": "6b04f981e7a4376c42cc8bfb",
+     "name": "Bingxuan Li",
+     "hidden": false
+    },
+    {
+     "_id": "6b04f981e7a4376c42cc8bfc",
+     "name": "Hanyang Chen",
+     "hidden": false
+    },
+    {
+     "_id": "6b04f981e7a4376c42cc8bfd",
+     "name": "Ke Yang",
+     "hidden": false
+    },
+    {
+     "_id": "6b04f981e7a4376c42cc8bfe",
+     "name": "Manling Li",
+     "hidden": false
+    },
+    {
+     "_id": "6b04f981e7a4376c42cc8bff",
+     "name": "Tong Zhang",
+     "hidden": false
+    },
+    {
+     "_id": "6b04f981e7a4376c42cc8c00",
+     "name": "Huan Zhang",
+     "hidden": false
+    }
+   ],
+   "publishedAt": "2026-11-20T00:00:00.000Z",
+   "submittedOnDailyAt": "2026-11-24T00:00:00.000Z",
+   "title": "AutoPILOT: A Visual Agent Harness for Real-Time Gameplay",
+   "summary": "Multimodal foundation models can play video games well when the game waits for them, but often fail when it keeps running. We find that much of this gap lies in the harness, which decides what the model sees, what it remembers, and how its outputs become actions over time. Existing harnesses such as VISTA improve the first two, yet turn each model call into at most one action, so the agent acts only as often as its model thinks. We introduce AutoPILOT, which changes the third: in each model call…",
+   "upvotes": 26,
+   "discussionId": "6b04f981e7a4376c42cc8c01",
+   "projectPage": "https://autopilot-harness.github.io/",
+   "ai_summary": "A harness that lets multimodal foundation models emit primitive actions, open-loop macros, or closed-loop controllers improves real-time game performance and reduces API cost.",
+   "ai_keywords": [
+    "multimodal foundation models",
+    "harness",
+    "VISTA",
+    "AutoPILOT",
+    "primitive action",
+    "open-loop macro",
+    "closed-loop controller",
+    "model calls",
+    "real-time games",
+    "AFK-Bench",
+    "GameWorld",
+    "GPT-6.1 Sol",
+    "API cost"
+   ],
+   "ai_summary_model": "deepseek-ai/DeepSeek-V4.1-Flash",
+   "organization": {
+    "_id": "65448bef5b5d9185ba3202b9",
+    "name": "UIUC-CS",
+    "fullname": "University of Illinois at Urbana-Champaign"
+   }
+  },
+  "publishedAt": "2026-11-19T19:00:00.000Z",
+  "title": "AutoPILOT: A Visual Agent Harness for Real-Time Gameplay",
+  "summary": "Multimodal foundation models can play video games well when the game waits for them, but often fail when it keeps running. We find that much of this gap lies in the harness, which decides what the model sees, what it remembers, and how its outputs become actions over time. Existing harnesses such as VISTA improve the first two, yet turn each model call into at most one action, so the agent acts only as often as its model thinks. We introduce AutoPILOT, which changes the third: in each model call…",
+  "numComments": 1,
+  "submittedBy": {
+   "_id": "64d45451c34a346181b130dd",
+   "avatarUrl": "/avatars/cd2b8ae93a51f499717bfa9c504e1b25.svg",
+   "fullname": "Rui Yang",
+   "name": "Ray2333",
+   "type": "user",
+   "isPro": true,
+   "isHf": false,
+   "isHfAdmin": false,
+   "isMod": false,
+   "followerCount": 16,
+   "isUserFollowing": false
+  },
+  "organization": {
+   "_id": "65448bef5b5d9185ba3202b9",
+   "name": "UIUC-CS",
+   "fullname": "University of Illinois at Urbana-Champaign"
+  },
+  "isAuthorParticipating": false
+ },
+ {
+  "paper": {
+   "id": "2611.26516",
+   "authors": [
+    {
+     "_id": "6b03fa96ecb204ffe44e76fa",
+     "name": "Hangwei Zhang",
+     "hidden": false
+    },
+    {
+     "_id": "6b03fa96ecb204ffe44e76fb",
+     "name": "Rujing Dang",
+     "hidden": false
+    },
+    {
+     "_id": "6b03fa96ecb204ffe44e76fc",
+     "name": "Ruimin Lin",
+     "hidden": false
+    },
+    {
+     "_id": "6b03fa96ecb204ffe44e76fd",
+     "name": "Jiahong Wu",
+     "hidden": false
+    },
+    {
+     "_id": "6b03fa96ecb204ffe44e76fe",
+     "name": "Xiangxiang Chu",
+     "hidden": false
+    },
+    {
+     "_id": "6b03fa96ecb204ffe44e76ff",
+     "name": "Chuanxia Zheng",
+     "hidden": false
+    }
+   ],
+   "publishedAt": "2026-11-19T00:00:00.000Z",
+   "submittedOnDailyAt": "2026-11-24T00:00:00.000Z",
+   "title": "Plan4D: Generative Plannable 4D Worlds",
+   "summary": "Most world models for future prediction prioritize aestetic quality of generated videos, but offer only weak physical grounding and limited geometric consistency over time, due to the lack of explicit 4D modeling. In this paper, we introduce plan4d, a possible next milestone towards building a generative plannable 4D world model that predicts future RGB videos together with dense 4D geometry, including depth, cameras, point clouds, and scene flow from an observed scene context and text-specified…",
+   "upvotes": 26,
+   "discussionId": "6b03fa96ecb204ffe44e7700",
+   "projectPage": "https://fogradio.github.io/plan4d-project/",
+   "githubRepo": "https://github.com/AMAP-ML/plan4d",
+   "githubRepoAddedBy": "user",
+   "githubStars": 11
+  },
+  "publishedAt": "2026-11-18T19:00:00.000Z",
+  "title": "Plan4D: Generative Plannable 4D Worlds",
+  "summary": "Most world models for future prediction prioritize aestetic quality of generated videos, but offer only weak physical grounding and limited geometric consistency over time, due to the lack of explicit 4D modeling. In this paper, we introduce plan4d, a possible next milestone towards building a generative plannable 4D world model that predicts future RGB videos together with dense 4D geometry, including depth, cameras, point clouds, and scene flow from an observed scene context and text-specified…",
+  "numComments": 1,
+  "submittedBy": {
+   "_id": "67e1792239cad477e9d09124",
+   "avatarUrl": "/avatars/1dafb6b389e6e3cf4d5cb4a13135bedd.svg",
+   "fullname": "Hangwei Zhang",
+   "name": "fogradio",
+   "type": "user",
+   "isPro": false,
+   "isHf": false,
+   "isHfAdmin": false,
+   "isMod": false,
+   "followerCount": 2,
+   "isUserFollowing": false
+  },
+  "isAuthorParticipating": false
+ },
+ {
+  "paper": {
+   "id": "2611.29338",
+   "authors": [
+    {
+     "_id": "6b0501dbe7a4376c42cc8c5e",
+     "name": "Meng-Hao Guo",
+     "hidden": false
+    },
+    {
+     "_id": "6b0501dbe7a4376c42cc8c5f",
+     "name": "Yi Zhang",
+     "hidden": false
+    },
+    {
+     "_id": "6b0501dbe7a4376c42cc8c60",
+     "name": "Zhe-Han Mo",
+     "hidden": false
+    },
+    {
+     "_id": "6b0501dbe7a4376c42cc8c61",
+     "name": "Han-Zheng Wang",
+     "hidden": false
+    },
+    {
+     "_id": "6b0501dbe7a4376c42cc8c62",
+     "name": "Jia-Jun Wang",
+     "hidden": false
+    },
+    {
+     "_id": "6b0501dbe7a4376c42cc8c63",
+     "name": "Xin-Sheng Chen",
+     "hidden": false
+    },
+    {
+     "_id": "6b0501dbe7a4376c42cc8c64",
+     "name": "Jiaxi Song",
+     "hidden": false
+    },
+    {
+     "_id": "6b0501dbe7a4376c42cc8c65",
+     "name": "Yi-Xuan Deng",
+     "hidden": false
+    },
+    {
+     "_id": "6b0501dbe7a4376c42cc8c66",
+     "name": "Jia-Ning Li",
+     "hidden": false
+    },
+    {
+     "_id": "6b0501dbe7a4376c42cc8c67",
+     "name": "Xuanyu Chu",
+     "hidden": false
+    },
+    {
+     "_id": "6b0501dbe7a4376c42cc8c68",
+     "name": "Hengrui Zhang",
+     "hidden": false
+    },
+    {
+     "_id": "6b0501dbe7a4376c42cc8c69",
+     "name": "Huan-ang Gao",
+     "hidden": false
+    },
+    {
+     "_id": "6b0501dbe7a4376c42cc8c6a",
+     "name": "Yongming Rao",
+     "hidden": false
+    },
+    {
+     "_id": "6b0501dbe7a4376c42cc8c6b",
+     "name": "Shi-Min Hu",
+     "hidden": false
+    }
+   ],
+   "publishedAt": "2026-11-22T00:00:00.000Z",
+   "submittedOnDailyAt": "2026-11-24T00:00:00.000Z",
+   "title": "A Glimpse of Training VLMs as Foundation Models for Robotic Manipulation",
+   "summary": "Recently, GPT-6 Astra demonstrates strong generalization in robot control, yet limited disclosure of its training leaves open how such capabilities can be reproduced. We introduce nanoAstra, an approach to training vision-language models (VLMs) for generalizable manipulation that combines semantic action modeling with capability-preserving supervised fine-tuning (CP-SFT). nanoAstra represents robot behavior as semantic steps composed of reusable, parameterized action primitives, guided by explic…",
+   "upvotes": 23,
+   "discussionId": "6b0501dbe7a4376c42cc8c6c",
+   "ai_summary": "nanoAstra combines semantic action modeling with capability-preserving supervised fine-tuning to train vision-language models for generalizable robot manipulation, achieving strong zero-shot success and faster streaming execution.",
+   "ai_keywords": [
+    "vision-language models",
+    "VLMs",
+    "generalizable manipulation",
+    "semantic action modeling",
+    "capability-preserving supervised fine-tuning",
+    "CP-SFT",
+    "semantic steps",
+    "parameterized action primitives",
+    "progress descriptions",
+    "robot-specific system prompt",
+    "structured action space",
+    "pretrained capabilities",
+    "VQA data",
+    "RoboTwin 2.0",
+    "zero-shot success rate",
+    "VLA baselines",
+    "WAM baselines",
+    "action-chunk-like streaming execution",
+    "inference",
+    "motion execution"
+   ],
+   "ai_summary_model": "deepseek-ai/DeepSeek-V4.1-Flash",
+   "organization": {
+    "_id": "64cc8e9b214a472dd85e7e1d",
+    "name": "THU1911",
+    "fullname": "Tsinghua University"
+   }
+  },
+  "publishedAt": "2026-11-21T19:00:00.000Z",
+  "title": "A Glimpse of Training VLMs as Foundation Models for Robotic Manipulation",
+  "summary": "Recently, GPT-6 Astra demonstrates strong generalization in robot control, yet limited disclosure of its training leaves open how such capabilities can be reproduced. We introduce nanoAstra, an approach to training vision-language models (VLMs) for generalizable manipulation that combines semantic action modeling with capability-preserving supervised fine-tuning (CP-SFT). nanoAstra represents robot behavior as semantic steps composed of reusable, parameterized action primitives, guided by explic…",
+  "numComments": 1,
+  "submittedBy": {
+   "_id": "62145614b670cb63a38075ba",
+   "avatarUrl": "/avatars/ae2cbe95a291129e210a27b43942c5c8.svg",
+   "fullname": "MenghaoGuo",
+   "name": "MenghaoGuo",
+   "type": "user",
+   "isPro": false,
+   "isHf": false,
+   "isHfAdmin": false,
+   "isMod": false,
+   "followerCount": 5,
+   "isUserFollowing": false
+  },
+  "organization": {
+   "_id": "64cc8e9b214a472dd85e7e1d",
+   "name": "THU1911",
+   "fullname": "Tsinghua University"
+  },
+  "isAuthorParticipating": false
+ }
+]

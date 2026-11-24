@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<rss version="2.0" xml:base="link" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:media="http://www.rssboard.org/media-rss" xmlns:og="http://ogp.me/ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:schema="http://schema.org/" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:sioct="http://rdfs.org/sioc/types#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <channel>
+    <title>Big Tech - South China Morning Post</title>
+    <link>https://www.scmp.com/rss/320663/feed</link>
+    <description>The latest big tech news on Apple, Microsoft, Google, Amazon and Facebook.</description>
+    <language>en</language>
+    <image>
+      <url>https://assets-v2.i-scmp.com/production/static/img/icons/scmp-meta-1200x630.png</url>
+      <title>Big Tech - South China Morning Post</title>
+      <link>https://www.scmp.com</link>
+    </image>
+    <atom:link href="https://www.scmp.com/rss/320663/feed" rel="self" type="application/rss+xml"/>
+    <item>
+      <author>Ann Cao</author>
+      <dc:creator>Ann Cao</dc:creator>
+      <description>The US Department of Commerce has added Megaspeed, the Singapore-based cloud computing firm at the centre of the ongoing Nvidia saga, to its trade blacklist, hours after the chip giant reinstated co-founder Jensen Huang as CEO following his abrupt departure 11 days prior. In a filing released on Monday, the department’s Bureau of Industry and Security placed Megaspeed International and six other entities in Southeast Asia – widely regarded as Megaspeed’s affiliates – on its Entity List. The...</description>
+      <guid isPermaLink="true">https://www.scmp.com/tech/tech-war/article/3375556/us-places-megaspeed-blacklist-jensen-huang-returns-helm-nvidia</guid>
+      <link>https://www.scmp.com/tech/tech-war/article/3375556/us-places-megaspeed-blacklist-jensen-huang-returns-helm-nvidia</link>
+      <pubDate>Tue, 24 Nov 2026 03:48:10 +0000</pubDate>
+      <title>US places Megaspeed on blacklist as Jensen Huang returns to helm of Nvidia</title>
+      <enclosure length="4095" type="image/jpeg" url="https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/24/8c426e55-f240-4b33-a81a-407e2663fc76_e11ed0b1.jpg?itok=XQcPFQ5n&amp;v=1795492085"/>
+      <media:content height="2730" medium="image" type="image/jpeg" url="https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/24/8c426e55-f240-4b33-a81a-407e2663fc76_e11ed0b1.jpg?itok=XQcPFQ5n&amp;v=1795492085" width="4095"/>
+    </item>
+    <item>
+      <author>Ben Hu</author>
+      <dc:creator>Ben Hu</dc:creator>
+      <description>Nvidia’s board of directors unanimously voted to reinstate Jensen Huang as president, chief executive officer, and board director on November 23, 2026. Following the decision, the company announced that Colette Kress would continue as chief financial officer, Harvey C. Jones would remain board chair, an independent investigation into foreign intelligence efforts would proceed, and a search for a new chief compliance officer would commence. Below is the full text of the press release from Nvidia:</description>
+      <guid isPermaLink="true">https://www.scmp.com/plus/tech/big-tech/article/3375546/what-nvidia-said-about-jensen-huangs-return</guid>
+      <link>https://www.scmp.com/plus/tech/big-tech/article/3375546/what-nvidia-said-about-jensen-huangs-return</link>
+      <pubDate>Tue, 24 Nov 2026 03:09:35 +0000</pubDate>
+      <title>What Nvidia said about Jensen Huang’s return</title>
+      <enclosure length="2836" type="image/jpeg" url="https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/24/d64e94e5-697e-42fd-a41e-803d82f05d51_63d79011.jpg?itok=F70zaapU&amp;v=1795489705"/>
+      <media:content height="1891" medium="image" type="image/jpeg" url="https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/24/d64e94e5-697e-42fd-a41e-803d82f05d51_63d79011.jpg?itok=F70zaapU&amp;v=1795489705" width="2836"/>
+    </item>
+    <item>
+      <author>Vincent Chow</author>
+      <dc:creator>Vincent Chow</dc:creator>
+      <description>Chinese artificial intelligence company Z.ai has credited an emerging technique – one that has drawn scrutiny from AI safety researchers – with helping its newly released flagship model achieve significant performance gains over its predecessor while improving computational efficiency. The release marks the first time a Chinese AI company has disclosed using a “looped transformer” architecture in a major model, following recent reports that US giant OpenAI adopted the same method for its…</description>
+      <guid isPermaLink="true">https://www.scmp.com/tech/big-tech/article/3375517/chinas-zai-aggressively-using-looped-transformer-method-improve-ai-models</guid>
+      <link>https://www.scmp.com/tech/big-tech/article/3375517/chinas-zai-aggressively-using-looped-transformer-method-improve-ai-models</link>
+      <pubDate>Tue, 24 Nov 2026 02:30:08 +0000</pubDate>
+      <title>China’s Z.ai ‘aggressively’ using looped transformer method to improve AI models</title>
+      <enclosure length="4095" type="image/jpeg" url="https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/23/b380ec40-55cb-438f-8389-f0f5f360ff68_a64ef56a.jpg?itok=frIU50ty&amp;v=1795444107"/>
+      <media:content height="2303" medium="image" type="image/jpeg" url="https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/23/b380ec40-55cb-438f-8389-f0f5f360ff68_a64ef56a.jpg?itok=frIU50ty&amp;v=1795444107" width="4095"/>
+    </item>
+    <item>
+      <author>Xiaofei Xu,Howard Liu,Vincent Chow</author>
+      <dc:creator>Xiaofei Xu,Howard Liu,Vincent Chow</dc:creator>
+      <description>Nvidia has reinstated Jensen Huang as its CEO, president and board director with immediate effect, after the company determined following input from US officials that the move would not pose a national security risk. The firm’s board of directors voted unanimously to reinstate Huang following a series of discussions and meetings with him, after which the board was satisfied with Huang’s candour and ability to lead the firm, the company said in a statement on Monday. “In the process of…</description>
+      <guid isPermaLink="true">https://www.scmp.com/tech/big-tech/article/3375515/nvidia-reinstates-jensen-huang-ceo-president-and-board-director</guid>
+      <link>https://www.scmp.com/tech/big-tech/article/3375515/nvidia-reinstates-jensen-huang-ceo-president-and-board-director</link>
+      <pubDate>Mon, 23 Nov 2026 14:06:36 +0000</pubDate>
+      <title>Nvidia reinstates Jensen Huang as CEO; Trump praises ‘correct’ decision; shares surge</title>
+      <enclosure length="4095" type="image/jpeg" url="https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/23/afb0b222-8a81-469d-8a81-72798994521b_2af0798a.jpg?itok=mKbke0_D&amp;v=1795449392"/>
+      <media:content height="2730" medium="image" type="image/jpeg" url="https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/23/afb0b222-8a81-469d-8a81-72798994521b_2af0798a.jpg?itok=mKbke0_D&amp;v=1795449392" width="4095"/>
+    </item>
+    <item>
+      <author>Xinmei Shen</author>
+      <dc:creator>Xinmei Shen</dc:creator>
+      <description>China will set up a new standard-setting task force for brain-computer interface (BCI) technologies, while a state-backed think tank has urged investors to remain patient as the nascent but increasingly crowded sector develops.
+The Ministry of Industry and Information Technology said it would create the new working group under its BCI standardisation technical committee at an industry conference this week, state-backed news outlet Securities Times reported.
+The ministry would host a BCI...</description>
+      <guid isPermaLink="true">https://www.scmp.com/business/china-business/article/3375442/brain-computer-interface-boom-enters-next-phase-china-pushes-shape-global-standards</guid>
+      <link>https://www.scmp.com/business/china-business/article/3375442/brain-computer-interface-boom-enters-next-phase-china-pushes-shape-global-standards</link>
+      <pubDate>Mon, 23 Nov 2026 08:00:06 +0000</pubDate>
+      <title>As brain-computer interface boom enters next phase, China pushes to shape global standards</title>
+      <enclosure length="4000" type="image/jpeg" url="https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/23/a5de40bc-76ad-47fd-b266-17c36c14b514_e3684bf7.jpg?itok=WUZCsf1t&amp;v=1795413822"/>
+      <media:content height="2665" medium="image" type="image/jpeg" url="https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/23/a5de40bc-76ad-47fd-b266-17c36c14b514_e3684bf7.jpg?itok=WUZCsf1t&amp;v=1795413822" width="4000"/>
+    </item>
+  </channel>
+</rss>
