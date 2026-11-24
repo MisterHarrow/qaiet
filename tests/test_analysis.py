@@ -206,3 +206,32 @@ def test_summary_refreshes_when_labels_change(settings):
     assert summarize.needs_refresh(prev, {**entry, "stance": {"-1": 2, "0": 8, "unclear": 0}}, a)  # unclear became neutral
     assert summarize.needs_refresh({**prev, "data": json.dumps({"basis": {"news_prompt": "old", "stance": entry["stance"]}})}, entry, a)
     assert summarize.needs_refresh({**prev, "data": "{}"}, entry, a)  # summaries from before this check
+
+
+def test_big_stories_refresh_only_on_real_growth(settings):
+    a = settings.analysis
+    basis = {"news_prompt": a.news_prompt, "stance": {"0": 100}}
+    prev = {"prompt_version": a.summary_prompt, "item_count": 100, "outlet_count": 40, "data": json.dumps({"basis": basis})}
+    entry = lambda items, outlets, stance=None: {"items": items, "outlets": outlets, "stance": stance or {"0": 100}}  # noqa: E731
+    assert not summarize.needs_refresh(prev, entry(103, 41), a)      # +3 items, +1 outlet on a 100-item story: no
+    assert summarize.needs_refresh(prev, entry(130, 41), a)          # +30%
+    assert summarize.needs_refresh(prev, entry(103, 48), a)          # +8 outlets (20%)
+    assert not summarize.needs_refresh(prev, entry(103, 41, {"0": 90, "-1": 4, "unclear": 6}), a)  # stance moved 10 of 100
+    assert summarize.needs_refresh(prev, entry(103, 41, {"0": 80, "-1": 20}), a)  # moved 40 of 100
+
+
+def test_weather_is_throttled(settings):
+    from datetime import timedelta as td
+    from quiet_ai.pipeline.momentum import StoryScore
+    st = seeded_store(settings)
+    fake = FakeAnthropic()
+    llm = make_llm(st, fake)
+    period = settings.site.periods[0]
+    scores = lambda ids: [StoryScore(i, 1.0, {"outlets": 1}, iso(NOW)) for i in ids]  # noqa: E731
+    with st.conn:
+        st.conn.execute("INSERT INTO reports(kind, prompt_version, model, data, created_at) VALUES (?, ?, 'm', ?, ?)",
+                        (f"weather:{period.key}", settings.analysis.weather_prompt, json.dumps({"sentence": "s", "story_ids": ["a", "b", "c", "d"]}), iso(NOW - td(hours=1))))
+    summarize.weather(st, settings, SOURCES, llm, scores(["a", "b", "c", "e"]), [], 4, NOW, period)
+    assert fake.calls == []                                          # top 3 unchanged, line is fresh
+    summarize.weather(st, settings, SOURCES, llm, scores(["a", "b", "x", "d"]), [], 4, NOW, period)
+    assert len(fake.calls) == 1                                      # top 3 changed

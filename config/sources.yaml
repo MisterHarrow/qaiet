@@ -653,15 +653,17 @@ newsletters:
 - id: importai
   name: Import AI (Jack Clark)
   feeds:
-  - https://importai.substack.com/feed
+  - https://jack-clark.net/feed/
   role: digest
   ai_focused: true
+  notes: Jack Clark's own WordPress feed; the Substack feed returns 403 to GitHub's servers.
 - id: thebatch
   name: The Batch (DeepLearning.AI)
   role: digest
   sitemap: https://www.deeplearning.ai/sitemap.xml
   sitemap_include: ^https://www\.deeplearning\.ai/the-batch/(?!tag/|issue-|page/)[^/]+/?$
-  notes: 'No RSS. New article URLs come from the sitemap; title, summary and date from each page''s og: tags. (ai.lounge.ai''s archive is behind a Vercel bot checkpoint.)'
+  notes: 'No RSS. New article URLs come from the sitemap; title, summary and date from each page''s og: tags. (ai.lounge.ai''s archive is behind a Vercel bot checkpoint.) deeplearning.ai returns 403 to
+    GitHub''s servers, so it fails in scheduled runs.'
   ai_focused: true
 - id: marktechpost
   name: MarkTechPost
@@ -724,16 +726,16 @@ newsletters:
 - id: zvi
   name: Don't Worry About the Vase (Zvi Mowshowitz)
   feeds:
-  - https://thezvi.substack.com/feed
+  - https://thezvi.wordpress.com/feed/
   role: commentary
-  notes: Very long weekly roundups; safety-focused.
+  notes: Very long weekly roundups; safety-focused. WordPress mirror; the Substack feed returns 403 to GitHub's servers.
   ai_focused: true
 - id: marcus
   name: Marcus on AI (Gary Marcus)
   feeds:
   - https://garymarcus.substack.com/feed
   role: commentary
-  notes: Skeptic.
+  notes: 'Skeptic. Substack-only: returns 403 to GitHub''s servers, so it fails in scheduled runs.'
   ai_focused: true
 - id: zitron
   name: Where's Your Ed At (Ed Zitron)
@@ -770,7 +772,7 @@ newsletters:
   feeds:
   - https://chinai.substack.com/feed
   role: commentary
-  notes: Translations of Chinese AI writing.
+  notes: 'Translations of Chinese AI writing. Substack-only: returns 403 to GitHub''s servers, so it fails in scheduled runs.'
   ai_focused: true
 - id: chinatalk
   name: ChinaTalk

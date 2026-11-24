@@ -1,1 +1,121 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0"><channel><title><![CDATA[Import AI]]></title><description><![CDATA[Import AI is a weekly newsletter about artificial intelligence based on detailed analysis of cutting-edge research.]]></description><link>https://importai.substack.com</link><image><url>https://substackcdn.com/image/fetch/$s_!3yYS!,w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd6d17996-2bef-40a4-abe3-be72a0e8a227_258x258.png</url><title>Import AI</title><link>https://importai.substack.com</link></image><generator>Substack</generator><lastBuildDate>Tue, 24 Nov 2026 07:55:07 GMT</lastBuildDate><atom:link href="https://importai.substack.com/feed" rel="self" type="application/rss+xml"/><copyright><![CDATA[Jack Clark]]></copyright><language><![CDATA[en]]></language><webMaster><![CDATA[importai@substack.com]]></webMaster><itunes:owner><itunes:email><![CDATA[importai@substack.com]]></itunes:email><itunes:name><![CDATA[Jack Clark]]></itunes:name></itunes:owner><itunes:author><![CDATA[Jack Clark]]></itunes:author><googleplay:owner><![CDATA[importai@substack.com]]></googleplay:owner><googleplay:email><![CDATA[importai@substack.com]]></googleplay:email><googleplay:author><![CDATA[Jack Clark]]></googleplay:author><itunes:block><![CDATA[Yes]]></itunes:block><item><title><![CDATA[Import AI 482: Huawei kernel benchmarks; airborne drone detection; and a national lab's AI science benchmark]]></title><description><![CDATA[Could the scientific method be emergent?]]></description><link>https://importai.substack.com/p/import-ai-482-huawei-kernel-benchmarks</link><guid isPermaLink="false">https://importai.substack.com/p/import-ai-482-huawei-kernel-benchmarks</guid><dc:creator><![CDATA[Jack Clark]]></dc:creator><pubDate>Mon, 23 Nov 2026 14:11:17 GMT</pubDate><enclosure url="https://substackcdn.com/image/fetch/$s_!3yYS!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd6d17996-2bef-40a4-abe3-be72a0e8a227_258x258.png" length="0" type="image/jpeg"/></item><item><title><![CDATA[Import AI 481: AI sub-contractors; a wet lab for AI; and subterfuge during development]]></title><description><![CDATA[Plus: CucumberVision!]]></description><link>https://importai.substack.com/p/import-ai-481-ai-sub-contractors</link><guid isPermaLink="false">https://importai.substack.com/p/import-ai-481-ai-sub-contractors</guid><dc:creator><![CDATA[Jack Clark]]></dc:creator><pubDate>Mon, 16 Nov 2026 14:01:15 GMT</pubDate><enclosure url="https://substackcdn.com/image/fetch/$s_!3yYS!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd6d17996-2bef-40a4-abe3-be72a0e8a227_258x258.png" length="0" type="image/jpeg"/></item><item><title><![CDATA[Import AI 480: Self-sustaining space economies; AI for science progress, and Meta builds perfect hands for a superintelligence]]></title><description><![CDATA[When do you think we'll have robots on the moon?]]></description><link>https://importai.substack.com/p/import-ai-480-self-sustaining-space</link><guid isPermaLink="false">https://importai.substack.com/p/import-ai-480-self-sustaining-space</guid><dc:creator><![CDATA[Jack Clark]]></dc:creator><pubDate>Mon, 09 Nov 2026 13:31:34 GMT</pubDate><enclosure url="https://substackcdn.com/image/fetch/$s_!3yYS!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd6d17996-2bef-40a4-abe3-be72a0e8a227_258x258.png" length="0" type="image/jpeg"/></item><item><title><![CDATA[Import AI 479: Spacewar; low-latency tasks versus LLMs; Genie 4]]></title><description><![CDATA[What do LLMs think about vision models?]]></description><link>https://importai.substack.com/p/import-ai-479-spacewar-low-latency</link><guid isPermaLink="false">https://importai.substack.com/p/import-ai-479-spacewar-low-latency</guid><dc:creator><![CDATA[Jack Clark]]></dc:creator><pubDate>Mon, 02 Nov 2026 14:30:54 GMT</pubDate><enclosure url="https://substackcdn.com/image/fetch/$s_!3yYS!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd6d17996-2bef-40a4-abe3-be72a0e8a227_258x258.png" length="0" type="image/jpeg"/></item><item><title><![CDATA[Import AI 478: Math for alignment; ProgramBench; and Mirendil shows what RSI means ]]></title><description><![CDATA[What is &#8220;night&#8221; to a machine?]]></description><link>https://importai.substack.com/p/import-ai-478-math-for-alignment</link><guid isPermaLink="false">https://importai.substack.com/p/import-ai-478-math-for-alignment</guid><dc:creator><![CDATA[Jack Clark]]></dc:creator><pubDate>Mon, 26 Oct 2026 12:31:52 GMT</pubDate><enclosure url="https://substackcdn.com/image/fetch/$s_!3yYS!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd6d17996-2bef-40a4-abe3-be72a0e8a227_258x258.png" length="0" type="image/jpeg"/></item></channel></rss>
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Import AI </title>
+	<atom:link href="https://jack-clark.net/feed/" rel="self" type="application/rss+xml" />
+	<link>https://jack-clark.net</link>
+	<description></description>
+	<lastBuildDate>Mon, 23 Nov 2026 14:11:17 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	
+
+<image>
+	<url>https://s0.wp.com/i/webclip.png</url>
+	<title>Import AI </title>
+	<link>https://jack-clark.net</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+<site xmlns="com-wordpress:feed-additions:1">10738737</site>	<item>
+		<title>Import AI 482: Huawei kernel benchmarks; airborne drone detection; and a national lab&#8217;s AI science benchmark</title>
+		<link>https://jack-clark.net/2026/11/23/import-ai-482-huawei-kernel-benchmarks-airborne-drone-detection-and-a-national-labs-ai-science-benchmark/</link>
+					<comments>https://jack-clark.net/2026/11/23/import-ai-482-huawei-kernel-benchmarks-airborne-drone-detection-and-a-national-labs-ai-science-benchmark/#respond</comments>
+		
+		<dc:creator><![CDATA[Jack Clark]]></dc:creator>
+		<pubDate>Mon, 23 Nov 2026 14:11:17 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">https://jack-clark.net/2026/11/23/import-ai-482-huawei-kernel-benchmarks-airborne-drone-detection-and-a-national-labs-ai-science-benchmark/</guid>
+
+					<description><![CDATA[<img width="150" height="150" src="https://i0.wp.com/jack-clark.net/wp-content/uploads/2026/11/https3A2F2Fsubstack-post-media.s3.amazonaws.com2Fpublic2Fimages2Fd6d17996-2bef-40a4-abe3-be72a0e8a227_258x258-3McPHi.png?resize=150%2C150&amp;ssl=1" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" decoding="async" srcset="https://i0.wp.com/jack-clark.net/wp-content/uploads/2026/11/https3A2F2Fsubstack-post-media.s3.amazonaws.com2Fpublic2Fimages2Fd6d17996-2bef-40a4-abe3-be72a0e8a227_258x258-3McPHi.png?w=258&amp;ssl=1 258w, https://i0.wp.com/jack-clark.net/wp-content/uploads/2026/11/https3A2F2Fsubstack-post-media.s3.amazonaws.com2Fpublic2Fimages2Fd6d17996-2bef-40a4-abe3-be72a0e8a227_258x258-3McPHi.png?resize=150%2C150&amp;ssl=1 150w" sizes="(max-width: 150px) 100vw, 150px" data-attachment-id="3309" data-permalink="https://jack-clark.net/2026/11/23/import-ai-482-huawei-kernel-benchmarks-airborne-drone-detection-and-a-national-labs-ai-science-benchmark/import-ai-482-huawei-kernel-benchmarks-airborne-drone-detection-and-a-national-labs-ai-science-benchmark-2/" data-orig-file="https://i0.wp.com/jack-clark.net/wp-content/uploads/2026/11/https3A2F2Fsubstack-post-media.s3.amazonaws.com2Fpublic2Fimages2Fd6d17996-2bef-40a4-abe3-be72a0e8a227_258x258-3McPHi.png?fit=258%2C258&amp;ssl=1" data-orig-size="258,258" data-comments-opened="1" data-image-title="Import AI 482: Huawei kernel benchmarks; airborne drone detection; and a national lab&amp;#8217;s AI science benchmark" data-image-description="" data-image-caption="" data-large-file="https://i0.wp.com/jack-clark.net/wp-content/uploads/2026/11/https3A2F2Fsubstack-post-media.s3.amazonaws.com2Fpublic2Fimages2Fd6d17996-2bef-40a4-abe3-be72a0e8a227_258x258-3McPHi.png?fit=258%2C258&amp;ssl=1" />Welcome to Import AI, a newsletter about AI research. Import AI runs on arXiv, cappuccinos, and feedback from readers. Subscribe now Chinese researchers optimize Huawei chips with a kernel improvement benchmark:…AscendGYM will help China do its own form of RSI…Researchers with the Shenzhen Loop Area Institute, a Chinese research organization, have built and released AscendGYM, [&#8230;]]]></description>
+										
+					
+					<wfw:commentRss>https://jack-clark.net/2026/11/23/import-ai-482-huawei-kernel-benchmarks-airborne-drone-detection-and-a-national-labs-ai-science-benchmark/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">3308</post-id>	</item>
+		<item>
+		<title>Import AI 481: AI sub-contractors; a wet lab for AI; and subterfuge during development</title>
+		<link>https://jack-clark.net/2026/11/16/import-ai-481-ai-sub-contractors-a-wet-lab-for-ai-and-subterfuge-during-development/</link>
+					<comments>https://jack-clark.net/2026/11/16/import-ai-481-ai-sub-contractors-a-wet-lab-for-ai-and-subterfuge-during-development/#respond</comments>
+		
+		<dc:creator><![CDATA[Jack Clark]]></dc:creator>
+		<pubDate>Mon, 16 Nov 2026 14:01:15 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">https://jack-clark.net/2026/11/16/import-ai-481-ai-sub-contractors-a-wet-lab-for-ai-and-subterfuge-during-development/</guid>
+
+					<description><![CDATA[<img width="150" height="150" src="https://i0.wp.com/jack-clark.net/wp-content/uploads/2026/11/https3A2F2Fsubstack-post-media.s3.amazonaws.com2Fpublic2Fimages2Fd6d17996-2bef-40a4-abe3-be72a0e8a227_258x258-a9vils.png?resize=150%2C150&amp;ssl=1" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" decoding="async" srcset="https://i0.wp.com/jack-clark.net/wp-content/uploads/2026/11/https3A2F2Fsubstack-post-media.s3.amazonaws.com2Fpublic2Fimages2Fd6d17996-2bef-40a4-abe3-be72a0e8a227_258x258-a9vils.png?w=258&amp;ssl=1 258w, https://i0.wp.com/jack-clark.net/wp-content/uploads/2026/11/https3A2F2Fsubstack-post-media.s3.amazonaws.com2Fpublic2Fimages2Fd6d17996-2bef-40a4-abe3-be72a0e8a227_258x258-a9vils.png?resize=150%2C150&amp;ssl=1 150w" sizes="(max-width: 150px) 100vw, 150px" data-attachment-id="3304" data-permalink="https://jack-clark.net/2026/11/16/import-ai-481-ai-sub-contractors-a-wet-lab-for-ai-and-subterfuge-during-development/import-ai-481-ai-sub-contractors-a-wet-lab-for-ai-and-subterfuge-during-development-2/" data-orig-file="https://i0.wp.com/jack-clark.net/wp-content/uploads/2026/11/https3A2F2Fsubstack-post-media.s3.amazonaws.com2Fpublic2Fimages2Fd6d17996-2bef-40a4-abe3-be72a0e8a227_258x258-a9vils.png?fit=258%2C258&amp;ssl=1" data-orig-size="258,258" data-comments-opened="1" data-image-title="Import AI 481: AI sub-contractors; a wet lab for AI; and subterfuge during development" data-image-description="" data-image-caption="" data-large-file="https://i0.wp.com/jack-clark.net/wp-content/uploads/2026/11/https3A2F2Fsubstack-post-media.s3.amazonaws.com2Fpublic2Fimages2Fd6d17996-2bef-40a4-abe3-be72a0e8a227_258x258-a9vils.png?fit=258%2C258&amp;ssl=1" />Welcome to Import AI, a newsletter about AI research. Import AI runs on arXiv, cappuccinos, and feedback from readers. If you’d like to support this, please subscribe. Subscribe now AI systems are getting good at sub-contracting to make themselves better:…AI can now productively spend money to improve itself…Researchers have developed FrontierML, a benchmark “that measures [&#8230;]]]></description>
+										
+					
+					<wfw:commentRss>https://jack-clark.net/2026/11/16/import-ai-481-ai-sub-contractors-a-wet-lab-for-ai-and-subterfuge-during-development/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">3303</post-id>	</item>
+		<item>
+		<title>Import AI 480: Self-sustaining space economies; AI for science progress, and Meta builds perfect hands for a superintelligence</title>
+		<link>https://jack-clark.net/2026/11/09/import-ai-480-self-sustaining-space-economies-ai-for-science-progress-and-meta-builds-perfect-hands-for-a-superintelligence/</link>
+					<comments>https://jack-clark.net/2026/11/09/import-ai-480-self-sustaining-space-economies-ai-for-science-progress-and-meta-builds-perfect-hands-for-a-superintelligence/#respond</comments>
+		
+		<dc:creator><![CDATA[Jack Clark]]></dc:creator>
+		<pubDate>Mon, 09 Nov 2026 13:31:34 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">https://jack-clark.net/2026/11/09/import-ai-480-self-sustaining-space-economies-ai-for-science-progress-and-meta-builds-perfect-hands-for-a-superintelligence/</guid>
+
+					<description><![CDATA[<img width="150" height="150" src="https://i0.wp.com/jack-clark.net/wp-content/uploads/2026/11/https3A2F2Fsubstack-post-media.s3.amazonaws.com2Fpublic2Fimages2Fd6d17996-2bef-40a4-abe3-be72a0e8a227_258x258-sNOLmO.png?resize=150%2C150&amp;ssl=1" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://i0.wp.com/jack-clark.net/wp-content/uploads/2026/11/https3A2F2Fsubstack-post-media.s3.amazonaws.com2Fpublic2Fimages2Fd6d17996-2bef-40a4-abe3-be72a0e8a227_258x258-sNOLmO.png?w=258&amp;ssl=1 258w, https://i0.wp.com/jack-clark.net/wp-content/uploads/2026/11/https3A2F2Fsubstack-post-media.s3.amazonaws.com2Fpublic2Fimages2Fd6d17996-2bef-40a4-abe3-be72a0e8a227_258x258-sNOLmO.png?resize=150%2C150&amp;ssl=1 150w" sizes="auto, (max-width: 150px) 100vw, 150px" data-attachment-id="3299" data-permalink="https://jack-clark.net/2026/11/09/import-ai-480-self-sustaining-space-economies-ai-for-science-progress-and-meta-builds-perfect-hands-for-a-superintelligence/import-ai-480-self-sustaining-space-economies-ai-for-science-progress-and-meta-builds-perfect-hands-for-a-superintelligence-2/" data-orig-file="https://i0.wp.com/jack-clark.net/wp-content/uploads/2026/11/https3A2F2Fsubstack-post-media.s3.amazonaws.com2Fpublic2Fimages2Fd6d17996-2bef-40a4-abe3-be72a0e8a227_258x258-sNOLmO.png?fit=258%2C258&amp;ssl=1" data-orig-size="258,258" data-comments-opened="1" data-image-title="Import AI 480: Self-sustaining space economies; AI for science progress, and Meta builds perfect hands for a superintelligence" data-image-description="" data-image-caption="" data-large-file="https://i0.wp.com/jack-clark.net/wp-content/uploads/2026/11/https3A2F2Fsubstack-post-media.s3.amazonaws.com2Fpublic2Fimages2Fd6d17996-2bef-40a4-abe3-be72a0e8a227_258x258-sNOLmO.png?fit=258%2C258&amp;ssl=1" />Welcome to Import AI, a newsletter about AI research. Import AI runs on arXiv, cappuccinos, and feedback from readers. If you’d like to support this, please subscribe. Subscribe now AI Science startup converts a quantum conjecture into a theorem:…An evocative taste of the singularity…In the same way a few years ago it went from remarkable [&#8230;]]]></description>
+										
+					
+					<wfw:commentRss>https://jack-clark.net/2026/11/09/import-ai-480-self-sustaining-space-economies-ai-for-science-progress-and-meta-builds-perfect-hands-for-a-superintelligence/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">3298</post-id>	</item>
+		<item>
+		<title>Import AI 479: Spacewar; low-latency tasks versus LLMs; Genie 4</title>
+		<link>https://jack-clark.net/2026/11/02/import-ai-479-spacewar-low-latency-tasks-versus-llms-genie-4/</link>
+					<comments>https://jack-clark.net/2026/11/02/import-ai-479-spacewar-low-latency-tasks-versus-llms-genie-4/#respond</comments>
+		
+		<dc:creator><![CDATA[Jack Clark]]></dc:creator>
+		<pubDate>Mon, 02 Nov 2026 14:30:54 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">https://jack-clark.net/2026/11/02/import-ai-479-spacewar-low-latency-tasks-versus-llms-genie-4/</guid>
+
+					<description><![CDATA[<img width="150" height="150" src="https://i0.wp.com/jack-clark.net/wp-content/uploads/2026/11/https3A2F2Fsubstack-post-media.s3.amazonaws.com2Fpublic2Fimages2Fd6d17996-2bef-40a4-abe3-be72a0e8a227_258x258-k8CSyA.png?resize=150%2C150&amp;ssl=1" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://i0.wp.com/jack-clark.net/wp-content/uploads/2026/11/https3A2F2Fsubstack-post-media.s3.amazonaws.com2Fpublic2Fimages2Fd6d17996-2bef-40a4-abe3-be72a0e8a227_258x258-k8CSyA.png?w=258&amp;ssl=1 258w, https://i0.wp.com/jack-clark.net/wp-content/uploads/2026/11/https3A2F2Fsubstack-post-media.s3.amazonaws.com2Fpublic2Fimages2Fd6d17996-2bef-40a4-abe3-be72a0e8a227_258x258-k8CSyA.png?resize=150%2C150&amp;ssl=1 150w" sizes="auto, (max-width: 150px) 100vw, 150px" data-attachment-id="3291" data-permalink="https://jack-clark.net/2026/11/02/import-ai-479-spacewar-low-latency-tasks-versus-llms-genie-4/import-ai-479-spacewar-low-latency-tasks-versus-llms-genie-4-2/" data-orig-file="https://i0.wp.com/jack-clark.net/wp-content/uploads/2026/11/https3A2F2Fsubstack-post-media.s3.amazonaws.com2Fpublic2Fimages2Fd6d17996-2bef-40a4-abe3-be72a0e8a227_258x258-k8CSyA.png?fit=258%2C258&amp;ssl=1" data-orig-size="258,258" data-comments-opened="1" data-image-title="Import AI 479: Spacewar; low-latency tasks versus LLMs; Genie 4" data-image-description="" data-image-caption="" data-large-file="https://i0.wp.com/jack-clark.net/wp-content/uploads/2026/11/https3A2F2Fsubstack-post-media.s3.amazonaws.com2Fpublic2Fimages2Fd6d17996-2bef-40a4-abe3-be72a0e8a227_258x258-k8CSyA.png?fit=258%2C258&amp;ssl=1" />Welcome to Import AI, a newsletter about AI research. Import AI runs on arXiv, cappuccinos, and feedback from readers. If you’d like to support this, please subscribe. Subscribe now LLMs are very bad at low-latency tasks:…Realtime-Bench says it’ll be a while till AI systems can play games or do online auctions for you…Researchers have built [&#8230;]]]></description>
+										
+					
+					<wfw:commentRss>https://jack-clark.net/2026/11/02/import-ai-479-spacewar-low-latency-tasks-versus-llms-genie-4/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">3290</post-id>	</item>
+		<item>
+		<title>Import AI 478: Math for alignment; ProgramBench; and Mirendil shows what RSI means</title>
+		<link>https://jack-clark.net/2026/10/26/import-ai-478-math-for-alignment-programbench-and-mirendil-shows-what-rsi-means/</link>
+					<comments>https://jack-clark.net/2026/10/26/import-ai-478-math-for-alignment-programbench-and-mirendil-shows-what-rsi-means/#respond</comments>
+		
+		<dc:creator><![CDATA[Jack Clark]]></dc:creator>
+		<pubDate>Mon, 26 Oct 2026 12:31:52 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">https://jack-clark.net/2026/10/26/import-ai-478-math-for-alignment-programbench-and-mirendil-shows-what-rsi-means/</guid>
+
+					<description><![CDATA[<img width="150" height="150" src="https://i0.wp.com/jack-clark.net/wp-content/uploads/2026/10/https3A2F2Fsubstack-post-media.s3.amazonaws.com2Fpublic2Fimages2Fd6d17996-2bef-40a4-abe3-be72a0e8a227_258x258-IAEEMa.png?resize=150%2C150&amp;ssl=1" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://i0.wp.com/jack-clark.net/wp-content/uploads/2026/10/https3A2F2Fsubstack-post-media.s3.amazonaws.com2Fpublic2Fimages2Fd6d17996-2bef-40a4-abe3-be72a0e8a227_258x258-IAEEMa.png?w=258&amp;ssl=1 258w, https://i0.wp.com/jack-clark.net/wp-content/uploads/2026/10/https3A2F2Fsubstack-post-media.s3.amazonaws.com2Fpublic2Fimages2Fd6d17996-2bef-40a4-abe3-be72a0e8a227_258x258-IAEEMa.png?resize=150%2C150&amp;ssl=1 150w" sizes="auto, (max-width: 150px) 100vw, 150px" data-attachment-id="3283" data-permalink="https://jack-clark.net/2026/10/26/import-ai-478-math-for-alignment-programbench-and-mirendil-shows-what-rsi-means/import-ai-478-math-for-alignment-programbench-and-mirendil-shows-what-rsi-means-2/" data-orig-file="https://i0.wp.com/jack-clark.net/wp-content/uploads/2026/10/https3A2F2Fsubstack-post-media.s3.amazonaws.com2Fpublic2Fimages2Fd6d17996-2bef-40a4-abe3-be72a0e8a227_258x258-IAEEMa.png?fit=258%2C258&amp;ssl=1" data-orig-size="258,258" data-comments-opened="1" data-image-title="Import AI 478: Math for alignment; ProgramBench; and Mirendil shows what RSI means" data-image-description="" data-image-caption="" data-large-file="https://i0.wp.com/jack-clark.net/wp-content/uploads/2026/10/https3A2F2Fsubstack-post-media.s3.amazonaws.com2Fpublic2Fimages2Fd6d17996-2bef-40a4-abe3-be72a0e8a227_258x258-IAEEMa.png?fit=258%2C258&amp;ssl=1" />Welcome to Import AI, a newsletter about AI research. Import AI runs on arXiv, cappuccinos, and feedback from readers. If you’d like to support this, please subscribe. Subscribe now How math could help alignment:…What the “industrialization of mathematics” means for safety…AI safety startup Resolution (formerly known as Sequent, Import AI 461) has published work on [&#8230;]]]></description>
+										
+					
+					<wfw:commentRss>https://jack-clark.net/2026/10/26/import-ai-478-math-for-alignment-programbench-and-mirendil-shows-what-rsi-means/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">3282</post-id>	</item>
+	</channel>
+</rss>

@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import json
 import logging
+import math
 from dataclasses import dataclass, field
 from datetime import datetime
 from typing import Literal
@@ -82,17 +83,21 @@ def material(entry: dict, max_headlines: int = 40) -> str:
 
 
 def needs_refresh(prev, entry: dict, a) -> bool:
-    """Re-summarize when the story grew, gained an outlet, or its labels changed underneath
-    the summary (new label prompt, or stance counts moved by 3 or more)."""
+    """Re-summarize when the story grew by about 30%, gained about 20% more outlets, or its labels
+    changed underneath the summary (new label prompt, or stance counts moved by 20% / at least 3)."""
     if prev["prompt_version"] != a.summary_prompt:
         return True
-    if entry["items"] >= prev["item_count"] + a.resummarize_new_items or entry["outlets"] > prev["outlet_count"]:
+    grow_items = max(a.resummarize_new_items, math.ceil(prev["item_count"] * a.resummarize_growth))
+    grow_outlets = max(1, math.ceil(prev["outlet_count"] * a.resummarize_growth * 2 / 3))
+    if entry["items"] >= prev["item_count"] + grow_items or entry["outlets"] >= prev["outlet_count"] + grow_outlets:
         return True
     basis = json.loads(prev["data"]).get("basis") or {}
     if basis.get("news_prompt") != a.news_prompt:
         return True
     old = basis.get("stance") or {}
-    return sum(abs(entry["stance"].get(k, 0) - old.get(k, 0)) for k in set(old) | set(entry["stance"])) >= 3
+    # Half the L1 distance = how many labels changed bucket (each move counts out of one, into another).
+    moved = sum(abs(entry["stance"].get(k, 0) - old.get(k, 0)) for k in set(old) | set(entry["stance"])) / 2
+    return moved >= max(3, 0.2 * sum(old.values()))
 
 
 def summarize_top(store: Store, settings: Settings, sources: SourcesConfig, llm: LLM, scores: list[StoryScore], now: datetime) -> SummaryStats:
@@ -128,14 +133,19 @@ def summarize_top(store: Store, settings: Settings, sources: SourcesConfig, llm:
 
 def weather(store: Store, settings: Settings, sources: SourcesConfig, llm: LLM, scores: list[StoryScore], rising: list[RisingItem], top: int,
             now: datetime, period: PeriodSettings | None = None) -> SummaryStats:
-    """One sentence per view; regenerated only when that view's top stories changed."""
+    """One sentence per view: regenerated when the view's top 3 stories change, or when the
+    rest of the top list changed and the line is older than `weather_min_hours`."""
     stats = SummaryStats()
     period = period or settings.site.periods[0]
     kind = weather_kind(period.key)
     top_ids = [s.story_id for s in scores[:top]]
-    last = store.conn.execute("SELECT data, prompt_version FROM reports WHERE kind = ? ORDER BY id DESC LIMIT 1", (kind,)).fetchone()
-    if last and last["prompt_version"] == settings.analysis.weather_prompt and json.loads(last["data"]).get("story_ids") == top_ids:
-        return stats
+    last = store.conn.execute("SELECT data, prompt_version, created_at FROM reports WHERE kind = ? ORDER BY id DESC LIMIT 1", (kind,)).fetchone()
+    if last and last["prompt_version"] == settings.analysis.weather_prompt:
+        prev_ids = json.loads(last["data"]).get("story_ids") or []
+        age_h = (now - datetime.fromisoformat(last["created_at"])).total_seconds() / 3600
+        top3_same = set(prev_ids[:3]) == set(top_ids[:3])
+        if prev_ids == top_ids or (top3_same and age_h < settings.analysis.weather_min_hours):
+            return stats
     if not top_ids:
         return stats
     lines = [f"Period: the last {period.label}."]

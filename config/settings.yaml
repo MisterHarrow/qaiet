@@ -117,7 +117,11 @@ analysis:
   summary_prompt: story_summary_v3
   weather_prompt: weather_v3
   summarize_top: 12               # Sonnet summaries for the top stories only
-  resummarize_new_items: 3        # re-summarize after this many new items, or any new outlet
+  # Cost control: a big story gains items every run, so refresh its summary only when it grew by
+  # about 30% (at least 3 items) or gained about 20% more outlets (at least 1), or its labels moved.
+  resummarize_new_items: 3
+  resummarize_growth: 0.3
+  weather_min_hours: 6            # weather lines refresh when the top 3 stories change, else at most every 6 hours
   builder_label_top: 30           # what/why labels for this many Rising candidates
   stance_kinds: [news, newsletter]  # kinds that get track/frame/stance (newsletters: commentary only)
   top_stories: 12                 # story cards on the page (three rows of four)

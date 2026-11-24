@@ -175,7 +175,9 @@ class AnalysisSettings(_Model):
     summary_prompt: str = "story_summary_v3"
     weather_prompt: str = "weather_v3"
     summarize_top: int = 12
-    resummarize_new_items: int = 3   # re-summarize after this many new items, or any new outlet
+    resummarize_new_items: int = 3   # re-summarize after at least this many new items...
+    resummarize_growth: float = 0.3  # ...and the story grew by this share (outlets: two thirds of it)
+    weather_min_hours: float = 6     # weather lines refresh at most this often, unless the top 3 change
     builder_label_top: int = 30      # label this many Rising candidates (plus builders in top stories)
     stance_kinds: list[str] = Field(default_factory=lambda: ["news", "newsletter"])
     top_stories: int = 12            # stories on the page

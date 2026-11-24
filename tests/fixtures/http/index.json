@@ -708,10 +708,10 @@
   "url": "https://spectrum.ieee.org/feeds/topic/artificial-intelligence.rss"
  },
  "rss:importai:0": {
-  "content_type": "application/xml; charset=utf-8",
+  "content_type": "application/rss+xml; charset=UTF-8",
   "file": "rss_importai_0.xml",
   "status": 200,
-  "url": "https://importai.substack.com/feed"
+  "url": "https://jack-clark.net/feed/"
  },
  "rss:interconnects:0": {
   "content_type": "application/xml; charset=utf-8",
@@ -1056,10 +1056,10 @@
   "url": "https://www.wheresyoured.at/rss/"
  },
  "rss:zvi:0": {
-  "content_type": "application/xml; charset=utf-8",
+  "content_type": "application/rss+xml; charset=UTF-8",
   "file": "rss_zvi_0.xml",
   "status": 200,
-  "url": "https://thezvi.substack.com/feed"
+  "url": "https://thezvi.wordpress.com/feed/"
  },
  "sitemap:thebatch": {
   "content_type": "application/xml",
