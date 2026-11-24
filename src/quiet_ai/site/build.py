@@ -12,6 +12,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
+from markupsafe import Markup
 
 HERE = Path(__file__).parent
 STANCE_NAMES = {
@@ -29,6 +30,7 @@ def _env() -> Environment:
         lstrip_blocks=True,
     )
     env.filters["thousands"] = lambda n: f"{int(n):,}"
+    env.filters["signed"] = lambda v: "–" if v is None else (f"{v:+.2f}".replace("-", "−"))
     env.globals.update(stance_names=STANCE_NAMES, kind_names=KIND_NAMES)
     return env
 
@@ -128,5 +130,57 @@ def render_archive(editions: list[dict], out_dir: Path, tz: str = "Europe/Stockh
     page_dir = out_dir / "archive"
     page_dir.mkdir(parents=True, exist_ok=True)
     (page_dir / "index.html").write_text(_env().get_template("archive.html.j2").render(days=days, root="../"), encoding="utf-8")
+    shutil.copytree(HERE / "static", out_dir / "static", dirs_exist_ok=True)
+    return page_dir / "index.html"
+
+
+def sparkline(points: list[dict], label: str) -> Markup:
+    """One series of the sentiment index as a small SVG line chart: fixed -1..+1 scale (wider if
+    a value falls outside), zero line, 2px line, 8px markers, hover values via <title>, and the
+    latest value labeled at the end. Colors come from CSS (currentColor / custom properties)."""
+    w, h, pad_l, pad_r, pad_y = 640, 120, 8, 64, 12
+    if not points:
+        return Markup(f'<p class="nodata">No {label.lower()} values yet.</p>')
+    lim = max(1.0, max(abs(p["value"]) for p in points))
+    y = lambda v: pad_y + (lim - v) / (2 * lim) * (h - 2 * pad_y)  # noqa: E731
+    n = len(points)
+    x = (lambda i: pad_l + (w - pad_l - pad_r) / 2) if n == 1 else (lambda i: pad_l + i * (w - pad_l - pad_r) / (n - 1))  # noqa: E731
+    parts = [f'<svg class="spark" viewBox="0 0 {w} {h}" role="img" aria-label="{label}: daily sentiment index, {n} days">']
+    for v, cls in ((lim, "grid"), (0, "zero"), (-lim, "grid")):
+        parts.append(f'<line class="{cls}" x1="{pad_l}" x2="{w - pad_r}" y1="{y(v):.1f}" y2="{y(v):.1f}"/>')
+    parts.append(f'<text class="axis" x="{w - pad_r + 6}" y="{y(lim) + 4:.1f}">+{lim:g}</text>')
+    parts.append(f'<text class="axis" x="{w - pad_r + 6}" y="{y(-lim) + 4:.1f}">−{lim:g}</text>')
+    if n > 1:
+        pts = " ".join(f"{x(i):.1f},{y(p['value']):.1f}" for i, p in enumerate(points))
+        parts.append(f'<polyline class="line" points="{pts}"/>')
+    for i, p in enumerate(points):
+        val = f"{p['value']:+.2f}".replace("-", "−")
+        parts.append(f'<g class="pt"><title>{p["date"]}: {val} ({p["outlets"]} outlets, {p["labels"]} labels)</title>'
+                     f'<circle class="hit" cx="{x(i):.1f}" cy="{y(p["value"]):.1f}" r="12"/>'
+                     f'<circle class="dot" cx="{x(i):.1f}" cy="{y(p["value"]):.1f}" r="4"/></g>')
+    last = points[-1]
+    parts.append(f'<text class="last" x="{x(n - 1) + 10:.1f}" y="{y(last["value"]) + 5:.1f}">{f"{last["value"]:+.2f}".replace("-", "−")}</text>')
+    parts.append("</svg>")
+    return Markup("".join(parts))
+
+
+def render_sentiment(history: dict, out_dir: Path, tz: str = "Europe/Stockholm") -> Path:
+    """/sentiment/: the daily AI sentiment index, overall and per track, with a table view."""
+    from quiet_ai.pipeline.sentiment import describe
+
+    page_dir = out_dir / "sentiment"
+    page_dir.mkdir(parents=True, exist_ok=True)
+    series = [("all", "All coverage"), ("technical", "Technical"), ("political", "Political"), ("economic", "Economic")]
+    charts = [{"key": k, "label": lab, "svg": sparkline(history.get(k, []), lab), "latest": (history.get(k) or [None])[-1]} for k, lab in series]
+    dates = sorted({p["date"] for pts in history.values() for p in pts}, reverse=True)
+    table = [{"date": d, "long": _long_date(datetime.fromisoformat(d)),
+              **{k: next((p for p in history.get(k, []) if p["date"] == d), None) for k, _ in series}} for d in dates[:60]]
+    latest = charts[0]["latest"]
+    html = _env().get_template("sentiment.html.j2").render(
+        root="../", charts=charts, table=table, latest=latest,
+        latest_long=_long_date(datetime.fromisoformat(latest["date"])) if latest else None,
+        words=describe(latest["value"]) if latest else None, tracks=charts[1:], days=len(dates),
+    )
+    (page_dir / "index.html").write_text(html, encoding="utf-8")
     shutil.copytree(HERE / "static", out_dir / "static", dirs_exist_ok=True)
     return page_dir / "index.html"

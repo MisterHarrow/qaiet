@@ -4,7 +4,9 @@ from what the pipeline actually does."""
 from __future__ import annotations
 
 from datetime import datetime
+from pathlib import Path
 
+from quiet_ai import evaluate
 from quiet_ai.config import Account, Settings, SourcesConfig
 from quiet_ai.pipeline.edition import data_since
 from quiet_ai.pipeline.stories import source_names
@@ -46,7 +48,8 @@ def _health(store: Store, names: dict[str, str]) -> dict | None:
     return {"at": run["started_at"], "total": len(rows), "ok": len(ok), "failing": failing}
 
 
-def about_context(store: Store, settings: Settings, sources: SourcesConfig, accounts: list[Account], now: datetime) -> dict:
+def about_context(store: Store, settings: Settings, sources: SourcesConfig, accounts: list[Account], now: datetime,
+                  gold: Path | None = None) -> dict:
     names = source_names(sources)
     feeds = [f for f in sources.feeds if f.enabled]
     news = [f for f in feeds if f.kind == "news"]
@@ -58,7 +61,17 @@ def about_context(store: Store, settings: Settings, sources: SourcesConfig, acco
     month_start = now.replace(day=1, hour=0, minute=0, second=0, microsecond=0)
     spend = store.conn.execute("SELECT COALESCE(SUM(cost_usd), 0) FROM llm_calls WHERE created_at >= ?", (iso(month_start),)).fetchone()[0]
     w = settings.momentum.weights
+    audit = [dict(r, label=GROUP_NAMES.get(r["key"], r["key"])) for r in evaluate.audit(store, sources, by="group", min_n=20)
+             if r["key"] != "other" and r["mean"] is not None]
+    agreement = evaluate.score(store, evaluate.load_gold(gold)) if gold else {"n": 0}
+    g, s = settings.gap, settings.sentiment
     return {
+        "gap": {"quiet_max_outlets": g.quiet_max_outlets, "builder_min_pct": round(g.builder_min_rank * 100),
+                "loud_min_outlets": g.loud_min_outlets, "floors": g.builder_floors},
+        "sentiment": {"min_outlets": s.min_outlets, "medium_weight": s.confidence_weights.get("medium")},
+        "audit": audit,
+        "audit_labels": sum(r["n"] for r in audit),
+        "agreement": agreement,
         "generated_at": iso(now),
         "counts": {
             "outlets": len(news),

@@ -1,0 +1,384 @@
+# Hand labels for checking the model. Label each article from its headline and summary alone,
+# the way the model sees it. Don't look at the site's labels first.
+#
+# track:  technical | political | economic          (the main angle)
+# frame:  technical -> hype | grounded | skeptical
+#         political -> pro-regulation | pro-acceleration | national-competition | neutral
+#         economic  -> boom | bubble | disruption-concern | neutral
+# stance: -2 strongly critical | -1 critical | 0 neutral or plain reporting | 1 positive | 2 enthusiastic
+#         (the article's attitude toward AI or the AI industry, not whether the news is good or bad)
+#
+# Leave a field empty if you can't tell; skip an item entirely by leaving all three empty.
+# Then run: uv run qa eval score
+
+items:
+- id: url:f40a41dffce25e543b58
+  headline: EU needs a system to respond to AI incidents, Finland and Estonia say
+  summary: In a letter seen by POLITICO, Finland and Estonia call for "EU-level arrangements for responding to serious
+    AI incidents." This comes as European leaders are set to meet Friday to debate AI for the first time.
+  track: null
+  frame: null
+  stance: null
+- id: url:198bc4084b2ec8f484fb
+  headline: 'Jensen Huang: Spy row, affairs leave Nvidia without its rockstar CEO'
+  summary: Jensen Huang, who built Nvidia into the world’s dominant AI chipmaker, is stepping down as CEO over extramarital
+    affairs. DW examines how losing its figurehead will affect the firm and the US-China AI race.
+  track: null
+  frame: null
+  stance: null
+- id: url:8fa6f24d7539b284d561
+  headline: Novartis rejects AI industry hopes to cure cancer in five to 10 years
+  summary: Comments from pharma CEO follow ambitious claims from Anthropic chief and DeepMind founder
+  track: null
+  frame: null
+  stance: null
+- id: url:0dff8d0dfcb132aea773
+  headline: Nvidia överträffar förväntningarna – styrelsen nobbar Huang
+  english: Nvidia beats expectations – board snubs Huang
+  summary: Nvidia redovisar en högre omsättning och vinst än väntat. Aktien, som pressats hårt efter avgångne vd:n
+    Jensen Huangs otrohetsaffärer,
+  track: null
+  frame: null
+  stance: null
+- id: url:8c8e5fe3ed651bde0b4f
+  headline: 'Künstliche Intelligenz: Apple entwickelt eigenen KI-Agenten'
+  english: 'Artificial intelligence: Apple develops its own AI agent'
+  summary: Stellenausschreibungen zeigen, dass der iPhone-Konzern einen eigenen KI-Assistenten entwickeln will,
+    der auch Code schreiben kann. Das Angebot wäre ein direkter Konkurrent für Anthropic.
+  track: null
+  frame: null
+  stance: null
+- id: url:8183b96e82f7b9fa8458
+  headline: GitLab 19.6 führt Audit-Log für KI-Agenten ein, NGINX bleibt verwundbar
+  english: GitLab 19.6 introduces audit log for AI agents, NGINX remains vulnerable | Agent actions via the MCP
+    server now appear in the audit log. Patch 19.6.1 closes Ruby2Shell, but the bundled NGINX remains vulnerable
+    to nginx2root.
+  summary: Agenten-Aktionen über den MCP-Server landen jetzt im Audit-Log. Patch 19.6.1 schließt Ruby2Shell, das
+    mitgelieferte NGINX bleibt für nginx2root anfällig.
+  track: null
+  frame: null
+  stance: null
+- id: url:d1b4a114799fe3c5ecf3
+  headline: Nvidia privately confirmed it could track chips to fight smuggling, even as industry publicly questioned
+    feasibility
+  summary: Representatives from Nvidia told Illinois representative Bill Foster that it would be technically possible
+    to implement the anti-smuggling measures called for in the Chip Security Act, Foster told MIT Technology Review
+    in an interview on Thursday, even while an industry group claimed they were “pote
+  track: null
+  frame: null
+  stance: null
+- id: url:d95ad1c3fe30c48165b6
+  headline: Megaspeed and the battle to go high-end Nvidia chips into China
+  summary: Jensen Huang's affair with a suspected Chinese spy has shone a light on Megaspeed, the company she worked
+    for. It is under investigation in the US for smuggling Nvidia chips into China, which it denies.
+  track: null
+  frame: null
+  stance: null
+- id: url:b4566e479e6e48854b95
+  headline: 'Arbeitsmarkt: Warum Berufseinsteiger KI-Folgen besonders spüren'
+  english: 'Labor market: Why entry-level workers feel AI''s effects especially'
+  summary: Vor allem 20- bis 24-Jährige finden weniger Vollzeitstellen in Bereichen, die von KI geprägt sind. Volkswirtschaftler
+    Oliver Falck erklärt, welche das sind. Wozu er Berufseinsteigern jetzt rät.
+  track: null
+  frame: null
+  stance: null
+- id: url:18b51dfceaf188d51add
+  headline: 'Strategen om AI-raset: ”Historiskt har det alltid varit köpläge”'
+  english: 'Strategist on the AI sell-off: "Historically it has always been a buying opportunity"'
+  summary: Det blev en blodig vecka på Wall Street när AI-frossan bet sig fast på marknaden. Börsens skräckindex
+    rusade samtidigt som det tekniktunga Nasdaq-indexet utraderade årets uppgång när AI-bolagen rasade tvåsiffrigt.
+    – Sentimentet är extremt nedkört just nu, säger Ålandsbankens Anders Rudolfsson.
+  track: null
+  frame: null
+  stance: null
+- id: url:f7056c5e8f2de8754327
+  headline: Alibaba says new flagship AI model cuts task costs by 60% while tightening cyber guardrails
+  summary: Alibaba Group Holding has launched its most advanced artificial intelligence model to date, Qwen4-Max,
+    with strict cybersecurity guardrails, as the tech giant balances safety with a continued commitment to open
+    sourcing amid growing global concerns over AI-enabled cyberattacks. The release highlight
+  track: null
+  frame: null
+  stance: null
+- id: url:818f5e6dd0a02cd1c54f
+  headline: 'KI-Fanfiction auf TikTok: Wer ist Emely Schweinsteiger?'
+  english: 'AI fanfiction on TikTok: who is Emely Schweinsteiger? | She is 23 years old, daughter of Bastian Schweinsteiger,
+    PR manager at the DFB, and not real. Emely Schweinsteiger is an AI character whose fanfiction goes viral on
+    TikTok. Behind it are two'
+  summary: Sie ist 23 Jahre alt, Tochter von Bastian Schweinsteiger, PR-Managerin beim DFB – und nicht real. Emely
+    Schweinsteiger ist eine KI-Figur, deren Fanfiction auf TikTok viral geht. Dahinter stecken zwei junge Frauen.
+    Das sagt der DFB dazu.
+  track: null
+  frame: null
+  stance: null
+- id: url:2aaee9ebb11f4ba87a47
+  headline: Ökända hackare hotar läcka Nvidias hemligheter
+  english: Notorious hackers threaten to leak Nvidia's secrets
+  summary: Hackergruppen The Gentlemen säger sig ha stulit hemlig data från AI-jätten Nvidia. Om bolaget inte betalar
+    en lösesumma hotar hackarna att publicera allt.
+  track: null
+  frame: null
+  stance: null
+- id: url:44fe677fd46c23c4875f
+  headline: Nothing’s upcoming Ear Note is a pair of earbuds with AI transcription
+  summary: Nothing's new AI device is the Ear Note, a set of earbuds and their microphone-equipped charging case
+    that can record and transcribe conversations, with a connected app to manage the recordings, transcriptions
+    and AI-generated summaries, similar to Apple's new Watch feature and devices like Amazon's
+  track: null
+  frame: null
+  stance: null
+- id: url:083251a67bf4adea138d
+  headline: Startup Makes Headway Toward Formalizing All of Math With AI
+  summary: As Axiom Math ’s AI swarm was putting the final touches on the automatic verification of a 15,000-page
+    proof of the classification of finite simple groups (CFSG) , colloquially referred to as the “enormous theorem,”
+    on Sunday, 25 October, the company’s Founding Mathematician Ken Ono had nothing to d
+  track: null
+  frame: null
+  stance: null
+- id: url:60db7abb460ea6663940
+  headline: Ex-Qwen chief’s Pragmatik Labs raises funding at $5 billion valuation
+  summary: Pragmatik Labs, the AI startup founded by former Alibaba Qwen leader Lin Junyang, has raised new funding
+    at a $5 billion valuation, Bloomberg reported on Friday, citing people familiar with the matter. The round raised
+    tens of millions of dollars, with new investors including HyT Capital, CDH Invest
+  track: null
+  frame: null
+  stance: null
+- id: url:1086140826bd9d31d0a6
+  headline: Forskare granskar elslukande datacenter – utsläpp som ett helt land
+  english: Researchers examine power-hungry data centers – emissions like an entire country
+  summary: En studie har kartlagt priset i form av utsläpp för våra satsningar på ai och andra energikrävande verktyg.
+  track: null
+  frame: null
+  stance: null
+- id: url:5fa05cc3461a80747706
+  headline: Silicon Valley leaders forge a 'save Jensen' faction
+  summary: Tech leaders at Semafor’s Silicon Valley & The World rallied around Jensen Huang after he resigned as
+    Nvidia CEO amid reports of extramarital affairs, including one with a woman suspected of being a Chinese spy.
+  track: null
+  frame: null
+  stance: null
+- id: url:626e59734f22865ee82b
+  headline: San Francisco is enjoying an AI boom, but worries about a crash are growing
+  summary: AI employees in the industry's epicentre - San Francisco - worry that the sector is overheated.
+  track: null
+  frame: null
+  stance: null
+- id: url:914bb147d0bf37ced1c5
+  headline: How Notable Capital, GIC, and Baillie Gifford bet big on Anthropic before its IPO
+  summary: Three significant backers share what gave them conviction to bet billions on Anthropic.
+  track: null
+  frame: null
+  stance: null
+- id: url:0d5ffa1e4e79d26dfa2e
+  headline: 'Zurrer: Huang’s Credibility in Industry Too Important'
+  summary: Jensen Huang is back as head of the world’s most valuable chipmaker, in a stunning reversal less than
+    two weeks after he left Nvidia under a cloud of scandal. This has sent the company’s stock on its biggest rally
+    in decades. Ryan Zurrer, Founder and Director of Dialectic had said a week ago Huang w
+  track: null
+  frame: null
+  stance: null
+- id: url:0fc6a924346430f788d2
+  headline: Megaspeed Faces US Blacklist After Nvidia CEO Ouster, Sources Say
+  summary: The Trump administration put Megaspeed International on a US trade blacklist that bars it from buying
+    advanced artificial intelligence chips, targeting a Singapore-based firm at the heart of the scandal that briefly
+    cost Jensen Huang his job at Nvidia Corp.
+  track: null
+  frame: null
+  stance: null
+- id: url:8fc7ceb7477883cc2583
+  headline: Trump’s Role in Huang’s Return
+  summary: 'Bloomberg''s Michael Shepard says Donald Trump played a key role in Jensen Huang’s return to NVIDIA
+    after he was forced to resign amid revelations about multiple extramarital affairs, including with a suspected
+    spy. (Source: Bloomberg)'
+  track: null
+  frame: null
+  stance: null
+- id: url:ebfe362eaaee36d36131
+  headline: AI’s blue state reckoning is growing
+  summary: Newly minted legislative leaders and lawmakers in states with a new Democratic trifecta are gearing up
+    for tougher regulations on data centers and AI.
+  track: null
+  frame: null
+  stance: null
+- id: url:f9224ba23ee383d5cf6a
+  headline: The US helped the world rein in nuclear weapons. Could it do the same for AI?
+  summary: 'When Illinois Gov. JB Pritzker talks about the threat of artificial intelligence, he offers an increasingly
+    common point of comparison: it is a danger “on the level of nuclear weapons.” The comparison is not far-fetched.
+    If the international community found ways to constrain a potentially catastroph'
+  track: null
+  frame: null
+  stance: null
+- id: url:fc0a69c2d53d9376567c
+  headline: Industry headwinds won't slow AI infrastructure buildout
+  summary: The remarks by the head of Acwa came as Samsung indicated that it wanted to deepen its involvement in
+    the AI sector by constructing data centers.
+  track: null
+  frame: null
+  stance: null
+- id: url:15d1aebea20a56f9c1e0
+  headline: Why Ken Chenault Is Calling for an AI ‘Manifesto’
+  summary: ''
+  track: null
+  frame: null
+  stance: null
+- id: url:56bfc7af7dd2c2549a66
+  headline: Här är 16-åringen som ska göra AI-styrda precisionsvapen billigare
+  english: Meet the 16-year-old who will make AI-guided precision weapons cheaper
+  summary: Henrijs Dandzbergs vill utveckla billiga, massproducerade robotar med ai-styrning. Nu har 16-åringens
+    försvarsbolag fått stöd av acceleratorjätten Y Combinator.
+  track: null
+  frame: null
+  stance: null
+- id: url:160865c58dbda5de5c56
+  headline: 'Trump Lauds Nvidia for Bringing Jensen Huang Back as CEO: ''Sex Sells, Fellas'''
+  summary: 'President Donald Trump on Monday lauded Nvidia for reinstating Jensen Huang as CEO, saying his leadership
+    is vital to America''s success. The post Trump Lauds Nvidia for Bringing Jensen Huang Back as CEO: ‘Sex Sells,
+    Fellas’ appeared first on Breitbart .'
+  track: null
+  frame: null
+  stance: null
+- id: url:3f8a3cf0e05149eb25f6
+  headline: Google Disrupts Its Search Advertising With Its Embrace of A.I.
+  summary: The Silicon Valley giant’s search advertising has long fueled the company. But its search ad growth is
+    slowing as A.I. becomes more prevalent.
+  track: null
+  frame: null
+  stance: null
+- id: url:1592da0c0a3d9b249ec6
+  headline: AI models are propelling rapid growth and revealing vulnerabilities
+  summary: AI models are exposing the internet's longstanding insecurity, driving rapid change and technical outages.
+  track: null
+  frame: null
+  stance: null
+- id: url:9e6cb3e08e3bfa259c59
+  headline: AI Solved Math’s Most Famous Problem. Now Humans Are Struggling to Understand It
+  summary: It will take mathematicians months to understand the “alien” 17-million-line solution an Anthropic researcher
+    produced for the Riemann hypothesis.
+  track: null
+  frame: null
+  stance: null
+- id: url:3500af305ed03afde70d
+  headline: Two groups verify mathematician’s claim that Claude helped prove mathematics problem
+  summary: Anthropic’s Levent Alpöge says it took six weeks for him using the AI tool to solve 19th-century Riemann
+    hypothesis A mathematician at Anthropic has said that the San Francisco -based artificial intelligence (AI)
+    company’s software has helped crack one of the most important unsolved problems in math
+  track: null
+  frame: null
+  stance: null
+- id: url:45274d2735f077fea39b
+  headline: Nvidia’s roaring results can’t hide its troubles
+  summary: Jensen Huang’s departure will cause lasting damage
+  track: null
+  frame: null
+  stance: null
+- id: url:6d5ec7774a3104ff0dfb
+  headline: John Kennedy calls Nvidia’s Huang scandal ‘the most expensive sex since Helen of Troy’
+  summary: 'The alleged affair involving Nvidia CEO Jensen Huang has become more than a sex scandal in Sen. John
+    Kennedy’s (R-LA) eyes. The Louisiana senator called it “the most expensive sex since Helen of Troy” as he questioned
+    whether China gained access to sensitive U.S. technology. “I’m less interested in '
+  track: null
+  frame: null
+  stance: null
+- id: url:0d9fae548b15d920a9d4
+  headline: How Microcredentials Can Help Engineers Build Trustworthy AI
+  summary: 'Engineering teams are moving at breakneck speed to integrate artificial intelligence, but they are running
+    into a formidable new barrier: compliance issues. Translating high-level AI ethics , governance , and auditing
+    into daily operational workflows has become one of the industry’s toughest challen'
+  track: null
+  frame: null
+  stance: null
+- id: url:781ae3d6936cff9f4967
+  headline: US official says government needs to make a better case for AI
+  summary: Jacob Helberg, the undersecretary for economic affairs, said at Semafor’s Silicon Valley & the World
+    that the election should be seen as an “opportunity.”
+  track: null
+  frame: null
+  stance: null
+- id: url:844378a0935c21de70b8
+  headline: Baidu’s Robin Li warns of AI bubble risk as applications lag infrastructure spending
+  summary: Baidu CEO Robin Li warned on Tuesday that the AI industry could face a bubble if businesses fail to turn
+    adoption into higher profits. Speaking at the APEC CEO Summit in Shenzhen, Li said the spread of AI applications
+    had fallen short of expectations despite heavy spending on infrastructure, rapid m
+  track: null
+  frame: null
+  stance: null
+- id: url:050965c7cfac32d85cb9
+  headline: Korean asset managers cautious on Anthropic
+  summary: South Korean asset managers are taking a cautious approach to Anthropic, in stark contrast to their rush
+    to embrace SpaceX, despite the Claude chatbot developer's blockbuster stock market debut last week. Nineteen
+    South Korean exchange-traded funds had added Anthropic shares by the second trading da
+  track: null
+  frame: null
+  stance: null
+- id: url:c001ea324a612d1caa3a
+  headline: OpenAI engineer possessed dozens of meeting recordings, say US prosecutors
+  summary: Saudi national is also alleged to have photographed confidential documents
+  track: null
+  frame: null
+  stance: null
+- id: url:e274babb354ff904b92f
+  headline: Trump touts multicountry AI push in Manila
+  summary: The announcement opened the president’s first post-midterms Asia trip, which will include highly anticipated
+    talks with Xi Jinping and Vladimir Putin.
+  track: null
+  frame: null
+  stance: null
+- id: url:e6af15cb128c12716b1e
+  headline: Jensen Huang’s Return to Nvidia Draws Heavy Fire From Lawmakers
+  summary: Republicans and Democrats see national-security risks and are vowing to press forward with investigations.
+  track: null
+  frame: null
+  stance: null
+- id: url:c371d06a5231e17db656
+  headline: OpenAI board member worries an AI "takeover" of society could be months away
+  summary: Researcher traces a path from AI reward hacking to potential human extinction.
+  track: null
+  frame: null
+  stance: null
+- id: url:394bd6fae766d134ffff
+  headline: 'AI good for business but may sap joy of creation: game creator Hideo Kojima'
+  summary: ''
+  track: null
+  frame: null
+  stance: null
+- id: url:c48827be6a711e38a4fd
+  headline: Google Wants To Make a 24/7 AI TV Channel. You’ll Be the Main Character
+  summary: AI generated customized shows featuring customized ads.
+  track: null
+  frame: null
+  stance: null
+- id: url:d63e5e6aeb220a7fac11
+  headline: How Jensen Huang’s exit from Nvidia impacts China’s AI supply chain
+  summary: Nvidia CEO Jensen Huang attends a summit at the Institute of Peace on October 8, 2026 in Washington,
+    DC.
+  track: null
+  frame: null
+  stance: null
+- id: url:9a50a31c38fd938a6827
+  headline: ByteDance opens invitation-only beta for Xiaodou personal AI assistant
+  summary: ByteDance’s Doubao team opened a public beta for its personal AI assistant Xiaodou on Tuesday, giving
+    invited users access to a separate product whose capabilities will gradually be introduced into the main Doubao
+    app. The beta requires an invitation code and includes an allocation of free usage cre
+  track: null
+  frame: null
+  stance: null
+- id: url:1d73e8549b0faa88fb68
+  headline: Trump Is Said to Have Pushed to Reinstate Nvidia CEO Jensen Huang
+  summary: The president set in motion a weekend of maneuvering, led by Vice President JD Vance, to help Jensen
+    Huang get his old job back.
+  track: null
+  frame: null
+  stance: null
+- id: url:7afbcb1f2c49f05b890e
+  headline: Washington takes aim at China after Trump-Xi talks
+  summary: From restricting the use of Chinese AI to banning Chinese cars, US lawmakers sought to clamp down on
+    relations a day after the superpowers’ leaders held largely convivial talks.
+  track: null
+  frame: null
+  stance: null
+- id: url:89c10790a7ccb1de4789
+  headline: Nvidia gav tokrally på Nasdaq
+  english: Nvidia gave a crazy rally on Nasdaq
+  summary: ''
+  track: null
+  frame: null
+  stance: null

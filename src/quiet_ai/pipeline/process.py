@@ -7,7 +7,7 @@ from datetime import datetime, timedelta
 
 from quiet_ai.config import ROOT, Settings, SourcesConfig
 from quiet_ai.llm.client import LLM
-from quiet_ai.pipeline import classify, cluster, embed, momentum, relevance, summarize
+from quiet_ai.pipeline import classify, cluster, edition, embed, gap, momentum, relevance, sentiment, summarize
 from quiet_ai.store.db import Store, iso
 
 
@@ -82,6 +82,7 @@ def run_analysis(store: Store, settings: Settings, sources: SourcesConfig, now: 
     use_llm = llm is not None and llm.available
     notes = [] if use_llm else ["no ANTHROPIC_API_KEY: no labels, summaries or weather this run"]
     news = classify.label_news(store, settings, sources, llm, since) if use_llm else classify.LabelStats()
+    sentiment.compute(store, settings, now)
     views = period_views(store, settings, sources, now)  # after labels: merging uses their names
     builder_ids: list[str] = []
     for v in views.values():
@@ -106,3 +107,22 @@ def run_analysis(store: Store, settings: Settings, sources: SourcesConfig, now: 
     for st in (news, builders, sums, wx):
         notes += [n for n in st.notes if n not in notes]
     return AnalysisRun(views, news, builders, sums, wx, notes)
+
+
+def build_editions(store: Store, settings: Settings, sources: SourcesConfig, now: datetime, views: dict[str, PeriodView] | None = None) -> list[dict]:
+    """One edition per view, with The gap and the sentiment index for that period."""
+    import math
+
+    views = views or period_views(store, settings, sources, now)
+    hist = sentiment.history(store)
+    out = []
+    for v in views.values():
+        ed = edition.build(store, settings, sources, v.scores, v.rising, now, settings.analysis.top_stories, v.period)
+        ed["gap"] = gap.compute(store, settings, sources, v.scores)
+        days = max(1, math.ceil(v.period.hours / 24))
+        values = sentiment.period_value(hist, days)
+        latest = hist["all"][-1]["date"] if hist.get("all") else None
+        ed["sentiment"] = {"values": values, "words": sentiment.describe(values.get("all")), "days": days, "latest": latest,
+                           "outlets": hist["all"][-1]["outlets"] if hist.get("all") else None}
+        out.append(ed)
+    return out

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sentiment index · quiet ai</title>
+<meta name="description" content="The quiet ai sentiment index: how positive or critical the coverage of AI is, day by day.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23f6f3ec'/%3E%3Cpath d='M8 20h16M8 14h11' stroke='%23302d28' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="{{ root }}static/style.css">
+</head>
+<body>
+<div class="page about">
+<header class="masthead">
+  <div class="masthead-top">
+    <p class="wordmark"><a href="{{ root }}">quiet ai</a></p>
+    <p class="dateline"><a href="{{ root }}">Today's overview</a><span class="sep">·</span><span aria-current="page">Index</span><span class="sep">·</span><a href="{{ root }}archive/">Archive</a><span class="sep">·</span><a href="{{ root }}about/">About</a></p>
+  </div>
+</header>
+<main class="prose">
+<h1>AI sentiment index</h1>
+{% if latest %}
+<p class="hero"><span class="hero-n">{{ latest.value|signed }}</span> <span class="hero-w">{{ words }}</span></p>
+<p class="lede">On {{ latest_long }}, the coverage of AI across {{ latest.outlets }} outlets averaged <strong>{{ latest.value|signed }}</strong> on a scale from −2 (strongly critical) to +2 (enthusiastic){% if tracks %}: {% for t in tracks %}{{ t.label|lower }} {{ t.latest.value|signed if t.latest else "–" }}{% if not loop.last %}, {% endif %}{% endfor %}{% endif %}.</p>
+{% else %}
+<p class="lede">The first value appears after the first morning's labels.</p>
+{% endif %}
+
+<section>
+  {% for c in charts %}
+  <div class="chart">
+    <h2 class="eyebrow">{{ c.label }}{% if c.latest %} <span class="count">{{ c.latest.value|signed }}</span>{% endif %}</h2>
+    {{ c.svg }}
+  </div>
+  {% endfor %}
+  {% if days < 7 %}<p class="muted">{{ days }} day{{ "s" if days != 1 }} so far. The lines fill in as days pass.</p>{% endif %}
+</section>
+
+<section>
+  <h2>How it's calculated</h2>
+  <p>Every news article is labeled with a stance from −2 to +2: how critical or enthusiastic it is about AI in that story, not whether the news itself is good or bad. For each day, each outlet's labels are averaged first, weighting confident labels more and leaving unclear ones out. Then the outlets are averaged, so a site that publishes fifty stories a day counts as one voice, like one that publishes two. A track needs at least three outlets on a day to get a value. Days are counted in Stockholm time. More on the labels on the <a href="{{ root }}about/#labels">About page</a>.</p>
+  <p>Quoting it: "the quiet ai sentiment index{% if latest %} stood at {{ latest.value|signed }} on {{ latest_long }}{% endif %}". The numbers come from a language model and a fixed list of outlets; read them as a trend, not a measurement.</p>
+</section>
+
+<section>
+  <h2>By day</h2>
+  <table class="index-table">
+    <thead><tr><th>Day</th>{% for c in charts %}<th class="num">{{ c.label }}</th>{% endfor %}</tr></thead>
+    <tbody>
+    {% for r in table %}<tr><td>{{ r.long }}</td>{% for c in charts %}{% set p = r[c.key] %}<td class="num"{% if p %} title="{{ p.outlets }} outlets, {{ p.labels }} labels"{% endif %}>{{ p.value|signed if p else "–" }}</td>{% endfor %}</tr>{% endfor %}
+    </tbody>
+  </table>
+</section>
+</main>
+</div>
+</body>
+</html>

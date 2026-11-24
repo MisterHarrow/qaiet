@@ -11,7 +11,7 @@ from pathlib import Path
 
 from quiet_ai.store.models import Item
 
-SCHEMA_VERSION = 4
+SCHEMA_VERSION = 5
 
 # Applied in order to databases older than the version key. SCHEMA below is version 1.
 MIGRATIONS: dict[int, list[str]] = {
@@ -98,6 +98,17 @@ MIGRATIONS: dict[int, list[str]] = {
             date       TEXT PRIMARY KEY,
             data       TEXT NOT NULL,
             updated_at TEXT NOT NULL)""",
+    ],
+    5: [
+        # Daily sentiment index: mean stance per track ("all" = every track) per local date.
+        """CREATE TABLE IF NOT EXISTS sentiment_daily (
+            date       TEXT NOT NULL,
+            track      TEXT NOT NULL,
+            value      REAL NOT NULL,
+            outlets    INTEGER NOT NULL,
+            labels     INTEGER NOT NULL,
+            updated_at TEXT NOT NULL,
+            PRIMARY KEY (date, track))""",
     ],
 }
 

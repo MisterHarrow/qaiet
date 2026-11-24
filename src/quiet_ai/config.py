@@ -200,6 +200,22 @@ def _default_periods() -> list[PeriodSettings]:
     ]
 
 
+class GapSettings(_Model):
+    max_items: int = 5
+    quiet_max_outlets: int = 1          # "builders are talking, press isn't": at most this many outlets...
+    builder_min_rank: float = 0.85      # ...and a builder signal in the top 15% of stories in view...
+    builder_floors: dict[str, float] = Field(default_factory=lambda: {   # ...that is also big in absolute terms
+        "hn_points": 80, "star_velocity": 150, "hf_trending": 60})
+    loud_min_outlets: int = 5           # "press is talking, builders aren't": at least this many outlets...
+    builder_max_rank_quiet: float = 0.25  # ...and builder signals in the bottom quarter (usually none)
+
+
+class SentimentSettings(_Model):
+    confidence_weights: dict[str, float] = Field(default_factory=lambda: {"high": 1.0, "medium": 0.7})
+    min_outlets: int = 3                # a track needs labels from this many outlets on a day to get a value
+    recompute_days: int = 3             # late labels can still change the last few days
+
+
 class SiteSettings(_Model):
     out_dir: str = "site"
     editions_dir: str = "editions"
@@ -235,6 +251,7 @@ class LLMSettings(_Model):
 
 class Settings(_Model):
     db_path: str = "data/quiet-ai.db"
+    db_release_url: str = ""  # public URL of the gzipped database the workflow saves (qa pull)
     http: HttpSettings = Field(default_factory=HttpSettings)
     ingest: IngestSettings = Field(default_factory=IngestSettings)
     github: GithubSettings = Field(default_factory=GithubSettings)
@@ -252,6 +269,8 @@ class Settings(_Model):
     analysis: AnalysisSettings = Field(default_factory=AnalysisSettings)
     site: SiteSettings = Field(default_factory=SiteSettings)
     schedule: ScheduleSettings = Field(default_factory=ScheduleSettings)
+    gap: GapSettings = Field(default_factory=GapSettings)
+    sentiment: SentimentSettings = Field(default_factory=SentimentSettings)
 
 
 def _yaml(path: Path) -> dict:

@@ -14,7 +14,7 @@
 <header class="masthead">
   <div class="masthead-top">
     <p class="wordmark"><a href="{{ root or './' }}">quiet ai</a></p>
-    <p class="dateline">{% if frozen_date %}Edition of {{ frozen_date }}{% else %}<time datetime="{{ e.generated_at }}">{{ date_long }}</time> <span class="sep">·</span> updated {{ updated }} {{ tz_name }}{% endif %} <span class="sep">·</span> <a href="{{ root }}archive/">Archive</a> <span class="sep">·</span> <a href="{{ root }}about/">About</a></p>
+    <p class="dateline">{% if frozen_date %}Edition of {{ frozen_date }}{% else %}<time datetime="{{ e.generated_at }}">{{ date_long }}</time> <span class="sep">·</span> updated {{ updated }} {{ tz_name }}{% endif %} <span class="sep">·</span> <a href="{{ root }}sentiment/">Index</a> <span class="sep">·</span> <a href="{{ root }}archive/">Archive</a> <span class="sep">·</span> <a href="{{ root }}about/">About</a></p>
   </div>
   {% if periods|length > 1 %}
   <nav class="periods" aria-label="Time period">
@@ -30,6 +30,11 @@
   {% endif %}
   {% if e.weather %}
   <p class="weather">{{ e.weather }}</p>
+  {% endif %}
+  {% set sv = (e.sentiment or {}).get("values") or {} %}
+  {% if sv.get("all") is not none %}
+  <p class="index-line"><a href="{{ root }}sentiment/">Sentiment index</a>{% if e.sentiment.days > 1 %}, {{ e.sentiment.days }}-day average{% endif %}: <strong>{{ sv["all"]|signed }}</strong> <span class="muted">{{ e.sentiment.words }}</span>
+    <span class="sep">·</span> technical {{ sv.get("technical")|signed }} <span class="sep">·</span> political {{ sv.get("political")|signed }} <span class="sep">·</span> economic {{ sv.get("economic")|signed }}</p>
   {% endif %}
   {% if e.llm.budget_reached %}
   <p class="notice">This month's budget for machine labeling is used up. Stories and links still update; labels and summaries are paused until next month.</p>
@@ -128,6 +133,34 @@
 {% endfor %}
 <p class="empty" hidden>No stories match this filter. <button type="button" class="reset">Show all</button></p>
 </section>
+
+{% set gp = e.gap or {} %}
+{% if gp.builders_not_press or gp.press_not_builders %}
+<section class="gap" aria-labelledby="gap-h">
+  <h2 id="gap-h">The gap</h2>
+  <p class="section-note">Where builders and the press are looking at different things, last {{ period.label }}.</p>
+  <div class="gap-cols">
+    <div>
+      <h3 class="eyebrow">Builders are talking, press isn't</h3>
+      {% if gp.builders_not_press %}
+      <ol>{% for g in gp.builders_not_press %}
+        <li><p class="g-head">{% if g.link %}<a href="{{ g.link }}" rel="noopener">{{ g.headline }}</a>{% else %}{{ g.headline }}{% endif %}</p>
+          <p class="num">{{ g.builders_line }}{% if g.outlets %} · {{ g.outlets }} outlet{% else %} · no outlet coverage{% endif %}</p></li>
+      {% endfor %}</ol>
+      {% else %}<p class="muted">Nothing big that the press is missing.</p>{% endif %}
+    </div>
+    <div>
+      <h3 class="eyebrow">Press is talking, builders aren't</h3>
+      {% if gp.press_not_builders %}
+      <ol>{% for g in gp.press_not_builders %}
+        <li><p class="g-head"><a href="#{{ g.id }}">{{ g.headline }}</a></p>
+          <p class="num">{{ g.outlets }} outlets · {{ g.countries }} countries{% if g.stance_summary %} · {{ g.stance_summary }}{% endif %} · no builder discussion</p></li>
+      {% endfor %}</ol>
+      {% else %}<p class="muted">No big press story without builder interest.</p>{% endif %}
+    </div>
+  </div>
+</section>
+{% endif %}
 
 {% if e.rising_groups %}
 <section class="rising" aria-labelledby="rising-h">

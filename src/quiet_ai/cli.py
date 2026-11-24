@@ -17,11 +17,12 @@ from quiet_ai.fetchers.base import Context, run_tasks
 from quiet_ai.http import Http
 from quiet_ai.llm.client import LLM
 from quiet_ai.pipeline import archive
+from quiet_ai.pipeline import sentiment as sentiment_mod
 from quiet_ai.pipeline import edition as edition_mod
 from quiet_ai.pipeline import momentum
 from quiet_ai.pipeline import stories as story_views
 from quiet_ai.pipeline.ingest import build_tasks, ingest as run_ingest
-from quiet_ai.pipeline.process import default_embedder, period_views, run_analysis, run_cluster
+from quiet_ai.pipeline.process import build_editions, default_embedder, run_analysis, run_cluster
 from quiet_ai.render_terminal import render
 from quiet_ai.site import build as site_build
 from quiet_ai.site.about import about_context
@@ -254,16 +255,16 @@ def run(
 
 
 def _editions(store: Store, settings, sources, now: datetime, views=None) -> list[dict]:
-    views = views or period_views(store, settings, sources, now)
-    return [edition_mod.build(store, settings, sources, v.scores, v.rising, now, settings.analysis.top_stories, v.period) for v in views.values()]
+    return build_editions(store, settings, sources, now, views)
 
 
 def _render_site(store: Store, settings, sources, now: datetime, editions: list[dict], out: Path) -> Path:
     """Every view, /about and /archive (from the frozen files in editions/)."""
     tz = settings.site.timezone
     pages = site_build.render_all(editions, out, tz)
-    site_build.render_about(about_context(store, settings, sources, load_accounts(), now), out, tz)
+    site_build.render_about(about_context(store, settings, sources, load_accounts(), now, gold=GOLD), out, tz)
     site_build.render_archive(archive.load_frozen(ROOT / settings.site.editions_dir), out, tz)
+    site_build.render_sentiment(sentiment_mod.history(store), out, tz)
     return pages[0]
 
 
@@ -309,6 +310,36 @@ def serve(
 
 
 @app.command()
+def pull() -> None:
+    """Replace the local database with the latest one saved by the scheduled workflow."""
+    import gzip
+    import shutil
+
+    import httpx
+
+    settings = load_settings()
+    if not settings.db_release_url:
+        raise typer.BadParameter("db_release_url is not set in config/settings.yaml")
+    target = ROOT / settings.db_path
+    target.parent.mkdir(parents=True, exist_ok=True)
+    tmp = target.with_suffix(".download.gz")
+    with httpx.stream("GET", settings.db_release_url, follow_redirects=True, timeout=120) as r:
+        r.raise_for_status()
+        with tmp.open("wb") as fh:
+            for chunk in r.iter_bytes():
+                fh.write(chunk)
+    if target.exists():
+        shutil.copy(target, target.with_suffix(".db.bak"))
+    with gzip.open(tmp, "rb") as src, target.open("wb") as dst:
+        shutil.copyfileobj(src, dst)
+    tmp.unlink()
+    store = Store(target)  # runs any pending migrations
+    n = store.conn.execute("SELECT COUNT(*) FROM items").fetchone()[0]
+    store.close()
+    console.print(f"pulled {target} ({target.stat().st_size / 1e6:.1f} MB, {n} items); previous copy kept as {target.with_suffix('.db.bak').name}")
+
+
+@app.command()
 def freeze() -> None:
     """Write finished days' editions to editions/<date>.json (the workflow commits them)."""
     settings = load_settings()
@@ -325,6 +356,74 @@ def prune(vacuum: Annotated[bool, typer.Option("--vacuum", help="Also compact th
     store = Store(ROOT / settings.db_path)
     console.print(archive.prune(store, _now(), vacuum=vacuum))
     store.close()
+
+
+eval_app = typer.Typer(no_args_is_help=True, help="Check the labels: hand-labeled sample, agreement, bias audit.")
+app.add_typer(eval_app, name="eval")
+GOLD = ROOT / "tests" / "gold" / "labels.yaml"
+
+
+@eval_app.command("sample")
+def eval_sample(
+    n: Annotated[int, typer.Option("--n", help="Articles to sample.")] = 50,
+    force: Annotated[bool, typer.Option("--force", help="Overwrite an existing gold file.")] = False,
+) -> None:
+    """Write a blind, stratified sample to tests/gold/labels.yaml for hand labeling."""
+    from quiet_ai import evaluate
+
+    if GOLD.exists() and evaluate.load_gold(GOLD) and not force:
+        raise typer.BadParameter(f"{GOLD} already has hand labels; use --force to replace it")
+    settings, sources = load_settings(), load_sources()
+    store = Store(ROOT / settings.db_path)
+    items = evaluate.sample(store, sources, n)
+    evaluate.write_gold(items, GOLD)
+    console.print(f"wrote {len(items)} articles to {GOLD.relative_to(ROOT)}; fill in track, frame and stance, then run: qa eval score")
+    store.close()
+
+
+@eval_app.command("score")
+def eval_score() -> None:
+    """Agreement between the model's labels and the hand labels, per field."""
+    from quiet_ai import evaluate
+
+    settings = load_settings()
+    store = Store(ROOT / settings.db_path)
+    res = evaluate.score(store, evaluate.load_gold(GOLD))
+    store.close()
+    if not res["n"]:
+        console.print(f"no hand labels yet in {GOLD.relative_to(ROOT)} (run qa eval sample, then fill it in)")
+        return
+    table = Table(title=f"agreement with hand labels (n={res['n']})")
+    for col in ("field", "agree", "n"):
+        table.add_column(col, justify="left" if col == "field" else "right")
+    for field in ("track", "frame", "stance_exact", "stance_within_1"):
+        table.add_row(field.replace("_", " "), f"{res[field]['agree']}%" if res[field]["agree"] is not None else "-", str(res[field]["n"]))
+    console.print(table)
+    console.print(f"stance mean absolute error: {res['stance_mae']}; within 1 by model confidence: "
+                  + ", ".join(f"{k} {v['agree']}% (n={v['n']})" for k, v in res["stance_within_1_by_confidence"].items()))
+    if res["missing"]:
+        console.print(f"[yellow]{res['missing']} hand-labeled items have no model label in this database (pruned or not pulled)[/]")
+
+
+@eval_app.command("audit")
+def eval_audit(
+    by: Annotated[str, typer.Option("--by", help="group, type or country")] = "group",
+    min_n: Annotated[int, typer.Option("--min-n")] = 10,
+) -> None:
+    """Stance distribution by outlet group, type or country, to spot skew in the classifier."""
+    from quiet_ai import evaluate
+
+    settings, sources = load_settings(), load_sources()
+    store = Store(ROOT / settings.db_path)
+    rows = evaluate.audit(store, sources, by=by, min_n=min_n)
+    store.close()
+    table = Table(title=f"stance by outlet {by} (confident labels; -2 critical .. +2 enthusiastic)")
+    for col in (by, "labels", "mean", "critical", "positive", "unclear"):
+        table.add_column(col, justify="left" if col == by else "right")
+    for r in rows:
+        table.add_row(str(r["key"]), str(r["n"]), f"{r['mean']:+.2f}" if r["mean"] is not None else "-",
+                      f"{r['critical']}%" if r["critical"] is not None else "-", f"{r['positive']}%" if r["positive"] is not None else "-", f"{r['unclear']}%")
+    console.print(table)
 
 
 @app.command()

@@ -14,7 +14,7 @@
 <header class="masthead">
   <div class="masthead-top">
     <p class="wordmark"><a href="{{ root }}">quiet ai</a></p>
-    <p class="dateline"><a href="{{ root }}">Today's overview</a><span class="sep">·</span><a href="{{ root }}archive/">Archive</a><span class="sep">·</span><span aria-current="page">About</span></p>
+    <p class="dateline"><a href="{{ root }}">Today's overview</a><span class="sep">·</span><a href="{{ root }}sentiment/">Index</a><span class="sep">·</span><a href="{{ root }}archive/">Archive</a><span class="sep">·</span><span aria-current="page">About</span></p>
   </div>
 </header>
 
@@ -23,7 +23,7 @@
 <p class="lede">Every morning at {{ a.publish_at }} Stockholm time, this page answers three questions: what happened in AI, how the press is framing it, and what people who build AI are actually making. It tries to do that in about five minutes of reading, without ads or noise.</p>
 
 <nav class="toc" aria-label="On this page">
-  <a href="#sources">Sources</a><a href="#steps">How a page is made</a><a href="#labels">Reading the labels</a><a href="#ranking">Ranking</a><a href="#periods">Time periods</a><a href="#limits">Limits</a><a href="#privacy">Privacy and cost</a><a href="#health">Source health</a>
+  <a href="#sources">Sources</a><a href="#steps">How a page is made</a><a href="#labels">Reading the labels</a><a href="#checking">Checking the labels</a><a href="#ranking">Ranking</a><a href="#gap">The gap</a><a href="#index">Sentiment index</a><a href="#periods">Time periods</a><a href="#limits">Limits</a><a href="#privacy">Privacy and cost</a><a href="#health">Source health</a>
 </nav>
 
 <section id="sources">
@@ -92,6 +92,26 @@
   <p>The colors are deliberately not red and blue: stance here has nothing to do with left and right. The small bar on each story shows the mix across all of its coverage, and "Headlines by stance" lists one headline per outlet with the quoted words the label rests on, so you can judge for yourself.</p>
 </section>
 
+<section id="checking">
+  <h2>Checking the labels</h2>
+  {% set ag = a.agreement %}
+  {% if ag.n %}
+  <p>A person labeled {{ ag.n }} articles by hand, chosen at random across angles and stances, without seeing the model's labels. The model agrees with them on the angle {{ ag.track.agree }}% of the time{% if ag.frame.n %}, on the frame {{ ag.frame.agree }}% (where both chose the same angle){% endif %}, and on the stance {{ ag.stance_exact.agree }}% exactly and {{ ag.stance_within_1.agree }}% within one step. The hand labels are in the repository, so you can check them too.</p>
+  {% else %}
+  <p>A blind sample of articles, spread across angles and stances, is being labeled by hand to measure how often the model agrees with a person. The numbers will appear here once that is done.</p>
+  {% endif %}
+  {% if a.audit %}
+  <p>Another check looks for skew: does the model call one group of outlets critical far more than the others? Average stance of confident labels, by outlet group, across {{ a.audit_labels|thousands }} labeled articles so far:</p>
+  <table class="weights audit">
+    <thead><tr><th>Outlets</th><th class="num">Articles</th><th class="num">Average</th><th class="num">Critical</th><th class="num">Positive</th></tr></thead>
+    <tbody>
+    {% for r in a.audit %}<tr><td>{{ r.label }}</td><td class="num">{{ r.n|thousands }}</td><td class="num">{{ r.mean|signed }}</td><td class="num">{{ r.critical }}%</td><td class="num">{{ r.positive }}%</td></tr>{% endfor %}
+    </tbody>
+  </table>
+  <p>Differences between groups are expected: opinion sections and public broadcasters do write about AI differently from the trade press. What would point to a problem is a group whose hand labels and model labels disagree in one direction. The hand-labeled sample is what tells those apart.</p>
+  {% endif %}
+</section>
+
 <section id="ranking">
   <h2>Ranking</h2>
   <p>A story ranks high when many different kinds of sources pick it up, not when one source shouts. Each signal is scaled from 0 to 1 across the stories in view, then weighted:</p>
@@ -102,6 +122,21 @@
   </table>
   <p>Counts like outlets and countries grow on a gentle curve, so 14 outlets stays well ahead of 2. Signals from a single platform, like Hacker News points or GitHub stars, are ranked rather than added up, so a viral thread can't outweigh broad coverage. Older activity counts for less, more gently in longer views.</p>
   <p><strong>Most mentioned</strong> lists the names (companies, people, products, places) that the most outlets mentioned in the period, each outlet counted once. <strong>Rising</strong> lists the builder projects gaining the most stars, likes or upvotes, grouped by what they are.</p>
+</section>
+
+<section id="gap">
+  <h2>The gap</h2>
+  <p>Two short lists on the front page show where builders and the press are looking at different things.</p>
+  <ul>
+    <li><strong>Builders are talking, press isn't:</strong> projects and threads in the top {{ 100 - a.gap.builder_min_pct }}% of the period on Hacker News points, GitHub stars per day or Hugging Face trending, with real volume behind them (at least {{ a.gap.floors.hn_points }} points, {{ a.gap.floors.star_velocity }} stars a day or a trending score of {{ a.gap.floors.hf_trending }}), that {{ "no outlet" if a.gap.quiet_max_outlets == 0 else "at most one outlet" }} covered.</li>
+    <li><strong>Press is talking, builders aren't:</strong> stories covered by {{ a.gap.loud_min_outlets }} or more outlets with little or no discussion on Hacker News, GitHub, Hugging Face or Bluesky.</li>
+  </ul>
+  <p>Neither list is a judgment. A model release the press missed may simply be early; a policy story builders ignore may matter a great deal.</p>
+</section>
+
+<section id="index">
+  <h2>Sentiment index</h2>
+  <p>One number per day for how positive or critical the coverage of AI is, from −2 to +2, overall and for each angle. Each outlet's labels for the day are averaged first (confident labels count fully, medium-confidence ones {{ (a.sentiment.medium_weight * 100)|round|int }}%, unclear ones not at all), then the outlets are averaged, so prolific outlets don't dominate. A day needs at least {{ a.sentiment.min_outlets }} outlets to get a value. The front page shows the average for the period you're viewing; the <a href="{{ root }}sentiment/">index page</a> has the daily history and a table.</p>
 </section>
 
 <section id="periods">
