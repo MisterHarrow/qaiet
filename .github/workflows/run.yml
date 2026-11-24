@@ -1,0 +1,99 @@
+name: run
+
+# Every 2 hours: restore the database, run the whole pipeline, save the database,
+# commit any newly frozen daily editions, and deploy the site to GitHub Pages.
+on:
+  schedule:
+    - cron: "17 */2 * * *"   # :17 past every second hour (UTC), away from the top-of-hour rush
+  workflow_dispatch:
+
+permissions:
+  contents: write   # commit frozen editions, store the database as a release asset
+  pages: write
+  id-token: write
+
+concurrency:
+  group: quiet-ai-run      # never two runs on the same database
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GITHUB_TOKEN: ${{ github.token }}        # GitHub search: 30 requests/min instead of 10
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: astral-sh/setup-uv@v10
+        with:
+          python-version: "3.12"
+          enable-cache: true
+
+      - name: Cache the embedding model
+        uses: actions/cache@v6
+        with:
+          path: .cache/fastembed
+          key: fastembed-paraphrase-multilingual-MiniLM-L12-v2
+
+      - name: Restore database
+        run: |
+          mkdir -p data
+          if gh release download db --pattern quiet-ai.db.gz --dir data; then
+            gunzip -f data/quiet-ai.db.gz
+            ls -lh data/quiet-ai.db
+          else
+            echo "No saved database yet: starting fresh."
+          fi
+
+      - name: Install
+        run: uv sync --frozen
+
+      - name: Run pipeline
+        run: uv run qa run
+
+      - name: Save database
+        if: always() && hashFiles('data/quiet-ai.db') != ''
+        run: |
+          gzip -kf data/quiet-ai.db
+          gh release view db >/dev/null 2>&1 || gh release create db --prerelease --title "Database" \
+            --notes "SQLite state of quiet-ai, replaced on every run. It holds only what the site shows: headlines, short summaries, links and the labels. Daily snapshots are kept for 14 days."
+          gh release upload db data/quiet-ai.db.gz --clobber
+          snapshot="quiet-ai-$(date -u +%Y-%m-%d).db.gz"
+          cp data/quiet-ai.db.gz "$snapshot"
+          gh release upload db "$snapshot" --clobber
+          cutoff=$(date -u -d '14 days ago' +%Y-%m-%d)
+          for asset in $(gh release view db --json assets --jq '.assets[].name' | grep -E '^quiet-ai-[0-9-]+\.db\.gz$'); do
+            day=${asset#quiet-ai-}; day=${day%.db.gz}
+            if [[ "$day" < "$cutoff" ]]; then gh release delete-asset db "$asset" -y; fi
+          done
+
+      - name: Commit frozen editions
+        run: |
+          git add editions
+          if git diff --cached --quiet; then
+            echo "No new frozen editions."
+          else
+            git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+              commit -m "Freeze editions $(ls editions/*.json | tail -1 | xargs basename -s .json)"
+            git pull --rebase --quiet
+            git push
+          fi
+
+      - uses: actions/configure-pages@v6
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: site
+
+  deploy:
+    needs: run
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5

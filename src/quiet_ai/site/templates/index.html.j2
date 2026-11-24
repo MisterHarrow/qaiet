@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>quiet ai · {{ period.label }} · {{ date_long }}</title>
+<title>quiet ai · {% if frozen_date %}{{ frozen_date }}{% else %}{{ period.label }} · {{ date_long }}{% endif %}</title>
 <meta name="description" content="A quiet daily overview of AI: what happened, how it is framed, and what builders are making.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23f6f3ec'/%3E%3Cpath d='M8 20h16M8 14h11' stroke='%23302d28' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="{{ root }}static/style.css">
@@ -14,7 +14,7 @@
 <header class="masthead">
   <div class="masthead-top">
     <p class="wordmark"><a href="{{ root or './' }}">quiet ai</a></p>
-    <p class="dateline"><time datetime="{{ e.generated_at }}">{{ date_long }}</time> <span class="sep">·</span> updated {{ updated }} {{ tz_name }} <span class="sep">·</span> <a href="{{ root }}about/">About</a></p>
+    <p class="dateline">{% if frozen_date %}Edition of {{ frozen_date }}{% else %}<time datetime="{{ e.generated_at }}">{{ date_long }}</time> <span class="sep">·</span> updated {{ updated }} {{ tz_name }}{% endif %} <span class="sep">·</span> <a href="{{ root }}archive/">Archive</a> <span class="sep">·</span> <a href="{{ root }}about/">About</a></p>
   </div>
   {% if periods|length > 1 %}
   <nav class="periods" aria-label="Time period">
@@ -22,7 +22,10 @@
     {% for p in periods %}<a href="{{ p.href or './' }}"{% if p.active %} aria-current="page"{% endif %}>{{ p.label }}</a>{% endfor %}
   </nav>
   {% endif %}
-  {% if data_since %}
+  {% if frozen_date %}
+  <p class="partial">The front page as it stood at the end of {{ frozen_date }}, last updated {{ updated }} {{ tz_name }}. It no longer changes. <a href="{{ root }}">Today's overview</a></p>
+  {% endif %}
+  {% if data_since and not frozen_date %}
   <p class="partial">Collecting since {{ data_since }}, so this view covers less than {{ period.label }} so far. It fills in as the days pass.</p>
   {% endif %}
   {% if e.weather %}

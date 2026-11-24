@@ -132,6 +132,7 @@ llm:
 
 site:
   out_dir: site                   # qa build writes here; git-ignored
+  editions_dir: editions          # frozen daily editions (JSON), committed by the workflow
   timezone: Europe/Stockholm      # dates and times on the page
   # Views the reader can switch between. The first is the front page; the others live at /<key>/.
   # Each view ranks stories by activity inside its period; half_life_hours sets how much the

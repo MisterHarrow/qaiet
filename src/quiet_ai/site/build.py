@@ -56,21 +56,25 @@ def period_path(index: int, key: str) -> str:
     return "" if index == 0 else f"{key}/"
 
 
-def render(edition: dict, out_dir: Path, tz: str = "Europe/Stockholm", periods: list[dict] | None = None) -> Path:
-    """Render one view. `periods` lists every view ({key, label, path}) for the switcher."""
+def render(edition: dict, out_dir: Path, tz: str = "Europe/Stockholm", periods: list[dict] | None = None, rel_path: str | None = None) -> Path:
+    """Render one view. `periods` lists every view ({key, label, path}) for the switcher.
+    `rel_path` overrides where the page goes (used for archive pages, which get no switcher)."""
     period = edition.get("period") or {"key": "day", "label": "24 hours"}
-    periods = periods or [{"key": period["key"], "label": period["label"], "path": ""}]
-    me = next((p for p in periods if p["key"] == period["key"]), periods[0])
-    page_dir = out_dir / me["path"]
+    periods = periods if periods is not None else [{"key": period["key"], "label": period["label"], "path": ""}]
+    me = next((p for p in periods if p["key"] == period["key"]), {"path": ""})
+    rel = rel_path if rel_path is not None else me["path"]
+    page_dir = out_dir / rel
     page_dir.mkdir(parents=True, exist_ok=True)
-    root = "../" * me["path"].count("/")
+    root = "../" * rel.count("/")
     zone = ZoneInfo(tz)
     local = datetime.fromisoformat(edition["generated_at"]).astimezone(zone)
     for s in edition["stories"]:
         s["segments"] = stance_segments(s["stance"])
         s["stance_label"] = stance_label(s["stance"])
     since = edition.get("data_since")
+    frozen = edition.get("frozen")
     html = _env().get_template("index.html.j2").render(
+        frozen_date=_long_date(datetime.fromisoformat(frozen["date"])) if frozen else None,
         e=edition,
         root=root,
         period=period,
@@ -104,5 +108,25 @@ def render_about(context: dict, out_dir: Path, tz: str = "Europe/Stockholm") -> 
         a["health"] = {**a["health"], "at_local": datetime.fromisoformat(a["health"]["at"]).astimezone(zone).strftime("%H:%M")}
     html = _env().get_template("about.html.j2").render(a=a, root="../")
     (page_dir / "index.html").write_text(html, encoding="utf-8")
+    shutil.copytree(HERE / "static", out_dir / "static", dirs_exist_ok=True)
+    return page_dir / "index.html"
+
+
+def render_archive(editions: list[dict], out_dir: Path, tz: str = "Europe/Stockholm") -> Path:
+    """One frozen page per finished day, plus /archive/ listing them (newest first)."""
+    days = []
+    for e in editions:
+        date = e["frozen"]["date"]
+        render(e, out_dir, tz, periods=[], rel_path=f"archive/{date}/")
+        days.append({
+            "date": date,
+            "long": _long_date(datetime.fromisoformat(date)),
+            "weather": e.get("weather"),
+            "headlines": [s["headline"] for s in e.get("stories", [])[:3]],
+            "stories": len(e.get("stories", [])),
+        })
+    page_dir = out_dir / "archive"
+    page_dir.mkdir(parents=True, exist_ok=True)
+    (page_dir / "index.html").write_text(_env().get_template("archive.html.j2").render(days=days, root="../"), encoding="utf-8")
     shutil.copytree(HERE / "static", out_dir / "static", dirs_exist_ok=True)
     return page_dir / "index.html"

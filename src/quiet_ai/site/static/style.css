@@ -247,6 +247,13 @@ summary:hover { color: var(--ink); }
 .health { font-size: 0.92rem; }
 .prose section { scroll-margin-top: 1rem; }
 
+.archive-list { list-style: none; padding: 0 !important; margin-top: 1.6rem !important; }
+.archive-list > li { padding: 1.1rem 0; border-top: 1px solid var(--rule); margin: 0 !important; }
+.a-date { margin: 0 !important; font: 500 1.15rem/1.3 var(--serif); }
+.a-weather { margin: 0.3rem 0 0 !important; color: var(--muted); }
+.a-heads { margin: 0.5rem 0 0 !important; padding-left: 1.1rem !important; font-size: 0.92rem; }
+.a-heads li { margin: 0.2rem 0 !important; }
+
 /* Footer */
 .colophon { margin-top: 3rem; padding-top: 1.3rem; border-top: 1px solid var(--rule); font-size: 0.82rem; color: var(--muted); }
 .colophon p { margin: 0 0 0.75rem; max-width: 46rem; }

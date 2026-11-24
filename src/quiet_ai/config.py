@@ -200,6 +200,7 @@ def _default_periods() -> list[PeriodSettings]:
 
 class SiteSettings(_Model):
     out_dir: str = "site"
+    editions_dir: str = "editions"
     timezone: str = "Europe/Stockholm"
     periods: list[PeriodSettings] = Field(default_factory=_default_periods)  # first one is the front page
     period_merge_threshold: float = 0.72

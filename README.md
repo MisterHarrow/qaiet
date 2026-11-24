@@ -2,7 +2,7 @@
 
 A calm, text-first page that answers once a day: what happened in AI, how is it being framed, and what are builders actually making?
 
-Status: **M4 (site)**. Sources are fetched, filtered for AI relevance, grouped into stories, labeled (track, frame, stance, evidence), ranked by momentum, summarized and rendered as a static page. Deploy comes in M5. Notes per milestone: [M0 plan and sources](docs/m0-report.md), [M2 relevance and clustering](docs/m2-notes.md), [M3 labels, momentum, costs](docs/m3-notes.md), [M4 site](docs/m4-notes.md).
+Status: **M5 (automation)**. Sources are fetched, filtered for AI relevance, grouped into stories, labeled (track, frame, stance, evidence), ranked by momentum, summarized and rendered as a static page, rebuilt and deployed every 2 hours by GitHub Actions. Notes per milestone: [M0 plan and sources](docs/m0-report.md), [M2 relevance and clustering](docs/m2-notes.md), [M3 labels, momentum, costs](docs/m3-notes.md), [M4 site](docs/m4-notes.md).
 
 ## Setup
 
@@ -65,3 +65,29 @@ The embedding model (~220 MB) downloads to `.cache/fastembed` on first use.
 ```sh
 uv run qa ingest --record        # live fetch, writes fixtures, stores nothing
 ```
+
+## Deploy (GitHub Actions + Pages)
+
+`.github/workflows/run.yml` runs every 2 hours (and on demand from the Actions tab):
+
+1. Restores `data/quiet-ai.db` from the `db` release (gzipped asset).
+2. `uv run qa run`: ingest, stories, labels, summaries, the site, plus:
+   - stores today's front page as the day's edition;
+   - after midnight Stockholm, freezes the finished day to `editions/<date>.json`;
+   - prunes old data (items not about AI after 15 days, everything after 400 days; snapshots thinned after 7 days).
+3. Uploads the database back to the release, plus a dated daily snapshot (14 kept).
+4. Commits new frozen editions. The daily commit also keeps GitHub from pausing the schedule after 60 days of inactivity.
+5. Deploys `site/` to GitHub Pages.
+
+One-time setup:
+
+```sh
+gh secret set ANTHROPIC_API_KEY --repo <owner>/quiet-ai   # paste the key when asked
+gh api -X POST repos/<owner>/quiet-ai/pages -f build_type=workflow
+```
+
+Without the secret the pipeline still runs and deploys, with no labels or summaries.
+
+`.github/workflows/test.yml` runs the tests on every push.
+
+Other commands: `qa freeze` (write finished days now), `qa prune [--vacuum]`.

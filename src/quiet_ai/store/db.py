@@ -11,7 +11,7 @@ from pathlib import Path
 
 from quiet_ai.store.models import Item
 
-SCHEMA_VERSION = 3
+SCHEMA_VERSION = 4
 
 # Applied in order to databases older than the version key. SCHEMA below is version 1.
 MIGRATIONS: dict[int, list[str]] = {
@@ -91,6 +91,13 @@ MIGRATIONS: dict[int, list[str]] = {
         "ALTER TABLE stories ADD COLUMN momentum REAL",
         "ALTER TABLE stories ADD COLUMN features TEXT",
         "ALTER TABLE stories ADD COLUMN scored_at TEXT",
+    ],
+    4: [
+        # The front-page edition as last built on each local date; frozen to editions/<date>.json once the date is over.
+        """CREATE TABLE IF NOT EXISTS editions (
+            date       TEXT PRIMARY KEY,
+            data       TEXT NOT NULL,
+            updated_at TEXT NOT NULL)""",
     ],
 }
 

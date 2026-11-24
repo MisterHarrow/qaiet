@@ -16,6 +16,7 @@ from quiet_ai.config import ROOT, load_accounts, load_dotenv, load_settings, loa
 from quiet_ai.fetchers.base import Context, run_tasks
 from quiet_ai.http import Http
 from quiet_ai.llm.client import LLM
+from quiet_ai.pipeline import archive
 from quiet_ai.pipeline import edition as edition_mod
 from quiet_ai.pipeline import momentum
 from quiet_ai.pipeline import stories as story_views
@@ -178,10 +179,14 @@ def _analyze_and_print(store: Store, now: datetime, dry_run: bool, no_llm: bool,
     ed = edition_mod.build(store, settings, sources, res.scores, res.rising, now, settings.analysis.top_stories)
     render(console, ed)
     if build_site:
-        out = ROOT / settings.site.out_dir
-        pages = site_build.render_all(_editions(store, settings, sources, now, res.views), out, settings.site.timezone)
-        site_build.render_about(about_context(store, settings, sources, load_accounts(), now), out, settings.site.timezone)
-        console.print(f"[dim]site: {len(pages)} views and /about in {out}[/]")
+        tz = settings.site.timezone
+        editions = _editions(store, settings, sources, now, res.views)
+        archive.save_day_edition(store, editions[0], now, tz)
+        frozen = archive.freeze(store, ROOT / settings.site.editions_dir, now, tz)
+        pruned = archive.prune(store, now, vacuum=bool(frozen))
+        _render_site(store, settings, sources, now, editions, ROOT / settings.site.out_dir)
+        console.print(f"[dim]site: {len(editions)} views, /about, /archive in {settings.site.out_dir}/; "
+                      f"froze {', '.join(frozen) or 'nothing'}; pruned {sum(pruned.values())} rows[/]")
     n, b, s = res.news, res.builders, res.summaries
     cost = llm.cost_usd if llm else 0.0
     console.print(f"\n[dim]labels: {n.labeled} news ({n.from_cache} cached, {n.low_confidence} low confidence, "
@@ -253,14 +258,21 @@ def _editions(store: Store, settings, sources, now: datetime, views=None) -> lis
     return [edition_mod.build(store, settings, sources, v.scores, v.rising, now, settings.analysis.top_stories, v.period) for v in views.values()]
 
 
+def _render_site(store: Store, settings, sources, now: datetime, editions: list[dict], out: Path) -> Path:
+    """Every view, /about and /archive (from the frozen files in editions/)."""
+    tz = settings.site.timezone
+    pages = site_build.render_all(editions, out, tz)
+    site_build.render_about(about_context(store, settings, sources, load_accounts(), now), out, tz)
+    site_build.render_archive(archive.load_frozen(ROOT / settings.site.editions_dir), out, tz)
+    return pages[0]
+
+
 def _build_site(dry_run: bool, out: Path | None) -> Path:
     settings, sources = load_settings(), load_sources()
     store, now = _open(dry_run)
-    target = out or ROOT / settings.site.out_dir
-    pages = site_build.render_all(_editions(store, settings, sources, now), target, settings.site.timezone)
-    site_build.render_about(about_context(store, settings, sources, load_accounts(), now), target, settings.site.timezone)
+    page = _render_site(store, settings, sources, now, _editions(store, settings, sources, now), out or ROOT / settings.site.out_dir)
     store.close()
-    return pages[0]
+    return page
 
 
 Out = Annotated[Path | None, typer.Option("--out", help="Output directory (default: site.out_dir).")]
@@ -294,6 +306,25 @@ def serve(
             httpd.serve_forever()
         except KeyboardInterrupt:
             pass
+
+
+@app.command()
+def freeze() -> None:
+    """Write finished days' editions to editions/<date>.json (the workflow commits them)."""
+    settings = load_settings()
+    store = Store(ROOT / settings.db_path)
+    written = archive.freeze(store, ROOT / settings.site.editions_dir, _now(), settings.site.timezone)
+    console.print(f"froze {', '.join(written) or 'nothing new'}")
+    store.close()
+
+
+@app.command()
+def prune(vacuum: Annotated[bool, typer.Option("--vacuum", help="Also compact the file.")] = False) -> None:
+    """Delete data the site no longer needs (see pipeline/archive.py for the rules)."""
+    settings = load_settings()
+    store = Store(ROOT / settings.db_path)
+    console.print(archive.prune(store, _now(), vacuum=vacuum))
+    store.close()
 
 
 @app.command()
