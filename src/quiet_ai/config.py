@@ -39,6 +39,7 @@ class FeedSource(_Model):
     sitemap: str | None = None  # for sites with no feed: read new URLs from the sitemap
     sitemap_include: str | None = None  # regex the URL must match
     sitemap_max_pages: int = 15  # pages read per run (only URLs not seen before)
+    ai_focused: bool = False  # an AI-only feed: every item counts as relevant
     enabled: bool = True
 
 
@@ -97,6 +98,7 @@ class GithubSettings(_Model):
     established_topics: list[str] = Field(default_factory=list)
     established_min_stars: int = 1000
     established_pushed_within_days: int = 2
+    clone_spam_min: int = 3
 
 
 class HuggingFaceSettings(_Model):
@@ -125,7 +127,45 @@ class GdeltSettings(_Model):
     timespan: str = "1d"
     max_records: int = 250
     max_query_chars: int = 180
+    source_lang: str | None = "english"
     terms: list[str] = Field(default_factory=lambda: ['"artificial intelligence"'])
+
+
+class RelevanceSettings(_Model):
+    always_kinds: list[str] = Field(default_factory=lambda: ["repo", "model", "dataset", "space", "paper", "launch"])
+    always_sources: list[str] = Field(default_factory=lambda: ["hf_posts"])
+    llm_batch_size: int = 25
+    prompt: str = "relevance_v1"
+
+
+class EmbedSettings(_Model):
+    model: str = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+    cache_dir: str = ".cache/fastembed"
+    summary_chars: int = 300
+    keep_days: int = 7
+
+
+class ClusterSettings(_Model):
+    window_hours: int = 72
+    join_threshold: float = 0.62
+    strict_join_threshold: float = 0.8
+    strict_kinds: list[str] = Field(default_factory=lambda: ["repo", "model", "dataset", "space", "paper", "launch"])
+    merge_threshold: float = 0.76
+    entity_boost: float = 0.03
+
+
+class ModelPrice(_Model):
+    input: float
+    output: float
+    cache_read: float = 0.0
+    cache_write: float = 0.0
+
+
+class LLMSettings(_Model):
+    item_model: str = "claude-haiku-5-5"
+    story_model: str = "claude-sonnet-5-5"
+    monthly_budget_usd: float = 30
+    prices: dict[str, ModelPrice] = Field(default_factory=dict)  # USD per million tokens
 
 
 class Settings(_Model):
@@ -138,11 +178,31 @@ class Settings(_Model):
     bluesky: BlueskySettings = Field(default_factory=BlueskySettings)
     openrouter: OpenRouterSettings = Field(default_factory=OpenRouterSettings)
     gdelt: GdeltSettings = Field(default_factory=GdeltSettings)
+    relevance: RelevanceSettings = Field(default_factory=RelevanceSettings)
+    embed: EmbedSettings = Field(default_factory=EmbedSettings)
+    cluster: ClusterSettings = Field(default_factory=ClusterSettings)
+    llm: LLMSettings = Field(default_factory=LLMSettings)
 
 
 def _yaml(path: Path) -> dict:
     with path.open(encoding="utf-8") as fh:
         return yaml.safe_load(fh) or {}
+
+
+def load_dotenv(path: Path = ROOT / ".env") -> None:
+    """Minimal .env support: KEY=value lines; never overrides the real environment."""
+    import os
+
+    if not path.exists():
+        return
+    for line in path.read_text().splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, value = line.split("=", 1)
+        value = value.strip().strip('"').strip("'")
+        if value and key.strip() not in os.environ:
+            os.environ[key.strip()] = value
 
 
 def load_settings(config_dir: Path = CONFIG_DIR) -> Settings:

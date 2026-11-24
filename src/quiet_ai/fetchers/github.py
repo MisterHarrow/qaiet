@@ -7,6 +7,8 @@ not used (no API, and GitHub's Acceptable Use Policy doesn't cover scraping it f
 from __future__ import annotations
 
 import os
+import re
+from collections import defaultdict
 from datetime import timedelta
 
 from quiet_ai.fetchers.base import Context, Task
@@ -50,7 +52,18 @@ def fetch(ctx: Context) -> list[Item]:
                 repos[item.id].extra["queries"] += item.extra["queries"]
             else:
                 repos[item.id] = item
-    return list(repos.values())
+    return drop_clone_spam(list(repos.values()), g.clone_spam_min)
+
+
+def drop_clone_spam(items: list[Item], min_owners: int) -> list[Item]:
+    """Star-farmed spam shows up as many owners publishing the same repo name
+    ("manus--ai", "ai--manus2.0", ...). Drop every repo in such a group."""
+    groups: dict[str, set[str]] = defaultdict(set)
+    # Word order varies ("manus--ai" / "ai--manus2.0"): compare the set of words.
+    key = lambda it: " ".join(sorted(set(re.findall(r"[a-z]+", it.title.split("/", 1)[-1].lower()))))  # noqa: E731
+    for it in items:
+        groups[key(it)].add(it.author or "")
+    return [it for it in items if len(groups[key(it)]) < min_owners or not key(it)]
 
 
 def to_item(repo: dict, ctx: Context) -> Item:

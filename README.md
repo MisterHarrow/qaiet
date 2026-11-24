@@ -2,13 +2,13 @@
 
 A calm, text-first page that answers once a day: what happened in AI, how is it being framed, and what are builders actually making?
 
-Status: **M1 (ingest)**. Sources are fetched into SQLite. Clustering, labels, and the site come in later milestones. The plan and the source verification are in [docs/m0-report.md](docs/m0-report.md).
+Status: **M2 (stories)**. Sources are fetched into SQLite, filtered for AI relevance and grouped into stories. Labels, ranking and the site come in later milestones. Plan and source verification: [docs/m0-report.md](docs/m0-report.md). Relevance and clustering decisions: [docs/m2-notes.md](docs/m2-notes.md).
 
 ## Setup
 
 ```sh
 uv sync
-cp .env.example .env   # optional: GITHUB_TOKEN
+cp .env.example .env   # ANTHROPIC_API_KEY (relevance of ambiguous items, translations), optional GITHUB_TOKEN
 ```
 
 ## Commands
@@ -17,6 +17,8 @@ cp .env.example .env   # optional: GITHUB_TOKEN
 uv run qa ingest                 # fetch every source, store new items in data/quiet-ai.db
 uv run qa ingest -s github -s nyt  # only some sources or fetchers
 uv run qa ingest --dry-run       # replay recorded fixtures: no network, nothing written
+uv run qa cluster                # relevance filter, embeddings, stories; prints the current stories
+uv run qa cluster --dry-run      # same on fixtures, no network, no LLM
 uv run qa sources check          # fetch every source once and report health (writes nothing)
 uv run qa sources check --dry-run --strict
 uv run qa sources list
@@ -45,7 +47,9 @@ Courtesy rules, enforced in `src/quiet_ai/http.py`:
 
 ## Data
 
-SQLite at `data/quiet-ai.db` (git-ignored). Tables: `items` (one row per item, upserted, so runs are idempotent), `metric_snapshots` (stars/points/likes per run, for velocity), `fetch_state` (ETags), `runs` and `source_runs` (per-source health for every run).
+SQLite at `data/quiet-ai.db` (git-ignored). Tables: `items` (one row per item, upserted, so runs are idempotent; plus relevance, English title and story), `metric_snapshots` (stars/points/likes per run, for velocity), `embeddings` (last 7 days), `stories` (stable IDs, centroids), `llm_cache` and `llm_calls` (per-item results, tokens and cost), `fetch_state` (ETags), `runs` and `source_runs` (per-source health for every run).
+
+The embedding model (~220 MB) downloads to `.cache/fastembed` on first use.
 
 ## Fixtures
 

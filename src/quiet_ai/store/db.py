@@ -11,7 +11,55 @@ from pathlib import Path
 
 from quiet_ai.store.models import Item
 
-SCHEMA_VERSION = 1
+SCHEMA_VERSION = 2
+
+# Applied in order to databases older than the version key. SCHEMA below is version 1.
+MIGRATIONS: dict[int, list[str]] = {
+    2: [
+        "ALTER TABLE items ADD COLUMN title_en TEXT",        # English title (translation for non-English items)
+        "ALTER TABLE items ADD COLUMN relevant INTEGER",     # 1 about AI, 0 not, NULL undecided
+        "ALTER TABLE items ADD COLUMN relevance_by TEXT",    # kind | source | keyword | ambiguous | llm
+        "ALTER TABLE items ADD COLUMN dup_of TEXT",          # near-duplicate of another item from the same source
+        "ALTER TABLE items ADD COLUMN story_id TEXT",
+        "CREATE INDEX IF NOT EXISTS items_story ON items(story_id)",
+        "CREATE INDEX IF NOT EXISTS items_relevant ON items(relevant)",
+        """CREATE TABLE IF NOT EXISTS embeddings (
+            item_id    TEXT PRIMARY KEY REFERENCES items(id) ON DELETE CASCADE,
+            model      TEXT NOT NULL,
+            vector     BLOB NOT NULL,               -- float32, L2-normalized
+            created_at TEXT NOT NULL)""",
+        """CREATE TABLE IF NOT EXISTS stories (
+            id            TEXT PRIMARY KEY,         -- derived from the founding item, stable across runs
+            created_at    TEXT NOT NULL,
+            updated_at    TEXT NOT NULL,
+            first_item_at TEXT,
+            last_item_at  TEXT,
+            item_count    INTEGER NOT NULL DEFAULT 0,
+            centroid      BLOB,
+            model         TEXT,
+            merged_into   TEXT)""",
+        """CREATE TABLE IF NOT EXISTS llm_cache (
+            task           TEXT NOT NULL,
+            prompt_version TEXT NOT NULL,
+            content_hash   TEXT NOT NULL,
+            model          TEXT NOT NULL,
+            result         TEXT NOT NULL,
+            created_at     TEXT NOT NULL,
+            PRIMARY KEY (task, prompt_version, content_hash))""",
+        """CREATE TABLE IF NOT EXISTS llm_calls (
+            id                 INTEGER PRIMARY KEY AUTOINCREMENT,
+            run_id             TEXT,
+            task               TEXT NOT NULL,
+            model              TEXT NOT NULL,
+            input_tokens       INTEGER NOT NULL DEFAULT 0,
+            output_tokens      INTEGER NOT NULL DEFAULT 0,
+            cache_read_tokens  INTEGER NOT NULL DEFAULT 0,
+            cache_write_tokens INTEGER NOT NULL DEFAULT 0,
+            cost_usd           REAL NOT NULL DEFAULT 0,
+            error              TEXT,
+            created_at         TEXT NOT NULL)""",
+    ],
+}
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS items (
@@ -101,6 +149,11 @@ class Store:
     def migrate(self) -> None:
         with self.conn:
             self.conn.executescript(SCHEMA)
+            row = self.conn.execute("SELECT value FROM meta WHERE key = 'schema_version'").fetchone()
+            current = int(row["value"]) if row else 1
+            for version in sorted(v for v in MIGRATIONS if v > current):
+                for stmt in MIGRATIONS[version]:
+                    self.conn.execute(stmt)
             self.conn.execute(
                 "INSERT INTO meta(key, value) VALUES ('schema_version', ?) "
                 "ON CONFLICT(key) DO UPDATE SET value = excluded.value",

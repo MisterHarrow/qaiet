@@ -309,7 +309,7 @@
   "content_type": "application/json; charset=utf-8",
   "file": "gdelt_artlist_0.json",
   "status": 200,
-  "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial+intelligence%22+OR+OpenAI+OR+chatbot+OR+Nvidia+OR+DeepSeek%29+%28domain%3Areuters.com+OR+domain%3Aapnews.com+OR+domain%3Acnn.com+OR+domain%3Axinhuanet.com+OR+domain%3Anews.cn%29&mode=artlist&format=json&maxrecords=250&timespan=1d&sort=datedesc"
+  "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial+intelligence%22+OR+OpenAI+OR+chatbot+OR+Nvidia+OR+DeepSeek%29+%28domain%3Areuters.com+OR+domain%3Aapnews.com+OR+domain%3Acnn.com+OR+domain%3Axinhuanet.com%29+sourcelang%3Aenglish&mode=artlist&format=json&maxrecords=250&timespan=1d&sort=datedesc"
  },
  "gdelt:artlist:1": {
   "content_type": "application/json; charset=utf-8",

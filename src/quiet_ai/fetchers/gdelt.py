@@ -12,7 +12,8 @@ from quiet_ai.text import canonical_url, clean_text, url_id
 
 NAME = "gdelt"
 API = "https://api.gdeltproject.org/api/v2/doc/doc"
-_LANG = {"english": "en", "chinese": "zh", "french": "fr", "german": "de", "spanish": "es", "swedish": "sv"}
+_LANG = {"english": "en", "chinese": "zh", "french": "fr", "german": "de", "spanish": "es", "swedish": "sv",
+         "korean": "ko", "japanese": "ja", "russian": "ru", "arabic": "ar", "portuguese": "pt", "italian": "it"}
 
 
 def tasks(ctx: Context) -> list[Task]:
@@ -21,21 +22,22 @@ def tasks(ctx: Context) -> list[Task]:
     return [Task("gdelt", NAME, lambda: fetch(ctx))]
 
 
-def build_query(terms: list[str], domains: list[str]) -> str:
+def build_query(terms: list[str], domains: list[str], lang: str | None = None) -> str:
     dom = " OR ".join(f"domain:{d}" for d in domains)
-    return f"({' OR '.join(terms)}) ({dom})" if len(domains) > 1 else f"({' OR '.join(terms)}) {dom}"
+    q = f"({' OR '.join(terms)}) ({dom})" if len(domains) > 1 else f"({' OR '.join(terms)}) {dom}"
+    return f"{q} sourcelang:{lang}" if lang else q
 
 
-def build_queries(terms: list[str], outlets: list[GdeltOutlet], max_chars: int) -> list[str]:
+def build_queries(terms: list[str], outlets: list[GdeltOutlet], max_chars: int, lang: str | None = None) -> list[str]:
     """GDELT rejects long queries ("too short or too long"), so pack domains into several."""
     queries, group = [], []
     for d in [d for o in outlets for d in o.domains]:
-        if group and len(build_query(terms, group + [d])) > max_chars:
-            queries.append(build_query(terms, group))
+        if group and len(build_query(terms, group + [d], lang)) > max_chars:
+            queries.append(build_query(terms, group, lang))
             group = []
         group.append(d)
     if group:
-        queries.append(build_query(terms, group))
+        queries.append(build_query(terms, group, lang))
     return queries
 
 
@@ -51,7 +53,7 @@ def fetch(ctx: Context) -> list[Item]:
     g = ctx.settings.gdelt
     outlets = [o for o in ctx.sources.gdelt_outlets if o.enabled]
     articles = []
-    for i, query in enumerate(build_queries(g.terms, outlets, g.max_query_chars)):
+    for i, query in enumerate(build_queries(g.terms, outlets, g.max_query_chars, g.source_lang)):
         r = ctx.http.get(
             API,
             key=f"gdelt:artlist:{i}",
@@ -75,7 +77,7 @@ def fetch(ctx: Context) -> list[Item]:
         if not outlet or not title or not a.get("url"):
             continue
         url = canonical_url(a["url"])
-        lang = _LANG.get((a.get("language") or "").lower(), outlet.language)
+        lang = _LANG.get((a.get("language") or "").lower())
         items.append(
             Item(
                 id=url_id(url),

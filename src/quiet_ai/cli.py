@@ -12,10 +12,13 @@ import typer
 from rich.console import Console
 from rich.table import Table
 
-from quiet_ai.config import ROOT, load_accounts, load_settings, load_sources
+from quiet_ai.config import ROOT, load_accounts, load_dotenv, load_settings, load_sources
 from quiet_ai.fetchers.base import Context, run_tasks
 from quiet_ai.http import Http
+from quiet_ai.llm.client import LLM
+from quiet_ai.pipeline import stories as story_views
 from quiet_ai.pipeline.ingest import build_tasks, ingest as run_ingest
+from quiet_ai.pipeline.process import default_embedder, run_cluster
 from quiet_ai.store.db import Store
 
 FIXTURES = ROOT / "tests" / "fixtures" / "http"
@@ -100,6 +103,53 @@ def ingest(
     console.print("sources: " + ", ".join(f"{k} {v}" for k, v in by_status.most_common()))
     console.print("items by kind: " + ", ".join(f"{k} {v}" for k, v in by_kind.most_common()))
     console.print(f"new items stored: {sum(r.new for r in reports)}" + ("  (in memory only)" if mode != "live" else ""))
+    store.close()
+
+
+@app.command()
+def cluster(
+    dry_run: DryRun = False,
+    no_llm: Annotated[bool, typer.Option("--no-llm", help="Keyword relevance only; skip Haiku.")] = False,
+    limit: Annotated[int, typer.Option("--limit", "-n", help="Stories to print.")] = 15,
+    singles: Annotated[bool, typer.Option("--singles", help="Also print one-item stories.")] = False,
+) -> None:
+    """Relevance filter, embeddings and story clustering; prints the current stories."""
+    load_dotenv()
+    settings, sources = load_settings(), load_sources()
+    if dry_run:
+        store = Store(":memory:")
+        ctx = _context("replay")
+        run_ingest(ctx, store, dry_run=True)
+        ctx.http.close()
+        now = ctx.now
+    else:
+        store = Store(ROOT / settings.db_path)
+        now = _now()
+    run_id = store.start_run("cluster", dry_run, now)
+    llm = None if (dry_run or no_llm) else LLM(settings.llm, store, run_id)
+    embedder = default_embedder(settings, offline=dry_run)
+    result = run_cluster(store, settings, sources, now, llm, embedder)
+    store.finish_run(run_id, _now())
+
+    views = story_views.active(store, sources, now, settings.cluster.window_hours)
+    shown = [v for v in views if singles or v.items > 1]
+    table = Table(title=f"stories, last {settings.cluster.window_hours}h ({now:%Y-%m-%d %H:%M} UTC)")
+    for col in ("#", "story", "items", "outlets", "sources"):
+        table.add_column(col, justify="right" if col in ("#", "items", "outlets") else "left", overflow="fold")
+    for n, v in enumerate(shown[:limit], 1):
+        srcs = ", ".join(v.sources[:5]) + (f" +{len(v.sources) - 5}" if len(v.sources) > 5 else "")
+        kinds = " ".join(f"{k}:{c}" for k, c in v.kinds.most_common())
+        table.add_row(str(n), v.title[:90], str(v.items), str(len(v.outlets)), f"{srcs}\n[dim]{kinds}[/]")
+    console.print(table)
+
+    r, cl = result.relevance, result.cluster
+    console.print("relevance: " + ", ".join(f"{k} {v}" for k, v in sorted(r.by.items())) +
+                  f"; duplicates {r.duplicates}; haiku {r.llm_items} items in {r.llm_calls} calls (${r.llm_cost_usd:.4f}); undecided {r.pending}")
+    if r.note:
+        console.print(f"[yellow]note: {r.note}[/]")
+    console.print(f"embedded {result.embedded} with {result.embedder}; placed {cl.placed} items: "
+                  f"{cl.by_link} by link, {cl.by_similarity} by similarity, {cl.new_stories} new stories, {cl.merged} merged")
+    console.print(f"active stories: {len(views)} ({sum(v.items > 1 for v in views)} with 2+ items)")
     store.close()
 
 

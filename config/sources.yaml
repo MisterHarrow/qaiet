@@ -8,6 +8,7 @@
 #   Rate-limited from the dev machine on 2026-11-24; retest from GitHub Actions.
 # type also allows `wire` (news agencies).
 # sitemap: for sources with no feed. Only URLs modified within ingest.max_age_days and not seen before are read.
+# ai_focused: true = an AI-only feed (AI section, AI newsletter, lab blog); its items skip the relevance check.
 verified_at: '2026-11-24'
 sources:
 - id: nyt
@@ -220,6 +221,7 @@ sources:
   group: tech
   feeds:
   - https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  ai_focused: true
 - id: techcrunch
   name: TechCrunch
   country: US
@@ -228,6 +230,7 @@ sources:
   group: tech
   feeds:
   - https://techcrunch.com/category/artificial-intelligence/feed/
+  ai_focused: true
 - id: wired
   name: Wired
   country: US
@@ -236,6 +239,7 @@ sources:
   group: tech
   feeds:
   - https://www.wired.com/feed/tag/ai/latest/rss
+  ai_focused: true
 - id: ars
   name: Ars Technica
   country: US
@@ -244,6 +248,7 @@ sources:
   group: tech
   feeds:
   - https://arstechnica.com/ai/feed/
+  ai_focused: true
 - id: mittr
   name: MIT Technology Review
   country: US
@@ -252,6 +257,7 @@ sources:
   group: tech
   feeds:
   - https://www.technologyreview.com/topic/artificial-intelligence/feed
+  ai_focused: true
 - id: ieee
   name: IEEE Spectrum
   country: US
@@ -261,6 +267,7 @@ sources:
   feeds:
   - https://spectrum.ieee.org/feeds/topic/artificial-intelligence.rss
   notes: Low volume (a few per week).
+  ai_focused: true
 - id: 404media
   name: 404 Media
   country: US
@@ -296,6 +303,7 @@ sources:
   feeds:
   - https://www.ft.com/artificial-intelligence?format=rss
   notes: Paywalled; headline + summary only.
+  ai_focused: true
 - id: economist
   name: The Economist
   country: GB
@@ -332,6 +340,7 @@ sources:
   feeds:
   - https://www.lemonde.fr/intelligence-artificielle/rss_full.xml
   notes: English edition feed also exists (lemonde.fr/en/pixels).
+  ai_focused: true
 - id: spiegel
   name: Der Spiegel
   country: DE
@@ -340,6 +349,7 @@ sources:
   group: uk-eu
   feeds:
   - https://www.spiegel.de/thema/kuenstliche_intelligenz/index.rss
+  ai_focused: true
 - id: handelsblatt
   name: Handelsblatt
   country: DE
@@ -614,44 +624,52 @@ newsletters:
   role: digest
   notes: 'Keep only items titled ''[AINews] ...''. Daily recap of AI X/Reddit/Discord: the free stand-in for X builder chatter.'
   include_title: ^\[AINews\]
+  ai_focused: true
 - id: tldrai
   name: TLDR AI
   feeds:
   - https://tldr.tech/api/rss/ai
   role: digest
+  ai_focused: true
 - id: rundown
   name: The Rundown AI
   feeds:
   - https://www.therundown.ai/feed
   role: digest
+  ai_focused: true
 - id: lastweekinai
   name: Last Week in AI
   feeds:
   - https://lastweekin.ai/feed
   role: digest
+  ai_focused: true
 - id: bensbites
   name: Ben's Bites
   feeds:
   - https://www.bensbites.com/feed
   role: digest
   notes: Low frequency (newest item ~5 days old).
+  ai_focused: true
 - id: importai
   name: Import AI (Jack Clark)
   feeds:
   - https://importai.substack.com/feed
   role: digest
+  ai_focused: true
 - id: thebatch
   name: The Batch (DeepLearning.AI)
   role: digest
   sitemap: https://www.deeplearning.ai/sitemap.xml
   sitemap_include: ^https://www\.deeplearning\.ai/the-batch/(?!tag/|issue-|page/)[^/]+/?$
   notes: 'No RSS. New article URLs come from the sitemap; title, summary and date from each page''s og: tags. (ai.lounge.ai''s archive is behind a Vercel bot checkpoint.)'
+  ai_focused: true
 - id: marktechpost
   name: MarkTechPost
   feeds:
   - https://www.marktechpost.com/feed/
   role: digest
   notes: Paper and release write-ups, several per day.
+  ai_focused: true
 - id: willison
   name: Simon Willison
   feeds:
@@ -664,50 +682,59 @@ newsletters:
   - https://www.interconnects.ai/feed
   role: commentary
   notes: Open models, post-training.
+  ai_focused: true
 - id: aheadofai
   name: Ahead of AI (Sebastian Raschka)
   feeds:
   - https://magazine.sebastianraschka.com/feed
   role: commentary
+  ai_focused: true
 - id: oneuseful
   name: One Useful Thing (Ethan Mollick)
   feeds:
   - https://www.oneusefulthing.org/feed
   role: commentary
+  ai_focused: true
 - id: understandingai
   name: Understanding AI (Timothy B. Lee)
   feeds:
   - https://www.understandingai.org/feed
   role: commentary
+  ai_focused: true
 - id: normaltech
   name: AI as Normal Technology (Narayanan & Kapoor)
   feeds:
   - https://www.normaltech.ai/feed
   role: commentary
+  ai_focused: true
 - id: transformer
   name: Transformer (Shakeel Hashim)
   feeds:
   - https://www.transformernews.ai/feed
   role: commentary
   notes: AI policy weekly.
+  ai_focused: true
 - id: hyperdimensional
   name: Hyperdimensional (Dean Ball)
   feeds:
   - https://www.hyperdimensional.co/feed
   role: commentary
   notes: Policy, pro-innovation.
+  ai_focused: true
 - id: zvi
   name: Don't Worry About the Vase (Zvi Mowshowitz)
   feeds:
   - https://thezvi.substack.com/feed
   role: commentary
   notes: Very long weekly roundups; safety-focused.
+  ai_focused: true
 - id: marcus
   name: Marcus on AI (Gary Marcus)
   feeds:
   - https://garymarcus.substack.com/feed
   role: commentary
   notes: Skeptic.
+  ai_focused: true
 - id: zitron
   name: Where's Your Ed At (Ed Zitron)
   feeds:
@@ -744,6 +771,7 @@ newsletters:
   - https://chinai.substack.com/feed
   role: commentary
   notes: Translations of Chinese AI writing.
+  ai_focused: true
 - id: chinatalk
   name: ChinaTalk
   feeds:
@@ -767,19 +795,23 @@ newsletters:
   - https://epoch.ai/atom.xml
   role: commentary
   notes: 'Research org: compute, trends, benchmarks.'
+  ai_focused: true
 labs:
 - id: openai
   name: OpenAI News
   feeds:
   - https://openai.com/news/rss.xml
+  ai_focused: true
 - id: deepmind
   name: Google DeepMind Blog
   feeds:
   - https://deepmind.google/blog/rss.xml
+  ai_focused: true
 - id: googleai
   name: 'Google: AI (The Keyword)'
   feeds:
   - https://blog.google/technology/ai/rss/
+  ai_focused: true
 - id: googleresearch
   name: Google Research Blog
   feeds:
@@ -796,28 +828,34 @@ labs:
   name: Hugging Face Blog
   feeds:
   - https://huggingface.co/blog/feed.xml
+  ai_focused: true
 - id: ai2
   name: Ai2 Blog
   feeds:
   - https://allenai.org/rss.xml
+  ai_focused: true
 - id: awsml
   name: AWS Machine Learning Blog
   feeds:
   - https://aws.amazon.com/blogs/machine-learning/feed/
+  ai_focused: true
 - id: appleml
   name: Apple Machine Learning Research
   feeds:
   - https://machinelearning.apple.com/rss.xml
+  ai_focused: true
 - id: mistral
   name: Mistral AI News
   feeds:
   - https://mistral.ai/rss.xml
+  ai_focused: true
 builder_feeds:
 - id: producthunt_ai
   name: 'Product Hunt: AI'
   feeds:
   - https://www.producthunt.com/feed?category=artificial-intelligence
   notes: Consumer and indie AI launches.
+  ai_focused: true
 dropped:
 - name: Axios
   country: US

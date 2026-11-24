@@ -66,3 +66,9 @@ def test_cli_dry_run_ingest_and_sources_check():
     assert "new items stored" in res.output and "in memory only" in res.output
     res = runner.invoke(app, ["sources", "check", "--dry-run", "-s", "openrouter", "--strict"])
     assert res.exit_code == 0, res.output
+
+
+def test_cli_dry_run_cluster():
+    res = CliRunner().invoke(app, ["cluster", "--dry-run", "-n", "5"])
+    assert res.exit_code == 0, res.output
+    assert "stories, last 72h" in res.output and "placed" in res.output

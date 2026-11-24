@@ -35,6 +35,7 @@ github:
   established_topics: [llm, ai-agents]   # big repos still moving, for star velocity
   established_min_stars: 1000
   established_pushed_within_days: 2
+  clone_spam_min: 3               # same repo name from this many owners = star-farmed spam, dropped
 
 huggingface:
   trending_limit: 50
@@ -58,14 +59,43 @@ gdelt:
   timespan: 1d
   max_records: 250
   max_query_chars: 180            # longer queries are rejected; domains are split across queries
+  source_lang: english            # English editions only (Xinhua etc. also publish in many languages)
   # GDELT rejects very short keywords, so no bare "AI".
   terms: ['"artificial intelligence"', OpenAI, chatbot, Nvidia, DeepSeek]
 
-# Used from M3 on.
+relevance:
+  # Always about AI: builder items from AI-specific listings, and sources marked ai_focused in sources.yaml.
+  always_kinds: [repo, model, dataset, space, paper, launch]
+  always_sources: [hf_posts]
+  llm_batch_size: 25              # ambiguous items per Haiku call
+  prompt: relevance_v1            # src/quiet_ai/llm/prompts/<prompt>.md
+
+embed:
+  # Local ONNX model via fastembed, CPU. Multilingual: Swedish/German/French/Spanish headlines land
+  # next to English ones without translation, and unrelated headlines score far lower than with
+  # BAAI/bge-small-en-v1.5 (tested 2026-11-24).
+  model: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+  cache_dir: .cache/fastembed
+  summary_chars: 300              # title + start of summary is what gets embedded
+  keep_days: 7                    # older vectors are deleted (story centroids are kept)
+
+cluster:
+  # Tuned 2026-11-24 on 1,900 items: 0.55 and below glued unrelated "AI and society" pieces into
+  # one 100-item blob; 0.65 split the Huang story's market angle off. See docs/m2-notes.md.
+  window_hours: 72                # rolling window of items considered
+  join_threshold: 0.62            # cosine similarity to join an existing story
+  strict_join_threshold: 0.8      # for repos, models, datasets, spaces, papers, launches
+  strict_kinds: [repo, model, dataset, space, paper, launch]
+  merge_threshold: 0.76           # two stories this similar (and sharing a name or link) are merged
+  entity_boost: 0.03              # added per shared name (company, product, person), max 2
+
 llm:
-  item_model: claude-haiku-5-5
-  story_model: claude-sonnet-5-5
-  monthly_budget_usd: 30
+  item_model: claude-haiku-5-5    # relevance, translation, item labels
+  story_model: claude-sonnet-5-5  # story summaries (M3)
+  monthly_budget_usd: 30          # hard cap: LLM steps are skipped once this month's spend reaches it
+  prices:                         # USD per million tokens, for cost logging
+    claude-haiku-5-5: {input: 0.10, output: 0.50, cache_read: 0.01, cache_write: 0.125}
+    claude-sonnet-5-5: {input: 2.00, output: 10.00, cache_read: 0.10, cache_write: 2.50}
 
 schedule:
   every_hours: 2

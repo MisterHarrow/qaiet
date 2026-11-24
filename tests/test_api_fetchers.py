@@ -126,3 +126,12 @@ def test_gdelt_maps_domains_and_surfaces_text_errors(settings):
         assert "too short" in str(e)
     else:
         raise AssertionError("expected ValueError")
+
+
+def test_github_drops_clone_spam(settings, monkeypatch):
+    monkeypatch.delenv("GITHUB_TOKEN", raising=False)
+    mk = lambda owner, name, stars=300: {"full_name": f"{owner}/{name}", "html_url": f"https://github.com/{owner}/{name}",  # noqa: E731
+                                         "owner": {"login": owner}, "stargazers_count": stars}
+    repos = [mk("a", "manus--ai"), mk("b", "ai--manus"), mk("c", "manus-ai2.0"), mk("d", "vllm"), mk("e", "vllm-router")]
+    items = github.fetch(make_ctx(settings, mock_http(settings, {"search/repositories": {"items": repos}})))
+    assert sorted(i.title for i in items) == ["d/vllm", "e/vllm-router"]
