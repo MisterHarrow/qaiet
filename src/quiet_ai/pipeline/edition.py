@@ -64,6 +64,7 @@ def story_entry(store: Store, sources: SourcesConfig, score: StoryScore, rank: i
             "outlet": names.get(m["source"], m["source"]),
             "country": countries.get(m["source"]),
             "kind": m["kind"],
+            "lang": m["lang"],
             "title": m["title"],
             "title_en": m["title_en"],
             "url": m["url"],
@@ -98,11 +99,30 @@ def story_entry(store: Store, sources: SourcesConfig, score: StoryScore, rank: i
         "outlets": int(score.features.get("outlets", 0)),
         "countries": int(score.features.get("countries", 0)),
         "stance": {k: stance.get(k, 0) for k in [*map(str, STANCES), "unclear", "unlabeled"]},
+        "stance_summary": stance_summary({k: stance.get(k, 0) for k in map(str, STANCES)}),
         "coverage": [{"stance": k, "items": groups[k]} for k in [*map(str, STANCES), "unclear", "unlabeled"] if k in groups],
         "builders": builders,
         "builders_line": builders_line(builders),
         "items": len(members),
     }
+
+
+def stance_summary(stance: dict[str, int]) -> str | None:
+    """A few words for the stance mix: 'mostly neutral', 'leans critical', 'split', ..."""
+    counts = {int(k): v for k, v in stance.items() if k.lstrip("-").isdigit()}
+    n = sum(counts.values())
+    if n == 0:
+        return None
+    neg = sum(v for k, v in counts.items() if k < 0) / n
+    pos = sum(v for k, v in counts.items() if k > 0) / n
+    mean = sum(k * v for k, v in counts.items()) / n
+    if neg >= 0.2 and pos >= 0.2:
+        return "split"
+    if mean <= -0.5:
+        return "leans critical"
+    if mean >= 0.5:
+        return "leans positive"
+    return "mostly neutral"
 
 
 def builders_line(b: dict) -> str:

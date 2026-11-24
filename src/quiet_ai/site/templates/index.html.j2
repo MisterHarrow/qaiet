@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>quiet ai · {{ date_long }}</title>
+<meta name="description" content="A quiet daily overview of AI: what happened, how it is framed, and what builders are making.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23f6f3ec'/%3E%3Cpath d='M8 20h16M8 14h11' stroke='%23302d28' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+<div class="page">
+
+<header class="masthead">
+  <p class="wordmark"><a href="./">quiet ai</a></p>
+  <p class="dateline"><time datetime="{{ e.generated_at }}">{{ date_long }}</time> <span class="sep">·</span> updated {{ updated }} {{ tz_name }}</p>
+  {% if e.weather %}
+  <p class="weather">{{ e.weather }}</p>
+  {% endif %}
+  {% if e.llm.budget_reached %}
+  <p class="notice">This month's budget for machine labeling is used up. Stories and links still update; labels and summaries are paused until next month.</p>
+  {% endif %}
+  <nav class="filters" aria-label="Highlight a track" hidden>
+    <span class="filters-label">Highlight</span>
+    {% for t in ["technical", "political", "economic"] %}
+    <button type="button" data-track="{{ t }}" aria-pressed="false">{{ t|capitalize }}</button>
+    {% endfor %}
+  </nav>
+</header>
+
+<main>
+<section class="stories" aria-label="Top stories">
+{% for s in e.stories %}
+<article class="story" id="{{ s.id }}" data-track="{{ s.track or 'none' }}">
+  <p class="kicker"><span class="rank">{{ s.rank }}</span>{% if s.track %}<span class="track">{{ s.track }}</span>{% endif %}</p>
+  <h2>{{ s.headline }}</h2>
+
+  {% if s.outlets %}
+  <p class="meta">
+    <span>{{ s.outlets }} outlet{{ "s" if s.outlets != 1 }}</span><span class="sep">·</span><span>{{ s.countries }} countr{{ "ies" if s.countries != 1 else "y" }}</span>
+    {% if s.segments %}
+    <span class="stance" role="img" aria-label="{{ s.stance_label }}" title="{{ s.stance_label }}">
+      {% for seg in s.segments %}<span class="seg st{{ seg.key }}" style="width:{{ seg.pct }}%"></span>{% endfor %}
+    </span>
+    {% if s.stance_summary %}<span class="stance-summary">{{ s.stance_summary }}</span>{% endif %}
+    {% endif %}
+  </p>
+  {% endif %}
+
+  {% if s.summary and s.summary.coverage %}
+  <p class="coverage">{{ s.summary.coverage }}</p>
+  {% endif %}
+
+  {% set b = s.builders %}
+  {% set builders_text = (s.summary.builders if s.summary and s.summary.builders else s.builders_line) %}
+  {% if builders_text %}
+  <p class="builders"><span class="label">Builders</span> {{ builders_text }}</p>
+  {% endif %}
+
+  {% if s.coverage or b.hn or b.repos or b.models or b.papers or b.official %}
+  <details>
+    <summary>{% if s.coverage %}Headlines by stance{% else %}Links{% endif %}</summary>
+    {% for g in s.coverage %}
+    <div class="group">
+      <h3><span class="dot st{{ g.stance }}" aria-hidden="true"></span>{{ stance_names[g.stance] }} <span class="count">{{ g["items"]|length }}</span></h3>
+      <ul>
+        {% for c in g["items"] %}
+        <li>
+          <span class="outlet">{{ c.outlet }}{% if c.country %} <span class="country">{{ c.country }}</span>{% endif %}{% if kind_names[c.kind] %} <span class="country">{{ kind_names[c.kind] }}</span>{% endif %}</span>
+          <a href="{{ c.url }}" rel="noopener"{% if c.title_en and c.title_en != c.title %} title="{{ c.title }}" lang="{{ c.lang }}"{% endif %}>{{ c.title_en or c.title }}</a>
+          {% if c.title_en and c.title_en != c.title %}<span class="lang">translated from {{ c.lang }}</span>{% endif %}
+          {% if c.llm_opt_out %}
+          <span class="why">Not labeled: the publisher opts out of AI processing.</span>
+          {% elif c.evidence %}
+          <span class="why" title="{{ c.rationale or '' }}">{% if c.frame and g.stance not in ["unclear", "unlabeled"] %}<span class="frame">{{ c.frame }}</span> {% endif %}<q>{{ c.evidence[0] }}</q></span>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+    {% if b.hn or b.repos or b.models or b.papers or b.official %}
+    <div class="group">
+      <h3>Builder links</h3>
+      <ul>
+        {% for o in b.official %}<li><span class="outlet">{{ o.source }}</span> <a href="{{ o.url }}" rel="noopener">{{ o.title }}</a></li>{% endfor %}
+        {% for h in b.hn[:3] %}<li><span class="outlet">Hacker News</span> <a href="{{ h.url }}" rel="noopener">{{ h.title }}</a> <span class="num">{{ h.points|thousands }} points · {{ h.comments|thousands }} comments</span></li>{% endfor %}
+        {% for r in b.repos[:5] %}<li><span class="outlet">GitHub</span> <a href="{{ r.url }}" rel="noopener">{{ r.title }}</a> <span class="num">{{ r.stars|thousands }} stars</span></li>{% endfor %}
+        {% for m in b.models[:5] %}<li><span class="outlet">{{ m.source }}</span> <a href="{{ m.url }}" rel="noopener">{{ m.title }}</a></li>{% endfor %}
+        {% for p in b.papers[:3] %}<li><span class="outlet">Paper</span> <a href="{{ p.url }}" rel="noopener">{{ p.title }}</a></li>{% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  </details>
+  {% endif %}
+</article>
+{% endfor %}
+</section>
+
+{% if e.rising %}
+<section class="rising" aria-labelledby="rising-h">
+  <h2 id="rising-h">Rising</h2>
+  <p class="section-note">Fastest-climbing projects among builders right now.</p>
+  <ol>
+    {% for r in e.rising %}
+    <li>
+      <p class="r-head"><span class="kind">{{ r.kind }}</span> <a href="{{ r.url }}" rel="noopener">{{ r.title }}</a></p>
+      {% if r.what %}<p class="what">{{ r.what }}</p>{% endif %}
+      {% if r.why %}<p class="why-it">{{ r.why }}</p>{% endif %}
+      <p class="num">{{ r.signal }}</p>
+    </li>
+    {% endfor %}
+  </ol>
+</section>
+{% endif %}
+</main>
+
+<footer class="colophon">
+  <p class="legend" aria-hidden="true">
+    {% for k in ["-2", "-1", "0", "1", "2", "unclear"] %}<span><span class="dot st{{ k }}"></span>{{ stance_names[k] }}</span>{% endfor %}
+  </p>
+  <p>Stories are ranked by how many outlets, countries and builder communities are picking them up. Each headline's framing and stance are labeled by a language model from the headline and summary alone; the phrase in quotes is the evidence it pointed to, so you can judge for yourself. "Unclear" means the model wasn't confident.</p>
+  <p>No ads, no tracking, no images. Headlines link to the original publishers.</p>
+</footer>
+
+</div>
+<script src="static/app.js" defer></script>
+</body>
+</html>

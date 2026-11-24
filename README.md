@@ -2,7 +2,7 @@
 
 A calm, text-first page that answers once a day: what happened in AI, how is it being framed, and what are builders actually making?
 
-Status: **M3 (analysis)**. Sources are fetched, filtered for AI relevance, grouped into stories, labeled (track, frame, stance, evidence), ranked by momentum and summarized. The site comes in M4. Notes per milestone: [M0 plan and sources](docs/m0-report.md), [M2 relevance and clustering](docs/m2-notes.md), [M3 labels, momentum, costs](docs/m3-notes.md).
+Status: **M4 (site)**. Sources are fetched, filtered for AI relevance, grouped into stories, labeled (track, frame, stance, evidence), ranked by momentum, summarized and rendered as a static page. Deploy comes in M5. Notes per milestone: [M0 plan and sources](docs/m0-report.md), [M2 relevance and clustering](docs/m2-notes.md), [M3 labels, momentum, costs](docs/m3-notes.md), [M4 site](docs/m4-notes.md).
 
 ## Setup
 
@@ -17,7 +17,9 @@ cp .env.example .env   # ANTHROPIC_API_KEY (relevance of ambiguous items, transl
 uv run qa ingest                 # fetch every source, store new items in data/quiet-ai.db
 uv run qa ingest -s github -s nyt  # only some sources or fetchers
 uv run qa ingest --dry-run       # replay recorded fixtures: no network, nothing written
-uv run qa run                    # everything: ingest, stories, labels, summaries; prints the edition
+uv run qa run                    # everything: ingest, stories, labels, summaries, site
+uv run qa build                  # render site/ from the database (no LLM calls)
+uv run qa serve                  # build and preview at http://localhost:8765
 uv run qa cluster                # relevance filter, embeddings, stories
 uv run qa classify               # labels (Haiku), momentum, summaries and weather (Sonnet); prints the edition
 uv run qa stories                # print the ranked stories from the database, no LLM calls

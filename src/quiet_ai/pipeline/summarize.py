@@ -81,14 +81,28 @@ def material(entry: dict, max_headlines: int = 40) -> str:
     return "\n".join(lines)
 
 
+def needs_refresh(prev, entry: dict, a) -> bool:
+    """Re-summarize when the story grew, gained an outlet, or its labels changed underneath
+    the summary (new label prompt, or stance counts moved by 3 or more)."""
+    if prev["prompt_version"] != a.summary_prompt:
+        return True
+    if entry["items"] >= prev["item_count"] + a.resummarize_new_items or entry["outlets"] > prev["outlet_count"]:
+        return True
+    basis = json.loads(prev["data"]).get("basis") or {}
+    if basis.get("news_prompt") != a.news_prompt:
+        return True
+    old = basis.get("stance") or {}
+    return sum(abs(entry["stance"].get(k, 0) - old.get(k, 0)) for k in set(old) | set(entry["stance"])) >= 3
+
+
 def summarize_top(store: Store, settings: Settings, sources: SourcesConfig, llm: LLM, scores: list[StoryScore], now: datetime) -> SummaryStats:
     a = settings.analysis
     stats = SummaryStats()
     system = load_prompt(a.summary_prompt)
     for n, score in enumerate(scores[: a.summarize_top], 1):
         entry = story_entry(store, sources, score, n)
-        prev = store.conn.execute("SELECT item_count, outlet_count, prompt_version FROM story_summaries WHERE story_id = ?", (score.story_id,)).fetchone()
-        if prev and prev["prompt_version"] == a.summary_prompt and entry["items"] < prev["item_count"] + a.resummarize_new_items and entry["outlets"] <= prev["outlet_count"]:
+        prev = store.conn.execute("SELECT item_count, outlet_count, prompt_version, data FROM story_summaries WHERE story_id = ?", (score.story_id,)).fetchone()
+        if prev and not needs_refresh(prev, entry, a):
             stats.unchanged += 1
             continue
         try:
@@ -100,11 +114,13 @@ def summarize_top(store: Store, settings: Settings, sources: SourcesConfig, llm:
             log.warning("summary failed for %s: %s", score.story_id, e)
             stats.notes.append(f"summary: {type(e).__name__}")
             continue
+        data = out.model_dump()
+        data["basis"] = {"news_prompt": a.news_prompt, "stance": entry["stance"]}  # what the summary was written from
         with store.conn:
             store.conn.execute(
                 "INSERT OR REPLACE INTO story_summaries(story_id, prompt_version, model, data, item_count, outlet_count, created_at) "
                 "VALUES (?, ?, ?, ?, ?, ?, ?)",
-                (score.story_id, a.summary_prompt, settings.llm.story_model, out.model_dump_json(), entry["items"], entry["outlets"], iso(now)),
+                (score.story_id, a.summary_prompt, settings.llm.story_model, json.dumps(data), entry["items"], entry["outlets"], iso(now)),
             )
         stats.summarized += 1
     return stats

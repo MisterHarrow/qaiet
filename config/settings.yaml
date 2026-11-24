@@ -113,7 +113,7 @@ analysis:
   label_batch_size: 20            # items per Haiku labeling call
   news_prompt: news_label_v3      # prompt files in src/quiet_ai/llm/prompts/; the version is stored on each label
   builder_prompt: builder_label_v1
-  summary_prompt: story_summary_v2
+  summary_prompt: story_summary_v3
   weather_prompt: weather_v1
   summarize_top: 10               # Sonnet summaries for the top stories only
   resummarize_new_items: 3        # re-summarize after this many new items, or any new outlet
@@ -128,6 +128,10 @@ llm:
   prices:                         # USD per million tokens, for cost logging
     claude-haiku-5-5: {input: 0.10, output: 0.50, cache_read: 0.01, cache_write: 0.125}
     claude-sonnet-5-5: {input: 2.00, output: 10.00, cache_read: 0.10, cache_write: 2.50}
+
+site:
+  out_dir: site                   # qa build writes here; git-ignored
+  timezone: Europe/Stockholm      # dates and times on the page
 
 schedule:
   every_hours: 2

@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "quiet-ai",
+      "runtimeExecutable": "uv",
+      "runtimeArgs": ["run", "qa", "serve", "--port", "8765"],
+      "port": 8765
+    }
+  ]
+}

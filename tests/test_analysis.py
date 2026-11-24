@@ -195,3 +195,14 @@ def test_long_real_quotes_are_cut_to_twelve_words():
     out = classify.check_news_label({"track": "economic", "frame": "boom", "evidence": [text], "confidence": "high"}, [text])
     assert out["evidence"] == ["one two three four five six seven eight nine ten eleven twelve…"]
     assert out["evidence_truncated"] == 1 and out["confidence"] == "high"
+
+
+def test_summary_refreshes_when_labels_change(settings):
+    a = settings.analysis
+    entry = {"items": 10, "outlets": 4, "stance": {"-1": 2, "0": 5, "unclear": 3}}
+    prev = {"prompt_version": a.summary_prompt, "item_count": 10, "outlet_count": 4,
+            "data": json.dumps({"basis": {"news_prompt": a.news_prompt, "stance": {"-1": 2, "0": 5, "unclear": 3}}})}
+    assert not summarize.needs_refresh(prev, entry, a)
+    assert summarize.needs_refresh(prev, {**entry, "stance": {"-1": 2, "0": 8, "unclear": 0}}, a)  # unclear became neutral
+    assert summarize.needs_refresh({**prev, "data": json.dumps({"basis": {"news_prompt": "old", "stance": entry["stance"]}})}, entry, a)
+    assert summarize.needs_refresh({**prev, "data": "{}"}, entry, a)  # summaries from before this check

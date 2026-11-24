@@ -172,13 +172,18 @@ class AnalysisSettings(_Model):
     label_batch_size: int = 20
     news_prompt: str = "news_label_v3"
     builder_prompt: str = "builder_label_v1"
-    summary_prompt: str = "story_summary_v2"
+    summary_prompt: str = "story_summary_v3"
     weather_prompt: str = "weather_v1"
     summarize_top: int = 10
     resummarize_new_items: int = 3   # re-summarize after this many new items, or any new outlet
     builder_label_top: int = 30      # label this many Rising candidates (plus builders in top stories)
     stance_kinds: list[str] = Field(default_factory=lambda: ["news", "newsletter"])
     top_stories: int = 7             # stories on the page
+
+
+class SiteSettings(_Model):
+    out_dir: str = "site"
+    timezone: str = "Europe/Stockholm"
 
 
 class ModelPrice(_Model):
@@ -212,6 +217,7 @@ class Settings(_Model):
     momentum: MomentumSettings = Field(default_factory=MomentumSettings)
     rising: RisingSettings = Field(default_factory=RisingSettings)
     analysis: AnalysisSettings = Field(default_factory=AnalysisSettings)
+    site: SiteSettings = Field(default_factory=SiteSettings)
 
 
 def _yaml(path: Path) -> dict:

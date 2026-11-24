@@ -22,6 +22,7 @@ from quiet_ai.pipeline import stories as story_views
 from quiet_ai.pipeline.ingest import build_tasks, ingest as run_ingest
 from quiet_ai.pipeline.process import default_embedder, run_analysis, run_cluster
 from quiet_ai.render_terminal import render
+from quiet_ai.site import build as site_build
 from quiet_ai.store.db import Store
 
 FIXTURES = ROOT / "tests" / "fixtures" / "http"
@@ -169,12 +170,15 @@ def _open(dry_run: bool) -> tuple[Store, datetime]:
     return store, ctx.now
 
 
-def _analyze_and_print(store: Store, now: datetime, dry_run: bool, no_llm: bool, run_id: str) -> None:
+def _analyze_and_print(store: Store, now: datetime, dry_run: bool, no_llm: bool, run_id: str, build_site: bool = False) -> None:
     settings, sources = load_settings(), load_sources()
     llm = None if (dry_run or no_llm) else LLM(settings.llm, store, run_id)
     res = run_analysis(store, settings, sources, now, llm)
     ed = edition_mod.build(store, settings, sources, res.scores, res.rising, now, settings.analysis.top_stories)
     render(console, ed)
+    if build_site:
+        page = site_build.render(ed, ROOT / settings.site.out_dir, settings.site.timezone)
+        console.print(f"[dim]site: {page}[/]")
     n, b, s = res.news, res.builders, res.summaries
     cost = llm.cost_usd if llm else 0.0
     console.print(f"\n[dim]labels: {n.labeled} news ({n.from_cache} cached, {n.low_confidence} low confidence, "
@@ -230,9 +234,52 @@ def run(
     cl = run_cluster(store, settings, sources, now, llm, default_embedder(settings))
     console.print(f"[dim]stories: {cl.cluster.placed} items placed, {cl.cluster.new_stories} new stories; "
                   f"{cl.relevance.pending} items undecided[/]")
-    _analyze_and_print(store, now, False, no_llm, run_id)
+    _analyze_and_print(store, now, False, no_llm, run_id, build_site=True)
     store.finish_run(run_id, _now())
     store.close()
+
+
+def _build_site(dry_run: bool, out: Path | None) -> Path:
+    settings, sources = load_settings(), load_sources()
+    store, now = _open(dry_run)
+    scores = momentum.score_stories(store, settings, sources, now)
+    ed = edition_mod.build(store, settings, sources, scores, momentum.rising(store, settings, now), now, settings.analysis.top_stories)
+    page = site_build.render(ed, out or ROOT / settings.site.out_dir, settings.site.timezone)
+    store.close()
+    return page
+
+
+Out = Annotated[Path | None, typer.Option("--out", help="Output directory (default: site.out_dir).")]
+
+
+@app.command()
+def build(dry_run: DryRun = False, out: Out = None) -> None:
+    """Render the static site from the database (no LLM calls)."""
+    console.print(f"wrote {_build_site(dry_run, out)}")
+
+
+@app.command()
+def serve(
+    port: Annotated[int, typer.Option("--port", "-p")] = 8765,
+    rebuild: Annotated[bool, typer.Option("--build/--no-build", help="Build before serving.")] = True,
+    dry_run: DryRun = False,
+    out: Out = None,
+) -> None:
+    """Preview the site locally at http://localhost:PORT."""
+    import functools
+    import http.server
+
+    settings = load_settings()
+    root = out or ROOT / settings.site.out_dir
+    if rebuild:
+        _build_site(dry_run, out)
+    handler = functools.partial(http.server.SimpleHTTPRequestHandler, directory=str(root))
+    with http.server.ThreadingHTTPServer(("127.0.0.1", port), handler) as httpd:
+        console.print(f"serving {root} at http://localhost:{port}  (Ctrl+C to stop)")
+        try:
+            httpd.serve_forever()
+        except KeyboardInterrupt:
+            pass
 
 
 @app.command()
