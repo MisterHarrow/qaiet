@@ -14,7 +14,7 @@
 <header class="masthead">
   <div class="masthead-top">
     <p class="wordmark"><a href="{{ root or './' }}">quiet ai</a></p>
-    <p class="dateline"><time datetime="{{ e.generated_at }}">{{ date_long }}</time> <span class="sep">·</span> updated {{ updated }} {{ tz_name }}</p>
+    <p class="dateline"><time datetime="{{ e.generated_at }}">{{ date_long }}</time> <span class="sep">·</span> updated {{ updated }} {{ tz_name }} <span class="sep">·</span> <a href="{{ root }}about/">About</a></p>
   </div>
   {% if periods|length > 1 %}
   <nav class="periods" aria-label="Time period">
@@ -164,7 +164,7 @@
     {% for k in ["-2", "-1", "0", "1", "2", "unclear"] %}<span><span class="dot st{{ k }}"></span>{{ stance_names[k] }}</span>{% endfor %}
   </p>
   <p>Stories are ranked by how many outlets, countries and builder communities are picking them up. Each headline's framing and stance are labeled by a language model from the headline and summary alone; the phrase in quotes is the evidence it pointed to, so you can judge for yourself. "Unclear" means the model wasn't confident.</p>
-  <p>No ads, no tracking, no images. Headlines link to the original publishers.</p>
+  <p>No ads, no tracking, no images. Headlines link to the original publishers. <a href="{{ root }}about/">How this site works</a>.</p>
 </footer>
 
 </div>

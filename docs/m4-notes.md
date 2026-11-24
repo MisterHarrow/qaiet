@@ -51,6 +51,18 @@ Checked in the browser at desktop and 375px (no horizontal scroll), light and da
 
 Not yet done, for M5: trimming old data so a year of SQLite stays small (embeddings are already kept 7 days).
 
+## Revision 4: /about
+
+`/about/` explains the site in plain language:
+- where the news comes from (with the full outlet list behind a disclosure);
+- the seven steps of a run;
+- what the angle, framing and stance labels mean;
+- the ranking weights, the time periods and the limits;
+- privacy and the LLM budget;
+- source health from the latest collection.
+
+Every number on it (outlet and country counts, weights, model names, prompt versions, this month's spend, failing sources) is read from the config and the database at build time (`site/about.py`), so the page can't drift from what the pipeline does. This also covers most of the brief's M6 methodology page; M6 adds the bias audit and the gold-set agreement.
+
 ## Fixes found while reviewing the page
 
 - "split" now needs 20% on each side (was 25%). The top story had 31% critical and 22% positive and read "mostly neutral" while its coverage sentence described a split.

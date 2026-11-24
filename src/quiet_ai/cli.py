@@ -23,6 +23,7 @@ from quiet_ai.pipeline.ingest import build_tasks, ingest as run_ingest
 from quiet_ai.pipeline.process import default_embedder, period_views, run_analysis, run_cluster
 from quiet_ai.render_terminal import render
 from quiet_ai.site import build as site_build
+from quiet_ai.site.about import about_context
 from quiet_ai.store.db import Store
 
 FIXTURES = ROOT / "tests" / "fixtures" / "http"
@@ -177,8 +178,10 @@ def _analyze_and_print(store: Store, now: datetime, dry_run: bool, no_llm: bool,
     ed = edition_mod.build(store, settings, sources, res.scores, res.rising, now, settings.analysis.top_stories)
     render(console, ed)
     if build_site:
-        pages = site_build.render_all(_editions(store, settings, sources, now, res.views), ROOT / settings.site.out_dir, settings.site.timezone)
-        console.print(f"[dim]site: {len(pages)} views in {pages[0].parent}[/]")
+        out = ROOT / settings.site.out_dir
+        pages = site_build.render_all(_editions(store, settings, sources, now, res.views), out, settings.site.timezone)
+        site_build.render_about(about_context(store, settings, sources, load_accounts(), now), out, settings.site.timezone)
+        console.print(f"[dim]site: {len(pages)} views and /about in {out}[/]")
     n, b, s = res.news, res.builders, res.summaries
     cost = llm.cost_usd if llm else 0.0
     console.print(f"\n[dim]labels: {n.labeled} news ({n.from_cache} cached, {n.low_confidence} low confidence, "
@@ -253,7 +256,9 @@ def _editions(store: Store, settings, sources, now: datetime, views=None) -> lis
 def _build_site(dry_run: bool, out: Path | None) -> Path:
     settings, sources = load_settings(), load_sources()
     store, now = _open(dry_run)
-    pages = site_build.render_all(_editions(store, settings, sources, now), out or ROOT / settings.site.out_dir, settings.site.timezone)
+    target = out or ROOT / settings.site.out_dir
+    pages = site_build.render_all(_editions(store, settings, sources, now), target, settings.site.timezone)
+    site_build.render_about(about_context(store, settings, sources, load_accounts(), now), target, settings.site.timezone)
     store.close()
     return pages[0]
 

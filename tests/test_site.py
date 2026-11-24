@@ -114,3 +114,26 @@ def test_rising_grouped_by_category(tmp_path):
     html = build.render(edition(), tmp_path).read_text()
     assert '<div class="rgroup" data-category="agent">' in html and 'data-category="agent" aria-pressed="false">Agents <span class="n">1</span>' in html
     assert '<nav class="filters rising-filters" aria-label="Filter rising projects by category" hidden>' in html
+
+
+def test_about_page_reads_config_and_health(tmp_path, settings):
+    from datetime import datetime, timezone
+    from quiet_ai.config import load_accounts, load_sources
+    from quiet_ai.site.about import about_context
+    from quiet_ai.store.db import Store
+
+    now = datetime(2026, 11, 24, 9, tzinfo=timezone.utc)
+    st = Store(":memory:")
+    run = st.start_run("ingest", False, now)
+    st.record_source_run(run, "nyt", "news_rss", "ok", 200, 10, 2, None, 0.1)
+    st.record_source_run(run, "cbc", "news_rss", "robots_blocked", None, 0, 0, "robots.txt unreachable", 0.1)
+    sources = load_sources()
+    ctx = about_context(st, settings, sources, load_accounts(), now)
+    assert ctx["counts"]["outlets"] == sum(1 for f in sources.feeds if f.kind == "news" and f.enabled)
+    assert ctx["health"]["ok"] == 1 and ctx["health"]["failing"][0]["name"] == "CBC"
+    assert sum(w["weight"] for w in ctx["weights"]) == 100
+    html = build.render_about(ctx, tmp_path).read_text()
+    assert 'href="../static/style.css"' in html and "How this site works" in html
+    assert f"{ctx['counts']['outlets']} news outlets" in html and "1 of 2 sources answered normally" in html
+    assert "CBC: robots blocked" in html and settings.analysis.news_prompt in html
+    assert "<script" not in html and "<img" not in html

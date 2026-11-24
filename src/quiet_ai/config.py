@@ -209,6 +209,12 @@ class SiteSettings(_Model):
     term_stopwords: list[str] = Field(default_factory=lambda: ["ai", "artificial intelligence"])
 
 
+class ScheduleSettings(_Model):
+    every_hours: int = 2
+    edition_timezone: str = "Europe/Stockholm"
+    edition_cutoff: str = "00:00"
+
+
 class ModelPrice(_Model):
     input: float
     output: float
@@ -241,6 +247,7 @@ class Settings(_Model):
     rising: RisingSettings = Field(default_factory=RisingSettings)
     analysis: AnalysisSettings = Field(default_factory=AnalysisSettings)
     site: SiteSettings = Field(default_factory=SiteSettings)
+    schedule: ScheduleSettings = Field(default_factory=ScheduleSettings)
 
 
 def _yaml(path: Path) -> dict:

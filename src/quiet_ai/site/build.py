@@ -90,3 +90,19 @@ def render_all(editions: list[dict], out_dir: Path, tz: str = "Europe/Stockholm"
     """Render every view with a shared switcher. `editions` are in display order."""
     periods = [{"key": e["period"]["key"], "label": e["period"]["label"], "path": period_path(i, e["period"]["key"])} for i, e in enumerate(editions)]
     return [render(e, out_dir, tz, periods) for e in editions]
+
+
+def render_about(context: dict, out_dir: Path, tz: str = "Europe/Stockholm") -> Path:
+    """The /about page: how the site works, with numbers read from the config and the database."""
+    page_dir = out_dir / "about"
+    page_dir.mkdir(parents=True, exist_ok=True)
+    zone = ZoneInfo(tz)
+    a = dict(context)
+    if a.get("data_since"):
+        a["data_since_long"] = _long_date(datetime.fromisoformat(a["data_since"]).astimezone(zone))
+    if a.get("health"):
+        a["health"] = {**a["health"], "at_local": datetime.fromisoformat(a["health"]["at"]).astimezone(zone).strftime("%H:%M")}
+    html = _env().get_template("about.html.j2").render(a=a, root="../")
+    (page_dir / "index.html").write_text(html, encoding="utf-8")
+    shutil.copytree(HERE / "static", out_dir / "static", dirs_exist_ok=True)
+    return page_dir / "index.html"
