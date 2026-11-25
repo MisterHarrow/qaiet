@@ -95,10 +95,10 @@
   {% endif %}
 
   {% set b = s.builders %}
-  {% set more = s.coverage or b.hn or b.repos or b.models or b.papers or b.official or b.x or b.reddit %}
+  {% set more = s.coverage or b.hn or b.repos or b.models or b.papers or b.official or b.x or b.reddit or b.posts %}
   {# The builders summary lives in the expanded panel; a card with nothing to expand keeps it. #}
   {% if s.builders_line and not more %}
-  <p class="builders"><span class="label">Builders</span> {{ s.builders_line }}</p>
+  <p class="builders"><span class="label">Builders</span> {{ b|builders_html if b else s.builders_line }}</p>
   {% endif %}
 
   {% set counts = [s.stance.get("-2", 0), s.stance.get("-1", 0), s.stance.get("0", 0), s.stance.get("1", 0), s.stance.get("2", 0)] %}
@@ -143,8 +143,8 @@
     <summary aria-label="Show every source URL with its labels" title="Every source URL with its labels"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 4h8M5.5 8h8M5.5 12h8"/><circle cx="2.6" cy="4" r="0.9"/><circle cx="2.6" cy="8" r="0.9"/><circle cx="2.6" cy="12" r="0.9"/></svg><span class="raw-toggle-label">All URLs</span></summary>
   </details>
   {% endif %}
-  {% if s.builders_line %}<p class="builders"><span class="label">Builders</span> {{ s.builders_line }}</p>{% endif %}
-  {% if s.summary and s.summary.builders %}<p class="builders-long">{{ s.summary.builders }}</p>{% endif %}
+  {% if s.builders_line %}<p class="builders"><span class="label">Builders</span> {{ b|builders_html }}</p>{% endif %}
+  {% if s.summary and s.summary.builders %}<p class="builders-long">{{ s.summary.builders|link_platforms(b) }}</p>{% endif %}
   {% if s.coverage %}
   <div class="raw-list">
     <p class="raw-head">Every source, as labeled <span class="count">{{ s.coverage|sum(attribute="items", start=[])|length }}</span></p>
@@ -177,7 +177,7 @@
       </ul>
     </div>
     {% endfor %}
-    {% if b.hn or b.repos or b.models or b.papers or b.official or b.x or b.reddit %}
+    {% if b.hn or b.repos or b.models or b.papers or b.official or b.x or b.reddit or b.posts %}
     <div class="group">
       <h3>Builder links</h3>
       <ul>
@@ -186,6 +186,7 @@
         {% for r in b.repos[:5] %}<li><span class="outlet">GitHub <span class="num">{{ r.stars|thousands }} stars</span></span> <a href="{{ r.url }}" rel="noopener">{{ r.title }}</a></li>{% endfor %}
         {% for m in b.models[:5] %}<li><span class="outlet">{{ m.source }}</span> <a href="{{ m.url }}" rel="noopener">{{ m.title }}</a></li>{% endfor %}
         {% for p in b.papers[:3] %}<li><span class="outlet">Paper</span> <a href="{{ p.url }}" rel="noopener">{{ p.title }}</a></li>{% endfor %}
+        {% for p in (b.posts or [])[:5] %}<li><span class="outlet">{{ p.source }}</span> <a href="{{ p.url }}" rel="noopener">{{ p.title|truncate(140) }}</a></li>{% endfor %}
         {% for r in (b.reddit or [])[:4] %}<li><span class="outlet">r/{{ r.sub }}{% if r.activity %} <span class="num">{{ r.activity|thousands }} activity</span>{% endif %} <span class="country">via {{ b.via|join(", ") }}</span></span> <a href="{{ r.url }}" rel="noopener">{{ r.title or "Reddit thread" }}</a></li>{% endfor %}
         {% if b.x %}<li><span class="outlet">X <span class="num">{{ b.x|length }} post{{ "s" if b.x|length != 1 }}</span> <span class="country">via {{ b.via|join(", ") }}</span></span> {% for p in b.x[:8] %}<a href="{{ p.url }}" rel="noopener">@{{ p.account }}</a>{% if not loop.last %}, {% endif %}{% endfor %}{% if b.x|length > 8 %} and {{ b.x|length - 8 }} more{% endif %}</li>{% endif %}
       </ul>

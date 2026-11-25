@@ -47,7 +47,7 @@ def test_index_lookup_and_line():
     assert [p["account"] for p in found["x"]] == ["alice", "bob", "carol"]
     assert found["reddit"][0]["activity"] == 1838 and found["via"] == ["AINews"]
     assert mentions.line(found) == "3 X posts, 1 Reddit thread via AINews"
-    assert idx.lookup({"github.com/other/repo"}) == {"x": [], "reddit": [], "via": []}
+    assert idx.lookup({"github.com/other/repo"}) == {"x": [], "reddit": [], "via": [], "via_links": {}}
     b = {"hn": [], "repos": [], "models": [], "papers": [], "social": 0, "digests": [], **found}
     assert builders_line(b) == "3 X posts, 1 Reddit thread via AINews"
 

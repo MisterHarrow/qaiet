@@ -138,23 +138,34 @@ def account(post_url: str) -> str:
     return m.group(1) if m else ""
 
 
+def short_name(name: str) -> str:
+    """'AINews (Latent Space)' -> 'AINews'."""
+    return re.sub(r"\s*\(.*\)$", "", name)
+
+
 class Index:
     """Link key -> the X posts and Reddit threads that recap bullets put next to it."""
 
-    def __init__(self, blocks: list[tuple[str, dict]]):
-        self.by_key: dict[str, list[tuple[str, dict]]] = {}
-        for source, block in blocks:
+    def __init__(self, blocks: list[tuple]):
+        """blocks: (source, block) or (source, block, issue URL)."""
+        self.by_key: dict[str, list[tuple[str, dict, str | None]]] = {}
+        for source, block, *issue in blocks:
             for key in block["targets"]:
-                self.by_key.setdefault(key, []).append((source, block))
+                self.by_key.setdefault(key, []).append((source, block, issue[0] if issue else None))
 
     def lookup(self, keys: set[str], names: dict[str, str] | None = None) -> dict:
-        """{"x": [{"url", "account"}], "reddit": [{...}], "via": [newsletter names]} for any of these link keys."""
+        """{"x": [{"url", "account"}], "reddit": [{...}], "via": [newsletter names], "via_links": {name: issue URL}}
+        for any of these link keys."""
         x: dict[str, dict] = {}
         reddit: dict[str, dict] = {}
         via: set[str] = set()
+        via_links: dict[str, str] = {}
         for key in keys:
-            for source, block in self.by_key.get(key, []):
-                via.add(re.sub(r"\s*\(.*\)$", "", (names or {}).get(source, source)))  # "AINews (Latent Space)" -> "AINews"
+            for source, block, issue in self.by_key.get(key, []):
+                name = short_name((names or {}).get(source, source))
+                via.add(name)
+                if issue:
+                    via_links.setdefault(name, issue)
                 for url in block["x"]:
                     x.setdefault(url, {"url": url, "account": account(url)})
                 for r in block["reddit"]:
@@ -162,7 +173,7 @@ class Index:
                     if prev is None or (r.get("activity") or 0) > (prev.get("activity") or 0):
                         reddit[r["url"]] = r
         threads = sorted(reddit.values(), key=lambda r: -(r.get("activity") or 0))
-        return {"x": list(x.values()), "reddit": threads, "via": sorted(via)}
+        return {"x": list(x.values()), "reddit": threads, "via": sorted(via), "via_links": via_links}
 
 
 EMPTY = Index([])
@@ -174,9 +185,9 @@ def load(store: Store, sources: list[str], now: datetime, hours: float) -> Index
         return EMPTY
     since = iso(now - timedelta(hours=hours + 24))
     rows = store.conn.execute(
-        f"SELECT source, extra FROM items WHERE source IN ({','.join('?' * len(sources))}) "
+        f"SELECT source, url, extra FROM items WHERE source IN ({','.join('?' * len(sources))}) "
         "AND COALESCE(published_at, first_seen_at) >= ?", (*sources, since)).fetchall()
-    blocks = [(r["source"], b) for r in rows for b in json.loads(r["extra"] or "{}").get("mentions", [])]
+    blocks = [(r["source"], b, r["url"]) for r in rows for b in json.loads(r["extra"] or "{}").get("mentions", [])]
     return Index(blocks)
 
 

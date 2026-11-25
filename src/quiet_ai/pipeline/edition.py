@@ -130,6 +130,15 @@ def story_entry(store: Store, sources: SourcesConfig, score: StoryScore, rank: i
         "official": [{"title": m["title"], "url": m["url"], "source": names.get(m["source"], m["source"])} for m in members if m["kind"] == "lab"],
         "digests": sorted({names.get(m["source"], m["source"]) for m in members if m["kind"] == "newsletter" and feeds.get(m["source"]) and feeds[m["source"]].role == "digest"}),
     }
+    # Links behind the counts in the Builders line: posts (most liked first) and each digest's issue.
+    posts = sorted((m for m in members if m["kind"] == "social"),
+                   key=lambda m: -((m["metrics"].get("likes") or 0) + (m["metrics"].get("reposts") or 0)))
+    builders["posts"] = [{"url": m["url"], "title": m["title"], "source": names.get(m["source"], m["source"])} for m in posts]
+    digest_links: dict[str, str] = {}
+    for m in members:
+        if m["kind"] == "newsletter" and feeds.get(m["source"]) and feeds[m["source"]].role == "digest":
+            digest_links.setdefault(names.get(m["source"], m["source"]), m["url"])
+    builders["digest_links"] = digest_links
     # X posts and Reddit threads a recap (AINews) linked next to one of this story's URLs, plus the
     # posts of recap bullets that joined the story by topic.
     talk = mentions.lookup(set().union(*(link_keys(m["kind"], m["url"], m["extra"]) for m in members)) if members else set(), names)
@@ -138,8 +147,12 @@ def story_entry(store: Store, sources: SourcesConfig, score: StoryScore, rank: i
     for m in recaps:
         for url in m["extra"].get("x", []):
             x.setdefault(url, {"url": url, "account": mentions_mod.account(url)})
-    via = set(talk["via"]) | {re.sub(r"\s*\(.*\)$", "", names.get(m["source"], m["source"])) for m in recaps}
-    builders |= {"x": list(x.values()), "reddit": talk["reddit"], "via": sorted(via)}
+    via = set(talk["via"]) | {mentions_mod.short_name(names.get(m["source"], m["source"])) for m in recaps}
+    via_links = dict(talk["via_links"])
+    for m in recaps:
+        if m["extra"].get("issue"):
+            via_links.setdefault(mentions_mod.short_name(names.get(m["source"], m["source"])), m["extra"]["issue"])
+    builders |= {"x": list(x.values()), "reddit": talk["reddit"], "via": sorted(via), "via_links": via_links}
     headline = (summary_data or {}).get("headline") or representative_title(store, score.members[0]) or score.story_id
     # The card's link to its top source: the official post if a lab published one, else the press article
     # closest to the story's center (an English original first); a builders-only story links its top thread,

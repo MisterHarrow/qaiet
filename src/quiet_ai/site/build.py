@@ -11,8 +11,10 @@ from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+import re
+
 from jinja2 import Environment, FileSystemLoader, select_autoescape
-from markupsafe import Markup
+from markupsafe import Markup, escape
 
 HERE = Path(__file__).parent
 STANCE_NAMES = {
@@ -28,6 +30,75 @@ COUNTRY_NAMES = {
 }
 
 
+def _a(url: str, text: str) -> Markup:
+    return Markup('<a href="{}" rel="noopener">{}</a>').format(url, text)
+
+
+def builders_html(b: dict) -> Markup:
+    """The Builders line with each part linked to its source: the top HN thread, the first repo, model or
+    paper, the most liked post, each digest's issue, the first X post and Reddit thread, and the recap issue.
+    Same words as edition.builders_line; parts without a stored link stay plain text."""
+    parts: list[Markup] = []
+    hn = b.get("hn") or []
+    if hn:
+        parts.append(_a(hn[0]["url"], f"HN {sum(h['points'] for h in hn):,} points, {sum(h['comments'] for h in hn):,} comments"))
+    for key, word in (("repos", "repo"), ("models", "model"), ("papers", "paper")):
+        items = b.get(key) or []
+        if items:
+            parts.append(_a(items[0]["url"], f"{len(items)} {word}{'s' if len(items) > 1 else ''}"))
+    if b.get("social"):
+        text = f"{b['social']} post{'s' if b['social'] > 1 else ''}"
+        posts = b.get("posts") or []
+        parts.append(_a(posts[0]["url"], text) if posts else Markup.escape(text))
+    if b.get("digests"):
+        links = b.get("digest_links") or {}
+        parts.append(Markup("in ") + Markup(", ").join(_a(links[n], n) if n in links else Markup.escape(n) for n in b["digests"][:3]))
+    x, reddit = b.get("x") or [], b.get("reddit") or []
+    if x or reddit:
+        bits = []
+        if x:
+            bits.append(_a(x[0]["url"], f"{len(x)} X post{'s' if len(x) > 1 else ''}"))
+        if reddit:
+            bits.append(_a(reddit[0]["url"], f"{len(reddit)} Reddit thread{'s' if len(reddit) > 1 else ''}"))
+        talk = Markup(", ").join(bits)
+        via, via_links = b.get("via") or [], b.get("via_links") or {}
+        if via:
+            talk += Markup(" via ") + Markup(" and ").join(_a(via_links[v], v) if v in via_links else Markup.escape(v) for v in via)
+        parts.append(talk)
+    return Markup(" · ").join(parts)
+
+
+_PLATFORMS = re.compile(r"\b(Hacker News|GitHub|Hugging Face|Bluesky|Reddit)\b|(?<=\bon )X\b|\bX(?= (?:posts?|users)\b)")
+
+
+def link_platforms(text: str, b: dict) -> Markup:
+    """Link the first mention of each platform in a builders summary to that platform's top source."""
+    targets: dict[str, str] = {}
+    if b.get("hn"):
+        targets["Hacker News"] = b["hn"][0]["url"]
+    if b.get("repos"):
+        targets["GitHub"] = b["repos"][0]["url"]
+    models = b.get("models") or []
+    if hf := [m for m in models if "Hugging Face" in (m.get("source") or "")] or models:
+        targets["Hugging Face"] = hf[0]["url"]
+    if bsky := [p for p in b.get("posts") or [] if (p.get("source") or "").startswith("Bluesky")]:
+        targets["Bluesky"] = bsky[0]["url"]
+    if b.get("reddit"):
+        targets["Reddit"] = b["reddit"][0]["url"]
+    if b.get("x"):
+        targets["X"] = b["x"][0]["url"]
+    used: set[str] = set()
+
+    def link(m: re.Match) -> str:
+        name = m.group(0)
+        if name in targets and name not in used:
+            used.add(name)
+            return str(_a(targets[name], name))
+        return name
+
+    return Markup(_PLATFORMS.sub(link, str(escape(text or ""))))
+
+
 def _env() -> Environment:
     env = Environment(
         loader=FileSystemLoader(HERE / "templates"),
@@ -36,6 +107,8 @@ def _env() -> Environment:
         lstrip_blocks=True,
     )
     env.filters["thousands"] = lambda n: f"{int(n):,}"
+    env.filters["builders_html"] = builders_html
+    env.filters["link_platforms"] = link_platforms
     env.filters["signed"] = lambda v: "–" if v is None else (f"{v:+.2f}".replace("-", "−"))
     env.globals.update(stance_names=STANCE_NAMES, kind_names=KIND_NAMES, country_names=COUNTRY_NAMES)
     return env

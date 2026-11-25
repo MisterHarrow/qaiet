@@ -236,3 +236,25 @@ def test_countries_per_stance_group():
     from quiet_ai.pipeline.edition import _countries
     items = [{"country": "US"}, {"country": "SE"}, {"country": "US"}, {"country": None}, {"country": "GB"}]
     assert _countries(items) == [["US", 2], ["GB", 1], ["SE", 1]]
+
+
+def test_builders_line_and_summary_link_their_sources():
+    b = {"hn": [{"title": "t", "url": "https://news.ycombinator.com/item?id=1", "points": 1200, "comments": 5}],
+         "repos": [], "models": [], "papers": [], "social": 2, "official": [],
+         "posts": [{"url": "https://bsky.app/profile/a/post/1", "title": "p", "source": "Bluesky"}],
+         "digests": ["The Rundown AI"], "digest_links": {"The Rundown AI": "https://therundown.ai/a"},
+         "x": [{"url": "https://x.com/alice/status/1", "account": "alice"}], "reddit": [],
+         "via": ["AINews"], "via_links": {"AINews": "https://latent.space/p/ainews-a"}}
+    html = str(build.builders_html(b))
+    assert html == ('<a href="https://news.ycombinator.com/item?id=1" rel="noopener">HN 1,200 points, 5 comments</a> · '
+                    '<a href="https://bsky.app/profile/a/post/1" rel="noopener">2 posts</a> · '
+                    'in <a href="https://therundown.ai/a" rel="noopener">The Rundown AI</a> · '
+                    '<a href="https://x.com/alice/status/1" rel="noopener">1 X post</a> via '
+                    '<a href="https://latent.space/p/ainews-a" rel="noopener">AINews</a>')
+    # Older editions without the links keep plain text.
+    assert str(build.builders_html({"hn": [], "social": 3, "digests": ["TLDR AI"]})) == "3 posts · in TLDR AI"
+    text = "Hacker News & Bluesky users argued; Hacker News again, and on X <b>too</b>."
+    linked = str(build.link_platforms(text, b))
+    assert linked.startswith('<a href="https://news.ycombinator.com/item?id=1" rel="noopener">Hacker News</a> &amp; '
+                             '<a href="https://bsky.app/profile/a/post/1" rel="noopener">Bluesky</a> users argued; Hacker News again')
+    assert 'on <a href="https://x.com/alice/status/1" rel="noopener">X</a> &lt;b&gt;too&lt;/b&gt;.' in linked  # text stays escaped
