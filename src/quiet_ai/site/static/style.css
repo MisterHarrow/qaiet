@@ -185,10 +185,19 @@ button { font: inherit; }
 
 .kicker { display: flex; align-items: center; gap: 0.8em; margin: 0 0 0.55rem; font: 0.7rem/1.3 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
 .kicker .rank { color: var(--ink); font-weight: 700; }
-/* The card's top source, as a small browser icon at the end of the kicker row. */
-.open-source { display: inline-flex; margin-left: auto; padding: 0.25rem; margin: -0.25rem -0.25rem -0.25rem auto; color: var(--muted); border-radius: 2px; }
-.open-source:hover { color: var(--signal); }
-.open-source svg { width: 1.05rem; height: 1.05rem; }
+/* The card's top source: a small globe at the end of the kicker row. On hover it spins and says so. */
+.open-source { display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.25rem; margin: -0.25rem -0.25rem -0.25rem auto; color: var(--muted); text-decoration: none; border-radius: 2px; }
+.open-source:hover, .open-source:focus-visible { color: var(--signal); }
+.open-source svg { width: 1.1rem; height: 1.1rem; overflow: visible; }
+.globe circle, .globe ellipse, .globe path { fill: none; stroke: currentColor; stroke-width: 1.2; stroke-linecap: round; }
+.globe { transform-box: fill-box; transform-origin: 50% 50%; }
+.open-source-label { opacity: 0; transform: translateX(6px); transition: opacity 0.18s ease, transform 0.22s cubic-bezier(0.2, 0.8, 0.2, 1); white-space: nowrap; }
+.open-source:hover .open-source-label, .open-source:focus-visible .open-source-label { opacity: 1; transform: none; }
+@keyframes globe-spin { from { transform: rotateY(0deg); } to { transform: rotateY(360deg); } }
+@media (prefers-reduced-motion: no-preference) {
+  .open-source:hover .globe, .open-source:focus-visible .globe { animation: globe-spin 0.9s cubic-bezier(0.45, 0, 0.2, 1) both; }
+}
+@media (prefers-reduced-motion: reduce) { .open-source-label { transition: none; } }
 
 .card h2 {
   margin: 0;
@@ -223,15 +232,47 @@ details { margin-top: auto; padding-top: 0.8rem; }
 /* Card footer: the Expand Sources toggle on the left, the stance chart on the right. */
 .card-foot { display: flex; align-items: center; justify-content: space-between; gap: 0.8rem; margin-top: auto; padding-top: 0.8rem; }
 .card-foot details { margin-top: 0; padding-top: 0; }
-.stance-chart { display: inline-flex; align-items: center; gap: 0.5rem; margin-left: auto; }
-.stance-chart svg { display: block; width: 2.4rem; height: auto; overflow: visible; }
-.stance-mean { font: 0.68rem/1 var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+.stance-chart { position: relative; display: inline-flex; margin-left: auto; border-radius: 3px; cursor: default; }
+.stance-chart:focus-visible { outline-offset: 3px; }
+.stance-chart svg { display: block; width: 4.4rem; height: auto; overflow: visible; }
+.stance-chart rect { transform-box: fill-box; transform-origin: 50% 100%; }
 .sb1 { fill: var(--crit); }
 .sb2 { fill: var(--crit-soft); }
 .sb3 { fill: var(--neut); }
 .sb4 { fill: var(--pos-soft); }
 .sb5 { fill: var(--pos); }
 .sbase { stroke: var(--rule); stroke-width: 1; }
+.sface circle, .sface path { fill: none; stroke: var(--muted); stroke-width: 0.9; stroke-linecap: round; }
+.sface .eye { fill: var(--muted); stroke: none; }
+/* The tooltip: counts per stance and the average, rising into place on hover or keyboard focus. */
+.stance-tip {
+  position: absolute; right: -0.5rem; bottom: calc(100% + 0.6rem); z-index: 5; min-width: 12rem;
+  padding: 0.6rem 0.75rem; background: var(--paper); border: 1px solid var(--ink); border-radius: 3px;
+  box-shadow: 0 8px 24px rgba(26, 24, 22, 0.14);
+  font: 0.7rem/1.55 var(--mono); color: var(--ink); text-align: left;
+  opacity: 0; visibility: hidden; transform: translateY(6px) scale(0.98); transform-origin: 85% 100%; pointer-events: none;
+  transition: opacity 0.18s ease, transform 0.22s cubic-bezier(0.2, 0.8, 0.2, 1), visibility 0s linear 0.22s;
+}
+.stance-tip::after { content: ""; position: absolute; right: 1.6rem; top: 100%; border: 6px solid transparent; border-top-color: var(--ink); }
+.stance-chart:hover .stance-tip, .stance-chart:focus .stance-tip {
+  opacity: 1; visibility: visible; transform: none; transition: opacity 0.18s ease, transform 0.22s cubic-bezier(0.2, 0.8, 0.2, 1), visibility 0s;
+}
+.tip-head { display: block; margin-bottom: 0.3rem; font-size: 0.62rem; letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted); }
+.tip-row { display: flex; align-items: center; gap: 0.5rem; }
+.tip-row b, .tip-avg b { margin-left: auto; padding-left: 1rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.tip-muted { color: var(--muted); }
+.tip-dot { display: inline-block; width: 0.55rem; height: 0.55rem; border-radius: 1px; }
+.tip-avg { display: flex; margin-top: 0.35rem; padding-top: 0.35rem; border-top: 1px solid var(--rule); }
+/* On hover the bars rise one after another, once. */
+@keyframes bar-rise { 0% { transform: scaleY(0.35); } 65% { transform: scaleY(1.08); } 100% { transform: scaleY(1); } }
+@media (prefers-reduced-motion: no-preference) {
+  .stance-chart:hover rect, .stance-chart:focus rect { animation: bar-rise 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+  .stance-chart rect:nth-of-type(2) { animation-delay: 0.04s; }
+  .stance-chart rect:nth-of-type(3) { animation-delay: 0.08s; }
+  .stance-chart rect:nth-of-type(4) { animation-delay: 0.12s; }
+  .stance-chart rect:nth-of-type(5) { animation-delay: 0.16s; }
+}
+@media (prefers-reduced-motion: reduce) { .stance-tip { transition: none; } }
 .panel .builders { margin: 0.7rem 0 0; }
 summary { cursor: pointer; width: fit-content; list-style: none; font: 0.72rem/1.4 var(--mono); letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
 summary::-webkit-details-marker { display: none; }

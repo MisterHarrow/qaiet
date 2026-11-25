@@ -199,8 +199,9 @@ def test_card_links_its_top_source(tmp_path, settings):
     e = edition()
     e["stories"][0]["source"] = entry["source"]
     html = build.render(e, tmp_path).read_text()
-    assert '<a class="open-source" href="https://acme.ai/blog/tiny" rel="noopener" title="Acme blog (official): Introducing tiny"' in html
-    assert 'aria-label="Open the top source, Acme blog (official)"' in html and ">Expand Sources</summary>" in html
+    assert '<a class="open-source" href="https://acme.ai/blog/tiny" rel="noopener" aria-label="Open the top source, Acme blog (official)">' in html
+    assert '<span class="open-source-label" aria-hidden="true">Top source</span>' in html and '<g class="globe">' in html
+    assert ">Expand Sources</summary>" in html
 
 
 def test_card_footer_has_stance_chart_and_builders_line_moves_to_panel(tmp_path):
@@ -209,5 +210,9 @@ def test_card_footer_has_stance_chart_and_builders_line_moves_to_panel(tmp_path)
     panel = re.search(r'<div class="panel".*?<div class="panel-groups">', html, re.S).group(0)
     assert 'class="builders"' not in card and "HN 1,200 points, 5 comments" in panel
     # stance {-1: 1, 0: 2, 1: 1}: average 0, bars scaled to the largest bucket
-    assert '<span class="stance-mean">+0.00</span>' in card and 'aria-label="Stance of the coverage: 1 critical, 2 neutral, 1 positive' in card
-    assert '<rect class="sb3" x="14" y="1.0" width="5" height="14.0"/>' in card and '<rect class="sb1" x="0" y="15" width="5" height="0"/>' in card
+    assert 'aria-label="Stance of the coverage: 1 critical, 2 neutral, 1 positive, 1 not labeled. Average +0.00 on a scale from −2 to +2."' in card
+    assert '<rect class="sb3" x="25" y="1.0" width="8" height="22.0" rx="0.8"/>' in card and '<rect class="sb1" x="1" y="23" width="8" height="0" rx="0.8"/>' in card
+    assert card.count('<g class="sface">') == 5 and 'tabindex="0"' in card
+    # the hover tooltip: counts per stance and the average
+    assert "Stance of 4 articles" in card  # labeled ones; unclear would count too and '<span class="tip-row"><i class="tip-dot st0"></i>Neutral<b>2</b></span>' in card
+    assert '<span class="tip-avg">Average<b>+0.00</b></span>' in card
