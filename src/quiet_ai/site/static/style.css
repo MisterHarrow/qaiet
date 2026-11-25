@@ -5,7 +5,8 @@
 
 :root {
   --paper: #f5ebe2;
-  --card: #fbf6f1;
+  --card: rgba(255, 252, 248, 0.3);      /* translucent: cards sit lightly on the paper */
+  --card-line: rgba(160, 130, 105, 0.16); /* card and panel edges */
   --ink: #1a1816;
   --muted: #5c534c;
   --faint: #70665f;
@@ -32,7 +33,8 @@
 :root[data-theme="dark"] {
   color-scheme: dark;
   --paper: #2a2826;
-  --card: #33302d;
+  --card: rgba(255, 248, 238, 0.025);
+  --card-line: rgba(255, 240, 225, 0.07);
   --ink: #ece6dc;
   --muted: #c4bbaf;
   --faint: #a39b91;
@@ -173,7 +175,7 @@ button { font: inherit; }
   display: flex; flex-direction: column;
   padding: 0 1.1rem 1rem;
   background: var(--card);
-  border: 1px solid var(--rule);
+  border: 1px solid var(--card-line);
   border-top: 0;
   border-radius: 0 0 2px 2px;
 }
@@ -181,8 +183,12 @@ button { font: inherit; }
 .stripe { display: flex; height: 4px; margin: 0 -1.1rem 1rem; background: var(--wash); }
 .stripe-none { background: var(--rule); }
 
-.kicker { display: flex; gap: 0.8em; margin: 0 0 0.55rem; font: 0.7rem/1.3 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.kicker { display: flex; align-items: center; gap: 0.8em; margin: 0 0 0.55rem; font: 0.7rem/1.3 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
 .kicker .rank { color: var(--ink); font-weight: 700; }
+/* The card's top source, as a small browser icon at the end of the kicker row. */
+.open-source { display: inline-flex; margin-left: auto; padding: 0.25rem; margin: -0.25rem -0.25rem -0.25rem auto; color: var(--muted); border-radius: 2px; }
+.open-source:hover { color: var(--signal); }
+.open-source svg { width: 1.05rem; height: 1.05rem; }
 
 .card h2 {
   margin: 0;

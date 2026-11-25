@@ -166,3 +166,38 @@ def test_brand_is_the_same_on_every_page(tmp_path):
     # The masthead rule is the stance mix of every article in the view; each card's top edge is its own.
     assert '<p class="spectrum" role="img" aria-label="Stance of every article in this view: 1 critical, 2 neutral, 1 positive, 1 not labeled"' in front
     assert '<p class="stripe" role="img"' in front and '<span class="rank">01</span>' in front
+
+
+def test_card_links_its_top_source(tmp_path, settings):
+    """A small browser icon on each card opens the top source: an official post first, else an English original."""
+    from datetime import timedelta
+
+    from quiet_ai.config import FeedSource
+    from quiet_ai.config import SourcesConfig as SC
+    from quiet_ai.pipeline import cluster, edition as ed, momentum
+    from quiet_ai.store.db import Store
+    from quiet_ai.store.models import Item
+    from tests.conftest import NOW
+    from tests.test_cluster import CFG, EMB, add, news
+
+    st = Store(":memory:")
+    add(st, [news(1, "Acme releases tiny open model", source="dn", url="https://dn.se/a", lang="sv"),
+             news(2, "Acme releases tiny open model today", source="nyt", url="https://nyt.com/a", lang="en")])
+    cluster.run(st, EMB.name, CFG, NOW)
+    srcs = SC(feeds=[FeedSource(id="dn", name="DN", kind="news", feeds=["x"], language="sv"), FeedSource(id="nyt", name="NYT", kind="news", feeds=["x"]),
+                     FeedSource(id="acme", name="Acme blog", kind="lab", feeds=["x"])])
+    [score] = momentum.score_stories(st, settings, srcs, NOW + timedelta(minutes=1))
+    assert ed.story_entry(st, srcs, score, 1)["source"]["outlet"] == "NYT"  # the English original over the Swedish one
+    lab = Item(id="lab:1", source="acme", kind="lab", url="https://acme.ai/blog/tiny", title="Introducing tiny", fetched_at=NOW,
+               extra={"links": ["https://nyt.com/a"]})
+    add(st, [lab], now=NOW + timedelta(minutes=2))
+    cluster.run(st, EMB.name, CFG, NOW + timedelta(minutes=2))
+    [score] = momentum.score_stories(st, settings, srcs, NOW + timedelta(minutes=3))
+    entry = ed.story_entry(st, srcs, score, 1)
+    assert entry["source"] == {"outlet": "Acme blog", "url": "https://acme.ai/blog/tiny", "title": "Introducing tiny", "official": True}
+
+    e = edition()
+    e["stories"][0]["source"] = entry["source"]
+    html = build.render(e, tmp_path).read_text()
+    assert '<a class="open-source" href="https://acme.ai/blog/tiny" rel="noopener" title="Acme blog (official): Introducing tiny"' in html
+    assert 'aria-label="Open the top source, Acme blog (official)"' in html and ">Expand Sources</summary>" in html

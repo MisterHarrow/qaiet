@@ -53,6 +53,20 @@ def representative_title(store: Store, story_id: str) -> str | None:
     return rep["title_en"] or rep["title"]
 
 
+def representative_url(store: Store, story_id: str, kinds: tuple[str, ...] = ("news",)) -> str | None:
+    """URL of the item of these kinds closest to the story's centroid, an English original first: the card's source link."""
+    rows = store.conn.execute(
+        f"SELECT i.kind, i.lang, i.url, i.title_en, e.vector, s.centroid FROM items i JOIN stories s ON s.id = i.story_id "
+        f"LEFT JOIN embeddings e ON e.item_id = i.id WHERE i.story_id = ? AND i.relevant = 1 AND i.dup_of IS NULL "
+        f"AND i.kind IN ({','.join('?' * len(kinds))})",
+        (story_id, *kinds),
+    ).fetchall()
+    if not rows:
+        return None
+    centroid = normalize(from_blob(rows[0]["centroid"])[None, :])[0] if rows[0]["centroid"] else None
+    return min(rows, key=lambda r: ((r["lang"] or "en") != "en", _rep_key(r, centroid)))["url"]
+
+
 def source_names(sources: SourcesConfig) -> dict[str, str]:
     names = dict(BUILDER_SOURCES)
     names.update({f.id: f.name for f in sources.feeds})

@@ -14,7 +14,7 @@ from quiet_ai.config import PeriodSettings, Settings, SourcesConfig
 from quiet_ai.pipeline import mentions as mentions_mod
 from quiet_ai.pipeline.cluster import link_keys
 from quiet_ai.pipeline.momentum import RisingItem, StoryScore
-from quiet_ai.pipeline.stories import representative_title, source_names
+from quiet_ai.pipeline.stories import representative_title, representative_url, source_names
 from quiet_ai.store.db import Store, iso
 from quiet_ai.terms import term_key
 
@@ -139,6 +139,24 @@ def story_entry(store: Store, sources: SourcesConfig, score: StoryScore, rank: i
     via = set(talk["via"]) | {re.sub(r"\s*\(.*\)$", "", names.get(m["source"], m["source"])) for m in recaps}
     builders |= {"x": list(x.values()), "reddit": talk["reddit"], "via": sorted(via)}
     headline = (summary_data or {}).get("headline") or representative_title(store, score.members[0]) or score.story_id
+    # The card's link to its top source: the official post if a lab published one, else the press article
+    # closest to the story's center (an English original first); a builders-only story links its top thread,
+    # repository or model.
+    by_url = {m["url"]: m for m in members}
+    lead_url = representative_url(store, score.members[0])
+    lead = by_url.get(lead_url) if lead_url else None
+    if lead is None and press:
+        lead = press[0]
+    sources_out = []
+    for m in [*(m for m in members if m["kind"] == "lab")][:1] + ([lead] if lead else []):
+        sources_out.append({"outlet": names.get(m["source"], m["source"]), "url": m["url"], "title": m["title_en"] or m["title"],
+                            "official": m["kind"] == "lab"})
+    if not sources_out:
+        for key, url_key, outlet in (("hn", "url", "Hacker News"), ("repos", "url", "GitHub"), ("models", "url", None), ("papers", "url", "Paper")):
+            if builders[key]:
+                b0 = builders[key][0]
+                sources_out.append({"outlet": outlet or b0.get("source", ""), "url": b0[url_key], "title": b0["title"], "official": False})
+                break
     return {
         "id": score.story_id,
         "rank": rank,
@@ -154,6 +172,7 @@ def story_entry(store: Store, sources: SourcesConfig, score: StoryScore, rank: i
         "coverage": [{"stance": k, "items": groups[k]} for k in [*map(str, STANCES), "unclear", "unlabeled"] if k in groups],
         "builders": builders,
         "builders_line": builders_line(builders),
+        "source": sources_out[0] if sources_out else None,
         "items": sum(1 for m in members if m["kind"] != "recap"),  # recap bullets don't trigger new summaries
         "entities": sorted({e for m in members if m["label"] for e in m["label"].get("entities", [])}),
     }
