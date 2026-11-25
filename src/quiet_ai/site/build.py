@@ -97,6 +97,18 @@ def render(edition: dict, out_dir: Path, tz: str = "Europe/Stockholm", periods: 
     return page_dir / "index.html"
 
 
+# Hosting config for Vercel (news.b3njamin.ai). The pages link with relative paths
+# ("../static/style.css"), so a folder URL must end in a slash: /archive has to become /archive/.
+# GitHub Pages redirects like that by itself; Vercel only with trailingSlash.
+VERCEL_CONFIG = {"trailingSlash": True}
+
+
+def write_host_config(out_dir: Path) -> Path:
+    path = out_dir / "vercel.json"
+    path.write_text(json.dumps(VERCEL_CONFIG, indent=1) + "\n", encoding="utf-8")
+    return path
+
+
 def render_all(editions: list[dict], out_dir: Path, tz: str = "Europe/Stockholm") -> list[Path]:
     """Render every view with a shared switcher. `editions` are in display order."""
     periods = [{"key": e["period"]["key"], "label": e["period"]["label"], "path": period_path(i, e["period"]["key"])} for i, e in enumerate(editions)]

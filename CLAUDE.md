@@ -96,6 +96,12 @@ uv run pytest          # must pass before every push; no network, no model calls
 - `run.yml` runs on a schedule:
   - **collect** every 2 hours: fetch only, no model calls.
   - **publish** from 06:30 Stockholm: the full pipeline, deploy to Pages, and committing the frozen editions.
-  - GitHub drops scheduled runs, so `.github/scripts/plan.sh` publishes from any scheduled run once today's edition isn't live yet (see `docs/m5-notes.md`).
+  - GitHub drops scheduled runs, so `.github/scripts/plan.sh` publishes from any scheduled run once today's edition isn't live yet (see `docs/m5-notes.md`). It reads the live `edition.json` at `SITE_URL` in `run.yml`.
+- **Vercel (news.b3njamin.ai), being set up:**
+  - Each publish also uploads `site/` to the Vercel project `energaized/qaiet` (pinned `vercel` CLI). Vercel never builds; the secrets are `VERCEL_TOKEN`, `VERCEL_ORG_ID` and `VERCEL_PROJECT_ID`.
+  - `qa build` writes `site/vercel.json` with `trailingSlash: true`; the relative links break without it.
+  - DNS is at Namecheap: a CNAME for `news` points to Vercel. The apex b3njamin.ai is a separate Vercel project.
+  - Until the switch, GitHub Pages stays the fallback: the Vercel step has `continue-on-error`, and `SITE_URL` still points at Pages. To switch: confirm `https://news.b3njamin.ai/edition.json` answers 200 without a redirect, point `SITE_URL` there, drop `continue-on-error` and the Pages steps.
+  - `.vercel/` and `.env.local` (from `vercel link`) are git-ignored; never commit them.
 - **Changes to the page go live only on the next publish:** the morning run, or a manual `gh workflow run run.yml --repo MisterHarrow/qaiet -f mode=publish`. That costs model money and updates the public site, so ask Benjamin first.
 - The workflow commits `editions/*.json` to `main`. Run `git pull --rebase` before pushing.

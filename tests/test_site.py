@@ -77,6 +77,7 @@ def test_cli_build_dry_run(tmp_path):
     assert res.exit_code == 0, res.output
     html = (tmp_path / "index.html").read_text()
     assert html.count("<article") >= 1 and "Rising" in html
+    assert json.loads((tmp_path / "vercel.json").read_text()) == {"trailingSlash": True}  # relative links need /archive/
 
 
 def test_top_terms_merge_variants_and_count_outlets(settings):
