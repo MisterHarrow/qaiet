@@ -23,6 +23,17 @@
   {% else %}
   <hr class="rule">
   {% endif %}
+  {% set sv = (e.sentiment or {}).get("values") or {} %}
+  {% if sv.get("all") is not none %}
+  {# The greeting: the day's sentiment under the nameplate. On the first page of a visit the figure counts up
+     from zero and the line steps in (app.js and .greet); otherwise, and without JS, it simply shows. #}
+  <div class="sentiment">
+    <p class="sent-main"><a class="sent-label step" href="{{ root }}sentiment/">The sentiment</a>
+      <span class="sent-num step" data-value="{{ sv['all'] }}">{{ sv["all"]|signed }}</span>
+      <span class="sent-word step">{{ e.sentiment.words }}{% if e.sentiment.days > 1 %} <span class="sent-note">{{ e.sentiment.days }}-day average</span>{% endif %}</span></p>
+    <p class="sent-tracks"><span class="step">Technical <b>{{ sv.get("technical")|signed }}</b></span><span class="step">Political <b>{{ sv.get("political")|signed }}</b></span><span class="step">Economic <b>{{ sv.get("economic")|signed }}</b></span></p>
+  </div>
+  {% endif %}
   <div class="masthead-meta">
     {% if periods|length > 1 %}
     <nav class="periods" aria-label="Time period">
@@ -40,11 +51,6 @@
   {% endif %}
   {% if e.weather %}
   <p class="weather">{{ e.weather }}</p>
-  {% endif %}
-  {% set sv = (e.sentiment or {}).get("values") or {} %}
-  {% if sv.get("all") is not none %}
-  <p class="index-line"><a href="{{ root }}sentiment/">Sentiment index</a>{% if e.sentiment.days > 1 %}, {{ e.sentiment.days }}-day average{% endif %}: <strong>{{ sv["all"]|signed }}</strong> <span class="muted">{{ e.sentiment.words }}</span>
-    <span class="sep">·</span> technical {{ sv.get("technical")|signed }} <span class="sep">·</span> political {{ sv.get("political")|signed }} <span class="sep">·</span> economic {{ sv.get("economic")|signed }}</p>
   {% endif %}
   {% if e.llm.budget_reached %}
   <p class="notice">This month's budget for machine labeling is used up. Stories and links still update; labels and summaries are paused until next month.</p>

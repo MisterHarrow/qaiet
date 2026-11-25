@@ -85,7 +85,9 @@ def test_sentiment_page_and_front_page_line(tmp_path):
                                              "stance_summary": None, "builders_line": "+900 stars/day", "link": "https://github.com/o/f"}],
                      "press_not_builders": []})
     page = build.render(e, tmp_path / "site").read_text()
-    assert 'href="sentiment/">Sentiment index</a>, 7-day average: <strong>−0.28</strong>' in page
-    assert "economic –" in page and "The gap" in page and "fast-anything" in page and "no outlet coverage" in page
+    assert '<a class="sent-label step" href="sentiment/">The sentiment</a>' in page
+    assert '<span class="sent-num step" data-value="-0.28">−0.28</span>' in page and "7-day average" in page
+    assert "Political <b>−0.60</b>" in page and "Economic <b>–</b>" in page
+    assert "The gap" in page and "fast-anything" in page and "no outlet coverage" in page
     assert "No big press story without builder interest." in page
     assert json.loads((tmp_path / "site" / "edition.json").read_text())["gap"]["builders_not_press"][0]["id"] == "s-2"

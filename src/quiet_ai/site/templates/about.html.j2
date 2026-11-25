@@ -172,7 +172,7 @@
 
 <section id="privacy">
   <h2>Privacy and cost</h2>
-  <p>No ads, no cookies, no analytics, no tracking. The page loads nothing from other sites: no web fonts, no images, no scripts from elsewhere. The only script is a few lines for the filters and the light/dark switch, and the page works without it. If you switch to dark, that choice is kept in your browser's local storage; it is never sent anywhere.</p>
+  <p>No ads, no cookies, no analytics, no tracking. The page loads nothing from other sites: no web fonts, no images, no scripts from elsewhere. The only script is a few lines for the filters and the light/dark switch, and the page works without it. If you switch to dark, that choice is kept in your browser's local storage, and for the length of a visit the page remembers that it already showed its opening count; neither is ever sent anywhere.</p>
   <p>The language models cost money. Spending is capped at ${{ a.budget|int }} a month; this month so far: ${{ "%.2f"|format(a.spend) }}. If the cap is reached, stories and links keep updating and the labels pause until the next month. Each label records the prompt version that produced it: currently relevance <code>{{ a.prompts.relevance }}</code>, article labels <code>{{ a.prompts.news }}</code>, project labels <code>{{ a.prompts.builder }}</code>, summaries <code>{{ a.prompts.summary }}</code> and the daily line <code>{{ a.prompts.weather }}</code>.</p>
 </section>
 

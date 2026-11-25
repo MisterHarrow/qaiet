@@ -61,7 +61,7 @@ uv run pytest          # must pass before every push; no network, no model calls
   - No images, analytics, cookies or third-party scripts.
   - Favicons are inline `data:` SVGs.
   - `tests/test_site.py` checks this.
-- **The page works without JavaScript.** `app.js` only adds the filters, the light/dark switch (hidden without JS, so the page stays light) and the tabbed window that gathers open cards' sources (without JS each card's sources open under its own row). localStorage holds only the theme choice; no cookies.
+- **The page works without JavaScript.** `app.js` only adds the filters, the light/dark switch (hidden without JS, so the page stays light), the tabbed window that gathers open cards' sources (without JS each card's sources open under its own row), and the greeting's count-up. localStorage holds the theme choice and sessionStorage a flag that the greeting played this visit. No cookies.
 - **Model costs:**
   - The monthly cap is $30 (`llm.monthly_budget_usd`). A daily publish costs about $0.05–0.15.
   - Models: Haiku 5.5 for items, Sonnet 5.5 for story summaries and the daily line. Opus 5.5 is only for `qa eval crosscheck`; thinking can't be turned off on Opus 5.5.

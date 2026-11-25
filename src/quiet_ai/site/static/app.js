@@ -173,3 +173,27 @@
     new MutationObserver(function () { if (card.hidden && d.open) d.open = false; }).observe(card, { attributes: true, attributeFilter: ["hidden"] });
   });
 })();
+
+// The greeting: on the first page of a visit the sentiment figure counts up from zero in 450 ms while
+// its line steps in (CSS, under html.greet, set before paint). Later pages show it still.
+(function () {
+  var root = document.documentElement;
+  var num = document.querySelector(".sent-num");
+  if (!root.classList.contains("greet")) return;
+  try { sessionStorage.setItem("greeted", "1"); } catch (e) {}
+  // A tab opened in the background pauses animation frames: show the figure still instead.
+  if (!num || !window.requestAnimationFrame || document.hidden) return;
+  var target = parseFloat(num.getAttribute("data-value"));
+  if (isNaN(target)) return;
+  var shown = num.textContent;
+  var start = null;
+  function fmt(v) { return (v < 0 ? "\u2212" : "+") + Math.abs(v).toFixed(2); }
+  function frame(t) {
+    if (start === null) start = t;
+    var p = Math.min(1, (t - start) / 450);
+    num.textContent = p < 1 ? fmt(target * (1 - Math.pow(1 - p, 3))) : shown;
+    if (p < 1) requestAnimationFrame(frame);
+  }
+  num.textContent = fmt(0);
+  requestAnimationFrame(frame);
+})();
