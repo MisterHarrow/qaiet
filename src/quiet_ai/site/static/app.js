@@ -200,9 +200,10 @@
 
 // The narrative seal, on a narrative's page. The lattice's threads twist into a cord; the cord pays its thread out to
 // a pen that writes the day count, then "day", then "narrative", then the Q of the masthead, in the wordmark's
-// Baskerville: stroke by stroke in a calligrapher's order, slowing into each curve and lifting between strokes, the
-// newest ink a little darker. The letters are filled with the narrative's stance colors, critical at the left to
-// positive at the right (like a card's stance stripe). After each word its ink lifts into the threads of its outline,
+// Baskerville: stroke by stroke in a calligrapher's order, slowing into each curve and lifting between strokes. Behind
+// the pen the outline threads trace each letter, the letter lights up as a fine engraved hatch, and the color fuses in
+// between its lines; the letters are filled with the narrative's stance colors, critical at the left to positive at
+// the right (like a card's stance stripe), with the hatch left as a faint grain. After each word its ink lifts into the threads of its outline,
 // which wind back into the cord; after the Q, the two halves of the lattice spin against each other, slow and lock,
 // and then the lattice keeps turning slowly (style.css). In the lattice and the cord the threads wear the seal's own
 // tint, inside out (the same radial gradient as the SVG). The letters are the font itself, set on a hidden canvas; a
@@ -502,10 +503,15 @@
       for (var q = 0; q < sm.length; q++) { var dx = sm[q][0] - x, dy = sm[q][1] - y, d = dx * dx + dy * dy; if (d < best) { best = d; t = sm[q][2]; } }
       when[j * S + i] = t;
     }
-    return { segs: order(share(contours(w.F, 0))).segs, pen: pn, when: when, w: w, x0: w.x0, x1: w.x1 };
+    var segs = order(share(contours(w.F, 0))).segs;
+    var times = segs.map(function (s) { return s.map(function (p) { return when[Math.round(p[1] * G / 100) * S + Math.round(p[0] * G / 100)]; }); });
+    return { segs: segs, times: times, pen: pn, when: when, w: w, x0: w.x0, x1: w.x1 };
   }
-  // A word's letters at the canvas's resolution, filled with its tint, and for each inked pixel when it is written.
-  function fill(wd, cs, rgb) {
+  // A word's letters at the canvas's resolution, filled with its tint; for each inked pixel when it is written and
+  // whether it lies on the engraving's hatch (fine diagonal hairlines, a screen pixel wide); and the finished
+  // letters, where the hatch stays as a faint grain over the fused color.
+  var FUSED = 0.82;
+  function fill(wd, cs) {
     var W = canvas.width, off = document.createElement("canvas");
     off.width = off.height = W;
     var o = off.getContext("2d", { willReadFrequently: true }), k = W / 100, g = o.createLinearGradient(wd.x0 * k, 0, wd.x1 * k, 0), c = 0;
@@ -519,29 +525,34 @@
     o.setTransform(k * wd.w.u, 0, 0, k * wd.w.u, 0, 0);
     o.font = wd.w.font(wd.w.f);
     wd.w.set.forEach(function (l) { o.save(); o.translate(l[1], l[2]); o.rotate(l[3]); o.fillText(l[0], 0, 0); o.restore(); });
-    var img = o.getImageData(0, 0, W, W), d = img.data, idx = [], tm = [], S = G + 1;
+    var img = o.getImageData(0, 0, W, W), d = img.data, idx = [], tm = [], on = [], S = G + 1, H = Math.max(3, 0.9 * k);
     for (var p = 0; p < W * W; p++) {
       if (!d[p * 4 + 3]) continue;
-      var i = Math.round(((p % W) + 0.5) / k * G / 100), j = Math.round((Math.floor(p / W) + 0.5) / k * G / 100);
-      idx.push(p * 4); tm.push(wd.when[j * S + i]);
+      var px = p % W, py = Math.floor(p / W), i = Math.round((px + 0.5) / k * G / 100), j = Math.round((py + 0.5) / k * G / 100);
+      idx.push(p * 4); tm.push(wd.when[j * S + i]); on.push((px * 0.5 + py * 0.866) % H < 1 ? 1 : 0);
     }
-    wd.fill = { W: W, off: off, o: o, src: new Uint8ClampedArray(d), img: img, idx: idx, tm: new Float32Array(tm), ink: rgb };
+    var src = new Uint8ClampedArray(d), done = document.createElement("canvas");
+    done.width = done.height = W;
+    for (var q = 0; q < idx.length; q++) d[idx[q] + 3] = src[idx[q] + 3] * (on[q] ? 1 : FUSED);
+    done.getContext("2d").putImageData(img, 0, 0);
+    wd.fill = { W: W, off: off, o: o, done: done, src: src, img: img, idx: idx, tm: new Float32Array(tm), on: new Uint8Array(on) };
   }
-  // The letters as written by time tau: unwritten pixels clear, the pen's edge soft, the newest ink darker.
+  // The letters as written by time tau. Where the pen has passed, the hatch lights first, then the color between its
+  // lines fuses in; the pen's own path is traced by the outline threads (drawWrite).
+  function smooth(x) { x = clamp(x); return x * x * (3 - 2 * x); }
   function letters(wd, tau, alpha) {
-    var F = wd.fill;
-    if (tau === Infinity) { ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = alpha; ctx.drawImage(F.off, 0, 0); ctx.restore(); return; }
-    var d = F.img.data, src = F.src, idx = F.idx, tm = F.tm, ir = F.ink[0], ig = F.ink[1], ib = F.ink[2];
-    for (var q = 0; q < idx.length; q++) {
-      var p = idx[q], age = tau - tm[q];
-      if (age <= 0) { d[p + 3] = 0; continue; }
-      var wet = age < 0.35 ? 0.4 * (1 - age / 0.35) : 0;
-      d[p] = src[p] + (ir - src[p]) * wet; d[p + 1] = src[p + 1] + (ig - src[p + 1]) * wet; d[p + 2] = src[p + 2] + (ib - src[p + 2]) * wet;
-      d[p + 3] = src[p + 3] * Math.min(1, age / 0.05) * alpha;
+    var F = wd.fill, out = F.done;
+    if (tau !== Infinity) {
+      var d = F.img.data, src = F.src, idx = F.idx, tm = F.tm, on = F.on;
+      for (var q = 0; q < idx.length; q++) {
+        var p = idx[q], age = tau - tm[q];
+        d[p + 3] = age <= 0 ? 0 : src[p + 3] * (on[q] ? smooth(age / 0.12) : FUSED * smooth((age - 0.18) / 0.45));
+      }
+      F.o.setTransform(1, 0, 0, 1, 0, 0);
+      F.o.putImageData(F.img, 0, 0);
+      out = F.off;
     }
-    F.o.setTransform(1, 0, 0, 1, 0, 0);
-    F.o.putImageData(F.img, 0, 0);
-    ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = 1; ctx.drawImage(F.off, 0, 0); ctx.restore();
+    ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = alpha; ctx.drawImage(out, 0, 0); ctx.restore();
   }
 
   var family, shapes, words, signs, PH, playing = false, start = 0, theta = 0, ctx, ink, tint, dev;
@@ -593,7 +604,13 @@
   function drawWrite(key, tau) {
     var w = words[key], prog = tau / w.pen.dur;
     begin();
-    letters(w, prog >= 1 && tau - w.pen.dur > 0.4 ? Infinity : tau, 1);
+    letters(w, prog >= 1 && tau - w.pen.dur > 0.7 ? Infinity : tau, 1);
+    var edge = new Path2D();  // the outline threads, traced where the pen has been
+    w.segs.forEach(function (s, r) {
+      var ts = w.times[r];
+      for (var j = 0; j < P - 1; j++) if (Math.max(ts[j], ts[j + 1]) <= tau) { edge.moveTo(s[j][0], s[j][1]); edge.lineTo(s[j + 1][0], s[j + 1][1]); }
+    });
+    ctx.strokeStyle = w.tint; ctx.globalAlpha = REST; ctx.lineWidth = 1.1 * dev; ctx.stroke(edge);
     if (prog >= 1) return;
     var left = [], first = Math.floor(prog * NT);
     for (var r = first; r < NT; r++) left.push(cord(r, 0));
@@ -623,7 +640,7 @@
     // a word's ink lifts into the threads of its outline, which take on the lattice's tint on their way to the cord
     var lift = clamp(tau / (ph.last ? 0.12 : 0.25));
     letters(words[ph.move], Infinity, 1 - ease(lift));
-    stroke(out, REST * ease(clamp(tau / 0.08)), 1.1, 1 - ease(clamp(tau / (ph.last ? 0.45 : 0.8))), words[ph.move].tint);
+    stroke(out, REST, 1.1, 1 - ease(clamp(tau / (ph.last ? 0.45 : 0.8))), words[ph.move].tint);
   }
   function render(t) {
     for (var i = 0, acc = 0; i < PH.length; acc += PH[i++].dur) {
@@ -661,13 +678,12 @@
     ctx = canvas.getContext("2d");
     var cs = getComputedStyle(document.documentElement);
     ink = cs.getPropertyValue("--ink").trim() || "#1a1816";
-    var hex = parseInt(ink.replace("#", ""), 16), rgb = isNaN(hex) ? [26, 24, 22] : [hex >> 16 & 255, hex >> 8 & 255, hex & 255];
     tint = ink;
     if (STOPS.length) {  // the same radial gradient as build.seal's, in this theme's stance colors
       tint = ctx.createRadialGradient(50, 50, 0, 50, 50, 50);
       STOPS.forEach(function (s) { tint.addColorStop(Math.max(0, Math.min(1, s[0])), cs.getPropertyValue(TINT[s[1]]).trim() || ink); });
     }
-    Object.keys(words).forEach(function (k) { words[k].tint = wordTint(words[k], cs); fill(words[k], cs, rgb); });
+    Object.keys(words).forEach(function (k) { words[k].tint = wordTint(words[k], cs); fill(words[k], cs); });
     seal.classList.add("playing");
     requestAnimationFrame(function (now) { start = now; frame(now); });
   }
