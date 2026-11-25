@@ -273,3 +273,22 @@ def test_coverage_map_lights_up_the_outlets_countries(tmp_path):
     assert build.coverage_map([{"coverage": []}]) is None
     html = build.render(edition(), tmp_path).read_text()
     assert '<p class="geo-head">Outlet coverage</p>\n  <div class="geo" tabindex="0" role="img" aria-label="Where the coverage in this view comes from. 2 outlets in 1 country: United States 2.">' in html
+
+
+def test_stories_filter_by_region_and_country(tmp_path):
+    us_se = {"coverage": [{"items": [{"outlet": "NYT", "country": "SE"}, {"outlet": "WSJ", "country": "US"}, {"outlet": "?", "country": None}]}]}
+    gb_ca = {"coverage": [{"items": [{"outlet": "BBC", "country": "GB"}, {"outlet": "CBC", "country": "CA"}, {"outlet": "G", "country": "GB"}]}]}
+    builders_only = {"coverage": []}
+    assert build.story_countries(us_se) == ["US", "SE"] and build.story_countries(builders_only) == []  # legend order
+    places = build.place_filters([us_se, gb_ca, builders_only])
+    assert [(r["name"], r["n"]) for r in places] == [("Americas", 2), ("Europe", 2), ("Middle East", 0), ("Asia", 0), ("Oceania", 0)]
+    assert [(c["code"], c["n"]) for c in places[1]["countries"]] == [("GB", 1), ("SE", 1)]  # stories per country, only those with any
+    assert places[1]["codes"] == ["GB", "SE", "DE", "FR", "BE", "ES"]
+    assert build.place_filters([builders_only]) == []
+
+    html = build.render(edition(), tmp_path).read_text()
+    assert 'data-countries="US"' in html  # each card says where its outlets are
+    assert '<nav class="filters places" aria-label="Filter stories by where their outlets are" hidden>' in html  # app.js shows it
+    assert '<button type="button" data-region="Americas" data-codes="US CA" aria-pressed="false">Americas <span class="n">1</span></button>' in html
+    assert 'data-region="Europe" data-codes="GB SE DE FR BE ES" aria-pressed="false" disabled>' in html
+    assert '<span class="place-row"' not in html  # one country in the view: no country line to pick from

@@ -17,34 +17,59 @@
   });
 })();
 
-// Filters: a track (Technical / Political / Economic) and a mentioned name.
-// Both narrow the cards; together they combine. Without JS every card shows and the controls stay inert.
+// Filters: a track (Technical / Political / Economic), a mentioned name, and where the outlets are (a region, then
+// one of its countries). They narrow the cards and combine. Without JS every card shows and the controls stay inert.
 (function () {
   var nav = document.querySelector(".filters");
+  var places = document.querySelector(".places");
   var cards = Array.prototype.slice.call(document.querySelectorAll(".card"));
   var empty = document.querySelector(".empty");
   var stateEl = document.querySelector(".filter-state");
   var trackButtons = nav ? nav.querySelectorAll("button[data-track]") : [];
   var termButtons = document.querySelectorAll(".term");
-  var state = { track: "", term: "" };
+  var placeButtons = places ? places.querySelectorAll("button[data-codes]") : [];
+  var placeRows = places ? places.querySelectorAll(".place-row") : [];
+  var state = { track: "", term: "", region: "", codes: "" };
 
   function apply() {
-    var shown = 0;
+    var shown = 0, codes = state.codes ? state.codes.split(" ") : [];
     cards.forEach(function (c) {
       var terms = (c.dataset.terms || "").split("|");
-      var ok = (!state.track || c.dataset.track === state.track) && (!state.term || terms.indexOf(state.term) !== -1);
+      var here = (c.dataset.countries || "").split(" ");
+      var ok = (!state.track || c.dataset.track === state.track) && (!state.term || terms.indexOf(state.term) !== -1) &&
+        (!codes.length || codes.some(function (k) { return here.indexOf(k) !== -1; }));
       c.hidden = !ok;
       if (ok) shown++;
     });
     trackButtons.forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.track === state.track)); });
     termButtons.forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.term === state.term)); });
+    // The region stays pressed while one of its countries narrows it further.
+    placeButtons.forEach(function (b) {
+      var on = b.parentNode.classList.contains("place-row") ? b.dataset.codes === state.codes : (b.dataset.region || "") === state.region;
+      b.setAttribute("aria-pressed", String(on));
+    });
+    placeRows.forEach(function (r) { r.hidden = r.dataset.region !== state.region; });
     if (empty) empty.hidden = shown !== 0;
-    if (stateEl) stateEl.textContent = state.track || state.term ? shown + " of " + cards.length + " stories" : "";
+    if (stateEl) stateEl.textContent = state.track || state.term || state.codes ? shown + " of " + cards.length + " stories" : "";
   }
 
   if (nav) nav.hidden = false;
+  if (places) places.hidden = false;
   trackButtons.forEach(function (b) {
     b.addEventListener("click", function () { state.track = b.dataset.track; apply(); });
+  });
+  placeButtons.forEach(function (b) {
+    b.addEventListener("click", function () {
+      var inRow = b.parentNode.classList.contains("place-row");
+      if (inRow && state.codes === b.dataset.codes) {  // a country again: back to its whole region
+        var region = places.querySelector(':scope > button[data-region="' + state.region + '"]');
+        state.codes = region ? region.dataset.codes : "";
+      } else {
+        state.region = b.dataset.region || "";
+        state.codes = b.dataset.codes;
+      }
+      apply();
+    });
   });
   termButtons.forEach(function (b) {
     b.disabled = false;
@@ -54,7 +79,7 @@
     });
   });
   var reset = document.querySelector(".reset");
-  if (reset) reset.addEventListener("click", function () { state = { track: "", term: "" }; apply(); });
+  if (reset) reset.addEventListener("click", function () { state = { track: "", term: "", region: "", codes: "" }; apply(); });
 })();
 
 // Rising: filter the category groups.

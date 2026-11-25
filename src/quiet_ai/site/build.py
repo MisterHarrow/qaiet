@@ -112,6 +112,26 @@ def coverage_map(stories: list[dict]) -> dict | None:
     return {"svg": svg, "outlets": len(outlets), "countries": [[c, n] for c, n in ranked], "regions": regions}
 
 
+def story_countries(story: dict) -> list[str]:
+    """The countries of a story's outlets (those the legend knows), in legend order."""
+    have = {c.get("country") for g in story.get("coverage") or [] for c in g["items"]}
+    return [c for _, codes in REGIONS for c in codes if c in have]
+
+
+def place_filters(stories: list[dict]) -> list[dict]:
+    """The story filter by where the coverage comes from: per region, and per country within it, how many of the
+    view's stories have at least one outlet there. Empty when no story has outlet coverage."""
+    per_story = [set(story_countries(s)) for s in stories]
+    if not any(per_story):
+        return []
+    out = []
+    for name, codes in REGIONS:
+        countries = [{"code": c, "name": COUNTRY_NAMES.get(c, c), "n": sum(c in have for have in per_story)} for c in codes]
+        out.append({"name": name, "codes": codes, "n": sum(bool(have & set(codes)) for have in per_story),
+                    "countries": sorted((c for c in countries if c["n"]), key=lambda c: -c["n"])})
+    return out
+
+
 def _a(url: str, text: str) -> Markup:
     return Markup('<a href="{}" rel="noopener">{}</a>').format(url, text)
 
@@ -194,6 +214,7 @@ def _env() -> Environment:
     env.filters["signed"] = lambda v: "–" if v is None else (f"{v:+.2f}".replace("-", "−"))
     env.filters["date_range"] = date_range
     env.filters["day_label"] = day_label
+    env.filters["story_countries"] = story_countries
     env.filters["narrative_chart"] = narrative_chart
     env.filters["seal"] = seal
     env.globals.update(stance_names=STANCE_NAMES, kind_names=KIND_NAMES, country_names=COUNTRY_NAMES)
@@ -438,6 +459,7 @@ def render(edition: dict, out_dir: Path, tz: str = "Europe/Stockholm", periods: 
         e=edition,
         mix_segments=stance_segments(mix),  # the masthead rule: every article in this view, by stance
         geo=coverage_map(edition["stories"]),
+        places=place_filters(edition["stories"]),
         seal_defs=seal_defs([s.get("narrative") for s in edition["stories"]] + list((edition.get("narratives") or {}).get("items") or [])),
         mix_label=stance_label(mix, "Stance of every article in this view"),
         root=root,

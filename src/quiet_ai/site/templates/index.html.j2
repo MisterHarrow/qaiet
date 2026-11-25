@@ -97,12 +97,27 @@
     {% endfor %}
     <span class="filter-state" aria-live="polite"></span>
   </nav>
+  {% if places %}
+  {# Where the coverage comes from: a region, then one of its countries. A story shows when at least one of its
+     outlets is there. #}
+  <nav class="filters places" aria-label="Filter stories by where their outlets are" hidden>
+    <button type="button" data-codes="" aria-pressed="true">Anywhere <span class="n">{{ e.stories|length }}</span></button>
+    {% for r in places %}
+    <button type="button" data-region="{{ r.name }}" data-codes="{{ r.codes|join(' ') }}" aria-pressed="false"{% if not r.n %} disabled{% endif %}>{{ r.name }} <span class="n">{{ r.n }}</span></button>
+    {% endfor %}
+    {% for r in places if r.countries|length > 1 %}
+    <span class="place-row" data-region="{{ r.name }}" hidden>
+      {% for c in r.countries %}<button type="button" data-region="{{ r.name }}" data-codes="{{ c.code }}" aria-pressed="false">{{ c.name }} <span class="n">{{ c.n }}</span></button>{% endfor %}
+    </span>
+    {% endfor %}
+  </nav>
+  {% endif %}
 </header>
 
 <main>
 <section class="stories" aria-label="Top stories">
 {% for s in e.stories %}
-<article class="card" id="{{ s.id }}" data-track="{{ s.track or 'none' }}" data-terms="{{ s.terms|join('|') }}">
+<article class="card" id="{{ s.id }}" data-track="{{ s.track or 'none' }}" data-terms="{{ s.terms|join('|') }}" data-countries="{{ s|story_countries|join(' ') }}">
   {% if s.segments %}
   <p class="stripe" role="img" aria-label="{{ s.stance_label }}" title="{{ s.stance_label }}">{% for seg in s.segments %}<span class="seg st{{ seg.key }}" style="width:{{ seg.pct }}%"></span>{% endfor %}</p>
   {% else %}

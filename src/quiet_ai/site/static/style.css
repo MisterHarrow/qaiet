@@ -205,6 +205,10 @@ button { font: inherit; }
 .filters button[aria-pressed="true"] { color: var(--paper); background: var(--ink); border-color: var(--ink); }
 .filters .n { margin-left: 0.3em; opacity: 0.7; }
 .filter-state { margin-left: 0.5rem; color: var(--faint); text-transform: none; letter-spacing: 0; }
+/* Where the outlets are: the regions, and once one is picked, its countries on a line of their own. */
+.masthead .filters + .filters { margin-top: 0.5rem; }
+.place-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem; flex-basis: 100%; }
+.place-row::before { content: "↳"; margin: 0 0.15rem 0 0.35rem; color: var(--faint); }
 
 /* Story cards: the top edge is the story's stance mix */
 .stories {
