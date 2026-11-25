@@ -266,6 +266,7 @@ def _render_site(store: Store, settings, sources, now: datetime, editions: list[
     site_build.render_about(about_context(store, settings, sources, load_accounts(), now, gold=GOLD, crosscheck=crosscheck_path()), out, tz)
     site_build.render_archive(archive.load_frozen(ROOT / settings.site.editions_dir), out, tz)
     site_build.render_sentiment(sentiment_mod.history(store), out, tz)
+    site_build.render_404(out)
     site_build.write_host_config(out)
     return pages[0]
 

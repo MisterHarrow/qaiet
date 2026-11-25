@@ -1,0 +1,36 @@
+<!doctype html>
+{% import "_brand.html.j2" as brand %}
+{# Served by the host for any address that doesn't exist, at any depth, so every link is absolute. #}
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Not found · Qaiet Times</title>
+{{ brand.favicon() }}
+{{ brand.theme_boot() }}
+<link rel="stylesheet" href="{{ root }}static/style.css">
+</head>
+<body>
+<div class="page about">
+<header class="masthead">
+  <div class="masthead-top">
+    {{ brand.wordmark(root) }}
+    {{ brand.nav(root, "") }}
+  </div>
+  <hr class="rule">
+</header>
+<main class="prose">
+<p class="eyebrow">404 · Not found</p>
+<h1>This page doesn't exist</h1>
+<p class="lede">The address may be mistyped, or the page was never here.</p>
+<ul class="facts">
+  <li><a href="{{ root }}">Today's overview</a>, or the last <a href="{{ root }}week/">7 days</a>, <a href="{{ root }}month/">30 days</a> or <a href="{{ root }}year/">year</a>.</li>
+  <li><a href="{{ root }}archive/">The archive</a>. A day's edition joins it the morning after it was published, so today's isn't there yet.</li>
+  <li><a href="{{ root }}sentiment/">The sentiment index</a> and <a href="{{ root }}about/">how this site works</a>.</li>
+</ul>
+</main>
+</div>
+<script src="{{ root }}static/app.js" defer></script>
+</body>
+</html>

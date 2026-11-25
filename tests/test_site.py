@@ -78,6 +78,10 @@ def test_cli_build_dry_run(tmp_path):
     html = (tmp_path / "index.html").read_text()
     assert html.count("<article") >= 1 and "Rising" in html
     assert json.loads((tmp_path / "vercel.json").read_text()) == {"trailingSlash": True}  # relative links need /archive/
+    # The host serves 404.html for any missing address, at any depth: its links are absolute.
+    missing = (tmp_path / "404.html").read_text()
+    assert "This page doesn't exist" in missing and 'href="/static/style.css"' in missing and 'href="/archive/"' in missing
+    assert '<span class="wm">Qaiet Times</span>' in missing and 'name="robots" content="noindex"' in missing
 
 
 def test_top_terms_merge_variants_and_count_outlets(settings):

@@ -103,6 +103,13 @@ def render(edition: dict, out_dir: Path, tz: str = "Europe/Stockholm", periods: 
 VERCEL_CONFIG = {"trailingSlash": True}
 
 
+def render_404(out_dir: Path) -> Path:
+    """404.html at the site root, which the host serves for any missing address; its links are absolute."""
+    path = out_dir / "404.html"
+    path.write_text(_env().get_template("404.html.j2").render(root="/"), encoding="utf-8")
+    return path
+
+
 def write_host_config(out_dir: Path) -> Path:
     path = out_dir / "vercel.json"
     path.write_text(json.dumps(VERCEL_CONFIG, indent=1) + "\n", encoding="utf-8")
