@@ -26,7 +26,7 @@
 <p class="eyebrow"><a href="../">Narratives</a><span class="sep">·</span>{{ n.days }} days<span class="sep">·</span>{{ n.first|date_range(n.last) }}<span class="sep">·</span>{% if n.ongoing %}ongoing{% else %}ended{% endif %}</p>
 <h1>{{ n.headline }}</h1>
 </div>
-{{ n|seal(true, "The narrative's seal: " ~ n.days ~ " days; its ring is the stance of the coverage on " ~ n.last|day_label) }}
+{{ n|seal(true, "The narrative's seal: " ~ n.days ~ " days, its lattice tinted by the stance of the coverage") }}
 </div>
 {% if segments %}<p class="stripe narr-stripe" role="img" aria-label="{{ stance_text }}" title="{{ stance_text }}">{% for seg in segments %}<span class="seg st{{ seg.key }}" style="width:{{ seg.pct }}%"></span>{% endfor %}</p>{% endif %}
 <p class="narr-facts">{{ n.outlets }} outlet{{ "s" if n.outlets != 1 }} in {{ n.countries }} countr{{ "ies" if n.countries != 1 else "y" }} over {{ n.days }} days{% if n.covered < n.days %} ({{ n.days - n.covered }} without coverage){% endif %}.

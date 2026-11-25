@@ -5,6 +5,7 @@ No external requests from the page: system fonts, no CDN, no analytics, no image
 
 from __future__ import annotations
 
+import itertools
 import json
 import math
 import shutil
@@ -299,17 +300,17 @@ def narrative_chart(timeline: list[dict], mini: bool = False) -> Markup:
 
 
 # The narrative seal: a guilloché lattice (the fine line work on banknotes and passports) generated from the
-# narrative, inside a ring of strings. Two petals per day. The ring is the story as it was told on its latest
-# reporting day: one section per stance, critical to positive clockwise from twelve o'clock, its length that stance's
-# share of the day's articles (as on the card's stance stripe), and more strings the more outlets wrote that day
-# compared with the story's busiest day. The day count sits in the middle. It rests still; on hover the two lattices
-# turn a little against each other. On a narrative's page app.js lets the lattice's threads twist into a cord and
-# unwind into the day count, "day" and "narrative" before they wind back and the lattice spins down to rest; the
-# data-* attributes carry what it needs. The lattice curve is defined once per page (seal_defs) and reused; each
-# lattice is its own layer so it can turn cheaply. Lines are hairlines (vector-effect: non-scaling-stroke, widths in
-# style.css), so they stay one screen pixel wide at any size.
-SEAL_R0, SEAL_AMP, SEAL_PTS = 29.0, 7.5, 240
-SEAL_RING = 46.6  # the outermost string of the day ring
+# narrative. Two petals per day. The lattice is tinted from the inside out by the stance of every article over all the
+# days, critical (umber) in the middle to positive (sage) at the petal tips, each stance taking its share of the line
+# (a small share is kept visible). The day count sits in the middle of the small seals. It rests still; on hover the
+# two lattices turn a little against each other. On a narrative's page app.js lets the lattice's threads write the day
+# count, "day", "narrative" and a Q, then wind back; the data-* attributes carry what it needs. The lattice curve is
+# defined once per page (seal_defs) and reused; each lattice is its own layer so it can turn cheaply. Lines are
+# hairlines (vector-effect: non-scaling-stroke, widths in style.css), so they stay one screen pixel wide at any size.
+SEAL_R0, SEAL_AMP, SEAL_PTS = 36.5, 9.5, 240
+SEAL_ORDER = ["-2", "-1", "0", "1", "2"]  # inside out
+SEAL_MIN_SHARE = 0.04
+_seal_ids = itertools.count(1)
 
 
 def seal_petals(days: int) -> int:
@@ -334,74 +335,63 @@ def seal_defs(narratives: list[dict]) -> Markup:
     return Markup(f'<svg class="seal-defs" aria-hidden="true" focusable="false"><defs>{paths}</defs></svg>')
 
 
-def _arc(r: float, a0: float, a1: float) -> str:
-    p = lambda a: (50 + r * math.cos(math.radians(a)), 50 + r * math.sin(math.radians(a)))  # noqa: E731
-    (x0, y0), (x1, y1) = p(a0), p(a1)
-    return f"M{x0:.2f} {y0:.2f}A{r} {r} 0 {1 if a1 - a0 > 180 else 0} 1 {x1:.2f} {y1:.2f}"
+def seal_bands(n: dict) -> list[tuple[str, float]]:
+    """The lattice's tint, inside out: (stance key, share of the line) for each stance among the narrative's labeled
+    articles (unclear and unlabeled ones left out); a share under SEAL_MIN_SHARE is raised to it so it stays visible.
+    Editions frozen before the seal carried counts fall back to the average: one stance for the whole lattice."""
+    counts = {k: (n.get("stance") or {}).get(k, 0) for k in SEAL_ORDER}
+    total = sum(counts.values())
+    if not total:
+        mean = n.get("mean")
+        return [(_stance_class(mean)[1:], 1.0)] if mean is not None else []
+    shares = {k: max(v / total, SEAL_MIN_SHARE) for k, v in counts.items() if v}
+    norm = sum(shares.values())
+    return [(k, shares[k] / norm) for k in SEAL_ORDER if k in shares]
 
 
-def seal_strings(outlets: int, top: int) -> int:
-    """How many strings the seal's ring gets: one, up to four when the latest day was the story's busiest."""
-    return 1 + round(3 * math.sqrt(outlets / max(1, top))) if outlets else 1
-
-
-def seal_latest(n: dict) -> dict:
-    """The latest reporting day: {date, outlets, stance}. Editions frozen before the seal carried it fall back to
-    the last day's average stance."""
-    if n.get("latest"):
-        return n["latest"]
-    t = (n.get("timeline") or [{}])[-1]
-    return {"date": t.get("date"), "outlets": t.get("outlets") or 0, "stance": t.get("stance") or {}, "mean": t.get("mean")}
-
-
-def seal_sections(latest: dict) -> list[tuple[str, float]]:
-    """The ring's sections: (stance class, share of the day's labeled articles), critical to positive, then
-    unclear. One full section from the day's average when there are no counts; one faint one when nothing is known."""
-    segs = stance_segments(latest.get("stance") or {})
-    if segs:
-        return [("s" + s["key"] if s["key"] != "unclear" else "sna", s["pct"] / 100) for s in segs]
-    mean = latest.get("mean")
-    return [(_stance_class(mean).replace("d", "s", 1) if mean is not None else "quiet", 1.0)]
+def seal_stops(bands: list[tuple[str, float]], blend: float = 0.35) -> list[tuple[float, str]]:
+    """Gradient stops (offset of a radius-50 circle, stance key) that give each band its share of the lattice's line.
+    A sine lattice spends its length unevenly between its inner and outer edge, so the boundary after a cumulative
+    share c sits at R0 + AMP * sin(pi * (c - 1/2)). Neighbouring bands meet in a short blend, like iris printing, kept
+    within a third of either band's width so even a thin band at the petal tips shows."""
+    edges, c = [SEAL_R0 - SEAL_AMP], 0.0
+    for _, share in bands:
+        c += share
+        edges.append(SEAL_R0 + SEAL_AMP * math.sin(math.pi * (min(c, 1) - 0.5)))
+    stops = []
+    for i, (key, _) in enumerate(bands):
+        lo = 0.0 if i == 0 else edges[i] + min(blend, (edges[i] - edges[i - 1]) / 3, (edges[i + 1] - edges[i]) / 3)
+        hi = 50.0 if i == len(bands) - 1 else edges[i + 1] - min(blend, (edges[i + 1] - edges[i]) / 3, (edges[i + 2] - edges[i + 1]) / 3)
+        stops += [(round(lo / 50, 5), key), (round(hi / 50, 5), key)]
+    return stops
 
 
 def seal(n: dict, big: bool = False, label: str | None = None) -> Markup:
-    """A narrative's seal from {id, timeline: [{outlets, mean, quiet}], latest: {date, outlets, stance}}. Small on
-    cards and rows, big on the narrative's page. `label` makes it an image with that name; otherwise it is
-    decoration inside a link that names it."""
+    """A narrative's seal from {id, timeline: [...], stance: {key: count}, mean}. Small on cards and rows, big on the
+    narrative's page. `label` makes it an image with that name; otherwise it is decoration inside a link that
+    names it."""
     timeline = n.get("timeline") or []
     days = len(timeline)
     if not days:
         return Markup("")
     k = seal_petals(days)
-    latest = seal_latest(n)
-    top = max([1] + [t.get("outlets") or 0 for t in timeline])
-    strings = seal_strings(latest.get("outlets") or 0, top)
-    step = 0.95 if big else 1.35
-    sections = seal_sections(latest)
-    gap = 2.4 if len(sections) > 1 else 0
-    ring, at = [], -90.0
-    for cls, share in sections:
-        span = 360 * share
-        a0, a1 = at + gap / 2, at + max(span - gap / 2, gap / 2 + 1.2)
-        at += span
-        if len(sections) == 1:
-            arcs = "".join(f'<circle cx="50" cy="50" r="{SEAL_RING - q * step:.2f}" vector-effect="non-scaling-stroke"/>' for q in range(strings))
-        else:
-            arcs = "".join(f'<path d="{_arc(SEAL_RING - q * step, a0, a1)}" vector-effect="non-scaling-stroke"/>' for q in range(strings))
-        ring.append(f'<g class="day {cls}">{arcs}</g>')
     m = 4 if big else 2
+    stops = seal_stops(seal_bands(n))
+    gid = f"seal-g{next(_seal_ids)}"
+    grad = (f'<defs><radialGradient id="{gid}" gradientUnits="userSpaceOnUse" cx="50" cy="50" r="50">'
+            + "".join(f'<stop offset="{o}" class="t{key}"/>' for o, key in stops) + "</radialGradient></defs>") if stops else ""
+    tint = f' style="stroke:url(#{gid})"' if stops else ""
     lat = lambda sign: "".join(f'<use href="#seal-k{k}" transform="rotate({sign * j * 180 / (m * k):.3f} 50 50)"/>' for j in range(m))  # noqa: E731
     vb = 'viewBox="0 0 100 100" aria-hidden="true" focusable="false"'
     # The day count sits in the middle of the small seals; the large one rests without it (its threads write it).
-    size = 31 if days < 10 else 25 if days < 100 else 18
+    size = 34 if days < 10 else 27 if days < 100 else 20
     cap = "" if big else f'<svg class="seal-cap" {vb}><text class="seal-n" x="50" y="{50 + size * 0.355:.1f}" font-size="{size}">{days}</text></svg>'
     attrs = f' role="img" aria-label="{escape(label)}"' if label else ' aria-hidden="true"'
-    if big:  # what the seal's threads spell on the narrative's page (app.js)
-        attrs += f' data-k="{k}" data-m="{m}" data-days="{days}"'
+    if big:  # what the seal's threads write on the narrative's page (app.js), and the tint they wear
+        attrs += f' data-k="{k}" data-m="{m}" data-days="{days}" data-stops="{escape(json.dumps(stops))}"'
     return Markup(
         f'<span class="seal{" big" if big else ""}"{attrs}>'
-        f'<svg class="seal-base" {vb}>{"".join(ring)}</svg>'
-        f'<svg class="seal-lat a" {vb}>{lat(1)}</svg><svg class="seal-lat b" {vb}>{lat(-1)}</svg>'
+        f'<svg class="seal-lat a" {vb}{tint}>{grad}{lat(1)}</svg><svg class="seal-lat b" {vb}{tint}>{lat(-1)}</svg>'
         f'{cap}</span>')
 
 

@@ -201,8 +201,9 @@
 // The narrative seal, on a narrative's page. The lattice's threads twist into a cord; the cord pays its thread out to
 // a pen that writes the day count, then "day", then "narrative", in the wordmark's Baskerville: stroke by stroke in a
 // calligrapher's order, slowing into each curve and lifting between strokes, the newest ink a little darker. After each
-// word the threads wind back into the cord; after the last, the two halves of the lattice spin against each other,
-// slow and lock, and then the lattice keeps turning slowly while the ring turns the other way (style.css). The letters
+// word the threads wind back into the cord; after the last (the Q of the masthead), the two halves of the lattice spin
+// against each other, slow and lock, and then the lattice keeps turning slowly (style.css). In the lattice and the
+// cord the threads wear the seal's stance tint (the same radial gradient as the SVG); as letters they are ink. The letters
 // are the font itself: each word is set on a hidden canvas, its distance field gives the outline and inlines (the way
 // engraved type is cut), and a pen path per letter (DUCTUS, fitted to the letter and pulled onto the middle of each
 // stroke) decides when each part of them is written. It plays once when the page opens and again on hover or click.
@@ -214,7 +215,9 @@
   var canvas = document.createElement("canvas");
   if (!canvas.getContext) return;
   var K = +seal.getAttribute("data-k"), M = +seal.getAttribute("data-m"), DAYS = seal.getAttribute("data-days");
-  var R0 = 29, AMP = 7.5, NT = 72, P = 44, G = 200;  // must match build.seal; threads; points per thread; field grid
+  var R0 = 36.5, AMP = 9.5, CORD = 37, NT = 72, P = 44, G = 200;  // R0, AMP must match build.seal; threads; points; field grid
+  var STOPS = JSON.parse(seal.getAttribute("data-stops") || "[]");
+  var TINT = { "-2": "--crit", "-1": "--crit-soft", "0": "--neut", "1": "--pos-soft", "2": "--pos" }, REST = 0.9;
   var lattices = seal.querySelectorAll(".seal-lat");
 
   // Pen paths, in writing order. Digits and Q: x across the figure, y up its height (0 to 1); a stroke that starts with
@@ -403,7 +406,7 @@
   function cord(r, psi) {
     var th = -Math.PI / 2 + 2 * Math.PI * (r + 0.5) / NT + psi, span = 6 * Math.PI / NT, ph = 2 * Math.PI * (r % 3) / 3, out = [];
     for (var i = 0; i < P; i++) {
-      var a = th - span / 2 + span * i / (P - 1), rad = 30 + 2.4 * Math.sin(K * (a - psi) + ph);
+      var a = th - span / 2 + span * i / (P - 1), rad = CORD + 2.8 * Math.sin(K * (a - psi) + ph);
       out.push([50 + rad * Math.cos(a), 50 + rad * Math.sin(a)]);
     }
     return out;
@@ -497,7 +500,7 @@
     return { segs: segs, times: times, pen: pn };
   }
 
-  var family, shapes, words, signs, PH, playing = false, start = 0, theta = 0, ctx, ink, dev;
+  var family, shapes, words, signs, PH, playing = false, start = 0, theta = 0, ctx, ink, tint, dev;
   function prepare() {
     family = displayFont();
     var rest = lattice(), deep = [], i;
@@ -521,10 +524,13 @@
   }
 
   function begin() { ctx.setTransform(canvas.width / 100, 0, 0, canvas.width / 100, 0, 0); ctx.clearRect(0, 0, 100, 100); ctx.lineJoin = "round"; ctx.lineCap = "round"; }
-  function stroke(threads, alpha, width) {
-    ctx.beginPath();
-    threads.forEach(function (s) { ctx.moveTo(s[0][0], s[0][1]); for (var i = 1; i < s.length; i++) ctx.lineTo(s[i][0], s[i][1]); });
-    ctx.strokeStyle = ink; ctx.globalAlpha = alpha; ctx.lineWidth = width * dev; ctx.stroke();
+  // Threads in the seal's tint, or in ink (inked 1), or on their way between the two.
+  function stroke(threads, alpha, width, inked) {
+    var path = new Path2D();
+    threads.forEach(function (s) { path.moveTo(s[0][0], s[0][1]); for (var i = 1; i < s.length; i++) path.lineTo(s[i][0], s[i][1]); });
+    ctx.lineWidth = width * dev;
+    if (inked < 1) { ctx.strokeStyle = tint; ctx.globalAlpha = alpha * (1 - inked); ctx.stroke(path); }
+    if (inked > 0) { ctx.strokeStyle = ink; ctx.globalAlpha = alpha * inked; ctx.stroke(path); }
   }
   // The pen at time tau of writing `key`: what it has written (the newest ink darker and a touch wider, as if still
   // wet), the cord paying out what is left of its thread, and that thread running taut to the pen.
@@ -546,7 +552,7 @@
     if (prog >= 1) return;
     var left = [], first = Math.floor(prog * NT);
     for (var r = first; r < NT; r++) left.push(cord(r, 0));
-    stroke(left, 0.85, 1.1);
+    stroke(left, REST, 1.1, 0);
     var from = left[0][0], to = penAt(w.pen, tau);
     ctx.beginPath(); ctx.moveTo(from[0], from[1]); ctx.lineTo(to[0], to[1]);
     ctx.globalAlpha = 0.24; ctx.lineWidth = dev; ctx.stroke();
@@ -567,8 +573,8 @@
       for (var j = 0; j < P; j++) pts.push([lerp(from[j][0], to[j][0], q), lerp(from[j][1], to[j][1], q)]);
       out.push(pts);
     }
-    begin();
-    stroke(out, ph.move === "rest" ? lerp(0.62, 0.85, tau) : ph.last ? lerp(0.85, 0.62, clamp((tau - 0.5) / 0.5)) : 0.85, 1.1);
+    begin();  // the lattice and the cord wear the tint; a word leaving for the cord gives up its ink on the way
+    stroke(out, REST, 1.1, ph.move === "rest" ? 0 : 1 - ease(clamp(tau / (ph.last ? 0.45 : 0.8))));
   }
   function render(t) {
     for (var i = 0, acc = 0; i < PH.length; acc += PH[i++].dur) {
@@ -587,7 +593,7 @@
     if (canvas.parentNode) canvas.parentNode.removeChild(canvas);
     seal.classList.remove("playing");
     void seal.offsetWidth;  // restart the lattice's turn from where the threads left it
-    seal.classList.add("lat-turning", "ring-turning");
+    seal.classList.add("lat-turning");
     playing = false;
   }
   function play() {
@@ -604,7 +610,13 @@
     canvas.setAttribute("aria-hidden", "true");
     seal.appendChild(canvas);
     ctx = canvas.getContext("2d");
-    ink = getComputedStyle(document.documentElement).getPropertyValue("--ink").trim() || "#1a1816";
+    var cs = getComputedStyle(document.documentElement);
+    ink = cs.getPropertyValue("--ink").trim() || "#1a1816";
+    tint = ink;
+    if (STOPS.length) {  // the same radial gradient as build.seal's, in this theme's stance colors
+      tint = ctx.createRadialGradient(50, 50, 0, 50, 50, 50);
+      STOPS.forEach(function (s) { tint.addColorStop(Math.max(0, Math.min(1, s[0])), cs.getPropertyValue(TINT[s[1]]).trim() || ink); });
+    }
     seal.classList.add("playing");
     requestAnimationFrame(function (now) { start = now; frame(now); });
   }

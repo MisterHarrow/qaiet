@@ -633,33 +633,26 @@ ol.nl { margin: 2.2rem 0 0; padding: 0; list-style: none; }
 .prose.narrative h1 { max-width: 50rem; font-size: 2.1rem; line-height: 1.18; text-wrap: pretty; }
 @media (max-width: 38rem) { .prose.narrative h1 { font-size: 1.65rem; } }
 
-/* The narrative seal: a guilloché lattice inside a ring of strings, generated from the narrative (build.seal); the
-   ring is the stance mix of the latest reporting day. It has no edge of its own: a paper disc with no outline. Every
-   line is a hairline one screen pixel wide (non-scaling strokes; half a CSS pixel on high-density screens), so the
-   lattice stays crisp at card size. It rests still; on hover its two lattices turn a little against each other. On a
-   narrative's page its threads spell the day count, "day" and "narrative" once, then wind back and the lattice spins
-   down to rest (app.js draws that on a canvas inside the seal; the ring stays put). */
+/* The narrative seal: a guilloché lattice generated from the narrative (build.seal), tinted from the inside out by
+   the stance of its articles (a radial gradient whose stops take the stance colors). It has no edge of its own: a
+   paper disc with no outline. Every line is a hairline one screen pixel wide (non-scaling strokes; half a CSS pixel
+   on high-density screens), so the lattice stays crisp at card size. It rests still; on hover its two lattices turn
+   a little against each other. On a narrative's page its threads write the day count, "day", "narrative" and a Q
+   once, then wind back, and the lattice keeps turning slowly (app.js draws the writing on a canvas inside the seal). */
 .seal-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
 .seal { position: relative; display: block; width: 3rem; aspect-ratio: 1; border-radius: 50%; background: var(--paper); }
 .seal > svg, .seal > canvas { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
 .seal > canvas { pointer-events: none; }
-.seal .day { fill: none; stroke-width: 1.1px; }
-.seal .s-2 { stroke: var(--crit); }
-.seal .s-1 { stroke: var(--crit-soft); }
-.seal .s0 { stroke: var(--neut); }
-.seal .s1 { stroke: var(--pos-soft); }
-.seal .s2 { stroke: var(--pos); }
-.seal .sna { stroke: var(--unclear); }
-.seal .day.quiet { stroke: var(--rule); }
-.seal-lat { fill: none; stroke: var(--ink); stroke-width: 1px; opacity: 0.55; }
+.seal stop.t-2 { stop-color: var(--crit); }
+.seal stop.t-1 { stop-color: var(--crit-soft); }
+.seal stop.t0 { stop-color: var(--neut); }
+.seal stop.t1 { stop-color: var(--pos-soft); }
+.seal stop.t2 { stop-color: var(--pos); }
+.seal-lat { fill: none; stroke: var(--ink); stroke-width: 1px; opacity: 0.9; }
 .seal.big { width: 11rem; }
-.seal.big .seal-lat { opacity: 0.62; }
-.seal.big .day { stroke-width: 1.25px; }
 @media (min-resolution: 2dppx) {
-  .seal-lat { stroke-width: 0.5px; }
-  .seal.big .seal-lat { stroke-width: 0.55px; }
-  .seal .day { stroke-width: 0.55px; }
-  .seal.big .day { stroke-width: 0.62px; }
+  .seal-lat { stroke-width: 0.55px; }
+  .seal.big .seal-lat { stroke-width: 0.6px; }
 }
 .seal .seal-n { font-family: var(--serif); font-weight: 500; fill: var(--ink); text-anchor: middle; }
 @media (prefers-reduced-motion: no-preference) {
@@ -668,12 +661,11 @@ ol.nl { margin: 2.2rem 0 0; padding: 0; list-style: none; }
   .seal-link:hover .seal-lat.b, .seal-link:focus-visible .seal-lat.b { transform: rotate(-9deg); }
 }
 /* While the threads write, the lattice steps aside (the canvas draws the threads). Once they have written and wound
-   back, the lattice keeps turning slowly and the ring turns the other way, a little slower (app.js adds the classes). */
+   back, the lattice keeps turning slowly (app.js adds the class). */
 .seal.playing .seal-lat { opacity: 0; transition: none; }
 @keyframes seal-turn { to { transform: rotate(360deg); } }
 @media (prefers-reduced-motion: no-preference) {
   .seal.big.lat-turning .seal-lat { animation: seal-turn 90s linear infinite; }
-  .seal.big.ring-turning .seal-base { animation: seal-turn 112s linear infinite reverse; }
 }
 .seal.big.can-play { cursor: pointer; }
 /* On a card the seal sits on the top-right corner, like a seal on a document. The stance stripe ends where the seal
