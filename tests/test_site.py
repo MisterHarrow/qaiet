@@ -258,3 +258,18 @@ def test_builders_line_and_summary_link_their_sources():
     assert linked.startswith('<a href="https://news.ycombinator.com/item?id=1" rel="noopener">Hacker News</a> &amp; '
                              '<a href="https://bsky.app/profile/a/post/1" rel="noopener">Bluesky</a> users argued; Hacker News again')
     assert 'on <a href="https://x.com/alice/status/1" rel="noopener">X</a> &lt;b&gt;too&lt;/b&gt;.' in linked  # text stays escaped
+
+
+def test_coverage_map_lights_up_the_outlets_countries(tmp_path):
+    stories = [{"coverage": [{"items": [{"outlet": "NYT", "country": "US"}, {"outlet": "DN", "country": "SE"},
+                                       {"outlet": "NYT", "country": "US"}, {"outlet": "?", "country": None}]}]},
+               {"coverage": [{"items": [{"outlet": "WSJ", "country": "US"}]}]}]
+    geo = build.coverage_map(stories)
+    assert geo["outlets"] == 3 and geo["countries"] == [["US", 2], ["SE", 1]]  # one per outlet
+    assert [(r["name"], r["n"]) for r in geo["regions"]] == [("Americas", 2), ("Europe", 1), ("Middle East", 0), ("Asia", 0), ("Oceania", 0)]
+    svg = str(geo["svg"])
+    assert svg.startswith('<svg class="geo-map" viewBox="0 0 170 70" width="170" height="70"') and 'class="geo-land"' in svg
+    assert svg.count('<circle class="lit') > 4 and "--d:" in svg
+    assert build.coverage_map([{"coverage": []}]) is None
+    html = build.render(edition(), tmp_path).read_text()
+    assert '<div class="geo" tabindex="0" role="img" aria-label="Where the coverage in this view comes from. 2 outlets in 1 country: United States 2.">' in html

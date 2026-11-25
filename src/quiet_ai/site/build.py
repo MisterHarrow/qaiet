@@ -30,6 +30,86 @@ COUNTRY_NAMES = {
 }
 
 
+# Where the day's coverage comes from: a small dot map and a legend by region (front page masthead).
+# Coarse continent outlines (lon, lat) drawn into code: enough for a dot map, no map data to fetch.
+_CONTINENTS = [
+    [(-165, 66), (-140, 70), (-110, 72), (-90, 70), (-80, 62), (-65, 60), (-55, 50), (-66, 44), (-76, 37), (-81, 30), (-80, 25),
+     (-90, 29), (-97, 26), (-98, 18), (-88, 15), (-80, 8), (-92, 14), (-105, 19), (-112, 28), (-117, 32), (-124, 40), (-125, 49),
+     (-135, 58), (-150, 60), (-165, 60)],
+    [(-55, 60), (-43, 60), (-20, 70), (-20, 80), (-60, 82), (-70, 77)],
+    [(-80, 8), (-60, 11), (-50, 0), (-35, -6), (-40, -22), (-48, -28), (-58, -38), (-65, -55), (-72, -50), (-73, -40), (-71, -20), (-81, -5)],
+    [(-10, 36), (-9, 43), (-2, 44), (-5, 48), (0, 50), (5, 53), (8, 57), (5, 62), (15, 69), (28, 71), (40, 67), (45, 60), (40, 45),
+     (30, 45), (26, 40), (23, 36), (15, 38), (12, 44), (8, 44), (3, 43), (-5, 36)],
+    [(-6, 50), (2, 51), (0, 55), (-3, 59), (-6, 57), (-5, 54)],
+    [(-17, 21), (-10, 30), (-5, 36), (10, 37), (20, 32), (32, 31), (35, 28), (43, 12), (51, 12), (40, -2), (40, -15), (35, -25),
+     (28, -33), (19, -35), (13, -20), (12, -5), (9, 4), (-8, 4), (-17, 14)],
+    [(26, 40), (36, 36), (35, 32), (43, 14), (55, 22), (58, 24), (67, 25), (72, 20), (77, 8), (80, 15), (90, 22), (98, 16), (103, 1),
+     (105, 10), (109, 22), (121, 30), (122, 40), (130, 43), (135, 48), (142, 53), (160, 60), (180, 66), (180, 72), (140, 73),
+     (110, 77), (80, 73), (68, 70), (60, 68), (45, 60), (40, 45), (30, 45)],
+    [(130, 31), (135, 34), (140, 36), (142, 40), (141, 45), (139, 42), (132, 34)],
+    [(95, 5), (105, -6), (115, -8), (125, -9), (140, -8), (130, -2), (120, 1), (110, 2), (100, -1)],
+    [(114, -22), (122, -17), (131, -12), (137, -12), (142, -11), (146, -19), (153, -26), (150, -37), (141, -38), (130, -32), (117, -35), (114, -28)],
+    [(166, -46), (174, -41), (178, -38), (173, -35), (170, -44)],
+]
+# Each outlet country's rough center (lat, lon), and the regions of the legend.
+COUNTRY_POS = {"US": (39, -98), "CA": (56, -106), "GB": (54, -2), "SE": (62, 16), "DE": (51, 10), "FR": (46, 2), "BE": (50.5, 4.5),
+               "ES": (40, -4), "QA": (25, 51), "CN": (34, 104), "HK": (22, 114), "IN": (22, 79), "JP": (36, 138), "KR": (36, 128),
+               "SG": (1, 104), "AU": (-25, 134)}
+REGIONS = [("Americas", ["US", "CA"]), ("Europe", ["GB", "SE", "DE", "FR", "BE", "ES"]), ("Middle East", ["QA"]),
+           ("Asia", ["CN", "HK", "IN", "JP", "KR", "SG"]), ("Oceania", ["AU"])]
+MAP_W, MAP_H = 170, 70
+
+
+def _inside(lon: float, lat: float, poly: list[tuple[float, float]]) -> bool:
+    hit = False
+    for (x1, y1), (x2, y2) in zip(poly, poly[-1:] + poly[:-1]):
+        if (y1 > lat) != (y2 > lat) and lon < (x2 - x1) * (lat - y1) / (y2 - y1) + x1:
+            hit = not hit
+    return hit
+
+
+def coverage_map(stories: list[dict]) -> dict | None:
+    """Outlets per country across the view's stories (one per outlet), as a dot map and a region legend.
+    Land is a 5-degree dot grid; dots near a covered country light up, wider for more outlets. Each lit dot
+    carries a delay (west to east) for the greeting."""
+    outlets: dict[str, str] = {}
+    for s in stories:
+        for g in s.get("coverage") or []:
+            for c in g["items"]:
+                if c.get("country") in COUNTRY_POS:
+                    outlets.setdefault(c["outlet"], c["country"])
+    counts: dict[str, int] = {}
+    for country in outlets.values():
+        counts[country] = counts.get(country, 0) + 1
+    if not counts:
+        return None
+    land, lit = [], []
+    for lat in range(80, -57, -5):
+        for lon in range(-170, 181, 5):
+            if not any(_inside(lon, lat, p) for p in _CONTINENTS):
+                continue
+            x, y = (lon + 180) / 360 * (MAP_W - 2) + 1, (80 - lat) / 136 * (MAP_H - 2) + 1
+            best = None
+            for code, n in counts.items():
+                clat, clon = COUNTRY_POS[code]
+                reach = 11 if n > 10 else 7 if n > 3 else 5.5
+                dist = ((lon - clon) ** 2 + ((lat - clat) * 1.3) ** 2) ** 0.5
+                if dist <= reach and (best is None or dist < best[1]):
+                    best = (n, dist)
+            if best:
+                lit.append((x, y, best[0], lon))
+            else:
+                land.append(f"M{x:.1f} {y:.1f}h0")
+    dots = "".join(f'<circle class="lit{" few" if n <= 3 else ""}" cx="{x:.1f}" cy="{y:.1f}" r="1.25" style="--d:{int(250 + (lon + 180) * 1.6)}ms"/>'
+                   for x, y, n, lon in sorted(lit, key=lambda d: d[3]))
+    svg = Markup(f'<svg class="geo-map" viewBox="0 0 {MAP_W} {MAP_H}" width="{MAP_W}" height="{MAP_H}" aria-hidden="true" focusable="false">'
+                 f'<path class="geo-land" d="{"".join(land)}"/>{dots}</svg>')
+    ranked = sorted(counts.items(), key=lambda kv: (-kv[1], kv[0]))
+    regions = [{"name": name, "countries": [{"code": c, "name": COUNTRY_NAMES.get(c, c), "n": counts.get(c, 0)} for c in codes],
+                "n": sum(counts.get(c, 0) for c in codes)} for name, codes in REGIONS]
+    return {"svg": svg, "outlets": len(outlets), "countries": [[c, n] for c, n in ranked], "regions": regions}
+
+
 def _a(url: str, text: str) -> Markup:
     return Markup('<a href="{}" rel="noopener">{}</a>').format(url, text)
 
@@ -161,6 +241,7 @@ def render(edition: dict, out_dir: Path, tz: str = "Europe/Stockholm", periods: 
         frozen_date=_long_date(datetime.fromisoformat(frozen["date"])) if frozen else None,
         e=edition,
         mix_segments=stance_segments(mix),  # the masthead rule: every article in this view, by stance
+        geo=coverage_map(edition["stories"]),
         mix_label=stance_label(mix, "Stance of every article in this view"),
         root=root,
         period=period,

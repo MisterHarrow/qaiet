@@ -128,6 +128,28 @@ button { font: inherit; }
 .greet .sentiment .sent-word + .sent-track { animation-delay: 0.55s; }
 .greet .sentiment .sent-word + .sent-track + .sent-track { animation-delay: 0.63s; }
 .greet .sentiment .sent-word + .sent-track + .sent-track + .sent-track { animation-delay: 0.71s; }
+/* Under the rule: the sentiment line and the views on the left, where the coverage comes from on the right. */
+.masthead-body { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 2rem; align-items: start; }
+.geo { position: relative; display: flex; align-items: flex-start; gap: 0.9rem; margin-top: 0.75rem; border-radius: 3px; cursor: default; }
+.geo:focus-visible { outline-offset: 4px; }
+.geo-legend { margin: 0; padding: 0; list-style: none; font: 0.6rem/1 var(--mono); letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted); }
+.geo-legend li { display: flex; align-items: center; gap: 0.2rem; height: 0.85rem; }
+.geo-legend .geo-none { color: var(--faint); }
+.geo-region { width: 5.6rem; }
+.geo-sq { display: block; width: 0.45rem; height: 0.45rem; border-radius: 1px; background: var(--rule); }
+.geo-sq.n1 { background: var(--ink); opacity: 0.4; }
+.geo-sq.n2 { background: var(--ink); opacity: 0.65; }
+.geo-sq.n3 { background: var(--ink); }
+.geo-map { display: block; width: 170px; height: 70px; flex: none; }
+.geo-land { fill: none; stroke: var(--muted); stroke-opacity: 0.28; stroke-width: 1.7; stroke-linecap: round; }
+.geo-map .lit { fill: var(--ink); }
+.geo-map .lit.few { opacity: 0.7; }
+.geo-tip { right: -0.4rem; min-width: 11rem; }
+.geo:hover .geo-tip, .geo:focus .geo-tip { opacity: 1; visibility: visible; transform: none; transition: opacity 0.18s ease, transform 0.22s cubic-bezier(0.2, 0.8, 0.2, 1), visibility 0s; }
+@keyframes dot-in { from { opacity: 0; } }
+.greet .geo-map .lit { animation: dot-in 0.35s ease both; animation-delay: var(--d); }
+.greet .geo-legend { animation: step-in 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) 0.3s both; }
+@media (max-width: 38rem) { .masthead-body { grid-template-columns: minmax(0, 1fr); } .geo { margin-top: 1rem; } }
 .masthead-meta { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.6rem 1.5rem; margin-top: 0.9rem; }
 .dateline { margin: 0; color: var(--muted); font: 0.76rem/1.4 var(--mono); }
 .periods { display: flex; flex-wrap: wrap; align-items: center; gap: 0.3rem; font: 0.72rem/1 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; }
@@ -262,7 +284,7 @@ details { margin-top: auto; padding-top: 0.8rem; }
 .sface circle, .sface path { fill: none; stroke: var(--muted); stroke-width: 0.9; stroke-linecap: round; }
 .sface .eye { fill: var(--muted); stroke: none; }
 /* The tooltip: counts per stance and the average, rising into place on hover or keyboard focus. */
-.stance-tip {
+.stance-tip, .geo-tip {
   position: absolute; right: -0.5rem; bottom: calc(100% + 0.6rem); z-index: 5; min-width: 12rem;
   padding: 0.6rem 0.75rem; background: var(--paper); border: 1px solid var(--ink); border-radius: 3px;
   box-shadow: 0 8px 24px rgba(26, 24, 22, 0.14);
@@ -270,7 +292,7 @@ details { margin-top: auto; padding-top: 0.8rem; }
   opacity: 0; visibility: hidden; transform: translateY(6px) scale(0.98); transform-origin: 85% 100%; pointer-events: none;
   transition: opacity 0.18s ease, transform 0.22s cubic-bezier(0.2, 0.8, 0.2, 1), visibility 0s linear 0.22s;
 }
-.stance-tip::after { content: ""; position: absolute; right: 1.6rem; top: 100%; border: 6px solid transparent; border-top-color: var(--ink); }
+.stance-tip::after, .geo-tip::after { content: ""; position: absolute; right: 1.6rem; top: 100%; border: 6px solid transparent; border-top-color: var(--ink); }
 .stance-chart:hover .stance-tip, .stance-chart:focus .stance-tip {
   opacity: 1; visibility: visible; transform: none; transition: opacity 0.18s ease, transform 0.22s cubic-bezier(0.2, 0.8, 0.2, 1), visibility 0s;
 }
@@ -520,3 +542,7 @@ summary:hover { color: var(--ink); }
   .panel { display: block; }
   .stories { grid-template-columns: 1fr 1fr; }
 }
+
+/* The map's tooltip opens below it: the map sits at the top of the page. */
+.geo-tip { top: calc(100% + 0.6rem); bottom: auto; right: 0; transform: translateY(-6px) scale(0.98); transform-origin: 85% 0; }
+.geo-tip::after { top: auto; bottom: 100%; right: 3rem; border-top-color: transparent; border-bottom-color: var(--ink); }

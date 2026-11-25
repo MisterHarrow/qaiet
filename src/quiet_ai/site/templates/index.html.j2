@@ -23,6 +23,8 @@
   {% else %}
   <hr class="rule">
   {% endif %}
+  <div class="masthead-body">
+  <div class="mb-main">
   {% set sv = (e.sentiment or {}).get("values") or {} %}
   {% if sv.get("all") is not none %}
   {# The greeting: the day's sentiment under the nameplate. On the first page of a visit the figure counts up
@@ -42,6 +44,20 @@
     </nav>
     {% endif %}
     <p class="dateline">{% if frozen_date %}Edition of {{ frozen_date }}{% else %}<time datetime="{{ e.generated_at }}">{{ date_long }}</time> <span class="sep">·</span> updated {{ updated }} {{ tz_name }}{% endif %}</p>
+  </div>
+  </div>
+  {% if geo %}
+  {# Where the coverage comes from: outlets per region (one square per country) and a dot map that lights up
+     where they are. Hover or focus for the counts. #}
+  {% set geo_label %}{{ geo.outlets }} outlet{{ "s" if geo.outlets != 1 }} in {{ geo.countries|length }} countr{{ "ies" if geo.countries|length != 1 else "y" }}: {% for c, n in geo.countries %}{{ country_names.get(c, c) }} {{ n }}{% if not loop.last %}, {% endif %}{% endfor %}{% endset %}
+  <div class="geo" tabindex="0" role="img" aria-label="Where the coverage in this view comes from. {{ geo_label }}.">
+    <ul class="geo-legend" aria-hidden="true">
+      {% for r in geo.regions %}<li{% if not r.n %} class="geo-none"{% endif %}><span class="geo-region">{{ r.name }}</span>{% for c in r.countries %}<i class="geo-sq{% if c.n > 3 %} n3{% elif c.n > 1 %} n2{% elif c.n %} n1{% endif %}" title="{{ c.name }}: {{ c.n }} outlet{{ "s" if c.n != 1 }}"></i>{% endfor %}</li>{% endfor %}
+    </ul>
+    {{ geo.svg }}
+    <span class="geo-tip" aria-hidden="true"><span class="tip-head">{{ geo.outlets }} outlet{{ "s" if geo.outlets != 1 }} · {{ geo.countries|length }} countr{{ "ies" if geo.countries|length != 1 else "y" }}</span>{% for c, n in geo.countries %}<span class="tip-row">{{ country_names.get(c, c) }}<b>{{ n }}</b></span>{% endfor %}</span>
+  </div>
+  {% endif %}
   </div>
   {% if frozen_date %}
   <p class="partial">The edition published on {{ frozen_date }} at {{ updated }} {{ tz_name }}. It no longer changes. <a href="{{ root }}">Today's overview</a></p>
