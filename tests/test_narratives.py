@@ -165,6 +165,8 @@ def test_seal_on_card_rows_and_page(tmp_path, settings):
     assert seal.count('class="day ') == 6 and 'class="day quiet"' in seal and 'class="day s-2"' in seal and 'class="day s2"' in seal  # an arc per day, by stance
     assert seal.count('<use href="#seal-k12"') == 6 and 'class="seal-n"' in seal and ">6</text>" in seal
     page = (build.render_narratives(found, tmp_path / "n", min_days=4).parent / "s-long" / "index.html").read_text()
-    assert '<span class="seal big" role="img"' in page and "QAIET TIMES ✦ NARRATIVE ✦ 06 DAYS ✦ 21–26 NOV ✦ 6 OUTLETS" in page
+    # On the narrative's page the seal is large and carries what its strings spell (app.js): no microprint ring.
+    assert '<span class="seal big" role="img"' in page and 'data-k="12" data-m="6" data-days="6"' in page and "seal-micro" not in page
+    assert 'data-days' not in seal  # small seals rest; only the page's seal plays
     assert build.seal({"timeline": []}) == "" and build.seal_defs([None, {}]) == ""
     assert build.render(edition(), tmp_path / "plain").read_text().count("seal") == 0  # no narrative, no seal

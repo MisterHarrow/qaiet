@@ -300,9 +300,9 @@ def narrative_chart(timeline: list[dict], mini: bool = False) -> Markup:
 
 # The narrative seal: a guilloché engraving (the fine line work on banknotes and passports) generated from the
 # narrative. Two petals per day; an outer ring with an arc per day (thickness: outlets, color: that day's stance);
-# the day count in the middle. Two lattices of the same curve turn slowly against each other, so the engraving
-# shimmers. Each turning lattice is its own layer, so the browser rotates it without repainting; the curve itself is
-# defined once per page (seal_defs) and reused.
+# the day count in the middle. It rests still. On a narrative's page app.js lets its strings spell the day count,
+# "day" and "narrative" before they wind back into the seal; the data-* attributes carry what it needs. The lattice
+# curve is defined once per page (seal_defs) and reused; each lattice is its own layer so it can turn cheaply.
 SEAL_R0, SEAL_AMP, SEAL_PTS = 29.0, 7.5, 240
 
 
@@ -336,7 +336,7 @@ def _arc(r: float, a0: float, a1: float) -> str:
 
 def seal(n: dict, big: bool = False, label: str | None = None) -> Markup:
     """A narrative's seal from {id, timeline: [{outlets, mean, quiet}], first, last, outlets}. Small on cards and rows,
-    big on the narrative's page (with a microprint ring). `label` makes it an image with that name; otherwise it is
+    big on the narrative's page. `label` makes it an image with that name; otherwise it is
     decoration inside a link that names it."""
     timeline = n.get("timeline") or []
     days = len(timeline)
@@ -350,20 +350,14 @@ def seal(n: dict, big: bool = False, label: str | None = None) -> Markup:
     for i, t in enumerate(timeline):
         a0, a1 = -90 + i * span + gap, -90 + (i + 1) * span - gap
         if t.get("quiet") or not t.get("outlets"):
-            ring.append(f'<path class="day quiet" d="{_arc(45.5, a0, a1)}"/>')
+            ring.append(f'<path class="day quiet" d="{_arc(45.5, a0, a1)}" pathLength="1" style="--i:{i}"/>')
             continue
         cls = _stance_class(t["mean"]).replace("d", "s", 1) if t.get("mean") is not None else "sna"
         w = (1.1 + 2.6 * t["outlets"] / top) if big else (1.8 + 3.4 * t["outlets"] / top)
-        ring.append(f'<path class="day {cls}" d="{_arc(45.5, a0, a1)}" stroke-width="{w:.2f}"/>')
+        ring.append(f'<path class="day {cls}" d="{_arc(45.5, a0, a1)}" stroke-width="{w:.2f}" pathLength="1" style="--i:{i}"/>')
     m = 6 if big else 3
     lat = lambda sign: "".join(f'<use href="#seal-k{k}" transform="rotate({sign * j * 180 / (m * k):.3f} 50 50)"/>' for j in range(m))  # noqa: E731
     vb = 'viewBox="0 0 100 100" aria-hidden="true" focusable="false"'
-    micro = ""
-    if big:
-        rng = date_range(n["first"], n["last"]).upper() if n.get("first") and n.get("last") else ""
-        text = f"QAIET TIMES ✦ NARRATIVE ✦ {days:02d} DAYS ✦ {rng} ✦ {n.get('outlets', 0)} OUTLETS ✦ "
-        micro = (f'<svg class="seal-micro" {vb}><defs><path id="seal-ring-{escape(n.get("id", "n"))}" d="M50 50m-39.6 0a39.6 39.6 0 1 1 79.2 0a39.6 39.6 0 1 1-79.2 0"/></defs>'
-                 f'<text><textPath href="#seal-ring-{escape(n.get("id", "n"))}" textLength="246" lengthAdjust="spacing">{escape(text)}</textPath></text></svg>')
     inner = 15 if big else 17
     num_size = (15 if days < 100 else 11) if big else (30 if days < 10 else 23 if days < 100 else 16)
     num_y = 55.5 if big else 50 + num_size * 0.36
@@ -371,10 +365,12 @@ def seal(n: dict, big: bool = False, label: str | None = None) -> Markup:
            f'<text class="seal-n" x="50" y="{num_y:.1f}" font-size="{num_size}">{days}</text>'
            + ('<text class="seal-l" x="50" y="63" font-size="3.6">DAYS</text>' if big else ""))
     attrs = f' role="img" aria-label="{escape(label)}"' if label else ' aria-hidden="true"'
+    if big:  # what the seal's strings spell on the narrative's page (app.js)
+        attrs += f' data-k="{k}" data-m="{m}" data-days="{days}"'
     return Markup(
         f'<span class="seal{" big" if big else ""}"{attrs}>'
         f'<svg class="seal-base" {vb}>{"".join(ring)}<circle class="hair" cx="50" cy="50" r="42.6"/></svg>'
-        f'<svg class="seal-lat a" {vb}>{lat(1)}</svg><svg class="seal-lat b" {vb}>{lat(-1)}</svg>{micro}'
+        f'<svg class="seal-lat a" {vb}>{lat(1)}</svg><svg class="seal-lat b" {vb}>{lat(-1)}</svg>'
         f'<svg class="seal-cap" {vb}>{cap}</svg></span>')
 
 
