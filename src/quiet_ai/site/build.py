@@ -20,6 +20,12 @@ STANCE_NAMES = {
     "unclear": "Unclear", "unlabeled": "Not labeled",
 }
 KIND_NAMES = {"news": "", "newsletter": "commentary"}
+# Outlet countries (ISO codes in sources.yaml), named on hover.
+COUNTRY_NAMES = {
+    "AU": "Australia", "BE": "Belgium", "CA": "Canada", "CN": "China", "DE": "Germany", "ES": "Spain", "FR": "France",
+    "GB": "United Kingdom", "HK": "Hong Kong", "IN": "India", "JP": "Japan", "KR": "South Korea", "QA": "Qatar",
+    "SE": "Sweden", "SG": "Singapore", "US": "United States",
+}
 
 
 def _env() -> Environment:
@@ -31,7 +37,7 @@ def _env() -> Environment:
     )
     env.filters["thousands"] = lambda n: f"{int(n):,}"
     env.filters["signed"] = lambda v: "–" if v is None else (f"{v:+.2f}".replace("-", "−"))
-    env.globals.update(stance_names=STANCE_NAMES, kind_names=KIND_NAMES)
+    env.globals.update(stance_names=STANCE_NAMES, kind_names=KIND_NAMES, country_names=COUNTRY_NAMES)
     return env
 
 

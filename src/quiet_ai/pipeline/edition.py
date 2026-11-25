@@ -110,6 +110,8 @@ def story_entry(store: Store, sources: SourcesConfig, score: StoryScore, rank: i
             "title_en": m["title_en"],
             "url": m["url"],
             "frame": m["frame"],
+            "track": m["track"],
+            "confidence": m["confidence"],
             "evidence": (m["label"] or {}).get("evidence", []),
             "rationale": (m["label"] or {}).get("rationale"),
             "llm_opt_out": bool(feed and not feed.llm),
@@ -169,13 +171,20 @@ def story_entry(store: Store, sources: SourcesConfig, score: StoryScore, rank: i
         "countries": int(score.features.get("countries", 0)),
         "stance": {k: stance.get(k, 0) for k in [*map(str, STANCES), "unclear", "unlabeled"]},
         "stance_summary": stance_summary({k: stance.get(k, 0) for k in map(str, STANCES)}),
-        "coverage": [{"stance": k, "items": groups[k]} for k in [*map(str, STANCES), "unclear", "unlabeled"] if k in groups],
+        "coverage": [{"stance": k, "items": groups[k], "countries": _countries(groups[k])}
+                     for k in [*map(str, STANCES), "unclear", "unlabeled"] if k in groups],
         "builders": builders,
         "builders_line": builders_line(builders),
         "source": sources_out[0] if sources_out else None,
         "items": sum(1 for m in members if m["kind"] != "recap"),  # recap bullets don't trigger new summaries
         "entities": sorted({e for m in members if m["label"] for e in m["label"].get("entities", [])}),
     }
+
+
+def _countries(items: list[dict]) -> list[list]:
+    """[[country code, outlets], ...], most outlets first: which countries a stance group's headlines come from."""
+    counts = Counter(i["country"] for i in items if i.get("country"))
+    return [[c, n] for c, n in sorted(counts.items(), key=lambda kv: (-kv[1], kv[0]))]
 
 
 def stance_summary(stance: dict[str, int]) -> str | None:

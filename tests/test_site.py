@@ -216,3 +216,23 @@ def test_card_footer_has_stance_chart_and_builders_line_moves_to_panel(tmp_path)
     # the hover tooltip: counts per stance and the average
     assert "Stance of 4 articles" in card  # labeled ones; unclear would count too and '<span class="tip-row"><i class="tip-dot st0"></i>Neutral<b>2</b></span>' in card
     assert '<span class="tip-avg">Average<b>+0.00</b></span>' in card
+
+
+def test_panel_shows_countries_per_stance_and_a_plain_url_list(tmp_path):
+    e = edition()
+    e["stories"][0]["coverage"][0]["countries"] = [["US", 3], ["SE", 1]]
+    e["stories"][0]["coverage"][0]["items"][0]["track"] = "technical"
+    html = build.render(e, tmp_path).read_text()
+    panel = re.search(r'<div class="panel".*?</div>\n</div>', html, re.S).group(0)
+    assert '<p class="group-countries" aria-label="Countries: United States 3, Sweden 1">' in panel
+    assert '<span title="United States: 3 outlets">US <b>3</b></span><span title="Sweden: 1 outlet">SE</span>' in panel
+    # the corner toggle and the plain list: every URL with stance, angle, frame, outlet and country
+    assert '<details class="raw-toggle">' in panel and "Every source, as labeled" in panel
+    assert 'Neutral<span class="sep">·</span>technical<span class="sep">·</span>grounded<span class="sep">·</span>NYT (US)' in panel
+    assert '<a class="raw-url" href="https://e.com/a" rel="noopener">https://e.com/a</a>' in panel
+
+
+def test_countries_per_stance_group():
+    from quiet_ai.pipeline.edition import _countries
+    items = [{"country": "US"}, {"country": "SE"}, {"country": "US"}, {"country": None}, {"country": "GB"}]
+    assert _countries(items) == [["US", 2], ["GB", 1], ["SE", 1]]

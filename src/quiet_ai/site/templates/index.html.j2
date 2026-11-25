@@ -137,12 +137,30 @@
 {% if more %}
 <div class="panel" id="{{ s.id }}-more" role="region" aria-label="{% if s.coverage %}Headlines by stance{% else %}Links{% endif %}: {{ s.headline }}">
   <p class="panel-head"><span class="rank">{{ "%02d"|format(s.rank) }}</span> {{ s.headline }}</p>
+  {% if s.coverage %}
+  {# The corner icon swaps the grouped view for a plain list: every source URL and how it was labeled. #}
+  <details class="raw-toggle">
+    <summary aria-label="Show every source URL with its labels" title="Every source URL with its labels"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 4h8M5.5 8h8M5.5 12h8"/><circle cx="2.6" cy="4" r="0.9"/><circle cx="2.6" cy="8" r="0.9"/><circle cx="2.6" cy="12" r="0.9"/></svg><span class="raw-toggle-label">All URLs</span></summary>
+  </details>
+  {% endif %}
   {% if s.builders_line %}<p class="builders"><span class="label">Builders</span> {{ s.builders_line }}</p>{% endif %}
   {% if s.summary and s.summary.builders %}<p class="builders-long">{{ s.summary.builders }}</p>{% endif %}
+  {% if s.coverage %}
+  <div class="raw-list">
+    <p class="raw-head">Every source, as labeled <span class="count">{{ s.coverage|sum(attribute="items", start=[])|length }}</span></p>
+    <ol>
+      {% for g in s.coverage %}{% for c in g["items"] %}
+      <li><span class="raw-meta"><span class="dot st{{ g.stance }}" aria-hidden="true"></span>{{ stance_names[g.stance] }}{% if c.track and g.stance not in ["unclear", "unlabeled"] %}<span class="sep">·</span>{{ c.track }}{% endif %}{% if c.frame and g.stance not in ["unclear", "unlabeled"] %}<span class="sep">·</span>{{ c.frame }}{% endif %}<span class="sep">·</span>{{ c.outlet }}{% if c.country %} ({{ c.country }}){% endif %}</span>
+        <a class="raw-url" href="{{ c.url }}" rel="noopener">{{ c.url }}</a></li>
+      {% endfor %}{% endfor %}
+    </ol>
+  </div>
+  {% endif %}
   <div class="panel-groups">
     {% for g in s.coverage %}
     <div class="group">
       <h3><span class="dot st{{ g.stance }}" aria-hidden="true"></span>{{ stance_names[g.stance] }} <span class="count">{{ g["items"]|length }}</span></h3>
+      {% if g.countries %}<p class="group-countries" aria-label="Countries: {% for c, n in g.countries %}{{ country_names.get(c, c) }} {{ n }}{% if not loop.last %}, {% endif %}{% endfor %}">{% for c, n in g.countries %}<span title="{{ country_names.get(c, c) }}: {{ n }} outlet{{ "s" if n != 1 }}">{{ c }}{% if n > 1 %} <b>{{ n }}</b>{% endif %}</span>{% endfor %}</p>{% endif %}
       <ul>
         {% for c in g["items"] %}
         <li>
