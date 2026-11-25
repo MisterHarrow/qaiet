@@ -272,4 +272,4 @@ def test_coverage_map_lights_up_the_outlets_countries(tmp_path):
     assert svg.count('<circle class="lit') > 4 and "--d:" in svg
     assert build.coverage_map([{"coverage": []}]) is None
     html = build.render(edition(), tmp_path).read_text()
-    assert '<div class="geo" tabindex="0" role="img" aria-label="Where the coverage in this view comes from. 2 outlets in 1 country: United States 2.">' in html
+    assert '<p class="geo-head">Outlet coverage</p>\n  <div class="geo" tabindex="0" role="img" aria-label="Where the coverage in this view comes from. 2 outlets in 1 country: United States 2.">' in html
