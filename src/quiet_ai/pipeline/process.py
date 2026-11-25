@@ -8,6 +8,7 @@ from datetime import datetime, timedelta
 from quiet_ai.config import ROOT, Settings, SourcesConfig
 from quiet_ai.llm.client import LLM
 from quiet_ai.pipeline import classify, cluster, edition, embed, gap, momentum, narratives, relevance, sentiment, summarize
+from quiet_ai.regions import REGIONS
 from quiet_ai.store.db import Store, iso
 
 
@@ -116,6 +117,12 @@ def build_editions(store: Store, settings: Settings, sources: SourcesConfig, now
 
     views = views or period_views(store, settings, sources, now)
     hist = sentiment.history(store)
+    view_days = {k: max(1, math.ceil(v.period.hours / 24)) for k, v in views.items()}
+    # The index per region and per country, for the story filter by place (app.js swaps the line's figures).
+    outlet_country = {f.id: f.country for f in sources.feeds} | {g.id: g.country for g in sources.gdelt_outlets}
+    places = dict(REGIONS) | {c: [c] for _, codes in REGIONS for c in codes}
+    days_all = [p["date"] for p in hist.get("all") or []]
+    by_place = sentiment.by_place(store, settings, outlet_country, places, days_all[-max(view_days.values()):][0]) if days_all else {}
     narr = narratives.detect(store, settings, sources, now) if narr is None else narr
     ongoing = [narratives.compact(n) for n in narr if n["ongoing"]][: settings.narratives.front_max]
     member_of = narratives.by_story(narr)
@@ -126,10 +133,12 @@ def build_editions(store: Store, settings: Settings, sources: SourcesConfig, now
         for st, sc in zip(ed["stories"], v.scores):  # which narrative a story (or a merged group) is part of
             st["narrative"] = next((member_of[m] for m in sc.members if m in member_of), None)
         ed["gap"] = gap.compute(store, settings, sources, v.scores)
-        days = max(1, math.ceil(v.period.hours / 24))
+        days = view_days[v.period.key]
         values = sentiment.period_value(hist, days)
         latest = hist["all"][-1]["date"] if hist.get("all") else None
         ed["sentiment"] = {"values": values, "words": sentiment.describe(values.get("all")), "days": days, "latest": latest,
-                           "outlets": hist["all"][-1]["outlets"] if hist.get("all") else None}
+                           "outlets": hist["all"][-1]["outlets"] if hist.get("all") else None,
+                           "places": {k: sentiment.place_value(daily, days_all[-days:]) for k, daily in by_place.items()},
+                           "min_outlets": settings.sentiment.min_outlets}
         out.append(ed)
     return out

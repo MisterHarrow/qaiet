@@ -89,7 +89,15 @@ def test_sentiment_page_and_front_page_line(tmp_path):
     page = build.render(e, tmp_path / "site").read_text()
     assert '<a class="sent-label step" href="sentiment/">The sentiment</a>' in page
     assert '<span class="sent-num step" data-value="-0.28">−0.28</span>' in page and "7-day average" in page
-    assert "Political <b>−0.60</b>" in page and "Economic <b>–</b>" in page
+    assert 'Political <b data-track="political">−0.60</b>' in page and 'Economic <b data-track="economic">–</b>' in page
+    assert 'id="sent-places"' not in page  # no per-place figures in this edition: the line stays overall
+
+    # With per-place figures, the page carries them for app.js (the place filter swaps the line's figures).
+    e["sentiment"] |= {"min_outlets": 3, "places": {"Europe": {"values": {"all": -0.5, "technical": None, "political": -0.9, "economic": None},
+                                                              "words": "critical", "days": 2}}}
+    page = build.render(e, tmp_path / "site2").read_text()
+    blob = page.split('<script type="application/json" id="sent-places">')[1].split("</script>")[0]
+    assert json.loads(blob) == {"days": 7, "min_outlets": 3, "places": e["sentiment"]["places"]}
     assert "The gap" in page and "fast-anything" in page and "no outlet coverage" in page
     assert "No big press story without builder interest." in page
     assert json.loads((tmp_path / "site" / "edition.json").read_text())["gap"]["builders_not_press"][0]["id"] == "s-2"
@@ -102,3 +110,21 @@ def test_sparkline_end_value_never_runs_into_an_axis_label():
     assert ">+1</text>" in both and ">−1</text>" in both
     near_floor = str(build.sparkline(pts(-0.76), "Political"))  # the end label sits where "−1" would
     assert ">+1</text>" in near_floor and ">−1</text>" not in near_floor and ">−0.76</text>" in near_floor
+
+
+def test_sentiment_by_place_uses_only_that_places_outlets(settings):
+    st = Store(":memory:")
+    settings.sentiment.min_outlets = 3
+    for i, (src, stance) in enumerate([("se1", -2), ("se2", -2), ("de1", -1), ("us1", 2), ("us2", 2), ("us3", 1)]):
+        labeled(st, i, src, "political", stance)
+    labeled(st, 10, "se1", "technical", 1, confidence="low")  # unclear: left out, as in the overall index
+    country = {"se1": "SE", "se2": "SE", "de1": "DE", "us1": "US", "us2": "US", "us3": "US", "digest": None}
+    today = NOW.date().isoformat()
+    daily = sentiment.by_place(st, settings, country, {"Europe": ["SE", "DE"], "SE": ["SE"], "Americas": ["US", "CA"]}, today)
+    eu = sentiment.place_value(daily["Europe"], [today])
+    assert eu == {"values": {"all": -1.67, "technical": None, "political": -1.67, "economic": None}, "words": "critical", "days": 1}
+    assert sentiment.place_value(daily["Americas"], [today])["values"]["all"] == 1.67
+    # Sweden has two outlets: below min_outlets, so no figure rather than a figure from too few voices.
+    assert sentiment.place_value(daily["SE"], [today]) == {"values": dict.fromkeys(sentiment.TRACKS), "words": None, "days": 0}
+    # Days outside the view don't count.
+    assert sentiment.place_value(daily["Europe"], ["2026-11-01"])["values"]["all"] is None

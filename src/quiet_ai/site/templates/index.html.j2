@@ -35,7 +35,11 @@
     <p class="sent-line"><a class="sent-label step" href="{{ root }}sentiment/">The sentiment</a>
       <span class="sent-num step" data-value="{{ sv['all'] }}">{{ sv["all"]|signed }}</span>
       <span class="sent-word step">{{ e.sentiment.words }}{% if e.sentiment.days > 1 %} <span class="sent-note">{{ e.sentiment.days }}-day average</span>{% endif %}</span>
-      <span class="sent-track step">Technical <b>{{ sv.get("technical")|signed }}</b></span><span class="sent-track step">Political <b>{{ sv.get("political")|signed }}</b></span><span class="sent-track step">Economic <b>{{ sv.get("economic")|signed }}</b></span></p>
+      <span class="sent-track step">Technical <b data-track="technical">{{ sv.get("technical")|signed }}</b></span><span class="sent-track step">Political <b data-track="political">{{ sv.get("political")|signed }}</b></span><span class="sent-track step">Economic <b data-track="economic">{{ sv.get("economic")|signed }}</b></span></p>
+    {% if e.sentiment.places %}
+    {# The same index per region and per country: picking a place in the story filter shows its figures (app.js). #}
+    <script type="application/json" id="sent-places">{{ {"days": e.sentiment.days, "min_outlets": e.sentiment.min_outlets, "places": e.sentiment.places}|tojson }}</script>
+    {% endif %}
   </div>
   {% endif %}
   <div class="masthead-meta">
@@ -107,7 +111,7 @@
     {% endfor %}
     {% for r in places if r.countries|length > 1 %}
     <span class="place-row" data-region="{{ r.name }}" hidden>
-      {% for c in r.countries %}<button type="button" data-region="{{ r.name }}" data-codes="{{ c.code }}" aria-pressed="false">{{ c.name }} <span class="n">{{ c.n }}</span></button>{% endfor %}
+      {% for c in r.countries %}<button type="button" data-region="{{ r.name }}" data-codes="{{ c.code }}" data-name="{{ c.name }}" aria-pressed="false">{{ c.name }} <span class="n">{{ c.n }}</span></button>{% endfor %}
     </span>
     {% endfor %}
   </nav>

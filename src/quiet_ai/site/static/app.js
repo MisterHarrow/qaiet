@@ -51,6 +51,54 @@
     placeRows.forEach(function (r) { r.hidden = r.dataset.region !== state.region; });
     if (empty) empty.hidden = shown !== 0;
     if (stateEl) stateEl.textContent = state.track || state.term || state.codes ? shown + " of " + cards.length + " stories" : "";
+    var country = places && places.querySelector('.place-row button[aria-pressed="true"]');
+    if (country) showSentiment(country.dataset.codes, country.dataset.name);
+    else showSentiment(state.region, state.region);
+  }
+
+  // The sentiment line follows the place filter: the same index from that region's or country's outlets only
+  // (sentiment.by_place in the pipeline, embedded as #sent-places). Without JS, and on editions made before
+  // it existed, the line stays the overall figure.
+  var sent = document.querySelector(".sentiment");
+  var sentData = null;
+  try { sentData = JSON.parse(document.getElementById("sent-places").textContent); } catch (e) {}
+  var overall = null;
+  if (sent && sentData) {
+    overall = { label: sent.querySelector(".sent-label").textContent, word: sent.querySelector(".sent-word").innerHTML,
+                num: sent.querySelector(".sent-num").textContent, value: sent.querySelector(".sent-num").getAttribute("data-value"),
+                tracks: Array.prototype.map.call(sent.querySelectorAll(".sent-track b"), function (b) { return b.textContent; }) };
+  }
+  function signed(v) { return v === null || v === undefined ? "\u2013" : (v < 0 ? "\u2212" : "+") + Math.abs(v).toFixed(2); }
+  function placeName(name) { return /^(Americas|Middle East|United )/.test(name) ? "the " + name : name; }
+  function showSentiment(key, name) {
+    if (!overall) return;
+    var label = sent.querySelector(".sent-label"), num = sent.querySelector(".sent-num"), word = sent.querySelector(".sent-word");
+    var tracks = sent.querySelectorAll(".sent-track b");
+    var p = key ? sentData.places[key] : null;
+    sent.querySelector(".sent-line").setAttribute("aria-live", "polite");
+    if (!p) {
+      label.textContent = overall.label;
+      num.textContent = overall.num;
+      num.setAttribute("data-value", overall.value);
+      word.innerHTML = overall.word;
+      tracks.forEach(function (b, i) { b.textContent = overall.tracks[i]; });
+      return;
+    }
+    var all = p.values.all;
+    label.textContent = overall.label + " in " + placeName(name);
+    num.textContent = signed(all);
+    num.setAttribute("data-value", all === null ? "" : all);
+    var note = document.createElement("span");
+    note.className = "sent-note";
+    if (all === null) {
+      word.textContent = "too few outlets";
+      note.textContent = "fewer than " + sentData.min_outlets + " a day";
+    } else {
+      word.textContent = p.words;
+      note.textContent = sentData.days > 1 ? sentData.days + "-day average" : "";
+    }
+    if (note.textContent) { word.appendChild(document.createTextNode(" ")); word.appendChild(note); }
+    tracks.forEach(function (b) { b.textContent = signed(p.values[b.dataset.track]); });
   }
 
   if (nav) nav.hidden = false;
@@ -208,7 +256,8 @@
   try { sessionStorage.setItem("greeted", "1"); } catch (e) {}
   // A tab opened in the background pauses animation frames: show the figure still instead.
   if (!num || !window.requestAnimationFrame || document.hidden) return;
-  var target = parseFloat(num.getAttribute("data-value"));
+  var value = num.getAttribute("data-value");
+  var target = parseFloat(value);
   if (isNaN(target)) return;
   var shown = num.textContent;
   var start = null;
@@ -216,6 +265,7 @@
   function frame(t) {
     if (start === null) start = t;
     var p = Math.min(1, (t - start) / 450);
+    if (num.getAttribute("data-value") !== value) return;  // a place filter changed the figure meanwhile
     num.textContent = p < 1 ? fmt(target * (1 - Math.pow(1 - p, 3))) : shown;
     if (p < 1) requestAnimationFrame(frame);
   }

@@ -18,6 +18,8 @@ import re
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from markupsafe import Markup, escape
 
+from quiet_ai.regions import REGIONS
+
 HERE = Path(__file__).parent
 STANCE_NAMES = {
     "-2": "Strongly critical", "-1": "Critical", "0": "Neutral", "1": "Positive", "2": "Enthusiastic",
@@ -53,12 +55,10 @@ _CONTINENTS = [
     [(114, -22), (122, -17), (131, -12), (137, -12), (142, -11), (146, -19), (153, -26), (150, -37), (141, -38), (130, -32), (117, -35), (114, -28)],
     [(166, -46), (174, -41), (178, -38), (173, -35), (170, -44)],
 ]
-# Each outlet country's rough center (lat, lon), and the regions of the legend.
+# Each outlet country's rough center (lat, lon). The regions of the legend are in quiet_ai.regions.
 COUNTRY_POS = {"US": (39, -98), "CA": (56, -106), "GB": (54, -2), "SE": (62, 16), "DE": (51, 10), "FR": (46, 2), "BE": (50.5, 4.5),
                "ES": (40, -4), "QA": (25, 51), "CN": (34, 104), "HK": (22, 114), "IN": (22, 79), "JP": (36, 138), "KR": (36, 128),
                "SG": (1, 104), "AU": (-25, 134)}
-REGIONS = [("Americas", ["US", "CA"]), ("Europe", ["GB", "SE", "DE", "FR", "BE", "ES"]), ("Middle East", ["QA"]),
-           ("Asia", ["CN", "HK", "IN", "JP", "KR", "SG"]), ("Oceania", ["AU"])]
 MAP_W, MAP_H = 170, 70
 
 

@@ -150,7 +150,7 @@
 
 <section id="index">
   <h2>Sentiment index</h2>
-  <p>One number per day for how positive or critical the coverage of AI is, from −2 to +2, overall and for each angle. Each outlet's labels for the day are averaged first (confident labels count fully, medium-confidence ones {{ (a.sentiment.medium_weight * 100)|round|int }}%, unclear ones not at all), then the outlets are averaged, so prolific outlets don't dominate. A day needs at least {{ a.sentiment.min_outlets }} outlets to get a value. The front page shows the average for the period you're viewing; the <a href="{{ root }}sentiment/">index page</a> has the daily history and a table.</p>
+  <p>One number per day for how positive or critical the coverage of AI is, from −2 to +2, overall and for each angle. Each outlet's labels for the day are averaged first (confident labels count fully, medium-confidence ones {{ (a.sentiment.medium_weight * 100)|round|int }}%, unclear ones not at all), then the outlets are averaged, so prolific outlets don't dominate. A day needs at least {{ a.sentiment.min_outlets }} outlets to get a value. The front page shows the average for the period you're viewing; the <a href="{{ root }}sentiment/">index page</a> has the daily history and a table. When you filter the front page by a region or a country, the figures change to the index from the outlets there only, worked out the same way, so a day counts only when at least {{ a.sentiment.min_outlets }} of them were labeled.</p>
 </section>
 
 <section id="narratives">
