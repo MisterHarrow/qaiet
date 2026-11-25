@@ -1,5 +1,5 @@
 /* Qaiet Times: a financial paper for AI with a terminal's precision. System fonts only.
-   Light is salmon newsprint, dark is a soft warm graphite. One signal color (magenta) marks the brand and
+   Light (the default) is salmon newsprint; dark, switched on in the navigation, is a soft warm graphite. One signal color (magenta) marks the brand and
    interaction and never encodes data. Stance uses umber (critical) and sage (positive), never red/blue.
    An elegant display serif for the wordmark, serif for headlines, sans for reading, mono for data, labels and navigation. */
 
@@ -24,28 +24,29 @@
   --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   --display: Baskerville, "Baskerville Old Face", "Libre Baskerville", var(--serif);
   --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
-  color-scheme: light dark;
+  color-scheme: light;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --paper: #2a2826;
-    --card: #33302d;
-    --ink: #ece6dc;
-    --muted: #c4bbaf;
-    --faint: #a39b91;
-    --rule: #47423d;
-    --wash: #3b3733;
-    --link: #ece6dc;
-    --signal: #e87aab;
-    --signal-wash: #4a3039;
-    --crit: #d1956a;
-    --crit-soft: #9a7559;
-    --neut: #7a746c;
-    --pos-soft: #6f8a72;
-    --pos: #a3c9a6;
-    --unclear: #4c4743;
-  }
+/* Dark is opt-in: the switch in the navigation sets data-theme="dark" (kept in localStorage).
+   Light is the default whatever the OS prefers. */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #2a2826;
+  --card: #33302d;
+  --ink: #ece6dc;
+  --muted: #c4bbaf;
+  --faint: #a39b91;
+  --rule: #47423d;
+  --wash: #3b3733;
+  --link: #ece6dc;
+  --signal: #e87aab;
+  --signal-wash: #4a3039;
+  --crit: #d1956a;
+  --crit-soft: #9a7559;
+  --neut: #7a746c;
+  --pos-soft: #6f8a72;
+  --pos: #a3c9a6;
+  --unclear: #4c4743;
 }
 
 * { box-sizing: border-box; }
@@ -91,6 +92,15 @@ button { font: inherit; }
 .sitenav a { padding: 0.25rem 0; color: var(--muted); text-decoration: none; border-bottom: 2px solid transparent; }
 .sitenav a:hover { color: var(--ink); }
 .sitenav a[aria-current="page"] { color: var(--ink); border-bottom-color: var(--signal); }
+.theme-toggle {
+  display: inline-flex; align-items: center; gap: 0.45em; margin-left: 0.2rem; padding: 0.25rem 0 0.25rem 1.1rem;
+  color: var(--muted); background: none; border: 0; border-left: 1px solid var(--rule); cursor: pointer;
+  font: inherit; letter-spacing: inherit; text-transform: inherit;
+}
+.theme-toggle:hover { color: var(--ink); }
+.theme-toggle svg { width: 0.95em; height: 0.95em; transition: transform 0.2s; }
+.theme-toggle[aria-pressed="true"] { color: var(--ink); }
+.theme-toggle[aria-pressed="true"] svg { transform: rotate(180deg); }
 
 .spectrum { display: flex; height: 5px; margin: 0; background: var(--wash); }
 .spectrum .seg, .stripe .seg { display: block; height: 100%; }
@@ -369,6 +379,7 @@ summary:hover { color: var(--ink); }
   .wm { font-size: 2rem; }
   .mark { width: 1.35rem; }
   .sitenav { gap: 0.2rem 0.9rem; font-size: 0.68rem; }
+  .theme-toggle { margin-left: 0; padding-left: 0.9rem; }
   .weather { font-size: 1.35rem; }
   .t4 { font-size: 1.4rem; }
   .t3 { font-size: 1.15rem; }

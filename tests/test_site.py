@@ -137,7 +137,7 @@ def test_about_page_reads_config_and_health(tmp_path, settings):
     assert 'href="../static/style.css"' in html and "How this site works" in html
     assert f"{ctx['counts']['outlets']} news outlets" in html and "1 of 2 sources answered normally" in html
     assert "CBC: robots blocked" in html and settings.analysis.news_prompt in html
-    assert "<script" not in html and "<img" not in html
+    assert "<img" not in html and not re.search(r'<script[^>]*src="(?!\.\./static/app\.js")', html)  # only our own script
 
 
 def test_brand_is_the_same_on_every_page(tmp_path):
@@ -154,6 +154,9 @@ def test_brand_is_the_same_on_every_page(tmp_path):
     for p in pages:
         assert '<span class="wm">Qaiet Times</span>' in p and 'class="sitenav"' in p
         assert "Qaiet Times" in p.split("</title>")[0] and "quiet ai" not in p
+    for p in pages:  # light by default: a saved dark choice is applied before paint; the switch needs JS
+        assert 'localStorage.getItem("theme")==="dark"' in p.split("</head>")[0]
+        assert '<button type="button" class="theme-toggle" aria-pressed="false" hidden>' in p and "static/app.js" in p
     assert '<a href="./" aria-current="page">Today</a>' in front
     assert '<a href="../archive/" aria-current="page">Archive</a>' in archive
     # The masthead rule is the stance mix of every article in the view; each card's top edge is its own.

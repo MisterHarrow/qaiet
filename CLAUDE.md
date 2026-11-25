@@ -58,7 +58,7 @@ uv run pytest          # must pass before every push; no network, no model calls
   - No images, analytics, cookies or third-party scripts.
   - Favicons are inline `data:` SVGs.
   - `tests/test_site.py` checks this.
-- **The page works without JavaScript.** `app.js` only adds the filters.
+- **The page works without JavaScript.** `app.js` only adds the filters and the light/dark switch (hidden without JS, so the page stays light). localStorage holds only the theme choice; no cookies.
 - **Model costs:**
   - The monthly cap is $30 (`llm.monthly_budget_usd`). A daily publish costs about $0.05–0.15.
   - Models: Haiku 5.5 for items, Sonnet 5.5 for story summaries and the daily line. Opus 5.5 is only for `qa eval crosscheck`; thinking can't be turned off on Opus 5.5.
@@ -71,7 +71,7 @@ uv run pytest          # must pass before every push; no network, no model calls
 
 - **Direction:** "a cyberpunk Financial Times that's still clean" (Benjamin, 2026-11-25). Light mode is salmon newsprint; dark mode is a soft warm graphite with the same beige undertone (not black).
 - **Tokens** are CSS custom properties on `:root` in `src/quiet_ai/site/static/style.css`.
-  - Dark mode is a second set under `@media (prefers-color-scheme: dark)`. Design and check both.
+  - Light is the default, whatever the OS prefers. Dark is a second set under `:root[data-theme="dark"]`, switched by the button in the navigation (`app.js`; the choice is kept in localStorage, and an inline script in `<head>` applies it before paint). Design and check both.
   - Reuse the tokens rather than hardcoding colors.
   - Text colors (`--muted`, `--faint`) must reach 4.5:1 on `--paper` and `--card`.
 - **Type:** an elegant installed serif (`--display`) for the wordmark only, system serif (`--serif`) for headlines, system sans (`--sans`) for reading text, system mono (`--mono`) for data, labels, navigation.
@@ -88,7 +88,7 @@ uv run pytest          # must pass before every push; no network, no model calls
   - The favicon, wordmark and site navigation live once in `site/templates/_brand.html.j2`; every page imports them.
   - The mark is the stance scale as five bars, umber to sage. The wordmark is "Qaiet Times" in `--display` (Baskerville, then Baskerville Old Face on Windows, then the system serif), plain ink with no highlight.
 - **Copy:** plain, specific, short sentences; calm, no hype.
-- **Check changes in the browser:** run `qa serve`, then look at light and dark mode, a desktop width and 380px.
+- **Check changes in the browser:** run `qa serve`, then look at light and dark mode (the switch, or `document.documentElement.dataset.theme = "dark"`), a desktop width and 380px.
 
 ## Deploy
 

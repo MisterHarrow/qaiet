@@ -1,3 +1,22 @@
+// Light/dark switch. Light is the default; a dark choice is kept in localStorage (no cookies)
+// and applied before paint by the inline script in <head>. Without JS the button stays hidden.
+(function () {
+  var btn = document.querySelector(".theme-toggle");
+  if (!btn) return;
+  var root = document.documentElement;
+  function show(dark) {
+    if (dark) root.setAttribute("data-theme", "dark"); else root.removeAttribute("data-theme");
+    btn.setAttribute("aria-pressed", String(dark));
+  }
+  show(root.getAttribute("data-theme") === "dark");
+  btn.hidden = false;
+  btn.addEventListener("click", function () {
+    var dark = root.getAttribute("data-theme") !== "dark";
+    show(dark);
+    try { if (dark) localStorage.setItem("theme", "dark"); else localStorage.removeItem("theme"); } catch (e) {}
+  });
+})();
+
 // Filters: a track (Technical / Political / Economic) and a mentioned name.
 // Both narrow the cards; together they combine. Without JS every card shows and the controls stay inert.
 (function () {
