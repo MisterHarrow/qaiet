@@ -217,7 +217,9 @@
   var canvas = document.createElement("canvas");
   if (!canvas.getContext) return;
   var K = +seal.getAttribute("data-k"), M = +seal.getAttribute("data-m"), DAYS = seal.getAttribute("data-days");
-  var R0 = 36.5, AMP = 9.5, CORD = 37, NT = 72, P = 44, G = 200;  // R0, AMP must match build.seal; threads; points; field grid
+  var R0 = 36.5, AMP = 9.5, CORD = 40, NT = 72, P = 44, G = 200;  // R0, AMP must match build.seal; threads; points; field grid
+  var TS = 1 / 1.5;  // the pace: every duration below is scaled by it (Benjamin asked for 50% faster)
+  // The words are sized to sit inside the cord (radius CORD less its twist), so no letter touches a thread.
   var STOPS = JSON.parse(seal.getAttribute("data-stops") || "[]"), BANDS = JSON.parse(seal.getAttribute("data-bands") || "[]");
   var TINT = { "-2": "--crit", "-1": "--crit-soft", "0": "--neut", "1": "--pos-soft", "2": "--pos" }, REST = 0.9;
 
@@ -546,7 +548,7 @@
       var d = F.img.data, src = F.src, idx = F.idx, tm = F.tm, on = F.on;
       for (var q = 0; q < idx.length; q++) {
         var p = idx[q], age = tau - tm[q];
-        d[p + 3] = age <= 0 ? 0 : src[p + 3] * (on[q] ? smooth(age / 0.12) : FUSED * smooth((age - 0.18) / 0.45));
+        d[p + 3] = age <= 0 ? 0 : src[p + 3] * (on[q] ? smooth(age / (0.12 * TS)) : FUSED * smooth((age - 0.18 * TS) / (0.45 * TS)));
       }
       F.o.setTransform(1, 0, 0, 1, 0, 0);
       F.o.putImageData(F.img, 0, 0);
@@ -561,19 +563,19 @@
     var rest = lattice();
     signs = rest.signs;
     words = {
-      n: word(DAYS, DAYS.length > 1 ? 58 : 44, 54, 3, 0.45 + 0.22 * DAYS.length),
-      day: word("day", 60, 38, 17, 1),
-      narrative: word("narrative", 72, 30, 29, 1.7),
-      q: word("Q", 56, 54, 41, 0.85)  // the Q of Qaiet Times, last, before the seal settles
+      n: word(DAYS, DAYS.length > 1 ? 54 : 44, 52, 3, (0.45 + 0.22 * DAYS.length) * TS),
+      day: word("day", 56, 36, 17, 1 * TS),
+      narrative: word("narrative", 66, 28, 29, 1.7 * TS),
+      q: word("Q", 52, 50, 41, 0.85 * TS)  // the Q of Qaiet Times, last, before the seal settles
     };
     shapes = { rest: rest.segs, n: words.n.segs, day: words.day.segs, narrative: words.narrative.segs, q: words.q.segs };
     PH = [
-      { move: "rest", to: "cord", dur: 1.1 },
-      { write: "n", dur: words.n.pen.dur }, { hold: "n", dur: 0.6 }, { move: "n", to: "cord", dur: 0.8 },
-      { write: "day", dur: words.day.pen.dur }, { hold: "day", dur: 0.5 }, { move: "day", to: "cord", dur: 0.8 },
-      { write: "narrative", dur: words.narrative.pen.dur }, { hold: "narrative", dur: 0.7 }, { move: "narrative", to: "cord", dur: 0.8 },
-      { write: "q", dur: words.q.pen.dur }, { hold: "q", dur: 0.8 },
-      { move: "q", to: "rest", dur: 2.8, last: true }
+      { move: "rest", to: "cord", dur: 1.1 * TS },
+      { write: "n", dur: words.n.pen.dur }, { hold: "n", dur: 0.6 * TS }, { move: "n", to: "cord", dur: 0.8 * TS },
+      { write: "day", dur: words.day.pen.dur }, { hold: "day", dur: 0.5 * TS }, { move: "day", to: "cord", dur: 0.8 * TS },
+      { write: "narrative", dur: words.narrative.pen.dur }, { hold: "narrative", dur: 0.7 * TS }, { move: "narrative", to: "cord", dur: 0.8 * TS },
+      { write: "q", dur: words.q.pen.dur }, { hold: "q", dur: 0.8 * TS },
+      { move: "q", to: "rest", dur: 2.8 * TS, last: true }
     ];
   }
 
@@ -604,7 +606,7 @@
   function drawWrite(key, tau) {
     var w = words[key], prog = tau / w.pen.dur;
     begin();
-    letters(w, prog >= 1 && tau - w.pen.dur > 0.7 ? Infinity : tau, 1);
+    letters(w, prog >= 1 && tau - w.pen.dur > 0.7 * TS ? Infinity : tau, 1);
     var edge = new Path2D();  // the outline threads, traced where the pen has been
     w.segs.forEach(function (s, r) {
       var ts = w.times[r];
