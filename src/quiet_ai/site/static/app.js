@@ -199,15 +199,16 @@
 })();
 
 // The narrative seal, on a narrative's page. The lattice's threads twist into a cord; the cord pays its thread out to
-// a pen that writes the day count, then "day", then "narrative", in the wordmark's Baskerville: stroke by stroke in a
-// calligrapher's order, slowing into each curve and lifting between strokes, the newest ink a little darker. After each
-// word the threads wind back into the cord; after the last (the Q of the masthead), the two halves of the lattice spin
-// against each other, slow and lock, and then the lattice keeps turning slowly (style.css). In the lattice and the
-// cord the threads wear the seal's stance tint (the same radial gradient as the SVG); as letters they are ink. The letters
-// are the font itself: each word is set on a hidden canvas, its distance field gives the outline and inlines (the way
-// engraved type is cut), and a pen path per letter (DUCTUS, fitted to the letter and pulled onto the middle of each
-// stroke) decides when each part of them is written. It plays once when the page opens and again on hover or click.
-// Without JS, or when the reader asks for reduced motion, the seal rests.
+// a pen that writes the day count, then "day", then "narrative", then the Q of the masthead, in the wordmark's
+// Baskerville: stroke by stroke in a calligrapher's order, slowing into each curve and lifting between strokes, the
+// newest ink a little darker. The letters are filled with the narrative's stance colors, critical at the left to
+// positive at the right (like a card's stance stripe). After each word its ink lifts into the threads of its outline,
+// which wind back into the cord; after the Q, the two halves of the lattice spin against each other, slow and lock,
+// and then the lattice keeps turning slowly (style.css). In the lattice and the cord the threads wear the seal's own
+// tint, inside out (the same radial gradient as the SVG). The letters are the font itself, set on a hidden canvas; a
+// pen path per letter (DUCTUS, fitted to the letter and pulled onto the middle of each stroke) decides when each part
+// of them is written. It plays once when the page opens and again on hover or click. Without JS, or when the reader
+// asks for reduced motion, the seal rests.
 (function () {
   var seal = document.querySelector(".seal.big[data-k]");
   if (!seal || !window.requestAnimationFrame) return;
@@ -216,8 +217,9 @@
   if (!canvas.getContext) return;
   var K = +seal.getAttribute("data-k"), M = +seal.getAttribute("data-m"), DAYS = seal.getAttribute("data-days");
   var R0 = 36.5, AMP = 9.5, CORD = 37, NT = 72, P = 44, G = 200;  // R0, AMP must match build.seal; threads; points; field grid
-  var STOPS = JSON.parse(seal.getAttribute("data-stops") || "[]");
+  var STOPS = JSON.parse(seal.getAttribute("data-stops") || "[]"), BANDS = JSON.parse(seal.getAttribute("data-bands") || "[]");
   var TINT = { "-2": "--crit", "-1": "--crit-soft", "0": "--neut", "1": "--pos-soft", "2": "--pos" }, REST = 0.9;
+
   var lattices = seal.querySelectorAll(".seal-lat");
 
   // Pen paths, in writing order. Digits and Q: x across the figure, y up its height (0 to 1); a stroke that starts with
@@ -292,11 +294,12 @@
     x.font = font(f);
     m = x.measureText(text);
     var ox = R / 2 + 0.5 - (m.actualBoundingBoxRight - m.actualBoundingBoxLeft) / 2, base = R / 2 + 0.5 + (m.actualBoundingBoxAscent - m.actualBoundingBoxDescent) / 2;
-    var xh = x.measureText("x").actualBoundingBoxAscent * u, glyphs = [];
+    var xh = x.measureText("x").actualBoundingBoxAscent * u, glyphs = [], set = [];
     for (var i = 0; i < text.length; i++) {
       var ch = text[i], gx = ox + x.measureText(text.slice(0, i)).width, g = x.measureText(ch);
       var dy = (hash(seed + i) - 0.5) * 0.02 * f, rot = (hash(seed + i + 50) - 0.5) * 0.02;
       x.save(); x.translate(gx, base + dy); x.rotate(rot); x.fillText(ch, 0, 0); x.restore();
+      set.push([ch, gx, base + dy, rot]);
       var o = x.measureText("O");
       glyphs.push({ ch: ch, l: (gx - g.actualBoundingBoxLeft) * u, r: (gx + g.actualBoundingBoxRight) * u, t: (base - g.actualBoundingBoxAscent) * u,
                     b: (base + g.actualBoundingBoxDescent) * u, ox: gx * u, base: base * u, dy: dy * u, rot: rot, xh: xh,
@@ -310,7 +313,9 @@
       p = 2 * j * S + 2 * i;
       F[j * Gs + i] = (fin[p] > 0 ? Math.sqrt(fin[p]) - 0.5 : 0.5 - Math.sqrt(fout[p])) * u;
     }
-    return { F: F, glyphs: glyphs };
+    var x0 = Math.min.apply(null, glyphs.map(function (g) { return g.l; })), x1 = Math.max.apply(null, glyphs.map(function (g) { return g.r; }));
+    // `set` replays the letters at any resolution: font size f, positions in grid pixels of u seal units each
+    return { F: F, glyphs: glyphs, x0: x0, x1: x1, set: set, f: f, u: u, font: font };
   }
 
   // The closed curves where the field equals L (marching squares, joined through shared cell edges).
@@ -447,7 +452,8 @@
       spec.forEach(function (st) {
         var inO = st[0] === "o" || st[0] === "ot", near = st[0] === "ot" ? 0.3 : 1;
         var pts = (inO ? st.slice(1) : st).map(function (p) {
-          var X = g.l + p[0] * (inO ? g.ow : g.r - g.l), Y = inO ? g.t + (1 - p[1]) * g.oh : digit ? g.b - p[1] * (g.b - g.t) : p[1] >= 9 ? g.t + (p[1] - 9) * g.xh : p[1] <= -9 ? g.b - (p[1] + 9) * g.xh : g.base - p[1] * g.xh;
+          var Y = inO ? g.t + (1 - p[1]) * g.oh : digit ? g.b - p[1] * (g.b - g.t) : p[1] >= 9 ? g.t + (p[1] - 9) * g.xh : p[1] <= -9 ? g.b - (p[1] + 9) * g.xh : g.base - p[1] * g.xh;
+          var X = g.l + p[0] * (inO ? g.ow : g.r - g.l);
           Y += g.dy;
           var dx = X - g.ox, dy = Y - cy;
           return [g.ox + dx * c - dy * s, cy + dx * s + dy * c];
@@ -485,32 +491,69 @@
     }
     return at(s[s.length - 1].c, s[s.length - 1].c.len);
   }
-  // Each word's threads and, for every point on them, when the pen reaches it.
-  function word(text, boxW, boxH, levels, seed, dur) {
-    var w = setWord(text, family, boxW, boxH, seed), cs = [];
-    levels.forEach(function (L) { cs = cs.concat(contours(w.F, L)); });
-    var segs = order(share(cs)).segs, pn = pen(w, dur), sm = pn.samples;
-    var times = segs.map(function (s) {
-      return s.map(function (p) {
-        var best = Infinity, t = 0;
-        for (var i = 0; i < sm.length; i++) { var dx = sm[i][0] - p[0], dy = sm[i][1] - p[1], d = dx * dx + dy * dy; if (d < best) { best = d; t = sm[i][2]; } }
-        return t;
-      });
+  // Each word: the threads of its outline (what its ink lifts into), its pen, and when the pen reaches each point of
+  // its letters (on the field's grid; the nearest point of the pen's path decides).
+  function word(text, boxW, boxH, seed, dur) {
+    var w = setWord(text, family, boxW, boxH, seed), pn = pen(w, dur), sm = pn.samples, S = G + 1, u = 100 / G;
+    var when = new Float32Array(S * S).fill(Infinity);
+    for (var j = 0; j < S; j++) for (var i = 0; i < S; i++) {
+      if (w.F[j * S + i] > 0.8) continue;
+      var x = i * u, y = j * u, best = Infinity, t = 0;
+      for (var q = 0; q < sm.length; q++) { var dx = sm[q][0] - x, dy = sm[q][1] - y, d = dx * dx + dy * dy; if (d < best) { best = d; t = sm[q][2]; } }
+      when[j * S + i] = t;
+    }
+    return { segs: order(share(contours(w.F, 0))).segs, pen: pn, when: when, w: w, x0: w.x0, x1: w.x1 };
+  }
+  // A word's letters at the canvas's resolution, filled with its tint, and for each inked pixel when it is written.
+  function fill(wd, cs, rgb) {
+    var W = canvas.width, off = document.createElement("canvas");
+    off.width = off.height = W;
+    var o = off.getContext("2d", { willReadFrequently: true }), k = W / 100, g = o.createLinearGradient(wd.x0 * k, 0, wd.x1 * k, 0), c = 0;
+    BANDS.forEach(function (b, i) {
+      var col = cs.getPropertyValue(TINT[b[0]]).trim() || ink, c0 = c, bl = Math.min(0.015, b[1] / 4);
+      c += b[1];
+      g.addColorStop(Math.max(0, Math.min(1, i ? c0 + bl : 0)), col);
+      g.addColorStop(Math.max(0, Math.min(1, i < BANDS.length - 1 ? c - bl : 1)), col);
     });
-    return { segs: segs, times: times, pen: pn };
+    o.fillStyle = BANDS.length ? g : ink;
+    o.setTransform(k * wd.w.u, 0, 0, k * wd.w.u, 0, 0);
+    o.font = wd.w.font(wd.w.f);
+    wd.w.set.forEach(function (l) { o.save(); o.translate(l[1], l[2]); o.rotate(l[3]); o.fillText(l[0], 0, 0); o.restore(); });
+    var img = o.getImageData(0, 0, W, W), d = img.data, idx = [], tm = [], S = G + 1;
+    for (var p = 0; p < W * W; p++) {
+      if (!d[p * 4 + 3]) continue;
+      var i = Math.round(((p % W) + 0.5) / k * G / 100), j = Math.round((Math.floor(p / W) + 0.5) / k * G / 100);
+      idx.push(p * 4); tm.push(wd.when[j * S + i]);
+    }
+    wd.fill = { W: W, off: off, o: o, src: new Uint8ClampedArray(d), img: img, idx: idx, tm: new Float32Array(tm), ink: rgb };
+  }
+  // The letters as written by time tau: unwritten pixels clear, the pen's edge soft, the newest ink darker.
+  function letters(wd, tau, alpha) {
+    var F = wd.fill;
+    if (tau === Infinity) { ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = alpha; ctx.drawImage(F.off, 0, 0); ctx.restore(); return; }
+    var d = F.img.data, src = F.src, idx = F.idx, tm = F.tm, ir = F.ink[0], ig = F.ink[1], ib = F.ink[2];
+    for (var q = 0; q < idx.length; q++) {
+      var p = idx[q], age = tau - tm[q];
+      if (age <= 0) { d[p + 3] = 0; continue; }
+      var wet = age < 0.35 ? 0.4 * (1 - age / 0.35) : 0;
+      d[p] = src[p] + (ir - src[p]) * wet; d[p + 1] = src[p + 1] + (ig - src[p + 1]) * wet; d[p + 2] = src[p + 2] + (ib - src[p + 2]) * wet;
+      d[p + 3] = src[p + 3] * Math.min(1, age / 0.05) * alpha;
+    }
+    F.o.setTransform(1, 0, 0, 1, 0, 0);
+    F.o.putImageData(F.img, 0, 0);
+    ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = 1; ctx.drawImage(F.off, 0, 0); ctx.restore();
   }
 
   var family, shapes, words, signs, PH, playing = false, start = 0, theta = 0, ctx, ink, tint, dev;
   function prepare() {
     family = displayFont();
-    var rest = lattice(), deep = [], i;
-    for (i = 0; i < 9; i++) deep.push(-0.62 * i);
+    var rest = lattice();
     signs = rest.signs;
     words = {
-      n: word(DAYS, DAYS.length > 1 ? 58 : 44, 54, deep, 3, 0.45 + 0.22 * DAYS.length),
-      day: word("day", 60, 38, [0, -0.5, -1, -1.5, -2], 17, 1),
-      narrative: word("narrative", 72, 30, [0, -0.45, -0.9, -1.35], 29, 1.7),
-      q: word("Q", 56, 54, deep, 41, 0.85)  // the Q of Qaiet Times, last, before the seal settles
+      n: word(DAYS, DAYS.length > 1 ? 58 : 44, 54, 3, 0.45 + 0.22 * DAYS.length),
+      day: word("day", 60, 38, 17, 1),
+      narrative: word("narrative", 72, 30, 29, 1.7),
+      q: word("Q", 56, 54, 41, 0.85)  // the Q of Qaiet Times, last, before the seal settles
     };
     shapes = { rest: rest.segs, n: words.n.segs, day: words.day.segs, narrative: words.narrative.segs, q: words.q.segs };
     PH = [
@@ -523,39 +566,41 @@
     ];
   }
 
-  function begin() { ctx.setTransform(canvas.width / 100, 0, 0, canvas.width / 100, 0, 0); ctx.clearRect(0, 0, 100, 100); ctx.lineJoin = "round"; ctx.lineCap = "round"; }
-  // Threads in the seal's tint, or in ink (inked 1), or on their way between the two.
-  function stroke(threads, alpha, width, inked) {
+  function begin() { ctx.setTransform(canvas.width / 100, 0, 0, canvas.width / 100, 0, 0); ctx.clearRect(0, 0, 100, 100); ctx.globalAlpha = 1; ctx.lineJoin = "round"; ctx.lineCap = "round"; }
+  // Threads in the lattice's tint (inside out), or in a word's (left to right, like a card's stance stripe, at
+  // `mix` 1), or on their way between the two.
+  function stroke(threads, alpha, width, mix, lin) {
     var path = new Path2D();
     threads.forEach(function (s) { path.moveTo(s[0][0], s[0][1]); for (var i = 1; i < s.length; i++) path.lineTo(s[i][0], s[i][1]); });
     ctx.lineWidth = width * dev;
-    if (inked < 1) { ctx.strokeStyle = tint; ctx.globalAlpha = alpha * (1 - inked); ctx.stroke(path); }
-    if (inked > 0) { ctx.strokeStyle = ink; ctx.globalAlpha = alpha * inked; ctx.stroke(path); }
+    if (mix < 1) { ctx.strokeStyle = tint; ctx.globalAlpha = alpha * (1 - mix); ctx.stroke(path); }
+    if (mix > 0) { ctx.strokeStyle = lin || ink; ctx.globalAlpha = alpha * mix; ctx.stroke(path); }
   }
-  // The pen at time tau of writing `key`: what it has written (the newest ink darker and a touch wider, as if still
-  // wet), the cord paying out what is left of its thread, and that thread running taut to the pen.
-  function drawWrite(key, tau) {
-    var w = words[key], settled = new Path2D(), wet = new Path2D(), prog = tau / w.pen.dur;
-    begin();
-    w.segs.forEach(function (s, r) {
-      var ts = w.times[r];
-      for (var j = 0; j < P - 1; j++) {
-        var t = Math.max(ts[j], ts[j + 1]);
-        if (t > tau) continue;
-        var path = tau - t < 0.3 ? wet : settled;
-        path.moveTo(s[j][0], s[j][1]); path.lineTo(s[j + 1][0], s[j + 1][1]);
-      }
+  // A word's tint: the stance bands across its width, critical at the left, positive at the right.
+  function wordTint(w, cs) {
+    if (!BANDS.length) return ink;
+    var g = ctx.createLinearGradient(w.x0, 0, w.x1, 0), c = 0;
+    BANDS.forEach(function (b, i) {
+      var col = cs.getPropertyValue(TINT[b[0]]).trim() || ink, c0 = c, bl = Math.min(0.015, b[1] / 4);
+      c += b[1];
+      g.addColorStop(Math.max(0, Math.min(1, i ? c0 + bl : 0)), col);
+      g.addColorStop(Math.max(0, Math.min(1, i < BANDS.length - 1 ? c - bl : 1)), col);
     });
-    ctx.strokeStyle = ink;
-    ctx.globalAlpha = 0.85; ctx.lineWidth = 1.1 * dev; ctx.stroke(settled);
-    ctx.globalAlpha = 1; ctx.lineWidth = 1.6 * dev; ctx.stroke(wet);
+    return g;
+  }
+  // The pen at time tau of writing `key`: the letters as far as it has written them, the cord paying out what is left
+  // of its thread, and that thread running taut to the pen.
+  function drawWrite(key, tau) {
+    var w = words[key], prog = tau / w.pen.dur;
+    begin();
+    letters(w, prog >= 1 && tau - w.pen.dur > 0.4 ? Infinity : tau, 1);
     if (prog >= 1) return;
     var left = [], first = Math.floor(prog * NT);
     for (var r = first; r < NT; r++) left.push(cord(r, 0));
     stroke(left, REST, 1.1, 0);
     var from = left[0][0], to = penAt(w.pen, tau);
     ctx.beginPath(); ctx.moveTo(from[0], from[1]); ctx.lineTo(to[0], to[1]);
-    ctx.globalAlpha = 0.24; ctx.lineWidth = dev; ctx.stroke();
+    ctx.strokeStyle = w.tint; ctx.globalAlpha = 0.35; ctx.lineWidth = dev; ctx.stroke();
   }
   function drawMove(ph, tau) {
     var out = [], phi = ph.last ? 0.75 * Math.pow(1 - tau, 2.2) : 0, psi = ph.last ? 0.45 * ease(tau) : 0;
@@ -573,8 +618,12 @@
       for (var j = 0; j < P; j++) pts.push([lerp(from[j][0], to[j][0], q), lerp(from[j][1], to[j][1], q)]);
       out.push(pts);
     }
-    begin();  // the lattice and the cord wear the tint; a word leaving for the cord gives up its ink on the way
-    stroke(out, REST, 1.1, ph.move === "rest" ? 0 : 1 - ease(clamp(tau / (ph.last ? 0.45 : 0.8))));
+    begin();
+    if (ph.move === "rest") { stroke(out, REST, 1.1, 0); return; }
+    // a word's ink lifts into the threads of its outline, which take on the lattice's tint on their way to the cord
+    var lift = clamp(tau / (ph.last ? 0.12 : 0.25));
+    letters(words[ph.move], Infinity, 1 - ease(lift));
+    stroke(out, REST * ease(clamp(tau / 0.08)), 1.1, 1 - ease(clamp(tau / (ph.last ? 0.45 : 0.8))), words[ph.move].tint);
   }
   function render(t) {
     for (var i = 0, acc = 0; i < PH.length; acc += PH[i++].dur) {
@@ -612,11 +661,13 @@
     ctx = canvas.getContext("2d");
     var cs = getComputedStyle(document.documentElement);
     ink = cs.getPropertyValue("--ink").trim() || "#1a1816";
+    var hex = parseInt(ink.replace("#", ""), 16), rgb = isNaN(hex) ? [26, 24, 22] : [hex >> 16 & 255, hex >> 8 & 255, hex & 255];
     tint = ink;
     if (STOPS.length) {  // the same radial gradient as build.seal's, in this theme's stance colors
       tint = ctx.createRadialGradient(50, 50, 0, 50, 50, 50);
       STOPS.forEach(function (s) { tint.addColorStop(Math.max(0, Math.min(1, s[0])), cs.getPropertyValue(TINT[s[1]]).trim() || ink); });
     }
+    Object.keys(words).forEach(function (k) { words[k].tint = wordTint(words[k], cs); fill(words[k], cs, rgb); });
     seal.classList.add("playing");
     requestAnimationFrame(function (now) { start = now; frame(now); });
   }

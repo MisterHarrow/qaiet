@@ -376,7 +376,8 @@ def seal(n: dict, big: bool = False, label: str | None = None) -> Markup:
         return Markup("")
     k = seal_petals(days)
     m = 4 if big else 2
-    stops = seal_stops(seal_bands(n))
+    bands = seal_bands(n)
+    stops = seal_stops(bands)
     gid = f"seal-g{next(_seal_ids)}"
     grad = (f'<defs><radialGradient id="{gid}" gradientUnits="userSpaceOnUse" cx="50" cy="50" r="50">'
             + "".join(f'<stop offset="{o}" class="t{key}"/>' for o, key in stops) + "</radialGradient></defs>") if stops else ""
@@ -388,7 +389,7 @@ def seal(n: dict, big: bool = False, label: str | None = None) -> Markup:
     cap = "" if big else f'<svg class="seal-cap" {vb}><text class="seal-n" x="50" y="{50 + size * 0.355:.1f}" font-size="{size}">{days}</text></svg>'
     attrs = f' role="img" aria-label="{escape(label)}"' if label else ' aria-hidden="true"'
     if big:  # what the seal's threads write on the narrative's page (app.js), and the tint they wear
-        attrs += f' data-k="{k}" data-m="{m}" data-days="{days}" data-stops="{escape(json.dumps(stops))}"'
+        attrs += f' data-k="{k}" data-m="{m}" data-days="{days}" data-stops="{escape(json.dumps(stops))}" data-bands="{escape(json.dumps([[k, round(v, 4)] for k, v in bands]))}"'
     return Markup(
         f'<span class="seal{" big" if big else ""}"{attrs}>'
         f'<svg class="seal-lat a" {vb}{tint}>{grad}{lat(1)}</svg><svg class="seal-lat b" {vb}{tint}>{lat(-1)}</svg>'
