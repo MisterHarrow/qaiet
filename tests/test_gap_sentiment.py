@@ -74,6 +74,8 @@ def test_sentiment_page_and_front_page_line(tmp_path):
     html = build.render_sentiment(hist, tmp_path).read_text()
     assert "Wednesday 25 November 2026" in html and "+0.10" in html and "neutral" in html
     assert html.count('<svg class="spark"') == 2 and "No political values yet." in html
+    assert "Regulation, policy, geopolitics, chips and export controls, elections and courts." in html  # what each track covers
+    assert '<p class="chart-note">Every labeled article, whatever its angle.</p>' in html
     assert "<title>2026-11-24: −0.30 (20 outlets, 80 labels)</title>" in html
     assert "<table" in html and "://" not in html.replace("http://www.w3.org/2000/svg", "").split("<body>")[0].split("<link")[0]
 

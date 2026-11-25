@@ -195,6 +195,15 @@ def sparkline(points: list[dict], label: str) -> Markup:
     return Markup("".join(parts))
 
 
+# What each track covers: the same lists the labeling prompt (news_label_v3) and the About page use.
+TRACK_NOTES = {
+    "all": "Every labeled article, whatever its angle.",
+    "technical": "Models, research, capabilities, benchmarks, tools and safety research.",
+    "political": "Regulation, policy, geopolitics, chips and export controls, elections and courts.",
+    "economic": "Stock markets, earnings, adoption, data centers, jobs, funding and valuations.",
+}
+
+
 def render_sentiment(history: dict, out_dir: Path, tz: str = "Europe/Stockholm") -> Path:
     """/sentiment/: the daily AI sentiment index, overall and per track, with a table view."""
     from quiet_ai.pipeline.sentiment import describe
@@ -202,7 +211,8 @@ def render_sentiment(history: dict, out_dir: Path, tz: str = "Europe/Stockholm")
     page_dir = out_dir / "sentiment"
     page_dir.mkdir(parents=True, exist_ok=True)
     series = [("all", "All coverage"), ("technical", "Technical"), ("political", "Political"), ("economic", "Economic")]
-    charts = [{"key": k, "label": lab, "svg": sparkline(history.get(k, []), lab), "latest": (history.get(k) or [None])[-1]} for k, lab in series]
+    charts = [{"key": k, "label": lab, "note": TRACK_NOTES[k], "svg": sparkline(history.get(k, []), lab), "latest": (history.get(k) or [None])[-1]}
+              for k, lab in series]
     dates = sorted({p["date"] for pts in history.values() for p in pts}, reverse=True)
     table = [{"date": d, "long": _long_date(datetime.fromisoformat(d)),
               **{k: next((p for p in history.get(k, []) if p["date"] == d), None) for k, _ in series}} for d in dates[:60]]

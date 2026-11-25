@@ -32,6 +32,7 @@
   {% for c in charts %}
   <div class="chart">
     <h2 class="eyebrow">{{ c.label }}{% if c.latest %} <span class="count">{{ c.latest.value|signed }}</span>{% endif %}</h2>
+    <p class="chart-note">{{ c.note }}</p>
     {{ c.svg }}
   </div>
   {% endfor %}
@@ -42,7 +43,7 @@
 
 <section>
   <h2>How it's calculated</h2>
-  <p>Every news article is labeled with a stance from −2 to +2: how critical or enthusiastic it is about AI in that story, not whether the news itself is good or bad. For each day, each outlet's labels are averaged first, weighting confident labels more and leaving unclear ones out. Then the outlets are averaged, so a site that publishes fifty stories a day counts as one voice, like one that publishes two. A track needs at least three outlets on a day to get a value. Days are counted in Stockholm time. More on the labels on the <a href="{{ root }}about/#labels">About page</a>.</p>
+  <p>Every news article is labeled with a stance from −2 to +2: how critical or enthusiastic it is about AI in that story, not whether the news itself is good or bad. It also gets one main angle, its track (technical, political or economic, as described above each chart), and counts toward that track's line; all of them count toward "All coverage". For each day, each outlet's labels are averaged first, weighting confident labels more and leaving unclear ones out. Then the outlets are averaged, so a site that publishes fifty stories a day counts as one voice, like one that publishes two. A track needs at least three outlets on a day to get a value. Days are counted in Stockholm time. More on the labels on the <a href="{{ root }}about/#labels">About page</a>.</p>
   <p>Quoting it: "the Qaiet Times sentiment index{% if latest %} stood at {{ latest.value|signed }} on {{ latest_long }}{% endif %}". The numbers come from a language model and a fixed list of outlets; read them as a trend, not a measurement.</p>
 </section>
 

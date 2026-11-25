@@ -354,6 +354,7 @@ summary:hover { color: var(--ink); }
 .charts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.5rem 3rem; margin-top: 1rem; }
 .chart { margin-top: 1.4rem; padding-top: 0.7rem; border-top: 1px solid var(--rule); }
 .chart .count { margin-left: 0.5em; color: var(--ink); letter-spacing: 0; }
+.prose .chart-note { margin: 0 0 0.3rem; font-size: 0.84rem; line-height: 1.45; color: var(--muted); }
 .spark { display: block; width: 100%; height: auto; overflow: visible; }
 .spark .grid { stroke: var(--wash); stroke-width: 1; }
 .spark .zero { stroke: var(--neut); stroke-width: 1; stroke-dasharray: 3 4; }
