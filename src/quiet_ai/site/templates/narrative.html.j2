@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="{{ root }}static/style.css">
 </head>
 <body>
+{{ seal_defs }}
 <div class="page about">
 <header class="masthead">
   <div class="masthead-top">
@@ -20,8 +21,13 @@
   <hr class="rule">
 </header>
 <main class="prose wide narrative">
+<div class="narr-hero">
+<div>
 <p class="eyebrow"><a href="../">Narratives</a><span class="sep">·</span>{{ n.days }} days<span class="sep">·</span>{{ n.first|date_range(n.last) }}<span class="sep">·</span>{% if n.ongoing %}ongoing{% else %}ended{% endif %}</p>
 <h1>{{ n.headline }}</h1>
+</div>
+{{ n|seal(true, "The narrative's seal: " ~ n.days ~ " days, an arc per day colored by its stance") }}
+</div>
 {% if segments %}<p class="stripe narr-stripe" role="img" aria-label="{{ stance_text }}" title="{{ stance_text }}">{% for seg in segments %}<span class="seg st{{ seg.key }}" style="width:{{ seg.pct }}%"></span>{% endfor %}</p>{% endif %}
 <p class="narr-facts">{{ n.outlets }} outlet{{ "s" if n.outlets != 1 }} in {{ n.countries }} countr{{ "ies" if n.countries != 1 else "y" }} over {{ n.days }} days{% if n.covered < n.days %} ({{ n.days - n.covered }} without coverage){% endif %}.
   {%- if n.mean is not none %} Average stance {{ n.mean|signed }}{% if n.stance_summary %}, {{ n.stance_summary }}{% endif %}.{% endif %}

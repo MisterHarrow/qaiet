@@ -114,13 +114,11 @@ def build_editions(store: Store, settings: Settings, sources: SourcesConfig, now
     """One edition per view, with The gap, the sentiment index for that period and the ongoing narratives."""
     import math
 
-    from quiet_ai.pipeline.archive import local_date
-
     views = views or period_views(store, settings, sources, now)
     hist = sentiment.history(store)
     narr = narratives.detect(store, settings, sources, now) if narr is None else narr
     ongoing = [narratives.compact(n) for n in narr if n["ongoing"]][: settings.narratives.front_max]
-    member_of = narratives.by_story(narr, local_date(now, settings.site.timezone))
+    member_of = narratives.by_story(narr)
     out = []
     for v in views.values():
         ed = edition.build(store, settings, sources, v.scores, v.rising, now, settings.analysis.top_stories, v.period)
