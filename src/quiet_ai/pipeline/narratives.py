@@ -197,15 +197,17 @@ def compact(n: dict) -> dict:
     """What an edition keeps of a narrative: enough for the front-page row and its small chart."""
     keep = ("id", "headline", "first", "last", "days", "covered", "streak", "ongoing", "outlets", "countries", "mean",
             "first_mean", "last_mean", "trend")
+    last = n["timeline"][-1]  # the latest covered day: its stance mix draws the seal's ring
     return {**{k: n[k] for k in keep},
-            "timeline": [{"date": t["date"], "quiet": t["quiet"], "outlets": t["outlets"], "mean": t["mean"]} for t in n["timeline"]]}
+            "timeline": [{"date": t["date"], "quiet": t["quiet"], "outlets": t["outlets"], "mean": t["mean"]} for t in n["timeline"]],
+            "latest": {"date": last["date"], "outlets": last["outlets"], "stance": last["stance"]}}
 
 
 def by_story(narratives: list[dict]) -> dict[str, dict]:
     """story id -> what a front-page card needs to show its narrative's seal: the days so far (first to latest
-    covered day), the dates, outlets and the compact day by day."""
+    covered day), the dates, outlets, the compact day by day and the latest day's stance mix."""
     out = {}
     for n in narratives:
         c = compact(n)
-        out[n["id"]] = {k: c[k] for k in ("id", "days", "first", "last", "outlets", "ongoing", "timeline")}
+        out[n["id"]] = {k: c[k] for k in ("id", "days", "first", "last", "outlets", "ongoing", "timeline", "latest")}
     return out

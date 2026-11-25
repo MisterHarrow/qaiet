@@ -633,15 +633,14 @@ ol.nl { margin: 2.2rem 0 0; padding: 0; list-style: none; }
 .prose.narrative h1 { max-width: 50rem; font-size: 2.1rem; line-height: 1.18; text-wrap: pretty; }
 @media (max-width: 38rem) { .prose.narrative h1 { font-size: 1.65rem; } }
 
-/* The narrative seal: a guilloché lattice inside a ring of strings, generated from the narrative (build.seal). Every
+/* The narrative seal: a guilloché lattice inside a ring of strings, generated from the narrative (build.seal); the
+   ring is the stance mix of the latest reporting day. It has no edge of its own: a paper disc with no outline. Every
    line is a hairline one screen pixel wide (non-scaling strokes; half a CSS pixel on high-density screens), so the
    lattice stays crisp at card size. It rests still; on hover its two lattices turn a little against each other. On a
    narrative's page its threads spell the day count, "day" and "narrative" once, then wind back and the lattice spins
    down to rest (app.js draws that on a canvas inside the seal; the ring stays put). */
 .seal-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
-.seal { position: relative; display: block; width: 3rem; aspect-ratio: 1; border-radius: 50%; background: var(--paper);
-  box-shadow: 0 0 0 1px rgb(26 24 22 / 0.1), 0 1px 2px rgb(60 40 25 / 0.12); }
-:root[data-theme="dark"] .seal { box-shadow: 0 0 0 1px rgb(255 248 238 / 0.06), 0 1px 3px rgb(0 0 0 / 0.4); }
+.seal { position: relative; display: block; width: 3rem; aspect-ratio: 1; border-radius: 50%; background: var(--paper); }
 .seal > svg, .seal > canvas { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
 .seal > canvas { pointer-events: none; }
 .seal .day { fill: none; stroke-width: 1.1px; }

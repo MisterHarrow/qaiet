@@ -104,6 +104,9 @@ def test_detect_finds_four_days_in_a_row(settings):
     assert (card["days"], card["first"], card["last"], card["ongoing"], len(card["timeline"])) == (6, "2026-11-21", "2026-11-26", True, 6)
     compact = narratives.compact(n)
     assert set(compact["timeline"][0]) == {"date", "quiet", "outlets", "mean"} and "headlines" not in json.dumps(compact)
+    # The latest reporting day's stance mix travels with the card: it draws the seal's ring.
+    assert card["latest"]["date"] == "2026-11-26" and card["latest"]["outlets"] == 3
+    assert {k: v for k, v in card["latest"]["stance"].items() if v} == {"1": 2, "2": 1}
 
 
 def test_ended_after_a_quiet_day(settings):
@@ -162,12 +165,15 @@ def test_seal_on_card_rows_and_page(tmp_path, settings):
     assert html.count('<svg class="seal-defs"') == 1 and html.count('id="seal-k12"') == 1  # 6 days: 12 petals
     assert html.count('<span class="seal"') == 2  # the card and the row
     seal = build.seal(narratives.compact(found[0]))
-    assert seal.count('class="day ') == 6 and 'class="day quiet"' in seal and 'class="day s-2"' in seal and 'class="day s2"' in seal  # strings per day, by stance
-    # A bundle of strings per day: one on a quiet day, up to four on the day with the most outlets.
+    # The ring is the latest reporting day (26 Nov: two positive, one enthusiastic): a section per stance, critical
+    # first, as long as its share; 3 outlets against the busiest day's 4 give it four strings.
+    assert seal.count('class="day ') == 2 and seal.index('class="day s1"') < seal.index('class="day s2"') and "s-2" not in seal
     assert build.seal_strings(0, 9) == 1 and build.seal_strings(1, 9) == 2 and build.seal_strings(9, 9) == 4
-    tl = narratives.compact(found[0])["timeline"]
-    top = max(t["outlets"] for t in tl)
-    assert seal.count("<path ") == sum(1 if t["quiet"] or not t["outlets"] else build.seal_strings(t["outlets"], top) for t in tl)
+    assert seal.count("<path ") == 2 * build.seal_strings(3, 4) == 8
+    assert build.seal_sections({"stance": {"-1": 1, "0": 3, "unclear": 0}}) == [("s-1", 0.25), ("s0", 0.75)]
+    # Editions frozen before the ring carried the latest day fall back to that day's average: one whole ring.
+    old = build.seal({"timeline": [{"outlets": 2, "mean": -1.0}, {"outlets": 1, "mean": 1.5}]})
+    assert old.count('class="day ') == 1 and 'class="day s2"' in old and "<circle " in old and "<path " not in old
     assert seal.count('<use href="#seal-k12"') == 4 and 'class="seal-n"' in seal and ">6</text>" in seal  # two lattices of two
     assert 'vector-effect="non-scaling-stroke"' in html  # hairlines stay one screen pixel wide at any size
     page = (build.render_narratives(found, tmp_path / "n", min_days=4).parent / "s-long" / "index.html").read_text()
