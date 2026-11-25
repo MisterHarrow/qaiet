@@ -531,7 +531,7 @@ summary:hover { color: var(--ink); }
 @media (max-width: 58rem) { .stories { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .d-short { display: none; }
 @media (max-width: 38rem) {
-  .page { padding: 1.4rem 1rem 3rem; }
+  .page { padding: 1.1rem 1rem 3rem; }
   .stories { grid-template-columns: minmax(0, 1fr); }
   .wm { font-size: 2rem; }
   .mark { width: 1.35rem; }
@@ -562,6 +562,13 @@ summary:hover { color: var(--ink); }
   .d-short { display: inline; white-space: nowrap; }
   .index-table th.num, .index-table td.num { padding-left: 0.5rem; }
   .weather { font-size: 1.35rem; }
+  /* A tighter vertical rhythm in the masthead, so the first story comes further up the screen. */
+  .masthead { margin-bottom: 1.4rem; }
+  .sentiment, .masthead-meta { margin-top: 0.75rem; }
+  .geo { margin-top: 0.8rem; }
+  .weather { margin-top: 1.2rem; }
+  .terms { margin-top: 1.3rem; }
+  .masthead .filters { margin-top: 1.1rem; }
   .t4 { font-size: 1.4rem; }
   .t3 { font-size: 1.15rem; }
   .coverage { -webkit-line-clamp: unset; display: block; }
