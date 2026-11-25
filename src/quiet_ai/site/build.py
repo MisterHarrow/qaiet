@@ -298,12 +298,16 @@ def narrative_chart(timeline: list[dict], mini: bool = False) -> Markup:
     return Markup("".join(parts))
 
 
-# The narrative seal: a guilloché engraving (the fine line work on banknotes and passports) generated from the
-# narrative. Two petals per day; an outer ring with an arc per day (thickness: outlets, color: that day's stance);
-# the day count in the middle. It rests still. On a narrative's page app.js lets its strings spell the day count,
-# "day" and "narrative" before they wind back into the seal; the data-* attributes carry what it needs. The lattice
-# curve is defined once per page (seal_defs) and reused; each lattice is its own layer so it can turn cheaply.
+# The narrative seal: a guilloché lattice (the fine line work on banknotes and passports) generated from the
+# narrative, inside a ring of strings. Two petals per day; the ring has a bundle of strings per day (more strings on
+# days with more outlets, colored by that day's stance; a single faint one on quiet days); the day count sits in the
+# middle. It rests still; on hover the two lattices turn a little against each other. On a narrative's page app.js
+# lets the lattice's threads twist into a cord and unwind into the day count, "day" and "narrative" before they wind
+# back and the lattice spins down to rest; the data-* attributes carry what it needs. The lattice curve is defined
+# once per page (seal_defs) and reused; each lattice is its own layer so it can turn cheaply. Lines are hairlines
+# (vector-effect: non-scaling-stroke, widths in style.css), so they stay one screen pixel wide at any size.
 SEAL_R0, SEAL_AMP, SEAL_PTS = 29.0, 7.5, 240
+SEAL_RING = 46.6  # the outermost string of the day ring
 
 
 def seal_petals(days: int) -> int:
@@ -324,7 +328,7 @@ def seal_defs(narratives: list[dict]) -> Markup:
     petals = sorted({seal_petals(len(n.get("timeline") or [])) for n in narratives if n and n.get("timeline")})
     if not petals:
         return Markup("")
-    paths = "".join(f'<path id="seal-k{k}" d="{_lattice_path(k)}"/>' for k in petals)
+    paths = "".join(f'<path id="seal-k{k}" d="{_lattice_path(k)}" vector-effect="non-scaling-stroke"/>' for k in petals)
     return Markup(f'<svg class="seal-defs" aria-hidden="true" focusable="false"><defs>{paths}</defs></svg>')
 
 
@@ -332,6 +336,11 @@ def _arc(r: float, a0: float, a1: float) -> str:
     p = lambda a: (50 + r * math.cos(math.radians(a)), 50 + r * math.sin(math.radians(a)))  # noqa: E731
     (x0, y0), (x1, y1) = p(a0), p(a1)
     return f"M{x0:.2f} {y0:.2f}A{r} {r} 0 {1 if a1 - a0 > 180 else 0} 1 {x1:.2f} {y1:.2f}"
+
+
+def seal_strings(outlets: int, top: int) -> int:
+    """How many strings a day gets in the seal's ring: one, up to four on the day with the most outlets."""
+    return 1 + round(3 * math.sqrt(outlets / max(1, top))) if outlets else 1
 
 
 def seal(n: dict, big: bool = False, label: str | None = None) -> Markup:
@@ -345,31 +354,27 @@ def seal(n: dict, big: bool = False, label: str | None = None) -> Markup:
     k = seal_petals(days)
     top = max([1] + [t.get("outlets") or 0 for t in timeline])
     span = 360 / days
-    gap = min(2.2, span * 0.18)
+    gap = min(2.4, span * 0.18)
+    step = 0.95 if big else 1.35
     ring = []
     for i, t in enumerate(timeline):
         a0, a1 = -90 + i * span + gap, -90 + (i + 1) * span - gap
-        if t.get("quiet") or not t.get("outlets"):
-            ring.append(f'<path class="day quiet" d="{_arc(45.5, a0, a1)}" pathLength="1" style="--i:{i}"/>')
-            continue
-        cls = _stance_class(t["mean"]).replace("d", "s", 1) if t.get("mean") is not None else "sna"
-        w = (1.1 + 2.6 * t["outlets"] / top) if big else (1.8 + 3.4 * t["outlets"] / top)
-        ring.append(f'<path class="day {cls}" d="{_arc(45.5, a0, a1)}" stroke-width="{w:.2f}" pathLength="1" style="--i:{i}"/>')
-    m = 6 if big else 3
+        quiet = t.get("quiet") or not t.get("outlets")
+        cls = "quiet" if quiet else (_stance_class(t["mean"]).replace("d", "s", 1) if t.get("mean") is not None else "sna")
+        strings = 1 if quiet else seal_strings(t["outlets"], top)
+        arcs = "".join(f'<path d="{_arc(SEAL_RING - q * step, a0, a1)}" vector-effect="non-scaling-stroke"/>' for q in range(strings))
+        ring.append(f'<g class="day {cls}">{arcs}</g>')
+    m = 4 if big else 2
     lat = lambda sign: "".join(f'<use href="#seal-k{k}" transform="rotate({sign * j * 180 / (m * k):.3f} 50 50)"/>' for j in range(m))  # noqa: E731
     vb = 'viewBox="0 0 100 100" aria-hidden="true" focusable="false"'
-    inner = 15 if big else 17
-    num_size = (15 if days < 100 else 11) if big else (30 if days < 10 else 23 if days < 100 else 16)
-    num_y = 55.5 if big else 50 + num_size * 0.36
-    cap = (f'<circle class="cap" cx="50" cy="50" r="{inner}"/><circle class="hair" cx="50" cy="50" r="{inner}"/>'
-           f'<text class="seal-n" x="50" y="{num_y:.1f}" font-size="{num_size}">{days}</text>'
-           + ('<text class="seal-l" x="50" y="63" font-size="3.6">DAYS</text>' if big else ""))
+    size = (26 if days < 100 else 19) if big else (31 if days < 10 else 25 if days < 100 else 18)
+    cap = f'<text class="seal-n" x="50" y="{50 + size * 0.355:.1f}" font-size="{size}">{days}</text>'
     attrs = f' role="img" aria-label="{escape(label)}"' if label else ' aria-hidden="true"'
-    if big:  # what the seal's strings spell on the narrative's page (app.js)
+    if big:  # what the seal's threads spell on the narrative's page (app.js)
         attrs += f' data-k="{k}" data-m="{m}" data-days="{days}"'
     return Markup(
         f'<span class="seal{" big" if big else ""}"{attrs}>'
-        f'<svg class="seal-base" {vb}>{"".join(ring)}<circle class="hair" cx="50" cy="50" r="42.6"/></svg>'
+        f'<svg class="seal-base" {vb}>{"".join(ring)}</svg>'
         f'<svg class="seal-lat a" {vb}>{lat(1)}</svg><svg class="seal-lat b" {vb}>{lat(-1)}</svg>'
         f'<svg class="seal-cap" {vb}>{cap}</svg></span>')
 

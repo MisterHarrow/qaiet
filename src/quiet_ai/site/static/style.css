@@ -633,42 +633,46 @@ ol.nl { margin: 2.2rem 0 0; padding: 0; list-style: none; }
 .prose.narrative h1 { max-width: 50rem; font-size: 2.1rem; line-height: 1.18; text-wrap: pretty; }
 @media (max-width: 38rem) { .prose.narrative h1 { font-size: 1.65rem; } }
 
-/* The narrative seal: a guilloché engraving generated from the narrative (build.seal). It rests still; on hover its
-   two lattices turn a little against each other. On a narrative's page its strings spell the day count, "day" and
-   "narrative" once, then wind back into the seal (app.js draws that on a canvas inside the seal). */
+/* The narrative seal: a guilloché lattice inside a ring of strings, generated from the narrative (build.seal). Every
+   line is a hairline one screen pixel wide (non-scaling strokes; half a CSS pixel on high-density screens), so the
+   lattice stays crisp at card size. It rests still; on hover its two lattices turn a little against each other. On a
+   narrative's page its threads spell the day count, "day" and "narrative" once, then wind back and the lattice spins
+   down to rest (app.js draws that on a canvas inside the seal; the ring stays put). */
 .seal-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
 .seal { position: relative; display: block; width: 3rem; aspect-ratio: 1; border-radius: 50%; background: var(--paper);
-  box-shadow: 0 1px 1px rgb(60 40 25 / 0.2), 0 3px 8px rgb(60 40 25 / 0.1); }
-:root[data-theme="dark"] .seal { box-shadow: 0 1px 1px rgb(0 0 0 / 0.45), 0 4px 10px rgb(0 0 0 / 0.28); }
+  box-shadow: 0 0 0 1px rgb(26 24 22 / 0.1), 0 1px 2px rgb(60 40 25 / 0.12); }
+:root[data-theme="dark"] .seal { box-shadow: 0 0 0 1px rgb(255 248 238 / 0.06), 0 1px 3px rgb(0 0 0 / 0.4); }
 .seal > svg, .seal > canvas { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
 .seal > canvas { pointer-events: none; }
-.seal .day { fill: none; }
+.seal .day { fill: none; stroke-width: 1.1px; }
 .seal .s-2 { stroke: var(--crit); }
 .seal .s-1 { stroke: var(--crit-soft); }
 .seal .s0 { stroke: var(--neut); }
 .seal .s1 { stroke: var(--pos-soft); }
 .seal .s2 { stroke: var(--pos); }
 .seal .sna { stroke: var(--unclear); }
-.seal .day.quiet { stroke: var(--rule); stroke-width: 0.6; }
-.seal .hair { fill: none; stroke: var(--ink); stroke-width: 0.35; opacity: 0.55; }
-.seal-lat { fill: none; stroke: var(--ink); stroke-width: 0.7; opacity: 0.5; }
-.seal.big .seal-lat { stroke-width: 0.3; opacity: 0.62; }
-.seal .cap { fill: var(--paper); }
-.seal .seal-n { font-family: var(--mono); font-weight: 700; fill: var(--ink); text-anchor: middle; letter-spacing: -0.04em; }
-.seal .seal-l { font-family: var(--mono); font-weight: 600; fill: var(--muted); text-anchor: middle; letter-spacing: 1.2px; }
+.seal .day.quiet { stroke: var(--rule); }
+.seal-lat { fill: none; stroke: var(--ink); stroke-width: 1px; opacity: 0.55; }
 .seal.big { width: 11rem; }
-@media (prefers-reduced-motion: no-preference) {
-  .seal-lat { transition: transform 1.8s cubic-bezier(0.16, 1, 0.3, 1); }
-  .seal-link:hover .seal-lat.a, .seal-link:focus-visible .seal-lat.a { transform: rotate(16deg); }
-  .seal-link:hover .seal-lat.b, .seal-link:focus-visible .seal-lat.b { transform: rotate(-16deg); }
+.seal.big .seal-lat { opacity: 0.62; }
+.seal.big .day { stroke-width: 1.25px; }
+@media (min-resolution: 2dppx) {
+  .seal-lat { stroke-width: 0.5px; }
+  .seal.big .seal-lat { stroke-width: 0.55px; }
+  .seal .day { stroke-width: 0.55px; }
+  .seal.big .day { stroke-width: 0.62px; }
 }
-/* While the strings spell: the lattice and the middle step aside and the day ring withdraws; as the strings wind
-   back, the ring draws in again, day by day, and the count returns. */
+.seal .seal-n { font-family: var(--serif); font-weight: 500; fill: var(--ink); text-anchor: middle; }
+@media (prefers-reduced-motion: no-preference) {
+  .seal-lat { transition: transform 0.9s cubic-bezier(0.65, 0, 0.35, 1); }
+  .seal-link:hover .seal-lat.a, .seal-link:focus-visible .seal-lat.a { transform: rotate(9deg); }
+  .seal-link:hover .seal-lat.b, .seal-link:focus-visible .seal-lat.b { transform: rotate(-9deg); }
+}
+/* While the threads spell, the lattice and the count step aside (the canvas draws the threads); the count returns as
+   the lattice settles. */
 .seal.playing .seal-lat { opacity: 0; transition: none; }
-.seal.playing .seal-cap { opacity: 0; transition: opacity 0.5s ease; }
-.seal.playing .seal-base .day { stroke-dasharray: 1; stroke-dashoffset: 1; transition: stroke-dashoffset 0.6s cubic-bezier(0.4, 0, 1, 1); }
-.seal.playing.settling .seal-base .day { stroke-dashoffset: 0; transition: stroke-dashoffset 1.2s cubic-bezier(0.16, 1, 0.3, 1) calc(var(--i) * 110ms); }
-.seal.playing.settling .seal-cap { opacity: 1; transition: opacity 0.9s ease 0.7s; }
+.seal.playing .seal-cap { opacity: 0; transition: opacity 0.35s ease; }
+.seal.playing.settling .seal-cap { opacity: 1; transition: opacity 1s ease; }
 .seal.big.can-play { cursor: pointer; }
 /* On a card the seal sits on the top-right corner, like a seal on a document. The stance stripe ends where the seal
    begins, so none of it is hidden, and the globe steps left. */

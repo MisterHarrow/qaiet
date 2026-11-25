@@ -198,9 +198,13 @@
   requestAnimationFrame(frame);
 })();
 
-// The narrative seal, on a narrative's page: its strings let go of the circle and spell the day count, then
-// "day", then "narrative", then wind back into the seal, slowing until it rests. It plays once when the page
-// opens and again when the seal is clicked. Without JS, or when the reader asks for reduced motion, it rests.
+// The narrative seal, on a narrative's page: the lattice's threads twist into a cord, which unwinds into the day
+// count, then "day", then "narrative", winding back into the cord between words. On the way back the two halves of the
+// lattice are still turning against each other and slow until they lock in place. The letters are cut from the
+// headline serif: each word is set on a hidden canvas, its distance field gives the outline and an inline (the way
+// engraved type is cut), and those curves are shared out among the threads. The day ring (SVG) never moves; only the
+// lattice and the count step aside while the canvas draws the threads. It plays once when the page opens and again
+// when the seal is clicked. Without JS, or when the reader asks for reduced motion, it rests.
 (function () {
   var seal = document.querySelector(".seal.big[data-k]");
   if (!seal || !window.requestAnimationFrame || document.hidden) return;
@@ -208,193 +212,220 @@
   var canvas = document.createElement("canvas");
   if (!canvas.getContext) return;
   var K = +seal.getAttribute("data-k"), M = +seal.getAttribute("data-m"), DAYS = seal.getAttribute("data-days");
-  var R0 = 29, AMP = 7.5, P = 40, N = 2 * M * 4, C = 50;
+  var R0 = 29, AMP = 7.5, NT = 72, P = 44, G = 200;  // must match build.seal; threads; points per thread; field grid
 
-  // A monoline alphabet for the strings, y up: x-height 1, ascenders and figures 1.5, descenders -0.5.
-  // ["M", x, y] moves, ["L", x, y] draws a line, ["E", cx, cy, rx, ry, from, to] an elliptical arc (degrees).
-  var BOWL = ["E", 0.42, 0.5, 0.42, 0.5, 0, 360];
-  var G = {
-    "0": [1, [[["E", 0.5, 0.75, 0.5, 0.75, 90, 450]]]],
-    "1": [0.62, [[["M", 0.1, 1.22], ["L", 0.46, 1.5], ["L", 0.46, 0]]]],
-    "2": [0.96, [[["E", 0.48, 1.07, 0.44, 0.43, 165, -40], ["L", 0, 0], ["L", 0.96, 0]]]],
-    "3": [0.94, [[["E", 0.47, 1.13, 0.4, 0.37, 155, -90]], [["E", 0.47, 0.4, 0.47, 0.4, 90, -150]]]],
-    "4": [1, [[["M", 0.72, 0], ["L", 0.72, 1.5], ["L", 0, 0.42], ["L", 1, 0.42]]]],
-    "5": [0.94, [[["M", 0.9, 1.5], ["L", 0.14, 1.5], ["L", 0.08, 0.86], ["E", 0.47, 0.47, 0.47, 0.47, 125, -145]]]],
-    "6": [0.96, [[["M", 0.8, 1.5], ["L", 0.16, 0.7], ["E", 0.48, 0.48, 0.48, 0.48, 150, 510]]]],
-    "7": [0.96, [[["M", 0, 1.5], ["L", 0.96, 1.5], ["L", 0.3, 0]]]],
-    "8": [0.96, [[["E", 0.48, 1.13, 0.37, 0.37, -90, 270]], [["E", 0.48, 0.41, 0.45, 0.41, 90, 450]]]],
-    "9": [0.96, [[["M", 0.16, 0], ["L", 0.8, 0.8], ["E", 0.48, 1.02, 0.48, 0.48, -30, 330]]]],
-    a: [0.84, [[BOWL], [["M", 0.84, 1], ["L", 0.84, 0]]]],
-    d: [0.84, [[BOWL], [["M", 0.84, 1.5], ["L", 0.84, 0]]]],
-    e: [0.84, [[["M", 0, 0.5], ["L", 0.84, 0.5], ["E", 0.42, 0.5, 0.42, 0.5, 0, 318]]]],
-    i: [0, [[["M", 0, 0], ["L", 0, 1]], [["M", 0, 1.3], ["L", 0, 1.4]]]],
-    n: [0.72, [[["M", 0, 0], ["L", 0, 1]], [["M", 0, 0.56], ["E", 0.36, 0.6, 0.36, 0.4, 180, 0], ["L", 0.72, 0]]]],
-    r: [0.52, [[["M", 0, 0], ["L", 0, 1]], [["M", 0, 0.56], ["E", 0.36, 0.6, 0.36, 0.4, 180, 55]]]],
-    t: [0.5, [[["M", 0.2, 1.36], ["L", 0.2, 0]], [["M", 0, 1], ["L", 0.5, 1]]]],
-    v: [0.8, [[["M", 0, 1], ["L", 0.4, 0], ["L", 0.8, 1]]]],
-    y: [0.84, [[["M", 0, 1], ["L", 0.42, 0]], [["M", 0.84, 1], ["L", 0.22, -0.5]]]]
-  };
+  function clamp(x) { return x < 0 ? 0 : x > 1 ? 1 : x; }
+  function lerp(a, b, t) { return a + (b - a) * t; }
+  function ease(t) { return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; }
 
-  function dense(stroke) {  // a stroke as closely spaced points
-    var pts = [], cur = null;
-    function lineTo(x, y) {
-      if (!cur) { pts.push([x, y]); cur = [x, y]; return; }
-      var n = Math.max(1, Math.ceil(Math.hypot(x - cur[0], y - cur[1]) / 0.02));
-      for (var i = 1; i <= n; i++) pts.push([cur[0] + (x - cur[0]) * i / n, cur[1] + (y - cur[1]) * i / n]);
-      cur = [x, y];
+  // Squared Euclidean distance transform (Felzenszwalb and Huttenlocher), in place.
+  function edt1(f, n, d, v, z) {
+    var k = 0, q, s;
+    v[0] = 0; z[0] = -Infinity; z[1] = Infinity;
+    for (q = 1; q < n; q++) {
+      s = ((f[q] + q * q) - (f[v[k]] + v[k] * v[k])) / (2 * q - 2 * v[k]);
+      while (s <= z[k]) { k--; s = ((f[q] + q * q) - (f[v[k]] + v[k] * v[k])) / (2 * q - 2 * v[k]); }
+      k++; v[k] = q; z[k] = s; z[k + 1] = Infinity;
     }
-    stroke.forEach(function (c) {
-      if (c[0] === "M") { cur = null; lineTo(c[1], c[2]); }
-      else if (c[0] === "L") lineTo(c[1], c[2]);
-      else {
-        var n = Math.max(2, Math.ceil(Math.abs(c[6] - c[5]) / 3));
-        for (var i = 0; i <= n; i++) {
-          var a = (c[5] + (c[6] - c[5]) * i / n) * Math.PI / 180;
-          lineTo(c[1] + c[3] * Math.cos(a), c[2] + c[4] * Math.sin(a));
-        }
+    for (k = 0, q = 0; q < n; q++) { while (z[k + 1] < q) k++; d[q] = (q - v[k]) * (q - v[k]) + f[v[k]]; }
+  }
+  function edt(g, W) {
+    var f = new Float64Array(W), d = new Float64Array(W), v = new Int32Array(W), z = new Float64Array(W + 1), x, y;
+    for (x = 0; x < W; x++) { for (y = 0; y < W; y++) f[y] = g[y * W + x]; edt1(f, W, d, v, z); for (y = 0; y < W; y++) g[y * W + x] = d[y]; }
+    for (y = 0; y < W; y++) { for (x = 0; x < W; x++) f[x] = g[y * W + x]; edt1(f, W, d, v, z); for (x = 0; x < W; x++) g[y * W + x] = d[x]; }
+  }
+  // The signed distance (in seal units, negative inside) to `text` set in the headline serif, fitted to boxW x boxH.
+  function textField(text, family, boxW, boxH) {
+    var R = G * 2, S = R + 1, c = document.createElement("canvas");
+    c.width = c.height = S;
+    var x = c.getContext("2d", { willReadFrequently: true }), font = function (px) { return "500 " + px + "px " + family; };
+    x.font = font(200);
+    var m = x.measureText(text);
+    var k = Math.min(boxW / (m.actualBoundingBoxLeft + m.actualBoundingBoxRight), boxH / (m.actualBoundingBoxAscent + m.actualBoundingBoxDescent)) * R / 100;
+    x.font = font(200 * k);
+    m = x.measureText(text);
+    x.fillText(text, R / 2 + 0.5 - (m.actualBoundingBoxRight - m.actualBoundingBoxLeft) / 2, R / 2 + 0.5 + (m.actualBoundingBoxAscent - m.actualBoundingBoxDescent) / 2);
+    var a = x.getImageData(0, 0, S, S).data, N = S * S, fin = new Float64Array(N), fout = new Float64Array(N), p;
+    for (p = 0; p < N; p++) { var ins = a[p * 4 + 3] > 127; fin[p] = ins ? 0 : 1e20; fout[p] = ins ? 1e20 : 0; }
+    edt(fin, S); edt(fout, S);
+    var Gs = G + 1, out = new Float32Array(Gs * Gs);
+    for (var j = 0; j < Gs; j++) for (var i = 0; i < Gs; i++) {
+      p = 2 * j * S + 2 * i;
+      out[j * Gs + i] = (fin[p] > 0 ? Math.sqrt(fin[p]) - 0.5 : 0.5 - Math.sqrt(fout[p])) * 100 / R;
+    }
+    return out;
+  }
+  // The closed curves where the field equals L (marching squares, joined through shared cell edges).
+  function contours(F, L) {
+    var S = G + 1, u = 100 / G, pos = {}, adj = {};
+    function edge(e) { pos[e[0]] = [e[1], e[2]]; }
+    function link(a, b) { edge(a); edge(b); (adj[a[0]] = adj[a[0]] || []).push(b[0]); (adj[b[0]] = adj[b[0]] || []).push(a[0]); }
+    for (var j = 0; j < G; j++) for (var i = 0; i < G; i++) {
+      var p = j * S + i, a = F[p] - L, b = F[p + 1] - L, c = F[p + S + 1] - L, d = F[p + S] - L;
+      var idx = (a > 0 ? 8 : 0) | (b > 0 ? 4 : 0) | (c > 0 ? 2 : 0) | (d > 0 ? 1 : 0);
+      if (idx === 0 || idx === 15) continue;
+      var x = i * u, y = j * u;
+      var T = [p * 2, x + u * a / (a - b), y], Rr = [(p + 1) * 2 + 1, x + u, y + u * b / (b - c)],
+          B = [(p + S) * 2, x + u * d / (d - c), y + u], Lf = [p * 2 + 1, x, y + u * a / (a - d)];
+      if (idx === 1 || idx === 14) link(Lf, B);
+      else if (idx === 2 || idx === 13) link(B, Rr);
+      else if (idx === 3 || idx === 12) link(Lf, Rr);
+      else if (idx === 4 || idx === 11) link(T, Rr);
+      else if (idx === 6 || idx === 9) link(T, B);
+      else if (idx === 7 || idx === 8) link(Lf, T);
+      else if ((idx === 5) === (a + b + c + d > 0)) { link(Lf, T); link(B, Rr); }
+      else { link(T, Rr); link(Lf, B); }
+    }
+    var seen = {}, out = [];
+    Object.keys(adj).forEach(function (start) {
+      if (seen[start]) return;
+      var chain = [pos[start]], prev = null, cur = start;
+      seen[start] = 1;
+      for (;;) {
+        var next = adj[cur].filter(function (e) { return String(e) !== prev && !seen[e]; })[0];
+        if (next === undefined) break;
+        seen[next] = 1; chain.push(pos[next]); prev = cur; cur = String(next);
+      }
+      out.push(curve(chain, true));
+    });
+    return out.filter(function (c) { return c.len >= 1.2; });
+  }
+  function curve(pts, closed) {
+    var p = closed ? pts.concat([pts[0]]) : pts, cum = [0];
+    for (var i = 1; i < p.length; i++) cum.push(cum[i - 1] + Math.hypot(p[i][0] - p[i - 1][0], p[i][1] - p[i - 1][1]));
+    return { pts: p, cum: cum, len: cum[cum.length - 1] };
+  }
+  function at(c, d) {
+    d = ((d % c.len) + c.len) % c.len;
+    var lo = 0, hi = c.cum.length - 1;
+    while (hi - lo > 1) { var mid = (lo + hi) >> 1; if (c.cum[mid] < d) lo = mid; else hi = mid; }
+    var f = (d - c.cum[lo]) / ((c.cum[hi] - c.cum[lo]) || 1);
+    return [lerp(c.pts[lo][0], c.pts[hi][0], f), lerp(c.pts[lo][1], c.pts[hi][1], f)];
+  }
+  function piece(c, d0, d1) { var out = []; for (var i = 0; i < P; i++) out.push(at(c, lerp(d0, d1, i / (P - 1)))); return out; }
+  // Share NT threads among the curves by length (at least one each) and cut each curve into its threads.
+  function share(curves) {
+    curves = curves.sort(function (a, b) { return b.len - a.len; }).slice(0, NT);
+    var tot = curves.reduce(function (s, c) { return s + c.len; }, 0), i;
+    var n = curves.map(function (c) { return Math.max(1, Math.round(NT * c.len / tot)); }), sum = n.reduce(function (a, b) { return a + b; }, 0);
+    while (sum > NT) { var big = 0; for (i = 1; i < n.length; i++) if (n[i] > n[big]) big = i; n[big]--; sum--; }
+    while (sum < NT) { var most = 0; for (i = 1; i < n.length; i++) if (curves[i].len / n[i] > curves[most].len / n[most]) most = i; n[most]++; sum++; }
+    var out = [];
+    curves.forEach(function (c, ci) { var l = c.len / n[ci]; for (var q = 0; q < n[ci]; q++) out.push(piece(c, q * l, (q + 1.03) * l)); });
+    return out;
+  }
+  function angle(p) { var a = Math.atan2(p[1] - 50, p[0] - 50) + Math.PI / 2; return a < 0 ? a + 2 * Math.PI : a; }
+  function centre(s) { var x = 0, y = 0; s.forEach(function (p) { x += p[0]; y += p[1]; }); return [x / s.length, y / s.length]; }
+  // A shape's threads in clockwise order from twelve o'clock, each running clockwise: thread r of every shape meets
+  // the cord at the same place, so the threads travel short ways and never cross the seal.
+  function order(segs, signs) {
+    var o = segs.map(function (s, i) { return { i: i, a: angle(centre(s)) }; }).sort(function (a, b) { return a.a - b.a; });
+    return {
+      segs: o.map(function (e) {
+        var s = segs[e.i], d = angle(s[s.length - 1]) - angle(s[0]);
+        if (d > Math.PI) d -= 2 * Math.PI; else if (d < -Math.PI) d += 2 * Math.PI;
+        return d < 0 ? s.slice().reverse() : s;
+      }),
+      signs: signs && o.map(function (e) { return signs[e.i]; })
+    };
+  }
+  function lattice() {  // the seal's own lattice (as build.seal draws it), each curve cut into equal threads
+    var segs = [], signs = [], per = NT / (2 * M);
+    [1, -1].forEach(function (sign) {
+      for (var j = 0; j < M; j++) {
+        var pts = [], rot = sign * j * Math.PI / (M * K);
+        for (var i = 0; i < 360; i++) { var t = 2 * Math.PI * i / 360, r = R0 + AMP * Math.sin(K * t); pts.push([50 + r * Math.cos(t + rot), 50 + r * Math.sin(t + rot)]); }
+        var c = curve(pts, true);
+        for (var q = 0; q < per; q++) { segs.push(piece(c, q * c.len / per, (q + 1.03) * c.len / per)); signs.push(sign); }
       }
     });
-    return pts;
+    return order(segs, signs);
   }
-  function lengths(pts) { var L = [0]; for (var i = 1; i < pts.length; i++) L.push(L[i - 1] + Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1])); return L; }
-  function along(pts, L, d) {  // the point at distance d along a polyline
-    var i = 1;
-    while (i < pts.length - 1 && L[i] < d) i++;
-    var f = L[i] > L[i - 1] ? (d - L[i - 1]) / (L[i] - L[i - 1]) : 0;
-    f = Math.max(0, Math.min(1, f));
-    return [pts[i - 1][0] + (pts[i][0] - pts[i - 1][0]) * f, pts[i - 1][1] + (pts[i][1] - pts[i - 1][1]) * f];
+  function word(text, family, boxW, boxH, levels) {
+    var F = textField(text, family, boxW, boxH), cs = [];
+    levels.forEach(function (L) { cs = cs.concat(contours(F, L)); });
+    return order(share(cs)).segs;
   }
-  function thread(pts, L, d0, d1, offset) {  // P points from d0 to d1 along the stroke, shifted sideways by offset
-    var out = [];
+  // The cord between shapes: three strands twisted round the middle, turning slowly.
+  function cord(r, psi) {
+    var th = -Math.PI / 2 + 2 * Math.PI * (r + 0.5) / NT + psi, span = 6 * Math.PI / NT, ph = 2 * Math.PI * (r % 3) / 3, out = [];
     for (var i = 0; i < P; i++) {
-      var d = d0 + (d1 - d0) * i / (P - 1), p = along(pts, L, d), q = along(pts, L, Math.min(L[L.length - 1], d + 0.3)), o = along(pts, L, Math.max(0, d - 0.3));
-      var tx = q[0] - o[0], ty = q[1] - o[1], tl = Math.hypot(tx, ty) || 1;
-      out.push([p[0] - ty / tl * offset, p[1] + tx / tl * offset]);
+      var a = th - span / 2 + span * i / (P - 1), rad = 30 + 2.4 * Math.sin(K * (a - psi) + ph);
+      out.push([50 + rad * Math.cos(a), 50 + rad * Math.sin(a)]);
     }
     return out;
   }
 
-  // A word as N strings: each stroke gets threads in proportion to its length, in bands of up to three
-  // parallel threads, so letters read as fine engraving. Laid out to fit inside the seal's ring.
-  function spell(word) {
-    var figures = /^[0-9]+$/.test(word), track = 0.26, x = 0, strokes = [];
-    word.split("").forEach(function (ch, i) {
-      var g = G[ch];
-      if (!g) return;
-      g[1].forEach(function (st) { strokes.push(dense(st).map(function (p) { return [p[0] + x, p[1]]; })); });
-      x += g[0] + (i < word.length - 1 ? track : 0);
-    });
-    var s = Math.min(78 / Math.max(x, 0.1), figures ? 60 / 1.5 : 21), mid = figures ? 0.75 : 0.5;
-    strokes = strokes.map(function (st) { return st.map(function (p) { return [C + (p[0] - x / 2) * s, C - (p[1] - mid) * s]; }); });
-    var lens = strokes.map(function (st) { return lengths(st); });
-    var total = lens.reduce(function (a, L) { return a + L[L.length - 1]; }, 0);
-    var share = lens.map(function (L) { return N * L[L.length - 1] / total; });
-    var count = share.map(function (v) { return Math.max(1, Math.floor(v)); });
-    var left = N - count.reduce(function (a, b) { return a + b; }, 0);
-    var order = share.map(function (v, i) { return i; }).sort(function (a, b) { return (share[b] - count[b]) - (share[a] - count[a]); });
-    for (var j = 0; left > 0; j++, left--) count[order[j % order.length]]++;
-    for (j = 0; left < 0; j++) { var k = order[order.length - 1 - (j % order.length)]; if (count[k] > 1) { count[k]--; left++; } }
-    var out = [];
-    strokes.forEach(function (st, si) {
-      var L = lens[si], len = L[L.length - 1], t = count[si], bands = Math.ceil(t / 3), piece = len / bands;
-      for (var b = 0; b < bands; b++) {
-        var c = Math.floor(t / bands) + (b < t % bands ? 1 : 0);  // threads in this band, side by side
-        var d0 = Math.max(0, (b - 0.12) * piece), d1 = Math.min(len, (b + 1.12) * piece);
-        for (var q = 0; q < c; q++) out.push(thread(st, L, d0, d1, (q - (c - 1) / 2) * 0.75));
-      }
-    });
-    return sortByX(out.slice(0, N));
-  }
-
-  // The seal itself as N strings: each lattice curve (as build.seal draws it) cut into four.
-  function circle() {
-    var out = [];
-    [1, -1].forEach(function (sign) {
-      for (var j = 0; j < M; j++) {
-        var rot = sign * j * Math.PI / (M * K);
-        for (var q = 0; q < 4; q++) {
-          var s = [];
-          for (var i = 0; i < P; i++) {
-            var t = (q + i / (P - 1)) * Math.PI / 2, r = R0 + AMP * Math.sin(K * t);
-            s.push([C + r * Math.cos(t + rot), C + r * Math.sin(t + rot)]);
-          }
-          out.push(s);
-        }
-      }
-    });
-    return sortByX(out);
-  }
-  function sortByX(list) { return list.sort(function (a, b) { return a[P >> 1][0] - b[P >> 1][0]; }); }
-
-  function ease(t) { return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; }
-  function settle(t) { return 1 - Math.pow(1 - t, 5); }
-  function rot(p, a) { var dx = p[0] - C, dy = p[1] - C, c = Math.cos(a), s = Math.sin(a); return [C + dx * c - dy * s, C + dx * s + dy * c]; }
-
-  var ring = circle();
-  var words = [spell(DAYS), spell("day"), spell("narrative")];
-  // The timeline (ms): each move, then a pause to read. The last move winds back and slows to rest.
-  var steps = [
-    { from: ring, to: words[0], at: 350, dur: 1100, swirl: 0.6 },
-    { from: words[0], to: words[1], at: 2250, dur: 950, swirl: 0.35 },
-    { from: words[1], to: words[2], at: 3950, dur: 950, swirl: 0.35 },
-    { from: words[2], to: ring, at: 6100, dur: 2600, swirl: 0, home: true }
+  // The timeline in seconds: each change of shape, then a pause to read; the last change slows to rest.
+  var SEQ = [
+    { from: "rest", to: "n", dur: 1.5 }, { hold: "n", dur: 0.85 },
+    { from: "n", to: "day", dur: 1.25 }, { hold: "day", dur: 0.7 },
+    { from: "day", to: "narrative", dur: 1.25 }, { hold: "narrative", dur: 1.05 },
+    { from: "narrative", to: "rest", dur: 3, last: true }
   ];
-  var END = 8700, SETTLE_AT = 6900;
-  var playing = false, start = 0, ctx, size, ink;
+  var shapes = null, signs, playing = false, start = 0, ctx, ink, dev;
 
-  function draw(strings, text) {
-    var dpr = window.devicePixelRatio || 1;
-    ctx.setTransform(dpr * size / 100, 0, 0, dpr * size / 100, 0, 0);
-    ctx.clearRect(0, 0, 100, 100);
-    ctx.strokeStyle = ink;
-    ctx.globalAlpha = 0.62 + 0.24 * text;
-    ctx.lineWidth = 0.3 + 0.16 * text;
-    ctx.lineCap = "round";
-    ctx.lineJoin = "round";
-    ctx.beginPath();
-    strings.forEach(function (s) {
-      ctx.moveTo(s[0][0], s[0][1]);
-      for (var i = 1; i < s.length - 1; i++) ctx.quadraticCurveTo(s[i][0], s[i][1], (s[i][0] + s[i + 1][0]) / 2, (s[i][1] + s[i + 1][1]) / 2);
-      ctx.lineTo(s[s.length - 1][0], s[s.length - 1][1]);
-    });
-    ctx.stroke();
+  function prepare() {
+    var family = getComputedStyle(document.documentElement).getPropertyValue("--serif").trim() || "serif";
+    var rest = lattice();
+    signs = rest.signs;
+    shapes = {
+      rest: rest.segs,
+      n: word(DAYS, family, DAYS.length > 1 ? 58 : 46, 54, [0, -1.4, -2.8, -4.2, -5.6]),
+      day: word("day", family, 60, 36, [0, -1, -2]),
+      narrative: word("narrative", family, 72, 28, [0, -0.7])
+    };
   }
-
+  function draw(threads, alpha) {
+    ctx.setTransform(canvas.width / 100, 0, 0, canvas.width / 100, 0, 0);
+    ctx.clearRect(0, 0, 100, 100);
+    ctx.beginPath();
+    threads.forEach(function (s) { ctx.moveTo(s[0][0], s[0][1]); for (var i = 1; i < s.length; i++) ctx.lineTo(s[i][0], s[i][1]); });
+    ctx.strokeStyle = ink; ctx.globalAlpha = alpha; ctx.lineWidth = 1.1 * dev; ctx.lineJoin = "round"; ctx.stroke();
+  }
   function frame(now) {
-    var t = now - start, strings = null, text = 1;
-    for (var k = steps.length - 1; k >= 0; k--) {
-      var st = steps[k];
-      if (t < st.at) continue;
-      var u = Math.min(1, (t - st.at) / st.dur);
-      strings = st.from.map(function (a, i) {
-        var b = st.to[i], lag = 0.28 * i / (N - 1), v = Math.max(0, Math.min(1, (u - lag) / (1 - 0.28))), e = st.home ? settle(v) : ease(v);
-        var spin = st.home ? 0.9 * Math.sin(Math.PI * settle(u)) : st.swirl * Math.sin(Math.PI * e) * (i % 2 ? 1 : -1);
-        return a.map(function (p, j) { return rot([p[0] + (b[j][0] - p[0]) * e, p[1] + (b[j][1] - p[1]) * e], spin); });
-      });
-      text = k === 0 ? ease(u) : st.home ? 1 - settle(u) : 1;
-      break;
+    var t = (now - start) / 1000, i = 0, acc = 0;
+    while (i < SEQ.length && t >= acc + SEQ[i].dur) acc += SEQ[i++].dur;
+    if (i === SEQ.length) return finish();
+    var st = SEQ[i], tau = (t - acc) / st.dur;
+    if (st.hold) { draw(shapes[st.hold], 0.85); requestAnimationFrame(frame); return; }
+    if (st.last && tau > 0.6) seal.classList.add("settling");
+    var psi = 0.45 * ease(tau), phi = st.last ? 0.75 * Math.pow(1 - tau, 2.2) : 0, out = [];
+    for (var r = 0; r < NT; r++) {
+      var A = shapes[st.from][r], B = shapes[st.to][r], C = cord(r, psi);
+      if (st.last && phi) {  // the lattice, still turning, each half its own way
+        var cs = Math.cos(signs[r] * phi), sn = Math.sin(signs[r] * phi);
+        B = B.map(function (p) { var x = p[0] - 50, y = p[1] - 50; return [50 + x * cs - y * sn, 50 + x * sn + y * cs]; });
+      }
+      var p = clamp((tau - 0.3 * r / NT) / 0.7), from, to, q;
+      if (p < 0.45) { from = A; to = C; q = ease(p / 0.45); }
+      else if (p < 0.55) { from = C; to = C; q = 0; }
+      else { from = C; to = B; q = ease((p - 0.55) / 0.45); }
+      var pts = [];
+      for (var j = 0; j < P; j++) pts.push([lerp(from[j][0], to[j][0], q), lerp(from[j][1], to[j][1], q)]);
+      out.push(pts);
     }
-    if (!strings) { strings = ring; text = 0; }
-    draw(strings, text);
-    if (t >= SETTLE_AT) seal.classList.add("settling");
-    if (t < END) { requestAnimationFrame(frame); return; }
+    var lat = 0.62;  // the resting lattice's opacity on the narrative's page (style.css)
+    draw(out, st.from === "rest" ? lerp(lat, 0.85, tau) : st.last ? lerp(0.85, lat, clamp((tau - 0.5) / 0.5)) : 0.85);
+    requestAnimationFrame(frame);
+  }
+  function finish() {
     seal.classList.remove("playing", "settling");
-    canvas.remove();
+    if (canvas.parentNode) canvas.parentNode.removeChild(canvas);
     playing = false;
   }
-
   function play() {
     if (playing) return;
     playing = true;
-    size = seal.getBoundingClientRect().width;
-    var dpr = window.devicePixelRatio || 1;
-    canvas.width = Math.round(size * dpr);
-    canvas.height = Math.round(size * dpr);
+    if (!shapes) prepare();
+    var size = seal.getBoundingClientRect().width, dpr = window.devicePixelRatio || 1;
+    canvas.width = canvas.height = Math.round(size * dpr);
+    dev = 100 / canvas.width;
     canvas.setAttribute("aria-hidden", "true");
     seal.insertBefore(canvas, seal.querySelector(".seal-cap"));
     ctx = canvas.getContext("2d");
     ink = getComputedStyle(document.documentElement).getPropertyValue("--ink").trim() || "#1a1816";
-    draw(ring, 0);
+    draw(shapes.rest, 0.62);
     seal.classList.add("playing");
     requestAnimationFrame(function (now) { start = now; frame(now); });
   }

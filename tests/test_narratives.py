@@ -162,11 +162,17 @@ def test_seal_on_card_rows_and_page(tmp_path, settings):
     assert html.count('<svg class="seal-defs"') == 1 and html.count('id="seal-k12"') == 1  # 6 days: 12 petals
     assert html.count('<span class="seal"') == 2  # the card and the row
     seal = build.seal(narratives.compact(found[0]))
-    assert seal.count('class="day ') == 6 and 'class="day quiet"' in seal and 'class="day s-2"' in seal and 'class="day s2"' in seal  # an arc per day, by stance
-    assert seal.count('<use href="#seal-k12"') == 6 and 'class="seal-n"' in seal and ">6</text>" in seal
+    assert seal.count('class="day ') == 6 and 'class="day quiet"' in seal and 'class="day s-2"' in seal and 'class="day s2"' in seal  # strings per day, by stance
+    # A bundle of strings per day: one on a quiet day, up to four on the day with the most outlets.
+    assert build.seal_strings(0, 9) == 1 and build.seal_strings(1, 9) == 2 and build.seal_strings(9, 9) == 4
+    tl = narratives.compact(found[0])["timeline"]
+    top = max(t["outlets"] for t in tl)
+    assert seal.count("<path ") == sum(1 if t["quiet"] or not t["outlets"] else build.seal_strings(t["outlets"], top) for t in tl)
+    assert seal.count('<use href="#seal-k12"') == 4 and 'class="seal-n"' in seal and ">6</text>" in seal  # two lattices of two
+    assert 'vector-effect="non-scaling-stroke"' in html  # hairlines stay one screen pixel wide at any size
     page = (build.render_narratives(found, tmp_path / "n", min_days=4).parent / "s-long" / "index.html").read_text()
-    # On the narrative's page the seal is large and carries what its strings spell (app.js): no microprint ring.
-    assert '<span class="seal big" role="img"' in page and 'data-k="12" data-m="6" data-days="6"' in page and "seal-micro" not in page
+    # On the narrative's page the seal is large, with a finer lattice, and carries what its threads spell (app.js).
+    assert '<span class="seal big" role="img"' in page and 'data-k="12" data-m="4" data-days="6"' in page and page.count('<use href="#seal-k12"') == 8
     assert 'data-days' not in seal  # small seals rest; only the page's seal plays
     assert build.seal({"timeline": []}) == "" and build.seal_defs([None, {}]) == ""
     assert build.render(edition(), tmp_path / "plain").read_text().count("seal") == 0  # no narrative, no seal
