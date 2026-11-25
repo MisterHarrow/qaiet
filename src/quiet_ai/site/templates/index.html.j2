@@ -98,10 +98,20 @@
   <p class="builders"><span class="label">Builders</span> {{ s.builders_line }}</p>
   {% endif %}
 
-  {% if s.coverage or b.hn or b.repos or b.models or b.papers or b.official %}
+  {% set more = s.coverage or b.hn or b.repos or b.models or b.papers or b.official %}
+  {% if more %}
   <details>
-    <summary>{% if s.coverage %}Headlines by stance{% else %}Links{% endif %}</summary>
-    {% if s.summary and s.summary.builders %}<p class="builders-long">{{ s.summary.builders }}</p>{% endif %}
+    <summary aria-controls="{{ s.id }}-more">{% if s.coverage %}Headlines by stance{% else %}Links{% endif %}</summary>
+  </details>
+  {% endif %}
+</article>
+{# Opened from the card's summary, the headlines take the whole row under the card's row
+   (the grid packs densely, so the cards after it still fill the card's own row). #}
+{% if more %}
+<div class="panel" id="{{ s.id }}-more" role="region" aria-label="{% if s.coverage %}Headlines by stance{% else %}Links{% endif %}: {{ s.headline }}">
+  <p class="panel-head"><span class="rank">{{ "%02d"|format(s.rank) }}</span> {{ s.headline }}</p>
+  {% if s.summary and s.summary.builders %}<p class="builders-long">{{ s.summary.builders }}</p>{% endif %}
+  <div class="panel-groups">
     {% for g in s.coverage %}
     <div class="group">
       <h3><span class="dot st{{ g.stance }}" aria-hidden="true"></span>{{ stance_names[g.stance] }} <span class="count">{{ g["items"]|length }}</span></h3>
@@ -133,9 +143,9 @@
       </ul>
     </div>
     {% endif %}
-  </details>
-  {% endif %}
-</article>
+  </div>
+</div>
+{% endif %}
 {% endfor %}
 <p class="empty" hidden>No stories match this filter. <button type="button" class="reset">Show all</button></p>
 </section>

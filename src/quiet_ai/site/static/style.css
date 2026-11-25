@@ -155,6 +155,7 @@ button { font: inherit; }
 .stories {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-flow: row dense;  /* an open panel takes the next row; later cards still fill this one */
   gap: 1rem;
   align-items: stretch;
 }
@@ -166,8 +167,6 @@ button { font: inherit; }
   border-top: 0;
   border-radius: 0 0 2px 2px;
 }
-/* Equal heights while closed; once a card is opened, rows size to content so siblings don't stretch. */
-.stories:has(details[open]) { align-items: start; }
 
 .stripe { display: flex; height: 4px; margin: 0 -1.1rem 1rem; background: var(--wash); }
 .stripe-none { background: var(--rule); }
@@ -211,6 +210,17 @@ summary::before { content: "+"; display: inline-block; width: 1.1em; color: var(
 details[open] summary::before { content: "−"; }
 summary:hover { color: var(--ink); }
 
+/* Headlines by stance: a full-width panel under the open card's row, stance groups side by side.
+   It is a sibling of the card, shown with :has(); browsers without :has() always show it. */
+.panel { display: none; grid-column: 1 / -1; padding: 1rem 1.3rem 1.2rem; background: var(--card); border: 1px solid var(--ink); border-radius: 2px; }
+.card:has(details[open]) + .panel { display: block; }
+.card[hidden] + .panel { display: none !important; }
+@supports not selector(:has(*)) { .panel { display: block; } }
+.card:has(details[open]) { border-color: var(--ink); }
+.panel-head { display: flex; align-items: baseline; gap: 0.8em; margin: 0; padding-bottom: 0.7rem; border-bottom: 1px solid var(--rule); font: 500 1.15rem/1.3 var(--serif); text-wrap: pretty; }
+.panel-head .rank { font: 700 0.7rem/1 var(--mono); letter-spacing: 0.08em; }
+.panel .builders-long { max-width: 52rem; }
+.panel-groups { display: grid; grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); gap: 0 2rem; align-items: start; }
 .group { margin-top: 0.9rem; }
 .group h3 { margin: 0 0 0.3rem; font: 600 0.7rem/1.4 var(--mono); letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); }
 .group .count { font-weight: 400; color: var(--faint); margin-left: 0.3em; }
@@ -374,6 +384,6 @@ summary:hover { color: var(--ink); }
 
 @media print {
   .filters, summary, .terms, .sitenav { display: none; }
-  details > * { display: block; }
+  .panel { display: block; }
   .stories { grid-template-columns: 1fr 1fr; }
 }
