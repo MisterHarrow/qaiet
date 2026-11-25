@@ -553,8 +553,8 @@ summary:hover { color: var(--ink); }
 ol.narr-list { margin: 1rem 0 0; padding: 0; list-style: none; }
 .narr-list > li.narr-row { display: grid; grid-template-columns: 3.4rem minmax(0, 1fr) 10.5rem; gap: 0.5rem 1.3rem; align-items: center; margin: 0; padding: 0.85rem 0; border-top: 1px solid var(--wash); }
 .narr-list > li.narr-row:first-child { border-top: 0; }
-.narr-list p.narr-days { margin: 0; line-height: 0; }
-.narr-days .seal { width: 3rem; margin: 0 auto; }
+.narr-list p.narr-days { margin: 0; font: 600 0.6rem/1.1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-align: center; }
+.narr-days b { display: block; margin-bottom: 0.15rem; font: 700 1.6rem/1 var(--mono); letter-spacing: -0.02em; color: var(--ink); }
 .narr-list p.narr-head { margin: 0; font: 500 1.05rem/1.32 var(--serif); text-wrap: pretty; }
 .narr-head a { text-decoration: none; }
 .narr-head a:hover { color: var(--signal); }
@@ -628,60 +628,7 @@ ol.nl { margin: 2.2rem 0 0; padding: 0; list-style: none; }
 @media (max-width: 38rem) {
   .narr-list > li.narr-row { grid-template-columns: 2.6rem minmax(0, 1fr); align-items: start; }
   .narr-mini { grid-column: 2; max-width: 11rem; }
-  .narr-days .seal { width: 2.6rem; }
+  .narr-days b { font-size: 1.35rem; }
 }
 .prose.narrative h1 { max-width: 50rem; font-size: 2.1rem; line-height: 1.18; text-wrap: pretty; }
 @media (max-width: 38rem) { .prose.narrative h1 { font-size: 1.65rem; } }
-
-/* The narrative seal: a guilloché engraving generated from the narrative (build.seal). It rests still; on hover its
-   two lattices turn a little against each other. On a narrative's page its strings spell the day count, "day" and
-   "narrative" once, then wind back into the seal (app.js draws that on a canvas inside the seal). */
-.seal-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
-.seal { position: relative; display: block; width: 3rem; aspect-ratio: 1; border-radius: 50%; background: var(--paper);
-  box-shadow: 0 1px 1px rgb(60 40 25 / 0.2), 0 3px 8px rgb(60 40 25 / 0.1); }
-:root[data-theme="dark"] .seal { box-shadow: 0 1px 1px rgb(0 0 0 / 0.45), 0 4px 10px rgb(0 0 0 / 0.28); }
-.seal > svg, .seal > canvas { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
-.seal > canvas { pointer-events: none; }
-.seal .day { fill: none; }
-.seal .s-2 { stroke: var(--crit); }
-.seal .s-1 { stroke: var(--crit-soft); }
-.seal .s0 { stroke: var(--neut); }
-.seal .s1 { stroke: var(--pos-soft); }
-.seal .s2 { stroke: var(--pos); }
-.seal .sna { stroke: var(--unclear); }
-.seal .day.quiet { stroke: var(--rule); stroke-width: 0.6; }
-.seal .hair { fill: none; stroke: var(--ink); stroke-width: 0.35; opacity: 0.55; }
-.seal-lat { fill: none; stroke: var(--ink); stroke-width: 0.7; opacity: 0.5; }
-.seal.big .seal-lat { stroke-width: 0.3; opacity: 0.62; }
-.seal .cap { fill: var(--paper); }
-.seal .seal-n { font-family: var(--mono); font-weight: 700; fill: var(--ink); text-anchor: middle; letter-spacing: -0.04em; }
-.seal .seal-l { font-family: var(--mono); font-weight: 600; fill: var(--muted); text-anchor: middle; letter-spacing: 1.2px; }
-.seal.big { width: 11rem; }
-@media (prefers-reduced-motion: no-preference) {
-  .seal-lat { transition: transform 1.8s cubic-bezier(0.16, 1, 0.3, 1); }
-  .seal-link:hover .seal-lat.a, .seal-link:focus-visible .seal-lat.a { transform: rotate(16deg); }
-  .seal-link:hover .seal-lat.b, .seal-link:focus-visible .seal-lat.b { transform: rotate(-16deg); }
-}
-/* While the strings spell: the lattice and the middle step aside and the day ring withdraws; as the strings wind
-   back, the ring draws in again, day by day, and the count returns. */
-.seal.playing .seal-lat { opacity: 0; transition: none; }
-.seal.playing .seal-cap { opacity: 0; transition: opacity 0.5s ease; }
-.seal.playing .seal-base .day { stroke-dasharray: 1; stroke-dashoffset: 1; transition: stroke-dashoffset 0.6s cubic-bezier(0.4, 0, 1, 1); }
-.seal.playing.settling .seal-base .day { stroke-dashoffset: 0; transition: stroke-dashoffset 1.2s cubic-bezier(0.16, 1, 0.3, 1) calc(var(--i) * 110ms); }
-.seal.playing.settling .seal-cap { opacity: 1; transition: opacity 0.9s ease 0.7s; }
-.seal.big.can-play { cursor: pointer; }
-/* On a card the seal sits on the top-right corner, like a seal on a document. The stance stripe ends where the seal
-   begins, so none of it is hidden, and the globe steps left. */
-.card { position: relative; }
-.seal-link { position: absolute; top: -1.1rem; right: -0.8rem; z-index: 2; display: block; border-radius: 50%; transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1); }
-.seal-link:hover, .seal-link:focus-visible { transform: translateY(-2px); }
-.card:has(> .seal-link) > .stripe { margin-right: 1.65rem; }
-.card > .seal-link .seal { width: 3.3rem; }
-.card:has(> .seal-link) .open-source { margin-right: 2.3rem; }
-@media (prefers-reduced-motion: reduce) { .seal-link { transition: none; } }
-/* The narrative's page: the seal, large, beside the headline */
-.narr-hero { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1rem 2.6rem; align-items: center; }
-@media (max-width: 38rem) {
-  .narr-hero { grid-template-columns: minmax(0, 1fr); }
-  .narr-hero .seal { order: -1; width: 8.5rem; }
-}

@@ -12,7 +12,6 @@
 <link rel="stylesheet" href="{{ root }}static/style.css">
 </head>
 <body>
-{{ seal_defs }}
 <div class="page">
 
 <header class="masthead">
@@ -154,10 +153,6 @@
     </span>
     {% endif %}
   </div>
-  {% endif %}
-  {% if s.narrative and s.narrative.timeline %}
-  {# The narrative's seal on the card's top edge: this story has been covered for days; the seal links to how it evolved. #}
-  <a class="seal-link" href="{{ root }}narratives/{{ s.narrative.id }}/" aria-label="Part of a narrative: {{ s.narrative.days }} days of coverage. See how it evolved" title="A narrative: {{ s.narrative.days }} days of coverage, {{ s.narrative.first|date_range(s.narrative.last) }}">{{ s.narrative|seal }}</a>
   {% endif %}
 </article>
 {# Opened from the card's summary, the headlines take the whole row under the card's row

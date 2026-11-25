@@ -100,8 +100,7 @@ def test_detect_finds_four_days_in_a_row(settings):
     # Up to three headlines from different outlets; the stray item shares no words with the day's others and sinks.
     heads = [h["title"] for h in t["2026-11-24"]["headlines"]]
     assert len(heads) == 3 and "Recipe: a better sourdough" not in heads
-    card = narratives.by_story(found)["s-long"]
-    assert (card["days"], card["first"], card["last"], card["ongoing"], len(card["timeline"])) == (6, "2026-11-21", "2026-11-26", True, 6)
+    assert narratives.by_story(found, "2026-11-26") == {"s-long": {"id": "s-long", "day": 6, "since": "2026-11-21"}}
     compact = narratives.compact(n)
     assert set(compact["timeline"][0]) == {"date", "quiet", "outlets", "mean"} and "headlines" not in json.dumps(compact)
 
@@ -110,7 +109,8 @@ def test_ended_after_a_quiet_day(settings):
     st = Store(":memory:")
     fill(st)
     later = narratives.detect(st, settings, load_sources(), NOW + timedelta(days=2))
-    assert later[0]["ongoing"] is False and later[0]["days"] == 6  # an ended narrative stops counting
+    assert later[0]["ongoing"] is False
+    assert narratives.by_story(later, "2026-11-28")["s-long"]["day"] == 6  # an ended narrative stops counting
 
 
 def test_narrative_pages(tmp_path, settings):
@@ -139,7 +139,7 @@ def test_front_page_section(tmp_path, settings):
     fill(st)
     found = narratives.detect(st, settings, load_sources(), NOW)
     html = build.render(edition(narratives={"min_days": 4, "total": 1, "items": [narratives.compact(found[0])]}), tmp_path).read_text()
-    assert '<section class="narratives"' in html and 'href="narratives/s-long/"' in html and 'aria-label="6 days"' in html
+    assert '<section class="narratives"' in html and 'href="narratives/s-long/"' in html and "6</b> days" in html
     assert "covered 4 days or more in a row" in html
     assert '<section class="narratives"' not in build.render(edition(), tmp_path / "none").read_text()
 
@@ -149,24 +149,3 @@ def test_date_labels():
     assert build.date_range("2026-11-28", "2026-12-02") == "28 Nov – 2 Dec"
     assert build.date_range("2026-12-30", "2027-01-03") == "30 Dec 2026 – 3 Jan 2027"
     assert build.day_label("2026-11-21") == "Sat 21 Nov"
-
-
-def test_seal_on_card_rows_and_page(tmp_path, settings):
-    st = Store(":memory:")
-    fill(st)
-    found = narratives.detect(st, settings, load_sources(), NOW)
-    story = edition()["stories"][0] | {"narrative": narratives.by_story(found)["s-long"]}
-    html = build.render(edition(stories=[story], narratives={"min_days": 4, "total": 1, "items": [narratives.compact(found[0])]}), tmp_path).read_text()
-    # The card carries the seal on its corner, linking to the narrative; the lattice curve is defined once per page.
-    assert '<a class="seal-link" href="narratives/s-long/" aria-label="Part of a narrative: 6 days of coverage. See how it evolved"' in html
-    assert html.count('<svg class="seal-defs"') == 1 and html.count('id="seal-k12"') == 1  # 6 days: 12 petals
-    assert html.count('<span class="seal"') == 2  # the card and the row
-    seal = build.seal(narratives.compact(found[0]))
-    assert seal.count('class="day ') == 6 and 'class="day quiet"' in seal and 'class="day s-2"' in seal and 'class="day s2"' in seal  # an arc per day, by stance
-    assert seal.count('<use href="#seal-k12"') == 6 and 'class="seal-n"' in seal and ">6</text>" in seal
-    page = (build.render_narratives(found, tmp_path / "n", min_days=4).parent / "s-long" / "index.html").read_text()
-    # On the narrative's page the seal is large and carries what its strings spell (app.js): no microprint ring.
-    assert '<span class="seal big" role="img"' in page and 'data-k="12" data-m="6" data-days="6"' in page and "seal-micro" not in page
-    assert 'data-days' not in seal  # small seals rest; only the page's seal plays
-    assert build.seal({"timeline": []}) == "" and build.seal_defs([None, {}]) == ""
-    assert build.render(edition(), tmp_path / "plain").read_text().count("seal") == 0  # no narrative, no seal

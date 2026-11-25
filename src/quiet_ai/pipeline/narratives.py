@@ -201,11 +201,10 @@ def compact(n: dict) -> dict:
             "timeline": [{"date": t["date"], "quiet": t["quiet"], "outlets": t["outlets"], "mean": t["mean"]} for t in n["timeline"]]}
 
 
-def by_story(narratives: list[dict]) -> dict[str, dict]:
-    """story id -> what a front-page card needs to show its narrative's seal: the days so far (first to latest
-    covered day), the dates, outlets and the compact day by day."""
+def by_story(narratives: list[dict], today: str) -> dict[str, dict]:
+    """story id -> {id, day, since}: the narrative a story belongs to, and which day of it today is."""
     out = {}
     for n in narratives:
-        c = compact(n)
-        out[n["id"]] = {k: c[k] for k in ("id", "days", "first", "last", "outlets", "ongoing", "timeline")}
+        end = today if n["ongoing"] else n["last"]
+        out[n["id"]] = {"id": n["id"], "day": (Date.fromisoformat(end) - Date.fromisoformat(n["first"])).days + 1, "since": n["first"]}
     return out

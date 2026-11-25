@@ -3,7 +3,7 @@
 
 {% macro row(n, root) -%}
 <li class="narr-row">
-  <p class="narr-days">{{ n|seal(false, n.days ~ " days") }}</p>
+  <p class="narr-days"><b>{{ n.days }}</b> day{{ "s" if n.days != 1 }}</p>
   <div class="narr-text">
     <p class="narr-head"><a href="{{ root }}narratives/{{ n.id }}/">{{ n.headline }}</a></p>
     <p class="num">{{ n.first|date_range(n.last) }}<span class="sep">·</span>{{ n.outlets }} outlet{{ "s" if n.outlets != 1 }}

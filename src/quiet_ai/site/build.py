@@ -6,7 +6,6 @@ No external requests from the page: system fonts, no CDN, no analytics, no image
 from __future__ import annotations
 
 import json
-import math
 import shutil
 from datetime import datetime
 from pathlib import Path
@@ -194,7 +193,6 @@ def _env() -> Environment:
     env.filters["date_range"] = date_range
     env.filters["day_label"] = day_label
     env.filters["narrative_chart"] = narrative_chart
-    env.filters["seal"] = seal
     env.globals.update(stance_names=STANCE_NAMES, kind_names=KIND_NAMES, country_names=COUNTRY_NAMES)
     return env
 
@@ -298,82 +296,6 @@ def narrative_chart(timeline: list[dict], mini: bool = False) -> Markup:
     return Markup("".join(parts))
 
 
-# The narrative seal: a guilloché engraving (the fine line work on banknotes and passports) generated from the
-# narrative. Two petals per day; an outer ring with an arc per day (thickness: outlets, color: that day's stance);
-# the day count in the middle. It rests still. On a narrative's page app.js lets its strings spell the day count,
-# "day" and "narrative" before they wind back into the seal; the data-* attributes carry what it needs. The lattice
-# curve is defined once per page (seal_defs) and reused; each lattice is its own layer so it can turn cheaply.
-SEAL_R0, SEAL_AMP, SEAL_PTS = 29.0, 7.5, 240
-
-
-def seal_petals(days: int) -> int:
-    return 2 * max(2, min(days, 14))
-
-
-def _lattice_path(k: int) -> str:
-    pts = []
-    for i in range(SEAL_PTS):
-        t = 2 * math.pi * i / SEAL_PTS
-        r = SEAL_R0 + SEAL_AMP * math.sin(k * t)
-        pts.append(f"{50 + r * math.cos(t):.2f} {50 + r * math.sin(t):.2f}")
-    return "M" + "L".join(pts) + "Z"
-
-
-def seal_defs(narratives: list[dict]) -> Markup:
-    """The lattice curves the page's seals use, once each; empty when the page has no seal."""
-    petals = sorted({seal_petals(len(n.get("timeline") or [])) for n in narratives if n and n.get("timeline")})
-    if not petals:
-        return Markup("")
-    paths = "".join(f'<path id="seal-k{k}" d="{_lattice_path(k)}"/>' for k in petals)
-    return Markup(f'<svg class="seal-defs" aria-hidden="true" focusable="false"><defs>{paths}</defs></svg>')
-
-
-def _arc(r: float, a0: float, a1: float) -> str:
-    p = lambda a: (50 + r * math.cos(math.radians(a)), 50 + r * math.sin(math.radians(a)))  # noqa: E731
-    (x0, y0), (x1, y1) = p(a0), p(a1)
-    return f"M{x0:.2f} {y0:.2f}A{r} {r} 0 {1 if a1 - a0 > 180 else 0} 1 {x1:.2f} {y1:.2f}"
-
-
-def seal(n: dict, big: bool = False, label: str | None = None) -> Markup:
-    """A narrative's seal from {id, timeline: [{outlets, mean, quiet}], first, last, outlets}. Small on cards and rows,
-    big on the narrative's page. `label` makes it an image with that name; otherwise it is
-    decoration inside a link that names it."""
-    timeline = n.get("timeline") or []
-    days = len(timeline)
-    if not days:
-        return Markup("")
-    k = seal_petals(days)
-    top = max([1] + [t.get("outlets") or 0 for t in timeline])
-    span = 360 / days
-    gap = min(2.2, span * 0.18)
-    ring = []
-    for i, t in enumerate(timeline):
-        a0, a1 = -90 + i * span + gap, -90 + (i + 1) * span - gap
-        if t.get("quiet") or not t.get("outlets"):
-            ring.append(f'<path class="day quiet" d="{_arc(45.5, a0, a1)}" pathLength="1" style="--i:{i}"/>')
-            continue
-        cls = _stance_class(t["mean"]).replace("d", "s", 1) if t.get("mean") is not None else "sna"
-        w = (1.1 + 2.6 * t["outlets"] / top) if big else (1.8 + 3.4 * t["outlets"] / top)
-        ring.append(f'<path class="day {cls}" d="{_arc(45.5, a0, a1)}" stroke-width="{w:.2f}" pathLength="1" style="--i:{i}"/>')
-    m = 6 if big else 3
-    lat = lambda sign: "".join(f'<use href="#seal-k{k}" transform="rotate({sign * j * 180 / (m * k):.3f} 50 50)"/>' for j in range(m))  # noqa: E731
-    vb = 'viewBox="0 0 100 100" aria-hidden="true" focusable="false"'
-    inner = 15 if big else 17
-    num_size = (15 if days < 100 else 11) if big else (30 if days < 10 else 23 if days < 100 else 16)
-    num_y = 55.5 if big else 50 + num_size * 0.36
-    cap = (f'<circle class="cap" cx="50" cy="50" r="{inner}"/><circle class="hair" cx="50" cy="50" r="{inner}"/>'
-           f'<text class="seal-n" x="50" y="{num_y:.1f}" font-size="{num_size}">{days}</text>'
-           + ('<text class="seal-l" x="50" y="63" font-size="3.6">DAYS</text>' if big else ""))
-    attrs = f' role="img" aria-label="{escape(label)}"' if label else ' aria-hidden="true"'
-    if big:  # what the seal's strings spell on the narrative's page (app.js)
-        attrs += f' data-k="{k}" data-m="{m}" data-days="{days}"'
-    return Markup(
-        f'<span class="seal{" big" if big else ""}"{attrs}>'
-        f'<svg class="seal-base" {vb}>{"".join(ring)}<circle class="hair" cx="50" cy="50" r="42.6"/></svg>'
-        f'<svg class="seal-lat a" {vb}>{lat(1)}</svg><svg class="seal-lat b" {vb}>{lat(-1)}</svg>'
-        f'<svg class="seal-cap" {vb}>{cap}</svg></span>')
-
-
 def _long_date(dt: datetime) -> str:
     return f"{dt:%A} {dt.day} {dt:%B %Y}"
 
@@ -408,7 +330,6 @@ def render(edition: dict, out_dir: Path, tz: str = "Europe/Stockholm", periods: 
         e=edition,
         mix_segments=stance_segments(mix),  # the masthead rule: every article in this view, by stance
         geo=coverage_map(edition["stories"]),
-        seal_defs=seal_defs([s.get("narrative") for s in edition["stories"]] + list((edition.get("narratives") or {}).get("items") or [])),
         mix_label=stance_label(mix, "Stance of every article in this view"),
         root=root,
         period=period,
@@ -497,11 +418,11 @@ def render_narratives(narratives: list[dict], out_dir: Path, tz: str = "Europe/S
             t["segments"] = stance_segments(t["stance"]) if t.get("stance") else []
             t["stance_label"] = stance_label(t["stance"], f"Stance on {day_label(t['date'])}") if t.get("stance") else ""
         (d / "index.html").write_text(env.get_template("narrative.html.j2").render(
-            n=n, root="../../", seal_defs=seal_defs([n]), segments=stance_segments(n["stance"]), stance_text=stance_label(n["stance"], "Stance of every article"),
+            n=n, root="../../", segments=stance_segments(n["stance"]), stance_text=stance_label(n["stance"], "Stance of every article"),
             min_days=min_days), encoding="utf-8")
     ongoing = [n for n in narratives if n["ongoing"]]
     ended = [n for n in narratives if not n["ongoing"]]
-    html = env.get_template("narratives.html.j2").render(ongoing=ongoing, ended=ended, root="../", min_days=min_days, seal_defs=seal_defs(narratives))
+    html = env.get_template("narratives.html.j2").render(ongoing=ongoing, ended=ended, root="../", min_days=min_days)
     (page_dir / "index.html").write_text(html, encoding="utf-8")
     shutil.copytree(HERE / "static", out_dir / "static", dirs_exist_ok=True)
     return page_dir / "index.html"
