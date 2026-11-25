@@ -190,6 +190,9 @@ def _env() -> Environment:
     env.filters["builders_html"] = builders_html
     env.filters["link_platforms"] = link_platforms
     env.filters["signed"] = lambda v: "–" if v is None else (f"{v:+.2f}".replace("-", "−"))
+    env.filters["date_range"] = date_range
+    env.filters["day_label"] = day_label
+    env.filters["narrative_chart"] = narrative_chart
     env.globals.update(stance_names=STANCE_NAMES, kind_names=KIND_NAMES, country_names=COUNTRY_NAMES)
     return env
 
@@ -206,6 +209,91 @@ def stance_segments(stance: dict[str, int]) -> list[dict]:
 def stance_label(stance: dict[str, int], prefix: str = "Stance of the coverage") -> str:
     parts = [f"{stance[k]} {STANCE_NAMES[k].lower()}" for k in ["-2", "-1", "0", "1", "2", "unclear", "unlabeled"] if stance.get(k)]
     return f"{prefix}: " + ", ".join(parts) if parts else "No stance labels"
+
+
+def day_label(d: str) -> str:
+    """'2026-11-21' -> 'Sat 21 Nov'."""
+    dt = datetime.fromisoformat(d)
+    return f"{dt:%a} {dt.day} {dt:%b}"
+
+
+def date_range(first: str, last: str) -> str:
+    """'21–25 Nov', '28 Nov – 2 Dec', or with years when they differ."""
+    a, b = datetime.fromisoformat(first), datetime.fromisoformat(last)
+    if a.year != b.year:
+        return f"{a.day} {a:%b %Y} – {b.day} {b:%b %Y}"
+    if a.month != b.month:
+        return f"{a.day} {a:%b} – {b.day} {b:%b}"
+    return f"{a.day} {a:%b}" if a.day == b.day else f"{a.day}–{b.day} {b:%b}"
+
+
+def _stance_class(v: float) -> str:
+    return "d-2" if v <= -1.25 else "d-1" if v <= -0.25 else "d0" if v < 0.25 else "d1" if v < 1.25 else "d2"
+
+
+def narrative_chart(timeline: list[dict], mini: bool = False) -> Markup:
+    """A narrative day by day as inline SVG: the day's average stance as a line (broken on quiet days) with a dot
+    per day colored by stance, over bars of outlets per day. Fixed -1..+1 scale, wider if a day falls outside.
+    The mini version (front page, lists) has no labels; the full one names the days and counts, with hover values."""
+    n = len(timeline)
+    if not n:
+        return Markup("")
+    w, h = (160, 46) if mini else (560, 200)
+    pad_l, pad_r = (6, 6) if mini else (8, 34)
+    line_top, line_bot = (5, 25) if mini else (14, 100)
+    bar_top, bar_bot = (31, 46) if mini else (132, 172)
+    step = (w - pad_l - pad_r) / n
+    x = lambda i: pad_l + step * (i + 0.5)  # noqa: E731
+    lim = max([1.0] + [abs(t["mean"]) for t in timeline if t.get("mean") is not None])
+    y = lambda v: line_top + (lim - v) / (2 * lim) * (line_bot - line_top)  # noqa: E731
+    top = max([1] + [t["outlets"] for t in timeline])
+    bw = max(2.0, min(step * 0.55, 26 if not mini else 9))
+    cls = "nchart mini" if mini else "nchart"
+    attrs = ' aria-hidden="true" focusable="false"' if mini else f' role="img" aria-label="Average stance and outlets per day, {n} days"'
+    parts = [f'<svg class="{cls}" viewBox="0 0 {w} {h}"{attrs}>']
+    parts.append(f'<line class="zero" x1="{pad_l}" x2="{w - pad_r}" y1="{y(0):.1f}" y2="{y(0):.1f}"/>')
+    if not mini:
+        for v in (lim, -lim):
+            parts.append(f'<line class="grid" x1="{pad_l}" x2="{w - pad_r}" y1="{y(v):.1f}" y2="{y(v):.1f}"/>')
+        parts.append(f'<text class="axis" x="{w - pad_r + 6}" y="{y(lim) + 4:.1f}">+{lim:g}</text>')
+        parts.append(f'<text class="axis" x="{w - pad_r + 6}" y="{y(0) + 4:.1f}">0</text>')
+        parts.append(f'<text class="axis" x="{w - pad_r + 6}" y="{y(-lim) + 4:.1f}">−{lim:g}</text>')
+    for i, t in enumerate(timeline):
+        bh = (bar_bot - bar_top) * t["outlets"] / top
+        if t["outlets"]:
+            partial = " partial" if t.get("partial") else ""
+            parts.append(f'<rect class="bar{partial}" x="{x(i) - bw / 2:.1f}" y="{bar_bot - bh:.1f}" width="{bw:.1f}" height="{bh:.1f}"/>')
+            if not mini:
+                parts.append(f'<text class="count" x="{x(i):.1f}" y="{bar_bot - bh - 4:.1f}">{t["outlets"]}</text>')
+    segs, cur = [], []
+    for i, t in enumerate(timeline):
+        if t.get("mean") is None:
+            if cur:
+                segs.append(cur)
+            cur = []
+        else:
+            cur.append(f"{x(i):.1f},{y(t['mean']):.1f}")
+    if cur:
+        segs.append(cur)
+    parts += [f'<polyline class="line" points="{" ".join(sg)}"/>' for sg in segs if len(sg) > 1]
+    for i, t in enumerate(timeline):
+        if t.get("mean") is None:
+            continue
+        r = 3 if mini else 5
+        dot = f'<circle class="dot {_stance_class(t["mean"])}" cx="{x(i):.1f}" cy="{y(t["mean"]):.1f}" r="{r}"/>'
+        if mini:
+            parts.append(dot)
+        else:
+            val = f"{t['mean']:+.2f}".replace("-", "−")
+            parts.append(f'<g class="pt"><title>{day_label(t["date"])}: average {val}, {t["outlets"]} outlet{"s" if t["outlets"] != 1 else ""}</title>{dot}</g>')
+    if not mini:
+        every = max(1, -(-n // 10))
+        for i, t in enumerate(timeline):
+            if i % every == 0 or i == n - 1:
+                d = datetime.fromisoformat(t["date"])
+                parts.append(f'<text class="day" x="{x(i):.1f}" y="{h - 8}">{d.day} {d:%b}</text>')
+    parts.append("</svg>")
+    return Markup("".join(parts))
 
 
 def _long_date(dt: datetime) -> str:
@@ -314,6 +402,28 @@ def render_archive(editions: list[dict], out_dir: Path, tz: str = "Europe/Stockh
     page_dir = out_dir / "archive"
     page_dir.mkdir(parents=True, exist_ok=True)
     (page_dir / "index.html").write_text(_env().get_template("archive.html.j2").render(days=days, root="../"), encoding="utf-8")
+    shutil.copytree(HERE / "static", out_dir / "static", dirs_exist_ok=True)
+    return page_dir / "index.html"
+
+
+def render_narratives(narratives: list[dict], out_dir: Path, tz: str = "Europe/Stockholm", min_days: int = 4) -> Path:
+    """/narratives/ (ongoing, then ended) and one page per narrative at /narratives/<story id>/."""
+    env = _env()
+    page_dir = out_dir / "narratives"
+    page_dir.mkdir(parents=True, exist_ok=True)
+    for n in narratives:
+        d = page_dir / n["id"]
+        d.mkdir(parents=True, exist_ok=True)
+        for t in n["timeline"]:
+            t["segments"] = stance_segments(t["stance"]) if t.get("stance") else []
+            t["stance_label"] = stance_label(t["stance"], f"Stance on {day_label(t['date'])}") if t.get("stance") else ""
+        (d / "index.html").write_text(env.get_template("narrative.html.j2").render(
+            n=n, root="../../", segments=stance_segments(n["stance"]), stance_text=stance_label(n["stance"], "Stance of every article"),
+            min_days=min_days), encoding="utf-8")
+    ongoing = [n for n in narratives if n["ongoing"]]
+    ended = [n for n in narratives if not n["ongoing"]]
+    html = env.get_template("narratives.html.j2").render(ongoing=ongoing, ended=ended, root="../", min_days=min_days)
+    (page_dir / "index.html").write_text(html, encoding="utf-8")
     shutil.copytree(HERE / "static", out_dir / "static", dirs_exist_ok=True)
     return page_dir / "index.html"
 

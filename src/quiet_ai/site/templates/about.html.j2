@@ -26,7 +26,7 @@
 <p class="lede">Every morning around {{ a.publish_at }} Stockholm time, this page answers three questions: what happened in AI, how the press is framing it, and what people who build AI are actually making. It tries to do that in about five minutes of reading, without ads or noise.</p>
 
 <nav class="toc" aria-label="On this page">
-  <a href="#sources">Sources</a><a href="#steps">How a page is made</a><a href="#labels">Reading the labels</a><a href="#checking">Checking the labels</a><a href="#ranking">Ranking</a><a href="#gap">The gap</a><a href="#index">Sentiment index</a><a href="#periods">Time periods</a><a href="#limits">Limits</a><a href="#privacy">Privacy and cost</a><a href="#health">Source health</a>
+  <a href="#sources">Sources</a><a href="#steps">How a page is made</a><a href="#labels">Reading the labels</a><a href="#checking">Checking the labels</a><a href="#ranking">Ranking</a><a href="#gap">The gap</a><a href="#index">Sentiment index</a><a href="#narratives">Narratives</a><a href="#periods">Time periods</a><a href="#limits">Limits</a><a href="#privacy">Privacy and cost</a><a href="#health">Source health</a>
 </nav>
 
 <section id="sources">
@@ -151,6 +151,13 @@
 <section id="index">
   <h2>Sentiment index</h2>
   <p>One number per day for how positive or critical the coverage of AI is, from −2 to +2, overall and for each angle. Each outlet's labels for the day are averaged first (confident labels count fully, medium-confidence ones {{ (a.sentiment.medium_weight * 100)|round|int }}%, unclear ones not at all), then the outlets are averaged, so prolific outlets don't dominate. A day needs at least {{ a.sentiment.min_outlets }} outlets to get a value. The front page shows the average for the period you're viewing; the <a href="{{ root }}sentiment/">index page</a> has the daily history and a table.</p>
+</section>
+
+<section id="narratives">
+  <h2>Narratives</h2>
+  <p>A story the press has covered on {{ a.narratives.min_days }} or more days in a row becomes a narrative: it gets a <a href="{{ root }}narratives/">page of its own</a> that tells it day by day, and it is listed on the front page while it is ongoing (covered today or yesterday). A story keeps the same identity as long as new articles keep joining it, so a narrative follows one story, not a topic. Days count in Stockholm time; news and commentary count, newsletters that summarize the day don't.</p>
+  <p>Each day shows how many outlets wrote about it, the stance of their articles and the average, and up to {{ a.narratives.headlines_per_day }} headlines from different outlets: the ones that share the most words with the day's other headlines, with a different stance each where possible. When the story was on the front page that morning, its line from the front page is there too. The line at the top compares the first and the latest day with at least three confident labels, so a single article can't swing it. No model writes anything for a narrative; it is all assembled from the labels and headlines already on the site.</p>
+  <p>Days before collection started come only from what the feeds still listed on the first day, so they are marked as partial.</p>
 </section>
 
 <section id="periods">

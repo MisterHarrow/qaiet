@@ -84,6 +84,7 @@ def about_context(store: Store, settings: Settings, sources: SourcesConfig, acco
         "gap": {"quiet_max_outlets": g.quiet_max_outlets, "builder_min_pct": round(g.builder_min_rank * 100),
                 "loud_min_outlets": g.loud_min_outlets, "floors": g.builder_floors},
         "sentiment": {"min_outlets": s.min_outlets, "medium_weight": s.confidence_weights.get("medium")},
+        "narratives": {"min_days": settings.narratives.min_days, "headlines_per_day": settings.narratives.headlines_per_day},
         "audit": audit,
         "audit_labels": sum(r["n"] for r in audit),
         "agreement": agreement,

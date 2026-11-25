@@ -393,9 +393,9 @@ summary:hover { color: var(--ink); }
 .empty .reset { margin-left: 0.5rem; padding: 0.3rem 0.7rem; color: var(--ink); background: none; border: 1px solid var(--rule); border-radius: 2px; font: 0.72rem var(--mono); text-transform: uppercase; letter-spacing: 0.06em; cursor: pointer; }
 
 /* Front-page sections: The gap and Rising */
-.gap, .rising { margin-top: 3.2rem; padding-top: 1.1rem; border-top: 2px solid var(--ink); }
-.gap h2, .rising-head h2 { margin: 0; font: 500 1.5rem/1.25 var(--serif); letter-spacing: -0.01em; }
-.gap h2::before, .rising-head h2::before { content: ""; display: inline-block; width: 0.5rem; height: 0.5rem; margin-right: 0.6rem; vertical-align: 0.15em; background: var(--signal); }
+.gap, .rising, .narratives { margin-top: 3.2rem; padding-top: 1.1rem; border-top: 2px solid var(--ink); }
+.gap h2, .rising-head h2, .narratives h2 { margin: 0; font: 500 1.5rem/1.25 var(--serif); letter-spacing: -0.01em; }
+.gap h2::before, .rising-head h2::before, .narratives h2::before { content: ""; display: inline-block; width: 0.5rem; height: 0.5rem; margin-right: 0.6rem; vertical-align: 0.15em; background: var(--signal); }
 .section-note { margin: 0.3rem 0 0; color: var(--muted); font-size: 0.88rem; }
 
 .gap-cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 2.5rem; margin-top: 1.3rem; }
@@ -546,3 +546,89 @@ summary:hover { color: var(--ink); }
 /* The map's tooltip opens below it: the map sits at the top of the page. */
 .geo-tip { top: calc(100% + 0.6rem); bottom: auto; right: 0; transform: translateY(-6px) scale(0.98); transform-origin: 85% 0; }
 .geo-tip::after { top: auto; bottom: 100%; right: 3rem; border-top-color: transparent; border-bottom-color: var(--ink); }
+
+/* Narratives: stories the press covered several days in a row. A row per narrative (front page, archive,
+   /narratives/), and a page per narrative that tells it day by day. */
+.vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+ol.narr-list { margin: 1rem 0 0; padding: 0; list-style: none; }
+.narr-list > li.narr-row { display: grid; grid-template-columns: 3.4rem minmax(0, 1fr) 10.5rem; gap: 0.5rem 1.3rem; align-items: center; margin: 0; padding: 0.85rem 0; border-top: 1px solid var(--wash); }
+.narr-list > li.narr-row:first-child { border-top: 0; }
+.narr-list p.narr-days { margin: 0; font: 600 0.6rem/1.1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-align: center; }
+.narr-days b { display: block; margin-bottom: 0.15rem; font: 700 1.6rem/1 var(--mono); letter-spacing: -0.02em; color: var(--ink); }
+.narr-list p.narr-head { margin: 0; font: 500 1.05rem/1.32 var(--serif); text-wrap: pretty; }
+.narr-head a { text-decoration: none; }
+.narr-head a:hover { color: var(--signal); }
+.narr-list .narr-text p.num { margin: 0.3rem 0 0; color: var(--muted); }
+.narr-text .sep, .nl .sep, .narrative .eyebrow .sep { margin: 0 0.45em; }
+.narr-mini { line-height: 0; }
+p.narr-more { margin: 0.5rem 0 0; }
+.narr-more a { color: var(--muted); }
+.narr-more a::after { content: " →"; }
+.narratives-group { margin-top: 2.2rem; }
+.narratives-group .eyebrow { padding-bottom: 0.45rem; border-bottom: 1px solid var(--rule); }
+.narratives-group .count { margin-left: 0.4em; font-weight: 400; color: var(--faint); letter-spacing: 0; }
+.prose p.narr-empty { margin-top: 2rem; padding: 1rem 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); color: var(--muted); }
+.prose p.narr-foot { margin-top: 2.4rem; max-width: 44rem; color: var(--muted); }
+
+/* The day-by-day chart: average stance as a line over outlets per day as bars. Colors from the tokens. */
+.nchart { display: block; width: 100%; height: auto; overflow: visible; }
+.nchart .zero { stroke: var(--neut); stroke-width: 1; stroke-dasharray: 3 4; }
+.nchart .grid { stroke: var(--rule); stroke-width: 1; opacity: 0.6; }
+.nchart .bar { fill: var(--rule); }
+.nchart .bar.partial { opacity: 0.5; }
+.nchart .line { fill: none; stroke: var(--ink); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.nchart.mini .line { stroke-width: 1.4; }
+.nchart .dot { stroke: var(--paper); stroke-width: 2; }
+.nchart.mini .dot { stroke-width: 1.4; }
+.nchart .d-2 { fill: var(--crit); }
+.nchart .d-1 { fill: var(--crit-soft); }
+.nchart .d0 { fill: var(--neut); }
+.nchart .d1 { fill: var(--pos-soft); }
+.nchart .d2 { fill: var(--pos); }
+.nchart .pt:hover .dot { r: 7; }
+.nchart .axis, .nchart .count, .nchart .day { fill: var(--faint); font: 13px var(--mono); }
+.nchart .count, .nchart .day { text-anchor: middle; }
+.nchart .count { fill: var(--muted); }
+
+/* A narrative's page */
+.narrative .eyebrow a { color: inherit; text-decoration-color: var(--rule); }
+.narrative .eyebrow a:hover { color: var(--signal); }
+.narrative p.narr-stripe { height: 5px; max-width: 44rem; margin: 1.2rem 0 0; }
+.narrative p.narr-facts { margin-top: 0.8rem; color: var(--muted); }
+.narr-figure { max-width: 36rem; margin: 1.8rem 0 0; }
+.narr-figure figcaption { margin-top: 0.4rem; font-size: 0.8rem; line-height: 1.45; color: var(--muted); }
+ol.nl { margin: 2.2rem 0 0; padding: 0; list-style: none; }
+.nl > li.nl-day { display: grid; grid-template-columns: 8.5rem minmax(0, 1fr) 12.5rem; gap: 0.5rem 1.8rem; margin: 0; padding: 1.15rem 0; border-top: 1px solid var(--rule); }
+.nl > li.nl-day:first-child { border-top: 2px solid var(--ink); }
+.nl > li.nl-day.nl-quiet-day { padding: 0.7rem 0; }
+.nl p.nl-date { margin: 0; font: 0.76rem/1.5 var(--mono); color: var(--muted); }
+.nl-date b { display: block; font-size: 0.92rem; color: var(--ink); }
+.nl-date span { display: block; }
+.nl-date .nl-note { margin-top: 0.15rem; font-size: 0.66rem; line-height: 1.35; color: var(--faint); }
+.nl p.nl-front { margin: 0; font: 500 1.08rem/1.4 var(--serif); text-wrap: pretty; }
+.nl-front .label { display: block; margin-bottom: 0.2rem; }
+.nl-rank { margin-right: 0.35em; font: 700 0.76rem var(--mono); }
+.nl p.nl-cov { margin: 0.35rem 0 0; font-size: 0.88rem; line-height: 1.5; color: var(--muted); }
+.nl ul.nl-heads { margin: 0; padding: 0; list-style: none; font-size: 0.92rem; line-height: 1.45; }
+.nl .nl-front ~ ul.nl-heads { margin-top: 0.75rem; }
+.nl-heads > li { margin: 0 0 0.4rem; padding-left: 1rem; text-indent: -1rem; overflow-wrap: anywhere; }
+.nl-heads .dot { margin-right: 0.45rem; }
+.nl-heads .outlet { margin-left: 0.25em; font: 0.7rem var(--mono); color: var(--muted); white-space: nowrap; }
+.nl-heads .country { color: var(--faint); }
+.nl p.num { margin: 0.1rem 0 0; color: var(--muted); }
+.nl p.nl-quiet { margin: 0; font-size: 0.9rem; color: var(--faint); }
+.nl p.nl-stripe { height: 6px; margin: 0.35rem 0 0.5rem; }
+.nl-stance b { color: var(--ink); }
+@media (max-width: 48rem) {
+  .nl > li.nl-day { grid-template-columns: minmax(0, 1fr); gap: 0.45rem; }
+  .nl-date b, .nl-date span { display: inline; margin-right: 0.5em; }
+  .nl-date .nl-note { display: block; }
+  .nl-stance { max-width: 16rem; }
+}
+@media (max-width: 38rem) {
+  .narr-list > li.narr-row { grid-template-columns: 2.6rem minmax(0, 1fr); align-items: start; }
+  .narr-mini { grid-column: 2; max-width: 11rem; }
+  .narr-days b { font-size: 1.35rem; }
+}
+.prose.narrative h1 { max-width: 50rem; font-size: 2.1rem; line-height: 1.18; text-wrap: pretty; }
+@media (max-width: 38rem) { .prose.narrative h1 { font-size: 1.65rem; } }

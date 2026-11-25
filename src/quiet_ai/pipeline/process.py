@@ -7,7 +7,7 @@ from datetime import datetime, timedelta
 
 from quiet_ai.config import ROOT, Settings, SourcesConfig
 from quiet_ai.llm.client import LLM
-from quiet_ai.pipeline import classify, cluster, edition, embed, gap, momentum, relevance, sentiment, summarize
+from quiet_ai.pipeline import classify, cluster, edition, embed, gap, momentum, narratives, relevance, sentiment, summarize
 from quiet_ai.store.db import Store, iso
 
 
@@ -109,15 +109,24 @@ def run_analysis(store: Store, settings: Settings, sources: SourcesConfig, now: 
     return AnalysisRun(views, news, builders, sums, wx, notes)
 
 
-def build_editions(store: Store, settings: Settings, sources: SourcesConfig, now: datetime, views: dict[str, PeriodView] | None = None) -> list[dict]:
-    """One edition per view, with The gap and the sentiment index for that period."""
+def build_editions(store: Store, settings: Settings, sources: SourcesConfig, now: datetime, views: dict[str, PeriodView] | None = None,
+                   narr: list[dict] | None = None) -> list[dict]:
+    """One edition per view, with The gap, the sentiment index for that period and the ongoing narratives."""
     import math
+
+    from quiet_ai.pipeline.archive import local_date
 
     views = views or period_views(store, settings, sources, now)
     hist = sentiment.history(store)
+    narr = narratives.detect(store, settings, sources, now) if narr is None else narr
+    ongoing = [narratives.compact(n) for n in narr if n["ongoing"]][: settings.narratives.front_max]
+    member_of = narratives.by_story(narr, local_date(now, settings.site.timezone))
     out = []
     for v in views.values():
         ed = edition.build(store, settings, sources, v.scores, v.rising, now, settings.analysis.top_stories, v.period)
+        ed["narratives"] = {"min_days": settings.narratives.min_days, "total": len(narr), "items": ongoing}
+        for st, sc in zip(ed["stories"], v.scores):  # which narrative a story (or a merged group) is part of
+            st["narrative"] = next((member_of[m] for m in sc.members if m in member_of), None)
         ed["gap"] = gap.compute(store, settings, sources, v.scores)
         days = max(1, math.ceil(v.period.hours / 24))
         values = sentiment.period_value(hist, days)

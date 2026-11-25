@@ -4,7 +4,7 @@ Guidance for coding agents working in this repository.
 
 ## What this is
 
-Qaiet Times (formerly "quiet ai"): a calm, text-first daily overview of AI. It shows how about 60 news outlets frame AI (each article labeled with an angle, a frame and a stance from −2 to +2), what builders are making (GitHub, Hugging Face, Hacker News, Bluesky), stories clustered across sources, "Rising", "The gap", a sentiment index, an archive and an About page.
+Qaiet Times (formerly "quiet ai"): a calm, text-first daily overview of AI. It shows how about 60 news outlets frame AI (each article labeled with an angle, a frame and a stance from −2 to +2), what builders are making (GitHub, Hugging Face, Hacker News, Bluesky), stories clustered across sources, "Rising", "The gap", narratives (stories covered several days in a row, told day by day), a sentiment index, an archive and an About page.
 
 - Live: https://news.b3njamin.ai/ (Vercel). The old https://misterharrow.github.io/qaiet/ forwards there; https://misterharrow.github.io/quiet-ai/ stopped working when the repo was renamed on 2026-11-25.
 - Repo: `MisterHarrow/qaiet` (renamed from `quiet-ai`), **public**. Everything pushed is public.
@@ -33,7 +33,7 @@ uv run pytest          # must pass before every push; no network, no model calls
 - `src/quiet_ai/`
   - `fetchers/`: one module per source type.
   - `http.py`: the only HTTP client (robots.txt, rate limits, retries).
-  - `pipeline/`: ingest, relevance, embed, cluster, classify, momentum, summarize, edition, gap, sentiment, archive. `process.py` wires them together.
+  - `pipeline/`: ingest, relevance, embed, cluster, classify, momentum, summarize, edition, gap, sentiment, narratives, archive. `process.py` wires them together.
   - `llm/client.py`: the Anthropic wrapper (structured outputs, cost log, budget cap). Prompts live in `llm/prompts/`.
   - `store/db.py`: SQLite with schema migrations.
   - `site/`: `build.py` renders the Jinja2 templates in `site/templates/`; `about.py` holds the About page's facts. `static/style.css` and `static/app.js` are the only assets.
@@ -85,7 +85,13 @@ uv run pytest          # must pass before every push; no network, no model calls
   - Story cards are a grid of 4, then 3, 2 and 1 per row as the screen narrows. A card's top edge is its stance mix.
   - The rule under the masthead on the front page is the stance mix of every article in that view.
   - Every page must work at 380px wide without horizontal scrolling.
-- **Charts** on `/sentiment/` are hand-written inline SVG (`build.sparkline`), colored from the CSS tokens. There is no chart library.
+- **Charts** on `/sentiment/` and the narrative pages are hand-written inline SVG (`build.sparkline`, `build.narrative_chart`), colored from the CSS tokens. There is no chart library.
+- **Narratives** (`pipeline/narratives.py`, `narratives:` in `settings.yaml`):
+  - A narrative is one story ID with news or commentary (not digests) on `min_days` (4) or more Stockholm days in a row. It is "ongoing" while covered today or yesterday.
+  - No model calls: each day comes from the items and labels, plus that morning's front-page line from the `editions` table. A model-written "how it evolved" summary was costed at about $0.01 per narrative per day; ask Benjamin before adding it.
+  - Days before collection began (from the feeds' backlog) count, marked partial.
+  - Pages: a front-page section after the story cards, `/narratives/`, and `/narratives/<story id>/`. Editions carry `narratives` (compact rows) and each story's `narrative` ({id, day, since}).
+  - The stamp for front-page cards in a narrative is on hold: Benjamin asked for a subtler ink than magenta and a paper-like depth before it ships.
 - **Name, favicon and wordmark:**
   - The public name is **Qaiet Times** (no ".ai"). The repo is `qaiet`; the Python package (`quiet_ai`), the database files (`quiet-ai.db`, the `db` release assets) and the crawler's user agent keep the old name.
   - The favicon, wordmark and site navigation live once in `site/templates/_brand.html.j2`; every page imports them.

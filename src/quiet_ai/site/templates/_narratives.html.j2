@@ -1,0 +1,16 @@
+{# One narrative as a row: days so far, the latest headline, dates, outlets, how the stance moved, and a small chart
+   of the average stance per day over outlets per day. Used on the front page, in the archive and on /narratives/. #}
+
+{% macro row(n, root) -%}
+<li class="narr-row">
+  <p class="narr-days"><b>{{ n.days }}</b> day{{ "s" if n.days != 1 }}</p>
+  <div class="narr-text">
+    <p class="narr-head"><a href="{{ root }}narratives/{{ n.id }}/">{{ n.headline }}</a></p>
+    <p class="num">{{ n.first|date_range(n.last) }}<span class="sep">·</span>{{ n.outlets }} outlet{{ "s" if n.outlets != 1 }}
+      {%- if n.first_mean is not none %}<span class="sep">·</span>stance {{ n.first_mean|signed }} → {{ n.last_mean|signed }}{% if n.trend %}, {{ n.trend }}{% endif %}
+      {%- elif n.mean is not none %}<span class="sep">·</span>stance {{ n.mean|signed }}{% endif -%}
+      <span class="sep">·</span>{% if n.ongoing %}ongoing{% else %}last covered {{ n.last|day_label }}{% endif %}</p>
+  </div>
+  <div class="narr-mini">{{ n.timeline|narrative_chart(true) }}</div>
+</li>
+{%- endmacro %}

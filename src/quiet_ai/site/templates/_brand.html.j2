@@ -17,7 +17,7 @@
 
 {% macro nav(root, current) -%}
 <nav class="sitenav" aria-label="Site">
-  {%- for key, href, label in [("today", root or "./", "Today"), ("index", root ~ "sentiment/", "Index"), ("archive", root ~ "archive/", "Archive"), ("about", root ~ "about/", "About")] %}
+  {%- for key, href, label in [("today", root or "./", "Today"), ("narratives", root ~ "narratives/", "Narratives"), ("index", root ~ "sentiment/", "Index"), ("archive", root ~ "archive/", "Archive"), ("about", root ~ "about/", "About")] %}
   <a href="{{ href }}"{% if key == current %} aria-current="page"{% endif %}>{{ label }}</a>
   {%- endfor %}
   <button type="button" class="theme-toggle" aria-pressed="false" hidden><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.5a6.5 6.5 0 0 1 0 13z" fill="currentColor"/></svg>Dark</button>

@@ -1,0 +1,67 @@
+<!doctype html>
+{% import "_brand.html.j2" as brand %}
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ n.headline|truncate(80) }} · Narratives · Qaiet Times</title>
+<meta name="description" content="A story covered {{ n.days }} days in a row, {{ n.first|date_range(n.last) }}, told day by day.">
+{{ brand.favicon() }}
+{{ brand.theme_boot() }}
+<link rel="stylesheet" href="{{ root }}static/style.css">
+</head>
+<body>
+<div class="page about">
+<header class="masthead">
+  <div class="masthead-top">
+    {{ brand.wordmark(root) }}
+    {{ brand.nav(root, "narratives") }}
+  </div>
+  <hr class="rule">
+</header>
+<main class="prose wide narrative">
+<p class="eyebrow"><a href="../">Narratives</a><span class="sep">·</span>{{ n.days }} days<span class="sep">·</span>{{ n.first|date_range(n.last) }}<span class="sep">·</span>{% if n.ongoing %}ongoing{% else %}ended{% endif %}</p>
+<h1>{{ n.headline }}</h1>
+{% if segments %}<p class="stripe narr-stripe" role="img" aria-label="{{ stance_text }}" title="{{ stance_text }}">{% for seg in segments %}<span class="seg st{{ seg.key }}" style="width:{{ seg.pct }}%"></span>{% endfor %}</p>{% endif %}
+<p class="narr-facts">{{ n.outlets }} outlet{{ "s" if n.outlets != 1 }} in {{ n.countries }} countr{{ "ies" if n.countries != 1 else "y" }} over {{ n.days }} days{% if n.covered < n.days %} ({{ n.days - n.covered }} without coverage){% endif %}.
+  {%- if n.mean is not none %} Average stance {{ n.mean|signed }}{% if n.stance_summary %}, {{ n.stance_summary }}{% endif %}.{% endif %}
+  {%- if n.first_mean is not none %} From {{ n.first_mean|signed }} on the first day to {{ n.last_mean|signed }} on the latest: {{ n.trend }}.{% endif %}</p>
+<figure class="narr-figure">
+  {{ n.timeline|narrative_chart }}
+  <figcaption>Line: each day's average stance, from −2 (strongly critical) to +2 (enthusiastic). Bars: outlets that day{% if n.timeline|selectattr("partial")|list %}; lighter bars are days before collection began, so partial{% endif %}.</figcaption>
+</figure>
+<ol class="nl">
+  {% for t in n.timeline %}
+  <li class="nl-day{% if t.quiet %} nl-quiet-day{% endif %}{% if t.partial %} nl-partial{% endif %}">
+    <p class="nl-date"><b>Day {{ loop.index }}</b> <span>{{ t.date|day_label }}</span>
+      {%- if t.partial %} <span class="nl-note">Before collection began: partial</span>{% elif t.today %} <span class="nl-note">Today, so far</span>{% endif %}</p>
+    <div class="nl-body">
+      {% if t.front %}<p class="nl-front"><span class="label">Front page that morning</span> <span class="nl-rank">{{ "%02d"|format(t.front.rank) }}</span> {{ t.front.headline }}</p>
+      {% if t.front.coverage %}<p class="nl-cov">{{ t.front.coverage }}</p>{% endif %}{% endif %}
+      {% if t.quiet %}
+      <p class="nl-quiet">No new coverage.</p>
+      {% else %}
+      <ul class="nl-heads">
+        {% for h in t.headlines %}
+        <li><span class="dot st{{ h.stance }}" title="{{ stance_names[h.stance] }}" aria-hidden="true"></span><span class="vh">{{ stance_names[h.stance] }}: </span><a href="{{ h.url }}" rel="noopener"{% if h.original %} title="{{ h.original }}" lang="{{ h.lang }}"{% endif %}>{{ h.title }}</a> <span class="outlet">{{ h.outlet }}{% if h.country %} <span class="country">{{ h.country }}</span>{% endif %}</span></li>
+        {% endfor %}
+      </ul>
+      {% if t.outlets > t.headlines|length %}<p class="num">and {{ t.outlets - t.headlines|length }} more outlet{{ "s" if t.outlets - t.headlines|length != 1 }}</p>{% endif %}
+      {% endif %}
+    </div>
+    {% if not t.quiet %}
+    <div class="nl-stance">
+      {% if t.segments %}<p class="stripe nl-stripe" role="img" aria-label="{{ t.stance_label }}" title="{{ t.stance_label }}">{% for seg in t.segments %}<span class="seg st{{ seg.key }}" style="width:{{ seg.pct }}%"></span>{% endfor %}</p>{% endif %}
+      <p class="num">{{ t.outlets }} outlet{{ "s" if t.outlets != 1 }}<span class="sep">·</span>{{ t.countries }} countr{{ "ies" if t.countries != 1 else "y" }}</p>
+      {% if t.mean is not none %}<p class="num">average <b>{{ t.mean|signed }}</b>{% if t.stance_summary %}<span class="sep">·</span>{{ t.stance_summary }}{% endif %}</p>{% endif %}
+    </div>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ol>
+<p class="num narr-foot">Each day lists up to three headlines from different outlets: the ones that share the most words with the day's other headlines, a different stance each where possible. <a href="{{ root }}about/#narratives">How narratives work</a>.</p>
+</main>
+</div>
+<script src="{{ root }}static/app.js" defer></script>
+</body>
+</html>

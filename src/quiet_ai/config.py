@@ -218,6 +218,13 @@ class SentimentSettings(_Model):
     recompute_days: int = 3             # late labels can still change the last few days
 
 
+class NarrativeSettings(_Model):
+    min_days: int = 4                   # press coverage on this many local days in a row makes a story a narrative
+    ongoing_days: int = 1               # still "ongoing" when last covered today or up to this many days ago
+    front_max: int = 6                  # ongoing narratives listed on the front page
+    headlines_per_day: int = 3          # headlines shown per day on a narrative's page
+
+
 class SiteSettings(_Model):
     out_dir: str = "site"
     editions_dir: str = "editions"
@@ -273,6 +280,7 @@ class Settings(_Model):
     schedule: ScheduleSettings = Field(default_factory=ScheduleSettings)
     gap: GapSettings = Field(default_factory=GapSettings)
     sentiment: SentimentSettings = Field(default_factory=SentimentSettings)
+    narratives: NarrativeSettings = Field(default_factory=NarrativeSettings)
 
 
 def _yaml(path: Path) -> dict:

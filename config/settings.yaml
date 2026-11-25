@@ -157,6 +157,15 @@ sentiment:
   min_outlets: 3
   recompute_days: 3
 
+narratives:
+  # A story the press (news and commentary; digests don't count) covered on min_days or more Stockholm days
+  # in a row becomes a narrative, with a page that tells it day by day. No model calls: the numbers come from
+  # the labels, the headlines from the day's articles and that morning's front page.
+  min_days: 4
+  ongoing_days: 1                 # "ongoing" while it was covered today or yesterday
+  front_max: 6                    # ongoing narratives listed on the front page
+  headlines_per_day: 3            # spread across the day's stance range
+
 site:
   out_dir: site                   # qa build writes here; git-ignored
   editions_dir: editions          # frozen daily editions (JSON), committed by the workflow

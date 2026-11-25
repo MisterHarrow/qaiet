@@ -21,6 +21,7 @@ from quiet_ai.pipeline import archive
 from quiet_ai.pipeline import sentiment as sentiment_mod
 from quiet_ai.pipeline import edition as edition_mod
 from quiet_ai.pipeline import momentum
+from quiet_ai.pipeline import narratives as narratives_mod
 from quiet_ai.pipeline import stories as story_views
 from quiet_ai.pipeline.ingest import build_tasks, ingest as run_ingest
 from quiet_ai.pipeline.process import build_editions, default_embedder, run_analysis, run_cluster
@@ -266,6 +267,7 @@ def _render_site(store: Store, settings, sources, now: datetime, editions: list[
     site_build.render_about(about_context(store, settings, sources, load_accounts(), now, gold=GOLD, crosscheck=crosscheck_path()), out, tz)
     site_build.render_archive(archive.load_frozen(ROOT / settings.site.editions_dir), out, tz)
     site_build.render_sentiment(sentiment_mod.history(store), out, tz)
+    site_build.render_narratives(narratives_mod.detect(store, settings, sources, now), out, tz, settings.narratives.min_days)
     site_build.render_404(out)
     site_build.write_host_config(out)
     return pages[0]

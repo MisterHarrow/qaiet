@@ -1,0 +1,41 @@
+<!doctype html>
+{% import "_brand.html.j2" as brand %}
+{% import "_narratives.html.j2" as nar %}
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Narratives · Qaiet Times</title>
+<meta name="description" content="Stories the press has covered several days in a row, told day by day.">
+{{ brand.favicon() }}
+{{ brand.theme_boot() }}
+<link rel="stylesheet" href="{{ root }}static/style.css">
+</head>
+<body>
+<div class="page about">
+<header class="masthead">
+  <div class="masthead-top">
+    {{ brand.wordmark(root) }}
+    {{ brand.nav(root, "narratives") }}
+  </div>
+  <hr class="rule">
+</header>
+<main class="prose wide">
+<h1>Narratives</h1>
+<p class="lede">Stories the press has covered {{ min_days }} days or more in a row. Each one has a page that tells it day by day: the headlines, how many outlets wrote about it, and how the stance moved.</p>
+{% if ongoing or ended %}
+{% for title, group in [("Ongoing", ongoing), ("Ended", ended)] if group %}
+<section class="narratives-group">
+  <h2 class="eyebrow">{{ title }} <span class="count">{{ group|length }}</span></h2>
+  <ol class="narr-list">{% for n in group %}{{ nar.row(n, root) }}{% endfor %}</ol>
+</section>
+{% endfor %}
+{% else %}
+<p class="narr-empty">No story has been covered {{ min_days }} days in a row yet. A story shows up here on the morning it reaches its {{ min_days }}th day, and stays listed after the coverage ends.</p>
+{% endif %}
+<p class="num narr-foot">Ongoing: covered today or yesterday. Stance runs from −2 (strongly critical) to +2 (enthusiastic); the trend compares the first and the latest day with at least three confident labels. <a href="{{ root }}about/#narratives">How narratives work</a>.</p>
+</main>
+</div>
+<script src="{{ root }}static/app.js" defer></script>
+</body>
+</html>

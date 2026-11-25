@@ -1,5 +1,6 @@
 <!doctype html>
 {% import "_brand.html.j2" as brand %}
+{% import "_narratives.html.j2" as nar %}
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -220,6 +221,16 @@
 {% endfor %}
 <p class="empty" hidden>No stories match this filter. <button type="button" class="reset">Show all</button></p>
 </section>
+
+{% set nv = e.narratives or {} %}
+{% if nv.get("items") %}
+<section class="narratives" aria-labelledby="narr-h">
+  <h2 id="narr-h">Narratives</h2>
+  <p class="section-note">Stories the press has covered {{ nv.min_days }} days or more in a row, and how their stance moved.</p>
+  <ol class="narr-list">{% for n in nv["items"] %}{{ nar.row(n, root) }}{% endfor %}</ol>
+  <p class="num narr-more"><a href="{{ root }}narratives/">All narratives{% if nv.total > nv["items"]|length %}, {{ nv.total }} in all{% endif %}</a></p>
+</section>
+{% endif %}
 
 {% set gp = e.gap or {} %}
 {% if gp.builders_not_press or gp.press_not_builders %}
