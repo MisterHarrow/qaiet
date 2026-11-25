@@ -137,3 +137,24 @@ def test_about_page_reads_config_and_health(tmp_path, settings):
     assert f"{ctx['counts']['outlets']} news outlets" in html and "1 of 2 sources answered normally" in html
     assert "CBC: robots blocked" in html and settings.analysis.news_prompt in html
     assert "<script" not in html and "<img" not in html
+
+
+def test_brand_is_the_same_on_every_page(tmp_path):
+    """The Qaiet Times wordmark, favicon and navigation come from one partial, so every page carries identical copies."""
+    e = edition()
+    front = build.render(e, tmp_path).read_text()
+    e2 = edition()
+    e2["frozen"] = {"date": "2026-11-24", "at": "2026-11-25T00:17:00+00:00"}
+    archive = build.render_archive([e2], tmp_path).read_text()
+    index = build.render_sentiment({"all": [{"date": "2026-11-25", "value": 0.1, "outlets": 22, "labels": 90}]}, tmp_path).read_text()
+    pages = [front, archive, index]
+    icons = {re.search(r'<link rel="icon" href="([^"]+)">', p).group(1) for p in pages}
+    assert len(icons) == 1 and next(iter(icons)).startswith("data:image/svg+xml,")
+    for p in pages:
+        assert '<span class="wm">Qaiet Times</span>' in p and 'class="sitenav"' in p
+        assert "Qaiet Times" in p.split("</title>")[0] and "quiet ai" not in p
+    assert '<a href="./" aria-current="page">Today</a>' in front
+    assert '<a href="../archive/" aria-current="page">Archive</a>' in archive
+    # The masthead rule is the stance mix of every article in the view; each card's top edge is its own.
+    assert '<p class="spectrum" role="img" aria-label="Stance of every article in this view: 1 critical, 2 neutral, 1 positive, 1 not labeled"' in front
+    assert '<p class="stripe" role="img"' in front and '<span class="rank">01</span>' in front

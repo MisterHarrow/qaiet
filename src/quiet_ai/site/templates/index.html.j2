@@ -1,11 +1,12 @@
 <!doctype html>
+{% import "_brand.html.j2" as brand %}
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>quiet ai · {% if frozen_date %}{{ frozen_date }}{% else %}{{ period.label }} · {{ date_long }}{% endif %}</title>
-<meta name="description" content="A quiet daily overview of AI: what happened, how it is framed, and what builders are making.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23f6f3ec'/%3E%3Cpath d='M8 20h16M8 14h11' stroke='%23302d28' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<title>Qaiet Times · {% if frozen_date %}{{ frozen_date }}{% else %}{{ period.label }} · {{ date_long }}{% endif %}</title>
+<meta name="description" content="Qaiet Times, a quiet daily overview of AI: what happened, how it is framed, and what builders are making.">
+{{ brand.favicon() }}
 <link rel="stylesheet" href="{{ root }}static/style.css">
 </head>
 <body>
@@ -13,15 +14,23 @@
 
 <header class="masthead">
   <div class="masthead-top">
-    <p class="wordmark"><a href="{{ root or './' }}">quiet ai</a></p>
-    <p class="dateline">{% if frozen_date %}Edition of {{ frozen_date }}{% else %}<time datetime="{{ e.generated_at }}">{{ date_long }}</time> <span class="sep">·</span> updated {{ updated }} {{ tz_name }}{% endif %} <span class="sep">·</span> <a href="{{ root }}sentiment/">Index</a> <span class="sep">·</span> <a href="{{ root }}archive/">Archive</a> <span class="sep">·</span> <a href="{{ root }}about/">About</a></p>
+    {{ brand.wordmark(root or './') }}
+    {{ brand.nav(root, "archive" if frozen_date else "today") }}
   </div>
-  {% if periods|length > 1 %}
-  <nav class="periods" aria-label="Time period">
-    <span class="periods-label">Last</span>
-    {% for p in periods %}<a href="{{ p.href or './' }}"{% if p.active %} aria-current="page"{% endif %}>{{ p.label }}</a>{% endfor %}
-  </nav>
+  {% if mix_segments %}
+  <p class="spectrum" role="img" aria-label="{{ mix_label }}" title="{{ mix_label }}">{% for seg in mix_segments %}<span class="seg st{{ seg.key }}" style="width:{{ seg.pct }}%"></span>{% endfor %}</p>
+  {% else %}
+  <hr class="rule">
   {% endif %}
+  <div class="masthead-meta">
+    {% if periods|length > 1 %}
+    <nav class="periods" aria-label="Time period">
+      <span class="periods-label">Last</span>
+      {% for p in periods %}<a href="{{ p.href or './' }}"{% if p.active %} aria-current="page"{% endif %}>{{ p.label }}</a>{% endfor %}
+    </nav>
+    {% endif %}
+    <p class="dateline">{% if frozen_date %}Edition of {{ frozen_date }}{% else %}<time datetime="{{ e.generated_at }}">{{ date_long }}</time> <span class="sep">·</span> updated {{ updated }} {{ tz_name }}{% endif %}</p>
+  </div>
   {% if frozen_date %}
   <p class="partial">The edition published on {{ frozen_date }} at {{ updated }} {{ tz_name }}. It no longer changes. <a href="{{ root }}">Today's overview</a></p>
   {% endif %}
@@ -66,19 +75,16 @@
 <section class="stories" aria-label="Top stories">
 {% for s in e.stories %}
 <article class="card" id="{{ s.id }}" data-track="{{ s.track or 'none' }}" data-terms="{{ s.terms|join('|') }}">
-  <p class="kicker"><span class="rank">{{ s.rank }}</span>{% if s.track %}<span class="track">{{ s.track }}</span>{% endif %}</p>
+  {% if s.segments %}
+  <p class="stripe" role="img" aria-label="{{ s.stance_label }}" title="{{ s.stance_label }}">{% for seg in s.segments %}<span class="seg st{{ seg.key }}" style="width:{{ seg.pct }}%"></span>{% endfor %}</p>
+  {% else %}
+  <p class="stripe stripe-none" aria-hidden="true"></p>
+  {% endif %}
+  <p class="kicker"><span class="rank">{{ "%02d"|format(s.rank) }}</span>{% if s.track %}<span class="track">{{ s.track }}</span>{% endif %}</p>
   <h2>{{ s.headline }}</h2>
 
   {% if s.outlets %}
-  <p class="meta">{{ s.outlets }} outlet{{ "s" if s.outlets != 1 }}<span class="sep">·</span>{{ s.countries }} countr{{ "ies" if s.countries != 1 else "y" }}</p>
-  {% if s.segments %}
-  <p class="stance-row">
-    <span class="stance" role="img" aria-label="{{ s.stance_label }}" title="{{ s.stance_label }}">
-      {% for seg in s.segments %}<span class="seg st{{ seg.key }}" style="width:{{ seg.pct }}%"></span>{% endfor %}
-    </span>
-    {% if s.stance_summary %}<span class="stance-summary">{{ s.stance_summary }}</span>{% endif %}
-  </p>
-  {% endif %}
+  <p class="meta"><span>{{ s.outlets }} outlet{{ "s" if s.outlets != 1 }}</span> <span class="sep">·</span> <span>{{ s.countries }} countr{{ "ies" if s.countries != 1 else "y" }}</span>{% if s.stance_summary %} <span class="sep">·</span> <span class="stance-summary">{{ s.stance_summary }}</span>{% endif %}</p>
   {% else %}
   <p class="meta">Builders only <span class="sep">·</span> no outlet coverage yet</p>
   {% endif %}

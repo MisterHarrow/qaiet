@@ -15,7 +15,7 @@ def stance_bar(stance: dict[str, int]) -> str:
 
 
 def render(console: Console, edition: dict, examples_per_stance: int = 2) -> None:
-    console.print(f"[bold]quiet-ai[/]  {edition['generated_at'][:16].replace('T', ' ')} UTC")
+    console.print(f"[bold]Qaiet Times[/]  {edition['generated_at'][:16].replace('T', ' ')} UTC")
     weather = edition.get("weather")
     console.print(f"[italic]{escape(weather)}[/]" if weather else "[dim](no weather report yet)[/]")
     if edition["llm"]["budget_reached"]:

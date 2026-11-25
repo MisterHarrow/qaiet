@@ -1,4 +1,4 @@
-"""qa: the quiet-ai command line."""
+"""qa: the Qaiet Times command line."""
 
 from __future__ import annotations
 
@@ -31,7 +31,7 @@ from quiet_ai.store.db import Store
 
 FIXTURES = ROOT / "tests" / "fixtures" / "http"
 
-app = typer.Typer(no_args_is_help=True, add_completion=False, help="quiet-ai: a quiet daily overview of AI.")
+app = typer.Typer(no_args_is_help=True, add_completion=False, help="Qaiet Times: a quiet daily overview of AI.")
 sources_app = typer.Typer(no_args_is_help=True, help="Inspect configured sources.")
 app.add_typer(sources_app, name="sources")
 console = Console()

@@ -1,11 +1,12 @@
 <!doctype html>
+{% import "_brand.html.j2" as brand %}
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>About · quiet ai</title>
-<meta name="description" content="How quiet ai works: where the news comes from, how stories are grouped, ranked and labeled, and what the labels mean.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23f6f3ec'/%3E%3Cpath d='M8 20h16M8 14h11' stroke='%23302d28' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<title>About · Qaiet Times</title>
+<meta name="description" content="How Qaiet Times works: where the news comes from, how stories are grouped, ranked and labeled, and what the labels mean.">
+{{ brand.favicon() }}
 <link rel="stylesheet" href="{{ root }}static/style.css">
 </head>
 <body>
@@ -13,12 +14,13 @@
 
 <header class="masthead">
   <div class="masthead-top">
-    <p class="wordmark"><a href="{{ root }}">quiet ai</a></p>
-    <p class="dateline"><a href="{{ root }}">Today's overview</a><span class="sep">·</span><a href="{{ root }}sentiment/">Index</a><span class="sep">·</span><a href="{{ root }}archive/">Archive</a><span class="sep">·</span><span aria-current="page">About</span></p>
+    {{ brand.wordmark(root) }}
+    {{ brand.nav(root, "about") }}
   </div>
+  <hr class="rule">
 </header>
 
-<main class="prose">
+<main class="prose doc">
 <h1>How this site works</h1>
 <p class="lede">Every morning around {{ a.publish_at }} Stockholm time, this page answers three questions: what happened in AI, how the press is framing it, and what people who build AI are actually making. It tries to do that in about five minutes of reading, without ads or noise.</p>
 

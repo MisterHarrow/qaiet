@@ -44,9 +44,9 @@ def stance_segments(stance: dict[str, int]) -> list[dict]:
     return [{"key": k, "n": stance[k], "pct": round(100 * stance[k] / total, 2), "name": STANCE_NAMES[k]} for k in keys if stance.get(k)]
 
 
-def stance_label(stance: dict[str, int]) -> str:
+def stance_label(stance: dict[str, int], prefix: str = "Stance of the coverage") -> str:
     parts = [f"{stance[k]} {STANCE_NAMES[k].lower()}" for k in ["-2", "-1", "0", "1", "2", "unclear", "unlabeled"] if stance.get(k)]
-    return "Stance of the coverage: " + ", ".join(parts) if parts else "No stance labels"
+    return f"{prefix}: " + ", ".join(parts) if parts else "No stance labels"
 
 
 def _long_date(dt: datetime) -> str:
@@ -70,14 +70,19 @@ def render(edition: dict, out_dir: Path, tz: str = "Europe/Stockholm", periods: 
     root = "../" * rel.count("/")
     zone = ZoneInfo(tz)
     local = datetime.fromisoformat(edition["generated_at"]).astimezone(zone)
+    mix: dict[str, int] = {}
     for s in edition["stories"]:
         s["segments"] = stance_segments(s["stance"])
         s["stance_label"] = stance_label(s["stance"])
+        for k, n in s["stance"].items():
+            mix[k] = mix.get(k, 0) + n
     since = edition.get("data_since")
     frozen = edition.get("frozen")
     html = _env().get_template("index.html.j2").render(
         frozen_date=_long_date(datetime.fromisoformat(frozen["date"])) if frozen else None,
         e=edition,
+        mix_segments=stance_segments(mix),  # the masthead rule: every article in this view, by stance
+        mix_label=stance_label(mix, "Stance of every article in this view"),
         root=root,
         period=period,
         periods=[{**p, "href": root + p["path"], "active": p["key"] == period["key"]} for p in periods],
@@ -137,8 +142,8 @@ def render_archive(editions: list[dict], out_dir: Path, tz: str = "Europe/Stockh
 def sparkline(points: list[dict], label: str) -> Markup:
     """One series of the sentiment index as a small SVG line chart: fixed -1..+1 scale (wider if
     a value falls outside), zero line, 2px line, 8px markers, hover values via <title>, and the
-    latest value labeled at the end. Colors come from CSS (currentColor / custom properties)."""
-    w, h, pad_l, pad_r, pad_y = 640, 120, 8, 64, 12
+    latest value labeled at the end, and the area to zero shaded by sign. Colors come from CSS custom properties."""
+    w, h, pad_l, pad_r, pad_y = 480, 120, 8, 56, 12
     if not points:
         return Markup(f'<p class="nodata">No {label.lower()} values yet.</p>')
     lim = max(1.0, max(abs(p["value"]) for p in points))
@@ -152,6 +157,13 @@ def sparkline(points: list[dict], label: str) -> Markup:
     parts.append(f'<text class="axis" x="{w - pad_r + 6}" y="{y(-lim) + 4:.1f}">−{lim:g}</text>')
     if n > 1:
         pts = " ".join(f"{x(i):.1f},{y(p['value']):.1f}" for i, p in enumerate(points))
+        # Shade between the line and zero: sage above (positive), umber below (critical).
+        y0, cid = y(0), "spark-" + "".join(c if c.isalnum() else "-" for c in label.lower())
+        area = f"{x(0):.1f},{y0:.1f} {pts} {x(n - 1):.1f},{y0:.1f}"
+        parts.append(f'<defs><clipPath id="{cid}-up"><rect x="0" y="0" width="{w}" height="{y0:.1f}"/></clipPath>'
+                     f'<clipPath id="{cid}-dn"><rect x="0" y="{y0:.1f}" width="{w}" height="{h - y0:.1f}"/></clipPath></defs>')
+        parts.append(f'<polygon class="area-pos" clip-path="url(#{cid}-up)" points="{area}"/>')
+        parts.append(f'<polygon class="area-neg" clip-path="url(#{cid}-dn)" points="{area}"/>')
         parts.append(f'<polyline class="line" points="{pts}"/>')
     for i, p in enumerate(points):
         val = f"{p['value']:+.2f}".replace("-", "−")

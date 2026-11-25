@@ -1,6 +1,6 @@
-# quiet-ai
+# Qaiet Times
 
-A calm, text-first page that answers once a day: what happened in AI, how is it being framed, and what are builders actually making?
+Qaiet Times (the repo and Python package are still called `quiet-ai`) is a calm, text-first page that answers once a day: what happened in AI, how is it being framed, and what are builders actually making?
 
 Status: **M5 (automation)**, live at https://misterharrow.github.io/quiet-ai/. Sources are fetched, filtered for AI relevance, grouped into stories, labeled (track, frame, stance, evidence), ranked by momentum, summarized and rendered as a static page, published every morning at 06:30 Stockholm time by GitHub Actions (sources are collected every 2 hours). Notes per milestone: [M0 plan and sources](docs/m0-report.md), [M2 relevance and clustering](docs/m2-notes.md), [M3 labels, momentum, costs](docs/m3-notes.md), [M4 site](docs/m4-notes.md), [M5 automation](docs/m5-notes.md).
 

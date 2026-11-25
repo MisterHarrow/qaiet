@@ -4,7 +4,7 @@ Guidance for coding agents working in this repository.
 
 ## What this is
 
-quiet ai: a calm, text-first daily overview of AI. It shows how about 60 news outlets frame AI (each article labeled with an angle, a frame and a stance from −2 to +2), what builders are making (GitHub, Hugging Face, Hacker News, Bluesky), stories clustered across sources, "Rising", "The gap", a sentiment index, an archive and an About page.
+Qaiet Times (formerly "quiet ai"): a calm, text-first daily overview of AI. It shows how about 60 news outlets frame AI (each article labeled with an angle, a frame and a stance from −2 to +2), what builders are making (GitHub, Hugging Face, Hacker News, Bluesky), stories clustered across sources, "Rising", "The gap", a sentiment index, an archive and an About page.
 
 - Live: https://misterharrow.github.io/quiet-ai/ (GitHub Pages)
 - Repo: `MisterHarrow/quiet-ai`, **public**. Everything pushed is public.
@@ -69,18 +69,24 @@ uv run pytest          # must pass before every push; no network, no model calls
 
 ## Design
 
+- **Direction:** "a cyberpunk Financial Times that's still clean" (Benjamin, 2026-11-25). Light mode is salmon newsprint; dark mode is a soft warm graphite with the same beige undertone (not black).
 - **Tokens** are CSS custom properties on `:root` in `src/quiet_ai/site/static/style.css`.
   - Dark mode is a second set under `@media (prefers-color-scheme: dark)`. Design and check both.
   - Reuse the tokens rather than hardcoding colors.
-- **Type:** system serif (`--serif`) for headlines, system sans (`--sans`) for body text.
-- **Stance colors** are umber (critical) and sage (positive), never red/blue: stance has nothing to do with left and right.
+  - Text colors (`--muted`, `--faint`) must reach 4.5:1 on `--paper` and `--card`.
+- **Type:** an elegant installed serif (`--display`) for the wordmark only, system serif (`--serif`) for headlines, system sans (`--sans`) for reading text, system mono (`--mono`) for data, labels, navigation.
+- **Colors:**
+  - Stance colors are umber (critical) and sage (positive), never red/blue: stance has nothing to do with left and right.
+  - `--signal` (magenta) is the one brand color: active navigation, focus, section markers. It never encodes data.
 - **Layout:**
-  - Story cards are a grid of 4, then 3, 2 and 1 per row as the screen narrows.
+  - Story cards are a grid of 4, then 3, 2 and 1 per row as the screen narrows. A card's top edge is its stance mix.
+  - The rule under the masthead on the front page is the stance mix of every article in that view.
   - Every page must work at 380px wide without horizontal scrolling.
 - **Charts** on `/sentiment/` are hand-written inline SVG (`build.sparkline`), colored from the CSS tokens. There is no chart library.
-- **Favicon and wordmark:**
-  - The favicon is repeated inline in each of the four templates; keep them identical.
-  - The wordmark is plain text, "quiet ai".
+- **Name, favicon and wordmark:**
+  - The public name is **Qaiet Times** (no ".ai"). The repo, package, database files and the crawler's user agent keep `quiet-ai`.
+  - The favicon, wordmark and site navigation live once in `site/templates/_brand.html.j2`; every page imports them.
+  - The mark is the stance scale as five bars, umber to sage. The wordmark is "Qaiet Times" in `--display` (Baskerville, then Baskerville Old Face on Windows, then the system serif), plain ink with no highlight.
 - **Copy:** plain, specific, short sentences; calm, no hype.
 - **Check changes in the browser:** run `qa serve`, then look at light and dark mode, a desktop width and 380px.
 
