@@ -20,7 +20,7 @@
 
 <main class="prose">
 <h1>How this site works</h1>
-<p class="lede">Every morning at {{ a.publish_at }} Stockholm time, this page answers three questions: what happened in AI, how the press is framing it, and what people who build AI are actually making. It tries to do that in about five minutes of reading, without ads or noise.</p>
+<p class="lede">Every morning around {{ a.publish_at }} Stockholm time, this page answers three questions: what happened in AI, how the press is framing it, and what people who build AI are actually making. It tries to do that in about five minutes of reading, without ads or noise.</p>
 
 <nav class="toc" aria-label="On this page">
   <a href="#sources">Sources</a><a href="#steps">How a page is made</a><a href="#labels">Reading the labels</a><a href="#checking">Checking the labels</a><a href="#ranking">Ranking</a><a href="#gap">The gap</a><a href="#index">Sentiment index</a><a href="#periods">Time periods</a><a href="#limits">Limits</a><a href="#privacy">Privacy and cost</a><a href="#health">Source health</a>
@@ -56,7 +56,7 @@
 
 <section id="steps">
   <h2>How a page is made</h2>
-  <p>Sources are collected every {{ a.collect_every_hours }} hours through the day and night, so nothing scrolls off a busy feed before we see it. Every morning at {{ a.publish_at }} the rest of the chain runs:</p>
+  <p>Sources are collected every {{ a.collect_every_hours }} hours through the day and night, so nothing scrolls off a busy feed before we see it. Every morning from {{ a.publish_at }} (GitHub sometimes starts scheduled runs late, so it can be a little later) the rest of the chain runs:</p>
   <ol class="steps">
     <li><strong>Collect.</strong> Every source is fetched politely: one request at a time per site, a clear name in every request, and no refetching of feeds that haven't changed.</li>
     <li><strong>Keep what is about AI.</strong> Items from AI-only sources are kept as they are. Others are checked for AI terms in five languages, and the unclear cases are decided by a small language model ({{ a.item_model }}). Headlines in other languages are translated into English for display; the original stays one hover away.</li>

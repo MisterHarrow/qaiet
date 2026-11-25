@@ -76,7 +76,7 @@ uv run qa ingest --record        # live fetch, writes fixtures, stores nothing
 `.github/workflows/run.yml` has two kinds of run (`.github/scripts/plan.sh` decides which):
 
 - **collect**, every 2 hours: restore the database, `uv run qa ingest`, save it. No model calls, no deploy.
-- **publish**, every morning at 06:30 Stockholm (the cron fires at 04:30 and 05:30 UTC and keeps the one that is 06:30 local; manual runs publish by default):
+- **publish**, every morning from 06:30 Stockholm; manual runs publish by default. GitHub drops scheduled runs under load, so no single cron is trusted: any scheduled run publishes once it is past 06:30 local and the live `edition.json` is older than that. A morning cron (every 20 minutes, 04:10–09:50 UTC, covering winter and summer time) retries, and the 2-hourly collect run is the backstop. A publish run does:
 
 1. Restores `data/quiet-ai.db` from the `db` release (gzipped asset).
 2. `uv run qa run`: ingest, stories, labels, summaries, the site, plus:

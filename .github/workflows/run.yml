@@ -3,13 +3,17 @@ name: run
 # Two kinds of run share this workflow and the database:
 #   collect - every 2 hours: fetch every source and save the database. No model calls, no deploy.
 #             Keeps high-volume feeds complete (some list fewer items than they publish in a day).
-#   publish - every morning at 06:30 Stockholm: collect, then relevance, stories, labels,
+#   publish - every morning from 06:30 Stockholm: collect, then relevance, stories, labels,
 #             summaries, the site and the daily edition; save, commit editions, deploy to Pages.
+# GitHub drops scheduled runs under load, so .github/scripts/plan.sh doesn't trust any single
+# cron: any scheduled run publishes once it's past 06:30 in Stockholm and the live page doesn't
+# have today's edition yet. The morning cron retries every 20 minutes (UTC 04-09 covers 06:30
+# local in both winter and summer time); otherwise those runs skip in a few seconds.
 # Manual runs (Actions tab) publish by default; pick "collect" to only fetch.
 on:
   schedule:
-    - cron: "17 */2 * * *"   # collect: :17 past every second hour (UTC)
-    - cron: "30 4,5 * * *"   # publish: 04:30 and 05:30 UTC; plan.sh keeps the one that is 06:30 in Stockholm
+    - cron: "17 */2 * * *"          # collect (and publish, if this morning's edition is still missing)
+    - cron: "10,30,50 4-9 * * *"    # morning: publish when due, otherwise skip
   workflow_dispatch:
     inputs:
       mode:
@@ -35,13 +39,17 @@ jobs:
     steps:
       - uses: actions/checkout@v7
         with:
-          sparse-checkout: .github/scripts
+          sparse-checkout: |
+            .github/scripts
+            config/settings.yaml
+          sparse-checkout-cone-mode: false
       - id: plan
         env:
           EVENT: ${{ github.event_name }}
           SCHEDULE: ${{ github.event.schedule }}
           INPUT_MODE: ${{ inputs.mode }}
-          PUBLISH_CRON: "30 4,5 * * *"
+          COLLECT_CRON: "17 */2 * * *"
+          SITE_URL: https://misterharrow.github.io/quiet-ai
         run: |
           mode=$(.github/scripts/plan.sh)
           echo "mode=$mode" >> "$GITHUB_OUTPUT"

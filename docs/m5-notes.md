@@ -54,3 +54,16 @@ Now:
 - **Weather lines** refresh when a view's top 3 stories change, or at most every 6 hours otherwise.
 
 Verified on the next run: **$0.019** (2 summaries, 3 weather lines, a few Haiku batches). With one publish a day (a full day of new items to label and more stories changed), expect roughly $0.05–0.15 a day, **about $2–5 a month**. The settings are `analysis.resummarize_growth` and `analysis.weather_min_hours`. `qa costs` shows the month's pace; the cap still stops all LLM steps at $30.
+
+## Schedule fix (25 November)
+
+The first scheduled morning never published. From the schedule change (24 Nov, 12:51 UTC) to the next morning, GitHub fired only 1 of 11 scheduled triggers (a collect run at 00:29 Stockholm) and dropped both publish slots, so the site still showed the afternoon's manual edition. GitHub says scheduled runs "may be delayed or dropped" under load; nothing in the pipeline failed.
+
+Publishing no longer depends on one cron firing. `.github/scripts/plan.sh` now reads the live `edition.json` on every scheduled run. Once it is past 06:30 in Stockholm and the live front page was generated before today's 06:30, the run publishes. Otherwise a morning run skips and a collect run collects.
+
+- The morning cron fires every 20 minutes from 04:10 to 09:50 UTC, which covers 06:30 local in winter and summer time. Skipped runs take a few seconds of runner time, which is free for a public repo.
+- The 2-hourly collect run is the backstop: if every morning trigger is dropped, the first collect run after 06:30 publishes instead.
+- If the live page can't be read, a scheduled run doesn't publish blind.
+- The publish time is read from `config/settings.yaml` (`schedule.publish_at`).
+- Concurrency queues overlapping runs; the queued run then sees today's edition and skips.
+- `tests/test_plan.py` covers the cases.
