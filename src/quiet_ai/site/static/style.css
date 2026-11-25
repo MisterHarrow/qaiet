@@ -275,6 +275,8 @@ summary:hover { color: var(--ink); }
 .what { margin: 0.25rem 0 0; font-size: 0.9rem; }
 .why-it { margin: 0.15rem 0 0; font-size: 0.85rem; color: var(--muted); }
 .rising .num { margin: 0.25rem 0 0; }
+.num.talk a { color: var(--muted); text-decoration-color: var(--rule); }
+.num.talk a:hover { color: var(--signal); }
 
 /* Inner pages: Index, Archive, About */
 .about .masthead { margin-bottom: 2.6rem; }

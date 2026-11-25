@@ -11,6 +11,8 @@ from datetime import datetime, timedelta
 from typing import Any
 
 from quiet_ai.config import PeriodSettings, Settings, SourcesConfig
+from quiet_ai.pipeline import mentions as mentions_mod
+from quiet_ai.pipeline.cluster import link_keys
 from quiet_ai.pipeline.momentum import RisingItem, StoryScore
 from quiet_ai.pipeline.stories import representative_title, source_names
 from quiet_ai.store.db import Store, iso
@@ -81,7 +83,8 @@ def _stance_key(m: dict) -> str:
     return str(m["stance"])
 
 
-def story_entry(store: Store, sources: SourcesConfig, score: StoryScore, rank: int) -> dict[str, Any]:
+def story_entry(store: Store, sources: SourcesConfig, score: StoryScore, rank: int,
+                mentions: mentions_mod.Index = mentions_mod.EMPTY) -> dict[str, Any]:
     names = source_names(sources)
     feeds = {f.id: f for f in sources.feeds}
     countries = {f.id: f.country for f in sources.feeds} | {g.id: g.country for g in sources.gdelt_outlets}
@@ -125,6 +128,9 @@ def story_entry(store: Store, sources: SourcesConfig, score: StoryScore, rank: i
         "official": [{"title": m["title"], "url": m["url"], "source": names.get(m["source"], m["source"])} for m in members if m["kind"] == "lab"],
         "digests": sorted({names.get(m["source"], m["source"]) for m in members if m["kind"] == "newsletter" and feeds.get(m["source"]) and feeds[m["source"]].role == "digest"}),
     }
+    # X posts and Reddit threads a recap (AINews) linked next to one of this story's URLs.
+    talk = mentions.lookup(set().union(*(link_keys(m["kind"], m["url"], m["extra"]) for m in members)) if members else set(), names)
+    builders |= {"x": talk["x"], "reddit": talk["reddit"], "via": talk["via"]}
     headline = (summary_data or {}).get("headline") or representative_title(store, score.members[0]) or score.story_id
     return {
         "id": score.story_id,
@@ -175,6 +181,8 @@ def builders_line(b: dict) -> str:
         parts.append(f"{b['social']} post{'s' if b['social'] > 1 else ''}")
     if b["digests"]:
         parts.append("in " + ", ".join(b["digests"][:3]))
+    if talk := mentions_mod.line({"x": b.get("x", []), "reddit": b.get("reddit", []), "via": b.get("via", [])}):
+        parts.append(talk)
     return " · ".join(parts)
 
 
@@ -187,14 +195,17 @@ RISING_CATEGORIES = [
 _DEFAULT_CATEGORY = {"repo": "tool/library", "model": "model", "dataset": "dataset", "space": "demo/app", "paper": "research paper"}
 
 
-def rising_entries(store: Store, rising: list[RisingItem]) -> list[dict]:
+def rising_entries(store: Store, rising: list[RisingItem], mentions: mentions_mod.Index = mentions_mod.EMPTY,
+                   names: dict[str, str] | None = None) -> list[dict]:
     out = []
     for r in rising:
+        talk = mentions.lookup(link_keys(r.kind, r.url, r.extra), names)
         lab = store.conn.execute("SELECT data FROM item_labels WHERE item_id = ?", (r.item_id,)).fetchone()
         data = json.loads(lab["data"]) if lab else {}
         category = data.get("kind") or _DEFAULT_CATEGORY.get(r.kind, "tool/library")
         out.append({"id": r.item_id, "kind": r.kind, "category": category, "title": r.title, "url": r.url, "signal": r.signal,
-                    "score": r.score, "what": data.get("what"), "why": data.get("why"), "story_id": r.story_id})
+                    "score": r.score, "what": data.get("what"), "why": data.get("why"), "story_id": r.story_id,
+                    "talk": talk if (talk["x"] or talk["reddit"]) else None})
     return out
 
 
@@ -243,7 +254,8 @@ def build(store: Store, settings: Settings, sources: SourcesConfig, scores: list
     terms = top_terms(store, sources, settings, now, period.hours)
     keys = {t["key"] for t in terms}
     aliases = {k.lower(): v for k, v in settings.site.term_aliases.items()}
-    stories = [story_entry(store, sources, s, n) for n, s in enumerate(scores[:top], 1)]
+    talk = mentions_mod.load(store, [f.id for f in sources.feeds if f.mentions and f.enabled], now, period.hours)
+    stories = [story_entry(store, sources, s, n, talk) for n, s in enumerate(scores[:top], 1)]
     for st in stories:
         st["terms"] = sorted({term_key(e, aliases) for e in st["entities"]} & keys)
         for t in terms:
@@ -256,7 +268,7 @@ def build(store: Store, settings: Settings, sources: SourcesConfig, scores: list
         "weather": json.loads(weather["data"])["sentence"] if weather else None,
         "terms": terms,
         "stories": stories,
-        "rising": (rising_list := rising_entries(store, rising)),
+        "rising": (rising_list := rising_entries(store, rising, talk, source_names(sources))),
         "rising_groups": rising_groups(rising_list),
         "llm": {"month_spend_usd": round(spend, 4), "budget_usd": settings.llm.monthly_budget_usd,
                 "budget_reached": spend >= settings.llm.monthly_budget_usd},

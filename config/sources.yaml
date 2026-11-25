@@ -625,6 +625,7 @@ newsletters:
   notes: 'Keep only items titled ''[AINews] ...''. Daily recap of AI X/Reddit/Discord: the free stand-in for X builder chatter.'
   include_title: ^\[AINews\]
   ai_focused: true
+  mentions: true  # keep the X posts and Reddit threads each recap bullet links, next to its other URLs
 - id: tldrai
   name: TLDR AI
   feeds:

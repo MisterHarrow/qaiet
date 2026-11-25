@@ -99,7 +99,7 @@
   <p class="builders"><span class="label">Builders</span> {{ s.builders_line }}</p>
   {% endif %}
 
-  {% set more = s.coverage or b.hn or b.repos or b.models or b.papers or b.official %}
+  {% set more = s.coverage or b.hn or b.repos or b.models or b.papers or b.official or b.x or b.reddit %}
   {% if more %}
   <details>
     <summary aria-controls="{{ s.id }}-more">{% if s.coverage %}Headlines by stance{% else %}Links{% endif %}</summary>
@@ -132,7 +132,7 @@
       </ul>
     </div>
     {% endfor %}
-    {% if b.hn or b.repos or b.models or b.papers or b.official %}
+    {% if b.hn or b.repos or b.models or b.papers or b.official or b.x or b.reddit %}
     <div class="group">
       <h3>Builder links</h3>
       <ul>
@@ -141,6 +141,8 @@
         {% for r in b.repos[:5] %}<li><span class="outlet">GitHub <span class="num">{{ r.stars|thousands }} stars</span></span> <a href="{{ r.url }}" rel="noopener">{{ r.title }}</a></li>{% endfor %}
         {% for m in b.models[:5] %}<li><span class="outlet">{{ m.source }}</span> <a href="{{ m.url }}" rel="noopener">{{ m.title }}</a></li>{% endfor %}
         {% for p in b.papers[:3] %}<li><span class="outlet">Paper</span> <a href="{{ p.url }}" rel="noopener">{{ p.title }}</a></li>{% endfor %}
+        {% for r in (b.reddit or [])[:4] %}<li><span class="outlet">r/{{ r.sub }}{% if r.activity %} <span class="num">{{ r.activity|thousands }} activity</span>{% endif %} <span class="country">via {{ b.via|join(", ") }}</span></span> <a href="{{ r.url }}" rel="noopener">{{ r.title or "Reddit thread" }}</a></li>{% endfor %}
+        {% if b.x %}<li><span class="outlet">X <span class="num">{{ b.x|length }} post{{ "s" if b.x|length != 1 }}</span> <span class="country">via {{ b.via|join(", ") }}</span></span> {% for p in b.x[:8] %}<a href="{{ p.url }}" rel="noopener">@{{ p.account }}</a>{% if not loop.last %}, {% endif %}{% endfor %}{% if b.x|length > 8 %} and {{ b.x|length - 8 }} more{% endif %}</li>{% endif %}
       </ul>
     </div>
     {% endif %}
@@ -202,6 +204,7 @@
           {% if r.what %}<p class="what">{{ r.what }}</p>{% endif %}
           {% if r.why %}<p class="why-it">{{ r.why }}</p>{% endif %}
           <p class="num">{{ r.signal }}</p>
+          {% if r.talk %}<p class="num talk">Discussed{% if r.talk.reddit %} on {% for t in r.talk.reddit[:2] %}<a href="{{ t.url }}" rel="noopener">r/{{ t.sub }}</a>{% if t.activity %} ({{ t.activity|thousands }}){% endif %}{% if not loop.last %}, {% endif %}{% endfor %}{% endif %}{% if r.talk.x %}{% if r.talk.reddit %} and{% endif %} on X by {% for p in r.talk.x[:3] %}<a href="{{ p.url }}" rel="noopener">@{{ p.account }}</a>{% if not loop.last %}, {% endif %}{% endfor %}{% if r.talk.x|length > 3 %} +{{ r.talk.x|length - 3 }}{% endif %}{% endif %}, via {{ r.talk.via|join(", ") }}</p>{% endif %}
         </li>
         {% endfor %}
       </ol>

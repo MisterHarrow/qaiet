@@ -10,6 +10,7 @@ import feedparser
 
 from quiet_ai.config import FeedSource, IngestSettings
 from quiet_ai.fetchers.base import Context, Task
+from quiet_ai.pipeline import mentions
 from quiet_ai.store.models import Item
 from quiet_ai.text import canonical_url, clean_text, from_struct, url_id
 
@@ -62,6 +63,10 @@ def parse_feed(body: bytes, src: FeedSource, now: datetime, cfg: IngestSettings)
             extra = _aggregator_extra(e)
         if src.role:
             extra["role"] = src.role
+        if src.mentions:  # only links and counts are kept, never the recap's text
+            found = mentions.extract((e.get("content") or [{}])[0].get("value", ""))
+            if found:
+                extra["mentions"] = found
         url = canonical_url(link)
         items.append(
             Item(

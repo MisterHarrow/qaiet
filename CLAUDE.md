@@ -47,6 +47,7 @@ uv run pytest          # must pass before every push; no network, no model calls
 ## Rules that don't bend
 
 - **Sources:** free only. No X/Twitter and nothing that needs payment from Benjamin. The Anthropic API is the only cost.
+  - Never fetch x.com or reddit.com (robots.txt blocks us; Reddit API access was requested 2026-11-25 and is pending). X posts and Reddit threads appear only second-hand: links the AINews recap puts next to a story's or project's URL (`mentions: true` on a source, `pipeline/mentions.py`). Only the links, account, subreddit, thread title and activity count are kept; never the recap's text, and none of it goes to a model.
 - **Courtesy to publishers:**
   - Respect robots.txt (RFC 9309; unreachable means disallow).
   - Never work around a block (403/429): no proxies, no browser user agents.
