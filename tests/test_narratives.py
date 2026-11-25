@@ -153,6 +153,16 @@ def test_date_labels():
     assert build.day_label("2026-11-21") == "Sat 21 Nov"
 
 
+def test_narrative_chart_labels_at_most_seven_days_apart_and_the_last():
+    start = datetime(2026, 11, 1)
+    for n in range(1, 31):
+        tl = [{"date": (start + timedelta(days=i)).strftime("%Y-%m-%d"), "mean": 0.0, "outlets": 1} for i in range(n)]
+        days = [int(m) for m in re.findall(r'<text class="day" x="[\d.]+" y="\d+">(\d+) Nov</text>', str(build.narrative_chart(tl)))]
+        assert len(days) <= 7 and days[-1] == n  # the last day is always labeled
+        gaps = [b - a for a, b in zip(days, days[1:])]
+        assert not gaps or min(gaps) >= max(gaps[:-1] or gaps)  # no label crowds the last one
+
+
 def test_seal_on_card_rows_and_page(tmp_path, settings):
     st = Store(":memory:")
     fill(st)

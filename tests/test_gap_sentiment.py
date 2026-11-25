@@ -78,6 +78,8 @@ def test_sentiment_page_and_front_page_line(tmp_path):
     assert '<p class="chart-note">Every labeled article, whatever its angle.</p>' in html
     assert "<title>2026-11-24: −0.30 (20 outlets, 80 labels)</title>" in html
     assert "<table" in html and "://" not in html.replace("http://www.w3.org/2000/svg", "").split("<body>")[0].split("<link")[0]
+    # The table's day: the long date, and a short one for phones (CSS shows one of them).
+    assert '<span class="d-long">Wednesday 25 November 2026</span><span class="d-short">25 Nov 2026</span>' in html
 
     e = edition(sentiment={"values": {"all": -0.28, "technical": 0.1, "political": -0.6, "economic": None},
                            "words": "leaning critical", "days": 7, "latest": None, "outlets": 30},
@@ -91,3 +93,12 @@ def test_sentiment_page_and_front_page_line(tmp_path):
     assert "The gap" in page and "fast-anything" in page and "no outlet coverage" in page
     assert "No big press story without builder interest." in page
     assert json.loads((tmp_path / "site" / "edition.json").read_text())["gap"]["builders_not_press"][0]["id"] == "s-2"
+
+
+def test_sparkline_end_value_never_runs_into_an_axis_label():
+    pts = lambda last: [{"date": "2026-11-24", "value": 0.0, "outlets": 5, "labels": 9},  # noqa: E731
+                        {"date": "2026-11-25", "value": last, "outlets": 5, "labels": 9}]
+    both = str(build.sparkline(pts(0.0), "All"))
+    assert ">+1</text>" in both and ">−1</text>" in both
+    near_floor = str(build.sparkline(pts(-0.76), "Political"))  # the end label sits where "−1" would
+    assert ">+1</text>" in near_floor and ">−1</text>" not in near_floor and ">−0.76</text>" in near_floor

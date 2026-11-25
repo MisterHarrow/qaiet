@@ -85,6 +85,7 @@ uv run pytest          # must pass before every push; no network, no model calls
   - Story cards are a grid of 4, then 3, 2 and 1 per row as the screen narrows. A card's top edge is its stance mix.
   - The rule under the masthead on the front page is the stance mix of every article in that view.
   - Every page must work at 380px wide without horizontal scrolling.
+  - On phones (under 38rem) the light/dark switch sits beside the wordmark and the sentiment's three tracks sit under its figure; under 52rem the map moves below the views. Small controls get an invisible `::after` pad ("Hit areas" in `style.css`) so taps reach about 44px without moving anything; give new small controls one too.
 - **Charts** on `/sentiment/` and the narrative pages are hand-written inline SVG (`build.sparkline`, `build.narrative_chart`), colored from the CSS tokens. There is no chart library.
 - **Narratives** (`pipeline/narratives.py`, `narratives:` in `settings.yaml`):
   - A narrative is one story ID with news or commentary (not digests) on `min_days` (4) or more Stockholm days in a row. It is "ongoing" while covered today or yesterday.

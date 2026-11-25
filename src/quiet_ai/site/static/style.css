@@ -149,7 +149,8 @@ button { font: inherit; }
 @keyframes dot-in { from { opacity: 0; } }
 .greet .geo-map .lit { animation: dot-in 0.35s ease both; animation-delay: var(--d); }
 .greet .geo-legend { animation: step-in 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) 0.3s both; }
-@media (max-width: 38rem) { .masthead-body { grid-template-columns: minmax(0, 1fr); } .geo { margin-top: 1rem; } }
+/* Below 52rem the map moves under the views (beside them it squeezes the period switcher onto two lines on tablets). */
+@media (max-width: 52rem) { .masthead-body { grid-template-columns: minmax(0, 1fr); } .geo { width: fit-content; margin-top: 1rem; } }
 .masthead-meta { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.6rem 1.5rem; margin-top: 0.9rem; }
 .dateline { margin: 0; color: var(--muted); font: 0.76rem/1.4 var(--mono); }
 .periods { display: flex; flex-wrap: wrap; align-items: center; gap: 0.3rem; font: 0.72rem/1 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; }
@@ -514,16 +515,52 @@ summary:hover { color: var(--ink); }
 .colophon p { margin: 0 0 0.75rem; max-width: 46rem; }
 .legend { display: flex; flex-wrap: wrap; gap: 0.3rem 1.1rem; font: 0.7rem/1.5 var(--mono); letter-spacing: 0.04em; text-transform: uppercase; }
 
+/* Hit areas: small controls get an invisible pad, so a finger finds them (about 44px tall) without anything moving. */
+.sitenav a, .theme-toggle, .periods a, .filters button, .card-foot summary, .open-source, .toc a, .tray-close { position: relative; }
+.sitenav a::after, .theme-toggle::after, .periods a::after, .filters button::after, .card-foot summary::after, .open-source::after, .toc a::after, .tray-close::after {
+  content: ""; position: absolute; inset: -0.6rem -0.35rem;
+}
+.card-foot summary::after { inset: -0.9rem -0.6rem -0.9rem -1.1rem; }
+.open-source::after { inset: -0.5rem; }
+.periods a::after, .filters button::after { inset: -0.5rem -0.15rem; }
+.toc a::after { inset: -0.3rem -0.5rem; }
+.tray-close::after { inset: 0 -0.3rem; }
+
 /* Responsive: 4 / 3 / 2 / 1 cards per row */
 @media (max-width: 75rem) { .stories { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (max-width: 58rem) { .stories { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.d-short { display: none; }
 @media (max-width: 38rem) {
   .page { padding: 1.4rem 1rem 3rem; }
   .stories { grid-template-columns: minmax(0, 1fr); }
   .wm { font-size: 2rem; }
   .mark { width: 1.35rem; }
-  .sitenav { gap: 0.2rem 0.9rem; font-size: 0.68rem; }
-  .theme-toggle { margin-left: 0; padding-left: 0.9rem; }
+  /* The light/dark switch sits beside the wordmark; the five sections share the line under it. */
+  .masthead-top { position: relative; padding-bottom: 0.5rem; }
+  .sitenav { width: 100%; justify-content: space-between; gap: 0.2rem 0.9rem; font-size: 0.68rem; }
+  .theme-toggle { position: absolute; top: 0; right: 0; height: 2.6rem; margin: 0; padding: 0 0 0 0.75rem; border-left: 0; }
+  .theme-toggle::after { inset: 0 -0.35rem; }
+  /* The sentiment: the figure on one line, the three tracks below it, each a label over its value. */
+  .sent-line { column-gap: 0.55rem; row-gap: 0.45rem; }
+  .sent-line::before { content: ""; flex-basis: 100%; order: 1; }
+  .sent-num, .sent-word { margin-left: 0; }
+  .sent-track { order: 2; display: inline-flex; flex-direction: column; margin-right: 1.1rem; }
+  .sent-word + .sent-track { padding-left: 0; border-left: 0; }
+  .sent-track b { margin-left: 0; }
+  .periods { letter-spacing: 0.03em; }
+  .periods a { padding: 0.4rem 0.5rem; }
+  /* Sources: the headline takes the panel's width (the plain-list button goes under it); open tabs share a row. */
+  .panel-head { padding-right: 0; }
+  .raw-toggle { position: static; margin-top: 0.7rem; }
+  .tray-tab { flex: 1 1 9rem; min-width: 0; }
+  /* Chart text is set in SVG units and shrinks with the chart: larger units keep it about 11px on a phone. */
+  .spark .axis { font-size: 15px; }
+  .spark .last { font-size: 16px; }
+  .nchart .count, .nchart .day { font-size: 18px; }
+  .nchart .axis { font-size: 16px; }
+  .d-long { display: none; }
+  .d-short { display: inline; white-space: nowrap; }
+  .index-table th.num, .index-table td.num { padding-left: 0.5rem; }
   .weather { font-size: 1.35rem; }
   .t4 { font-size: 1.4rem; }
   .t3 { font-size: 1.15rem; }

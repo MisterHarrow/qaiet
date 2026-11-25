@@ -220,6 +220,12 @@ def day_label(d: str) -> str:
     return f"{dt:%a} {dt.day} {dt:%b}"
 
 
+def _short_date(d: str) -> str:
+    """'2026-11-25' -> '25 Nov 2026' (the index table on a phone)."""
+    dt = datetime.fromisoformat(d)
+    return f"{dt.day} {dt:%b %Y}"
+
+
 def date_range(first: str, last: str) -> str:
     """'21–25 Nov', '28 Nov – 2 Dec', or with years when they differ."""
     a, b = datetime.fromisoformat(first), datetime.fromisoformat(last)
@@ -290,9 +296,11 @@ def narrative_chart(timeline: list[dict], mini: bool = False) -> Markup:
             val = f"{t['mean']:+.2f}".replace("-", "−")
             parts.append(f'<g class="pt"><title>{day_label(t["date"])}: average {val}, {t["outlets"]} outlet{"s" if t["outlets"] != 1 else ""}</title>{dot}</g>')
     if not mini:
-        every = max(1, -(-n // 10))
+        # At most seven day labels, so they stay apart at phone width too; the last day is always labeled, and the
+        # regular label just before it is dropped when it would sit too close.
+        every = max(1, -(-n // 7))
         for i, t in enumerate(timeline):
-            if i % every == 0 or i == n - 1:
+            if (i % every == 0 and n - 1 - i >= every) or i == n - 1:
                 d = datetime.fromisoformat(t["date"])
                 parts.append(f'<text class="day" x="{x(i):.1f}" y="{h - 8}">{d.day} {d:%b}</text>')
     parts.append("</svg>")
@@ -543,8 +551,11 @@ def sparkline(points: list[dict], label: str) -> Markup:
     parts = [f'<svg class="spark" viewBox="0 0 {w} {h}" role="img" aria-label="{label}: daily sentiment index, {n} days">']
     for v, cls in ((lim, "grid"), (0, "zero"), (-lim, "grid")):
         parts.append(f'<line class="{cls}" x1="{pad_l}" x2="{w - pad_r}" y1="{y(v):.1f}" y2="{y(v):.1f}"/>')
-    parts.append(f'<text class="axis" x="{w - pad_r + 6}" y="{y(lim) + 4:.1f}">+{lim:g}</text>')
-    parts.append(f'<text class="axis" x="{w - pad_r + 6}" y="{y(-lim) + 4:.1f}">−{lim:g}</text>')
+    # The latest value is labeled at the line's end; an axis label it would run into (closer than about a line of
+    # text, 17 units) is left out.
+    for v in (lim, -lim):
+        if abs(y(points[-1]["value"]) - y(v)) >= 17:
+            parts.append(f'<text class="axis" x="{w - pad_r + 6}" y="{y(v) + 4:.1f}">{"+" if v > 0 else "−"}{lim:g}</text>')
     if n > 1:
         pts = " ".join(f"{x(i):.1f},{y(p['value']):.1f}" for i, p in enumerate(points))
         # Shade between the line and zero: sage above (positive), umber below (critical).
@@ -585,7 +596,7 @@ def render_sentiment(history: dict, out_dir: Path, tz: str = "Europe/Stockholm")
     charts = [{"key": k, "label": lab, "note": TRACK_NOTES[k], "svg": sparkline(history.get(k, []), lab), "latest": (history.get(k) or [None])[-1]}
               for k, lab in series]
     dates = sorted({p["date"] for pts in history.values() for p in pts}, reverse=True)
-    table = [{"date": d, "long": _long_date(datetime.fromisoformat(d)),
+    table = [{"date": d, "long": _long_date(datetime.fromisoformat(d)), "short": _short_date(d),
               **{k: next((p for p in history.get(k, []) if p["date"] == d), None) for k, _ in series}} for d in dates[:60]]
     latest = charts[0]["latest"]
     html = _env().get_template("sentiment.html.j2").render(

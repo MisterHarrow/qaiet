@@ -52,7 +52,7 @@
   <table class="index-table">
     <thead><tr><th>Day</th>{% for c in charts %}<th class="num">{{ c.label }}</th>{% endfor %}</tr></thead>
     <tbody>
-    {% for r in table %}<tr><td>{{ r.long }}</td>{% for c in charts %}{% set p = r[c.key] %}<td class="num"{% if p %} title="{{ p.outlets }} outlets, {{ p.labels }} labels"{% endif %}>{{ p.value|signed if p else "–" }}</td>{% endfor %}</tr>{% endfor %}
+    {% for r in table %}<tr><td><span class="d-long">{{ r.long }}</span><span class="d-short">{{ r.short }}</span></td>{% for c in charts %}{% set p = r[c.key] %}<td class="num"{% if p %} title="{{ p.outlets }} outlets, {{ p.labels }} labels"{% endif %}>{{ p.value|signed if p else "–" }}</td>{% endfor %}</tr>{% endfor %}
     </tbody>
   </table>
 </section>
