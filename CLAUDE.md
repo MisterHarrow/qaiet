@@ -91,7 +91,9 @@ uv run pytest          # must pass before every push; no network, no model calls
   - No model calls: each day comes from the items and labels, plus that morning's front-page line from the `editions` table. A model-written "how it evolved" summary was costed at about $0.01 per narrative per day; ask Benjamin before adding it.
   - Days before collection began (from the feeds' backlog) count, marked partial.
   - Pages: a front-page section after the story cards, `/narratives/`, and `/narratives/<story id>/`. Editions carry `narratives` (compact rows) and each story's `narrative` ({id, day, since}).
-  - The stamp for front-page cards in a narrative is on hold: Benjamin asked for a subtler ink than magenta and a paper-like depth before it ships.
+  - **The seal** (`build.seal`, chosen by Benjamin on 2026-11-25 over ink stamps, a foil strip and a chronograph): a guilloché engraving generated from the narrative. Two petals per day, an outer ring with an arc per day (thickness: outlets; color: that day's stance; quiet days a hairline), the day count in the middle; on the narrative's page it is large with a microprint ring.
+    - It sits on the top-right corner of a front-page card in a narrative (the stripe ends where it begins, the globe steps left), in each narrative row, and beside the headline on the narrative's page.
+    - Two lattices of one curve turn slowly against each other (180 s); each is its own HTML layer so the browser rotates it without repainting, and the curve is defined once per page (`seal_defs`). No motion under `prefers-reduced-motion`.
 - **Name, favicon and wordmark:**
   - The public name is **Qaiet Times** (no ".ai"). The repo is `qaiet`; the Python package (`quiet_ai`), the database files (`quiet-ai.db`, the `db` release assets) and the crawler's user agent keep the old name.
   - The favicon, wordmark and site navigation live once in `site/templates/_brand.html.j2`; every page imports them.
