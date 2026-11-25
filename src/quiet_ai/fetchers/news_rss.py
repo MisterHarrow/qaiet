@@ -63,8 +63,9 @@ def parse_feed(body: bytes, src: FeedSource, now: datetime, cfg: IngestSettings)
             extra = _aggregator_extra(e)
         if src.role:
             extra["role"] = src.role
-        if src.mentions:  # only links and counts are kept, never the recap's text
-            found = mentions.extract((e.get("content") or [{}])[0].get("value", ""))
+        content = (e.get("content") or [{}])[0].get("value", "") if src.mentions else ""
+        if src.mentions:  # only links and counts are kept on the issue, never the recap's text
+            found = mentions.extract(content)
             if found:
                 extra["mentions"] = found
         url = canonical_url(link)
@@ -84,7 +85,25 @@ def parse_feed(body: bytes, src: FeedSource, now: datetime, cfg: IngestSettings)
                 fetched_at=now,
             )
         )
+        if src.mentions:
+            items += _recap_items(content, src, url, items[-1].published_at, now, cfg)
     return items
+
+
+def _recap_items(content: str, src: FeedSource, issue_url: str, published: datetime | None, now: datetime, cfg: IngestSettings) -> list[Item]:
+    """One small item per X bullet of a recap: its bold lead and a short summary, the posts it links, its other URLs."""
+    out = []
+    for b in mentions.x_bullets(content):
+        text = clean_text(b["text"], cfg.summary_max_chars)
+        title = clean_text((b["lead"] or "").strip().rstrip(":"), cfg.title_max_chars) or clean_text(b["text"], 120)
+        if not title:
+            continue
+        out.append(Item(
+            id=url_id(b["x"][0]), source=src.id, kind="recap", url=b["x"][0], title=title, lang=src.language,
+            published_at=published, summary=text if text != title else None, metrics={"posts": len(b["x"])},
+            extra={"x": b["x"], "links": b["urls"], "issue": issue_url}, fetched_at=now,
+        ))
+    return out
 
 
 def _aggregator_extra(entry) -> dict:

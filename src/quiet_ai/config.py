@@ -152,6 +152,7 @@ class ClusterSettings(_Model):
     confident_threshold: float = 0.72
     strict_join_threshold: float = 0.8
     strict_kinds: list[str] = Field(default_factory=lambda: ["repo", "model", "dataset", "space", "paper", "launch"])
+    join_only_kinds: list[str] = Field(default_factory=lambda: ["recap"])  # join a story, never start one
     merge_threshold: float = 0.76
     entity_boost: float = 0.03
 

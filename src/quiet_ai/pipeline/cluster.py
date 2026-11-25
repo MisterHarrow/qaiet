@@ -145,6 +145,7 @@ class ClusterStats:
     by_link: int = 0
     by_similarity: int = 0
     new_stories: int = 0
+    unplaced: int = 0  # join-only items that matched no story (they get another chance next run)
     merged: int = 0
     active_stories: int = 0
 
@@ -195,6 +196,7 @@ def run(store: Store, model: str, cfg: ClusterSettings, now: datetime) -> Cluste
     stats = ClusterStats()
     since = iso(now - timedelta(hours=cfg.window_hours))
     items = _window_items(store, model, since, set(cfg.strict_kinds))
+    join_only = set(cfg.join_only_kinds)
     members: dict[str, list[dict]] = {}
     for it in items:
         if it["story_id"]:
@@ -233,6 +235,9 @@ def run(store: Store, model: str, cfg: ClusterSettings, now: datetime) -> Cluste
             best = int(np.argmax(margin))
             if margin[best] >= 0:
                 target, how = ids[best], "similarity"
+        if not target and it["kind"] in join_only:
+            stats.unplaced += 1
+            continue
         if target:
             stories[target].add(it["vec"], it["event_at"], it["ents"], it["keys"], not it["strict"])
             stats.by_link += how == "link"

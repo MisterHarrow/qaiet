@@ -89,6 +89,7 @@ cluster:
   confident_threshold: 0.72       # ...below this, only when the item shares a name with the story
   strict_join_threshold: 0.8      # for repos, models, datasets, spaces, papers, launches
   strict_kinds: [repo, model, dataset, space, paper, launch]
+  join_only_kinds: [recap]        # AINews X bullets: join a story by link or similarity, never start one
   merge_threshold: 0.76           # two stories this similar (and sharing a name or link) are merged
   entity_boost: 0.03              # added per shared name (company, product, person), max 2
 
@@ -103,7 +104,7 @@ momentum:
     hn_points: 0.15               # Hacker News points
     star_velocity: 0.10           # GitHub stars gained per day
     hf_trending: 0.10             # Hugging Face trending score, paper upvotes
-    social: 0.10                  # Bluesky and HF posts, plus their likes and reposts
+    social: 0.10                  # Bluesky and HF posts (plus likes and reposts), and X posts linked by AINews
     aggregators: 0.10             # led on Techmeme / Memeorandum
     digests: 0.10                 # picked up by AI digests (AINews, TLDR AI, The Batch, ...)
 

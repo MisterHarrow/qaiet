@@ -17,7 +17,7 @@ BUILDER_SOURCES = {
     "hf_papers": "HF Papers", "hf_posts": "HF Posts",
 }
 # Which member's headline represents the story: press first, then the rest.
-_KIND_RANK = {"news": 0, "aggregator": 1, "newsletter": 2, "lab": 3, "hn": 4, "paper": 5, "social": 6, "launch": 7}
+_KIND_RANK = {"news": 0, "aggregator": 1, "newsletter": 2, "lab": 3, "hn": 4, "paper": 5, "social": 6, "launch": 7, "recap": 8}
 
 
 @dataclass

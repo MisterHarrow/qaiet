@@ -128,9 +128,16 @@ def story_entry(store: Store, sources: SourcesConfig, score: StoryScore, rank: i
         "official": [{"title": m["title"], "url": m["url"], "source": names.get(m["source"], m["source"])} for m in members if m["kind"] == "lab"],
         "digests": sorted({names.get(m["source"], m["source"]) for m in members if m["kind"] == "newsletter" and feeds.get(m["source"]) and feeds[m["source"]].role == "digest"}),
     }
-    # X posts and Reddit threads a recap (AINews) linked next to one of this story's URLs.
+    # X posts and Reddit threads a recap (AINews) linked next to one of this story's URLs, plus the
+    # posts of recap bullets that joined the story by topic.
     talk = mentions.lookup(set().union(*(link_keys(m["kind"], m["url"], m["extra"]) for m in members)) if members else set(), names)
-    builders |= {"x": talk["x"], "reddit": talk["reddit"], "via": talk["via"]}
+    recaps = [m for m in members if m["kind"] == "recap"]
+    x = {p["url"]: p for p in talk["x"]}
+    for m in recaps:
+        for url in m["extra"].get("x", []):
+            x.setdefault(url, {"url": url, "account": mentions_mod.account(url)})
+    via = set(talk["via"]) | {re.sub(r"\s*\(.*\)$", "", names.get(m["source"], m["source"])) for m in recaps}
+    builders |= {"x": list(x.values()), "reddit": talk["reddit"], "via": sorted(via)}
     headline = (summary_data or {}).get("headline") or representative_title(store, score.members[0]) or score.story_id
     return {
         "id": score.story_id,
@@ -147,7 +154,7 @@ def story_entry(store: Store, sources: SourcesConfig, score: StoryScore, rank: i
         "coverage": [{"stance": k, "items": groups[k]} for k in [*map(str, STANCES), "unclear", "unlabeled"] if k in groups],
         "builders": builders,
         "builders_line": builders_line(builders),
-        "items": len(members),
+        "items": sum(1 for m in members if m["kind"] != "recap"),  # recap bullets don't trigger new summaries
         "entities": sorted({e for m in members if m["label"] for e in m["label"].get("entities", [])}),
     }
 

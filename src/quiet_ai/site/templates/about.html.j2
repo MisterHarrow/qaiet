@@ -38,7 +38,7 @@
     <li><strong>{{ a.counts.aggregators }} editor-picked aggregators</strong> ({{ a.aggregators|join(" and ") }}), used only to tell which stories editors are leading with.</li>
     <li><strong>{{ a.counts.digests }} AI newsletters that summarize the day</strong> and <strong>{{ a.counts.commentary }} commentary newsletters</strong> from researchers, critics, policy writers and investors.</li>
     <li><strong>{{ a.counts.labs }} official AI lab blogs</strong>, attached to stories as the primary source.</li>
-    <li><strong>Builder sources:</strong> new and fast-growing GitHub repositories, Hugging Face's trending models, datasets, spaces, daily papers and posts, Hacker News, new models on OpenRouter, Product Hunt's AI launches, and {{ a.counts.bluesky }} curated Bluesky accounts. Posts on X and Reddit threads appear only second-hand: when the AINews daily recap links them next to a story's article or a project's page, we show those links, credited to AINews.</li>
+    <li><strong>Builder sources:</strong> new and fast-growing GitHub repositories, Hugging Face's trending models, datasets, spaces, daily papers and posts, Hacker News, new models on OpenRouter, Product Hunt's AI launches, and {{ a.counts.bluesky }} curated Bluesky accounts. Posts on X and Reddit threads appear only second-hand, credited to AINews: when its daily recap links them next to a story's article or a project's page, or when one of its bullets about X posts matches a story's topic. Those X posts also count toward the social signal in the ranking.</li>
   </ul>
   <p>We only keep each item's headline, a short summary (at most 500 characters), its link and its date. We never copy articles, never go around paywalls, and show no images. Every headline links to the original publisher. Sites whose robots.txt asks automated readers to stay away are left out, not worked around.{% if a.opt_out %} {{ a.opt_out|join(", ") }} {{ "asks" if a.opt_out|length == 1 else "ask" }} that its text not be used as input to AI systems, so its headlines are shown and counted but never labeled.{% endif %}</p>
 
@@ -55,6 +55,13 @@
     <h3>Lab blogs</h3>
     <p>{{ a.labs|join(" · ") }}</p>
   </details>
+  {% if a.ainews_x %}
+  <details class="source-list">
+    <summary>X accounts in AINews ({{ a.ainews_x.accounts|length }})</summary>
+    <p>We don't read X. AINews, one of the digests above, summarizes AI posts on X. These are the accounts whose posts it linked in its last {{ a.ainews_x.issues }} issues (counted on {{ a.ainews_x.as_of }}), most linked first, with the number of posts.</p>
+    <p>{% for x in a.ainews_x.accounts %}<span style="white-space: nowrap"><a href="https://x.com/{{ x.handle }}" rel="noopener">@{{ x.handle }}</a> <span class="country">{{ x.posts }}</span></span>{% if not loop.last %} <span class="sep">·</span> {% endif %}{% endfor %}</p>
+  </details>
+  {% endif %}
 </section>
 
 <section id="steps">

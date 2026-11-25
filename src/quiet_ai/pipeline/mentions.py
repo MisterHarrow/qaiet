@@ -5,7 +5,12 @@ AINews publishes a daily recap of AI X and Reddit; each bullet links the posts o
 summarizes next to the article, repository or model they are about. We keep only those links:
 the post URL and account, the thread URL, subreddit, title and AINews's activity count, plus
 the other URLs in the same bullet ("targets"). A story or Rising project whose own URL matches a
-target shows the posts and threads, credited to AINews. No text goes to a model.
+target shows the posts and threads, credited to AINews.
+
+Most X bullets link only posts, no article, so `x_bullets` also turns each X bullet into a small
+"recap" item (its bold lead as the title, its text as the short summary, the posts and other URLs in
+`extra`). Recap items join an existing story by link or by similarity, like a Bluesky post, but never
+start one, and are never labeled by a model. Reddit bullets stay link-only.
 """
 
 from __future__ import annotations
@@ -18,7 +23,7 @@ from urllib.parse import urlsplit
 
 from quiet_ai.pipeline.cluster import norm_key
 from quiet_ai.store.db import Store, iso
-from quiet_ai.text import clean_text
+from quiet_ai.text import canonical_url, clean_text
 
 _X_POST = re.compile(r"^/([A-Za-z0-9_]{1,15})/status/(\d+)")
 _REDDIT_THREAD = re.compile(r"^/r/([A-Za-z0-9_]{2,21})/comments/([a-z0-9]+)", re.I)
@@ -38,14 +43,17 @@ class _Bullets(HTMLParser):
         self.blocks: list[dict] = []
         self.cur: dict | None = None
         self.anchor: list | None = None
+        self.bold: list | None = None
 
     def handle_starttag(self, tag, attrs):
         if tag == "li":
             self.depth += 1
             if self.depth == 1:
-                self.cur = {"links": [], "text": []}
+                self.cur = {"links": [], "text": [], "lead": None}
         elif tag == "a" and self.cur is not None:
             self.anchor = [dict(attrs).get("href"), []]
+        elif tag in ("b", "strong") and self.cur is not None and self.cur["lead"] is None and self.bold is None:
+            self.bold = []
 
     def handle_endtag(self, tag):
         if tag == "a" and self.anchor is not None and self.cur is not None:
@@ -53,6 +61,9 @@ class _Bullets(HTMLParser):
             if href:
                 self.cur["links"].append((href, "".join(parts)))
             self.anchor = None
+        elif tag in ("b", "strong") and self.bold is not None and self.cur is not None:
+            self.cur["lead"] = "".join(self.bold)
+            self.bold = None
         elif tag == "li" and self.depth:
             self.depth -= 1
             if self.depth == 0 and self.cur is not None:
@@ -65,21 +76,21 @@ class _Bullets(HTMLParser):
             self.cur["text"].append(data)
             if self.anchor is not None:
                 self.anchor[1].append(data)
+            if self.bold is not None:
+                self.bold.append(data)
 
 
 def _host(url: str) -> str:
     return urlsplit(url).netloc.lower().removeprefix("www.").removeprefix("old.").removeprefix("mobile.")
 
 
-def extract(html: str) -> list[dict]:
-    """Bullets that link X posts or Reddit threads next to at least one other URL.
-
-    Each block: {"targets": [link keys], "x": [post URLs], "reddit": [{"url", "sub", "title", "activity"}]}."""
+def _bullets(html: str) -> list[dict]:
+    """Each top-level bullet: its lead, text, X post URLs, Reddit threads, and other URLs (as link keys and as URLs)."""
     parser = _Bullets()
     parser.feed(html or "")
-    out, n_x, n_reddit = [], 0, 0
+    out = []
     for b in parser.blocks:
-        x, reddit, targets = [], [], []
+        x, reddit, targets, urls = [], [], [], []
         activities = [int(a.replace(",", "")) for a in _ACTIVITY.findall(b["text"])]
         for href, text in b["links"]:
             if not href.startswith("http"):
@@ -98,6 +109,23 @@ def extract(html: str) -> list[dict]:
                 key = norm_key(href)
                 if key and key not in targets:
                     targets.append(key)
+                    urls.append(canonical_url(href))
+        out.append({"lead": b["lead"], "text": b["text"], "x": x, "reddit": reddit, "targets": targets, "urls": urls})
+    return out
+
+
+def x_bullets(html: str) -> list[dict]:
+    """Bullets that link X posts and no Reddit thread: {"lead", "text", "x": [post URLs], "urls": [other URLs]}."""
+    return [{k: b[k] for k in ("lead", "text", "x", "urls")} for b in _bullets(html) if b["x"] and not b["reddit"]][:MAX_X]
+
+
+def extract(html: str) -> list[dict]:
+    """Bullets that link X posts or Reddit threads next to at least one other URL.
+
+    Each block: {"targets": [link keys], "x": [post URLs], "reddit": [{"url", "sub", "title", "activity"}]}."""
+    out, n_x, n_reddit = [], 0, 0
+    for b in _bullets(html):
+        x, reddit, targets = b["x"], b["reddit"], b["targets"]
         if targets and (x or reddit):
             x, reddit = x[: max(0, MAX_X - n_x)], reddit[: max(0, MAX_REDDIT - n_reddit)]
             n_x, n_reddit = n_x + len(x), n_reddit + len(reddit)

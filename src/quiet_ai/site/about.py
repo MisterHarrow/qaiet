@@ -29,7 +29,7 @@ FEATURE_NAMES = {
     "hn_points": "Hacker News points",
     "star_velocity": "GitHub stars gained per day",
     "hf_trending": "Hugging Face trending score and paper upvotes",
-    "social": "Bluesky and Hugging Face posts, with their likes and reposts",
+    "social": "Bluesky and Hugging Face posts, with their likes and reposts, and X posts the AINews recap links",
     "aggregators": "Led on Techmeme or Memeorandum",
     "digests": "Picked up by AI newsletters that summarize the day",
 }
@@ -46,6 +46,15 @@ def _health(store: Store, names: dict[str, str]) -> dict | None:
     failing = [{"name": names.get(r["source"].split(":")[0], r["source"]) if not r["source"].startswith("bluesky:") else r["source"],
                 "status": r["status"].replace("_", " "), "error": r["error"]} for r in rows if r["status"] not in ("ok", "not_modified")]
     return {"at": run["started_at"], "total": len(rows), "ok": len(ok), "failing": failing}
+
+
+AINEWS_X = Path(__file__).resolve().parents[3] / "config" / "ainews_x_accounts.yaml"
+
+
+def ainews_x_accounts(path: Path = AINEWS_X) -> dict | None:
+    """The X accounts AINews links to (a counted snapshot), for the sources list on /about."""
+    import yaml
+    return yaml.safe_load(path.read_text(encoding="utf-8")) if path.exists() else None
 
 
 def about_context(store: Store, settings: Settings, sources: SourcesConfig, accounts: list[Account], now: datetime,
@@ -71,6 +80,7 @@ def about_context(store: Store, settings: Settings, sources: SourcesConfig, acco
         cross["date"] = str(meta.get("labeled_at", ""))[:10]
     g, s = settings.gap, settings.sentiment
     return {
+        "ainews_x": ainews_x_accounts(),
         "gap": {"quiet_max_outlets": g.quiet_max_outlets, "builder_min_pct": round(g.builder_min_rank * 100),
                 "loud_min_outlets": g.loud_min_outlets, "floors": g.builder_floors},
         "sentiment": {"min_outlets": s.min_outlets, "medium_weight": s.confidence_weights.get("medium")},

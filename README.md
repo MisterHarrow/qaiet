@@ -43,7 +43,7 @@ All free, no accounts. Configured in `config/`:
 
 | File | What |
 |---|---|
-| `sources.yaml` | News outlets, aggregators (Techmeme, Memeorandum), newsletters (digests and commentary), lab blogs, Product Hunt, and outlets read through GDELT (wires, Chinese state media). `mentions: true` (AINews) keeps the X posts and Reddit threads a recap links next to an article or project; X and Reddit themselves are never fetched. |
+| `sources.yaml` | News outlets, aggregators (Techmeme, Memeorandum), newsletters (digests and commentary), lab blogs, Product Hunt, and outlets read through GDELT (wires, Chinese state media). `mentions: true` (AINews) keeps the X posts and Reddit threads a recap links next to an article or project, and turns each X bullet into a small `recap` item that can join a story; X and Reddit themselves are never fetched. |
 | `accounts.yaml` | Curated Bluesky accounts. Only `bluesky_active: true` ones are polled. |
 | `settings.yaml` | User agent, rate limits, per-fetcher options, later the LLM budget. |
 

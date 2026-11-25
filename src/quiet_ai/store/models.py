@@ -21,6 +21,7 @@ ItemKind = Literal[
     "paper",
     "hn",          # Hacker News story
     "social",      # Bluesky post or Hugging Face post
+    "recap",       # one bullet of a recap newsletter about X posts (AINews); joins stories, never starts one
 ]
 
 
@@ -32,6 +33,7 @@ class Metrics(BaseModel):
     reposts: int | None = None
     downloads: int | None = None
     trending_score: float | None = None
+    posts: int | None = None  # recap items: X posts the bullet links
 
     def nonempty(self) -> dict[str, Any]:
         return self.model_dump(exclude_none=True)

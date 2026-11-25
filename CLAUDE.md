@@ -47,7 +47,9 @@ uv run pytest          # must pass before every push; no network, no model calls
 ## Rules that don't bend
 
 - **Sources:** free only. No X/Twitter and nothing that needs payment from Benjamin. The Anthropic API is the only cost.
-  - Never fetch x.com or reddit.com (robots.txt blocks us; Reddit API access was requested 2026-11-25 and is pending). X posts and Reddit threads appear only second-hand: links the AINews recap puts next to a story's or project's URL (`mentions: true` on a source, `pipeline/mentions.py`). Only the links, account, subreddit, thread title and activity count are kept; never the recap's text, and none of it goes to a model.
+  - Never fetch x.com or reddit.com (robots.txt blocks us; Reddit API access was requested 2026-11-25 and is pending). X posts and Reddit threads appear only second-hand, from the AINews recap (`mentions: true` on a source, `pipeline/mentions.py`):
+    - Links a recap bullet puts next to a story's or project's URL: only the links, account, subreddit, thread title and activity count are kept.
+    - Each X bullet also becomes a `recap` item (AINews's bold lead as title, at most 500 characters of its text, the posts and other URLs in `extra`). Recap items join a story by link or similarity but never start one (`cluster.join_only_kinds`), count toward the `social` signal by number of X posts, are never labeled by a model, and don't count as items for re-summarizing.
 - **Courtesy to publishers:**
   - Respect robots.txt (RFC 9309; unreachable means disallow).
   - Never work around a block (403/429): no proxies, no browser user agents.

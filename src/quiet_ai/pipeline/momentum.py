@@ -221,6 +221,8 @@ def score_stories(store: Store, settings: Settings, sources: SourcesConfig, now:
             f["hf_trending"] += met.get("likes", 0) or 0
         elif r["kind"] == "social":
             f["social"] += 1 + (met.get("likes") or 0) + (met.get("reposts") or 0)
+        elif r["kind"] == "recap":  # X posts linked by AINews
+            f["social"] += met.get("posts") or 1
         elif r["kind"] == "aggregator":
             aggs[key].add(r["source"])
         elif r["kind"] == "newsletter" and r["source"] in digests:

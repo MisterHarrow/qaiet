@@ -59,9 +59,14 @@ def test_parse_feed_stores_only_links_for_mention_sources():
     now = datetime(2026, 11, 25, tzinfo=timezone.utc)
     on = FeedSource(id="ainews", name="AINews", kind="newsletter", feeds=["x"], role="digest", mentions=True)
     off = on.model_copy(update={"mentions": False})
-    [item] = parse_feed(feed.encode(), on, now, load_settings().ingest)
-    assert len(item.extra["mentions"]) == 2 and item.summary == "Short teaser."  # the recap's text is not stored
+    item, *recaps = parse_feed(feed.encode(), on, now, load_settings().ingest)
+    assert len(item.extra["mentions"]) == 2 and item.summary == "Short teaser."  # the recap's text is not stored on the issue
     assert "Opinion only" not in str(item.extra)
+    # Each X bullet (not the Reddit ones) becomes a small recap item: lead as title, short text, its posts and URLs.
+    assert [(r.kind, r.title, r.metrics.posts) for r in recaps] == [("recap", "Small model release", 3), ("recap", "Opinion only", 1)]
+    first = recaps[0]
+    assert first.url == "https://x.com/alice/status/111" and first.extra["links"] == ["https://github.com/acme/tiny-model/tree/main"]
+    assert first.extra["issue"] == "https://latent.space/p/ainews-a-day" and len(first.summary) <= load_settings().ingest.summary_max_chars
     [plain] = parse_feed(feed.encode(), off, now, load_settings().ingest)
     assert "mentions" not in plain.extra
 
@@ -82,3 +87,53 @@ def test_rising_and_panel_render_the_links(tmp_path):
     assert 'on X by <a href="https://x.com/alice/status/111" rel="noopener">@alice</a>, via AINews' in html
     assert '<span class="outlet">r/LocalLLaMA <span class="num">1,838 activity</span> <span class="country">via AINews</span></span>' in html
     assert ">Tiny model is out</a>" in html
+
+
+def test_recap_items_join_stories_but_never_start_one():
+    from datetime import timedelta
+
+    from quiet_ai.pipeline import cluster
+    from quiet_ai.store.db import Store
+    from quiet_ai.store.models import Item, Metrics
+    from tests.conftest import NOW
+    from tests.test_cluster import CFG, EMB, add, news, story_of
+
+    st = Store(":memory:")
+    add(st, [news(1, "Acme releases tiny open model", url="https://github.com/acme/tiny-model")])
+    by_link = Item(id="x:1", source="ainews", kind="recap", url="https://x.com/alice/status/111", title="Small model release",
+                   metrics=Metrics(posts=3), extra={"x": ["https://x.com/alice/status/111"], "links": ["https://github.com/acme/tiny-model"]},
+                   fetched_at=NOW)
+    alone = Item(id="x:2", source="ainews", kind="recap", url="https://x.com/dave/status/444", title="Completely unrelated chatter",
+                 metrics=Metrics(posts=1), extra={"x": ["https://x.com/dave/status/444"], "links": []}, fetched_at=NOW)
+    later = NOW + timedelta(minutes=5)
+    add(st, [by_link, alone], now=later)
+    stats = cluster.run(st, EMB.name, CFG, later)
+    assert story_of(st, "x:1") == story_of(st, "n1")
+    assert story_of(st, "x:2") is None and stats.unplaced == 1
+    assert st.conn.execute("SELECT COUNT(*) FROM stories").fetchone()[0] == 1
+
+
+def test_story_shows_recap_posts_and_they_count_as_social(settings):
+    from datetime import timedelta
+
+    from quiet_ai.config import FeedSource, SourcesConfig
+    from quiet_ai.pipeline import cluster, edition, momentum
+    from quiet_ai.store.db import Store
+    from quiet_ai.store.models import Item, Metrics
+    from tests.conftest import NOW
+    from tests.test_cluster import CFG, EMB, add, news
+
+    st = Store(":memory:")
+    add(st, [news(1, "Acme releases tiny open model", url="https://github.com/acme/tiny-model")])
+    recap = Item(id="x:1", source="ainews", kind="recap", url="https://x.com/alice/status/111", title="Small model release",
+                 metrics=Metrics(posts=2), extra={"x": ["https://x.com/alice/status/111", "https://x.com/bob/status/222"],
+                                                 "links": ["https://github.com/acme/tiny-model"]}, fetched_at=NOW)
+    add(st, [recap], now=NOW + timedelta(minutes=5))
+    cluster.run(st, EMB.name, CFG, NOW + timedelta(minutes=5))
+    sources = SourcesConfig(feeds=[FeedSource(id="nyt", name="NYT", kind="news", feeds=["x"]),
+                                   FeedSource(id="ainews", name="AINews (Latent Space)", kind="newsletter", feeds=["x"], role="digest", mentions=True)])
+    [score] = momentum.score_stories(st, settings, sources, NOW + timedelta(minutes=10))
+    assert score.features["social"] > 0
+    e = edition.story_entry(st, sources, score, 1)
+    assert [p["account"] for p in e["builders"]["x"]] == ["alice", "bob"] and e["builders"]["via"] == ["AINews"]
+    assert e["items"] == 1 and "2 X posts via AINews" in e["builders_line"]
