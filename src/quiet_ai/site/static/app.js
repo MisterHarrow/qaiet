@@ -217,8 +217,9 @@
   var R0 = 29, AMP = 7.5, NT = 72, P = 44, G = 200;  // must match build.seal; threads; points per thread; field grid
   var lattices = seal.querySelectorAll(".seal-lat");
 
-  // Pen paths, in writing order. Digits: x across the figure, y up its height (0 to 1). Letters: x across the letter,
-  // y up in x-heights from the baseline; 9 is the top of the letter (9.1 a tenth of an x-height below it), -9 its foot.
+  // Pen paths, in writing order. Digits and Q: x across the figure, y up its height (0 to 1); a stroke that starts with
+  // "o" is drawn in the box of an O instead (the Q's bowl), "ot" too but kept close to its path (the Q's thin tail). Letters: x across the letter, y up in
+  // x-heights from the baseline; 9 is the top of the letter (9.1 a tenth of an x-height below it), -9 its foot.
   var DUCTUS = {
     "0": [[[.5, 1], [.17, .86], [.08, .5], [.17, .14], [.5, 0], [.83, .14], [.92, .5], [.83, .86], [.5, 1], [.32, .95]]],
     "1": [[[.22, .8], [.55, 1], [.55, 0]], [[.16, .02], [.9, .02]]],
@@ -230,6 +231,8 @@
     "7": [[[.05, .97], [.95, .97], [.46, .4], [.36, 0]]],
     "8": [[[.55, .53], [.21, .7], [.23, .92], [.5, .99], [.77, .9], [.74, .7], [.5, .5], [.16, .32], [.18, .1], [.5, 0], [.82, .1], [.82, .32], [.55, .5]]],
     "9": [[[.84, .6], [.5, .45], [.16, .6], [.16, .85], [.5, .99], [.84, .85], [.84, .55], [.6, .2], [.2, .02]]],
+    Q: [["o", [.5, 1], [.16, .86], [.07, .5], [.16, .14], [.5, 0], [.84, .14], [.93, .5], [.84, .86], [.5, 1], [.32, .96]],
+        ["ot", [.3, -.04], [.48, -.1], [.72, -.15], [.98, -.14], [1.16, -.1], [1.28, -.04]]],
     a: [[[.2, .78], [.38, .97], [.62, .96], [.73, .78], [.74, .4], [.75, .1], [.86, 0], [1, .08]], [[.73, .58], [.35, .47], [.1, .27], [.2, .03], [.45, .02], [.73, .2]]],
     d: [[[.74, .82], [.45, .98], [.15, .8], [.07, .45], [.17, .1], [.45, 0], [.74, .18]], [[.58, 9.04], [.78, 9], [.78, .15], [.9, 0], [1, .06]]],
     e: [[[.08, .55], [.92, .55], [.86, .86], [.5, 1], [.15, .85], [.06, .5], [.18, .12], [.5, 0], [.88, .18]]],
@@ -291,8 +294,10 @@
       var ch = text[i], gx = ox + x.measureText(text.slice(0, i)).width, g = x.measureText(ch);
       var dy = (hash(seed + i) - 0.5) * 0.02 * f, rot = (hash(seed + i + 50) - 0.5) * 0.02;
       x.save(); x.translate(gx, base + dy); x.rotate(rot); x.fillText(ch, 0, 0); x.restore();
+      var o = x.measureText("O");
       glyphs.push({ ch: ch, l: (gx - g.actualBoundingBoxLeft) * u, r: (gx + g.actualBoundingBoxRight) * u, t: (base - g.actualBoundingBoxAscent) * u,
-                    b: (base + g.actualBoundingBoxDescent) * u, ox: gx * u, base: base * u, dy: dy * u, rot: rot, xh: xh });
+                    b: (base + g.actualBoundingBoxDescent) * u, ox: gx * u, base: base * u, dy: dy * u, rot: rot, xh: xh,
+                    ow: (o.actualBoundingBoxLeft + o.actualBoundingBoxRight) * u, oh: (o.actualBoundingBoxAscent + o.actualBoundingBoxDescent) * u });
     }
     var a = x.getImageData(0, 0, S, S).data, N = S * S, fin = new Float64Array(N), fout = new Float64Array(N), p;
     for (p = 0; p < N; p++) { var ins = a[p * 4 + 3] > 127; fin[p] = ins ? 0 : 1e20; fout[p] = ins ? 1e20 : 0; }
@@ -434,16 +439,17 @@
   function strokes(word) {
     var out = [];
     word.glyphs.forEach(function (g, gi) {
-      var digit = /[0-9]/.test(g.ch), spec = DUCTUS[g.ch] || [[[0, .5], [1, .5]]];
+      var digit = /[0-9Q]/.test(g.ch), spec = DUCTUS[g.ch] || [[[0, .5], [1, .5]]];
       var c = Math.cos(g.rot), s = Math.sin(g.rot), cy = g.base + g.dy;
       spec.forEach(function (st) {
-        var pts = st.map(function (p) {
-          var X = g.l + p[0] * (g.r - g.l), Y = digit ? g.b - p[1] * (g.b - g.t) : p[1] >= 9 ? g.t + (p[1] - 9) * g.xh : p[1] <= -9 ? g.b - (p[1] + 9) * g.xh : g.base - p[1] * g.xh;
+        var inO = st[0] === "o" || st[0] === "ot", near = st[0] === "ot" ? 0.3 : 1;
+        var pts = (inO ? st.slice(1) : st).map(function (p) {
+          var X = g.l + p[0] * (inO ? g.ow : g.r - g.l), Y = inO ? g.t + (1 - p[1]) * g.oh : digit ? g.b - p[1] * (g.b - g.t) : p[1] >= 9 ? g.t + (p[1] - 9) * g.xh : p[1] <= -9 ? g.b - (p[1] + 9) * g.xh : g.base - p[1] * g.xh;
           Y += g.dy;
           var dx = X - g.ox, dy = Y - cy;
           return [g.ox + dx * c - dy * s, cy + dx * s + dy * c];
         });
-        out.push({ pts: snap(word.F, spline(pts), digit ? 0.09 * (g.b - g.t) : 0.22 * g.xh), letter: gi });
+        out.push({ pts: snap(word.F, spline(pts), near * (digit ? 0.09 * (g.b - g.t) : 0.22 * g.xh)), letter: gi });
       });
     });
     return out;
@@ -498,17 +504,19 @@
     for (i = 0; i < 9; i++) deep.push(-0.62 * i);
     signs = rest.signs;
     words = {
-      n: word(DAYS, DAYS.length > 1 ? 58 : 44, 54, deep, 3, 0.75 + 0.35 * DAYS.length),
-      day: word("day", 60, 38, [0, -0.5, -1, -1.5, -2], 17, 1.7),
-      narrative: word("narrative", 72, 30, [0, -0.45, -0.9, -1.35], 29, 2.9)
+      n: word(DAYS, DAYS.length > 1 ? 58 : 44, 54, deep, 3, 0.45 + 0.22 * DAYS.length),
+      day: word("day", 60, 38, [0, -0.5, -1, -1.5, -2], 17, 1),
+      narrative: word("narrative", 72, 30, [0, -0.45, -0.9, -1.35], 29, 1.7),
+      q: word("Q", 56, 54, deep, 41, 0.85)  // the Q of Qaiet Times, last, before the seal settles
     };
-    shapes = { rest: rest.segs, n: words.n.segs, day: words.day.segs, narrative: words.narrative.segs };
+    shapes = { rest: rest.segs, n: words.n.segs, day: words.day.segs, narrative: words.narrative.segs, q: words.q.segs };
     PH = [
       { move: "rest", to: "cord", dur: 1.1 },
-      { write: "n", dur: words.n.pen.dur }, { hold: "n", dur: 0.75 }, { move: "n", to: "cord", dur: 0.85 },
-      { write: "day", dur: words.day.pen.dur }, { hold: "day", dur: 0.65 }, { move: "day", to: "cord", dur: 0.85 },
-      { write: "narrative", dur: words.narrative.pen.dur }, { hold: "narrative", dur: 0.95 },
-      { move: "narrative", to: "rest", dur: 2.8, last: true }
+      { write: "n", dur: words.n.pen.dur }, { hold: "n", dur: 0.6 }, { move: "n", to: "cord", dur: 0.8 },
+      { write: "day", dur: words.day.pen.dur }, { hold: "day", dur: 0.5 }, { move: "day", to: "cord", dur: 0.8 },
+      { write: "narrative", dur: words.narrative.pen.dur }, { hold: "narrative", dur: 0.7 }, { move: "narrative", to: "cord", dur: 0.8 },
+      { write: "q", dur: words.q.pen.dur }, { hold: "q", dur: 0.8 },
+      { move: "q", to: "rest", dur: 2.8, last: true }
     ];
   }
 
