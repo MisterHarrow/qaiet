@@ -28,10 +28,10 @@
   {# The greeting: the day's sentiment under the nameplate. On the first page of a visit the figure counts up
      from zero and the line steps in (app.js and .greet); otherwise, and without JS, it simply shows. #}
   <div class="sentiment">
-    <p class="sent-main"><a class="sent-label step" href="{{ root }}sentiment/">The sentiment</a>
+    <p class="sent-line"><a class="sent-label step" href="{{ root }}sentiment/">The sentiment</a>
       <span class="sent-num step" data-value="{{ sv['all'] }}">{{ sv["all"]|signed }}</span>
-      <span class="sent-word step">{{ e.sentiment.words }}{% if e.sentiment.days > 1 %} <span class="sent-note">{{ e.sentiment.days }}-day average</span>{% endif %}</span></p>
-    <p class="sent-tracks"><span class="step">Technical <b>{{ sv.get("technical")|signed }}</b></span><span class="step">Political <b>{{ sv.get("political")|signed }}</b></span><span class="step">Economic <b>{{ sv.get("economic")|signed }}</b></span></p>
+      <span class="sent-word step">{{ e.sentiment.words }}{% if e.sentiment.days > 1 %} <span class="sent-note">{{ e.sentiment.days }}-day average</span>{% endif %}</span>
+      <span class="sent-track step">Technical <b>{{ sv.get("technical")|signed }}</b></span><span class="sent-track step">Political <b>{{ sv.get("political")|signed }}</b></span><span class="sent-track step">Economic <b>{{ sv.get("economic")|signed }}</b></span></p>
   </div>
   {% endif %}
   <div class="masthead-meta">

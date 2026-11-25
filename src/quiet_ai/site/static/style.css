@@ -108,24 +108,26 @@ button { font: inherit; }
 .spectrum .seg, .stripe .seg { display: block; height: 100%; }
 .rule { height: 2px; margin: 0; border: 0; background: var(--ink); }
 
-/* The greeting: the day's sentiment under the nameplate. */
-.sentiment { margin-top: 1rem; }
-.sent-main { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.3rem 1rem; margin: 0; }
-.sent-label { font: 600 0.72rem/1 var(--mono); letter-spacing: 0.09em; text-transform: uppercase; color: var(--muted); text-decoration: none; }
+/* The greeting: the day's sentiment on one line under the nameplate. Everything is set at 12px
+   in mono; the figure is 4px larger (16px). */
+.sentiment { margin-top: 0.9rem; }
+.sent-line { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.3rem 1rem; margin: 0; font: 0.75rem/1.4 var(--mono); color: var(--muted); }
+.sent-label { font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: var(--muted); text-decoration: none; }
 .sent-label:hover { color: var(--signal); }
-.sent-num { font: 500 1.75rem/1 var(--mono); letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
-.sent-word { font: 0.8rem var(--mono); color: var(--muted); }
+.sent-num { font-size: 1rem; font-weight: 600; letter-spacing: -0.01em; color: var(--ink); font-variant-numeric: tabular-nums; margin-left: -0.45rem; }
+.sent-word { margin-left: -0.55rem; }
 .sent-note { color: var(--faint); margin-left: 0.4em; }
-.sent-tracks { display: flex; flex-wrap: wrap; gap: 0.3rem 1.4rem; margin: 0.55rem 0 0; font: 0.72rem/1.4 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
-.sent-tracks b { margin-left: 0.4em; font-weight: 700; letter-spacing: 0; color: var(--ink); font-variant-numeric: tabular-nums; }
+.sent-track { letter-spacing: 0.06em; text-transform: uppercase; }
+.sent-word + .sent-track { padding-left: 1rem; border-left: 1px solid var(--rule); }
+.sent-track b { margin-left: 0.4em; font-weight: 700; letter-spacing: 0; color: var(--ink); font-variant-numeric: tabular-nums; }
 /* First page of a visit: each part rises into place in turn while app.js counts the figure up (450 ms). */
 @keyframes step-in { from { opacity: 0; transform: translateY(5px); } }
 .greet .sentiment .step { animation: step-in 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
 .greet .sentiment .sent-num { animation-delay: 0.06s; }
 .greet .sentiment .sent-word { animation-delay: 0.45s; }
-.greet .sentiment .sent-tracks .step:nth-child(1) { animation-delay: 0.55s; }
-.greet .sentiment .sent-tracks .step:nth-child(2) { animation-delay: 0.63s; }
-.greet .sentiment .sent-tracks .step:nth-child(3) { animation-delay: 0.71s; }
+.greet .sentiment .sent-word + .sent-track { animation-delay: 0.55s; }
+.greet .sentiment .sent-word + .sent-track + .sent-track { animation-delay: 0.63s; }
+.greet .sentiment .sent-word + .sent-track + .sent-track + .sent-track { animation-delay: 0.71s; }
 .masthead-meta { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.6rem 1.5rem; margin-top: 0.9rem; }
 .dateline { margin: 0; color: var(--muted); font: 0.76rem/1.4 var(--mono); }
 .periods { display: flex; flex-wrap: wrap; align-items: center; gap: 0.3rem; font: 0.72rem/1 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; }
