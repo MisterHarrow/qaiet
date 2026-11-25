@@ -6,7 +6,7 @@ Guidance for coding agents working in this repository.
 
 Qaiet Times (formerly "quiet ai"): a calm, text-first daily overview of AI. It shows how about 60 news outlets frame AI (each article labeled with an angle, a frame and a stance from −2 to +2), what builders are making (GitHub, Hugging Face, Hacker News, Bluesky), stories clustered across sources, "Rising", "The gap", a sentiment index, an archive and an About page.
 
-- Live: https://misterharrow.github.io/qaiet/ (GitHub Pages; the old /quiet-ai/ address stopped working when the repo was renamed on 2026-11-25)
+- Live: https://news.b3njamin.ai/ (Vercel). The old https://misterharrow.github.io/qaiet/ forwards there; https://misterharrow.github.io/quiet-ai/ stopped working when the repo was renamed on 2026-11-25.
 - Repo: `MisterHarrow/qaiet` (renamed from `quiet-ai`), **public**. Everything pushed is public.
 - Owner: Benjamin. History and the reasons behind decisions are in `docs/m0-report.md` … `docs/m6-notes.md`; commands are in `README.md`.
 
@@ -95,13 +95,14 @@ uv run pytest          # must pass before every push; no network, no model calls
 - `test.yml` runs the tests on every push.
 - `run.yml` runs on a schedule:
   - **collect** every 2 hours: fetch only, no model calls.
-  - **publish** from 06:30 Stockholm: the full pipeline, deploy to Pages, and committing the frozen editions.
-  - GitHub drops scheduled runs, so `.github/scripts/plan.sh` publishes from any scheduled run once today's edition isn't live yet (see `docs/m5-notes.md`). It reads the live `edition.json` at `SITE_URL` in `run.yml`.
-- **Vercel (news.b3njamin.ai), being set up:**
-  - Each publish also uploads `site/` to the Vercel project `energaized/qaiet` (pinned `vercel` CLI). Vercel never builds; the secrets are `VERCEL_TOKEN`, `VERCEL_ORG_ID` and `VERCEL_PROJECT_ID`.
+  - **publish** from 06:30 Stockholm: the full pipeline, deploy, and committing the frozen editions.
+  - GitHub drops scheduled runs, so `.github/scripts/plan.sh` publishes from any scheduled run once today's edition isn't live yet (see `docs/m5-notes.md`). It reads the live `edition.json` at `SITE_URL` in `run.yml` (news.b3njamin.ai).
+- **Hosting:**
+  - Vercel serves the site at news.b3njamin.ai: each publish uploads `site/` to the Vercel project `energaized/qaiet` with a pinned `vercel` CLI. Vercel never builds. Secrets: `VERCEL_TOKEN`, `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID`.
+  - A failed Vercel deploy fails the run. Fix it quickly: until today's edition is live, every scheduled run publishes again (and spends model money).
   - `qa build` writes `site/vercel.json` with `trailingSlash: true`; the relative links break without it.
   - DNS is at Namecheap: a CNAME for `news` points to Vercel. The apex b3njamin.ai is a separate Vercel project.
-  - Until the switch, GitHub Pages stays the fallback: the Vercel step has `continue-on-error`, and `SITE_URL` still points at Pages. To switch: confirm `https://news.b3njamin.ai/edition.json` answers 200 without a redirect, point `SITE_URL` there, drop `continue-on-error` and the Pages steps.
+  - GitHub Pages only serves `deploy/pages-redirect/` (a forward to news.b3njamin.ai, keeping the path), so old links keep working.
   - `.vercel/` and `.env.local` (from `vercel link`) are git-ignored; never commit them.
-- **Changes to the page go live only on the next publish:** the morning run, or a manual `gh workflow run run.yml --repo MisterHarrow/qaiet -f mode=publish`. That costs model money and updates the public site, so ask Benjamin first.
+- **Changes to the page go live on the next publish**, or right away with `gh workflow run run.yml --repo MisterHarrow/qaiet -f mode=deploy`: it rebuilds the site from the saved database with no model calls. Run it only after the morning publish (the rebuilt page carries the current time, so earlier it would stop that day's publish). Both update the public site, so ask Benjamin first; `-f mode=publish` also costs model money.
 - The workflow commits `editions/*.json` to `main`. Run `git pull --rebase` before pushing.

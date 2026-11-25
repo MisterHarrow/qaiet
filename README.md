@@ -2,7 +2,7 @@
 
 Qaiet Times (repo `qaiet`; the Python package is still called `quiet_ai`) is a calm, text-first page that answers once a day: what happened in AI, how is it being framed, and what are builders actually making?
 
-Status: **M5 (automation)**, live at https://misterharrow.github.io/qaiet/. Sources are fetched, filtered for AI relevance, grouped into stories, labeled (track, frame, stance, evidence), ranked by momentum, summarized and rendered as a static page, published every morning at 06:30 Stockholm time by GitHub Actions (sources are collected every 2 hours). Notes per milestone: [M0 plan and sources](docs/m0-report.md), [M2 relevance and clustering](docs/m2-notes.md), [M3 labels, momentum, costs](docs/m3-notes.md), [M4 site](docs/m4-notes.md), [M5 automation](docs/m5-notes.md).
+Status: **M5 (automation)**, live at https://news.b3njamin.ai/ (Vercel; the old GitHub Pages address forwards there). Sources are fetched, filtered for AI relevance, grouped into stories, labeled (track, frame, stance, evidence), ranked by momentum, summarized and rendered as a static page, published every morning at 06:30 Stockholm time by GitHub Actions (sources are collected every 2 hours). Notes per milestone: [M0 plan and sources](docs/m0-report.md), [M2 relevance and clustering](docs/m2-notes.md), [M3 labels, momentum, costs](docs/m3-notes.md), [M4 site](docs/m4-notes.md), [M5 automation](docs/m5-notes.md).
 
 ## Setup
 
@@ -71,9 +71,9 @@ The embedding model (~220 MB) downloads to `.cache/fastembed` on first use.
 uv run qa ingest --record        # live fetch, writes fixtures, stores nothing
 ```
 
-## Deploy (GitHub Actions + Pages)
+## Deploy (GitHub Actions + Vercel)
 
-`.github/workflows/run.yml` has two kinds of run (`.github/scripts/plan.sh` decides which):
+`.github/workflows/run.yml` has three kinds of run (`.github/scripts/plan.sh` decides which):
 
 - **collect**, every 2 hours: restore the database, `uv run qa ingest`, save it. No model calls, no deploy.
 - **publish**, every morning from 06:30 Stockholm; manual runs publish by default. GitHub drops scheduled runs under load, so no single cron is trusted: any scheduled run publishes once it is past 06:30 local and the live `edition.json` is older than that. A morning cron (every 20 minutes, 04:10–09:50 UTC, covering winter and summer time) retries, and the 2-hourly collect run is the backstop. A publish run does:
@@ -85,14 +85,22 @@ uv run qa ingest --record        # live fetch, writes fixtures, stores nothing
    - prunes old data (items not about AI after 15 days, everything after 400 days; snapshots thinned after 7 days).
 3. Uploads the database back to the release, plus a dated daily snapshot (14 kept).
 4. Commits new frozen editions. The daily commit also keeps GitHub from pausing the schedule after 60 days of inactivity.
-5. Deploys `site/` to GitHub Pages.
+5. Deploys `site/` to Vercel (news.b3njamin.ai) with the Vercel CLI; Vercel never builds. GitHub Pages only serves a forward from the old address (`deploy/pages-redirect/`).
+
+- **deploy**, manual only (`gh workflow run run.yml -f mode=deploy`): rebuilds the site from the saved database with no model calls and deploys it. For page changes; run it after the morning publish.
 
 One-time setup:
 
 ```sh
 gh secret set ANTHROPIC_API_KEY --repo <owner>/qaiet   # paste the key when asked
 gh api -X POST repos/<owner>/qaiet/pages -f build_type=workflow
+npx vercel login && npx vercel project add qaiet && npx vercel link --yes --project qaiet
+gh secret set VERCEL_TOKEN --repo <owner>/qaiet        # an account token from vercel.com/account/settings/tokens
+gh secret set VERCEL_ORG_ID --repo <owner>/qaiet       # orgId from .vercel/project.json
+gh secret set VERCEL_PROJECT_ID --repo <owner>/qaiet   # projectId from .vercel/project.json
 ```
+
+The domain: add it to the Vercel project (`npx vercel domains add news.b3njamin.ai qaiet`) and create the CNAME record it names at the DNS host (Namecheap).
 
 Without the secret the pipeline still runs and deploys, with no labels or summaries.
 
