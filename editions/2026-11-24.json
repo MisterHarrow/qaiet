@@ -1,0 +1,3675 @@
+{
+ "generated_at": "2026-11-24T13:35:38+00:00",
+ "period": {
+  "key": "day",
+  "label": "24 hours",
+  "hours": 24
+ },
+ "data_since": null,
+ "weather": "Nvidia-driven day, split between political and economic angles; builders mostly worked on agent tooling and general-purpose coding helpers.",
+ "terms": [
+  {
+   "key": "nvidia",
+   "label": "Nvidia",
+   "outlets": 61,
+   "size": 4,
+   "stories": 6
+  },
+  {
+   "key": "jensen huang",
+   "label": "Jensen Huang",
+   "outlets": 58,
+   "size": 4,
+   "stories": 5
+  },
+  {
+   "key": "anthropic",
+   "label": "Anthropic",
+   "outlets": 47,
+   "size": 4,
+   "stories": 4
+  },
+  {
+   "key": "trump",
+   "label": "Trump",
+   "outlets": 40,
+   "size": 3,
+   "stories": 5
+  },
+  {
+   "key": "china",
+   "label": "China",
+   "outlets": 36,
+   "size": 3,
+   "stories": 3
+  },
+  {
+   "key": "openai",
+   "label": "OpenAI",
+   "outlets": 27,
+   "size": 3,
+   "stories": 2
+  },
+  {
+   "key": "megaspeed",
+   "label": "Megaspeed",
+   "outlets": 23,
+   "size": 2,
+   "stories": 3
+  },
+  {
+   "key": "us",
+   "label": "US",
+   "outlets": 20,
+   "size": 2,
+   "stories": 2
+  },
+  {
+   "key": "claude",
+   "label": "Claude",
+   "outlets": 19,
+   "size": 2,
+   "stories": 2
+  },
+  {
+   "key": "google",
+   "label": "Google",
+   "outlets": 17,
+   "size": 2
+  },
+  {
+   "key": "alice huang",
+   "label": "Alice Huang",
+   "outlets": 13,
+   "size": 2,
+   "stories": 2
+  },
+  {
+   "key": "spacex",
+   "label": "SpaceX",
+   "outlets": 12,
+   "size": 1
+  },
+  {
+   "key": "elon musk",
+   "label": "Elon Musk",
+   "outlets": 11,
+   "size": 1,
+   "stories": 1
+  },
+  {
+   "key": "meta",
+   "label": "Meta",
+   "outlets": 11,
+   "size": 1,
+   "stories": 1
+  },
+  {
+   "key": "nasdaq",
+   "label": "Nasdaq",
+   "outlets": 11,
+   "size": 1,
+   "stories": 2
+  },
+  {
+   "key": "riemann hypothesis",
+   "label": "Riemann hypothesis",
+   "outlets": 11,
+   "size": 1,
+   "stories": 1
+  }
+ ],
+ "stories": [
+  {
+   "id": "s-f82cbea7e1",
+   "rank": 1,
+   "momentum": 0.7773,
+   "features": {
+    "outlets": 46,
+    "countries": 12,
+    "hn_points": 4764.0,
+    "star_velocity": 0.0,
+    "hf_trending": 0.0,
+    "social": 173.0,
+    "aggregators": 2,
+    "digests": 1
+   },
+   "headline": "Nvidia's board reinstated Jensen Huang as CEO days after his resignation, amid a chip-smuggling case and a reported SEC review.",
+   "track": "economic",
+   "summary": {
+    "headline": "Nvidia's board reinstated Jensen Huang as CEO days after his resignation, amid a chip-smuggling case and a reported SEC review.",
+    "track": "economic",
+    "coverage": "Opinion-heavy outlets in the US and Europe, such as The Guardian, The Free Press and Le Monde, frame the return as a governance and security failure. Market-focused outlets in the US, Asia and the Nordics, such as Bloomberg, The Korea Herald and Dagens Nyheter, stress the stock surge, and many wire-style reports simply relay the board's decision and Trump's role.",
+    "builders": "Hacker News discussed the reinstatement at length, with one thread above 3,500 comments, and another thread looked into Polymarket insider trading around the announcement.",
+    "basis": {
+     "news_prompt": "news_label_v3",
+     "stance": {
+      "-2": 17,
+      "-1": 44,
+      "0": 85,
+      "1": 33,
+      "2": 5,
+      "unclear": 13,
+      "unlabeled": 0
+     }
+    }
+   },
+   "outlets": 46,
+   "countries": 12,
+   "stance": {
+    "-2": 17,
+    "-1": 56,
+    "0": 88,
+    "1": 35,
+    "2": 5,
+    "unclear": 13,
+    "unlabeled": 0
+   },
+   "stance_summary": "mostly neutral",
+   "coverage": [
+    {
+     "stance": "-2",
+     "items": [
+      {
+       "outlet": "Breitbart",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "Nvidia Nightmare: Investigations Reveal Jensen Huang's Girlfriend Has Ties to Chip Smugglers, Chinese Intelligence",
+       "title_en": null,
+       "url": "https://www.breitbart.com/tech/2026/11/23/nvidia-nightmare-investigations-reveal-jensen-huangs-girlfriend-has-ties-to-chip-smugglers-chinese-intelligence",
+       "frame": "neutral",
+       "evidence": [
+        "Nvidia Nightmare: Investigations Reveal Jensen Huang's Girlfriend Has Ties to Chip Smugglers…"
+       ],
+       "rationale": "Alarmist headline alleging smuggling and intelligence ties, strongly critical.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "The Free Press",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "Will Jensen Huang’s Return Make America Less Safe?",
+       "title_en": null,
+       "url": "https://www.thefp.com/p/will-jensen-huangs-return-make-america-nvidia-ai-business-chips",
+       "frame": "neutral",
+       "evidence": [
+        "Huang is aiding America’s adversary"
+       ],
+       "rationale": "Opinion piece alleging the CEO aids an adversary, strongly critical.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "Le Monde",
+       "country": "FR",
+       "kind": "news",
+       "lang": "fr",
+       "title": "« En s’imposant à la fois comme fournisseur et banquier, Nvidia a fini par créer une communauté d’intérêts autour d’un patron devenu incontournable »",
+       "title_en": "\"By imposing itself as both supplier and banker, Nvidia has ended up creating a community of interests around a boss who has become indispensable\"",
+       "url": "https://www.lemonde.fr/idees/article/2026/11/23/l-affaire-nvidia-montre-que-la-silicon-valley-aime-davantage-les-visionnaires-que-les-contre-pouvoirs_6814348_3232.html",
+       "frame": "bubble",
+       "evidence": [
+        "créer une communauté d’intérêts autour d’un patron devenu incontournable",
+        "écosystème endogame"
+       ],
+       "rationale": "Editorial criticism of Nvidia's insular, self-interested industry ecosystem.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "The New Republic",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "Nvidia Board Brings Back Jensen Huang in Dumbest Move Ever",
+       "title_en": null,
+       "url": "https://newrepublic.com/post/218278/nvidia-brings-back-jensen-huang-spy",
+       "frame": "neutral",
+       "evidence": [
+        "Nvidia Board Brings Back Jensen Huang in Dumbest Move Ever",
+        "Money talks, even if it’s complicated by a Chinese spy campaign."
+       ],
+       "rationale": "Harshly condemns the board's reinstatement decision as a foolish move.",
+       "llm_opt_out": false
+      }
+     ]
+    },
+    {
+     "stance": "-1",
+     "items": [
+      {
+       "outlet": "CNBC",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "U.S. probes Megaspeed, Alice Huang as new figure emerges in Nvidia chip case",
+       "title_en": null,
+       "url": "https://www.cnbc.com/2026/11/23/nvidia-megaspeed-chipmaker-us.html",
+       "frame": "national-competition",
+       "evidence": [
+        "U.S. probes Megaspeed, Alice Huang",
+        "new figure emerges in Nvidia chip case"
+       ],
+       "rationale": "Investigation into chip case with possible China links frames it as a security and export-control concern.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "The Economist",
+       "country": "GB",
+       "kind": "news",
+       "lang": "en",
+       "title": "Jensen Huang returns. But Nvidia will never be the same",
+       "title_en": null,
+       "url": "https://www.economist.com/business/2026/11/23/jensen-huang-returns-but-nvidia-will-never-be-the-same",
+       "frame": "neutral",
+       "evidence": [
+        "He now faces a hostile Congress, rattled employees"
+       ],
+       "rationale": "Notes hostility and unrest around Nvidia's leadership, a critical tone toward the company.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "The Economic Times",
+       "country": "IN",
+       "kind": "news",
+       "lang": "en",
+       "title": "Alice Huang in touch with Chinese spy agency during affair with Nvidia CEO: Report",
+       "title_en": null,
+       "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/alice-huang-in-touch-with-chinese-spy-agency-during-affair-with-nvidia-ceo-report/articleshow/136087629.cms",
+       "frame": "neutral",
+       "evidence": [
+        "in touch with an officer from China's Ministry of State Security"
+       ],
+       "rationale": "Reports intelligence-linked contacts in a critical but factual tone.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "Fortune",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "Incompetent or pragmatic? Nvidia board’s rehiring of Jensen Huang splits corporate governance experts",
+       "title_en": null,
+       "url": "https://fortune.com/2026/11/23/corporate-governance-experts-divided-nvidia-decision-rehire-jensen-huang",
+       "frame": "neutral",
+       "evidence": [
+        "Incompetent or pragmatic? Nvidia board’s rehiring",
+        "leaves “unanswered questions.”"
+       ],
+       "rationale": "Presents expert division and unanswered questions about the board's decision, leaning critical.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "Financial Times",
+       "country": "GB",
+       "kind": "news",
+       "lang": "en",
+       "title": "What Nvidia tells us about America and China",
+       "title_en": null,
+       "url": "https://www.ft.com/content/28cb9178-ac22-44b9-99f5-d5f25a86d366?syn-25a6b1a6=1",
+       "frame": "national-competition",
+       "evidence": [
+        "The company’s spy scandal shows how little leverage Washington has against Beijing"
+       ],
+       "rationale": "Frames the episode as a US-China contest and critiques Washington's weak leverage.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "The Guardian",
+       "country": "GB",
+       "kind": "news",
+       "lang": "en",
+       "title": "Howard Lutnick has been Trump’s ally for decades. His ties to Nvidia may spell his downfall",
+       "title_en": null,
+       "url": "https://www.theguardian.com/us-news/2026/nov/22/howard-lutnick-nvidia-china",
+       "frame": "neutral",
+       "evidence": [
+        "faces scrutiny after sex scandal reveals his role in sales of chips…"
+       ],
+       "rationale": "Critical political coverage of a commerce secretary's ties to chip sales, implying wrongdoing.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "Handelsblatt",
+       "country": "DE",
+       "kind": "news",
+       "lang": "de",
+       "title": "Chip-Konzern: Aufsicht SEC überprüft laut Bericht Nvidia-Bilanzierung – Aktie fällt weiter",
+       "title_en": "Chip company: SEC reportedly reviews Nvidia accounting – stock falls further",
+       "url": "https://www.handelsblatt.com/technik/ki/chip-konzern-aufsicht-sec-ueberprueft-laut-bericht-nvidia-bilanzierung/100271678.html",
+       "frame": "neutral",
+       "evidence": [
+        "Nvidia droht neues Ungemach: Aufseher untersuchen offenbar die Buchhaltung"
+       ],
+       "rationale": "Reports regulatory scrutiny and a falling stock, negative tone.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "heise online",
+       "country": "DE",
+       "kind": "news",
+       "lang": "de",
+       "title": "Nvidia setzt Jensen Huang wieder als CEO ein",
+       "title_en": "Nvidia reinstates Jensen Huang as CEO",
+       "url": "https://www.heise.de/news/Nvidia-setzt-Jensen-Huang-wieder-als-CEO-ein-11534936.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+       "frame": "neutral",
+       "evidence": [
+        "Ein Ende der Affären um das Unternehmen ist das nicht."
+       ],
+       "rationale": "Reports the CEO reinstatement but stresses ongoing controversies around the company.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "National Review",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "How Long Can Jensen Huang and Nvidia Defy Gravity?",
+       "title_en": null,
+       "url": "https://www.nationalreview.com/article/how-long-can-jensen-huang-and-nvidia-defy-gravity",
+       "frame": "neutral",
+       "evidence": [
+        "His reinstatement at Trump’s urging is a perilous high-wire act."
+       ],
+       "rationale": "Frames Huang's position as precarious and risky, a mildly worried tone.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "New York Post",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "Elizabeth Warren, lawmakers slam Nvidia’s ‘reckless’ decision to reinstate Jensen Huang",
+       "title_en": null,
+       "url": "https://nypost.com/2026/11/23/business/elizabeth-warren-lawmakers-slam-nvidias-reckless-decision-to-reinstate-jensen-huang",
+       "frame": "neutral",
+       "evidence": [
+        "lawmakers slam Nvidia’s ‘reckless’ decision"
+       ],
+       "rationale": "Lawmakers criticize Nvidia's leadership decision as reckless, a critical tone toward the AI industry.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "Der Spiegel",
+       "country": "DE",
+       "kind": "news",
+       "lang": "de",
+       "title": "Nvidia: Offenbar Verbindungen zwischen Alice Huang und Chinas Chip-Unterwelt",
+       "title_en": null,
+       "url": "https://www.spiegel.de/wirtschaft/unternehmen/nvidia-verbindungen-zwischen-alice-huang-und-chinas-chip-unterwelt-a-87b31bb5-ed67-4363-bfd5-782009a3d796",
+       "frame": "neutral",
+       "evidence": [
+        "Verbindungen zu Firmen gehabt haben",
+        "illegal in China verkauft haben"
+       ],
+       "rationale": "Reports alleged illegal chip sales to China linked to a former Nvidia figure.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "The Verge",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "Tech leaders are celebrating Jensen Huang’s return",
+       "title_en": null,
+       "url": "https://www.theverge.com/tech/1040069/jensen-huang-return-elon-musk-sam-altman-yay",
+       "frame": "neutral",
+       "evidence": [
+        "allegedly cheated on your wife",
+        "(allegedly!) \"terrorized\" your employees"
+       ],
+       "rationale": "Sarcastic framing lists alleged misconduct while noting tech leaders celebrating, mildly critical.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "The Wall Street Journal",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "The Alice Huang Associate Accused of Funneling Nvidia Chips to China",
+       "title_en": null,
+       "url": "https://www.wsj.com/tech/li-ming-megaspeed-nvidia-chips-china-6260d836?mod=rss_Technology",
+       "frame": "neutral",
+       "evidence": [
+        "The defendant in a case involving chip smuggling"
+       ],
+       "rationale": "Reports a smuggling case with a critical tone toward the alleged conduct.",
+       "llm_opt_out": false
+      }
+     ]
+    },
+    {
+     "stance": "0",
+     "items": [
+      {
+       "outlet": "Ars Technica",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "Jensen Huang reinstated as Nvidia CEO, board chair",
+       "title_en": null,
+       "url": "https://arstechnica.com/ai/2026/11/jensen-huang-reinstated-as-nvidia-ceo-board-chair",
+       "frame": "neutral",
+       "evidence": [
+        "Jensen Huang reinstated as Nvidia CEO, board chair"
+       ],
+       "rationale": "Neutral report of a leadership reinstatement and Trump's comment.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "BBC News",
+       "country": "GB",
+       "kind": "news",
+       "lang": "en",
+       "title": "The rise and fall and rise again of Jensen Huang",
+       "title_en": null,
+       "url": "https://www.bbc.co.uk/news/articles/cmze750zg0jeo",
+       "frame": "neutral",
+       "evidence": [
+        "Days after resigning while mired in scandal",
+        "is making a remarkable return"
+       ],
+       "rationale": "Reports a personnel story about a chip executive's comeback without judging the industry.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "Business Insider",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "Nvidia employee who said he quit over Jensen's ousting now says 'I may have moved too quickly'",
+       "title_en": null,
+       "url": "https://www.businessinsider.com/nvidia-ceo-jensen-huang-return-scandal-2026-11",
+       "frame": "neutral",
+       "evidence": [
+        "he says he may have moved too quickly"
+       ],
+       "rationale": "Plain report of an employee reversing course.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "Breakit",
+       "country": "SE",
+       "kind": "news",
+       "lang": "sv",
+       "title": "Jensen Huang blir vd på Nvidia igen",
+       "title_en": "Jensen Huang becomes CEO of Nvidia again",
+       "url": "https://www.breakit.se/artikel/48112/jensen-huang-blir-vd-pa-nvidia-igen",
+       "frame": "neutral",
+       "evidence": [
+        "Nvidias styrelse tar tillbaka Jensen Huang som vd"
+       ],
+       "rationale": "Plain report of the board's decision.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "Deutsche Welle",
+       "country": "DE",
+       "kind": "news",
+       "lang": "en",
+       "title": "Nvidia reinstates former CEO Jensen Huang despite China espionage scandal",
+       "title_en": null,
+       "url": "https://www.dw.com/en/nvidia-reinstates-former-ceo-jensen-huang-despite-china-espionage-scandal/a-80021926?maca=en-rss-en-all-1573-rdf",
+       "frame": "neutral",
+       "evidence": [
+        "Nvidia's board voted unanimously to bring back the disgraced CEO"
+       ],
+       "rationale": "Plain corporate governance reporting on a leadership reversal, with no evaluative framing of AI.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "Nikkei Asia",
+       "country": "JP",
+       "kind": "news",
+       "lang": "en",
+       "title": "Asia's Nvidia suppliers give cautious welcome to Huang return",
+       "title_en": null,
+       "url": "https://asia.nikkei.com/spotlight/supply-chain/asia-s-nvidia-suppliers-give-cautious-welcome-to-huang-return",
+       "frame": "neutral",
+       "evidence": [
+        "Asia's Nvidia suppliers give cautious welcome to Huang return"
+       ],
+       "rationale": "Reports suppliers' cautious reaction, balanced and descriptive.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "NPR",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "Trump claims credit as Jensen Huang returns to Nvidia",
+       "title_en": null,
+       "url": "https://www.npr.org/2026/11/23/nx-s1-6050910/nvidias-jensen-huang-trump",
+       "frame": "neutral",
+       "evidence": [
+        "President Trump endorsed the announcement",
+        "does not see Huang's return as a national security risk"
+       ],
+       "rationale": "Reports the president's position on the return in factual terms.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "The New York Times",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "What Nvidia’s Interim CEO, Colette Kress, Said to Employees After Jensen Huang’s Resignation",
+       "title_en": null,
+       "url": "https://www.nytimes.com/2026/11/18/technology/nvidia-jensen-huang-affair-colette-kress.html",
+       "frame": "neutral",
+       "evidence": [
+        "Colette Kress sought to put the indiscretions of Nvidia’s co-founder"
+       ],
+       "rationale": "Reports an internal company statement about leadership change in plain terms.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "Politico",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "Nvidia board reinstates Huang as CEO",
+       "title_en": null,
+       "url": "https://www.politico.com/news/2026/11/23/jensen-huang-nvidia-return-01180321",
+       "frame": "neutral",
+       "evidence": [
+        "praised the company’s decision to bring back Jensen Huang"
+       ],
+       "rationale": "Reports the board decision and White House reaction in neutral terms.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "Semafor",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "US spy chief calls Nvidia chips 'jewels'",
+       "title_en": null,
+       "url": "https://www.semafor.com/article/11/22/2026/us-spy-chief-calls-nvidia-chips-jewels",
+       "frame": "national-competition",
+       "evidence": [
+        "US spy chief calls Nvidia chips 'jewels'",
+        "probing the alleged Chinese spy"
+       ],
+       "rationale": "Reports a security probe framed around US-China rivalry over chips, stated plainly.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "Svenska Dagbladet",
+       "country": "SE",
+       "kind": "news",
+       "lang": "sv",
+       "title": "Nvidias vd tillbaka – så mycket tjänade Trump",
+       "title_en": "Nvidia's CEO back – how much Trump earned",
+       "url": "https://www.svd.se/a/aGwMGE/nvidias-vd-tillbaka-sa-mycket-tjanade-trump",
+       "frame": "neutral",
+       "evidence": [
+        "Jensen Huangs återinträde som vd för Nvidia fick aktien att tokrusa"
+       ],
+       "rationale": "Reports the share reaction to the CEO's return factually.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "SVT Nyheter",
+       "country": "SE",
+       "kind": "news",
+       "lang": "sv",
+       "title": "”Trump fick som han ville – men nya akter väntar i Nvidia-dramat”",
+       "title_en": "\"Trump got what he wanted – but new acts await in the Nvidia drama\"",
+       "url": "https://www.svt.se/nyheter/utrikes/trump-fick-som-han-ville-men-nya-akter-vantar-i-nvidia-dramat",
+       "frame": "neutral",
+       "evidence": [
+        "Donald Trump ser ut att ha klivit in och ändrat förutsättningarna"
+       ],
+       "rationale": "Describes Trump's role in the drama descriptively with some drama framing.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "TechCrunch",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "A tale of two Nvidias",
+       "title_en": null,
+       "url": "https://techcrunch.com/2026/11/21/a-tale-of-two-nvidias",
+       "frame": "neutral",
+       "evidence": [
+        "We got two very different pictures of Nvidia"
+       ],
+       "rationale": "Balanced comparison of earnings and executive reactions.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "The Hill",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "Trump says he 'convinced' Nvidia board to reinstate Jensen Huang",
+       "title_en": null,
+       "url": "https://thehill.com/homenews/administration/6237473-donald-trump-jensen-huang-nvidia-return-victory-lap",
+       "frame": "neutral",
+       "evidence": [
+        "“And I convinced them.”"
+       ],
+       "rationale": "Reports the president's claim about his role in plain terms.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "Washington Examiner",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "Nvidia reinstates Jensen Huang as president and CEO",
+       "title_en": null,
+       "url": "https://www.washingtonexaminer.com/policy/technology/4812128/nvidia-reinstates-jensen-huang-president-ceo",
+       "frame": "neutral",
+       "evidence": [
+        "Nvidia reinstates Jensen Huang as president and CEO"
+       ],
+       "rationale": "Plain factual report of a leadership reinstatement.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "Wired",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "Jensen Huang Is Back as Nvidia CEO",
+       "title_en": null,
+       "url": "https://www.wired.com/story/jensen-huang-is-back-as-nvidia-ceo",
+       "frame": "neutral",
+       "evidence": [
+        "The company’s board of directors has reinstated Huang"
+       ],
+       "rationale": "Plain reporting of a leadership reinstatement with no evaluative tone.",
+       "llm_opt_out": false
+      }
+     ]
+    },
+    {
+     "stance": "1",
+     "items": [
+      {
+       "outlet": "Al Jazeera",
+       "country": "QA",
+       "kind": "news",
+       "lang": "en",
+       "title": "Nvidia live: Jensen Huang reinstatement reverberates through markets",
+       "title_en": null,
+       "url": "https://www.aljazeera.com/news/liveblog/2026/11/24/nvidia-live-markets-surge-as-jensen-huang-returns-as-ceo",
+       "frame": "boom",
+       "evidence": [
+        "Markets surge as Jensen Huang returns as CEO",
+        "breathes new life into an AI market rally"
+       ],
+       "rationale": "Frames the AI market rally and share surge positively.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "Bloomberg",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "Japan Stocks Rebound as Huang’s Return Resuscitates AI Trade",
+       "title_en": null,
+       "url": "https://www.bloomberg.com/news/articles/2026-11-24/japan-stocks-rebound-as-huang-s-return-resuscitates-ai-trade",
+       "frame": "boom",
+       "evidence": [
+        "Japanese stocks rose as Jensen Huang’s return",
+        "eased concerns about a slowdown in AI investment"
+       ],
+       "rationale": "Market rebound on Huang's return is framed as relief and renewed AI optimism.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "Daily Caller",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "Nvidia, Tech Stocks Skyrocket Immediately Following Jensen Huang’s Reinstatement Announcement",
+       "title_en": null,
+       "url": "https://dailycaller.com/2026/11/23/nvidia-stock-surges-with-jensen-huangs-triumphant-return",
+       "frame": "boom",
+       "evidence": [
+        "Nvidia, Tech Stocks Skyrocket Immediately"
+       ],
+       "rationale": "Highlights a sharp stock rally for Nvidia and tech, an optimistic market story.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "Dagens Nyheter",
+       "country": "SE",
+       "kind": "news",
+       "lang": "sv",
+       "title": "Jensen Huang tillbaka som vd för Nvidia",
+       "title_en": "Jensen Huang back as CEO of Nvidia",
+       "url": "https://www.dn.se/ekonomi/jensen-huang-tillbaka-som-vd-for-nvidia",
+       "frame": "boom",
+       "evidence": [
+        "Aktien rusar över 30 procent",
+        "USA:s president Donald Trump hyllar beslutet"
+       ],
+       "rationale": "Reports a surge in stock and praise from Trump, positive market framing.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "Global Times",
+       "country": "CN",
+       "kind": "news",
+       "lang": "en",
+       "title": "US stocks surge as Nvidia Huang reinstatement reignites AI trade",
+       "title_en": null,
+       "url": "https://www.globaltimes.cn/page/202611/1374908.shtml",
+       "frame": "boom",
+       "evidence": [
+        "US stocks surge as Nvidia Huang reinstatement reignites AI trade"
+       ],
+       "rationale": "Market reporting framed around surging stocks and renewed AI trade enthusiasm, positive about investor sentiment.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "The Korea Herald",
+       "country": "KR",
+       "kind": "news",
+       "lang": "en",
+       "title": "Kospi roars back above 5,000 on news of Huang's Nvidia comeback",
+       "title_en": null,
+       "url": "https://www.koreaherald.com/article/10947595",
+       "frame": "boom",
+       "evidence": [
+        "Kospi roars back above 5,000",
+        "renewed investor optimism"
+       ],
+       "rationale": "Market report emphasizing surge and renewed optimism around AI.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "South China Morning Post",
+       "country": "HK",
+       "kind": "news",
+       "lang": "en",
+       "title": "Nvidia reinstates Jensen Huang as CEO; Trump praises ‘correct’ decision; shares surge",
+       "title_en": null,
+       "url": "https://www.scmp.com/tech/big-tech/article/3375515/nvidia-reinstates-jensen-huang-ceo-president-and-board-director",
+       "frame": "boom",
+       "evidence": [
+        "Trump praises ‘correct’ decision; shares surge"
+       ],
+       "rationale": "Upbeat coverage of reinstatement, praise and surging shares.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "The Straits Times",
+       "country": "SG",
+       "kind": "news",
+       "lang": "en",
+       "title": "Stocks climb as Huang’s stunning return to Nvidia lifts optimism",
+       "title_en": null,
+       "url": "https://www.straitstimes.com/business/stocks-climb-as-huangs-stunning-return-to-nvidia-lifts-optimism",
+       "frame": "boom",
+       "evidence": [
+        "Huang’s stunning return to Nvidia lifts optimism"
+       ],
+       "rationale": "Frames the return as lifting investor optimism.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "The Telegraph",
+       "country": "GB",
+       "kind": "news",
+       "lang": "en",
+       "title": "Wall Street stocks soar as Jensen Huang returns to Nvidia",
+       "title_en": null,
+       "url": "https://www.telegraph.co.uk/business/2026/11/23/us-stocks-poised-to-rebound-after-global-tech-sell-off",
+       "frame": "boom",
+       "evidence": [
+        "Wall Street stocks soar as Jensen Huang returns to Nvidia"
+       ],
+       "rationale": "Headline frames the market rally as a positive reaction to the return.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "The Washington Post",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "Trump urges Nvidia to reinstate Jensen Huang, calling him ‘best thing’ for U.S.",
+       "title_en": null,
+       "url": "https://www.washingtonpost.com/technology/2026/11/23/trump-urges-nvidia-reinstate-jensen-huang-calling-him-best-thing-us",
+       "frame": "neutral",
+       "evidence": [
+        "calling him ‘best thing’ for U.S."
+       ],
+       "rationale": "Reports the president's favorable remarks about the executive.",
+       "llm_opt_out": false
+      }
+     ]
+    },
+    {
+     "stance": "2",
+     "items": [
+      {
+       "outlet": "Ny Teknik",
+       "country": "SE",
+       "kind": "news",
+       "lang": "sv",
+       "title": "Jensen Huang efter återkomsten till Nvidia: ”Ny industriell revolution”",
+       "title_en": "Jensen Huang after returning to Nvidia: \"New industrial revolution\"",
+       "url": "https://www.nyteknik.se/tech/jensen-huang-efter-aterkomsten-till-nvidia-ny-industriell-revolution/4515891",
+       "frame": "boom",
+       "evidence": [
+        "Ny industriell revolution",
+        "spektakulär sorti, sedan en lika överraskande återkomst"
+       ],
+       "rationale": "Huang's own grand claim of a new industrial revolution is presented promotionally.",
+       "llm_opt_out": false
+      }
+     ]
+    },
+    {
+     "stance": "unclear",
+     "items": [
+      {
+       "outlet": "France 24",
+       "country": "FR",
+       "kind": "news",
+       "lang": "en",
+       "title": "🔴Democrats vow probe after Trump admits role in Huang's return as Nvidia CEO",
+       "title_en": null,
+       "url": "https://www.france24.com/en/americas/20261123-nvidia-board-reinstates-disgraced-jensen-huang-as-ceo-president-says",
+       "frame": "neutral",
+       "evidence": [
+        "Democrats vow probe after Trump admits role"
+       ],
+       "rationale": "Short headline reporting a political response without evaluative framing.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "Vox",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "Why Trump saved Jensen Huang",
+       "title_en": null,
+       "url": "https://www.vox.com/the-logoff-newsletter-trump/511773/trump-jensen-huang-nvidia-board-why",
+       "frame": "neutral",
+       "evidence": [
+        "Donald Trump is personally intervening to keep the AI industry afloat"
+       ],
+       "rationale": "Explanatory political news on government intervention, stated descriptively.",
+       "llm_opt_out": false
+      }
+     ]
+    }
+   ],
+   "builders": {
+    "hn": [
+     {
+      "title": "Nvidia Reinstates Jensen Huang as CEO",
+      "url": "https://news.ycombinator.com/item?id=50611576",
+      "points": 2674,
+      "comments": 3536
+     },
+     {
+      "title": "Jensen Huang Reinstated as Nvidia CEO",
+      "url": "https://news.ycombinator.com/item?id=50611588",
+      "points": 1708,
+      "comments": 4
+     },
+     {
+      "title": "Investigation of Polymarket Insider Trading on the Reinstatement of Jensen Huang",
+      "url": "https://news.ycombinator.com/item?id=50626578",
+      "points": 313,
+      "comments": 183
+     },
+     {
+      "title": "Congress shreds Nvidia's 'outrageous' return of Huang: 'Failure of character'",
+      "url": "https://news.ycombinator.com/item?id=50618490",
+      "points": 69,
+      "comments": 57
+     }
+    ],
+    "repos": [],
+    "models": [],
+    "papers": [],
+    "social": 2,
+    "official": [],
+    "digests": [
+     "The Rundown AI"
+    ]
+   },
+   "builders_line": "HN 4,764 points, 3,780 comments · 2 posts · in The Rundown AI",
+   "items": 230,
+   "entities": [
+    "Aaron MacLean",
+    "Alibaba",
+    "Alice Huang",
+    "America",
+    "Angelo Zino",
+    "Anthropic",
+    "Asia",
+    "Beijing",
+    "Binance",
+    "Bloomberg",
+    "Breakit",
+    "Breitbart",
+    "CFRA",
+    "CNBC",
+    "California",
+    "China",
+    "China's Ministry of State Security",
+    "Chinese intelligence",
+    "Chuck Schumer",
+    "Citadel",
+    "Colette Kress",
+    "Commerce",
+    "Commerce Secretary",
+    "Congress",
+    "Congressional Republicans",
+    "CrowdStrike",
+    "Danske Bank",
+    "David Ingles",
+    "Democrats",
+    "Dex Hunter-Torricke",
+    "Dialectic",
+    "Donald Trump",
+    "Dow Jones Industrial Average",
+    "Elizabeth Warren",
+    "Elon Musk",
+    "Emil Widhagen",
+    "FBI",
+    "Financial Times",
+    "Fortune",
+    "Harvey C. Jones",
+    "Howard Lutnick",
+    "Huang",
+    "Iran",
+    "JD Vance",
+    "Japan",
+    "Jay Clayton",
+    "Jensen Huang",
+    "Jim Cramer",
+    "Joe Nocera",
+    "Kospi",
+    "Le Monde",
+    "Lutnick",
+    "Marco Rubio",
+    "Maria Landeborn",
+    "Matt Pottinger",
+    "Megaspeed",
+    "Michael Shepard",
+    "NVIDIA",
+    "Nasdaq",
+    "Nasdaq Composite",
+    "Nico Ernst",
+    "Nils Pratley",
+    "Nvidia",
+    "Nvidia Corp.",
+    "Raghuram Rajan",
+    "Republicans",
+    "Reserve Bank of India",
+    "Russland",
+    "Ryan Zurrer",
+    "S&P 500",
+    "SEC",
+    "SK hynix",
+    "Sam Altman",
+    "Samsung Electronics",
+    "Scott Bessent",
+    "Semafor",
+    "Senate Banking Committee",
+    "Silicon Valley",
+    "Singapore",
+    "Starlink",
+    "Stephen A. Smith",
+    "Steve Cheung",
+    "Steve Jobs",
+    "Steven Cheung",
+    "Stéphane Lauer",
+    "TSMC",
+    "Taiwan",
+    "TechScape",
+    "The Hill",
+    "The Logoff",
+    "The New York Times",
+    "The Wall Street Journal",
+    "Todd Blanche",
+    "Trump",
+    "Trump administration",
+    "Truth Social",
+    "U.S.",
+    "U.S. government",
+    "UK",
+    "US",
+    "US government",
+    "US securities regulator",
+    "US-Kongress",
+    "US-Präsident",
+    "Uday Kotak",
+    "Ukraine",
+    "United States government",
+    "Vance",
+    "Wall Street",
+    "Washington",
+    "Weibo",
+    "White House",
+    "Xi Jinping",
+    "Yvonne Man",
+    "Zscaler",
+    "heise"
+   ],
+   "terms": [
+    "alice huang",
+    "anthropic",
+    "china",
+    "elon musk",
+    "jensen huang",
+    "megaspeed",
+    "nasdaq",
+    "nvidia",
+    "trump",
+    "us"
+   ]
+  },
+  {
+   "id": "s-fa4308a6ed",
+   "rank": 2,
+   "momentum": 0.3422,
+   "features": {
+    "outlets": 4,
+    "countries": 2,
+    "hn_points": 75.0,
+    "star_velocity": 0.0,
+    "hf_trending": 0.0,
+    "social": 897.0,
+    "aggregators": 0,
+    "digests": 0
+   },
+   "headline": "US tech stocks fell after a Nvidia rally faded, while the US blacklisted Megaspeed and an Alibaba unit.",
+   "track": "economic",
+   "summary": {
+    "headline": "US tech stocks fell after a Nvidia rally faded, while the US blacklisted Megaspeed and an Alibaba unit.",
+    "track": "economic",
+    "coverage": "German outlets such as heise online and Der Spiegel frame the fall as a deep sell-off and a bubble risk. US outlets like Bloomberg and The Washington Post report it neutrally, and CNBC stresses the earlier rally; Sweden's Dagens industri quotes analysts who take a critical view of Nvidia.",
+    "builders": "Builder activity is thin, with one post on Bluesky or Hugging Face and no wider discussion in the material.",
+    "basis": {
+     "news_prompt": "news_label_v3",
+     "stance": {
+      "-2": 2,
+      "-1": 1,
+      "0": 3,
+      "1": 1,
+      "2": 0,
+      "unclear": 0,
+      "unlabeled": 0
+     }
+    }
+   },
+   "outlets": 4,
+   "countries": 2,
+   "stance": {
+    "-2": 2,
+    "-1": 1,
+    "0": 3,
+    "1": 1,
+    "2": 0,
+    "unclear": 0,
+    "unlabeled": 0
+   },
+   "stance_summary": "leans critical",
+   "coverage": [
+    {
+     "stance": "-2",
+     "items": [
+      {
+       "outlet": "heise online",
+       "country": "DE",
+       "kind": "news",
+       "lang": "de",
+       "title": "Nvidia gerät weiter unter Druck – und US-Tech-Aktien in den Bärenmarkt",
+       "title_en": "Nvidia under further pressure – and US tech stocks in bear market",
+       "url": "https://www.heise.de/news/Nvidia-geraet-weiter-unter-Druck-und-US-Tech-Aktien-in-den-Baerenmarkt-11533802.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+       "frame": "bubble",
+       "evidence": [
+        "US-Tech-Aktien rutschen nach herben Verlusten in den Bärenmarkt"
+       ],
+       "rationale": "Frames tech stocks and Nvidia as in a sharp downturn with heavy losses.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "Der Spiegel",
+       "country": "DE",
+       "kind": "news",
+       "lang": "de",
+       "title": "Nvidia und Anthropic: Das steckt hinter dem Börsenbeben",
+       "title_en": null,
+       "url": "https://www.spiegel.de/wirtschaft/unternehmen/nvidia-und-anthropic-das-steckt-hinter-dem-boersenbeben-a-f2133f0d-0378-4c58-9875-7410412e0df1",
+       "frame": "bubble",
+       "evidence": [
+        "Die Kurse vieler Techaktien stürzen ab",
+        "fast die Hälfte seines Börsenwerts verloren"
+       ],
+       "rationale": "Describes a sharp AI stock crash and loss of market value as alarming.",
+       "llm_opt_out": false
+      }
+     ]
+    },
+    {
+     "stance": "-1",
+     "items": [
+      {
+       "outlet": "Dagens industri",
+       "country": "SE",
+       "kind": "news",
+       "lang": "sv",
+       "title": "Analytikern: ”Jag tycker Nvidia blev ett sämre bolag igår”",
+       "title_en": "Analyst: \"I think Nvidia became a worse company yesterday\" | Capital manager Ceolis investment chief Erik Lundkvist and Di analyst Robert Andersson on Nvidia and the tech sell-off.",
+       "url": "https://www.di.se/ditv/borsmorgon/analytikern-jag-tycker-nvidia-blev-ett-samre-bolag-igar",
+       "frame": "neutral",
+       "evidence": [
+        "”Jag tycker Nvidia blev ett sämre bolag igår”"
+       ],
+       "rationale": "An analyst's critical quote about Nvidia's decline, otherwise a balanced discussion.",
+       "llm_opt_out": false
+      }
+     ]
+    },
+    {
+     "stance": "0",
+     "items": [
+      {
+       "outlet": "Bloomberg",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "Stocks Fall as Nvidia Rally Fades; US Blacklists Megaspeed, Alibaba Unit",
+       "title_en": null,
+       "url": "https://www.bloomberg.com/news/videos/2026-11-24/bloomberg-brief-11-24-2026-video",
+       "frame": "neutral",
+       "evidence": [
+        "The Trump administration has put Megaspeed and a Singaporean subsidiary of Alibaba…"
+       ],
+       "rationale": "Factual reporting of a blacklisting and market movement.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "The Washington Post",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "U.S. futures, European markets fade following Nvidia rally",
+       "title_en": null,
+       "url": "https://www.washingtonpost.com/business/2026/11/24/us-futures-european-markets-fade-following-nvidia-rally",
+       "frame": "neutral",
+       "evidence": [
+        "U.S. futures markets traded lower, as investors digested the implications"
+       ],
+       "rationale": "Plain market reporting on futures moves with no evaluative tone.",
+       "llm_opt_out": false
+      }
+     ]
+    },
+    {
+     "stance": "1",
+     "items": [
+      {
+       "outlet": "CNBC",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "Tech stocks see monster rally after Jensen Huang returns as Nvidia CEO",
+       "title_en": null,
+       "url": "https://www.cnbc.com/2026/11/23/anthropic-nvidia-shares.html",
+       "frame": "boom",
+       "evidence": [
+        "monster rally after Jensen Huang returns"
+       ],
+       "rationale": "Describes a strong market rally following the executive's return, a positive market move.",
+       "llm_opt_out": false
+      }
+     ]
+    }
+   ],
+   "builders": {
+    "hn": [
+     {
+      "title": "Who in Washington owns and trades Nvidia stock",
+      "url": "https://news.ycombinator.com/item?id=50626861",
+      "points": 75,
+      "comments": 27
+     }
+    ],
+    "repos": [],
+    "models": [],
+    "papers": [],
+    "social": 1,
+    "official": [],
+    "digests": []
+   },
+   "builders_line": "HN 75 points, 27 comments · 1 post",
+   "items": 9,
+   "entities": [
+    "Alibaba",
+    "Anthropic",
+    "Ceolis",
+    "China",
+    "Di",
+    "Erik Lundkvist",
+    "Jensen Huang",
+    "Megaspeed",
+    "Nasdaq",
+    "Nvidia",
+    "Robert Andersson",
+    "Trump administration"
+   ],
+   "terms": [
+    "anthropic",
+    "china",
+    "jensen huang",
+    "megaspeed",
+    "nasdaq",
+    "nvidia",
+    "trump"
+   ]
+  },
+  {
+   "id": "s-fcebd0565f",
+   "rank": 3,
+   "momentum": 0.2812,
+   "features": {
+    "outlets": 2,
+    "countries": 2,
+    "hn_points": 75.0,
+    "star_velocity": 0.0,
+    "hf_trending": 0.0,
+    "social": 0.0,
+    "aggregators": 1,
+    "digests": 0
+   },
+   "headline": "OpenAI and Cisco introduced Shirudo, an open-source project that lets AI agents build temporary protections for running Linux systems.",
+   "track": "technical",
+   "summary": {
+    "headline": "OpenAI and Cisco introduced Shirudo, an open-source project that lets AI agents build temporary protections for running Linux systems.",
+    "track": "technical",
+    "coverage": "Both outlets, heise online in Germany and The Wall Street Journal in the US, report it as a straightforward product news item. They describe Shirudo as a way to protect running Linux systems without a reboot.",
+    "builders": "Builders discussed Shirudo on Hacker News (73 points, 23 comments) as an open-source runtime for shielding unpatched Linux, and OpenAI published an official post announcing it.",
+    "basis": {
+     "news_prompt": "news_label_v3",
+     "stance": {
+      "-2": 0,
+      "-1": 0,
+      "0": 2,
+      "1": 0,
+      "2": 0,
+      "unclear": 0,
+      "unlabeled": 0
+     }
+    }
+   },
+   "outlets": 2,
+   "countries": 2,
+   "stance": {
+    "-2": 0,
+    "-1": 0,
+    "0": 2,
+    "1": 0,
+    "2": 0,
+    "unclear": 0,
+    "unlabeled": 0
+   },
+   "stance_summary": "mostly neutral",
+   "coverage": [
+    {
+     "stance": "0",
+     "items": [
+      {
+       "outlet": "heise online",
+       "country": "DE",
+       "kind": "news",
+       "lang": "de",
+       "title": "Shirudo: OpenAI und Cisco stellen KI-Schutzschild für Linux-Server vor",
+       "title_en": null,
+       "url": "https://www.heise.de/news/Shirudo-OpenAI-und-Cisco-stellen-KI-Schutzschild-fuer-Linux-Server-vor-11535772.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+       "frame": "grounded",
+       "evidence": [
+        "Shirudo ermöglicht KI-Agenten, temporäre Schutzprogramme zu entwickeln"
+       ],
+       "rationale": "Plain description of a new security tool from OpenAI and Cisco.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "The Wall Street Journal",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "Cisco, OpenAI Launch Project to Safeguard Agentic AI",
+       "title_en": null,
+       "url": "https://www.wsj.com/tech/cisco-openai-launch-project-to-safeguard-agentic-ai-f48e6420?mod=rss_Technology",
+       "frame": "grounded",
+       "evidence": [
+        "The project, called Shirudo, helps protect running Linux systems without a reboot"
+       ],
+       "rationale": "Plain description of a security project and its function.",
+       "llm_opt_out": false
+      }
+     ]
+    }
+   ],
+   "builders": {
+    "hn": [
+     {
+      "title": "Shirudo: OpenAI and Cisco's open-source runtime for shielding unpatched Linux",
+      "url": "https://news.ycombinator.com/item?id=50619630",
+      "points": 75,
+      "comments": 24
+     }
+    ],
+    "repos": [],
+    "models": [],
+    "papers": [],
+    "social": 0,
+    "official": [
+     {
+      "title": "OpenAI and Cisco introduce Shirudo",
+      "url": "https://openai.com/index/introducing-shirudo",
+      "source": "OpenAI News"
+     }
+    ],
+    "digests": []
+   },
+   "builders_line": "HN 75 points, 24 comments",
+   "items": 5,
+   "entities": [
+    "Cisco",
+    "Linux",
+    "OpenAI",
+    "Shirudo"
+   ],
+   "terms": [
+    "openai"
+   ]
+  },
+  {
+   "id": "s-eb41597073",
+   "rank": 4,
+   "momentum": 0.2362,
+   "features": {
+    "outlets": 15,
+    "countries": 7,
+    "hn_points": 0.0,
+    "star_velocity": 0.0,
+    "hf_trending": 0.0,
+    "social": 0.0,
+    "aggregators": 0,
+    "digests": 0
+   },
+   "headline": "The US Commerce Department added Megaspeed, a Southeast Asian chip firm linked to an Nvidia scandal, to its trade blacklist.",
+   "track": "political",
+   "summary": {
+    "headline": "The US Commerce Department added Megaspeed, a Southeast Asian chip firm linked to an Nvidia scandal, to its trade blacklist.",
+    "track": "political",
+    "coverage": "Most outlets, including US ones like Bloomberg, CNBC and The Washington Post and Germany's heise online, report it as a critical story of US export control and competition. Others, such as Deutsche Welle, The New York Times and The Economic Times, report the listing in a plain, neutral way.",
+    "builders": null,
+    "basis": {
+     "news_prompt": "news_label_v3",
+     "stance": {
+      "-2": 1,
+      "-1": 6,
+      "0": 4,
+      "1": 0,
+      "2": 0,
+      "unclear": 5,
+      "unlabeled": 0
+     }
+    }
+   },
+   "outlets": 15,
+   "countries": 7,
+   "stance": {
+    "-2": 1,
+    "-1": 6,
+    "0": 4,
+    "1": 0,
+    "2": 0,
+    "unclear": 5,
+    "unlabeled": 0
+   },
+   "stance_summary": "leans critical",
+   "coverage": [
+    {
+     "stance": "-2",
+     "items": [
+      {
+       "outlet": "BBC News",
+       "country": "GB",
+       "kind": "news",
+       "lang": "en",
+       "title": "US to blacklist Asian AI firm Megaspeed after Nvidia scandal",
+       "title_en": null,
+       "url": "https://www.bbc.co.uk/news/articles/cv98xpg5dg5zo",
+       "frame": "national-competition",
+       "evidence": [
+        "US to blacklist Asian AI firm Megaspeed after Nvidia scandal"
+       ],
+       "rationale": "Frames the story as a security and China chip-smuggling scandal, critical of the firms involved.",
+       "llm_opt_out": false
+      }
+     ]
+    },
+    {
+     "stance": "-1",
+     "items": [
+      {
+       "outlet": "Bloomberg",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "Megaspeed Faces US Blacklist After Nvidia CEO Ouster, Sources Say",
+       "title_en": null,
+       "url": "https://www.bloomberg.com/news/articles/2026-11-23/us-to-blacklist-megaspeed-the-firm-at-center-of-nvidia-scandal",
+       "frame": "national-competition",
+       "evidence": [
+        "The Trump administration put Megaspeed International on a US trade blacklist",
+        "targeting a Singapore-based firm at the heart of the scandal"
+       ],
+       "rationale": "Blacklisting framed as targeting a scandal-linked firm, a critical security framing.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "CNBC",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "U.S. adds Megaspeed to trade blacklist over export control concerns amid Nvidia controversy",
+       "title_en": null,
+       "url": "https://www.cnbc.com/2026/11/24/us-adds-megaspeed-to-trade-blacklist-over-export-control-concerns-.html",
+       "frame": "national-competition",
+       "evidence": [
+        "added Megaspeed and six other companies to its trade blacklist",
+        "over concerns about the potential diversion of advanced computing products"
+       ],
+       "rationale": "Export-control action framed around diversion concerns, a cautious security tone.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "heise online",
+       "country": "DE",
+       "kind": "news",
+       "lang": "de",
+       "title": "Nvidia-Affäre: USA verhängen Handelsverbot über Megaspeed",
+       "title_en": "Nvidia affair: USA impose trade ban on Megaspeed",
+       "url": "https://www.heise.de/news/Nvidia-Affaere-USA-verhaengen-Handelsverbot-ueber-Megaspeed-11535434.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+       "frame": "national-competition",
+       "evidence": [
+        "Spät reagieren die USA mit einem Handelsembargo"
+       ],
+       "rationale": "Reports export-control enforcement against chip smuggling to China, with critical note about late reaction.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "Semafor",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "Commerce adds Megaspeed to trade blacklist",
+       "title_en": null,
+       "url": "https://www.semafor.com/article/11/23/2026/commerce-to-add-megaspeed-to-trade-blacklist",
+       "frame": "national-competition",
+       "evidence": [
+        "Commerce adds Megaspeed to trade blacklist",
+        "sell chips to the Singapore-based firm"
+       ],
+       "rationale": "Export restriction on a chip buyer tied to national security concerns, reported with a restrictive tone.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "The Washington Post",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "Trump administration blacklists Megaspeed, key firm in Nvidia scandal",
+       "title_en": null,
+       "url": "https://www.washingtonpost.com/technology/2026/11/23/trump-administration-blacklists-megaspeed-key-firm-nvidia-scandal",
+       "frame": "national-competition",
+       "evidence": [
+        "added Megaspeed, the Southeast Asian company at the center of the Nvidia…"
+       ],
+       "rationale": "Reports a trade blacklisting tied to a scandal, framed around national security trade actions.",
+       "llm_opt_out": false
+      }
+     ]
+    },
+    {
+     "stance": "0",
+     "items": [
+      {
+       "outlet": "Deutsche Welle",
+       "country": "DE",
+       "kind": "news",
+       "lang": "en",
+       "title": "US adds Megaspeed, at center of Nvidia scandal, to a trade blacklist",
+       "title_en": null,
+       "url": "https://www.dw.com/en/us-adds-megaspeed-at-center-of-nvidia-scandal-to-a-trade-blacklist/a-80026849?maca=en-rss-en-all-1573-rdf",
+       "frame": "neutral",
+       "evidence": [
+        "The Trump administration has added Megaspeed to a trade blacklist"
+       ],
+       "rationale": "Factual report of a trade blacklist addition.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "The Economic Times",
+       "country": "IN",
+       "kind": "news",
+       "lang": "en",
+       "title": "US blacklists Megaspeed chip firm linked to Nvidia scandal",
+       "title_en": null,
+       "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/us-blacklists-megaspeed-chip-firm-linked-to-nvidia-scandal/articleshow/136117347.cms",
+       "frame": "neutral",
+       "evidence": [
+        "US blacklists Megaspeed chip firm linked to Nvidia scandal"
+       ],
+       "rationale": "Plain reporting of a blacklisting action and its stated reasons.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "The New York Times",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "Trump Administration Imposes Sanctions on Megaspeed, Singaporean Firm at Center of Nvidia Scandal",
+       "title_en": null,
+       "url": "https://www.nytimes.com/2026/11/23/business/trump-administration-megaspeed-trade-blacklist-nvidia.html",
+       "frame": "neutral",
+       "evidence": [
+        "added Megaspeed to the entity list, a trade blacklist"
+       ],
+       "rationale": "Factual report of a sanctions action.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "South China Morning Post",
+       "country": "HK",
+       "kind": "news",
+       "lang": "en",
+       "title": "US places Megaspeed on blacklist as Jensen Huang returns to helm of Nvidia",
+       "title_en": null,
+       "url": "https://www.scmp.com/tech/tech-war/article/3375556/us-places-megaspeed-blacklist-jensen-huang-returns-helm-nvidia",
+       "frame": "neutral",
+       "evidence": [
+        "The US Department of Commerce has added Megaspeed"
+       ],
+       "rationale": "Factual report of a trade blacklist addition.",
+       "llm_opt_out": false
+      }
+     ]
+    },
+    {
+     "stance": "unclear",
+     "items": [
+      {
+       "outlet": "Al Jazeera",
+       "country": "QA",
+       "kind": "news",
+       "lang": "en",
+       "title": "US adds Megaspeed to trade blacklist as Nvidia’s Huang returns as CEO",
+       "title_en": null,
+       "url": "https://www.aljazeera.com/economy/2026/11/24/us-adds-megaspeed-firm-at-centre-of-nvidia-scandal-to-export-control-list",
+       "frame": "neutral",
+       "evidence": [],
+       "rationale": "Factual report of a trade blacklist addition.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "Handelsblatt",
+       "country": "DE",
+       "kind": "news",
+       "lang": "de",
+       "title": "Nvidia-Skandal: USA setzen Chip-Firma Megaspeed wegen Spionageverdachts auf Sperrliste",
+       "title_en": "Nvidia scandal: USA places chip firm Megaspeed on blacklist over espionage suspicion",
+       "url": "https://www.handelsblatt.com/technik/it-internet/nvidia-skandal-usa-setzen-chip-firma-megaspeed-wegen-spionageverdachts-auf-sperrliste/100272205.html",
+       "frame": "neutral",
+       "evidence": [],
+       "rationale": "Factual report of a government sanction.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "Nikkei Asia",
+       "country": "JP",
+       "kind": "news",
+       "lang": "en",
+       "title": "US to place Megaspeed on trade blacklist amid Nvidia scandal",
+       "title_en": null,
+       "url": "https://asia.nikkei.com/business/tech/semiconductors/us-to-place-megaspeed-on-trade-blacklist-amid-nvidia-scandal",
+       "frame": "national-competition",
+       "evidence": [
+        "US to place Megaspeed on trade blacklist"
+       ],
+       "rationale": "Reports a US trade blacklisting tied to a scandal, a critical enforcement framing.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "TechCrunch",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "Megaspeed, the company at the center of the Jensen Huang scandal, appears headed for a US blacklist",
+       "title_en": null,
+       "url": "https://techcrunch.com/2026/11/23/megaspeed-the-company-at-the-center-of-the-jensen-huang-scandal-appears-headed-for-a-u-s-blacklist",
+       "frame": "national-competition",
+       "evidence": [],
+       "rationale": "Covers a blacklisting tied to export-control and national security concerns, which reads as worrying.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "The Hill",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "Commerce Department adds Megaspeed to trade blacklist amid Nvidia scandal",
+       "title_en": null,
+       "url": "https://thehill.com/policy/technology/6238594-commerce-blacklists-megaspeed-nvidia",
+       "frame": "pro-regulation",
+       "evidence": [],
+       "rationale": "Reports a tightening of trade restrictions under growing scrutiny, favoring stricter controls.",
+       "llm_opt_out": false
+      }
+     ]
+    }
+   ],
+   "builders": {
+    "hn": [],
+    "repos": [],
+    "models": [],
+    "papers": [],
+    "social": 0,
+    "official": [],
+    "digests": []
+   },
+   "builders_line": "",
+   "items": 16,
+   "entities": [
+    "Alibaba",
+    "Alice Huang",
+    "Beijing",
+    "Bloomberg",
+    "Bureau of Industry and Security",
+    "China",
+    "Commerce Department",
+    "Federal Register",
+    "Jensen Huang",
+    "Megaspeed",
+    "Megaspeed International",
+    "Nvidia",
+    "Nvidia Corp.",
+    "Singapore",
+    "Trump administration",
+    "U.S. government",
+    "US",
+    "US Department of Commerce",
+    "USA"
+   ],
+   "terms": [
+    "alice huang",
+    "china",
+    "jensen huang",
+    "megaspeed",
+    "nvidia",
+    "trump",
+    "us"
+   ]
+  },
+  {
+   "id": "s-cf1b6fa00d",
+   "rank": 5,
+   "momentum": 0.2301,
+   "features": {
+    "outlets": 5,
+    "countries": 3,
+    "hn_points": 0.0,
+    "star_velocity": 0.0,
+    "hf_trending": 0.0,
+    "social": 0.0,
+    "aggregators": 1,
+    "digests": 0
+   },
+   "headline": "Mathematician Levent Alpöge, using Anthropic's Claude, claims a proof of the Riemann hypothesis, and two groups say they verified it.",
+   "track": "technical",
+   "summary": {
+    "headline": "Mathematician Levent Alpöge, using Anthropic's Claude, claims a proof of the Riemann hypothesis, and two groups say they verified it.",
+    "track": "technical",
+    "coverage": "Coverage is uniformly positive across US, British, German, Swedish and French outlets. Most, such as The Wall Street Journal, Le Monde and Handelsblatt, present the proof as a major breakthrough, while Semafor and Wired stay closer to the verification by two independent groups.",
+    "builders": null,
+    "basis": {
+     "news_prompt": "news_label_v3",
+     "stance": {
+      "-2": 0,
+      "-1": 0,
+      "0": 1,
+      "1": 5,
+      "2": 5,
+      "unclear": 0,
+      "unlabeled": 0
+     }
+    }
+   },
+   "outlets": 5,
+   "countries": 3,
+   "stance": {
+    "-2": 0,
+    "-1": 0,
+    "0": 1,
+    "1": 5,
+    "2": 5,
+    "unclear": 0,
+    "unlabeled": 0
+   },
+   "stance_summary": "leans positive",
+   "coverage": [
+    {
+     "stance": "1",
+     "items": [
+      {
+       "outlet": "The Free Press",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "The End of Math?",
+       "title_en": null,
+       "url": "https://www.thefp.com/p/the-end-of-math-artificial-intelligence",
+       "frame": "hype",
+       "evidence": [
+        "AI just solved the most famous problem in modern math."
+       ],
+       "rationale": "States AI achievement in strong, celebratory terms.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "The Guardian",
+       "country": "GB",
+       "kind": "news",
+       "lang": "en",
+       "title": "Two groups verify mathematician’s claim that Claude helped prove mathematics problem",
+       "title_en": null,
+       "url": "https://www.theguardian.com/technology/2026/nov/21/anthropic-riemann-hypothesis-solved-claude-ai",
+       "frame": "hype",
+       "evidence": [
+        "Two groups verify mathematician’s claim"
+       ],
+       "rationale": "Presents a claimed AI-solved math problem as a major crack, with verification noted.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "Handelsblatt",
+       "country": "DE",
+       "kind": "news",
+       "lang": "de",
+       "title": "KI: KI soll berühmtestes Problem der Mathematik gelöst haben",
+       "title_en": "AI: AI reportedly solved the most famous problem in mathematics",
+       "url": "https://www.handelsblatt.com/technik/ki/technologie-ki-soll-beruehmtestes-problem-der-mathematik-geloest-haben-01/100271770.html",
+       "frame": "hype",
+       "evidence": [
+        "KI soll berühmtestes Problem der Mathematik gelöst haben"
+       ],
+       "rationale": "Presents an unverified claim of a major breakthrough with enthusiasm, though it notes verification is pending.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "Semafor",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "Claude helps topple Riemann problem",
+       "title_en": null,
+       "url": "https://www.semafor.com/article/11/22/2026/claude-helps-topple-riemann-problem",
+       "frame": "grounded",
+       "evidence": [
+        "Two independent groups said they verified",
+        "as AI appeared to bulldoze yet another long-unsolved problem"
+       ],
+       "rationale": "Reports independently verified results, though the phrasing is somewhat admiring.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "Wired",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "AI Solved Math’s Most Famous Problem. Now Humans Are Struggling to Understand It",
+       "title_en": null,
+       "url": "https://www.wired.com/story/ai-solved-maths-most-famous-problem",
+       "frame": "grounded",
+       "evidence": [
+        "AI Solved Math’s Most Famous Problem.",
+        "an Anthropic researcher produced for the Riemann hypothesis"
+       ],
+       "rationale": "Reports a notable AI math result plainly, with some wonder at its scale.",
+       "llm_opt_out": false
+      }
+     ]
+    },
+    {
+     "stance": "2",
+     "items": [
+      {
+       "outlet": "Dagens Nyheter",
+       "country": "SE",
+       "kind": "news",
+       "lang": "sv",
+       "title": "Maria Gunther: Nu börjar det bli dags att erkänna – maskiner kan tänka",
+       "title_en": "Maria Gunther: Now it's time to admit it – machines can think | AI may have proven mathematics' greatest unsolved problem: the Riemann hypothesis from 1859. We must call that",
+       "url": "https://www.dn.se/varlden/maria-gunther-nu-borjar-det-bli-dags-att-erkanna-maskiner-kan-tanka",
+       "frame": "hype",
+       "evidence": [
+        "AI kan ha bevisat matematikens största olösta problem",
+        "Det måste vi kalla intelligens."
+       ],
+       "rationale": "Claims AI may have proven a major unsolved problem and urges calling it intelligence, presenting capability as bigger than shown.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "Le Monde",
+       "country": "FR",
+       "kind": "news",
+       "lang": "fr",
+       "title": "La probable résolution de l’hypothèse de Riemann par une intelligence artificielle marque une bascule pour les mathématiques",
+       "title_en": "The probable resolution of the Riemann hypothesis by an artificial intelligence marks a turning point for mathematics",
+       "url": "https://www.lemonde.fr/sciences/article/2026/11/21/la-probable-resolution-de-l-hypothese-de-riemann-par-une-intelligence-artificielle-marque-une-bascule-pour-les-mathematiques_6813962_1650684.html",
+       "frame": "hype",
+       "evidence": [
+        "marque une bascule pour les mathématiques",
+        "assure avoir résolu l’une des plus célèbres hypothèses"
+       ],
+       "rationale": "Presents an AI-claimed proof of the Riemann hypothesis as a major turning point.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "Marcus on AI (Gary Marcus)",
+       "country": null,
+       "kind": "newsletter",
+       "lang": "en",
+       "title": "Levent Alpöge has solved the Riemann Hypothesis with help of Claude! What does it mean?",
+       "title_en": null,
+       "url": "https://garymarcus.substack.com/p/levent-alpoge-has-solved-the-riemann",
+       "frame": "hype",
+       "evidence": [
+        "Levent Alpöge has solved the Riemann Hypothesis with help of Claude!"
+       ],
+       "rationale": "Presents a major mathematical breakthrough credited to AI with excited framing.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "Svenska Dagbladet",
+       "country": "SE",
+       "kind": "news",
+       "lang": "sv",
+       "title": "167-årig gåta kan vara löst: ”Det är jättestort”",
+       "title_en": "167-year-old mystery may be solved: \"It is huge\" | A mathematician at Anthropic claims that together with the language model Claude he has",
+       "url": "https://www.svd.se/a/VxbwV3/claude-och-levent-alpoge-kan-ha-lost-riemannhypotesen-kth-professor-reagerar",
+       "frame": "hype",
+       "evidence": [
+        "Det är jättestort",
+        "han tillsammans med språkmodellen Claude har löst"
+       ],
+       "rationale": "Headline frames a claimed solution to a 167-year-old puzzle as huge, based on an unverified claim.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "The Wall Street Journal",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "The Most Famous Problem in Math Was Just Solved by AI—and This Human",
+       "title_en": null,
+       "url": "https://www.wsj.com/tech/ai/riemann-hypothesis-anthropic-math-levent-alpoge-75351bcb?mod=rss_Technology",
+       "frame": "hype",
+       "evidence": [
+        "The Most Famous Problem in Math Was Just Solved by AI"
+       ],
+       "rationale": "Presents an AI proof of a famous problem as a dramatic breakthrough.",
+       "llm_opt_out": false
+      }
+     ]
+    }
+   ],
+   "builders": {
+    "hn": [],
+    "repos": [],
+    "models": [],
+    "papers": [],
+    "social": 0,
+    "official": [],
+    "digests": []
+   },
+   "builders_line": "",
+   "items": 12,
+   "entities": [
+    "AI",
+    "Anthropic",
+    "Bernhard Riemann",
+    "Claude",
+    "Etienne Ghys",
+    "Le Monde",
+    "Levent Alpöge",
+    "Riemann Hypothesis",
+    "Riemann hypothesis",
+    "Riemannhypotesen"
+   ],
+   "terms": [
+    "anthropic",
+    "claude",
+    "riemann hypothesis"
+   ]
+  },
+  {
+   "id": "s-bc3ad82670",
+   "rank": 6,
+   "momentum": 0.2262,
+   "features": {
+    "outlets": 4,
+    "countries": 3,
+    "hn_points": 20.0,
+    "star_velocity": 0.0,
+    "hf_trending": 0.0,
+    "social": 0.0,
+    "aggregators": 1,
+    "digests": 0
+   },
+   "headline": "Financial disclosures show Donald Trump may have made up to $15 million on Nvidia shares after Jensen Huang's return.",
+   "track": "political",
+   "summary": {
+    "headline": "Financial disclosures show Donald Trump may have made up to $15 million on Nvidia shares after Jensen Huang's return.",
+    "track": "political",
+    "coverage": "Most outlets, including The Guardian, Le Monde and The New York Times, focus on the president's possible personal gain from Nvidia shares. Reason, a US outlet, instead frames it as federal interference in a company's internal decisions.",
+    "builders": "A Hacker News post on the reported gain drew 20 points and 3 comments.",
+    "basis": {
+     "news_prompt": "news_label_v3",
+     "stance": {
+      "-2": 1,
+      "-1": 3,
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "unclear": 0,
+      "unlabeled": 0
+     }
+    }
+   },
+   "outlets": 4,
+   "countries": 3,
+   "stance": {
+    "-2": 1,
+    "-1": 3,
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "unclear": 0,
+    "unlabeled": 0
+   },
+   "stance_summary": "leans critical",
+   "coverage": [
+    {
+     "stance": "-2",
+     "items": [
+      {
+       "outlet": "Reason",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "Trump Barges Into Nvidia's Internal Decisions, Opens Door to Even More Federal Meddling in the Economy",
+       "title_en": null,
+       "url": "https://reason.com/2026/11/23/trump-barges-into-nvidias-internal-decisions-opens-door-to-even-more-federal-meddling-in-the-economy",
+       "frame": "neutral",
+       "evidence": [
+        "Trump Barges Into Nvidia's Internal Decisions, Opens Door to Even More Federal…"
+       ],
+       "rationale": "Headline critically frames government intervention in a company as overreach.",
+       "llm_opt_out": false
+      }
+     ]
+    },
+    {
+     "stance": "-1",
+     "items": [
+      {
+       "outlet": "The Guardian",
+       "country": "GB",
+       "kind": "news",
+       "lang": "en",
+       "title": "Trump made up to $15m on Nvidia stock after Huang’s return",
+       "title_en": null,
+       "url": "https://www.theguardian.com/technology/2026/nov/24/donald-trump-nvidia-stock-jensen-huang-stock-market",
+       "frame": "neutral",
+       "evidence": [
+        "Nvidia’s humiliated board should resign out of embarrassment",
+        "Donald Trump made up to $15m"
+       ],
+       "rationale": "Reports Trump's stock gains and includes a critical commentary line about the board.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "Le Monde",
+       "country": "FR",
+       "kind": "news",
+       "lang": "fr",
+       "title": "Nvidia : Donald Trump aurait gagné jusqu’à 15 millions de dollars grâce à ses actions après le retour de Jensen Huang, selon le « Financial Times »",
+       "title_en": "Nvidia: Donald Trump reportedly earned up to $15 million from his shares after Jensen Huang's return, according to the \"Financial Times\" | The British daily relies on the latest financial disclosures of the US president, which show a possible holding of up to 370,000 Nvidia shares as of 30",
+       "url": "https://www.lemonde.fr/international/article/2026/11/24/nvidia-donald-trump-aurait-gagne-jusqu-a-15-millions-de-dollars-grace-a-ses-actions-apres-le-retour-de-jensen-huang-selon-le-financial-times_6814756_3210.html",
+       "frame": "neutral",
+       "evidence": [
+        "Donald Trump aurait gagné jusqu’à 15 millions de dollars grâce à ses…"
+       ],
+       "rationale": "Reports potential conflict-of-interest gains by the president, a critical framing.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "The New York Times",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "Trump’s Own Stock Portfolio Likely Benefits From Nvidia’s Rise",
+       "title_en": null,
+       "url": "https://www.nytimes.com/2026/11/23/technology/trump-nvidia-stock-purchases.html",
+       "frame": "neutral",
+       "evidence": [
+        "Trump’s Own Stock Portfolio Likely Benefits From Nvidia’s Rise"
+       ],
+       "rationale": "Implies conflict of interest concern, mildly critical.",
+       "llm_opt_out": false
+      }
+     ]
+    }
+   ],
+   "builders": {
+    "hn": [
+     {
+      "title": "Trump made up to $15M on Nvidia shares after Huang's return",
+      "url": "https://news.ycombinator.com/item?id=50623021",
+      "points": 20,
+      "comments": 3
+     }
+    ],
+    "repos": [],
+    "models": [],
+    "papers": [],
+    "social": 0,
+    "official": [],
+    "digests": []
+   },
+   "builders_line": "HN 20 points, 3 comments",
+   "items": 6,
+   "entities": [
+    "Donald Trump",
+    "Financial Times",
+    "Jensen Huang",
+    "Nvidia",
+    "Trump"
+   ],
+   "terms": [
+    "jensen huang",
+    "nvidia",
+    "trump"
+   ]
+  },
+  {
+   "id": "s-8ad6095382",
+   "rank": 7,
+   "momentum": 0.2135,
+   "features": {
+    "outlets": 0,
+    "countries": 0,
+    "hn_points": 176.0,
+    "star_velocity": 0.0,
+    "hf_trending": 256.5,
+    "social": 0.0,
+    "aggregators": 0,
+    "digests": 0
+   },
+   "headline": "Nari Labs released NariQ, a quantized Qwen3.8-27B GGUF file of about 10 GB that it says matches BF16 quality.",
+   "track": "technical",
+   "summary": {
+    "headline": "Nari Labs released NariQ, a quantized Qwen3.8-27B GGUF file of about 10 GB that it says matches BF16 quality.",
+    "track": "technical",
+    "coverage": null,
+    "builders": "A Hacker News post on NariQ drew 168 points and 34 comments, and Hugging Face now lists the Nari Labs GGUF alongside community Qwen GGUF variants from DavidAU.",
+    "basis": {
+     "news_prompt": "news_label_v3",
+     "stance": {
+      "-2": 0,
+      "-1": 0,
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "unclear": 0,
+      "unlabeled": 0
+     }
+    }
+   },
+   "outlets": 0,
+   "countries": 0,
+   "stance": {
+    "-2": 0,
+    "-1": 0,
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "unclear": 0,
+    "unlabeled": 0
+   },
+   "stance_summary": null,
+   "coverage": [],
+   "builders": {
+    "hn": [
+     {
+      "title": "NariQ: BF16-level Qwen3.8-27B in a 10 GB file",
+      "url": "https://news.ycombinator.com/item?id=50611402",
+      "points": 176,
+      "comments": 35
+     }
+    ],
+    "repos": [],
+    "models": [
+     {
+      "title": "DavidAU/Qwen3.5-9B-The-Defiant-Fable-Uncensored-Heretic-NEO-IMATRIX-MAX-MTP-GGUF",
+      "url": "https://huggingface.co/DavidAU/Qwen3.5-9B-The-Defiant-Fable-Uncensored-Heretic-NEO-IMATRIX-MAX-MTP-GGUF",
+      "source": "Hugging Face"
+     },
+     {
+      "title": "DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
+      "url": "https://huggingface.co/DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
+      "source": "Hugging Face"
+     },
+     {
+      "title": "nari-labs/Qwen3.8-27B-NariQ-GGUF",
+      "url": "https://huggingface.co/nari-labs/Qwen3.8-27B-NariQ-GGUF",
+      "source": "Hugging Face"
+     }
+    ],
+    "papers": [],
+    "social": 0,
+    "official": [],
+    "digests": []
+   },
+   "builders_line": "HN 176 points, 35 comments · 3 models",
+   "items": 4,
+   "entities": [],
+   "terms": []
+  },
+  {
+   "id": "s-88426c7323",
+   "rank": 8,
+   "momentum": 0.209,
+   "features": {
+    "outlets": 3,
+    "countries": 2,
+    "hn_points": 0.0,
+    "star_velocity": 0.0,
+    "hf_trending": 0.0,
+    "social": 0.0,
+    "aggregators": 0,
+    "digests": 1
+   },
+   "headline": "Anthropic launched Claude Ship, a tool that lets Claude review, fix and approve pull requests for developers.",
+   "track": "technical",
+   "summary": {
+    "headline": "Anthropic launched Claude Ship, a tool that lets Claude review, fix and approve pull requests for developers.",
+    "track": "technical",
+    "coverage": "All three outlets, The Economic Times in India and The Verge and TechCrunch in the US, report it as a product launch in a plain news tone. TechCrunch puts slightly more weight on agents handling routine approvals.",
+    "builders": null,
+    "basis": {
+     "news_prompt": "news_label_v3",
+     "stance": {
+      "-2": 0,
+      "-1": 0,
+      "0": 2,
+      "1": 1,
+      "2": 0,
+      "unclear": 0,
+      "unlabeled": 0
+     }
+    }
+   },
+   "outlets": 3,
+   "countries": 2,
+   "stance": {
+    "-2": 0,
+    "-1": 0,
+    "0": 2,
+    "1": 1,
+    "2": 0,
+    "unclear": 0,
+    "unlabeled": 0
+   },
+   "stance_summary": "mostly neutral",
+   "coverage": [
+    {
+     "stance": "0",
+     "items": [
+      {
+       "outlet": "The Economic Times",
+       "country": "IN",
+       "kind": "news",
+       "lang": "en",
+       "title": "Anthropic launches Claude Ship to help developers ship code faster",
+       "title_en": null,
+       "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/anthropic-launches-claude-ship-to-help-developers-ship-code-faster/articleshow/136123696.cms",
+       "frame": "grounded",
+       "evidence": [
+        "launched Claude Ship to help developers ship code faster"
+       ],
+       "rationale": "Plainly reports a product launch and its stated function.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "The Verge",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "Claude AI can review pull requests and ship fixes on its own now",
+       "title_en": null,
+       "url": "https://www.theverge.com/ai-artificial-intelligence/1040134/anthropic-claude-ship-ai-pull-requests",
+       "frame": "grounded",
+       "evidence": [
+        "Claude now can review, fix, and approve pull requests"
+       ],
+       "rationale": "Plainly reports a new Claude feature release without judging it.",
+       "llm_opt_out": false
+      }
+     ]
+    },
+    {
+     "stance": "1",
+     "items": [
+      {
+       "outlet": "TechCrunch",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "Anthropic launches Claude Ship, letting AI agents review, fix, and approve code changes",
+       "title_en": null,
+       "url": "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes",
+       "frame": "grounded",
+       "evidence": [
+        "letting agents handle routine approvals"
+       ],
+       "rationale": "Reports a new developer tool launch with a neutral-to-positive description of its purpose.",
+       "llm_opt_out": false
+      }
+     ]
+    }
+   ],
+   "builders": {
+    "hn": [],
+    "repos": [],
+    "models": [],
+    "papers": [],
+    "social": 0,
+    "official": [],
+    "digests": [
+     "MarkTechPost"
+    ]
+   },
+   "builders_line": "in MarkTechPost",
+   "items": 4,
+   "entities": [
+    "Anthropic",
+    "Claude",
+    "Claude Ship"
+   ],
+   "terms": [
+    "anthropic",
+    "claude"
+   ]
+  },
+  {
+   "id": "s-6e009d1290",
+   "rank": 9,
+   "momentum": 0.2047,
+   "features": {
+    "outlets": 5,
+    "countries": 3,
+    "hn_points": 0.0,
+    "star_velocity": 0.0,
+    "hf_trending": 0.0,
+    "social": 0.0,
+    "aggregators": 1,
+    "digests": 0
+   },
+   "headline": "US prosecutors say a former OpenAI engineer secretly recorded dozens of confidential meetings using a hidden recorder and Codex.",
+   "track": "political",
+   "summary": {
+    "headline": "US prosecutors say a former OpenAI engineer secretly recorded dozens of confidential meetings using a hidden recorder and Codex.",
+    "track": "political",
+    "coverage": "All five outlets, in the US, Sweden and the UK, report the case as a prosecution allegation, mostly in a critical tone. The Financial Times (UK) words it most neutrally, while Business Insider stresses the use of Codex.",
+    "builders": null,
+    "basis": {
+     "news_prompt": "news_label_v3",
+     "stance": {
+      "-2": 0,
+      "-1": 4,
+      "0": 1,
+      "1": 0,
+      "2": 0,
+      "unclear": 0,
+      "unlabeled": 0
+     }
+    }
+   },
+   "outlets": 5,
+   "countries": 3,
+   "stance": {
+    "-2": 0,
+    "-1": 4,
+    "0": 1,
+    "1": 0,
+    "2": 0,
+    "unclear": 0,
+    "unlabeled": 0
+   },
+   "stance_summary": "leans critical",
+   "coverage": [
+    {
+     "stance": "-1",
+     "items": [
+      {
+       "outlet": "Business Insider",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "Saudi engineer used OpenAI’s vibe-coding app to more efficiently bug its office, feds say",
+       "title_en": null,
+       "url": "https://www.businessinsider.com/openai-engineer-alfozan-codex-manage-recordings-feds-2026-11",
+       "frame": "neutral",
+       "evidence": [
+        "used Codex, Dropbox and a hidden recorder to capture confidential meetings"
+       ],
+       "rationale": "Reports a criminal case of misuse of AI tooling, mildly alarming in tone.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "Bloomberg",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "OpenAI Staffer Likely Captured Secrets on Hidden Bug, US Says",
+       "title_en": null,
+       "url": "https://www.bloomberg.com/news/articles/2026-11-23/openai-staffer-likely-captured-secrets-on-hidden-bug-us-says",
+       "frame": "neutral",
+       "evidence": [
+        "US prosecutors say the former engineer at OpenAI charged with bugging"
+       ],
+       "rationale": "Legal case on trade-secret theft reported plainly, with mildly negative implication.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "Breakit",
+       "country": "SE",
+       "kind": "news",
+       "lang": "sv",
+       "title": "Saudisk OpenAI-ingenjör misstänks ha buggat kontor – spelade in dussintals möten",
+       "title_en": "Saudi OpenAI engineer suspected of bugging office – recorded dozens of meetings",
+       "url": "https://www.breakit.se/artikel/48115/saudisk-openai-ingenjor-misstanks-ha-buggat-kontor-spelade-in-dussintals-moten",
+       "frame": "neutral",
+       "evidence": [
+        "misstänks för att ha buggat OpenAI:s kontor"
+       ],
+       "rationale": "Reports a suspected espionage case against OpenAI, mildly alarming in content.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "The New York Times",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "OpenAI Engineer Secretly Recorded Dozens of Meetings, Prosecutors Say",
+       "title_en": null,
+       "url": "https://www.nytimes.com/2026/11/23/technology/openai-engineer-secret-recordings.html",
+       "frame": "neutral",
+       "evidence": [
+        "Engineer Secretly Recorded Dozens of Meetings",
+        "Federal prosecutors are investigating"
+       ],
+       "rationale": "Reports a secret-recording investigation with a mildly alarming tone.",
+       "llm_opt_out": false
+      }
+     ]
+    },
+    {
+     "stance": "0",
+     "items": [
+      {
+       "outlet": "Financial Times",
+       "country": "GB",
+       "kind": "news",
+       "lang": "en",
+       "title": "OpenAI engineer possessed dozens of meeting recordings, say US prosecutors",
+       "title_en": null,
+       "url": "https://www.ft.com/content/f860152a-6bd6-43f7-8ba1-4a6ae94d6565?syn-25a6b1a6=1",
+       "frame": "neutral",
+       "evidence": [
+        "OpenAI engineer possessed dozens of meeting recordings, say US prosecutors"
+       ],
+       "rationale": "Factual reporting of a prosecution allegation without editorial framing.",
+       "llm_opt_out": false
+      }
+     ]
+    }
+   ],
+   "builders": {
+    "hn": [],
+    "repos": [],
+    "models": [],
+    "papers": [],
+    "social": 0,
+    "official": [],
+    "digests": []
+   },
+   "builders_line": "",
+   "items": 7,
+   "entities": [
+    "Abdulrahman Alfozan",
+    "ChatGPT",
+    "Codex",
+    "Dropbox",
+    "Federal prosecutors",
+    "OpenAI",
+    "Saudi",
+    "US prosecutors"
+   ],
+   "terms": [
+    "openai"
+   ]
+  },
+  {
+   "id": "s-8784130706",
+   "rank": 10,
+   "momentum": 0.1675,
+   "features": {
+    "outlets": 3,
+    "countries": 2,
+    "hn_points": 31.0,
+    "star_velocity": 0.0,
+    "hf_trending": 0.0,
+    "social": 0.0,
+    "aggregators": 0,
+    "digests": 0
+   },
+   "headline": "Reports say Trump and Vance pushed to reinstate Nvidia chief Jensen Huang, with Trump joining a company leadership meeting by phone.",
+   "track": "political",
+   "summary": {
+    "headline": "Reports say Trump and Vance pushed to reinstate Nvidia chief Jensen Huang, with Trump joining a company leadership meeting by phone.",
+    "track": "political",
+    "coverage": "The New York Times and Dagens Nyheter report the effort in a neutral, factual tone, describing the steps Trump and Vance took. The New Republic frames it critically, presenting it as a rebuttal of Trump's account using leaks from intelligence officials.",
+    "builders": "A Hacker News thread on the New York Times report drew 31 points and 6 comments.",
+    "basis": {
+     "news_prompt": "news_label_v3",
+     "stance": {
+      "-2": 1,
+      "-1": 0,
+      "0": 2,
+      "1": 0,
+      "2": 0,
+      "unclear": 0,
+      "unlabeled": 0
+     }
+    }
+   },
+   "outlets": 3,
+   "countries": 2,
+   "stance": {
+    "-2": 1,
+    "-1": 0,
+    "0": 2,
+    "1": 0,
+    "2": 0,
+    "unclear": 0,
+    "unlabeled": 0
+   },
+   "stance_summary": "leans critical",
+   "coverage": [
+    {
+     "stance": "-2",
+     "items": [
+      {
+       "outlet": "The New Republic",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "Trump’s Vile Nvidia Spin Wrecked by Leaks from His Own Intel Officials",
+       "title_en": null,
+       "url": "https://newrepublic.com/article/218316/trump-vile-nvidia-spin-wrecked-leaks-intel-officials",
+       "frame": "neutral",
+       "evidence": [
+        "Trump’s Vile Nvidia Spin Wrecked by Leaks",
+        "despite his affair with an alleged Chinese spy"
+       ],
+       "rationale": "Uses inflammatory language ('Vile') against the political pressure on Nvidia.",
+       "llm_opt_out": false
+      }
+     ]
+    },
+    {
+     "stance": "0",
+     "items": [
+      {
+       "outlet": "Dagens Nyheter",
+       "country": "SE",
+       "kind": "news",
+       "lang": "sv",
+       "title": "Uppgifter: Så agerade Trump och Vance för Nvidia-chefens comeback",
+       "title_en": "Reports: How Trump and Vance acted to bring back Nvidia chief for comeback",
+       "url": "https://www.dn.se/ekonomi/uppgifter-sa-agerade-trump-och-vance-for-nvidia-chefens-comeback",
+       "frame": "neutral",
+       "evidence": [
+        "Trump ringde personligen in under företagets ledningsmöte"
+       ],
+       "rationale": "Factual account of political maneuvering described without judgment.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "The New York Times",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "Trump Is Said to Have Pushed to Reinstate Nvidia CEO Jensen Huang",
+       "title_en": null,
+       "url": "https://www.nytimes.com/2026/11/23/us/politics/trump-nvidia-huang.html",
+       "frame": "neutral",
+       "evidence": [
+        "The president set in motion a weekend of maneuvering"
+       ],
+       "rationale": "Straight reporting on reported presidential involvement.",
+       "llm_opt_out": false
+      }
+     ]
+    }
+   ],
+   "builders": {
+    "hn": [
+     {
+      "title": "Trump Is Said to Have Directed Effort to Reinstate Nvidia Chief",
+      "url": "https://news.ycombinator.com/item?id=50616243",
+      "points": 31,
+      "comments": 6
+     }
+    ],
+    "repos": [],
+    "models": [],
+    "papers": [],
+    "social": 0,
+    "official": [],
+    "digests": []
+   },
+   "builders_line": "HN 31 points, 6 comments",
+   "items": 4,
+   "entities": [
+    "CNBC",
+    "Donald Trump",
+    "JD Vance",
+    "Jensen Huang",
+    "Nvidia",
+    "Vita huset"
+   ],
+   "terms": [
+    "jensen huang",
+    "nvidia",
+    "trump"
+   ]
+  },
+  {
+   "id": "s-751bc222ec",
+   "rank": 11,
+   "momentum": 0.1588,
+   "features": {
+    "outlets": 2,
+    "countries": 1,
+    "hn_points": 0.0,
+    "star_velocity": 0.0,
+    "hf_trending": 0.0,
+    "social": 0.0,
+    "aggregators": 1,
+    "digests": 0
+   },
+   "headline": "Meta launches its Muse AI agent in the UK, with reviewers testing it ahead of release.",
+   "track": "economic",
+   "summary": {
+    "headline": "Meta launches its Muse AI agent in the UK, with reviewers testing it ahead of release.",
+    "track": "economic",
+    "coverage": "Both outlets are UK news organisations and cover the launch as a consumer product. The BBC reports a week of hands-on use and finds it helpful but awkward, while the Guardian focuses on tasks like Christmas shopping.",
+    "builders": null,
+    "basis": {
+     "news_prompt": "news_label_v3",
+     "stance": {
+      "-2": 0,
+      "-1": 0,
+      "0": 1,
+      "1": 1,
+      "2": 0,
+      "unclear": 0,
+      "unlabeled": 0
+     }
+    }
+   },
+   "outlets": 2,
+   "countries": 1,
+   "stance": {
+    "-2": 0,
+    "-1": 0,
+    "0": 2,
+    "1": 1,
+    "2": 0,
+    "unclear": 0,
+    "unlabeled": 0
+   },
+   "stance_summary": "mostly neutral",
+   "coverage": [
+    {
+     "stance": "0",
+     "items": [
+      {
+       "outlet": "BBC News",
+       "country": "GB",
+       "kind": "news",
+       "lang": "en",
+       "title": "Helpful but awkward: My week with Meta's Muse ahead of its UK launch",
+       "title_en": null,
+       "url": "https://www.bbc.co.uk/news/articles/c9gkld2l38y6o",
+       "frame": "grounded",
+       "evidence": [
+        "Helpful but awkward: My week with Meta's Muse"
+       ],
+       "rationale": "Hands-on review noting both strengths and shortcomings.",
+       "llm_opt_out": false
+      }
+     ]
+    },
+    {
+     "stance": "1",
+     "items": [
+      {
+       "outlet": "The Guardian",
+       "country": "GB",
+       "kind": "news",
+       "lang": "en",
+       "title": "Meta launches Muse in UK – the AI agent that can do your Christmas shopping",
+       "title_en": null,
+       "url": "https://www.theguardian.com/technology/2026/nov/24/meta-launches-muse-uk-ai-agent-do-christmas-shopping",
+       "frame": "neutral",
+       "evidence": [
+        "Meta launches Muse in UK",
+        "but glitches have been reported"
+       ],
+       "rationale": "Reports a product launch with a brief note of reported glitches, mostly promotional tone.",
+       "llm_opt_out": false
+      }
+     ]
+    }
+   ],
+   "builders": {
+    "hn": [],
+    "repos": [],
+    "models": [],
+    "papers": [],
+    "social": 0,
+    "official": [],
+    "digests": []
+   },
+   "builders_line": "",
+   "items": 4,
+   "entities": [
+    "BBC",
+    "Mark Zuckerberg",
+    "Meta",
+    "Muse",
+    "WhatsApp"
+   ],
+   "terms": [
+    "meta"
+   ]
+  },
+  {
+   "id": "s-3812b8c5e8",
+   "rank": 12,
+   "momentum": 0.1443,
+   "features": {
+    "outlets": 4,
+    "countries": 2,
+    "hn_points": 0.0,
+    "star_velocity": 0.0,
+    "hf_trending": 0.0,
+    "social": 0.0,
+    "aggregators": 0,
+    "digests": 0
+   },
+   "headline": "Amazon agreed to acquire AI startup Decart's chip optimisation software and hire its founders, in a deal reported at $7.5 billion.",
+   "track": "economic",
+   "summary": {
+    "headline": "Amazon agreed to acquire AI startup Decart's chip optimisation software and hire its founders, in a deal reported at $7.5 billion.",
+    "track": "economic",
+    "coverage": "Most outlets, including CNBC, the Financial Times and TechCrunch, report the deal as a business move that could help AWS compete with Nvidia on computing power. The Economic Times places it in a wider pattern of tech giants buying AI talent, while TechCrunch is the most upbeat. Ars Technica's headline in the set is about a different Amazon story, on hackers' AI agents.",
+    "builders": null,
+    "basis": {
+     "news_prompt": "news_label_v3",
+     "stance": {
+      "-2": 0,
+      "-1": 0,
+      "0": 4,
+      "1": 1,
+      "2": 0,
+      "unclear": 0,
+      "unlabeled": 0
+     }
+    }
+   },
+   "outlets": 4,
+   "countries": 2,
+   "stance": {
+    "-2": 0,
+    "-1": 0,
+    "0": 4,
+    "1": 1,
+    "2": 0,
+    "unclear": 0,
+    "unlabeled": 0
+   },
+   "stance_summary": "mostly neutral",
+   "coverage": [
+    {
+     "stance": "0",
+     "items": [
+      {
+       "outlet": "Ars Technica",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "Amazon says hackers' AI agents found and exploited 0-day with little human input",
+       "title_en": null,
+       "url": "https://arstechnica.com/security/2026/11/amazon-says-hackers-ai-agents-found-and-exploited-0-day-with-little-human-input",
+       "frame": "hype",
+       "evidence": [
+        "AI agents found and exploited 0-day with little human input",
+        "boon for defenders and attackers"
+       ],
+       "rationale": "Emphasizes autonomous AI capability in attacks, presented as a striking development.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "CNBC",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "Amazon to acquire AI startup Decart's chip software, hire founders",
+       "title_en": null,
+       "url": "https://www.cnbc.com/2026/11/23/amazon-decarts-ai-acquisition.html",
+       "frame": "neutral",
+       "evidence": [
+        "Amazon to acquire AI startup Decart's chip software, hire founders"
+       ],
+       "rationale": "Factual report of an acquisition and hiring with no evaluative language.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "The Economic Times",
+       "country": "IN",
+       "kind": "news",
+       "lang": "en",
+       "title": "Amazon to buy Decart's AI chip optimisation tech in latest AI talent grab",
+       "title_en": null,
+       "url": "https://economictimes.indiatimes.com/tech/startups/amazon-to-buy-decarts-ai-chip-optimization-tech-in-latest-ai-talent-grab/articleshow/136123347.cms",
+       "frame": "neutral",
+       "evidence": [
+        "Tech giants are increasingly buying the capabilities"
+       ],
+       "rationale": "Neutral report of acquisition trends in AI talent.",
+       "llm_opt_out": false
+      },
+      {
+       "outlet": "Financial Times",
+       "country": "GB",
+       "kind": "news",
+       "lang": "en",
+       "title": "Amazon closes in on $7.5bn deal to buy AI start-up Decart",
+       "title_en": null,
+       "url": "https://www.ft.com/content/dc7749dc-0f40-44a6-80bc-7f747d383616?syn-25a6b1a6=1",
+       "frame": "boom",
+       "evidence": [
+        "Acquisition would help AWS compete with Nvidia in race for computing power"
+       ],
+       "rationale": "Factual deal report describing competitive strategy without evaluative tone.",
+       "llm_opt_out": false
+      }
+     ]
+    },
+    {
+     "stance": "1",
+     "items": [
+      {
+       "outlet": "TechCrunch",
+       "country": "US",
+       "kind": "news",
+       "lang": "en",
+       "title": "Amazon snaps up Decart’s AI optimization tech for $7.5B as it prepares to sell Trainium chips",
+       "title_en": null,
+       "url": "https://techcrunch.com/2026/11/23/amazon-snaps-up-decarts-ai-optimization-tech-for-7-5b-as-it-prepares-to-sell-trainium-chips",
+       "frame": "boom",
+       "evidence": [
+        "Amazon snaps up Decart’s AI optimization tech for $7.5B"
+       ],
+       "rationale": "Reports a large acquisition as a deal for AI optimization technology, with no critical framing.",
+       "llm_opt_out": false
+      }
+     ]
+    }
+   ],
+   "builders": {
+    "hn": [],
+    "repos": [],
+    "models": [],
+    "papers": [],
+    "social": 0,
+    "official": [],
+    "digests": []
+   },
+   "builders_line": "",
+   "items": 5,
+   "entities": [
+    "AWS",
+    "Amazon",
+    "Cairn AI",
+    "Decart",
+    "Nvidia",
+    "Trainium"
+   ],
+   "terms": [
+    "nvidia"
+   ]
+  }
+ ],
+ "rising": [
+  {
+   "id": "github:ebony-vinyl/dsh-our-free-model",
+   "kind": "repo",
+   "category": "tool/library",
+   "title": "Ebony-Vinyl/dsh-our-free-model",
+   "url": "https://github.com/Ebony-Vinyl/dsh-our-free-model",
+   "signal": "+1,408 stars/day (85,705 total)",
+   "score": 1407.5908923890152,
+   "what": "A Chinese-language plugin for the dsh tool that claims to give free access to several hosted models with no sign-up or API key.",
+   "why": "Someone curious about free hosted models might look at it, though the description's claims about free, unlimited access are unverified.",
+   "story_id": "s-668e226f93"
+  },
+  {
+   "id": "github:el4cteo/fast-anything",
+   "kind": "repo",
+   "category": "agent",
+   "title": "EL4CTEO/fast-anything",
+   "url": "https://github.com/EL4CTEO/fast-anything",
+   "signal": "+1,170 stars/day (3,457 total)",
+   "score": 1169.8861388659323,
+   "what": "A toolkit for finding slow code in Python, Node or Ruby apps and porting only those hot functions to Rust with a coding agent.",
+   "why": "Developers wanting speedups without a full rewrite could use it, and it checks that ported functions behave the same as the originals.",
+   "story_id": "s-0c8f61285f"
+  },
+  {
+   "id": "github:erkamyaman/rust-anything",
+   "kind": "repo",
+   "category": "agent",
+   "title": "erkamyaman/rust-anything",
+   "url": "https://github.com/erkamyaman/rust-anything",
+   "signal": "+1,124 stars/day (9,055 total)",
+   "score": 1123.5814344925047,
+   "what": "A set of agent skills for migrating whole applications from TypeScript, Python, C, Go, Ruby or Java into Rust, one piece at a time.",
+   "why": "Teams considering a language migration could use it to rewrite code incrementally while checking against recorded original behavior.",
+   "story_id": "s-6c93b3ba60"
+  },
+  {
+   "id": "github:affaan-m/ecc",
+   "kind": "repo",
+   "category": "tool/library",
+   "title": "affaan-m/ECC",
+   "url": "https://github.com/affaan-m/ECC",
+   "signal": "+998 stars/day (309,915 total)",
+   "score": 998.0182130879933,
+   "what": "A performance and safety toolkit of skills, memory and rules for coding agents such as Claude Code and Codex.",
+   "why": "Someone using AI coding agents could reuse its configuration to make those agents faster, safer and more consistent.",
+   "story_id": "s-6e2f91618b"
+  },
+  {
+   "id": "github:yetone/magpie",
+   "kind": "repo",
+   "category": "tool/library",
+   "title": "yetone/magpie",
+   "url": "https://github.com/yetone/magpie",
+   "signal": "+659 stars/day (40,766 total)",
+   "score": 658.7479611572043,
+   "what": "A macOS menu bar app that routes coding agents like Codex and Claude Code to other model providers.",
+   "why": "Interests people who want to run Claude Code or Codex against models such as DeepSeek or Kimi.",
+   "story_id": "s-201ee602ff"
+  },
+  {
+   "id": "github:graphify-labs/graphify",
+   "kind": "repo",
+   "category": "tool/library",
+   "title": "Graphify-Labs/graphify",
+   "url": "https://github.com/Graphify-Labs/graphify",
+   "signal": "+650 stars/day (152,778 total)",
+   "score": 650.3756924212274,
+   "what": "A tool that turns a codebase, its docs, schemas and PDFs into a searchable knowledge graph.",
+   "why": "Lets coding agents like Claude Code query how a project fits together without a vector store.",
+   "story_id": "s-fcfb8edd5f"
+  },
+  {
+   "id": "github:nousresearch/hermes-agent",
+   "kind": "repo",
+   "category": "agent",
+   "title": "NousResearch/hermes-agent",
+   "url": "https://github.com/NousResearch/hermes-agent",
+   "signal": "+543 stars/day (265,787 total)",
+   "score": 542.8277490823057,
+   "what": "An AI agent project described as one that grows with its user over time.",
+   "why": "The description is thin; it may appeal to people interested in long-running personal agents.",
+   "story_id": "s-2a7559f407"
+  },
+  {
+   "id": "github:stablyai/orca",
+   "kind": "repo",
+   "category": "demo/app",
+   "title": "stablyai/orca",
+   "url": "https://github.com/stablyai/orca",
+   "signal": "+537 stars/day (135,427 total)",
+   "score": 536.5117594175045,
+   "what": "A desktop, mobile and remote app for running a fleet of coding bots on your own subscriptions.",
+   "why": "Relevant to people who run several Claude Code or Codex agents at once and want one control surface.",
+   "story_id": "s-0bf34dcd29"
+  },
+  {
+   "id": "github:juliusbrussee/caveman",
+   "kind": "repo",
+   "category": "tool/library",
+   "title": "JuliusBrussee/caveman",
+   "url": "https://github.com/JuliusBrussee/caveman",
+   "signal": "+523 stars/day (122,563 total)",
+   "score": 523.4431936399742,
+   "what": "A skill and local proxy that makes coding agents write shorter answers and receive smaller tool output.",
+   "why": "Aimed at people who want to cut token use when running coding agents, with originals recoverable.",
+   "story_id": "s-75d3678e99"
+  },
+  {
+   "id": "github:tt-a1i/archify",
+   "kind": "repo",
+   "category": "tool/library",
+   "title": "tt-a1i/archify",
+   "url": "https://github.com/tt-a1i/archify",
+   "signal": "+445 stars/day (99,389 total)",
+   "score": 445.01428006484707,
+   "what": "A skill that turns ideas, plans or codebases into interactive architecture diagrams for coding agents.",
+   "why": "Useful for developers who want agents to generate visual diagrams of their designs.",
+   "story_id": "s-7447c84540"
+  },
+  {
+   "id": "hf:model:thinkingmachines/inkling-2-mini",
+   "kind": "model",
+   "category": "model",
+   "title": "thinkingmachines/Inkling-2-Mini",
+   "url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini",
+   "signal": "trending 1,188 on Hugging Face (5,647 likes)",
+   "score": 1187.5,
+   "what": "A small mixture-of-experts vision-language model from Thinking Machines, distributed in Transformers format at 8-bit precision.",
+   "why": "Those following new open model releases may want to test it, and its description gives few further details.",
+   "story_id": "s-7c4c430b96"
+  },
+  {
+   "id": "hf:model:unsloth/inkling-2-mini-gguf",
+   "kind": "model",
+   "category": "model",
+   "title": "unsloth/Inkling-2-Mini-GGUF",
+   "url": "https://huggingface.co/unsloth/Inkling-2-Mini-GGUF",
+   "signal": "trending 1,048 on Hugging Face (1,189 likes)",
+   "score": 1048.0,
+   "what": "A GGUF-format version of the Inkling-2-Mini mixture-of-experts vision-language model, prepared by Unsloth for local use.",
+   "why": "People wanting to run this small model locally on their own hardware could use this packaged version.",
+   "story_id": "s-7c4c430b96"
+  },
+  {
+   "id": "hf:model:inworld/voice-isolator",
+   "kind": "model",
+   "category": "model",
+   "title": "inworld/voice-isolator",
+   "url": "https://huggingface.co/inworld/voice-isolator",
+   "signal": "trending 596 on Hugging Face (772 likes)",
+   "score": 596.0,
+   "what": "A model that isolates a single voice from background noise in 48 kHz audio.",
+   "why": "Useful for anyone cleaning up speech recordings or building voice pipelines.",
+   "story_id": "s-f6205d329e"
+  },
+  {
+   "id": "hf:model:tencent/hy4-flash",
+   "kind": "model",
+   "category": "model",
+   "title": "tencent/Hy4-flash",
+   "url": "https://huggingface.co/tencent/Hy4-flash",
+   "signal": "trending 456 on Hugging Face (665 likes)",
+   "score": 456.0,
+   "what": "A Tencent model named Hy4-flash that handles images with text and generates text, built on the Transformers library.",
+   "why": "Someone following AI may care because it is a new open multimodal model from a major Chinese tech company; the description gives no further details.",
+   "story_id": "s-e9b92a8f34"
+  },
+  {
+   "id": "hf:model:atomicchat/inkling-2-mini-uncensored-gguf",
+   "kind": "model",
+   "category": "model",
+   "title": "AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
+   "url": "https://huggingface.co/AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
+   "signal": "trending 419 on Hugging Face (702 likes)",
+   "score": 418.59999999999997,
+   "what": "A quantized GGUF build of an image-text model, with an uncensored LoRA adapter, for llama.cpp.",
+   "why": "Of interest to local-model users who want to run a vision-language model on their own hardware.",
+   "story_id": "s-7c4c430b96"
+  },
+  {
+   "id": "hf:space:jcishere/wan2-2-i2v-v3",
+   "kind": "space",
+   "category": "demo/app",
+   "title": "JCisHERE/wan2-2-i2v-v3",
+   "url": "https://huggingface.co/spaces/JCisHERE/wan2-2-i2v-v3",
+   "signal": "trending 174 on Hugging Face (689 likes)",
+   "score": 174.0,
+   "what": "A Gradio demo space for an image-to-video model called wan2-2-i2v-v3, exposed as an MCP server.",
+   "why": "Anyone wanting to try image-to-video generation, or connect it to an agent through MCP, could use it, though little is known beyond the tags.",
+   "story_id": "s-e5e9aa848e"
+  },
+  {
+   "id": "hf:space:minimaxai/minimax-h3-image",
+   "kind": "space",
+   "category": "demo/app",
+   "title": "MiniMaxAI/minimax-h3-image",
+   "url": "https://huggingface.co/spaces/MiniMaxAI/minimax-h3-image",
+   "signal": "trending 129 on Hugging Face (318 likes)",
+   "score": 129.0,
+   "what": "A Gradio demo Space from MiniMax for image generation or handling; the description is empty.",
+   "why": "Little is known beyond the name and Gradio tag; it may let people try a MiniMax image model.",
+   "story_id": "s-5d24eef197"
+  },
+  {
+   "id": "hf:space:huggingface/moe-blogpost",
+   "kind": "space",
+   "category": "demo/app",
+   "title": "huggingface/moe-blogpost",
+   "url": "https://huggingface.co/spaces/huggingface/moe-blogpost",
+   "signal": "trending 118 on Hugging Face (842 likes)",
+   "score": 118.0,
+   "what": "A Hugging Face Space packaged as a Docker container, apparently about mixture-of-experts models.",
+   "why": "The description says nothing beyond its name and tag; little is known about what it does.",
+   "story_id": "s-278af9378a"
+  },
+  {
+   "id": "hf:dataset:vyber07/cyber-security",
+   "kind": "dataset",
+   "category": "dataset",
+   "title": "Vyber07/cyber-security",
+   "url": "https://huggingface.co/datasets/Vyber07/cyber-security",
+   "signal": "trending 323 on Hugging Face (1,612 likes)",
+   "score": 323.0,
+   "what": "A dataset described as a broad cybersecurity knowledge base for training AI, covering offensive and defensive security topics.",
+   "why": "Researchers building security-focused AI models could find it useful, though the description gives little detail on its contents or quality.",
+   "story_id": "s-8d1a5631bd"
+  },
+  {
+   "id": "hf:dataset:angais/pixel-art-atlas-1.4m",
+   "kind": "dataset",
+   "category": "dataset",
+   "title": "Angais/pixel-art-atlas-1.4m",
+   "url": "https://huggingface.co/datasets/Angais/pixel-art-atlas-1.4m",
+   "signal": "trending 42 on Hugging Face (720 likes)",
+   "score": 42.0,
+   "what": "A dataset of 1.4 million synthetic 16x16 pixel art game sprites with English captions.",
+   "why": "Could interest people training small image models or building game asset pipelines.",
+   "story_id": "s-79fb838834"
+  },
+  {
+   "id": "hf:dataset:nvidia/usdcraft-10k",
+   "kind": "dataset",
+   "category": "dataset",
+   "title": "nvidia/USDCraft-10K",
+   "url": "https://huggingface.co/datasets/nvidia/USDCraft-10K",
+   "signal": "trending 34 on Hugging Face (175 likes)",
+   "score": 34.5,
+   "what": "A dataset of 10,000 simulation-ready articulated 3D assets in OpenUSD format, generated with a language model.",
+   "why": "Relevant to robotics and simulation researchers who need physically usable 3D objects.",
+   "story_id": "s-e14d4e0586"
+  },
+  {
+   "id": "paper:2611.29897",
+   "kind": "paper",
+   "category": "research paper",
+   "title": "Motion Mamba 2.0: Autoregressive Diffusion Mamba for Long-Horizon Humanoid Control",
+   "url": "https://huggingface.co/papers/2611.29897",
+   "signal": "141 upvotes on HF Papers",
+   "score": 141.0,
+   "what": "A paper describing an autoregressive diffusion Mamba model that generates long, controllable humanoid motion in real time.",
+   "why": "Those interested in animation or humanoid robot control could care, as it targets responding to changing instructions while moving.",
+   "story_id": "s-9e25967e1e"
+  },
+  {
+   "id": "paper:2611.27193",
+   "kind": "paper",
+   "category": "research paper",
+   "title": "cmHC: Balancing Stream Mixing in Hyper-Connections via Geometric Contraction",
+   "url": "https://huggingface.co/papers/2611.27193",
+   "signal": "94 upvotes on HF Papers",
+   "score": 94.0,
+   "what": "A paper proposing a way to keep mixing of residual streams in hyper-connections stable by constraining it geometrically.",
+   "why": "Researchers working on training stability for large dense and mixture-of-experts models would be the main audience.",
+   "story_id": null
+  },
+  {
+   "id": "paper:2611.31201",
+   "kind": "paper",
+   "category": "research paper",
+   "title": "Embo-Harness: Towards Understanding Frontier-Model-as-Policy Harness",
+   "url": "https://huggingface.co/papers/2611.31201",
+   "signal": "86 upvotes on HF Papers",
+   "score": 86.0,
+   "what": "A study of how frontier multimodal models can act as robot controllers when given the right tool and visual interfaces.",
+   "why": "Relevant to readers following whether general models can directly control robots in manipulation tasks.",
+   "story_id": "s-55a78a576c"
+  },
+  {
+   "id": "paper:2611.27963",
+   "kind": "paper",
+   "category": "research paper",
+   "title": "Non-penetrating World Models",
+   "url": "https://huggingface.co/papers/2611.27963",
+   "signal": "58 upvotes on HF Papers",
+   "score": 58.0,
+   "what": "A benchmark and lightweight add-on that uses frozen diffusion transformer features to stop objects passing through each other in video world models.",
+   "why": "Relevant to people following physical realism and interactive world models.",
+   "story_id": null
+  },
+  {
+   "id": "paper:2611.30013",
+   "kind": "paper",
+   "category": "research paper",
+   "title": "3AGameFactory-Motion: Agentic Rigging and Reliable Complex Motion Generation for Diverse 3D Assets",
+   "url": "https://huggingface.co/papers/2611.30013",
+   "signal": "56 upvotes on HF Papers",
+   "score": 56.0,
+   "what": "A benchmark and agent framework that writes skeleton and motion programs to rig 3D assets and generate their motion.",
+   "why": "Of interest to people tracking how LLM agents are applied to 3D animation.",
+   "story_id": "s-682016789d"
+  }
+ ],
+ "rising_groups": [
+  {
+   "key": "model",
+   "slug": "model",
+   "label": "Models",
+   "items": [
+    {
+     "id": "hf:model:thinkingmachines/inkling-2-mini",
+     "kind": "model",
+     "category": "model",
+     "title": "thinkingmachines/Inkling-2-Mini",
+     "url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini",
+     "signal": "trending 1,188 on Hugging Face (5,647 likes)",
+     "score": 1187.5,
+     "what": "A small mixture-of-experts vision-language model from Thinking Machines, distributed in Transformers format at 8-bit precision.",
+     "why": "Those following new open model releases may want to test it, and its description gives few further details.",
+     "story_id": "s-7c4c430b96"
+    },
+    {
+     "id": "hf:model:unsloth/inkling-2-mini-gguf",
+     "kind": "model",
+     "category": "model",
+     "title": "unsloth/Inkling-2-Mini-GGUF",
+     "url": "https://huggingface.co/unsloth/Inkling-2-Mini-GGUF",
+     "signal": "trending 1,048 on Hugging Face (1,189 likes)",
+     "score": 1048.0,
+     "what": "A GGUF-format version of the Inkling-2-Mini mixture-of-experts vision-language model, prepared by Unsloth for local use.",
+     "why": "People wanting to run this small model locally on their own hardware could use this packaged version.",
+     "story_id": "s-7c4c430b96"
+    },
+    {
+     "id": "hf:model:inworld/voice-isolator",
+     "kind": "model",
+     "category": "model",
+     "title": "inworld/voice-isolator",
+     "url": "https://huggingface.co/inworld/voice-isolator",
+     "signal": "trending 596 on Hugging Face (772 likes)",
+     "score": 596.0,
+     "what": "A model that isolates a single voice from background noise in 48 kHz audio.",
+     "why": "Useful for anyone cleaning up speech recordings or building voice pipelines.",
+     "story_id": "s-f6205d329e"
+    },
+    {
+     "id": "hf:model:tencent/hy4-flash",
+     "kind": "model",
+     "category": "model",
+     "title": "tencent/Hy4-flash",
+     "url": "https://huggingface.co/tencent/Hy4-flash",
+     "signal": "trending 456 on Hugging Face (665 likes)",
+     "score": 456.0,
+     "what": "A Tencent model named Hy4-flash that handles images with text and generates text, built on the Transformers library.",
+     "why": "Someone following AI may care because it is a new open multimodal model from a major Chinese tech company; the description gives no further details.",
+     "story_id": "s-e9b92a8f34"
+    },
+    {
+     "id": "hf:model:atomicchat/inkling-2-mini-uncensored-gguf",
+     "kind": "model",
+     "category": "model",
+     "title": "AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
+     "url": "https://huggingface.co/AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
+     "signal": "trending 419 on Hugging Face (702 likes)",
+     "score": 418.59999999999997,
+     "what": "A quantized GGUF build of an image-text model, with an uncensored LoRA adapter, for llama.cpp.",
+     "why": "Of interest to local-model users who want to run a vision-language model on their own hardware.",
+     "story_id": "s-7c4c430b96"
+    }
+   ]
+  },
+  {
+   "key": "agent",
+   "slug": "agent",
+   "label": "Agents",
+   "items": [
+    {
+     "id": "github:el4cteo/fast-anything",
+     "kind": "repo",
+     "category": "agent",
+     "title": "EL4CTEO/fast-anything",
+     "url": "https://github.com/EL4CTEO/fast-anything",
+     "signal": "+1,170 stars/day (3,457 total)",
+     "score": 1169.8861388659323,
+     "what": "A toolkit for finding slow code in Python, Node or Ruby apps and porting only those hot functions to Rust with a coding agent.",
+     "why": "Developers wanting speedups without a full rewrite could use it, and it checks that ported functions behave the same as the originals.",
+     "story_id": "s-0c8f61285f"
+    },
+    {
+     "id": "github:erkamyaman/rust-anything",
+     "kind": "repo",
+     "category": "agent",
+     "title": "erkamyaman/rust-anything",
+     "url": "https://github.com/erkamyaman/rust-anything",
+     "signal": "+1,124 stars/day (9,055 total)",
+     "score": 1123.5814344925047,
+     "what": "A set of agent skills for migrating whole applications from TypeScript, Python, C, Go, Ruby or Java into Rust, one piece at a time.",
+     "why": "Teams considering a language migration could use it to rewrite code incrementally while checking against recorded original behavior.",
+     "story_id": "s-6c93b3ba60"
+    },
+    {
+     "id": "github:nousresearch/hermes-agent",
+     "kind": "repo",
+     "category": "agent",
+     "title": "NousResearch/hermes-agent",
+     "url": "https://github.com/NousResearch/hermes-agent",
+     "signal": "+543 stars/day (265,787 total)",
+     "score": 542.8277490823057,
+     "what": "An AI agent project described as one that grows with its user over time.",
+     "why": "The description is thin; it may appeal to people interested in long-running personal agents.",
+     "story_id": "s-2a7559f407"
+    }
+   ]
+  },
+  {
+   "key": "tool/library",
+   "slug": "tool-library",
+   "label": "Tools & libraries",
+   "items": [
+    {
+     "id": "github:ebony-vinyl/dsh-our-free-model",
+     "kind": "repo",
+     "category": "tool/library",
+     "title": "Ebony-Vinyl/dsh-our-free-model",
+     "url": "https://github.com/Ebony-Vinyl/dsh-our-free-model",
+     "signal": "+1,408 stars/day (85,705 total)",
+     "score": 1407.5908923890152,
+     "what": "A Chinese-language plugin for the dsh tool that claims to give free access to several hosted models with no sign-up or API key.",
+     "why": "Someone curious about free hosted models might look at it, though the description's claims about free, unlimited access are unverified.",
+     "story_id": "s-668e226f93"
+    },
+    {
+     "id": "github:affaan-m/ecc",
+     "kind": "repo",
+     "category": "tool/library",
+     "title": "affaan-m/ECC",
+     "url": "https://github.com/affaan-m/ECC",
+     "signal": "+998 stars/day (309,915 total)",
+     "score": 998.0182130879933,
+     "what": "A performance and safety toolkit of skills, memory and rules for coding agents such as Claude Code and Codex.",
+     "why": "Someone using AI coding agents could reuse its configuration to make those agents faster, safer and more consistent.",
+     "story_id": "s-6e2f91618b"
+    },
+    {
+     "id": "github:yetone/magpie",
+     "kind": "repo",
+     "category": "tool/library",
+     "title": "yetone/magpie",
+     "url": "https://github.com/yetone/magpie",
+     "signal": "+659 stars/day (40,766 total)",
+     "score": 658.7479611572043,
+     "what": "A macOS menu bar app that routes coding agents like Codex and Claude Code to other model providers.",
+     "why": "Interests people who want to run Claude Code or Codex against models such as DeepSeek or Kimi.",
+     "story_id": "s-201ee602ff"
+    },
+    {
+     "id": "github:graphify-labs/graphify",
+     "kind": "repo",
+     "category": "tool/library",
+     "title": "Graphify-Labs/graphify",
+     "url": "https://github.com/Graphify-Labs/graphify",
+     "signal": "+650 stars/day (152,778 total)",
+     "score": 650.3756924212274,
+     "what": "A tool that turns a codebase, its docs, schemas and PDFs into a searchable knowledge graph.",
+     "why": "Lets coding agents like Claude Code query how a project fits together without a vector store.",
+     "story_id": "s-fcfb8edd5f"
+    },
+    {
+     "id": "github:juliusbrussee/caveman",
+     "kind": "repo",
+     "category": "tool/library",
+     "title": "JuliusBrussee/caveman",
+     "url": "https://github.com/JuliusBrussee/caveman",
+     "signal": "+523 stars/day (122,563 total)",
+     "score": 523.4431936399742,
+     "what": "A skill and local proxy that makes coding agents write shorter answers and receive smaller tool output.",
+     "why": "Aimed at people who want to cut token use when running coding agents, with originals recoverable.",
+     "story_id": "s-75d3678e99"
+    },
+    {
+     "id": "github:tt-a1i/archify",
+     "kind": "repo",
+     "category": "tool/library",
+     "title": "tt-a1i/archify",
+     "url": "https://github.com/tt-a1i/archify",
+     "signal": "+445 stars/day (99,389 total)",
+     "score": 445.01428006484707,
+     "what": "A skill that turns ideas, plans or codebases into interactive architecture diagrams for coding agents.",
+     "why": "Useful for developers who want agents to generate visual diagrams of their designs.",
+     "story_id": "s-7447c84540"
+    }
+   ]
+  },
+  {
+   "key": "dataset",
+   "slug": "dataset",
+   "label": "Datasets",
+   "items": [
+    {
+     "id": "hf:dataset:vyber07/cyber-security",
+     "kind": "dataset",
+     "category": "dataset",
+     "title": "Vyber07/cyber-security",
+     "url": "https://huggingface.co/datasets/Vyber07/cyber-security",
+     "signal": "trending 323 on Hugging Face (1,612 likes)",
+     "score": 323.0,
+     "what": "A dataset described as a broad cybersecurity knowledge base for training AI, covering offensive and defensive security topics.",
+     "why": "Researchers building security-focused AI models could find it useful, though the description gives little detail on its contents or quality.",
+     "story_id": "s-8d1a5631bd"
+    },
+    {
+     "id": "hf:dataset:angais/pixel-art-atlas-1.4m",
+     "kind": "dataset",
+     "category": "dataset",
+     "title": "Angais/pixel-art-atlas-1.4m",
+     "url": "https://huggingface.co/datasets/Angais/pixel-art-atlas-1.4m",
+     "signal": "trending 42 on Hugging Face (720 likes)",
+     "score": 42.0,
+     "what": "A dataset of 1.4 million synthetic 16x16 pixel art game sprites with English captions.",
+     "why": "Could interest people training small image models or building game asset pipelines.",
+     "story_id": "s-79fb838834"
+    },
+    {
+     "id": "hf:dataset:nvidia/usdcraft-10k",
+     "kind": "dataset",
+     "category": "dataset",
+     "title": "nvidia/USDCraft-10K",
+     "url": "https://huggingface.co/datasets/nvidia/USDCraft-10K",
+     "signal": "trending 34 on Hugging Face (175 likes)",
+     "score": 34.5,
+     "what": "A dataset of 10,000 simulation-ready articulated 3D assets in OpenUSD format, generated with a language model.",
+     "why": "Relevant to robotics and simulation researchers who need physically usable 3D objects.",
+     "story_id": "s-e14d4e0586"
+    }
+   ]
+  },
+  {
+   "key": "research paper",
+   "slug": "research-paper",
+   "label": "Papers",
+   "items": [
+    {
+     "id": "paper:2611.29897",
+     "kind": "paper",
+     "category": "research paper",
+     "title": "Motion Mamba 2.0: Autoregressive Diffusion Mamba for Long-Horizon Humanoid Control",
+     "url": "https://huggingface.co/papers/2611.29897",
+     "signal": "141 upvotes on HF Papers",
+     "score": 141.0,
+     "what": "A paper describing an autoregressive diffusion Mamba model that generates long, controllable humanoid motion in real time.",
+     "why": "Those interested in animation or humanoid robot control could care, as it targets responding to changing instructions while moving.",
+     "story_id": "s-9e25967e1e"
+    },
+    {
+     "id": "paper:2611.27193",
+     "kind": "paper",
+     "category": "research paper",
+     "title": "cmHC: Balancing Stream Mixing in Hyper-Connections via Geometric Contraction",
+     "url": "https://huggingface.co/papers/2611.27193",
+     "signal": "94 upvotes on HF Papers",
+     "score": 94.0,
+     "what": "A paper proposing a way to keep mixing of residual streams in hyper-connections stable by constraining it geometrically.",
+     "why": "Researchers working on training stability for large dense and mixture-of-experts models would be the main audience.",
+     "story_id": null
+    },
+    {
+     "id": "paper:2611.31201",
+     "kind": "paper",
+     "category": "research paper",
+     "title": "Embo-Harness: Towards Understanding Frontier-Model-as-Policy Harness",
+     "url": "https://huggingface.co/papers/2611.31201",
+     "signal": "86 upvotes on HF Papers",
+     "score": 86.0,
+     "what": "A study of how frontier multimodal models can act as robot controllers when given the right tool and visual interfaces.",
+     "why": "Relevant to readers following whether general models can directly control robots in manipulation tasks.",
+     "story_id": "s-55a78a576c"
+    },
+    {
+     "id": "paper:2611.27963",
+     "kind": "paper",
+     "category": "research paper",
+     "title": "Non-penetrating World Models",
+     "url": "https://huggingface.co/papers/2611.27963",
+     "signal": "58 upvotes on HF Papers",
+     "score": 58.0,
+     "what": "A benchmark and lightweight add-on that uses frozen diffusion transformer features to stop objects passing through each other in video world models.",
+     "why": "Relevant to people following physical realism and interactive world models.",
+     "story_id": null
+    },
+    {
+     "id": "paper:2611.30013",
+     "kind": "paper",
+     "category": "research paper",
+     "title": "3AGameFactory-Motion: Agentic Rigging and Reliable Complex Motion Generation for Diverse 3D Assets",
+     "url": "https://huggingface.co/papers/2611.30013",
+     "signal": "56 upvotes on HF Papers",
+     "score": 56.0,
+     "what": "A benchmark and agent framework that writes skeleton and motion programs to rig 3D assets and generate their motion.",
+     "why": "Of interest to people tracking how LLM agents are applied to 3D animation.",
+     "story_id": "s-682016789d"
+    }
+   ]
+  },
+  {
+   "key": "demo/app",
+   "slug": "demo-app",
+   "label": "Apps & demos",
+   "items": [
+    {
+     "id": "github:stablyai/orca",
+     "kind": "repo",
+     "category": "demo/app",
+     "title": "stablyai/orca",
+     "url": "https://github.com/stablyai/orca",
+     "signal": "+537 stars/day (135,427 total)",
+     "score": 536.5117594175045,
+     "what": "A desktop, mobile and remote app for running a fleet of coding bots on your own subscriptions.",
+     "why": "Relevant to people who run several Claude Code or Codex agents at once and want one control surface.",
+     "story_id": "s-0bf34dcd29"
+    },
+    {
+     "id": "hf:space:jcishere/wan2-2-i2v-v3",
+     "kind": "space",
+     "category": "demo/app",
+     "title": "JCisHERE/wan2-2-i2v-v3",
+     "url": "https://huggingface.co/spaces/JCisHERE/wan2-2-i2v-v3",
+     "signal": "trending 174 on Hugging Face (689 likes)",
+     "score": 174.0,
+     "what": "A Gradio demo space for an image-to-video model called wan2-2-i2v-v3, exposed as an MCP server.",
+     "why": "Anyone wanting to try image-to-video generation, or connect it to an agent through MCP, could use it, though little is known beyond the tags.",
+     "story_id": "s-e5e9aa848e"
+    },
+    {
+     "id": "hf:space:minimaxai/minimax-h3-image",
+     "kind": "space",
+     "category": "demo/app",
+     "title": "MiniMaxAI/minimax-h3-image",
+     "url": "https://huggingface.co/spaces/MiniMaxAI/minimax-h3-image",
+     "signal": "trending 129 on Hugging Face (318 likes)",
+     "score": 129.0,
+     "what": "A Gradio demo Space from MiniMax for image generation or handling; the description is empty.",
+     "why": "Little is known beyond the name and Gradio tag; it may let people try a MiniMax image model.",
+     "story_id": "s-5d24eef197"
+    },
+    {
+     "id": "hf:space:huggingface/moe-blogpost",
+     "kind": "space",
+     "category": "demo/app",
+     "title": "huggingface/moe-blogpost",
+     "url": "https://huggingface.co/spaces/huggingface/moe-blogpost",
+     "signal": "trending 118 on Hugging Face (842 likes)",
+     "score": 118.0,
+     "what": "A Hugging Face Space packaged as a Docker container, apparently about mixture-of-experts models.",
+     "why": "The description says nothing beyond its name and tag; little is known about what it does.",
+     "story_id": "s-278af9378a"
+    }
+   ]
+  }
+ ],
+ "llm": {
+  "month_spend_usd": 0.581,
+  "budget_usd": 30.0,
+  "budget_reached": false
+ },
+ "gap": {
+  "builders_not_press": [
+   {
+    "id": "s-7c4c430b96",
+    "headline": "thinkingmachines/Inkling-2-Mini",
+    "track": null,
+    "outlets": 0,
+    "countries": 0,
+    "stance_summary": null,
+    "builders_line": "8 models",
+    "link": "https://huggingface.co/thinkingmachines/Inkling-2-Small"
+   },
+   {
+    "id": "s-668e226f93",
+    "headline": "Ebony-Vinyl/dsh-our-free-model",
+    "track": null,
+    "outlets": 0,
+    "countries": 0,
+    "stance_summary": null,
+    "builders_line": "1 repo",
+    "link": "https://github.com/Ebony-Vinyl/dsh-our-free-model"
+   },
+   {
+    "id": "s-0c8f61285f",
+    "headline": "EL4CTEO/fast-anything",
+    "track": null,
+    "outlets": 0,
+    "countries": 0,
+    "stance_summary": null,
+    "builders_line": "1 repo",
+    "link": "https://github.com/EL4CTEO/fast-anything"
+   },
+   {
+    "id": "s-6c93b3ba60",
+    "headline": "erkamyaman/rust-anything",
+    "track": null,
+    "outlets": 0,
+    "countries": 0,
+    "stance_summary": null,
+    "builders_line": "1 repo",
+    "link": "https://github.com/erkamyaman/rust-anything"
+   },
+   {
+    "id": "s-e9b92a8f34",
+    "headline": "tencent/Hy4-flash",
+    "track": null,
+    "outlets": 0,
+    "countries": 0,
+    "stance_summary": null,
+    "builders_line": "6 models",
+    "link": "https://huggingface.co/surogate/Surogate3.7-35B-A3B"
+   }
+  ],
+  "press_not_builders": [
+   {
+    "id": "s-eb41597073",
+    "headline": "The US Commerce Department added Megaspeed, a Southeast Asian chip firm linked to an Nvidia scandal, to its trade blacklist.",
+    "track": "political",
+    "outlets": 15,
+    "countries": 7,
+    "stance_summary": "leans critical",
+    "builders_line": "",
+    "link": null
+   },
+   {
+    "id": "s-5f14f80b7c",
+    "headline": "Oregon and Virginia sued SpaceX, alleging its Grok AI generated sexualized deepfake images and violated state consumer protection laws.",
+    "track": "political",
+    "outlets": 7,
+    "countries": 1,
+    "stance_summary": "leans critical",
+    "builders_line": "",
+    "link": null
+   },
+   {
+    "id": "s-cf1b6fa00d",
+    "headline": "Mathematician Levent Alpöge, using Anthropic's Claude, claims a proof of the Riemann hypothesis, and two groups say they verified it.",
+    "track": "technical",
+    "outlets": 5,
+    "countries": 3,
+    "stance_summary": "leans positive",
+    "builders_line": "",
+    "link": null
+   },
+   {
+    "id": "s-6e009d1290",
+    "headline": "US prosecutors say a former OpenAI engineer secretly recorded dozens of confidential meetings using a hidden recorder and Codex.",
+    "track": "political",
+    "outlets": 5,
+    "countries": 3,
+    "stance_summary": "leans critical",
+    "builders_line": "",
+    "link": null
+   }
+  ]
+ },
+ "sentiment": {
+  "values": {
+   "all": -0.15,
+   "technical": 0.25,
+   "political": -0.66,
+   "economic": 0.07
+  },
+  "words": "leaning critical",
+  "days": 1,
+  "latest": "2026-11-24",
+  "outlets": 44
+ },
+ "frozen": {
+  "date": "2026-11-24",
+  "at": "2026-11-25T07:37:46+00:00"
+ }
+}
