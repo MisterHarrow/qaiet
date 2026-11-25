@@ -271,6 +271,33 @@ button { font: inherit; }
   display: -webkit-box; -webkit-line-clamp: 6; -webkit-box-orient: vertical; overflow: hidden;
 }
 details[open] ~ .coverage, .card:has(details[open]) .coverage { -webkit-line-clamp: unset; display: block; }
+/* How the outlets frame it (story_summary_v4): a line per framing, then how many outlets and where. Hovering,
+   focusing or tapping the count shows their headlines in a box under the line; the pointer can move into it. */
+.frames { margin: 0.75rem 0 0; padding: 0; list-style: none; font-size: 0.88rem; line-height: 1.45; }
+.fr-row { position: relative; padding: 0.45rem 0; border-top: 1px solid var(--wash); }
+.fr-row:first-child { padding-top: 0; border-top: 0; }
+.fr-row:last-child { padding-bottom: 0; }
+.fr-who { position: relative; white-space: nowrap; font: 0.72rem/1.4 var(--mono); color: var(--muted); cursor: pointer; border-bottom: 1px dotted var(--faint); }
+/* A pad around the count: a larger target, and a bridge down to the box so the pointer can move into it. */
+.fr-who::after { content: ""; position: absolute; left: -0.35rem; right: -0.35rem; top: -0.55rem; bottom: -0.9rem; }
+.fr-who:hover, .fr-row:focus-within .fr-who { color: var(--signal); border-bottom-color: currentColor; }
+.fr-who:focus-visible { outline-offset: 3px; }
+.fr-arrow { margin-right: 0.2em; }
+.fr-who .sep { margin: 0 0.3em; }
+.fr-cc { letter-spacing: 0.04em; }
+.fr-tip {
+  position: absolute; left: -0.6rem; right: -0.6rem; top: 100%; z-index: 6; max-height: 18rem; overflow-y: auto;
+  display: flex; flex-direction: column; gap: 0.5rem; padding: 0.65rem 0.75rem;
+  background: var(--paper); border: 1px solid var(--ink); border-radius: 3px; box-shadow: 0 8px 24px rgba(26, 24, 22, 0.14);
+  opacity: 0; visibility: hidden; transform: translateY(-4px);
+  transition: opacity 0.18s ease, transform 0.22s cubic-bezier(0.2, 0.8, 0.2, 1), visibility 0s linear 0.22s;
+}
+.fr-who:hover + .fr-tip, .fr-tip:hover, .fr-row:focus-within .fr-tip {
+  opacity: 1; visibility: visible; transform: none; transition: opacity 0.18s ease, transform 0.22s cubic-bezier(0.2, 0.8, 0.2, 1), visibility 0s;
+}
+.fr-src { display: block; font-size: 0.8rem; line-height: 1.35; overflow-wrap: anywhere; }
+.fr-src .dot { width: 0.5rem; height: 0.5rem; margin-right: 0.4rem; }
+@media (prefers-reduced-motion: reduce) { .fr-tip { transition: none; } }
 .builders { margin: 0.65rem 0 0; color: var(--muted); font-size: 0.8rem; }
 .builders-long { margin: 0.6rem 0 0; color: var(--muted); font-size: 0.84rem; }
 .label { font: 600 0.66rem var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--faint); margin-right: 0.45em; }

@@ -174,7 +174,7 @@ class AnalysisSettings(_Model):
     label_batch_size: int = 20
     news_prompt: str = "news_label_v3"
     builder_prompt: str = "builder_label_v1"
-    summary_prompt: str = "story_summary_v3"
+    summary_prompt: str = "story_summary_v4"
     weather_prompt: str = "weather_v3"
     summarize_top: int = 12
     resummarize_new_items: int = 3   # re-summarize after at least this many new items...

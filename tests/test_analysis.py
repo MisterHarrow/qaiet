@@ -53,7 +53,8 @@ class FakeAnthropic:
         elif name == "BuilderBatch":
             data = {"items": [{"i": n, "what": f"thing {n}", "why": "because", "kind": "tool/library"} for n in nums]}
         elif name == "StorySummary":
-            data = {"headline": "Nvidia reinstates its chief executive", "track": "economic", "coverage": "Mostly neutral.", "builders": None}
+            data = {"headline": "Nvidia reinstates its chief executive", "track": "economic", "coverage": "Mostly neutral.",
+                    "frames": [{"frame": "Report the return plainly", "outlets": ["New York Times"]}], "builders": None}
         else:
             data = {"sentence": "Market-heavy day; builders shipped agent tools."}
         usage = SimpleNamespace(input_tokens=500, output_tokens=100, cache_read_input_tokens=0, cache_creation_input_tokens=0)

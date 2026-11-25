@@ -132,6 +132,32 @@ def place_filters(stories: list[dict]) -> list[dict]:
     return out
 
 
+def frame_rows(story: dict) -> list[dict]:
+    """A card's framings (story_summary_v4 `frames`), each joined to the story's articles from the outlets the model
+    named: the articles (for the list shown on hover or tap), how many outlets, and their countries (most outlets
+    first). Names the model got wrong are dropped; summaries written before v4 have no frames and keep their prose."""
+    frames = (story.get("summary") or {}).get("frames") or []
+    by_outlet: dict[str, list[dict]] = {}
+    for g in story.get("coverage") or []:
+        for c in g["items"]:
+            by_outlet.setdefault(c["outlet"].casefold(), []).append({**c, "stance": g["stance"]})
+    rows = []
+    for f in frames:
+        text = (f.get("frame") or "").strip().rstrip(".")
+        if not text:
+            continue
+        names = dict.fromkeys(n.strip().casefold() for n in f.get("outlets") or [] if n.strip())
+        items = [it for n in names for it in by_outlet.get(n, [])]
+        country = {it["outlet"]: it.get("country") for it in items}
+        per: dict[str, int] = {}
+        for code in country.values():
+            if code:
+                per[code] = per.get(code, 0) + 1
+        rows.append({"frame": text[0].upper() + text[1:], "items": items, "outlets": len(country),
+                     "countries": sorted(per, key=lambda c: -per[c])})
+    return rows
+
+
 def _a(url: str, text: str) -> Markup:
     return Markup('<a href="{}" rel="noopener">{}</a>').format(url, text)
 
@@ -215,6 +241,7 @@ def _env() -> Environment:
     env.filters["date_range"] = date_range
     env.filters["day_label"] = day_label
     env.filters["story_countries"] = story_countries
+    env.filters["frame_rows"] = frame_rows
     env.filters["narrative_chart"] = narrative_chart
     env.filters["seal"] = seal
     env.globals.update(stance_names=STANCE_NAMES, kind_names=KIND_NAMES, country_names=COUNTRY_NAMES)

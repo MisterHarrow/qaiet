@@ -132,7 +132,24 @@
   <p class="meta">Builders only <span class="sep">·</span> no outlet coverage yet</p>
   {% endif %}
 
-  {% if s.summary and s.summary.coverage %}
+  {# How the outlets frame it: one line per framing, with how many outlets and where they are. Hovering, focusing
+     or tapping the count shows those outlets' headlines (CSS only). Summaries from before story_summary_v4 keep
+     their prose. #}
+  {% set frames = s|frame_rows %}
+  {% if frames %}
+  <ul class="frames" aria-label="How the outlets frame it">
+    {% for f in frames %}
+    <li class="fr-row"><span class="fr-text">{{ f.frame }}</span>
+      {%- if f.outlets %} <span class="fr-who" tabindex="0" aria-label="{{ f.outlets }} outlet{{ "s" if f.outlets != 1 }}{% if f.countries %} in {% for c in f.countries %}{{ country_names.get(c, c) }}{% if not loop.last %}, {% endif %}{% endfor %}{% endif %}: show their headlines"><span class="fr-arrow" aria-hidden="true">←</span> {{ f.outlets }} outlet{{ "s" if f.outlets != 1 }}{% if f.countries %} <span class="sep">·</span> <span class="fr-cc">{{ f.countries|join(" ") }}</span>{% endif %}</span>
+      <span class="fr-tip">
+        {%- for c in f["items"] %}
+        <span class="fr-src"><span class="outlet"><span class="dot st{{ c.stance }}" aria-hidden="true"></span>{{ c.outlet }}{% if c.country %} <span class="country">{{ c.country }}</span>{% endif %}</span><a href="{{ c.url }}" rel="noopener">{{ c.title_en or c.title }}</a></span>
+        {%- endfor %}
+      </span>
+      {%- endif %}</li>
+    {% endfor %}
+  </ul>
+  {% elif s.summary and s.summary.coverage %}
   <p class="coverage">{{ s.summary.coverage }}</p>
   {% endif %}
 

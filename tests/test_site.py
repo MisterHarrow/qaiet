@@ -292,3 +292,25 @@ def test_stories_filter_by_region_and_country(tmp_path):
     assert '<button type="button" data-region="Americas" data-codes="US CA" aria-pressed="false">Americas <span class="n">1</span></button>' in html
     assert 'data-region="Europe" data-codes="GB SE DE FR BE ES" aria-pressed="false" disabled>' in html
     assert '<span class="place-row"' not in html  # one country in the view: no country line to pick from
+
+
+def test_card_lists_framings_with_their_outlets(tmp_path):
+    story = {"summary": {"coverage": "Prose.", "frames": [
+        {"frame": "frame the return as a governance failure.", "outlets": ["Breitbart", "the guardian", "Nobody Times"]},
+        {"frame": "Report it plainly", "outlets": ["NYT"]}, {"frame": " ", "outlets": ["NYT"]}]},
+        "coverage": [{"stance": "-2", "items": [{"outlet": "Breitbart", "country": "US", "url": "https://b/1", "title": "B1"},
+                                                {"outlet": "The Guardian", "country": "GB", "url": "https://g/1", "title": "G1"},
+                                                {"outlet": "Breitbart", "country": "US", "url": "https://b/2", "title": "B2"}]},
+                     {"stance": "0", "items": [{"outlet": "NYT", "country": "US", "url": "https://n/1", "title": "N1"}]}]}
+    rows = build.frame_rows(story)
+    assert [r["frame"] for r in rows] == ["Frame the return as a governance failure", "Report it plainly"]  # tidied, blank dropped
+    assert rows[0]["outlets"] == 2 and rows[0]["countries"] == ["US", "GB"]  # names matched without case; unknown names dropped
+    assert [(c["title"], c["stance"]) for c in rows[0]["items"]] == [("B1", "-2"), ("B2", "-2"), ("G1", "-2")]  # every article of those outlets
+    assert build.frame_rows({"summary": {"coverage": "Prose."}, "coverage": []}) == []  # before story_summary_v4: prose
+
+    e = edition()
+    e["stories"][0]["summary"]["frames"] = [{"frame": "Report the return plainly", "outlets": ["NYT"]}]
+    html = build.render(e, tmp_path).read_text()
+    assert '<ul class="frames" aria-label="How the outlets frame it">' in html and '<p class="coverage">' not in html
+    assert '<li class="fr-row"><span class="fr-text">Report the return plainly</span> <span class="fr-who" tabindex="0" aria-label="1 outlet in United States: show their headlines">' in html
+    assert '<span class="fr-cc">US</span>' in html and '<span class="fr-tip">' in html

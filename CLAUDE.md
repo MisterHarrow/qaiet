@@ -83,6 +83,7 @@ uv run pytest          # must pass before every push; no network, no model calls
   - `--signal` (magenta) is the one brand color: active navigation, focus, section markers. It never encodes data.
 - **Layout:**
   - Story cards are a grid of 4, then 3, 2 and 1 per row as the screen narrows. A card's top edge is its stance mix.
+  - A card's coverage is a list of framings (`frames` from `story_summary_v4`: a verb phrase and the outlets that frame it that way), each followed by its outlet count and country codes; hovering, focusing or tapping the count shows those outlets' headlines (CSS only, `build.frame_rows`). Summaries written before v4 keep their prose.
   - The rule under the masthead on the front page is the stance mix of every article in that view.
   - Every page must work at 380px wide without horizontal scrolling.
   - On phones (under 38rem) the light/dark switch sits beside the wordmark and the sentiment's three tracks sit under its figure; under 52rem the map moves below the views. Small controls get an invisible `::after` pad ("Hit areas" in `style.css`) so taps reach about 44px without moving anything; give new small controls one too.

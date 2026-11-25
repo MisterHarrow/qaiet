@@ -117,7 +117,7 @@ analysis:
   label_batch_size: 20            # items per Haiku labeling call
   news_prompt: news_label_v3      # prompt files in src/quiet_ai/llm/prompts/; the version is stored on each label
   builder_prompt: builder_label_v1
-  summary_prompt: story_summary_v3
+  summary_prompt: story_summary_v4    # v4 adds frames: each framing with its outlets
   weather_prompt: weather_v3
   summarize_top: 12               # Sonnet summaries for the top stories only
   # Cost control: a big story gains items every run, so refresh its summary only when it grew by

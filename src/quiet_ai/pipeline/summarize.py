@@ -23,10 +23,16 @@ STANCE_WORD = {"-2": "strongly critical", "-1": "critical", "0": "neutral", "1":
                "unclear": "unclear", "unlabeled": "unlabeled"}
 
 
+class Frame(BaseModel):
+    frame: str          # how these outlets frame the story: a short verb phrase ("Report the ruling plainly")
+    outlets: list[str]  # outlet names as given in the material
+
+
 class StorySummary(BaseModel):
     headline: str
     track: Literal["technical", "political", "economic"]
     coverage: str | None
+    frames: list[Frame]  # story_summary_v4: the coverage split as a list, each framing with its outlets
     builders: str | None
 
 
