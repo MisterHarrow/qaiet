@@ -95,15 +95,31 @@
   {% endif %}
 
   {% set b = s.builders %}
-  {% if s.builders_line %}
+  {% set more = s.coverage or b.hn or b.repos or b.models or b.papers or b.official or b.x or b.reddit %}
+  {# The builders summary lives in the expanded panel; a card with nothing to expand keeps it. #}
+  {% if s.builders_line and not more %}
   <p class="builders"><span class="label">Builders</span> {{ s.builders_line }}</p>
   {% endif %}
 
-  {% set more = s.coverage or b.hn or b.repos or b.models or b.papers or b.official or b.x or b.reddit %}
-  {% if more %}
-  <details>
-    <summary aria-controls="{{ s.id }}-more">{% if s.coverage %}Expand Sources{% else %}Links{% endif %}</summary>
-  </details>
+  {% set counts = [s.stance.get("-2", 0), s.stance.get("-1", 0), s.stance.get("0", 0), s.stance.get("1", 0), s.stance.get("2", 0)] %}
+  {% set total = counts|sum %}
+  {% if more or total %}
+  <div class="card-foot">
+    {% if more %}
+    <details>
+      <summary aria-controls="{{ s.id }}-more">{% if s.coverage %}Expand Sources{% else %}Links{% endif %}</summary>
+    </details>
+    {% endif %}
+    {% if total %}
+    {# Stance of the coverage: one bar per step from strongly critical to enthusiastic, scaled to the largest. #}
+    {% set top = counts|max %}
+    {% set mean = (counts[1] * -1 + counts[0] * -2 + counts[3] + counts[4] * 2) / total %}
+    <span class="stance-chart" role="img" aria-label="{{ s.stance_label }}. Average {{ mean|signed }} on a scale from −2 to +2." title="{{ s.stance_label }} (average {{ mean|signed }})">
+      <span class="stance-mean">{{ mean|signed }}</span>
+      <svg viewBox="0 0 33 16" aria-hidden="true" focusable="false">{% for n in counts %}{% set h = (14 * n / top)|round(1) if n else 0 %}<rect class="sb{{ loop.index }}" x="{{ loop.index0 * 7 }}" y="{{ 15 - h }}" width="5" height="{{ h }}"/>{% endfor %}<line class="sbase" x1="0" x2="33" y1="15.5" y2="15.5"/></svg>
+    </span>
+    {% endif %}
+  </div>
   {% endif %}
 </article>
 {# Opened from the card's summary, the headlines take the whole row under the card's row
@@ -111,6 +127,7 @@
 {% if more %}
 <div class="panel" id="{{ s.id }}-more" role="region" aria-label="{% if s.coverage %}Headlines by stance{% else %}Links{% endif %}: {{ s.headline }}">
   <p class="panel-head"><span class="rank">{{ "%02d"|format(s.rank) }}</span> {{ s.headline }}</p>
+  {% if s.builders_line %}<p class="builders"><span class="label">Builders</span> {{ s.builders_line }}</p>{% endif %}
   {% if s.summary and s.summary.builders %}<p class="builders-long">{{ s.summary.builders }}</p>{% endif %}
   <div class="panel-groups">
     {% for g in s.coverage %}

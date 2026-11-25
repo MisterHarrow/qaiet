@@ -220,6 +220,19 @@ details[open] ~ .coverage, .card:has(details[open]) .coverage { -webkit-line-cla
 .label { font: 600 0.66rem var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--faint); margin-right: 0.45em; }
 
 details { margin-top: auto; padding-top: 0.8rem; }
+/* Card footer: the Expand Sources toggle on the left, the stance chart on the right. */
+.card-foot { display: flex; align-items: center; justify-content: space-between; gap: 0.8rem; margin-top: auto; padding-top: 0.8rem; }
+.card-foot details { margin-top: 0; padding-top: 0; }
+.stance-chart { display: inline-flex; align-items: center; gap: 0.5rem; margin-left: auto; }
+.stance-chart svg { display: block; width: 2.4rem; height: auto; overflow: visible; }
+.stance-mean { font: 0.68rem/1 var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+.sb1 { fill: var(--crit); }
+.sb2 { fill: var(--crit-soft); }
+.sb3 { fill: var(--neut); }
+.sb4 { fill: var(--pos-soft); }
+.sb5 { fill: var(--pos); }
+.sbase { stroke: var(--rule); stroke-width: 1; }
+.panel .builders { margin: 0.7rem 0 0; }
 summary { cursor: pointer; width: fit-content; list-style: none; font: 0.72rem/1.4 var(--mono); letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
 summary::-webkit-details-marker { display: none; }
 summary::before { content: "+"; display: inline-block; width: 1.1em; color: var(--signal); }
