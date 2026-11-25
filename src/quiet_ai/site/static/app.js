@@ -222,6 +222,13 @@
   // The words are sized to sit inside the cord (radius CORD less its twist), so no letter touches a thread.
   var STOPS = JSON.parse(seal.getAttribute("data-stops") || "[]"), BANDS = JSON.parse(seal.getAttribute("data-bands") || "[]");
   var TINT = { "-2": "--crit", "-1": "--crit-soft", "0": "--neut", "1": "--pos-soft", "2": "--pos" }, REST = 0.9;
+  // A stance color as the seal wears it: on light paper deepened a quarter of the way to ink (style.css does the same).
+  function tone(cs, key) {
+    var c = cs.getPropertyValue(TINT[key]).trim() || ink;
+    if (document.documentElement.getAttribute("data-theme") === "dark" || !/^#[0-9a-f]{6}$/i.test(c) || !/^#[0-9a-f]{6}$/i.test(ink)) return c;
+    var a = parseInt(c.slice(1), 16), b = parseInt(ink.slice(1), 16), m = function (sh) { return Math.round(((a >> sh) & 255) * 0.75 + ((b >> sh) & 255) * 0.25); };
+    return "rgb(" + m(16) + "," + m(8) + "," + m(0) + ")";
+  }
 
   var lattices = seal.querySelectorAll(".seal-lat");
 
@@ -518,7 +525,7 @@
     off.width = off.height = W;
     var o = off.getContext("2d", { willReadFrequently: true }), k = W / 100, g = o.createLinearGradient(wd.x0 * k, 0, wd.x1 * k, 0), c = 0;
     BANDS.forEach(function (b, i) {
-      var col = cs.getPropertyValue(TINT[b[0]]).trim() || ink, c0 = c, bl = Math.min(0.015, b[1] / 4);
+      var col = tone(cs, b[0]), c0 = c, bl = Math.min(0.015, b[1] / 4);
       c += b[1];
       g.addColorStop(Math.max(0, Math.min(1, i ? c0 + bl : 0)), col);
       g.addColorStop(Math.max(0, Math.min(1, i < BANDS.length - 1 ? c - bl : 1)), col);
@@ -594,7 +601,7 @@
     if (!BANDS.length) return ink;
     var g = ctx.createLinearGradient(w.x0, 0, w.x1, 0), c = 0;
     BANDS.forEach(function (b, i) {
-      var col = cs.getPropertyValue(TINT[b[0]]).trim() || ink, c0 = c, bl = Math.min(0.015, b[1] / 4);
+      var col = tone(cs, b[0]), c0 = c, bl = Math.min(0.015, b[1] / 4);
       c += b[1];
       g.addColorStop(Math.max(0, Math.min(1, i ? c0 + bl : 0)), col);
       g.addColorStop(Math.max(0, Math.min(1, i < BANDS.length - 1 ? c - bl : 1)), col);
@@ -680,10 +687,11 @@
     ctx = canvas.getContext("2d");
     var cs = getComputedStyle(document.documentElement);
     ink = cs.getPropertyValue("--ink").trim() || "#1a1816";
+    REST = document.documentElement.getAttribute("data-theme") === "dark" ? 0.9 : 1;  // the lattice's opacity in style.css
     tint = ink;
     if (STOPS.length) {  // the same radial gradient as build.seal's, in this theme's stance colors
       tint = ctx.createRadialGradient(50, 50, 0, 50, 50, 50);
-      STOPS.forEach(function (s) { tint.addColorStop(Math.max(0, Math.min(1, s[0])), cs.getPropertyValue(TINT[s[1]]).trim() || ink); });
+      STOPS.forEach(function (s) { tint.addColorStop(Math.max(0, Math.min(1, s[0])), tone(cs, s[1])); });
     }
     Object.keys(words).forEach(function (k) { words[k].tint = wordTint(words[k], cs); fill(words[k], cs); });
     seal.classList.add("playing");

@@ -634,25 +634,44 @@ ol.nl { margin: 2.2rem 0 0; padding: 0; list-style: none; }
 @media (max-width: 38rem) { .prose.narrative h1 { font-size: 1.65rem; } }
 
 /* The narrative seal: a guilloché lattice generated from the narrative (build.seal), tinted from the inside out by
-   the stance of its articles (a radial gradient whose stops take the stance colors). It has no edge of its own: a
-   paper disc with no outline. Every line is a hairline one screen pixel wide (non-scaling strokes; half a CSS pixel
+   the stance of its articles (a radial gradient whose stops take the stance colors). It has no edge or disc of its
+   own: it is drawn straight onto the card or the page. Every line is a hairline one screen pixel wide (non-scaling strokes; half a CSS pixel
    on high-density screens), so the lattice stays crisp at card size. It rests still; on hover its two lattices turn
    a little against each other. On a narrative's page its threads write the day count, "day", "narrative" and a Q
    once, then wind back, and the lattice keeps turning slowly (app.js draws the writing on a canvas inside the seal). */
 .seal-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
-.seal { position: relative; display: block; width: 3rem; aspect-ratio: 1; border-radius: 50%; background: var(--paper); }
+.seal { position: relative; display: block; width: 3rem; aspect-ratio: 1; border-radius: 50%; }
+/* On light paper the seal is drawn into the paper, not laid on it: its marks multiply with what is beneath (as graphite
+   or colored pencil does) and the paper's tooth breaks them up a little (a fine noise mask, an inline data: SVG like the
+   favicon; nothing is fetched). Dark mode keeps plain lines. */
+:root:not([data-theme="dark"]) .seal, :root:not([data-theme="dark"]) .seal-link { mix-blend-mode: multiply; }
+:root:not([data-theme="dark"]) .seal {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1.3 1.5'/%3E%3C/filter%3E%3Crect width='96' height='96' filter='url(%23g)'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1.3 1.5'/%3E%3C/filter%3E%3Crect width='96' height='96' filter='url(%23g)'/%3E%3C/svg%3E");
+  -webkit-mask-size: 96px; mask-size: 96px; }
 .seal > svg, .seal > canvas { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
 .seal > canvas { pointer-events: none; }
-.seal stop.t-2 { stop-color: var(--crit); }
-.seal stop.t-1 { stop-color: var(--crit-soft); }
-.seal stop.t0 { stop-color: var(--neut); }
-.seal stop.t1 { stop-color: var(--pos-soft); }
-.seal stop.t2 { stop-color: var(--pos); }
+/* The seal's stance colors: the tokens, deepened a quarter of the way to ink on light paper (as a pencil's color is
+   denser than a printed fill); app.js mixes the same for its canvas. */
+.seal { --seal-2: var(--crit); --seal-1: var(--crit-soft); --seal0: var(--neut); --seal1: var(--pos-soft); --seal2: var(--pos); }
+:root:not([data-theme="dark"]) .seal {
+  --seal-2: color-mix(in srgb, var(--crit) 75%, var(--ink)); --seal-1: color-mix(in srgb, var(--crit-soft) 75%, var(--ink));
+  --seal0: color-mix(in srgb, var(--neut) 75%, var(--ink)); --seal1: color-mix(in srgb, var(--pos-soft) 75%, var(--ink));
+  --seal2: color-mix(in srgb, var(--pos) 75%, var(--ink)); }
+.seal stop.t-2 { stop-color: var(--seal-2); }
+.seal stop.t-1 { stop-color: var(--seal-1); }
+.seal stop.t0 { stop-color: var(--seal0); }
+.seal stop.t1 { stop-color: var(--seal1); }
+.seal stop.t2 { stop-color: var(--seal2); }
 .seal-lat { fill: none; stroke: var(--ink); stroke-width: 1px; opacity: 0.9; }
 .seal.big { width: 11rem; }
 @media (min-resolution: 2dppx) {
   .seal-lat { stroke-width: 0.55px; }
   .seal.big .seal-lat { stroke-width: 0.6px; }
+}
+:root:not([data-theme="dark"]) .seal-lat { opacity: 1; }
+@media (min-resolution: 2dppx) {
+  :root:not([data-theme="dark"]) .seal-lat { stroke-width: 0.7px; }
 }
 .seal .seal-n { font-family: var(--serif); font-weight: 500; fill: var(--ink); text-anchor: middle; }
 @media (prefers-reduced-motion: no-preference) {
@@ -671,12 +690,10 @@ ol.nl { margin: 2.2rem 0 0; padding: 0; list-style: none; }
 /* On a card the seal sits on the top-right corner, like a seal on a document. The stance stripe ends where the seal
    begins, so none of it is hidden, and the globe steps left. */
 .card { position: relative; }
-.seal-link { position: absolute; top: -1.1rem; right: -0.8rem; z-index: 2; display: block; border-radius: 50%; transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1); }
-.seal-link:hover, .seal-link:focus-visible { transform: translateY(-2px); }
+.seal-link { position: absolute; top: -1.1rem; right: -0.8rem; z-index: 2; display: block; border-radius: 50%; }
 .card:has(> .seal-link) > .stripe { margin-right: 1.65rem; }
 .card > .seal-link .seal { width: 3.3rem; }
 .card:has(> .seal-link) .open-source { margin-right: 2.3rem; }
-@media (prefers-reduced-motion: reduce) { .seal-link { transition: none; } }
 /* The narrative's page: the seal, large, beside the headline */
 .narr-hero { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1rem 2.6rem; align-items: center; }
 @media (max-width: 38rem) {
