@@ -667,11 +667,14 @@ ol.nl { margin: 2.2rem 0 0; padding: 0; list-style: none; }
   .seal-link:hover .seal-lat.a, .seal-link:focus-visible .seal-lat.a { transform: rotate(9deg); }
   .seal-link:hover .seal-lat.b, .seal-link:focus-visible .seal-lat.b { transform: rotate(-9deg); }
 }
-/* While the threads spell, the lattice and the count step aside (the canvas draws the threads); the count returns as
-   the lattice settles. */
+/* While the threads write, the lattice steps aside (the canvas draws the threads). Once they have written and wound
+   back, the lattice keeps turning slowly and the ring turns the other way, a little slower (app.js adds the classes). */
 .seal.playing .seal-lat { opacity: 0; transition: none; }
-.seal.playing .seal-cap { opacity: 0; transition: opacity 0.35s ease; }
-.seal.playing.settling .seal-cap { opacity: 1; transition: opacity 1s ease; }
+@keyframes seal-turn { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: no-preference) {
+  .seal.big.lat-turning .seal-lat { animation: seal-turn 90s linear infinite; }
+  .seal.big.ring-turning .seal-base { animation: seal-turn 112s linear infinite reverse; }
+}
 .seal.big.can-play { cursor: pointer; }
 /* On a card the seal sits on the top-right corner, like a seal on a document. The stance stripe ends where the seal
    begins, so none of it is hidden, and the globe steps left. */

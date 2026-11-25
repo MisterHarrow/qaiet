@@ -392,8 +392,9 @@ def seal(n: dict, big: bool = False, label: str | None = None) -> Markup:
     m = 4 if big else 2
     lat = lambda sign: "".join(f'<use href="#seal-k{k}" transform="rotate({sign * j * 180 / (m * k):.3f} 50 50)"/>' for j in range(m))  # noqa: E731
     vb = 'viewBox="0 0 100 100" aria-hidden="true" focusable="false"'
-    size = (26 if days < 100 else 19) if big else (31 if days < 10 else 25 if days < 100 else 18)
-    cap = f'<text class="seal-n" x="50" y="{50 + size * 0.355:.1f}" font-size="{size}">{days}</text>'
+    # The day count sits in the middle of the small seals; the large one rests without it (its threads write it).
+    size = 31 if days < 10 else 25 if days < 100 else 18
+    cap = "" if big else f'<svg class="seal-cap" {vb}><text class="seal-n" x="50" y="{50 + size * 0.355:.1f}" font-size="{size}">{days}</text></svg>'
     attrs = f' role="img" aria-label="{escape(label)}"' if label else ' aria-hidden="true"'
     if big:  # what the seal's threads spell on the narrative's page (app.js)
         attrs += f' data-k="{k}" data-m="{m}" data-days="{days}"'
@@ -401,7 +402,7 @@ def seal(n: dict, big: bool = False, label: str | None = None) -> Markup:
         f'<span class="seal{" big" if big else ""}"{attrs}>'
         f'<svg class="seal-base" {vb}>{"".join(ring)}</svg>'
         f'<svg class="seal-lat a" {vb}>{lat(1)}</svg><svg class="seal-lat b" {vb}>{lat(-1)}</svg>'
-        f'<svg class="seal-cap" {vb}>{cap}</svg></span>')
+        f'{cap}</span>')
 
 
 def _long_date(dt: datetime) -> str:

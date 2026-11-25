@@ -179,6 +179,7 @@ def test_seal_on_card_rows_and_page(tmp_path, settings):
     page = (build.render_narratives(found, tmp_path / "n", min_days=4).parent / "s-long" / "index.html").read_text()
     # On the narrative's page the seal is large, with a finer lattice, and carries what its threads spell (app.js).
     assert '<span class="seal big" role="img"' in page and 'data-k="12" data-m="4" data-days="6"' in page and page.count('<use href="#seal-k12"') == 8
+    assert "seal-n" not in page  # the large seal rests without its count: its threads write it
     assert 'data-days' not in seal  # small seals rest; only the page's seal plays
     assert build.seal({"timeline": []}) == "" and build.seal_defs([None, {}]) == ""
     assert build.render(edition(), tmp_path / "plain").read_text().count("seal") == 0  # no narrative, no seal
