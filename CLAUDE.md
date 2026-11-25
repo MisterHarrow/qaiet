@@ -6,8 +6,8 @@ Guidance for coding agents working in this repository.
 
 Qaiet Times (formerly "quiet ai"): a calm, text-first daily overview of AI. It shows how about 60 news outlets frame AI (each article labeled with an angle, a frame and a stance from −2 to +2), what builders are making (GitHub, Hugging Face, Hacker News, Bluesky), stories clustered across sources, "Rising", "The gap", a sentiment index, an archive and an About page.
 
-- Live: https://misterharrow.github.io/quiet-ai/ (GitHub Pages)
-- Repo: `MisterHarrow/quiet-ai`, **public**. Everything pushed is public.
+- Live: https://misterharrow.github.io/qaiet/ (GitHub Pages; the old /quiet-ai/ address stopped working when the repo was renamed on 2026-11-25)
+- Repo: `MisterHarrow/qaiet` (renamed from `quiet-ai`), **public**. Everything pushed is public.
 - Owner: Benjamin. History and the reasons behind decisions are in `docs/m0-report.md` … `docs/m6-notes.md`; commands are in `README.md`.
 
 ## Run it
@@ -84,7 +84,7 @@ uv run pytest          # must pass before every push; no network, no model calls
   - Every page must work at 380px wide without horizontal scrolling.
 - **Charts** on `/sentiment/` are hand-written inline SVG (`build.sparkline`), colored from the CSS tokens. There is no chart library.
 - **Name, favicon and wordmark:**
-  - The public name is **Qaiet Times** (no ".ai"). The repo, package, database files and the crawler's user agent keep `quiet-ai`.
+  - The public name is **Qaiet Times** (no ".ai"). The repo is `qaiet`; the Python package (`quiet_ai`), the database files (`quiet-ai.db`, the `db` release assets) and the crawler's user agent keep the old name.
   - The favicon, wordmark and site navigation live once in `site/templates/_brand.html.j2`; every page imports them.
   - The mark is the stance scale as five bars, umber to sage. The wordmark is "Qaiet Times" in `--display` (Baskerville, then Baskerville Old Face on Windows, then the system serif), plain ink with no highlight.
 - **Copy:** plain, specific, short sentences; calm, no hype.
@@ -97,5 +97,5 @@ uv run pytest          # must pass before every push; no network, no model calls
   - **collect** every 2 hours: fetch only, no model calls.
   - **publish** from 06:30 Stockholm: the full pipeline, deploy to Pages, and committing the frozen editions.
   - GitHub drops scheduled runs, so `.github/scripts/plan.sh` publishes from any scheduled run once today's edition isn't live yet (see `docs/m5-notes.md`).
-- **Changes to the page go live only on the next publish:** the morning run, or a manual `gh workflow run run.yml --repo MisterHarrow/quiet-ai -f mode=publish`. That costs model money and updates the public site, so ask Benjamin first.
+- **Changes to the page go live only on the next publish:** the morning run, or a manual `gh workflow run run.yml --repo MisterHarrow/qaiet -f mode=publish`. That costs model money and updates the public site, so ask Benjamin first.
 - The workflow commits `editions/*.json` to `main`. Run `git pull --rebase` before pushing.

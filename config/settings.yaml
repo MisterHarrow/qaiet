@@ -2,11 +2,11 @@
 
 db_path: data/quiet-ai.db
 # The scheduled workflow owns the data; qa pull fetches its latest database for local work.
-db_release_url: https://github.com/MisterHarrow/quiet-ai/releases/download/db/quiet-ai.db.gz
+db_release_url: https://github.com/MisterHarrow/qaiet/releases/download/db/quiet-ai.db.gz
 
 http:
   # Sent with every request. Add a contact URL once the repo is public, e.g.
-  # "quiet-ai/0.1 (+https://github.com/<owner>/quiet-ai)".
+  # "quiet-ai/0.1 (+https://github.com/<owner>/qaiet)".
   user_agent: "quiet-ai/0.1 (daily AI news digest; respects robots.txt)"
   robots_token: quiet-ai          # name matched against robots.txt User-agent groups
   respect_robots: true

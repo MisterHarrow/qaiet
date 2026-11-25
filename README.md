@@ -1,8 +1,8 @@
 # Qaiet Times
 
-Qaiet Times (the repo and Python package are still called `quiet-ai`) is a calm, text-first page that answers once a day: what happened in AI, how is it being framed, and what are builders actually making?
+Qaiet Times (repo `qaiet`; the Python package is still called `quiet_ai`) is a calm, text-first page that answers once a day: what happened in AI, how is it being framed, and what are builders actually making?
 
-Status: **M5 (automation)**, live at https://misterharrow.github.io/quiet-ai/. Sources are fetched, filtered for AI relevance, grouped into stories, labeled (track, frame, stance, evidence), ranked by momentum, summarized and rendered as a static page, published every morning at 06:30 Stockholm time by GitHub Actions (sources are collected every 2 hours). Notes per milestone: [M0 plan and sources](docs/m0-report.md), [M2 relevance and clustering](docs/m2-notes.md), [M3 labels, momentum, costs](docs/m3-notes.md), [M4 site](docs/m4-notes.md), [M5 automation](docs/m5-notes.md).
+Status: **M5 (automation)**, live at https://misterharrow.github.io/qaiet/. Sources are fetched, filtered for AI relevance, grouped into stories, labeled (track, frame, stance, evidence), ranked by momentum, summarized and rendered as a static page, published every morning at 06:30 Stockholm time by GitHub Actions (sources are collected every 2 hours). Notes per milestone: [M0 plan and sources](docs/m0-report.md), [M2 relevance and clustering](docs/m2-notes.md), [M3 labels, momentum, costs](docs/m3-notes.md), [M4 site](docs/m4-notes.md), [M5 automation](docs/m5-notes.md).
 
 ## Setup
 
@@ -90,8 +90,8 @@ uv run qa ingest --record        # live fetch, writes fixtures, stores nothing
 One-time setup:
 
 ```sh
-gh secret set ANTHROPIC_API_KEY --repo <owner>/quiet-ai   # paste the key when asked
-gh api -X POST repos/<owner>/quiet-ai/pages -f build_type=workflow
+gh secret set ANTHROPIC_API_KEY --repo <owner>/qaiet   # paste the key when asked
+gh api -X POST repos/<owner>/qaiet/pages -f build_type=workflow
 ```
 
 Without the secret the pipeline still runs and deploys, with no labels or summaries.

@@ -49,7 +49,7 @@ jobs:
           SCHEDULE: ${{ github.event.schedule }}
           INPUT_MODE: ${{ inputs.mode }}
           COLLECT_CRON: "17 */2 * * *"
-          SITE_URL: https://misterharrow.github.io/quiet-ai
+          SITE_URL: https://misterharrow.github.io/qaiet
         run: |
           mode=$(.github/scripts/plan.sh)
           echo "mode=$mode" >> "$GITHUB_OUTPUT"
