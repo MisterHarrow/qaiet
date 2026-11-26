@@ -1685,12 +1685,6 @@
   "status": 200,
   "url": "https://tuoitre.vn/rss/cong-nghe.rss"
  },
- "rss:tvn24:0": {
-  "content_type": "text/xml; charset=utf-8",
-  "file": "rss_tvn24_0.xml",
-  "status": 200,
-  "url": "https://tvn24.pl/najnowsze.xml"
- },
  "rss:tweakers:0": {
   "content_type": "application/rss+xml",
   "file": "rss_tweakers_0.xml",
