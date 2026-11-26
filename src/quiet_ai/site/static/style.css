@@ -129,7 +129,13 @@ button { font: inherit; }
 .greet .sentiment .sent-word + .sent-track + .sent-track { animation-delay: 0.63s; }
 .greet .sentiment .sent-word + .sent-track + .sent-track + .sent-track { animation-delay: 0.71s; }
 /* Under the rule: the sentiment line and the views on the left, where the coverage comes from on the right. */
-.masthead-body { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 2rem; align-items: start; }
+/* Wide: the sentiment and the day's line on the left, the coverage box beside both. Narrow: one column in that order,
+   the coverage box between them. */
+.masthead-body { display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-rows: auto 1fr; grid-template-areas: "main geo" "lead geo";
+                 column-gap: 2rem; align-items: start; }
+.mb-main { grid-area: main; }
+.geo-box { grid-area: geo; }
+.mb-lead { grid-area: lead; }
 /* The map's own heading sits above the legend and the dots. */
 .geo-box { margin-top: 0.75rem; }
 .geo-head { margin: 0 0 0.5rem; font: 600 0.6rem/1 var(--mono); letter-spacing: 0.09em; text-transform: uppercase; color: var(--muted); }
@@ -156,7 +162,21 @@ button { font: inherit; }
 .greet .geo-map .lit { animation: dot-in 0.35s ease both; animation-delay: var(--d); }
 .greet .geo-legend, .greet .geo-head { animation: step-in 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) 0.3s both; }
 /* Below 52rem the map moves under the views (beside them it squeezes the period switcher onto two lines on tablets). */
-@media (max-width: 52rem) { .masthead-body { grid-template-columns: minmax(0, 1fr); } .geo-box { margin-top: 1rem; } .geo { width: fit-content; } }
+@media (max-width: 52rem) {
+  .masthead-body { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto; grid-template-areas: "main" "geo" "lead"; }
+  .geo-box { margin-top: 1rem; } .geo { width: fit-content; }
+}
+/* Beside the sentiment (wider than 52rem) the map grows with the screen until it is as tall as the region list
+   (--legend-h, from build.legend_height), while the left column keeps at least 34rem: page width minus padding (3rem),
+   the column gap (2rem), the legend and its gap (13.85rem) and those 34rem. */
+@media (min-width: 52.01rem) {
+  .geo-map { width: clamp(170px, calc(min(100vw, 82rem) - 52.85rem), calc(var(--legend-h, 2.9rem) * 170 / 70)); height: auto; aspect-ratio: 170 / 70; }
+}
+/* Tablets (one column): the box has the page's width, so the map can grow up to the same height (page padding 3rem,
+   legend and gap 13.85rem). Phones keep the small map beside the narrower legend. */
+@media (min-width: 38.01rem) and (max-width: 52rem) {
+  .geo-map { width: clamp(170px, calc(100vw - 16.85rem), calc(var(--legend-h, 2.9rem) * 170 / 70)); height: auto; aspect-ratio: 170 / 70; }
+}
 .masthead-meta { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.6rem 1.5rem; margin-top: 0.9rem; }
 .dateline { margin: 0; color: var(--muted); font: 0.76rem/1.4 var(--mono); }
 .periods { display: flex; flex-wrap: wrap; align-items: center; gap: 0.3rem; font: 0.72rem/1 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; }

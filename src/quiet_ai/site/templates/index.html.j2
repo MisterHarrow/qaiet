@@ -58,7 +58,7 @@
   {% set geo_label %}{{ geo.outlets }} outlet{{ "s" if geo.outlets != 1 }} in {{ geo.countries|length }} countr{{ "ies" if geo.countries|length != 1 else "y" }}: {% for c, n in geo.countries %}{{ country_names.get(c, c) }} {{ n }}{% if not loop.last %}, {% endif %}{% endfor %}{% endset %}
   <div class="geo-box">
   <p class="geo-head">Outlet coverage</p>
-  <div class="geo" tabindex="0" role="img" aria-label="Where the coverage in this view comes from. {{ geo_label }}.">
+  <div class="geo" tabindex="0" role="img" aria-label="Where the coverage in this view comes from. {{ geo_label }}." style="--legend-h: {{ geo.legend_h }}">
     <ul class="geo-legend" aria-hidden="true">
       {% for r in geo.regions %}<li{% if not r.n %} class="geo-none"{% endif %}><span class="geo-region">{{ r.name }}</span><span class="geo-sqs">{% for c in r.countries %}<i class="geo-sq{% if c.n > 3 %} n3{% elif c.n > 1 %} n2{% elif c.n %} n1{% endif %}" title="{{ c.name }}: {{ c.n }} outlet{{ "s" if c.n != 1 }}"></i>{% endfor %}</span></li>{% endfor %}
     </ul>
@@ -67,7 +67,8 @@
   </div>
   </div>
   {% endif %}
-  </div>
+  {# The day's line sits under the sentiment, beside the coverage box on wide screens and after it on narrow ones. #}
+  <div class="mb-lead">
   {% if frozen_date %}
   <p class="partial">The edition published on {{ frozen_date }} at {{ updated }} {{ tz_name }}. It no longer changes. <a href="{{ root }}">Today's overview</a></p>
   {% endif %}
@@ -77,6 +78,8 @@
   {% if e.weather %}
   <p class="weather">{{ e.weather }}</p>
   {% endif %}
+  </div>
+  </div>
   {% if e.llm.budget_reached %}
   <p class="notice">This month's budget for machine labeling is used up. Stories and links still update; labels and summaries are paused until next month.</p>
   {% endif %}

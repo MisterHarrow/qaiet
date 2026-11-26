@@ -119,7 +119,18 @@ def coverage_map(stories: list[dict]) -> dict | None:
     ranked = sorted(counts.items(), key=lambda kv: (-kv[1], kv[0]))
     regions = [{"name": name, "countries": [{"code": c, "name": COUNTRY_NAMES.get(c, c), "n": counts.get(c, 0)} for c in codes],
                 "n": sum(counts.get(c, 0) for c in codes)} for name, codes in REGIONS]
-    return {"svg": svg, "outlets": len(outlets), "countries": [[c, n] for c, n in ranked], "regions": regions}
+    return {"svg": svg, "outlets": len(outlets), "countries": [[c, n] for c, n in ranked], "regions": regions,
+            "legend_h": legend_height(REGIONS)}
+
+
+def legend_height(regions: list[tuple[str, list[str]]], per_row: int = 11) -> str:
+    """The legend's height on wide screens, so the map can match it (style.css: each row 0.125rem padding above and
+    below a 0.6rem label, or a block of squares 0.45rem high with 0.2rem between rows, 0.075rem down; 11 to a row)."""
+    total = 0.0
+    for _, codes in regions:
+        rows = max(1, math.ceil(len(codes) / per_row))
+        total += 0.25 + max(0.6, 0.075 + 0.45 * rows + 0.2 * (rows - 1))
+    return f"{total:.3f}rem"
 
 
 def story_countries(story: dict) -> list[str]:

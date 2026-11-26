@@ -299,7 +299,10 @@ def test_coverage_map_lights_up_the_outlets_countries(tmp_path):
     assert svg.count('<circle class="lit') > 4 and "--d:" in svg
     assert build.coverage_map([{"coverage": []}]) is None
     html = build.render(edition(), tmp_path).read_text()
-    assert '<p class="geo-head">Outlet coverage</p>\n  <div class="geo" tabindex="0" role="img" aria-label="Where the coverage in this view comes from. 2 outlets in 1 country: United States 2.">' in html
+    assert '<p class="geo-head">Outlet coverage</p>\n  <div class="geo" tabindex="0" role="img" aria-label="Where the coverage in this view comes from. 2 outlets in 1 country: United States 2." style="--legend-h: ' in html
+    # The map matches the legend's height on wide screens: one row per region, Europe's 21 countries on two
+    assert geo["legend_h"] == build.legend_height(build.REGIONS) and build.legend_height([("A", ["X"])]) == "0.850rem"
+    assert build.legend_height([("A", ["X"] * 21)]) == "1.425rem"
 
 
 def test_stories_filter_by_region_and_country(tmp_path):
