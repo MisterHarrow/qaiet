@@ -16,33 +16,64 @@ from quiet_ai.store.db import Store
 log = logging.getLogger(__name__)
 TASK = "relevance"
 
+# Languages the keyword lists below cover (the About page says how many).
+LANGUAGES = ("en", "sv", "de", "fr", "es", "pt", "ja", "ko", "zh", "hi", "id", "vi", "ar", "tr")
+
+# Latin acronyms and names sit inside Japanese, Chinese and Korean text with no space ("生成AIが", "OpenAI发布"),
+# where \b never matches (those scripts count as word characters). So they are bounded by "no Latin letter or
+# digit next to it" instead.
+_L = r"(?<![0-9A-Za-zÀ-ÖØ-öø-ÿ_])"
+_R = r"(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])"
 # Acronyms and names that collide with ordinary words when lowercased: matched case-sensitively.
 _STRONG_CS = re.compile(
-    r"\b(AI|A\.I\.|KI|IA|AGI|LLMs?|GPTs?|GPT-\d[\w.]*|GPUs?|TPUs?)\b"
+    _L + r"(AI|A\.I\.|KI|IA|AGI|LLMs?|GPTs?|GPT-\d[\w.]*|GPUs?|TPUs?)" + _R
     # Names, also in genitive form ("Nvidias", "OpenAI's").
-    r"|\b(xAI|OpenAI|ChatGPT|Claude|Gemini|Copilot|Grok|Llama|Mistral|DeepSeek|Qwen|Kimi|Perplexity|Midjourney|"
-    r"Sora|Anthropic|DeepMind|Nvidia|NVIDIA)(?:s|'s|’s)?\b"
+    + r"|" + _L + r"(xAI|OpenAI|ChatGPT|Claude|Gemini|Copilot|Grok|Llama|Mistral|DeepSeek|Qwen|Kimi|Perplexity|Midjourney|"
+    r"Sora|Anthropic|DeepMind|Nvidia|NVIDIA)(?:s|'s|’s)?" + _R
 )
 _STRONG_CI = re.compile(
     r"\b(artificial intelligence|künstliche[rn]? intelligenz|intelligence artificielle|inteligencia artificial|inteligência artificial|"
-    r"artificiell intelligens|machine learning|maskininlärning|aprendizaje automático|aprendizado de máquina|deep learning|neural net\w*|"
-    r"large language models?|language models?|språkmodell\w*|sprachmodell\w*|modelos? de (?:lenguaje|linguagem)|"
+    r"artificiell intelligens|yapay zek[aâ]\w*|kecerdasan buatan|kecerdasan artifisial|trí tuệ nhân tạo|"
+    r"machine learning|maskininlärning|aprendizaje automático|aprendizado de máquina|deep learning|neural net\w*|"
+    r"large language models?|language models?|språkmodell\w*|sprachmodell\w*|modelos? de (?:lenguaje|linguagem)|büyük dil modeli\w*|"
     r"generative? ai|generativ\w* ai|"
     r"chatbot\w*|deepfakes?|superintelligen\w*|foundation models?|frontier models?|ai agents?|agentic|"
-    r"hugging face|stable diffusion|data ?cent(?:er|re)s?|datacenters?|centros? de (?:datos|dados)|ai[- ]chips?|"
+    r"hugging face|stable diffusion|data ?cent(?:er|re)s?|datacenters?|centros? de (?:datos|dados)|veri merkez\w*|pusat data|"
+    r"ai[- ]chips?|"
     r"sam altman|altman|dario amodei|amodei|demis hassabis|hassabis|jensen huang|mustafa suleyman|"
     r"yann lecun|geoffrey hinton|ilya sutskever|mira murati)\b",
     re.IGNORECASE,
 )
+# The same in scripts without spaces or case (Japanese, Chinese, Korean) and in Arabic and Hindi: no word boundaries.
+_STRONG_SCRIPT = re.compile(
+    "人工智能|人工智慧|人工知能|生成式|大模型|大语言模型|大語言模型|大规模语言模型|大規模言語モデル|智能体|智慧體|"
+    "英伟达|輝達|辉达|黄仁勋|黃仁勳|深度求索|通义千问|文心一言|智谱|月之暗面|"
+    "エヌビディア|オープンAI|チャットGPT|"
+    "인공지능|생성형|초거대|거대언어모델|엔비디아|오픈AI|챗GPT|챗봇|젠슨 황|"
+    "الذكاء الاصطناعي|ذكاء اصطناعي|إنفيديا|انفيديا|أوبن إيه آي|شات جي بي تي|روبوت دردشة|"
+    "एआई|आर्टिफिशियल इंटेलिजेंस|कृत्रिम बुद्धिमत्ता|चैटजीपीटी|एनवीडिया"
+)
 # Topics often but not always about AI: decided by Haiku.
 _WEAK = re.compile(
-    r"\b(chips?|chipmakers?|semiconductors?|semiconductores|semicondutores|halvledare|halbleiter|tsmc|asml|export controls?|"
+    r"\b(chips?|chipmakers?|semiconductors?|semiconductores|semicondutores|yarı iletken\w*|semikonduktor|bán dẫn|"
+    r"halvledare|halbleiter|tsmc|asml|export controls?|"
     r"robots?|robôs?|robotics|robótica|algoritmos|"
     r"automation|algorithms?|autonomous|self-driving|microsoft|google|alphabet|meta|apple|amazon|musk|tesla|"
     r"zuckerberg|pichai|nadella|bezos|tech giants?|big tech|silicon valley|startup\w*|copyright|surveillance)\b",
     re.IGNORECASE,
 )
-_NORM = re.compile(r"[^0-9a-zà-ÿ]+")
+_WEAK_SCRIPT = re.compile("半导体|半導體|半導体|芯片|晶片|算力|机器人|機器人|ロボット|반도체|로봇|أشباه الموصلات|رقائق|روبوت|सेमीकंडक्टर|चिप")
+
+
+def _strong(text: str) -> bool:
+    return bool(_STRONG_CS.search(text) or _STRONG_CI.search(text) or _STRONG_SCRIPT.search(text))
+
+
+def _weak(text: str) -> bool:
+    return bool(_WEAK.search(text) or _WEAK_SCRIPT.search(text))
+
+
+_NORM = re.compile(r"[\W_]+")  # any script's letters and digits count
 
 
 class _Verdict(BaseModel):
@@ -71,10 +102,10 @@ def keyword_verdict(kind: str, source: str, title: str, summary: str | None, ai_
         return True, "kind"
     if source in ai_sources or source in always_sources:
         return True, "source"
-    if _STRONG_CS.search(title) or _STRONG_CI.search(title):
+    if _strong(title):
         return True, "keyword"
     body = summary or ""
-    if _STRONG_CS.search(body) or _STRONG_CI.search(body) or _WEAK.search(title) or _WEAK.search(body):
+    if _strong(body) or _weak(title) or _weak(body):
         return None, "ambiguous"
     return False, "keyword"
 
@@ -122,7 +153,7 @@ def run(store: Store, settings: Settings, sources: SourcesConfig, llm: LLM | Non
         verdict, by = keyword_verdict(r["kind"], r["source"], r["title"], r["summary"], ai_sources, set(rel.always_kinds), set(rel.always_sources))
         if verdict is None and r["source"] in no_llm:
             body = r["summary"] or ""
-            verdict, by = bool(_STRONG_CS.search(body) or _STRONG_CI.search(body)), "keyword"
+            verdict, by = _strong(body), "keyword"
         updates.append((None if verdict is None else int(verdict), by, r["id"]))
         stats.by[by] = stats.by.get(by, 0) + 1
     with store.conn:

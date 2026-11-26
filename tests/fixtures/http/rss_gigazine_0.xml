@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+    xmlns:admin="http://webns.net/mvcb/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:content="http://purl.org/rss/1.0/modules/content/"
+    xmlns:atom="http://www.w3.org/2005/Atom">
+
+    <channel>
+    <atom:link href="http://gigazine.net/news/rss_2.0/" rel="self" type="application/rss+xml" />
+    <title>GIGAZINE</title>
+    <link>https://gigazine.net/</link>
+    <description>日々のあらゆる雑談に役立つネタを提供するIT系ニュースサイト。起きている限りほぼ毎日更新中。</description>
+    <dc:language>ja-JP</dc:language>
+    
+    <dc:rights>Copyright 2026</dc:rights>
+    <dc:date>2026-11-26T18:40:00+09:00</dc:date>
+    <admin:generatorAgent rdf:resource="http://www.pmachine.com/" />
+    
+
+    <item>
+      <title>NVIDIAが高性能GPUを「拠点はアメリカにあるが実態は中国企業に支配される子会社」に優先販売していた</title>
+      <link>https://gigazine.net/news/20261126&#45;nvidia&#45;china&#45;company/</link>
+      <guid isPermaLink="true">https://gigazine.net/news/20261126-nvidia-china-company/</guid>
+      <description><![CDATA[NVIDIAの最先端高性能GPUはアメリカから中国への輸出が規制されています。ところが、NVIDIAが優先パートナーとして扱っている2つのアメリカ企業が中国企業と深いつながりを持っていることがCBSによって報じられました。<p><b><a href="https://gigazine.net/news/20261126&#45;nvidia&#45;china&#45;company/">続きを読む...</a></b></p>]]></description>
+      <pubDate>Thu, 26 Nov 2026 18:40:00 +0900</pubDate>
+      <dc:subject>ハードウェア,</dc:subject>
+      <dc:date>2026-11-26T18:40:00+09:00</dc:date>
+    </item>
+
+    <item>
+      <title>「Anthropicのダリオ・アモデイCEOが人間の自由意志をAIに委ねようとしている」という報道を本人が真っ向から否定し「AIの未来は民主的なプロセスで決定されるべき」と明言</title>
+      <link>https://gigazine.net/news/20261126&#45;dario&#45;amodei&#45;ai&#45;human/</link>
+      <guid isPermaLink="true">https://gigazine.net/news/20261126-dario-amodei-ai-human/</guid>
+      <description><![CDATA[海外メディアのAxiosが2026年11月25日に「Anthropicのダリオ・アモデイCEOは人間の意思決定を高性能AIに委ねることを肯定している」と報じました。アモデイCEOは自身Xアカウントで報道内容を否定し、自身のAIについての考え方を長文で説明しています。<p><b><a href="https://gigazine.net/news/20261126&#45;dario&#45;amodei&#45;ai&#45;human/">続きを読む...</a></b></p>]]></description>
+      <pubDate>Thu, 26 Nov 2026 18:14:00 +0900</pubDate>
+      <dc:subject>AI,</dc:subject>
+      <dc:date>2026-11-26T18:14:00+09:00</dc:date>
+    </item>
+
+    <item>
+      <title>OpenAIが57年来の数学の難問「行列乗算はどこまで効率化できるのか」に決着をつける論文を公開</title>
+      <link>https://gigazine.net/news/20261126&#45;openai&#45;matrix&#45;multiplication/</link>
+      <guid isPermaLink="true">https://gigazine.net/news/20261126-openai-matrix-multiplication/</guid>
+      <description><![CDATA[OpenAIが2026年11月25日、2つの正方行列を掛け合わせる際の計算量を左右する「行列乗算の指数(ω)」が正確に4分の9であることを証明したとする論文を公開しました。行列乗算の計算量をどこまで削減できるのかは1969年から研究が続けられてきた問題で、数学やコンピューター科学における重要な未解決問題の1つとされてきました。<p><b><a href="https://gigazine.net/news/20261126&#45;openai&#45;matrix&#45;multiplication/">続きを読む...</a></b></p>]]></description>
+      <pubDate>Thu, 26 Nov 2026 17:30:00 +0900</pubDate>
+      <dc:subject>AI, サイエンス,</dc:subject>
+      <dc:date>2026-11-26T17:30:00+09:00</dc:date>
+    </item>
+
+    <item>
+      <title>濃厚なミルクソースとバニラが口中を甘さで満たすロッテ「爽 贅沢濃味バニラ」試食レビュー</title>
+      <link>https://gigazine.net/news/20261126&#45;lotte&#45;sou&#45;rich&#45;vanilla/</link>
+      <guid isPermaLink="true">https://gigazine.net/news/20261126-lotte-sou-rich-vanilla/</guid>
+      <description><![CDATA[微細氷入りで口溶けのいい食感が特徴のロッテ「爽」シリーズで、冬限定アイテムとして毎度反響を呼ぶ「爽 贅沢濃味バニラ」が2026年11月16日(月)からみたび復活したということなので、買ってきて食べてみました。<p><b><a href="https://gigazine.net/news/20261126&#45;lotte&#45;sou&#45;rich&#45;vanilla/">続きを読む...</a></b></p>]]></description>
+      <pubDate>Thu, 26 Nov 2026 17:00:00 +0900</pubDate>
+      <dc:subject>試食,</dc:subject>
+      <dc:date>2026-11-26T17:00:00+09:00</dc:date>
+    </item>
+
+    <item>
+      <title>AIとアーカイブ録音で故サッカー解説者ジョン・モトソンを「EA SPORTS FC」で蘇らせる、家族の許可あり</title>
+      <link>https://gigazine.net/news/20261126&#45;ai&#45;john&#45;motson/</link>
+      <guid isPermaLink="true">https://gigazine.net/news/20261126-ai-john-motson/</guid>
+      <description><![CDATA[2023年2月に亡くなったBBCのサッカー解説者であるジョン・モトソン氏の音声が、「EA SPORTS FC 27」に追加されることが発表されました。音声はEA SPORTSの「FIFA」シリーズ(EA SPORTS FCの前身)に1996年から2006年にかけて収録された約10年間の録音データから最新のAIツールで作成されています。<p><b><a href="https://gigazine.net/news/20261126&#45;ai&#45;john&#45;motson/">続きを読む...</a></b></p>]]></description>
+      <pubDate>Thu, 26 Nov 2026 16:15:00 +0900</pubDate>
+      <dc:subject>AI, ゲーム,</dc:subject>
+      <dc:date>2026-11-26T16:15:00+09:00</dc:date>
+    </item>
+
+    
+    </channel>
+</rss>

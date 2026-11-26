@@ -9,8 +9,8 @@
 # type also allows `wire` (news agencies).
 # sitemap: for sources with no feed. Only URLs modified within ingest.max_age_days and not seen before are read.
 # ai_focused: true = an AI-only feed (AI section, AI newsletter, lab blog); its items skip the relevance check.
-# index_from: date = this outlet's labels count in the sentiment index from that day. Outlets in a language the site
-#   didn't read before wait two weeks (Benjamin, 2026-11-26; docs/global-coverage-plan.md).
+# index_from: date = this outlet's labels count in the sentiment index from that day. Step 1's Portuguese outlets wait
+#   two weeks; from step 4 on Benjamin chose no wait (2026-11-26; docs/global-coverage-plan.md).
 verified_at: '2026-11-24'
 sources:
 - id: nyt
@@ -1156,6 +1156,189 @@ sources:
   feeds:
   - https://www.bangkokpost.com/rss/data/business.xml
   notes: Business feed (the tech feed URL returns 404). Added 2026-11-26 (global coverage plan, step 3).
+- id: itmediaai
+  name: ITmedia AI+
+  country: JP
+  language: ja
+  type: trade
+  group: east-asia
+  feeds:
+  - https://rss.itmedia.co.jp/rss/2.0/aiplus.xml
+  notes: AI-only section. Added 2026-11-26 (global coverage plan, step 4).
+  ai_focused: true
+- id: xtech
+  name: Nikkei xTECH
+  country: JP
+  language: ja
+  type: trade
+  group: east-asia
+  feeds:
+  - https://xtech.nikkei.com/rss/index.rdf
+  notes: 'Nikkei BP''s technology site (a different newsroom from Nikkei Asia). Added 2026-11-26 (global coverage plan, step 4).'
+- id: gigazine
+  name: GIGAZINE
+  country: JP
+  language: ja
+  type: trade
+  group: east-asia
+  feeds:
+  - https://gigazine.net/news/rss_2.0/
+  notes: Added 2026-11-26 (global coverage plan, step 4).
+- id: impress
+  name: Impress Watch
+  country: JP
+  language: ja
+  type: trade
+  group: east-asia
+  feeds:
+  - https://www.watch.impress.co.jp/data/rss/1.0/ipw/feed.rdf
+  notes: Added 2026-11-26 (global coverage plan, step 4).
+- id: aitimeskr
+  name: AI Times
+  country: KR
+  language: ko
+  type: trade
+  group: east-asia
+  feeds:
+  - https://www.aitimes.com/rss/allArticle.xml
+  notes: Korean AI-only news site. Added 2026-11-26 (global coverage plan, step 4).
+  ai_focused: true
+- id: zdnetkr
+  name: ZDNet Korea
+  country: KR
+  language: ko
+  type: trade
+  group: east-asia
+  feeds:
+  - https://feeds.feedburner.com/zdkorea
+  notes: Added 2026-11-26 (global coverage plan, step 4).
+- id: etnews
+  name: Electronic Times (etnews)
+  country: KR
+  language: ko
+  type: trade
+  group: east-asia
+  feeds:
+  - https://rss.etnews.com/Section901.xml
+  notes: Added 2026-11-26 (global coverage plan, step 4).
+- id: chosun
+  name: Chosun Ilbo
+  country: KR
+  language: ko
+  type: mainstream
+  group: east-asia
+  feeds:
+  - https://www.chosun.com/arc/outboundfeeds/rss/?outputType=xml
+  notes: All-news feed. Added 2026-11-26 (global coverage plan, step 4).
+- id: ithome
+  name: ITHome (IT之家)
+  country: CN
+  language: zh
+  type: trade
+  group: east-asia
+  feeds:
+  - https://www.ithome.com/rss/
+  notes: Added 2026-11-26 (global coverage plan, step 4).
+- id: qbitai
+  name: QbitAI (量子位)
+  country: CN
+  language: zh
+  type: trade
+  group: east-asia
+  feeds:
+  - https://www.qbitai.com/feed
+  notes: AI-focused tech media. Added 2026-11-26 (global coverage plan, step 4).
+  ai_focused: true
+- id: ithometw
+  name: iThome
+  country: TW
+  language: zh
+  type: trade
+  group: east-asia
+  feeds:
+  - https://www.ithome.com.tw/rss
+  notes: robots.txt Content-Signal says ai-input=yes. Added 2026-11-26 (global coverage plan, step 4).
+- id: amarujala
+  name: Amar Ujala
+  country: IN
+  language: hi
+  type: mainstream
+  group: south-asia
+  feeds:
+  - https://www.amarujala.com/rss/technology.xml
+  notes: Technology section. Added 2026-11-26 (global coverage plan, step 4).
+- id: ndtvindia
+  name: NDTV India
+  country: IN
+  language: hi
+  type: mainstream
+  group: south-asia
+  feeds:
+  - https://feeds.feedburner.com/ndtvkhabar-latest
+  notes: Hindi all-news feed. Added 2026-11-26 (global coverage plan, step 4).
+- id: cnnid
+  name: CNN Indonesia
+  country: ID
+  language: id
+  type: mainstream
+  group: southeast-asia
+  feeds:
+  - https://www.cnnindonesia.com/teknologi/rss
+  notes: Technology section. Added 2026-11-26 (global coverage plan, step 4).
+- id: tuoitre
+  name: Tuổi Trẻ
+  country: VN
+  language: vi
+  type: state-aligned
+  group: southeast-asia
+  feeds:
+  - https://tuoitre.vn/rss/cong-nghe.rss
+  notes: Published by the Ho Chi Minh Communist Youth Union. Technology section. Added 2026-11-26 (global coverage plan, step 4).
+- id: skynewsarabia
+  name: Sky News Arabia
+  country: AE
+  language: ar
+  type: mainstream
+  group: middle-east
+  feeds:
+  - https://www.skynewsarabia.com/rss/technology.xml
+  notes: Abu Dhabi. Technology section. Added 2026-11-26 (global coverage plan, step 4).
+- id: aitnews
+  name: AITNews
+  country: SA
+  language: ar
+  type: trade
+  group: middle-east
+  feeds:
+  - https://aitnews.com/feed/
+  notes: Arabic tech news. Added 2026-11-26 (global coverage plan, step 4).
+- id: techwd
+  name: Tech-WD
+  country: SA
+  language: ar
+  type: trade
+  group: middle-east
+  feeds:
+  - https://www.tech-wd.com/wd/feed/
+  notes: Arabic tech news. Added 2026-11-26 (global coverage plan, step 4).
+- id: shiftdelete
+  name: ShiftDelete.Net
+  country: TR
+  language: tr
+  type: trade
+  group: middle-east
+  feeds:
+  - https://shiftdelete.net/feed
+  notes: Turkish tech news. robots.txt Content-Signal says ai-input=yes. Added 2026-11-26 (global coverage plan, step 4).
+- id: youm7
+  name: Youm7
+  country: EG
+  language: ar
+  type: state-aligned
+  group: africa
+  feeds:
+  - https://www.youm7.com/rss/SectionRss?SectionID=328
+  notes: Owned by United Media Services, close to the Egyptian state. Technology section. Added 2026-11-26 (global coverage plan, step 4).
 gdelt_outlets:
 - id: reuters
   name: Reuters

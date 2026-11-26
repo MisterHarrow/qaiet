@@ -1,6 +1,6 @@
 # Global coverage plan
 
-Drafted 2026-11-26 for Benjamin to approve step by step. **Steps 1–3 are implemented** (step 1: 24 outlets, the region split, Portuguese keywords, the `index_from` wait, the per-outlet stripe and the About page's limits; step 2: 19 outlets in the Middle East, Oceania and Canada, with the About page's source list grouped by region; step 3: 23 English-language outlets in Asia, and Asia split into East, South and Southeast Asia). Steps 4–8 are not started.
+Drafted 2026-11-26 for Benjamin to approve step by step. **Steps 1–3 are implemented** (step 1: 24 outlets, the region split, Portuguese keywords, the `index_from` wait, the per-outlet stripe and the About page's limits; step 2: 19 outlets in the Middle East, Oceania and Canada, with the About page's source list grouped by region; step 3: 23 English-language outlets in Asia, and Asia split into East, South and Southeast Asia, The Indian Express disabled after GitHub's servers got HTTP 403; step 4: 20 outlets in Japanese, Korean, Chinese, Hindi, Indonesian, Vietnamese, Arabic and Turkish, the keyword filter for those scripts, and translation before clustering. Benjamin chose no two-week index wait for step 4's outlets.) Steps 5–8 are not started.
 
 ## Summary
 

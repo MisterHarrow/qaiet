@@ -40,6 +40,21 @@ def test_norm_key():
     assert norm_key("https://example.com/") is None
 
 
+def test_non_latin_headlines_wait_for_their_english_title():
+    """Untranslated Japanese or Arabic headlines aren't embedded (so not clustered); once translated, the English title
+    is embedded alone, without the untranslated summary."""
+    st = Store(":memory:")
+    add(st, [news(1, "エヌビディア、フアン氏をCEOに復帰", lang="ja", summary="長い日本語の要約"),
+             news(2, "Nvidia brings back Huang", lang="en"), news(3, "Nvidia ger Huang jobbet igen", lang="sv")])
+    embedded = {r[0] for r in st.conn.execute("SELECT item_id FROM embeddings")}
+    assert embedded == {"n2", "n3"}  # Swedish is Latin script: close enough untranslated
+    with st.conn:
+        st.conn.execute("UPDATE items SET title_en = 'Nvidia returns Huang as CEO' WHERE id = 'n1'")
+    assert embed.embed_pending(st, EMB, iso(NOW - timedelta(days=3)), 300, NOW) == 1
+    assert embed.item_text("エヌビディア", "Nvidia returns Huang", "日本語の要約", 300, "ja") == "Nvidia returns Huang"
+    assert embed.item_text("Nvidia ger", "Nvidia gives", "Svensk text", 300, "sv") == "Nvidia gives. Svensk text"
+
+
 def test_similar_headlines_form_one_story_with_stable_id():
     st = Store(":memory:")
     add(st, [news(1, "Nvidia board reinstates Jensen Huang as chief executive"),

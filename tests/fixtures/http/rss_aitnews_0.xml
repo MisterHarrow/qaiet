@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>البوابة التقنية</title>
+	<atom:link href="https://aitnews.com/feed/" rel="self" type="application/rss+xml" />
+	<link>https://aitnews.com/</link>
+	<description>مصدرك الأول للأخبار التقنية</description>
+	<lastBuildDate>Thu, 26 Nov 2026 09:44:14 +0000</lastBuildDate>
+	<language>ar</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=7.1.5</generator>
+
+<image>
+	<url>https://aitnews.com/wp-content/uploads/2024/06/aitnews.png</url>
+	<title>البوابة التقنية</title>
+	<link>https://aitnews.com/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>اختراق منصة إدارة كلمات المرور 1Passwordوتَسَرّب بيانات عملاء</title>
+		<link>https://aitnews.com/2026/11/26/%d8%a7%d8%ae%d8%aa%d8%b1%d8%a7%d9%82-%d8%ae%d8%af%d9%85%d8%a9-%d8%a5%d8%af%d8%a7%d8%b1%d8%a9-%d9%83%d9%84%d9%85%d8%a7%d8%aa-%d8%a7%d9%84%d9%85%d8%b1%d9%88%d8%b1/</link>
+		
+		<dc:creator><![CDATA[فريق التحرير]]></dc:creator>
+		<pubDate>Thu, 26 Nov 2026 09:44:14 +0000</pubDate>
+				<category><![CDATA[الأمن السيبراني]]></category>
+		<category><![CDATA[1Password]]></category>
+		<category><![CDATA[إدارة كلمات المرور]]></category>
+		<category><![CDATA[الاختراق الأمني]]></category>
+		<category><![CDATA[التصيد الاحتيالي]]></category>
+		<category><![CDATA[حماية البيانات]]></category>
+		<guid isPermaLink="false">https://aitnews.com/?p=609972</guid>
+
+					<description><![CDATA[<p>كشفت 1Password عن سرقة بيانات حسابات بعض عملائها إثر اختراق أنظمتها الخلفية، وقالت إن كلمات المرور المخزنة ومفاتيح تشفيرها لم تتأثر، محذرةً من محاولات التصيد الاحتيالي.</p>
+<p>نُشر المقال <a href="https://aitnews.com/2026/11/26/%d8%a7%d8%ae%d8%aa%d8%b1%d8%a7%d9%82-%d8%ae%d8%af%d9%85%d8%a9-%d8%a5%d8%af%d8%a7%d8%b1%d8%a9-%d9%83%d9%84%d9%85%d8%a7%d8%aa-%d8%a7%d9%84%d9%85%d8%b1%d9%88%d8%b1/">اختراق منصة إدارة كلمات المرور 1Passwordوتَسَرّب بيانات عملاء</a> أولًا على <a href="https://aitnews.com">البوابة التقنية</a>.</p>
+]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>دروبال تحذر من ثغرة مستغلة تتيح السيطرة على مواقع رغم تحديثها أمنيًا</title>
+		<link>https://aitnews.com/2026/11/26/%d8%af%d8%b1%d9%88%d8%a8%d8%a7%d9%84-%d8%ab%d8%ba%d8%b1%d8%a9-%d8%a3%d9%85%d9%86%d9%8a%d8%a9-%d8%ac%d8%af%d9%8a%d8%af%d8%a9/</link>
+		
+		<dc:creator><![CDATA[فريق التحرير]]></dc:creator>
+		<pubDate>Thu, 26 Nov 2026 00:10:26 +0000</pubDate>
+				<category><![CDATA[الأمن السيبراني]]></category>
+		<category><![CDATA[إدارة المحتوى]]></category>
+		<category><![CDATA[الثغرات الأمنية]]></category>
+		<category><![CDATA[دروبال]]></category>
+		<guid isPermaLink="false">https://aitnews.com/?p=609968</guid>
+
+					<description><![CDATA[<p>أكد فريق أمن دروبال استغلال ثغرة جديدة تهدد بعض المواقع رغم تحديثات الأسبوع الماضي، ودعا إلى تثبيت الإصدارات المصححة وفحص سجلات الوصول للتحقق من الاختراقات.</p>
+<p>نُشر المقال <a href="https://aitnews.com/2026/11/26/%d8%af%d8%b1%d9%88%d8%a8%d8%a7%d9%84-%d8%ab%d8%ba%d8%b1%d8%a9-%d8%a3%d9%85%d9%86%d9%8a%d8%a9-%d8%ac%d8%af%d9%8a%d8%af%d8%a9/">دروبال تحذر من ثغرة مستغلة تتيح السيطرة على مواقع رغم تحديثها أمنيًا</a> أولًا على <a href="https://aitnews.com">البوابة التقنية</a>.</p>
+]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>ترخيص أمريكي مشروط لسبيس إكس لنشر ما يصل إلى مليون قمر اصطناعي للحوسبة الفضائية</title>
+		<link>https://aitnews.com/2026/11/25/%d8%b3%d8%a8%d9%8a%d8%b3-%d8%a5%d9%83%d8%b3-%d8%a7%d9%84%d8%ad%d9%88%d8%b3%d8%a8%d8%a9-%d8%a7%d9%84%d9%81%d8%b6%d8%a7%d8%a6%d9%8a%d8%a9/</link>
+		
+		<dc:creator><![CDATA[فريق التحرير]]></dc:creator>
+		<pubDate>Wed, 25 Nov 2026 19:21:26 +0000</pubDate>
+				<category><![CDATA[منوعات تقنية]]></category>
+		<category><![CDATA[الأقمار الاصطناعية]]></category>
+		<category><![CDATA[الذكاء الاصطناعي]]></category>
+		<category><![CDATA[سبيس إكس]]></category>
+		<category><![CDATA[ستارلينك]]></category>
+		<category><![CDATA[مراكز البيانات]]></category>
+		<guid isPermaLink="false">https://aitnews.com/?p=609964</guid>
+
+					<description><![CDATA[<p>منحت هيئة الاتصالات الفيدرالية الأمريكية سبيس إكس ترخيصًا لنشر ما يصل إلى مليون قمر اصطناعي لمعالجة بيانات الذكاء الاصطناعي في المدار، مع اشتراط موافقات إضافية لبعض المدارات ومواعيد مرحلية للتنفيذ.</p>
+<p>نُشر المقال <a href="https://aitnews.com/2026/11/25/%d8%b3%d8%a8%d9%8a%d8%b3-%d8%a5%d9%83%d8%b3-%d8%a7%d9%84%d8%ad%d9%88%d8%b3%d8%a8%d8%a9-%d8%a7%d9%84%d9%81%d8%b6%d8%a7%d8%a6%d9%8a%d8%a9/">ترخيص أمريكي مشروط لسبيس إكس لنشر ما يصل إلى مليون قمر اصطناعي للحوسبة الفضائية</a> أولًا على <a href="https://aitnews.com">البوابة التقنية</a>.</p>
+]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>السعودية تعتزم إطلاق وكيل ذكاء اصطناعي شخصي عبر «توكلنا» في فبراير 2027</title>
+		<link>https://aitnews.com/2026/11/25/%d8%a7%d9%84%d8%b3%d8%b9%d9%88%d8%af%d9%8a%d8%a9-%d9%88%d9%83%d9%8a%d9%84-%d8%b0%d9%83%d8%a7%d8%a1-%d8%a7%d8%b5%d8%b7%d9%86%d8%a7%d8%b9%d9%8a-%d8%aa%d9%88%d9%83%d9%84%d9%86%d8%a7/</link>
+		
+		<dc:creator><![CDATA[فريق التحرير]]></dc:creator>
+		<pubDate>Wed, 25 Nov 2026 18:14:13 +0000</pubDate>
+				<category><![CDATA[برامج وتطبيقات]]></category>
+		<category><![CDATA[الذكاء الاصطناعي]]></category>
+		<category><![CDATA[السعودية]]></category>
+		<category><![CDATA[تطبيق توكلنا]]></category>
+		<category><![CDATA[سدايا]]></category>
+		<category><![CDATA[وكلاء الذكاء الاصطناعي]]></category>
+		<guid isPermaLink="false">https://aitnews.com/?p=609960</guid>
+
+					<description><![CDATA[<p>تخطط السعودية لإطلاق وكيل ذكاء اصطناعي للخدمات الحكومية عبر «توكلنا» في فبراير 2027، بعد بدء تجربة أولية تضم 500 مستخدم، مع استهداف المواطنين والمقيمين والزوار.</p>
+<p>نُشر المقال <a href="https://aitnews.com/2026/11/25/%d8%a7%d9%84%d8%b3%d8%b9%d9%88%d8%af%d9%8a%d8%a9-%d9%88%d9%83%d9%8a%d9%84-%d8%b0%d9%83%d8%a7%d8%a1-%d8%a7%d8%b5%d8%b7%d9%86%d8%a7%d8%b9%d9%8a-%d8%aa%d9%88%d9%83%d9%84%d9%86%d8%a7/">السعودية تعتزم إطلاق وكيل ذكاء اصطناعي شخصي عبر «توكلنا» في فبراير 2027</a> أولًا على <a href="https://aitnews.com">البوابة التقنية</a>.</p>
+]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>OpenAI ترصد تحسنًا في ChatGPT وCodex بعد ارتفاع معدلات الأخطاء</title>
+		<link>https://aitnews.com/2026/11/25/%d8%b9%d8%b7%d9%84-%d8%a7%d9%84%d9%85%d8%ad%d8%a7%d8%af%d8%ab%d8%a9-%d9%88%d8%a7%d9%84%d8%a8%d8%b1%d9%85%d8%ac%d8%a9-2026/</link>
+		
+		<dc:creator><![CDATA[فريق التحرير]]></dc:creator>
+		<pubDate>Wed, 25 Nov 2026 16:11:41 +0000</pubDate>
+				<category><![CDATA[برامج وتطبيقات]]></category>
+		<category><![CDATA[ChatGPT]]></category>
+		<category><![CDATA[ChatGPT Work]]></category>
+		<category><![CDATA[Codex]]></category>
+		<category><![CDATA[OpenAI]]></category>
+		<guid isPermaLink="false">https://aitnews.com/?p=609956</guid>
+
+					<description><![CDATA[<p>رصدت OpenAI تحسنًا في محادثات ChatGPT ووضع العمل وجلسات Codex السحابية بعد تطبيق إجراءات لمعالجة ارتفاع معدلات الأخطاء، فيما يستمر التحقيق في السبب الجذري.</p>
+<p>نُشر المقال <a href="https://aitnews.com/2026/11/25/%d8%b9%d8%b7%d9%84-%d8%a7%d9%84%d9%85%d8%ad%d8%a7%d8%af%d8%ab%d8%a9-%d9%88%d8%a7%d9%84%d8%a8%d8%b1%d9%85%d8%ac%d8%a9-2026/">OpenAI ترصد تحسنًا في ChatGPT وCodex بعد ارتفاع معدلات الأخطاء</a> أولًا على <a href="https://aitnews.com">البوابة التقنية</a>.</p>
+]]></description>
+		
+		
+		
+			</item>
+	</channel>
+</rss>
+
+<!-- plugin=object-cache-pro client=phpredis metric#hits=1129 metric#misses=4 metric#hit-ratio=99.7 metric#bytes=12224537 metric#prefetches=105 metric#store-reads=19 metric#store-writes=2 metric#store-hits=115 metric#store-misses=0 metric#sql-queries=5 metric#ms-total=288.17 metric#ms-cache=51.84 metric#ms-cache-avg=2.5918 metric#ms-cache-ratio=18.0 -->

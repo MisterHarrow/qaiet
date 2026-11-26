@@ -145,7 +145,8 @@ def test_about_page_reads_config_and_health(tmp_path, settings):
     regions = dict((r["name"], r["n"]) for r in ctx["regions"])
     assert regions["Latin America"] == sum(1 for f in sources.feeds if f.kind == "news" and f.enabled and f.group == "latam")
     assert f"North America {regions['North America']}, Latin America {regions['Latin America']}, Europe" in html
-    assert ctx["waiting"]["until"] == "10 December" and "join the index two weeks later (" in html
+    assert ctx["waiting"]["until"] == "10 December" and "outlets in a language the site has only just started reading are" in html
+    assert f"checked for AI terms in {ctx['keyword_languages']} languages" in html
     assert ctx["us_share"] is None  # no labels in this store
     assert 'Daily Sabah <span class="country">TR, state-aligned</span>' in html  # state media are marked in the list
     assert "<h3>Canada</h3>" in html and "<h3>Middle East</h3>" in html and "<h3>Southeast Asia</h3>" in html and "Americas" not in html

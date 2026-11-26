@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>量子位</title>
+	<atom:link href="https://www.qbitai.com/feed" rel="self" type="application/rss+xml" />
+	<link>https://www.qbitai.com</link>
+	<description>追踪人工智能新趋势，报道科技行业新突破</description>
+	<lastBuildDate>Thu, 26 Nov 2026 08:19:49 +0000</lastBuildDate>
+	<language>zh-Hans</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=7.1</generator>
+	<item>
+		<title>极客公园创新大会 2027 全议程公布！</title>
+		<link>https://www.qbitai.com/2026/11/512952.html</link>
+		
+		<dc:creator><![CDATA[量子位的朋友们]]></dc:creator>
+		<pubDate>Thu, 26 Nov 2026 08:19:20 +0000</pubDate>
+				<category><![CDATA[资讯]]></category>
+		<category><![CDATA[极客公园]]></category>
+		<guid isPermaLink="false">https://www.qbitai.com/?p=512952</guid>
+
+					<description><![CDATA[今天，IF 2027 全议程揭晓。]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>报名最后2天｜AI浪潮之中，来认识创造未来的人</title>
+		<link>https://www.qbitai.com/2026/11/512942.html</link>
+		
+		<dc:creator><![CDATA[量子位的朋友们]]></dc:creator>
+		<pubDate>Thu, 26 Nov 2026 07:36:04 +0000</pubDate>
+				<category><![CDATA[资讯]]></category>
+		<category><![CDATA[WAIC]]></category>
+		<guid isPermaLink="false">https://www.qbitai.com/?p=512942</guid>
+
+					<description><![CDATA[12月6日，WAIC将携手第六届“海聚英才”全球创新创业峰会，把这场关于“人”的讨论带回现场。]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>顶尖商用级AI视频每秒只要5毛！中国开源新势力拿下全球第一</title>
+		<link>https://www.qbitai.com/2026/11/512916.html</link>
+		
+		<dc:creator><![CDATA[衡宇]]></dc:creator>
+		<pubDate>Thu, 26 Nov 2026 06:41:23 +0000</pubDate>
+				<category><![CDATA[资讯]]></category>
+		<category><![CDATA[首页轮播]]></category>
+		<category><![CDATA[Sand.ai]]></category>
+		<category><![CDATA[开源]]></category>
+		<category><![CDATA[视频模型]]></category>
+		<guid isPermaLink="false">https://www.qbitai.com/?p=512916</guid>
+
+					<description><![CDATA[30秒一镜到底，可自动编排镜头]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>任少卿带着世界模型3.0来了！蔚来智驾训练提效5倍，座舱也用上强化学习</title>
+		<link>https://www.qbitai.com/2026/11/512897.html</link>
+		
+		<dc:creator><![CDATA[杰西卡]]></dc:creator>
+		<pubDate>Thu, 26 Nov 2026 03:23:35 +0000</pubDate>
+				<category><![CDATA[智能车参考]]></category>
+		<category><![CDATA[资讯]]></category>
+		<category><![CDATA[蔚来]]></category>
+		<guid isPermaLink="false">https://www.qbitai.com/?p=512897</guid>
+
+					<description><![CDATA[李斌坦言：不做AI变革可能活不下去]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>沈向洋刚讲了好多AI非共识啊</title>
+		<link>https://www.qbitai.com/2026/11/512840.html</link>
+		
+		<dc:creator><![CDATA[杰西卡]]></dc:creator>
+		<pubDate>Thu, 26 Nov 2026 03:13:16 +0000</pubDate>
+				<category><![CDATA[资讯]]></category>
+		<category><![CDATA[IDEA]]></category>
+		<category><![CDATA[具身智能]]></category>
+		<guid isPermaLink="false">https://www.qbitai.com/?p=512840</guid>
+
+					<description><![CDATA[“灵巧手是人类最后的尊严”]]></description>
+		
+		
+		
+			</item>
+	</channel>
+</rss>

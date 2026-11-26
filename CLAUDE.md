@@ -56,7 +56,8 @@ uv run pytest          # must pass before every push; no network, no model calls
   - Use the generic user agent only. Never put Benjamin's name, email or other personal details in requests.
   - Store only a headline and a summary of at most 500 characters.
   - `llm: false` on a source (publishers with `Content-Signal: ai-input=no`) means its text never goes to a model. Other content signals (such as `use=reference`) don't change that (Benjamin, 2026-11-26).
-  - An outlet in a language the site didn't read before gets `index_from`, two weeks after it is added: its labels count in the sentiment index only from that day (Benjamin, 2026-11-26). Add the language's AI terms to the keyword lists in `pipeline/relevance.py` first.
+  - A new language needs its AI terms in the keyword lists in `pipeline/relevance.py` first (`LANGUAGES` there; non-Latin scripts go in `_STRONG_SCRIPT`), or its AI headlines are dropped before a model sees them. `index_from` on a source keeps its labels out of the sentiment index until that day; the Portuguese outlets wait until 2026-12-10, and from step 4 of the plan on Benjamin chose no wait (2026-11-26).
+  - Headlines in a non-Latin script (`text.NON_LATIN`) are clustered only once they have an English title.
   - State media and outlets close to a government get `type: state-aligned`; the About page marks them.
 - **The page loads nothing from other sites:**
   - System fonts only: no web fonts, no CDNs.

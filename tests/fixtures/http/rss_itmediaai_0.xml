@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rss version="2.0">
+<channel>
+<title>ITmedia AI＋ 最新記事一覧</title>
+<link>https://www.itmedia.co.jp/aiplus/</link>
+<description>ITmedia AI＋ の最新記事一覧です。</description>
+<language>ja</language>
+<copyright>Copyright (c) 2026 ITmedia, Inc. All Rights Reserved.</copyright>
+<pubDate>Thu, 26 Nov 2026 18:25:00 +0900</pubDate>
+<item>
+<title>「Gemini 4 Neon」が実際の標高データからスキーシミュレーターを開発――Google公式が勧める利用例まとめ</title>
+<link>https://www.itmedia.co.jp/aiplus/article/2611/26/2000003494/</link>
+<description>Googleが新発表したAIモデル「Gemini 4 Neon」について、公式ブログで披露されたデモや日常での活用場面をまとめて紹介する。</description>
+<pubDate>Thu, 26 Nov 2026 18:00:00 +0900</pubDate>
+</item>
+<item>
+<title>Obsidian公式の「エージェント向け」スキル集が登場　Vault操作法とファイル形式をひとまとめに</title>
+<link>https://www.itmedia.co.jp/aiplus/article/2611/26/2000003470/</link>
+<description>マークダウンエディタ「Obsidian」に「エージェント向けの公式コネクタ」機能が登場した。</description>
+<pubDate>Thu, 26 Nov 2026 17:06:20 +0900</pubDate>
+</item>
+<item>
+<title>GPT-6.2の使用量「誤って割引されていた」　修正後はAstraで上限に40％早く達する見込み</title>
+<link>https://www.itmedia.co.jp/aiplus/article/2611/26/2000003495/</link>
+<description>OpenAIのプロダクト責任者ティボー・ソティオ氏（通称Tibo）は「GPT-6.2 Astra」と「GPT-6.2 Sol」の使用量の計算に誤りがあり、実際よりも少なく計算されていたとXで明かした。</description>
+<pubDate>Thu, 26 Nov 2026 16:43:35 +0900</pubDate>
+</item>
+<item>
+<title>飲食店の“AI商品画像”は景品表示法違反にならないの？　弁護士の見解</title>
+<link>https://www.itmedia.co.jp/news/article/2611/26/2000003447/</link>
+<description>飲食店のメニューにAIで生成した画像を使用した場合を例に、生成AIによる商品画像と景品表示法の関係について考える。</description>
+<pubDate>Thu, 26 Nov 2026 16:06:43 +0900</pubDate>
+</item>
+<item>
+<title>家計データをなぜ「Muse」「ChatGPT」に渡すのか？　マネーフォワードに聞いた狙いと安全策</title>
+<link>https://www.itmedia.co.jp/aiplus/article/2611/26/2000003490/</link>
+<description>頼んでもいないのに、AIが朝一番にカードの引き落としと預金を照らし合わせて知らせてくる。家計簿アプリ「マネーフォワード ME」のデータがMetaのMuseに届くようになったからだ。だが家計の記録は、マネーフォワードにとって最大の資産のはず。なぜ外のAIに差し出したのか。安全は誰が守るのか。</description>
+<pubDate>Thu, 26 Nov 2026 15:09:25 +0900</pubDate>
+</item>
+</channel>
+</rss>

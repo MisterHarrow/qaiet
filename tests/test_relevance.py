@@ -35,6 +35,15 @@ def test_keyword_verdicts():
     assert v(title="Novos modelos de linguagem em português") == (True, "keyword")
     assert v(title="Big techs e semicondutores", summary=None) == (None, "ambiguous")
     assert v(title="Flamengo vence o clássico") == (False, "keyword")
+    # Scripts without spaces: Latin names and acronyms inside them, and native terms
+    for t in ["生成AIが変える仕事", "OpenAI发布新模型", "Nvidia顶住压力", "인공지능 규제법", "엔비디아 실적 발표", "英伟达股价下跌",
+              "الذكاء الاصطناعي في مصر", "एआई से नौकरियां", "Yapay zekâ ve eğitim", "Kecerdasan buatan di sekolah",
+              "Trí tuệ nhân tạo thay đổi việc làm", "삼성, AI 반도체 투자"]:
+        assert v(title=t) == (True, "keyword"), t
+    assert v(title="半导体出口管制") == (None, "ambiguous")
+    assert v(title="KIA launches a new EV") == (False, "keyword")  # KI (German for AI) only as a word of its own
+    assert v(title="東京で大雨") == (False, "keyword")
+    assert relevance.norm_title("英伟达股价下跌，市场担忧") == "英伟达股价下跌 市场担忧"  # duplicates are caught in any script
     assert v(title="Microsoft reports earnings") == (None, "ambiguous")
     assert v(title="Markets fall", summary="Investors worry about artificial intelligence spending") == (None, "ambiguous")
     assert v(title="Local team wins final") == (False, "keyword")

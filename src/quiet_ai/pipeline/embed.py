@@ -11,6 +11,7 @@ import numpy as np
 
 from quiet_ai.config import ROOT, EmbedSettings
 from quiet_ai.store.db import Store, iso
+from quiet_ai.text import NON_LATIN
 
 
 class Embedder(Protocol):
@@ -62,23 +63,28 @@ def from_blob(b: bytes) -> np.ndarray:
     return np.frombuffer(b, dtype=np.float32)
 
 
-def item_text(title: str, title_en: str | None, summary: str | None, summary_chars: int) -> str:
+def item_text(title: str, title_en: str | None, summary: str | None, summary_chars: int, lang: str | None = None) -> str:
+    """Title (in English when translated) plus the start of the summary. A translated headline in a non-Latin script
+    goes alone: its untranslated summary would pull the vector away from the same story in other languages."""
     text = title_en or title
-    if summary:
+    if summary and not (title_en and lang in NON_LATIN):
         text += ". " + summary[:summary_chars]
     return text
 
 
 def embed_pending(store: Store, embedder: Embedder, since_iso: str, summary_chars: int, now: datetime) -> int:
-    """Embed relevant, non-duplicate items in the window that have no vector from this model."""
+    """Embed relevant, non-duplicate items in the window that have no vector from this model. Headlines in a non-Latin
+    script wait for their English translation: untranslated, they sit too far from the same story in other languages
+    (about 0.4–0.55 against a join threshold of 0.62) and would start stories of their own."""
     rows = store.conn.execute(
-        "SELECT i.id, i.title, i.title_en, i.summary FROM items i LEFT JOIN embeddings e ON e.item_id = i.id AND e.model = ? "
+        "SELECT i.id, i.title, i.title_en, i.summary, i.lang FROM items i LEFT JOIN embeddings e ON e.item_id = i.id AND e.model = ? "
         "WHERE i.relevant = 1 AND i.dup_of IS NULL AND e.item_id IS NULL AND i.first_seen_at >= ?",
         (embedder.name, since_iso),
     ).fetchall()
+    rows = [r for r in rows if r["title_en"] or r["lang"] not in NON_LATIN]
     if not rows:
         return 0
-    vectors = embedder.embed([item_text(r["title"], r["title_en"], r["summary"], summary_chars) for r in rows])
+    vectors = embedder.embed([item_text(r["title"], r["title_en"], r["summary"], summary_chars, r["lang"]) for r in rows])
     with store.conn:
         store.conn.executemany(
             "INSERT OR REPLACE INTO embeddings(item_id, model, vector, created_at) VALUES (?, ?, ?, ?)",

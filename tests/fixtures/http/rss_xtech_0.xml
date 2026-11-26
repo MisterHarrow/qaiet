@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns="http://purl.org/rss/1.0/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xml:lang="ja">
+<channel rdf:about="https://xtech.nikkei.com/rss/index.rdf">
+<title>全記事新着 - 日経クロステック</title>
+<link>https://xtech.nikkei.com/</link>
+<description></description>
+<dc:language>ja</dc:language>
+<dc:rights>Copyright (c) 1995-2026 Nikkei Business Publications, Inc. All rights reserved.</dc:rights>
+<dc:date>2026-11-26T18:50:07+09:00</dc:date>
+<items>
+<rdf:Seq>
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020800017/111601528/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020800017/111501527/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020800017/111601529/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020800017/111601533/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020800017/111601531/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020800017/111601530/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/nnw/18/041800012/111700347/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/nnw/18/041800004/111700107/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020800017/111601532/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/03796/101400003/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/00241/102000442/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/03671/111600009/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/03181/111600042/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/00134/111700470/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/03832/111300003/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/00142/02835/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/03820/111000003/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/03834/111900003/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/03708/092900011/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/03775/092800020/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/00849/00204/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/03444/111800049/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/02653/112000089/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/03794/111700004/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/01775/112500295/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/00154/02990/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/03825/111600005/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/01162/00340/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/03565/112200049/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/03809/102700002/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/03242/112500036/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/00138/111902151/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/03815/112400006/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/03831/111600003/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/na/18/00006/111700757/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/na/18/00006/111700756/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/na/18/00333/111800004/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/na/18/00334/111800005/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/na/18/00014/111701025/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/na/18/00006/111700755/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/na/18/00333/111800003/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/na/18/00334/111800004/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/na/18/00014/111701024/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/na/18/00006/111700754/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/na/18/00333/111800002/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/na/18/00334/111800003/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/na/18/00016/111700569/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/na/18/00014/111701023/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/na/18/00006/111700753/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/na/18/00333/111800001/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/na/18/00007/111700309/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/na/18/00334/111800001/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/na/18/00016/111700568/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/na/18/00014/111701022/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/na/18/00005/111700228/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/na/18/00006/111700752/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/na/18/00008/111700341/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/na/18/00009/111800149/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/na/18/00007/111700308/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/na/18/00011/111700115/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/na/18/00012/111700107/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/na/18/00322/111800005/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/na/18/00294/111700012/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/na/18/00014/111701021/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/na/18/00016/111700567/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/news/24/03486/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/news/24/03487/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/01161/00034/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/nc/18/111600582/111600003/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/nc/18/111600582/111600002/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/nnw/18/101900259/111700002/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/nnw/18/031800050/111700093/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/nc/18/111600582/111600001/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/nc/18/092400133/111500209/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/nc/18/040900481/111600041/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020600008/111600234/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020600010/111700238/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/03796/101400002/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/03197/111100028/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/00120/01079/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/03831/111600002/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/00001/12172/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/03671/111600014/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/00134/111600469/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/00084/00450/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/03794/111700003/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/03820/111000002/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/00577/111800106/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/00001/12184/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/00154/02988/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/00676/111900240/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/00142/02834/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/00138/112002152/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/00154/02987/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/00110/00535/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/03834/111900001/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/03825/111600004/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/01842/102000122/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/03775/092800019/" />
+<rdf:li rdf:resource="https://xtech.nikkei.com/atcl/nxt/column/18/03832/111300002/" />
+</rdf:Seq>
+</items>
+</channel>
+<item rdf:about="https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020800017/111601528/">
+<title><![CDATA[エヌビディアのファンCEOが辞任　「AIの中央銀行」に動揺]]></title>
+<link>https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020800017/111601528/</link>
+<description><![CDATA[　米エヌビディアは2026年11月12日（米国時間）、同社を共同創業したジェンスン・ファン氏がCEO（最高経営責任者）と取締役を辞任したと発表した。ファン氏を巡っては、米当局が中国のスパイと疑うシンガポールのデータセンター運営企業元幹部や、エヌビディア幹部との不倫が報じられていた。]]></description>
+<dc:date>2026-11-26T07:06:00+09:00</dc:date>
+</item>
+<item rdf:about="https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020800017/111501527/">
+<title><![CDATA[NTTドコモ、不正アクセスで迷走　情報流出の確認前にサービス再開]]></title>
+<link>https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020800017/111501527/</link>
+<description><![CDATA[　NTTドコモは2026年11月6日、同社の契約者向けサービス「My docomo」や「ドコモオンラインショップ」が不正アクセスを受け、最大29万4839件の顧客情報が流出した事案について説明した。]]></description>
+<dc:date>2026-11-26T07:05:00+09:00</dc:date>
+</item>
+<item rdf:about="https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020800017/111601529/">
+<title><![CDATA[相次ぐ情報漏洩、政府が手法を分析　実施が難しい対策も基本として提示]]></title>
+<link>https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020800017/111601529/</link>
+<description><![CDATA[　内閣官房の国家サイバー統括室（NCO）は2026年11月5日、国内で相次ぐ情報漏洩を受け、事業者向けの注意喚起を公表した。攻撃手法を分析し対策を示したもので、「被害に遭った企業や専門機関と連絡をとってまとめた」（NCO）という。]]></description>
+<dc:date>2026-11-26T07:04:00+09:00</dc:date>
+</item>
+<item rdf:about="https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020800017/111601533/">
+<title><![CDATA[IT大手4社がサイバー防衛体制を強化　富士通は関連商談が倍増]]></title>
+<link>https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020800017/111601533/</link>
+<description><![CDATA[　相次ぐサイバー攻撃や情報漏洩を背景に、企業のセキュリティー需要が一段と高まっている。IT大手4社の決算説明会では、関連する商談や引き合いの増加が明らかになった。]]></description>
+<dc:date>2026-11-26T07:03:00+09:00</dc:date>
+</item>
+<item rdf:about="https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020800017/111601531/">
+<title><![CDATA[アクセンチュアとオープンAIが協業　セキュリティー運用をAIで支援]]></title>
+<link>https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020800017/111601531/</link>
+<description><![CDATA[　米オープンAIとアクセンチュアは2026年10月、日本の中堅・大手企業を対象としたセキュリティー運用の支援サービスを始めた。オープンAIの技術とアクセンチュアのコンサルティングサービスを融合させ、オープンAIが「Defense Factory」と呼称するセキュリティー運用体制の構築を支援する。]]></description>
+<dc:date>2026-11-26T07:02:00+09:00</dc:date>
+</item>
+</rdf:RDF>

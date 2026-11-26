@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns="http://purl.org/rss/1.0/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xml:lang="ja">
+ <channel rdf:about="https://www.watch.impress.co.jp/data/rss/1.0/ipw/feed.rdf">
+  <title>Impress Watch</title>
+  <link>https://www.watch.impress.co.jp</link>
+  <description>テクノロジーとくらしのいまと未来を伝えるニュースメディア</description>
+  <dc:language>ja</dc:language>
+  <dc:rights>Copyright (c) 2024 Impress Corporation. All rights reserved.</dc:rights>
+  <dc:date>2026-11-26T18:40:34+09:00</dc:date>
+  <items>
+   <rdf:Seq>
+    <rdf:li rdf:resource="https://www.watch.impress.co.jp/docs/news/2159536.html?ref=rss"/>
+    <rdf:li rdf:resource="https://www.watch.impress.co.jp/docs/news/2159598.html?ref=rss"/>
+    <rdf:li rdf:resource="https://www.watch.impress.co.jp/docs/news/2159602.html?ref=rss"/>
+    <rdf:li rdf:resource="https://www.watch.impress.co.jp/docs/news/2159540.html?ref=rss"/>
+    <rdf:li rdf:resource="https://www.watch.impress.co.jp/docs/news/2159504.html?ref=rss"/>
+    <rdf:li rdf:resource="https://www.watch.impress.co.jp/docs/news/2159451.html?ref=rss"/>
+    <rdf:li rdf:resource="https://www.watch.impress.co.jp/docs/news/2159496.html?ref=rss"/>
+    <rdf:li rdf:resource="https://www.watch.impress.co.jp/docs/news/2159474.html?ref=rss"/>
+    <rdf:li rdf:resource="https://www.watch.impress.co.jp/docs/news/2159463.html?ref=rss"/>
+    <rdf:li rdf:resource="https://www.watch.impress.co.jp/docs/news/2159434.html?ref=rss"/>
+    <rdf:li rdf:resource="https://www.watch.impress.co.jp/docs/news/2159418.html?ref=rss"/>
+    <rdf:li rdf:resource="https://www.watch.impress.co.jp/docs/news/2159408.html?ref=rss"/>
+    <rdf:li rdf:resource="https://www.watch.impress.co.jp/docs/news/2159281.html?ref=rss"/>
+    <rdf:li rdf:resource="https://www.watch.impress.co.jp/docs/series/yoshimura/2157441.html?ref=rss"/>
+    <rdf:li rdf:resource="https://www.watch.impress.co.jp/docs/topic/2157976.html?ref=rss"/>
+    <rdf:li rdf:resource="https://www.watch.impress.co.jp/docs/news/2159157.html?ref=rss"/>
+    <rdf:li rdf:resource="https://www.watch.impress.co.jp/docs/news/2159251.html?ref=rss"/>
+    <rdf:li rdf:resource="https://www.watch.impress.co.jp/docs/news/2159218.html?ref=rss"/>
+    <rdf:li rdf:resource="https://www.watch.impress.co.jp/docs/news/2159231.html?ref=rss"/>
+    <rdf:li rdf:resource="https://www.watch.impress.co.jp/docs/news/2159200.html?ref=rss"/>
+   </rdf:Seq>
+  </items>
+ </channel>
+ <item rdf:about="https://www.watch.impress.co.jp/docs/news/2159536.html?ref=rss">
+  <title>Echo Timeや最新Kindleが早くもセール ブラックフライデーはAmazonデバイスが安い</title>
+  <link>https://www.watch.impress.co.jp/docs/news/2159536.html</link>
+  <dc:date>2026-11-26T18:24:29+09:00</dc:date>
+  <dc:creator>編集部</dc:creator>
+  <description><![CDATA[Amazon.co.jpは、11月30日から12月7日までの期間、大規模セール「Amazon ブラックフライデー 2026」を開催します。27日からは先行セールがスタートし、Amazonデバイスをはじめ、家電や日用品、食品など約400万点がセール対象となっています。]]></description>
+ </item>
+ <item rdf:about="https://www.watch.impress.co.jp/docs/news/2159598.html?ref=rss">
+  <title>日本郵便、第4の本来業務「基盤的サービス提供業務」開始</title>
+  <link>https://www.watch.impress.co.jp/docs/news/2159598.html</link>
+  <dc:date>2026-11-26T17:41:26+09:00</dc:date>
+  <dc:creator>加藤綾</dc:creator>
+  <description><![CDATA[日本郵便は、12月1日から施行される「郵政民営化法等の一部を改正する法律」を踏まえ、「基盤的サービス提供業務」を本来業務として、提供・拡大に取り組む。郵便業務・銀行窓口業務・保険窓口業務に続く「第四の本来業務」となる。]]></description>
+ </item>
+ <item rdf:about="https://www.watch.impress.co.jp/docs/news/2159602.html?ref=rss">
+  <title>JR東、品川駅ホーム屋根にペロブスカイト太陽電池　27年度上期に稼働</title>
+  <link>https://www.watch.impress.co.jp/docs/news/2159602.html</link>
+  <dc:date>2026-11-26T17:25:17+09:00</dc:date>
+  <dc:creator>清宮信志</dc:creator>
+  <description><![CDATA[JR東日本は26日、品川駅の第2ホーム(3・4番線)の屋根に、フィルム型ペロブスカイト太陽電池を設置すると発表した。同社の鉄道施設では初の本格導入で、2027年度上期の使用開始を予定している。]]></description>
+ </item>
+ <item rdf:about="https://www.watch.impress.co.jp/docs/news/2159540.html?ref=rss">
+  <title>ダークパターン被害は年最大3.2兆円　相次ぐ漏えいによる二次被害に警鐘</title>
+  <link>https://www.watch.impress.co.jp/docs/news/2159540.html</link>
+  <dc:date>2026-11-26T16:17:43+09:00</dc:date>
+  <dc:creator>佐々木 翼</dc:creator>
+  <description><![CDATA[ダークパターン対策協会は26日、相次ぐ個人情報漏えいを背景に、ダークパターンを悪用した二次被害への注意を呼び掛けたほか、2027年春をめどに、企業が自社のWebサイトのダークパターンを診断できるAIツールを開発していることを明らかにした。]]></description>
+ </item>
+ <item rdf:about="https://www.watch.impress.co.jp/docs/news/2159504.html?ref=rss">
+  <title>Amazonブラックフライデー、今年最安値の「厳選目玉商品」　日替わりテーマも</title>
+  <link>https://www.watch.impress.co.jp/docs/news/2159504.html</link>
+  <dc:date>2026-11-26T15:27:55+09:00</dc:date>
+  <dc:creator>太田 亮三</dc:creator>
+  <description><![CDATA[Amazonが、年内最後となるビッグセール「Amazon ブラックフライデー」を開催します。期間は11月30日～12月7日までの8日間。また、先行セールは11月27日から始まります。]]></description>
+ </item>
+</rdf:RDF>

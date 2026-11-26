@@ -9,7 +9,7 @@ from zoneinfo import ZoneInfo
 
 from quiet_ai import evaluate
 from quiet_ai.config import Account, Settings, SourcesConfig
-from quiet_ai.pipeline import sentiment
+from quiet_ai.pipeline import relevance, sentiment
 from quiet_ai.pipeline.edition import data_since
 from quiet_ai.pipeline.stories import source_names
 from quiet_ai.regions import REGIONS
@@ -133,6 +133,7 @@ def about_context(store: Store, settings: Settings, sources: SourcesConfig, acco
         "regions": [{"name": name, "n": sum(1 for f in news if f.country in codes)} for name, codes in REGIONS],
         "us_share": _us_share(store, settings, sources, now),
         "waiting": _waiting(news, now),
+        "keyword_languages": len(relevance.LANGUAGES),
         "gdelt_outlets": [{"name": g.name, "country": g.country, "type": g.type} for g in sources.gdelt_outlets],
         "aggregators": [f.name for f in feeds if f.kind == "aggregator"],
         "newsletters": sorted((f.name for f in feeds if f.kind == "newsletter"), key=str.lower),

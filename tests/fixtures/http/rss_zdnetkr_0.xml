@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>ZDNet Korea</title>
+	<atom:link href="https://zdnet.co.kr/feed" rel="self" type="application/rss+xml" />
+	<link>http://zdnet.co.kr/news/?lstcode=0000</link>
+	<description>전체기사 - IT세상을 바꾸는 힘 지디넷코리아</description>
+	<lastBuildDate>Thu, 26 Nov 2026 18:29:01 +0900</lastBuildDate>
+	<language>ko-KR</language>
+		<sy:updatePeriod>hourly</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+	<copyright>Copyright (c) meganews. All rights reserved</copyright>
+	<image>
+		<title>ZDNet Korea</title>
+		<url>https://image.zdnet.co.kr/images/rss_logo_zdnetkorea.jpg</url>
+		<link>http://zdnet.co.kr/news/?lstcode=0000</link>
+		<description>IT 세상을 바꾸는 힘 - 지디넷코리아</description>
+	</image>
+	<item>
+		<title><![CDATA[LTE 떼어낸 5G...필요한 품질 골라 쓰는 통신 온다]]></title>
+		<link>https://zdnet.co.kr/view/?no=20261126165527</link>
+		<pubDate>Thu, 26 Nov 2026 18:29:01 +0900</pubDate>
+		<dc:creator><![CDATA[박수형 기자]]></dc:creator>
+			<category><![CDATA[5G SA]]></category>
+	<category><![CDATA[네트워크 슬라이싱]]></category>
+	<category><![CDATA[망중립성]]></category>
+	<category><![CDATA[과학기술정보통신부]]></category>
+	<category><![CDATA[SK텔레콤]]></category>
+	<category><![CDATA[KT]]></category>
+	<category><![CDATA[LG유플러스]]></category>
+	<category><![CDATA[방송/통신]]></category>
+
+		<guid isPermaLink="false">https://zdnet.co.kr/view/?no=20261126165527</guid>
+		<description>[지디넷코리아]LTE 코어망에 기대지 않고 5G 통신 규격만으로 통신 서비스가 이뤄지는 5G 단독모드(SA)가 통신 3사 전국망으로 확대된다. 2021년부터 일부 단말에서 SA를 제공해 온 KT에 이어 LG유플러스가 오는 30일, SK텔레콤이 다음 달 1일 5G SA 상용화에 나선다. 2019년 5G 상용화 이후 7년 만에 기지국부터 코어망까지 5G로 이뤄진 망이 전국에 깔리는 셈이다.5G SA 전환은 정부가 주파수 재할당 조건으로 통신사에 올해 말까지 관련 망 구축 상용화를 내걸면서 속도가 붙었다. 5G SA가 상용화되면 하나의 망을 용도별로 나눠 쓰는 네트워크 슬라이싱이 가능해지고, 정부도 이를 활용한 맞춤형 품질 서비스가 나올 수 있도록 망중립성 기준을 손보기로 했다.남석 과학기술정보통신부 통신정책관은 26일 서울 대한상공회의소에서 열린 5G SA 전국망 상용화 및 통신서비스 혁신을 위한 민·관 공동행사에서 “기존 통신에서의 경쟁 축이 속도 경쟁 중심이었다면, 이제는 다양한…</description>
+		
+	</item>
+	<item>
+		<title><![CDATA[CIBC, 아부다비에 자본시장 거점 마련해 중동 사업 확대 추진]]></title>
+		<link>https://zdnet.co.kr/view/?no=20261126181002</link>
+		<pubDate>Thu, 26 Nov 2026 18:10:02 +0900</pubDate>
+		<dc:creator><![CDATA[글로벌뉴스 ]]></dc:creator>
+			<category><![CDATA[글로벌뉴스]]></category>
+
+		<guid isPermaLink="false">https://zdnet.co.kr/view/?no=20261126181002</guid>
+		<description>[지디넷코리아]아부다비 사무소 설립으로 걸프협력회의 역내 기관투자자와 관계 강화 캐나다 토론토 및 아랍에미리트 아부다비, 2026년 11월 26일 /PRNewswire/ -- CIBC (TSX: CM) (NYSE: CM) 가 필수 규제 승인을 전제로 아랍에미리트 수도 아부다비의 국제금융센터 ADGM을 통해 중동에 상설 자본시장 사업 거점을 마련할 계획이라고 11월 25일 밝혔다. CIBC는 15년 넘게 중동 전역의 기관 고객과 관계를 쌓아 왔다. 아부다비 거점 설립은 이런 노력을 다음 단계로 진전시키는 조치다. 크리스천 엑쇼(Christian Exshaw) CIBC 수석 부행장 겸 자본시장 부문 총괄은 "자본은 그 어느 때보다도 활발하게 국경을 넘어 움직이고 있으며, 고객들도 여러 시장에서 투자 기회를 찾고 있다"며 "아부다비 거점 설립은 세계에서 손꼽히게 역동적인 투자 중심지로 사업을 넓히려는 측에서는 자연스러운 선택지다. CIBC는 이를 계기로 걸프 지역과 북미, 그 외 주요…</description>
+		
+	</item>
+	<item>
+		<title><![CDATA[삼성전자, DX부문 M&A·공조 조직 강화]]></title>
+		<link>https://zdnet.co.kr/view/?no=20261126180646</link>
+		<pubDate>Thu, 26 Nov 2026 18:09:39 +0900</pubDate>
+		<dc:creator><![CDATA[진운용 기자]]></dc:creator>
+			<category><![CDATA[삼성전자]]></category>
+	<category><![CDATA[DX]]></category>
+	<category><![CDATA[조직개편]]></category>
+	<category><![CDATA[M&A]]></category>
+	<category><![CDATA[홈AI]]></category>
+	<category><![CDATA[데이터센터]]></category>
+	<category><![CDATA[냉난방공조]]></category>
+	<category><![CDATA[홈/모바일]]></category>
+
+		<guid isPermaLink="false">https://zdnet.co.kr/view/?no=20261126180646</guid>
+		<description>[지디넷코리아]삼성전자가 디바이스경험(DX)부문 인수합병(M&amp;A) 조직을 격상하고 인공지능(AI)과 냉난방공조(HVAC) 조직을 신설하며 미래 성장동력 확보에 나섰다.26일 뉴스1과 업계에 따르면 삼성전자는 사업 전문성과 실행력을 높이기 위해 DX부문 조직을 재편했다. 경영지원담당 직속 M&amp;A 전담 조직인 코퍼레이트 디벨롭먼트그룹을 팀 단위로 격상했다. 주력 사업의 성장 둔화 속에서 적극적인 M&amp;A로 신사업을 발굴하기 위한 조치다. 앞서 지난 24일 임원 인사에서 M&amp;A·재무투자 전문가 마띠유 아포테커 기업개발그룹장이 부사장으로 승진한 것도 같은 맥락이다.생활가전(DA)사업부는 생활가전(HA)사업팀과 HVAC사업팀 양대 체제로 개편했다. 기존에는 HVAC사업팀과 제품별 생활가전 조직으로 운영됐으나 이번 개편을 통해 제품별로 나뉘어 있던 생활가전 조직을 HA사업팀으로 통합한다.AI 데이터센터향 냉난방공조 시장이 급격히 커지는 만큼 HVAC 전문성과 실행력을 키우기 위한 것으로…</description>
+		
+	</item>
+	<item>
+		<title><![CDATA[OTT·게임 장애가 국가 재난관리...규제 실효성 논란]]></title>
+		<link>https://zdnet.co.kr/view/?no=20261126174154</link>
+		<pubDate>Thu, 26 Nov 2026 17:53:07 +0900</pubDate>
+		<dc:creator><![CDATA[홍지후 기자]]></dc:creator>
+			<category><![CDATA[OTT]]></category>
+	<category><![CDATA[재난]]></category>
+	<category><![CDATA[게임]]></category>
+	<category><![CDATA[법안]]></category>
+	<category><![CDATA[디지털]]></category>
+	<category><![CDATA[재난관리]]></category>
+	<category><![CDATA[방송/통신]]></category>
+
+		<guid isPermaLink="false">https://zdnet.co.kr/view/?no=20261126174154</guid>
+		<description>[지디넷코리아]OTT나 온라인 게임이 일시 중단됐을 때 사업자에게 국가 차원의 재난관리 의무를 부과하는 것이 적절한지를 두고 논란이 일고 있다. 디지털 재난관리 제도를 통합하는 입법이 추진되면서 서비스 중단이 국민 안전과 일상에 미치는 영향에 따라 관리 대상과 의무 범위를 달리해야 한다는 지적이 나왔다.조영기 한국인터넷기업협회 사무총장은 25일 국회에서 열린 디지털 재난 안전관리법 제정 토론회에서 “게임, 커뮤니티, 기업 간 거래(B2B) 클라우드 등 부가통신사업자가 제공하는 서비스의 성격은 다양하다”며 “온라인 게임이나 엔터테인먼트 서비스처럼 공공성이 상대적으로 낮은 영역까지 국민의 생명과 직결되는 서비스와 똑같이 규율하는 것은 과잉금지 원칙에 비춰 신중하게 재고해야 한다”고 밝혔다.조 사무총장은 “유료 가입자가 이용하는 엔터테인먼트 서비스가 일시 중단되는 것을 과연 재난이라고 볼 수 있을지 의문”이라며 콘텐츠 서비스 장애는 사업자의 복구와 적절한 보상 등 이용자 보호 차원에서…</description>
+		
+	</item>
+	<item>
+		<title><![CDATA[커피 마시면서 옷사고 배송되는 '무탠다드 서울숲점' 가보니]]></title>
+		<link>https://zdnet.co.kr/view/?no=20261126171209</link>
+		<pubDate>Thu, 26 Nov 2026 17:51:28 +0900</pubDate>
+		<dc:creator><![CDATA[박서린 기자]]></dc:creator>
+			<category><![CDATA[무신사]]></category>
+	<category><![CDATA[무신사 스탠다드]]></category>
+	<category><![CDATA[서울숲점]]></category>
+	<category><![CDATA[성수점]]></category>
+	<category><![CDATA[로봇]]></category>
+	<category><![CDATA[아즈니섬]]></category>
+	<category><![CDATA[당일 배송]]></category>
+	<category><![CDATA[패션]]></category>
+	<category><![CDATA[유통/생활/문화]]></category>
+
+		<guid isPermaLink="false">https://zdnet.co.kr/view/?no=20261126171209</guid>
+		<description>[지디넷코리아]무신사 스탠다드가 옷을 사고 떠나는 공간에서, 먹고 즐기며 머무는 공간으로 오프라인 매장의 변화를 꾀한다. 서울숲에 새롭게 문을 여는 매장에는 로봇이 음료를 만드는 카페부터 취향에 맞게 티셔츠를 꾸밀 수 있는 공간까지 마련했다. 쇼핑한 상품을 들고 다닐 필요 없이 원하는 장소에서 받아볼 수 있는 배송 서비스도 도입했다.인근에서 운영 중인 성수점과 비교해 상품군과 고객 체험 요소를 대폭 확대한 것이 특징이다. 다만 일부 팝업 공간과 뷰티 상품 구성에서는 기존 매장과 뚜렷한 차이를 보이지 않았다.26일 무신사는 서울 성동구에서 무신사 스탠다드 서울숲점 개점을 하루 앞두고 프레스 데이를 열었다. ‘서울, 숲탠다드’를 콘셉트로 조성된 이곳은 무신사 스탠다드의 전 라인업을 한곳에서 만나볼 수 있는 체류형 매장이다.서울숲점과 일반 무신사 스탠다드 매장은 크기에서부터 차이를 보인다. 1층은 남성·여성·무신사 스페이스 등을 포함해 대략 5개의 카테고리가, 2층과 3층에는 각각…</description>
+		
+	</item>
+</channel>
+</rss>

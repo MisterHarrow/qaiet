@@ -78,7 +78,8 @@ def parse_feed(body: bytes, src: FeedSource, now: datetime, cfg: IngestSettings)
                 title=title,
                 original_title=title if src.language != "en" else None,
                 lang=src.language,
-                published_at=from_struct(e.get("published_parsed") or e.get("updated_parsed")),
+                # dict.get: feedparser warns (deprecated fallback) when an undated entry is asked for updated_parsed
+                published_at=from_struct(e.get("published_parsed") or dict.get(e, "updated_parsed")),
                 author=clean_text(e.get("author"), 120),
                 summary=summary,
                 extra=extra,

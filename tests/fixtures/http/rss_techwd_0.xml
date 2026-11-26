@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	xmlns:media="http://search.yahoo.com/mrss/"
+>
+
+<channel>
+	<title>عالم التقنية</title>
+	<atom:link href="https://www.tech-wd.com/wd/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.tech-wd.com/wd/</link>
+	<description>أخبار التقنية بين يديك</description>
+	<lastBuildDate>Thu, 26 Nov 2026 04:18:53 +0000</lastBuildDate>
+	<language>ar</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	
+
+<image>
+	<url>https://www.tech-wd.com/wd/wp-content/uploads/2018/11/cropped-logo-32x32.png</url>
+	<title>عالم التقنية</title>
+	<link>https://www.tech-wd.com/wd/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+<site xmlns="com-wordpress:feed-additions:1">15095820</site>	<item>
+		<title>هاتف Vivo X500 FE يظهر في قاعدة بيانات NBD بذاكرة 8GB وتخزين 256GB</title>
+		<link>https://www.tech-wd.com/wd/2026/11/26/%d9%87%d8%a7%d8%aa%d9%81-vivo-x500-fe-%d9%8a%d8%b8%d9%87%d8%b1-%d9%81%d9%8a-%d9%82%d8%a7%d8%b9%d8%af%d8%a9-%d8%a8%d9%8a%d8%a7%d9%86%d8%a7%d8%aa-nbd-%d8%a8%d8%b0%d8%a7%d9%83%d8%b1%d8%a9-8gb-%d9%88/</link>
+		
+		<dc:creator><![CDATA[فريق التحرير]]></dc:creator>
+		<pubDate>Thu, 26 Nov 2026 04:18:53 +0000</pubDate>
+				<category><![CDATA[الأخبار]]></category>
+		<category><![CDATA[Vivo]]></category>
+		<category><![CDATA[Vivo X500 FE]]></category>
+		<category><![CDATA[إلكترونيات]]></category>
+		<guid isPermaLink="false">https://www.tech-wd.com/wd/?p=282823</guid>
+
+					<description><![CDATA[<p>ظهر هاتف Vivo X500 FE في قاعدة بيانات SIRIM الماليزية، ليضيف شهادة جديدة قبيل إطلاقه. وكان الهاتف قد اجتاز في وقت سابق من الشهر سجل IMDA…</p>
+<p>التدوينة <a href="https://www.tech-wd.com/wd/2026/11/26/%d9%87%d8%a7%d8%aa%d9%81-vivo-x500-fe-%d9%8a%d8%b8%d9%87%d8%b1-%d9%81%d9%8a-%d9%82%d8%a7%d8%b9%d8%af%d8%a9-%d8%a8%d9%8a%d8%a7%d9%86%d8%a7%d8%aa-nbd-%d8%a8%d8%b0%d8%a7%d9%83%d8%b1%d8%a9-8gb-%d9%88/">هاتف Vivo X500 FE يظهر في قاعدة بيانات NBD بذاكرة 8GB وتخزين 256GB</a> ظهرت أولاً على <a href="https://www.tech-wd.com/wd">عالم التقنية</a>.</p>
+]]></description>
+		
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">282823</post-id>	<media:content url="https://www.tech-wd.com/wd/wp-content/uploads/2026/11/vivo-x500-fe.webp" medium="image" width="1200" height="675" />
+	</item>
+		<item>
+		<title>نموذج Claude يحول artifacts إلى تطبيقات مستقلة على Mac وWindows في نسخة تجريبية</title>
+		<link>https://www.tech-wd.com/wd/2026/11/26/%d9%86%d9%85%d9%88%d8%b0%d8%ac-claude-%d9%8a%d8%ad%d9%88%d9%84-artifacts-%d8%a5%d9%84%d9%89-%d8%aa%d8%b7%d8%a8%d9%8a%d9%82%d8%a7%d8%aa-%d9%85%d8%b3%d8%aa%d9%82%d9%84%d8%a9-%d8%b9%d9%84%d9%89-mac/</link>
+		
+		<dc:creator><![CDATA[فريق التحرير]]></dc:creator>
+		<pubDate>Thu, 26 Nov 2026 04:15:36 +0000</pubDate>
+				<category><![CDATA[الأخبار]]></category>
+		<category><![CDATA[Anthropic]]></category>
+		<category><![CDATA[Claude]]></category>
+		<category><![CDATA[macos]]></category>
+		<category><![CDATA[Windows]]></category>
+		<category><![CDATA[الذكاء الاصطناعي]]></category>
+		<guid isPermaLink="false">https://www.tech-wd.com/wd/?p=282820</guid>
+
+					<description><![CDATA[<p>بدأت Anthropic طرح نسخة تجريبية من ميزة جديدة في Claude تتيح تثبيت الـ artifacts كتطبيقات حية على حواسيب Mac، وتعمل الميزة نفسها على أنظمة Windows. الـ…</p>
+<p>التدوينة <a href="https://www.tech-wd.com/wd/2026/11/26/%d9%86%d9%85%d9%88%d8%b0%d8%ac-claude-%d9%8a%d8%ad%d9%88%d9%84-artifacts-%d8%a5%d9%84%d9%89-%d8%aa%d8%b7%d8%a8%d9%8a%d9%82%d8%a7%d8%aa-%d9%85%d8%b3%d8%aa%d9%82%d9%84%d8%a9-%d8%b9%d9%84%d9%89-mac/">نموذج Claude يحول artifacts إلى تطبيقات مستقلة على Mac وWindows في نسخة تجريبية</a> ظهرت أولاً على <a href="https://www.tech-wd.com/wd">عالم التقنية</a>.</p>
+]]></description>
+		
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">282820</post-id>	<media:content url="https://www.tech-wd.com/wd/wp-content/uploads/2026/11/claude-artifacts.webp" medium="image" width="1200" height="675" />
+	</item>
+		<item>
+		<title>تحذير من تصيد احتيالي بعد تسرب أسماء وبريد عملاء 1Password</title>
+		<link>https://www.tech-wd.com/wd/2026/11/26/%d8%aa%d8%ad%d8%b0%d9%8a%d8%b1-%d9%85%d9%86-%d8%aa%d8%b5%d9%8a%d8%af-%d8%a7%d8%ad%d8%aa%d9%8a%d8%a7%d9%84%d9%8a-%d8%a8%d8%b9%d8%af-%d8%aa%d8%b3%d8%b1%d8%a8-%d8%a3%d8%b3%d9%85%d8%a7%d8%a1-%d9%88%d8%a8/</link>
+		
+		<dc:creator><![CDATA[فريق التحرير]]></dc:creator>
+		<pubDate>Thu, 26 Nov 2026 03:54:42 +0000</pubDate>
+				<category><![CDATA[الأخبار]]></category>
+		<category><![CDATA[1Password]]></category>
+		<category><![CDATA[الأمن السيبراني]]></category>
+		<category><![CDATA[مدير كلمات مرور]]></category>
+		<guid isPermaLink="false">https://www.tech-wd.com/wd/?p=282817</guid>
+
+					<description><![CDATA[<p>أكدت 1Password أن مهاجماً اخترق حساب GitHub لأحد موظفيها في 19 نوفمبر، ونسخ أسماء وعناوين بريد إلكتروني وبيانات وصفية للحسابات تخص جزءاً من العملاء. وقالت الشركة…</p>
+<p>التدوينة <a href="https://www.tech-wd.com/wd/2026/11/26/%d8%aa%d8%ad%d8%b0%d9%8a%d8%b1-%d9%85%d9%86-%d8%aa%d8%b5%d9%8a%d8%af-%d8%a7%d8%ad%d8%aa%d9%8a%d8%a7%d9%84%d9%8a-%d8%a8%d8%b9%d8%af-%d8%aa%d8%b3%d8%b1%d8%a8-%d8%a3%d8%b3%d9%85%d8%a7%d8%a1-%d9%88%d8%a8/">تحذير من تصيد احتيالي بعد تسرب أسماء وبريد عملاء 1Password</a> ظهرت أولاً على <a href="https://www.tech-wd.com/wd">عالم التقنية</a>.</p>
+]]></description>
+		
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">282817</post-id>	<media:content url="https://www.tech-wd.com/wd/wp-content/uploads/2026/11/1password.webp" medium="image" width="1200" height="675" />
+	</item>
+		<item>
+		<title>أمازون تدرس السماح لوكيل Meta Muse بالشراء من متجرها بعد شهرين من الحظر</title>
+		<link>https://www.tech-wd.com/wd/2026/11/26/%d8%a3%d9%85%d8%a7%d8%b2%d9%88%d9%86-%d8%aa%d8%af%d8%b1%d8%b3-%d8%a7%d9%84%d8%b3%d9%85%d8%a7%d8%ad-%d9%84%d9%88%d9%83%d9%8a%d9%84-meta-muse-%d8%a8%d8%a7%d9%84%d8%b4%d8%b1%d8%a7%d8%a1-%d9%85%d9%86/</link>
+		
+		<dc:creator><![CDATA[فريق التحرير]]></dc:creator>
+		<pubDate>Thu, 26 Nov 2026 03:50:48 +0000</pubDate>
+				<category><![CDATA[الأخبار]]></category>
+		<category><![CDATA[amazon]]></category>
+		<category><![CDATA[Meta]]></category>
+		<category><![CDATA[Meta Muse]]></category>
+		<category><![CDATA[الذكاء الاصطناعي]]></category>
+		<guid isPermaLink="false">https://www.tech-wd.com/wd/?p=282814</guid>
+
+					<description><![CDATA[<p>تجري أمازون وMeta مفاوضات لرفع الحظر الذي فرضته أمازون في سبتمبر على وكيل التسوق بالذكاء الاصطناعي Muse، بحسب تقرير لمجلة فورتشن. وقد يتيح الاتفاق للمساعد شراء…</p>
+<p>التدوينة <a href="https://www.tech-wd.com/wd/2026/11/26/%d8%a3%d9%85%d8%a7%d8%b2%d9%88%d9%86-%d8%aa%d8%af%d8%b1%d8%b3-%d8%a7%d9%84%d8%b3%d9%85%d8%a7%d8%ad-%d9%84%d9%88%d9%83%d9%8a%d9%84-meta-muse-%d8%a8%d8%a7%d9%84%d8%b4%d8%b1%d8%a7%d8%a1-%d9%85%d9%86/">أمازون تدرس السماح لوكيل Meta Muse بالشراء من متجرها بعد شهرين من الحظر</a> ظهرت أولاً على <a href="https://www.tech-wd.com/wd">عالم التقنية</a>.</p>
+]]></description>
+		
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">282814</post-id>	<media:content url="https://www.tech-wd.com/wd/wp-content/uploads/2026/11/meta-muse.webp" medium="image" width="1200" height="675" />
+	</item>
+		<item>
+		<title>تحديث أندرويد 17 من Motorola يعالج مشكلة اتصال Android Auto في هواتف Razr</title>
+		<link>https://www.tech-wd.com/wd/2026/11/26/%d8%aa%d8%ad%d8%af%d9%8a%d8%ab-%d8%a3%d9%86%d8%af%d8%b1%d9%88%d9%8a%d8%af-17-%d9%85%d9%86-motorola-%d9%8a%d8%b9%d8%a7%d9%84%d8%ac-%d9%85%d8%b4%d9%83%d9%84%d8%a9-%d8%a7%d8%aa%d8%b5%d8%a7%d9%84-android/</link>
+		
+		<dc:creator><![CDATA[فريق التحرير]]></dc:creator>
+		<pubDate>Thu, 26 Nov 2026 03:45:26 +0000</pubDate>
+				<category><![CDATA[برامج]]></category>
+		<category><![CDATA[android]]></category>
+		<category><![CDATA[Android 17]]></category>
+		<category><![CDATA[Android Auto]]></category>
+		<category><![CDATA[motorola]]></category>
+		<category><![CDATA[motorola razr]]></category>
+		<guid isPermaLink="false">https://www.tech-wd.com/wd/?p=282811</guid>
+
+					<description><![CDATA[<p>يبدو أن تحديث أندرويد 17 من Motorola أصلح مشكلة قديمة في اتصال Android Auto بهواتف Razr القابلة للطي، بحسب تقارير مستخدمين. وكان بعض المالكين يضطرون بعد…</p>
+<p>التدوينة <a href="https://www.tech-wd.com/wd/2026/11/26/%d8%aa%d8%ad%d8%af%d9%8a%d8%ab-%d8%a3%d9%86%d8%af%d8%b1%d9%88%d9%8a%d8%af-17-%d9%85%d9%86-motorola-%d9%8a%d8%b9%d8%a7%d9%84%d8%ac-%d9%85%d8%b4%d9%83%d9%84%d8%a9-%d8%a7%d8%aa%d8%b5%d8%a7%d9%84-android/">تحديث أندرويد 17 من Motorola يعالج مشكلة اتصال Android Auto في هواتف Razr</a> ظهرت أولاً على <a href="https://www.tech-wd.com/wd">عالم التقنية</a>.</p>
+]]></description>
+		
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">282811</post-id>	<media:content url="https://www.tech-wd.com/wd/wp-content/uploads/2026/11/motorola-razr.webp" medium="image" width="1200" height="675" />
+	</item>
+	</channel>
+</rss>

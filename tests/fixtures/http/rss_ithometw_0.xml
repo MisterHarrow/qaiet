@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xml:base="https://www.ithome.com.tw/latest" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>iThome 新聞</title>
+    <link>https://www.ithome.com.tw/latest</link>
+    <description>iThome 最新新聞</description>
+    <language>zh-hant</language>
+     <atom:link href="https://www.ithome.com.tw/rss" rel="self" type="application/rss+xml" />
+      <item>
+    <title>地理資訊伺服器GeoServer漏洞遭串連用於攻擊活動</title>
+    <link>https://www.ithome.com.tw/news/180829</link>
+    <description>資安公司watchTowr指出，攻擊者正利用兩個近期修補的重大漏洞，對開源地理資訊伺服器GeoServer發動攻擊探測，試圖確認伺服器是否存在弱點。研究人員警告，這些漏洞還能與其他安全缺陷串連，形成不需身分驗證即可遠端執行程式碼（RCE）的攻擊鏈。</description>
+     <pubDate>2026-11-26  05:11:47</pubDate>
+ <dc:creator>周峻佑</dc:creator>
+ <guid isPermaLink="true">https://www.ithome.com.tw/news/180829</guid>
+  </item>
+  <item>
+    <title>澳洲立法強化AI聊天機器人與社群平臺安全責任，違規罰款可達全球營收5%</title>
+    <link>https://www.ithome.com.tw/news/180825</link>
+    <description>澳洲國會11月25日通過數位注意義務（Digital Duty of Care）法案，要求社群媒體、線上遊戲、AI聊天機器人及其他受規範的數位服務業者，主動防範可能對使用者造成嚴重傷害的內容及行為，並降低服務功能造成傷害的風險。違反數位注意義務的企業，罰款上限為全球營收5%或1.092億澳元，取兩者較高金額。數位注意義務預計12個月後生效。</description>
+     <pubDate>2026-11-26  04:11:01</pubDate>
+ <dc:creator>李建興</dc:creator>
+ <guid isPermaLink="true">https://www.ithome.com.tw/news/180825</guid>
+  </item>
+  <item>
+    <title>WordPress攔截6款遭植入後門的外掛程式，起因疑為開發者帳號遭盜用</title>
+    <link>https://www.ithome.com.tw/news/180828</link>
+    <description>資安廠商Wordfence揭露WordPress軟體開發商疑似遭駭而引起的供應鏈攻擊事件，11月22日有6款WP Connect開發的WordPress延伸套件遭植入惡意程式碼，攻擊者疑似透過盜用開發者的WordPress.org帳號，將含有後門的版本提交至WordPress外掛程式儲存庫。</description>
+     <pubDate>2026-11-26  04:11:06</pubDate>
+ <dc:creator>周峻佑</dc:creator>
+ <guid isPermaLink="true">https://www.ithome.com.tw/news/180828</guid>
+  </item>
+  <item>
+    <title>網銀盜轉案逾百起，刑事局揭露偽冒短劇App散布Android木馬，歹徒濫用無障礙權限盜轉存款</title>
+    <link>https://www.ithome.com.tw/news/180826</link>
+    <description>近期國內陸續傳出多家銀行客戶的網銀帳戶遭不明方式盜轉，如今警方公布部分受害者手機的鑑識結果，發現偽冒短劇App的Android惡意程式，並研判歹徒藉此遠端操控手機盜轉存款。內政部警政署刑事警察局（刑事局）於11月26日發布相關案件偵辦進展公告，進一步揭露歹徒利用偽冒短劇App的Android安裝檔散布惡意程式，並透過規避手機安全防護、誘騙使用者開啟無障礙權限等手法取得手機控制權。</description>
+     <pubDate>2026-11-26  04:11:05</pubDate>
+ <dc:creator>羅正漢</dc:creator>
+ <guid isPermaLink="true">https://www.ithome.com.tw/news/180826</guid>
+  </item>
+  <item>
+    <title>Danfoss冷凍控制器等10個漏洞遭到積極利用</title>
+    <link>https://www.ithome.com.tw/news/180827</link>
+    <description>11月25日美國網路安全與基礎設施安全局（CISA）發布公告，表示他們已掌握10個新漏洞遭到積極利用的證據，將其加入已知遭利用漏洞名單（KEV），這些漏洞影響Danfoss、Juniper、Mitel，以及Vates旗下產品，其中有8個聯邦機構需在11月28日完成修補，其餘2個的期限為12月9日。</description>
+     <pubDate>2026-11-26  04:11:28</pubDate>
+ <dc:creator>周峻佑</dc:creator>
+ <guid isPermaLink="true">https://www.ithome.com.tw/news/180827</guid>
+  </item>
+  </channel>
+</rss>

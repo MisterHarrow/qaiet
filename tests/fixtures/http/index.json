@@ -473,11 +473,29 @@
   "status": 200,
   "url": "https://latent.space/feeds/all.xml"
  },
+ "rss:aitimeskr:0": {
+  "content_type": "application/xml",
+  "file": "rss_aitimeskr_0.xml",
+  "status": 200,
+  "url": "https://www.aitimes.com/rss/allArticle.xml"
+ },
+ "rss:aitnews:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_aitnews_0.xml",
+  "status": 200,
+  "url": "https://aitnews.com/feed/"
+ },
  "rss:aljazeera:0": {
   "content_type": "application/rss+xml; charset=UTF-8",
   "file": "rss_aljazeera_0.xml",
   "status": 200,
   "url": "https://www.aljazeera.com/xml/rss/all.xml"
+ },
+ "rss:amarujala:0": {
+  "content_type": "application/xml",
+  "file": "rss_amarujala_0.xml",
+  "status": 200,
+  "url": "https://www.amarujala.com/rss/technology.xml"
  },
  "rss:antara:0": {
   "content_type": "text/xml",
@@ -587,6 +605,12 @@
   "status": 200,
   "url": "https://www.chinatalk.media/feed"
  },
+ "rss:chosun:0": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_chosun_0.xml",
+  "status": 200,
+  "url": "https://www.chosun.com/arc/outboundfeeds/rss/?outputType=xml"
+ },
  "rss:cna:0": {
   "content_type": "application/rss+xml; charset=utf-8",
   "file": "rss_cna_0.xml",
@@ -598,6 +622,12 @@
   "file": "rss_cnbc_0.xml",
   "status": 200,
   "url": "https://www.cnbc.com/id/19854910/device/rss/rss.html"
+ },
+ "rss:cnnid:0": {
+  "content_type": "text/xml;charset=UTF-8",
+  "file": "rss_cnnid_0.xml",
+  "status": 200,
+  "url": "https://www.cnnindonesia.com/teknologi/rss"
  },
  "rss:crikey:0": {
   "content_type": "application/rss+xml; charset=UTF-8",
@@ -737,6 +767,12 @@
   "status": 200,
   "url": "https://economictimes.indiatimes.com/tech/rssfeeds/13357270.cms"
  },
+ "rss:etnews:0": {
+  "content_type": "text/xml",
+  "file": "rss_etnews_0.xml",
+  "status": 200,
+  "url": "https://rss.etnews.com/Section901.xml"
+ },
  "rss:exame:0": {
   "content_type": "text/xml",
   "file": "rss_exame_0.xml",
@@ -802,6 +838,12 @@
   "file": "rss_g1_0.xml",
   "status": 200,
   "url": "https://g1.globo.com/rss/g1/tecnologia/"
+ },
+ "rss:gigazine:0": {
+  "content_type": "text/xml; charset=utf-8",
+  "file": "rss_gigazine_0.xml",
+  "status": 200,
+  "url": "https://gigazine.net/news/rss_2.0/"
  },
  "rss:globalnews:0": {
   "content_type": "application/rss+xml; charset=UTF-8",
@@ -887,6 +929,12 @@
   "status": 200,
   "url": "https://jack-clark.net/feed/"
  },
+ "rss:impress:0": {
+  "content_type": "application/xml",
+  "file": "rss_impress_0.xml",
+  "status": 200,
+  "url": "https://www.watch.impress.co.jp/data/rss/1.0/ipw/feed.rdf"
+ },
  "rss:inc42:0": {
   "content_type": "application/rss+xml; charset=UTF-8",
   "file": "rss_inc42_0.xml",
@@ -910,6 +958,24 @@
   "file": "rss_iol_0.xml",
   "status": 200,
   "url": "https://www.iol.co.za/rss"
+ },
+ "rss:ithome:0": {
+  "content_type": "text/xml; charset=utf-8",
+  "file": "rss_ithome_0.xml",
+  "status": 200,
+  "url": "https://www.ithome.com/rss/"
+ },
+ "rss:ithometw:0": {
+  "content_type": "application/rss+xml; charset=utf-8",
+  "file": "rss_ithometw_0.xml",
+  "status": 200,
+  "url": "https://www.ithome.com.tw/rss"
+ },
+ "rss:itmediaai:0": {
+  "content_type": "application/xml",
+  "file": "rss_itmediaai_0.xml",
+  "status": 200,
+  "url": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml"
  },
  "rss:itnews:0": {
   "content_type": "application/xml",
@@ -1031,6 +1097,12 @@
   "status": 200,
   "url": "https://www.nationalreview.com/feed/"
  },
+ "rss:ndtvindia:0": {
+  "content_type": "text/xml; charset=utf-8",
+  "file": "rss_ndtvindia_0.xml",
+  "status": 200,
+  "url": "https://feeds.feedburner.com/ndtvkhabar-latest"
+ },
  "rss:newsroomnz:0": {
   "content_type": "application/rss+xml; charset=UTF-8",
   "file": "rss_newsroomnz_0.xml",
@@ -1145,6 +1217,12 @@
   "status": 200,
   "url": "https://www.producthunt.com/feed?category=artificial-intelligence"
  },
+ "rss:qbitai:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_qbitai_0.xml",
+  "status": 200,
+  "url": "https://www.qbitai.com/feed"
+ },
  "rss:radiocanada:0": {
   "content_type": "text/xml; charset=utf-8",
   "file": "rss_radiocanada_0.xml",
@@ -1217,6 +1295,12 @@
   "status": 200,
   "url": "https://newsletter.semianalysis.com/feed"
  },
+ "rss:shiftdelete:0": {
+  "content_type": "application/rss+xml; charset=utf-8",
+  "file": "rss_shiftdelete_0.xml",
+  "status": 200,
+  "url": "https://shiftdelete.net/feed"
+ },
  "rss:sifted:0": {
   "content_type": "application/rss+xml",
   "file": "rss_sifted_0.xml",
@@ -1228,6 +1312,12 @@
   "file": "rss_sixthtone_0.xml",
   "status": 200,
   "url": "https://www.sixthtone.com/rss"
+ },
+ "rss:skynewsarabia:0": {
+  "content_type": "application/rss+xml;charset=UTF-8",
+  "file": "rss_skynewsarabia_0.xml",
+  "status": 200,
+  "url": "https://www.skynewsarabia.com/rss/technology.xml"
  },
  "rss:slate:0": {
   "content_type": "text/rss+xml; charset=utf-8",
@@ -1319,6 +1409,12 @@
   "status": 200,
   "url": "https://technode.com/feed/"
  },
+ "rss:techwd:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_techwd_0.xml",
+  "status": 200,
+  "url": "https://www.tech-wd.com/wd/feed/"
+ },
  "rss:tecnoblog:0": {
   "content_type": "application/rss+xml; charset=UTF-8",
   "file": "rss_tecnoblog_0.xml",
@@ -1379,6 +1475,12 @@
   "status": 200,
   "url": "https://tribune.com.pk/feed/technology"
  },
+ "rss:tuoitre:0": {
+  "content_type": "text/xml",
+  "file": "rss_tuoitre_0.xml",
+  "status": 200,
+  "url": "https://tuoitre.vn/rss/cong-nghe.rss"
+ },
  "rss:understandingai:0": {
   "content_type": "application/xml; charset=utf-8",
   "file": "rss_understandingai_0.xml",
@@ -1433,11 +1535,29 @@
   "status": 200,
   "url": "https://feeds.content.dowjones.io/public/rss/RSSWSJD"
  },
+ "rss:xtech:0": {
+  "content_type": "application/rdf+xml",
+  "file": "rss_xtech_0.xml",
+  "status": 200,
+  "url": "https://xtech.nikkei.com/rss/index.rdf"
+ },
  "rss:yonhap:0": {
   "content_type": "application/xml;charset=UTF-8",
   "file": "rss_yonhap_0.xml",
   "status": 200,
   "url": "https://en.yna.co.kr/RSS/news.xml"
+ },
+ "rss:youm7:0": {
+  "content_type": "text/html; charset=utf-8",
+  "file": "rss_youm7_0.txt",
+  "status": 200,
+  "url": "https://www.youm7.com/rss/SectionRss?SectionID=328"
+ },
+ "rss:zdnetkr:0": {
+  "content_type": "text/xml; charset=utf-8",
+  "file": "rss_zdnetkr_0.xml",
+  "status": 200,
+  "url": "https://feeds.feedburner.com/zdkorea"
  },
  "rss:zitron:0": {
   "content_type": "application/rss+xml; charset=utf-8",

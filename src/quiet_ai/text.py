@@ -11,6 +11,8 @@ from datetime import datetime, timezone
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
 _TAG = re.compile(r"<[^>]+>")
+# Languages in a non-Latin script: their headlines cluster only through the English translation (title_en).
+NON_LATIN = frozenset({"ja", "ko", "zh", "ar", "hi", "th", "ru", "uk", "fa", "he", "el"})
 _WS = re.compile(r"\s+")
 
 # Query parameters that only track the click; everything else is kept because some
