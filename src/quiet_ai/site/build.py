@@ -120,16 +120,19 @@ def coverage_map(stories: list[dict]) -> dict | None:
     regions = [{"name": name, "countries": [{"code": c, "name": COUNTRY_NAMES.get(c, c), "n": counts.get(c, 0)} for c in codes],
                 "n": sum(counts.get(c, 0) for c in codes)} for name, codes in REGIONS]
     return {"svg": svg, "outlets": len(outlets), "countries": [[c, n] for c, n in ranked], "regions": regions,
-            "legend_h": legend_height(REGIONS)}
+            "legend_h": legend_height(REGIONS, columns=2, pad=0.4)}
 
 
-def legend_height(regions: list[tuple[str, list[str]]], per_row: int = 11) -> str:
-    """The legend's height on wide screens, so the map can match it (style.css: each row 0.125rem padding above and
-    below a 0.6rem label, or a block of squares 0.45rem high with 0.2rem between rows, 0.075rem down; 11 to a row)."""
-    total = 0.0
+def legend_height(regions: list[tuple[str, list[str]]], per_row: int = 11, columns: int = 1, pad: float = 0.25) -> str:
+    """The legend's height on wide screens, so the map can match it. Mirrors style.css: each row has `pad` rem of
+    padding (0.4 in the two-column legend) around a 0.6rem label or a block of squares (11 to a row, 0.45rem high,
+    0.2rem between rows, 0.075rem down); the columns fill one after the other and a row is as tall as its tallest cell."""
+    heights = []
     for _, codes in regions:
         rows = max(1, math.ceil(len(codes) / per_row))
-        total += 0.25 + max(0.6, 0.075 + 0.45 * rows + 0.2 * (rows - 1))
+        heights.append(pad + max(0.6, 0.075 + 0.45 * rows + 0.2 * (rows - 1)))
+    per_col = math.ceil(len(heights) / columns)  # filled column by column; a grid row is as tall as its tallest cell
+    total = sum(max(heights[r + c * per_col] for c in range(columns) if r + c * per_col < len(heights)) for r in range(per_col))
     return f"{total:.3f}rem"
 
 

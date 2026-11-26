@@ -299,9 +299,18 @@ def test_coverage_map_lights_up_the_outlets_countries(tmp_path):
     assert svg.count('<circle class="lit') > 4 and "--d:" in svg
     assert build.coverage_map([{"coverage": []}]) is None
     html = build.render(edition(), tmp_path).read_text()
-    assert '<p class="geo-head">Outlet coverage</p>\n  <div class="geo" tabindex="0" role="img" aria-label="Where the coverage in this view comes from. 2 outlets in 1 country: United States 2." style="--legend-h: ' in html
+    assert '<p class="geo-head">Outlets and sentiment by region</p>\n  <div class="geo" tabindex="0" role="img" aria-label="Where the coverage in this view comes from. 2 outlets in 1 country: United States 2." style="--legend-h: ' in html
     # The map matches the legend's height on wide screens: one row per region, Europe's 21 countries on two
-    assert geo["legend_h"] == build.legend_height(build.REGIONS) and build.legend_height([("A", ["X"])]) == "0.850rem"
+    assert geo["legend_h"] == build.legend_height(build.REGIONS, columns=2, pad=0.4) and build.legend_height([("A", ["X"])]) == "0.850rem"
+    # two columns: rows pair up, and a row is as tall as its taller cell (here the 21-country one)
+    assert build.legend_height([("A", ["X"]), ("B", ["X"] * 21), ("C", ["X"])], columns=2) == "2.275rem"
+    # each region's row ends with its sentiment in the view, coloured by sign, "–" where too few outlets were labeled
+    e = edition()
+    e["sentiment"] = {**(e.get("sentiment") or {}), "places": {"North America": {"values": {"all": -0.38}}, "Middle East": {"values": {"all": 0.3}},
+                                                              "Europe": {"values": {"all": 0.05}}, "Oceania": {"values": {"all": None}}}}
+    legend = re.search(r'<ul class="geo-legend".*?</ul>', build.render(e, tmp_path).read_text(), re.S).group(0)
+    assert '<b class="geo-sent crit">−0.38</b>' in legend and '<b class="geo-sent pos">+0.30</b>' in legend
+    assert '<b class="geo-sent">+0.05</b>' in legend and legend.count('<b class="geo-sent">–</b>') == 6
     assert build.legend_height([("A", ["X"] * 21)]) == "1.425rem"
 
 

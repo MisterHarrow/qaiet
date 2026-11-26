@@ -53,21 +53,21 @@
   </div>
   </div>
   {% if geo %}
-  {# Where the coverage comes from: outlets per region (one square per country) and a dot map that lights up
-     where they are. Hover or focus for the counts. #}
+  {# Where the coverage comes from: outlets per region (one square per country), each region's sentiment in this view,
+     and a dot map that lights up where they are. Hover or focus for the counts. #}
   {% set geo_label %}{{ geo.outlets }} outlet{{ "s" if geo.outlets != 1 }} in {{ geo.countries|length }} countr{{ "ies" if geo.countries|length != 1 else "y" }}: {% for c, n in geo.countries %}{{ country_names.get(c, c) }} {{ n }}{% if not loop.last %}, {% endif %}{% endfor %}{% endset %}
   <div class="geo-box">
-  <p class="geo-head">Outlet coverage</p>
+  <p class="geo-head">Outlets and sentiment by region</p>
   <div class="geo" tabindex="0" role="img" aria-label="Where the coverage in this view comes from. {{ geo_label }}." style="--legend-h: {{ geo.legend_h }}">
     <ul class="geo-legend" aria-hidden="true">
-      {% for r in geo.regions %}<li{% if not r.n %} class="geo-none"{% endif %}><span class="geo-region">{{ r.name }}</span><span class="geo-sqs">{% for c in r.countries %}<i class="geo-sq{% if c.n > 3 %} n3{% elif c.n > 1 %} n2{% elif c.n %} n1{% endif %}" title="{{ c.name }}: {{ c.n }} outlet{{ "s" if c.n != 1 }}"></i>{% endfor %}</span></li>{% endfor %}
+      {% for r in geo.regions %}{% set v = (((e.sentiment or {}).get("places") or {}).get(r.name) or {}).get("values", {}).get("all") %}<li{% if not r.n %} class="geo-none"{% endif %}><span class="geo-region">{{ r.name }}</span><span class="geo-sqs">{% for c in r.countries %}<i class="geo-sq{% if c.n > 3 %} n3{% elif c.n > 1 %} n2{% elif c.n %} n1{% endif %}" title="{{ c.name }}: {{ c.n }} outlet{{ "s" if c.n != 1 }}"></i>{% endfor %}</span><b class="geo-sent{% if v is not none and v <= -0.15 %} crit{% elif v is not none and v >= 0.15 %} pos{% endif %}">{{ v|signed }}</b></li>{% endfor %}
     </ul>
     {{ geo.svg }}
     <span class="geo-tip" aria-hidden="true"><span class="tip-head">{{ geo.outlets }} outlet{{ "s" if geo.outlets != 1 }} · {{ geo.countries|length }} countr{{ "ies" if geo.countries|length != 1 else "y" }}</span>{% for c, n in geo.countries %}<span class="tip-row">{{ country_names.get(c, c) }}<b>{{ n }}</b></span>{% endfor %}</span>
   </div>
   </div>
   {% endif %}
-  {# The day's line sits under the sentiment, beside the coverage box on wide screens and after it on narrow ones. #}
+  {# The day's line runs across the page under both. #}
   <div class="mb-lead">
   {% if frozen_date %}
   <p class="partial">The edition published on {{ frozen_date }} at {{ updated }} {{ tz_name }}. It no longer changes. <a href="{{ root }}">Today's overview</a></p>

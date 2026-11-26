@@ -128,10 +128,10 @@ button { font: inherit; }
 .greet .sentiment .sent-word + .sent-track { animation-delay: 0.55s; }
 .greet .sentiment .sent-word + .sent-track + .sent-track { animation-delay: 0.63s; }
 .greet .sentiment .sent-word + .sent-track + .sent-track + .sent-track { animation-delay: 0.71s; }
-/* Under the rule: the sentiment line and the views on the left, where the coverage comes from on the right. */
-/* Wide: the sentiment and the day's line on the left, the coverage box beside both. Narrow: one column in that order,
-   the coverage box between them. */
-.masthead-body { display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-rows: auto 1fr; grid-template-areas: "main geo" "lead geo";
+/* Under the rule, two bands (Benjamin, 2026-11-26): the sentiment and the views beside the coverage box, about the same
+   height, then the day's line across the page, so its length never leaves a hole beside it. Narrower than 85rem the box
+   gets its own row between them. */
+.masthead-body { display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-rows: auto auto; grid-template-areas: "main geo" "lead lead";
                  column-gap: 2rem; align-items: start; }
 .mb-main { grid-area: main; }
 .geo-box { grid-area: geo; }
@@ -161,22 +161,23 @@ button { font: inherit; }
 @keyframes dot-in { from { opacity: 0; } }
 .greet .geo-map .lit { animation: dot-in 0.35s ease both; animation-delay: var(--d); }
 .greet .geo-legend, .greet .geo-head { animation: step-in 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) 0.3s both; }
-/* Below 52rem the map moves under the views (beside them it squeezes the period switcher onto two lines on tablets). */
-@media (max-width: 52rem) {
+@media (max-width: 85rem) {
   .masthead-body { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto; grid-template-areas: "main" "geo" "lead"; }
   .geo-box { margin-top: 1rem; } .geo { width: fit-content; }
 }
-/* Beside the sentiment (wider than 52rem) the map grows with the screen until it is as tall as the region list
-   (--legend-h, from build.legend_height), while the left column keeps at least 34rem: page width minus padding (3rem),
-   the column gap (2rem), the legend and its gap (13.85rem) and those 34rem. */
-@media (min-width: 52.01rem) {
-  .geo-map { width: clamp(170px, calc(min(100vw, 82rem) - 52.85rem), calc(var(--legend-h, 2.9rem) * 170 / 70)); height: auto; aspect-ratio: 170 / 70; }
+/* The legend in two columns (five regions, then four), each row ending with the region's sentiment in this view (the
+   figure the place filter shows); the map is as tall as the legend (--legend-h, from build.legend_height). Phones keep
+   one column and the small map, without the figures. */
+.geo-sent { min-width: 2.7rem; margin-left: 0.4rem; text-align: right; font-weight: 600; color: var(--muted); font-variant-numeric: tabular-nums; }
+.geo-sent.crit { color: var(--crit); }
+.geo-sent.pos { color: var(--pos); }
+@media (min-width: 48.01rem) {
+  .geo-legend { display: grid; grid-auto-flow: column; grid-template-rows: repeat(5, auto); column-gap: 1.6rem; }
+  .geo-legend li { padding: 0.2rem 0; }
+  .geo-sqs { width: 6.95rem; }
+  .geo-map { width: auto; height: var(--legend-h, 4.8rem); aspect-ratio: 170 / 70; }
 }
-/* Tablets (one column): the box has the page's width, so the map can grow up to the same height (page padding 3rem,
-   legend and gap 13.85rem). Phones keep the small map beside the narrower legend. */
-@media (min-width: 38.01rem) and (max-width: 52rem) {
-  .geo-map { width: clamp(170px, calc(100vw - 16.85rem), calc(var(--legend-h, 2.9rem) * 170 / 70)); height: auto; aspect-ratio: 170 / 70; }
-}
+@media (max-width: 38rem) { .geo-sent { display: none; } }
 .masthead-meta { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.6rem 1.5rem; margin-top: 0.9rem; }
 .dateline { margin: 0; color: var(--muted); font: 0.76rem/1.4 var(--mono); }
 .periods { display: flex; flex-wrap: wrap; align-items: center; gap: 0.3rem; font: 0.72rem/1 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; }
