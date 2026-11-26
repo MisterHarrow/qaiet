@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" >
+    <channel>
+        <copyright>Copyright 1998 - 2026 DPG Media B.V.</copyright>
+        <pubDate>Thu, 26 Nov 2026 11:26:01 +0100</pubDate>
+        <lastBuildDate>Thu, 26 Nov 2026 11:26:01 +0100</lastBuildDate>
+        <description>Tweakers: tech-community, nieuws, reviews en de Pricewatch</description>
+        <image>
+            <link>https://tweakers.net/</link>
+            <title>Tweakers</title>
+            <url>https://tweakers.net/icon-192.png</url>
+            <width>192</width>
+            <height>192</height>
+            <description>Tweakers: tech-community, nieuws, reviews en de Pricewatch</description>
+        </image>
+        <language>nl-NL</language>
+        <link>https://tweakers.net/</link>
+        <title>Tweakers Mixed RSS Feed</title>
+        <webMaster>gathering@tweakers.net</webMaster>
+        <item>
+            <title>.Deals - Black Friday-smartphonedeals - De beste deals volgens de redactie en community</title>
+            <link>https://tweakers.net/reviews/15656/black-friday-smartphonedeals-de-beste-deals-volgens-de-redactie-en-community.html</link>
+            <description>Op deze pagina vind je de beste Black Friday-smartphonedeals van dit moment, handmatig geselecteerd door de redactie en community van Tweakers.</description>
+            <author>Dennis de Vries</author>
+            <category>.Deals / Tablets en telefoons / Smartphones</category>
+            <comments>https://tweakers.net/reviews/15656/black-friday-smartphonedeals-de-beste-deals-volgens-de-redactie-en-community.html#reacties</comments>
+            <guid isPermaLink="false">https://tweakers.net/reviews/15656</guid>
+            <pubDate>Thu, 26 Nov 2026 11:20:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>Apple brengt in 2027 mogelijk MacBook Air met oledscherm uit</title>
+            <link>https://tweakers.net/nieuws/254952/apple-brengt-in-2027-mogelijk-macbook-air-met-oledscherm-uit.html</link>
+            <description>Apple komt in de tweede helft van 2027 mogelijk met een MacBook Air met een nieuw ontwerp en een oledscherm. Dat meldt Bloomberg-journalist Mark Gurman in de Power On-podcast. Apple heeft het huidige ontwerp van de MacBook Air sinds het M2-model in 2022 niet gewijzigd.</description>
+            <author>Imre Himmelbauer</author>
+            <category>Nieuws / Computers / Laptops</category>
+            <comments>https://tweakers.net/nieuws/254952/apple-brengt-in-2027-mogelijk-macbook-air-met-oledscherm-uit.html#reacties</comments>
+            <guid isPermaLink="false">https://tweakers.net/nieuws/254952</guid>
+            <pubDate>Thu, 26 Nov 2026 10:57:24 +0100</pubDate>
+        </item>
+        <item>
+            <title>Software-update - IPFire 2.29 - Core Update 206</title>
+            <link>https://tweakers.net/downloads/79194/ipfire-229-core.html</link>
+            <description>IPFire is een open source firewall voor i586-, x86_64- en Arm-systemen. Het bevat onder andere een intrusion detection/prevention system, deelt het netwerk op in zones, doet stateful packet inspection en biedt vpn-mogelijkheden. Voor meer informatie verwijzen we naar deze pagina. De ontwikkelaars hebben versie 2.29 Core Update 206 uitgebracht en de changelog daarvan kan hieronder worden gevonden. IPFire 2.29 - Core Update 206 released</description>
+            <author>Bart van Klaveren</author>
+            <category>Software</category>
+            <comments>https://tweakers.net/downloads/79194/ipfire-229-core.html#reacties</comments>
+            <guid isPermaLink="false">https://tweakers.net/downloads/79194</guid>
+            <pubDate>Thu, 26 Nov 2026 10:30:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>Hackers stelen klantgegevens van Belgische tak Eneco</title>
+            <link>https://tweakers.net/nieuws/254950/hackers-stelen-klantgegevens-van-belgische-tak-eneco.html</link>
+            <description>Hackers hebben volgens het Centrum voor Cybersecurity België gegevens van klanten gestolen bij de Belgische tak van energieleverancier Eneco. Dat zegt een woordvoerder van Eneco tegen persbureau Belga. Het bedrijf ontkende eerder dat zijn database was gehackt.</description>
+            <author>Imre Himmelbauer</author>
+            <category>Nieuws / IT Pro / Privacy</category>
+            <comments>https://tweakers.net/nieuws/254950/hackers-stelen-klantgegevens-van-belgische-tak-eneco.html#reacties</comments>
+            <guid isPermaLink="false">https://tweakers.net/nieuws/254950</guid>
+            <pubDate>Thu, 26 Nov 2026 09:55:24 +0100</pubDate>
+        </item>
+        <item>
+            <title>&#039;Topmodel Intel Nova Lake-S krijgt 28 cores en 144MB L3-cache&#039;</title>
+            <link>https://tweakers.net/nieuws/254946/topmodel-intel-nova-lake-s-krijgt-28-cores-en-144mb-l3-cache.html</link>
+            <description>De krachtigste Intel Core 4000-desktop-cpu krijgt 144MB L3-cache en 28 cores met een maximale kloksnelheid van 5,5GHz. Dat meldt VideoCardz. Het medium baseert zich op een specificatiedocument op basis van qualification samples van Intel.</description>
+            <author>Imre Himmelbauer</author>
+            <category>Nieuws / Computers / Processors</category>
+            <comments>https://tweakers.net/nieuws/254946/topmodel-intel-nova-lake-s-krijgt-28-cores-en-144mb-l3-cache.html#reacties</comments>
+            <guid isPermaLink="false">https://tweakers.net/nieuws/254946</guid>
+            <pubDate>Thu, 26 Nov 2026 09:20:43 +0100</pubDate>
+        </item>
+    </channel>
+</rss>

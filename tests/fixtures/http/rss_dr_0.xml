@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:media="http://search.yahoo.com/mrss/">
+    <channel>
+        <title>Kort nyt | DR</title>
+        <link>https://www.dr.dk/</link>
+        <description>Nyheder fra sektionen Kort nyt</description>
+        <lastBuildDate>Thu, 26 Nov 2026 10:27:44 GMT</lastBuildDate>
+        <docs>https://www.dr.dk/nyheder/dr-nyheder-som-rss-feed</docs>
+        <generator>rss-feeds</generator>
+        <language>da</language>
+        <atom:link href="https://www.dr.dk/nyheder/service/feeds/allenyheder" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Fem personer anholdt i forbindelse med Pokémon-røveri]]></title>
+            <link>https://www.dr.dk/nyheder/seneste/fem-personer-anholdt-i-forbindelse-med-pokemon-roeveri</link>
+            <guid isPermaLink="false">urn:dr:umbraco:article:eb14873c-571e-4846-a4d9-961dfe12ed94</guid>
+            <pubDate>Thu, 26 Nov 2026 10:23:07 GMT</pubDate>
+            <description><![CDATA[Personerne mistænkes at have forbindelse til det væbnede røveri i Lyngby Storcenter den 15. november. ]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Borgmester efter udvidet togstop: Nu må folketingspolitikerne på banen]]></title>
+            <link>https://www.dr.dk/nyheder/seneste/borgmester-efter-udvidet-togstop-nu-maa-folketingspolitikerne-paa-banen</link>
+            <guid isPermaLink="false">urn:dr:umbraco:article:3037b85d-9a03-4152-9f98-505acfead812</guid>
+            <pubDate>Thu, 26 Nov 2026 10:11:48 GMT</pubDate>
+            <description><![CDATA[Det kan ikke være rigtig, at togpendlere skal med togbusser i to måneder, mener borgmester, der vil have folketingspolitikerne på banen. ]]></description>
+            <media:content url="https://asset.dr.dk/drdk/umbraco-images/mhcgz4rv/20260404-165557-3.jpg?im=AspectCrop=(1200,675),xPosition=.5,yPosition=.5;Resize=(1200,675)&amp;impolicy=medium" medium="image"/>
+        </item>
+        <item>
+            <title><![CDATA[Eksplosion på olieanlæg i Bangkok]]></title>
+            <link>https://www.dr.dk/nyheder/seneste/eksplosion-paa-olieanlaeg-i-bangkok</link>
+            <guid isPermaLink="false">urn:dr:umbraco:article:127ed506-cc83-45da-9d6d-a5c7ca4cf20d</guid>
+            <pubDate>Thu, 26 Nov 2026 09:13:28 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Tankskib med op mod 7.000 ton diesel er sunket ud for Spaniens kyst]]></title>
+            <link>https://www.dr.dk/nyheder/seneste/tankskib-med-op-mod-7-000-ton-diesel-er-sunket-ud-spaniens-kyst</link>
+            <guid isPermaLink="false">urn:dr:umbraco:article:42af4532-5d3d-4b33-9826-636bc6282941</guid>
+            <pubDate>Thu, 26 Nov 2026 08:42:12 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Norsk flyselskab kæmper for overlevelse - aflyser flyvninger]]></title>
+            <link>https://www.dr.dk/nyheder/seneste/norsk-flyselskab-kaemper-overlevelse-aflyser-flyvninger</link>
+            <guid isPermaLink="false">urn:dr:umbraco:article:9ceefd48-180d-44c5-8ba4-b26b094a1d7e</guid>
+            <pubDate>Thu, 26 Nov 2026 08:15:18 GMT</pubDate>
+        </item>
+    </channel>
+</rss>

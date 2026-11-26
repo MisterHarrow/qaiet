@@ -136,7 +136,10 @@ button { font: inherit; }
 .geo { position: relative; display: flex; align-items: flex-start; gap: 0.9rem; border-radius: 3px; cursor: default; }
 .geo:focus-visible { outline-offset: 4px; }
 .geo-legend { margin: 0; padding: 0; list-style: none; font: 0.6rem/1 var(--mono); letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted); }
-.geo-legend li { display: flex; align-items: center; gap: 0.2rem; height: 0.85rem; }
+.geo-legend li { display: flex; align-items: flex-start; gap: 0.2rem; padding: 0.125rem 0; }
+/* A region's countries, eleven squares to a row (six on phones): Europe's 21 countries wrap instead of widening the legend. */
+.geo-sqs { display: flex; flex-wrap: wrap; gap: 0.2rem; max-width: 6.95rem; margin-top: 0.075rem; }
+@media (max-width: 38rem) { .geo-sqs { max-width: 3.7rem; } }
 .geo-legend .geo-none { color: var(--faint); }
 .geo-region { width: 5.8rem; white-space: nowrap; }  /* fits "Southeast Asia" on one line */
 .geo-sq { display: block; width: 0.45rem; height: 0.45rem; border-radius: 1px; background: var(--rule); }

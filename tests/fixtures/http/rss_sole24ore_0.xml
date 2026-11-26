@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:admin="http://webns.net/mvcb/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Il Sole 24 ORE - Tecnologia</title>
+    <link>https://www.ilsole24ore.com</link>
+    <description>Il Sole 24 ORE - Tecnologia</description>
+    <copyright>Copyright 2019 - IlSole24ORE.com</copyright>
+    <language>it-IT</language>
+    <pubDate>Thu, 26 Nov 2026 07:17:29 GMT</pubDate>
+    <lastBuildDate>Thu, 26 Nov 2026 07:17:29 GMT</lastBuildDate>
+    <generator>Nile Wellspring</generator>
+    <image>
+      <title>Il Sole 24 ORE - Tecnologia</title>
+      <url>https://www.ilsole24ore.com/static/img/ilsole24ore-o-2021.svg</url>
+      <link>https://www.ilsole24ore.com</link>
+      <width>356</width>
+      <height>131</height>
+      <description>Il Sole 24 ORE</description>
+    </image>
+    <atom:link href="https://www.ilsole24ore.com/rss/tecnologia.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[AI nei giochi? «Il giocattolo deve restare uno strumento di crescita, senza generare dipendenza emotiva né sostituirsi alle relazioni umane»]]></title>
+      <description><![CDATA[Parla Maurizio Pardi, country manager di VTech Italia: dalle console senza controller ai robot companion, quali sono i limiti dell’innovazione per l’infanzia?]]></description>
+      <enclosure url="https://i2.res.24o.it/images2010/S24/Documenti/2026/11/12/Immagini/Ritagli/20250516_VTech9_5101-U35118316456Yly-1440x752@IlSole24Ore-Web.jpg" type="image/jpg" length="0"/>
+      <link>https://www.ilsole24ore.com/art/ai-giochi-il-giocattolo-deve-restare-strumento-crescita-senza-generare-dipendenza-emotiva-ne-sostituirsi-relazioni-umane-AJ97wXCC</link>
+      <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/"><![CDATA[di <a href="https://argomenti.ilsole24ore.com/marco-trabucchi.html">Marco Trabucchi</a>]]></dc:creator>
+      <guid isPermaLink="false">AJ97wXCC</guid>
+      <category domain="https://www.ilsole24ore.com">Tecnologia</category>
+      <pubDate>Tue, 24 Nov 2026 06:18:41 GMT</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[Intelligenza artificiale, OpenAI propone limiti allo sviluppo. Ma manca una misura condivisa]]></title>
+      <description><![CDATA[OpenAI propone di fissare limiti comuni allo sviluppo dei modelli usando la perplexity come indicatore. Ma i dati pubblicati provengono da un test interno sul codice, non sono direttamente confrontabili con quelli di altri laboratori e non misurano tutte le capacità dell’AI.]]></description>
+      <enclosure url="https://i2.res.24o.it/images2010/S24/Documenti/2025/02/20/Immagini/Imagoeconomica_2115666.jpg" type="image/jpg" length="0"/>
+      <link>https://www.ilsole24ore.com/art/intelligenza-artificiale-openai-propone-limiti-sviluppo-ma-manca-misura-condivisa-AJF5ZxPC</link>
+      <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/"><![CDATA[di <a href="https://argomenti.ilsole24ore.com/luca-tremolada.html">Luca Tremolada</a>]]></dc:creator>
+      <guid isPermaLink="false">AJF5ZxPC</guid>
+      <category domain="https://www.ilsole24ore.com">Tecnologia</category>
+      <pubDate>Mon, 23 Nov 2026 11:20:00 GMT</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[Black Friday, come usare l’Ai per scovare sconti veri e risparmiare]]></title>
+      <description><![CDATA[Dalle cuffie wireless alla friggitrice ad aria, ChatGPT e Alexa per lo Shopping aiutano a scegliere i modelli e a confrontare le offerte. Per capire se lo sconto del Black Friday conviene davvero, servono anche lo storico dei prezzi e un giro negli altri negozi.]]></description>
+      <enclosure url="https://i2.res.24o.it/images2010/S24/Documenti/2026/11/17/Immagini/Ritagli/alexa-shopping-main-tt-1-1024x575-U32648384467UqO-1440x752@IlSole24Ore-Web.jpg" type="image/jpg" length="0"/>
+      <link>https://www.ilsole24ore.com/art/black-friday-come-capire-se-sconto-e-davvero-affare-AJyT1BIC</link>
+      <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/"><![CDATA[di <a href="https://argomenti.ilsole24ore.com/alessandro-longo.html">Alessandro Longo</a>]]></dc:creator>
+      <guid isPermaLink="false">AJyT1BIC</guid>
+      <category domain="https://www.ilsole24ore.com">Tecnologia</category>
+      <pubDate>Mon, 23 Nov 2026 06:19:00 GMT</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[Quantum computing, la sovranità digitale europea si decide fuori dai laboratori]]></title>
+      <description><![CDATA[L’Europa eccelle nella ricerca ma fatica a finanziare la crescita delle proprie imprese. Domani verrà presentato il Quantum Act. Prende forma la strategia europea al computer quantistico]]></description>
+      <enclosure url="https://i2.res.24o.it/images2010/S24/Documenti/2026/11/25/Immagini/Ritagli/alessio%20butti005-U20851233230gVm-1440x752@IlSole24Ore-Web.jpg" type="image/jpg" length="0"/>
+      <link>https://www.ilsole24ore.com/art/quantum-computing-sovranita-digitale-europea-si-decide-fuori-laboratori-AJIe0JRC</link>
+      <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/"><![CDATA[di <a href="https://argomenti.ilsole24ore.com/luca-tremolada.html">Luca Tremolada</a>]]></dc:creator>
+      <guid isPermaLink="false">AJIe0JRC</guid>
+      <category domain="https://www.ilsole24ore.com">Tecnologia</category>
+      <pubDate>Tue, 24 Nov 2026 16:32:00 GMT</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[Meta Ray-Ban Display: sembri un ministro della Prima Repubblica, ma vedi il futuro nella lente]]></title>
+      <description><![CDATA[Sono i migliori smart glasses in circolazione. Sono costosi e non perfetti ma hanno il potenziale per diventare il peggiore nemico dello schermo del telefonino]]></description>
+      <enclosure url="https://i2.res.24o.it/images2010/S24/Documenti/2026/11/13/Immagini/Ritagli/Meta%20Ray-Ban%20Display%20-%20Meta%20AI%20Lifestyle-U35060002075gyK-1440x752@IlSole24Ore-Web.jpg" type="image/jpg" length="0"/>
+      <link>https://www.ilsole24ore.com/art/meta-ray-ban-display-sembri-ministro-prima-repubblica-ma-vedi-futuro-lente-AJ9qboDC</link>
+      <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/"><![CDATA[di <a href="https://argomenti.ilsole24ore.com/luca-tremolada.html">Luca Tremolada</a>]]></dc:creator>
+      <guid isPermaLink="false">AJ9qboDC</guid>
+      <category domain="https://www.ilsole24ore.com">Tecnologia</category>
+      <pubDate>Tue, 24 Nov 2026 14:04:57 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

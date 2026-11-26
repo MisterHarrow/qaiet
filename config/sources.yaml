@@ -1334,6 +1334,348 @@ sources:
   feeds:
   - https://www.youm7.com/rss/SectionRss?SectionID=328
   notes: Owned by United Media Services, close to the Egyptian state. Technology section. Added 2026-11-26 (global coverage plan, step 4).
+- id: derstandard
+  name: Der Standard
+  country: AT
+  language: de
+  type: mainstream
+  group: uk-eu
+  feeds:
+  - https://www.derstandard.at/rss/web
+  notes: Web and technology section. Added 2026-11-26 (global coverage plan, step 5).
+- id: orf
+  name: ORF
+  country: AT
+  language: de
+  type: public-broadcaster
+  group: uk-eu
+  feeds:
+  - https://rss.orf.at/news.xml
+  notes: All-news feed. Added 2026-11-26 (global coverage plan, step 5).
+- id: euobserver
+  name: EUobserver
+  country: BE
+  language: en
+  type: mainstream
+  group: uk-eu
+  feeds:
+  - https://euobserver.com/feed/
+  notes: EU affairs. Added 2026-11-26 (global coverage plan, step 5).
+- id: nzz
+  name: Neue Zürcher Zeitung
+  country: CH
+  language: de
+  type: mainstream
+  group: uk-eu
+  feeds:
+  - https://www.nzz.ch/technologie.rss
+  notes: Technology section. Added 2026-11-26 (global coverage plan, step 5).
+- id: srf
+  name: SRF
+  country: CH
+  language: de
+  type: public-broadcaster
+  group: uk-eu
+  feeds:
+  - https://www.srf.ch/news/bnf/rss/1922
+  notes: All-news feed. Added 2026-11-26 (global coverage plan, step 5).
+- id: faz
+  name: Frankfurter Allgemeine
+  country: DE
+  language: de
+  type: mainstream
+  group: uk-eu
+  feeds:
+  - https://www.faz.net/rss/aktuell/
+  notes: All-news feed (the Digitec feed failed). Added 2026-11-26 (global coverage plan, step 5).
+- id: sz
+  name: Süddeutsche Zeitung
+  country: DE
+  language: de
+  type: mainstream
+  group: uk-eu
+  feeds:
+  - https://rss.sueddeutsche.de/rss/Digital
+  notes: Digital section. Added 2026-11-26 (global coverage plan, step 5).
+- id: t3n
+  name: t3n
+  country: DE
+  language: de
+  type: trade
+  group: uk-eu
+  feeds:
+  - https://t3n.de/rss.xml
+  notes: Added 2026-11-26 (global coverage plan, step 5).
+- id: xataka
+  name: Xataka
+  country: ES
+  language: es
+  type: trade
+  group: uk-eu
+  feeds:
+  - https://www.xataka.com/feedburner.xml
+  notes: Added 2026-11-26 (global coverage plan, step 5).
+- id: franceinfo
+  name: franceinfo
+  country: FR
+  language: fr
+  type: public-broadcaster
+  group: uk-eu
+  feeds:
+  - https://www.francetvinfo.fr/internet.rss
+  notes: Internet section. Added 2026-11-26 (global coverage plan, step 5).
+- id: lefigaro
+  name: Le Figaro
+  country: FR
+  language: fr
+  type: mainstream
+  group: uk-eu
+  feeds:
+  - https://www.lefigaro.fr/rss/figaro_secteur_high-tech.xml
+  notes: High-tech section. Added 2026-11-26 (global coverage plan, step 5).
+- id: liberation
+  name: Libération
+  country: FR
+  language: fr
+  type: mainstream
+  group: uk-eu
+  feeds:
+  - https://www.liberation.fr/arc/outboundfeeds/rss/?outputType=xml
+  notes: All-news feed. Added 2026-11-26 (global coverage plan, step 5).
+- id: rte
+  name: RTÉ
+  country: IE
+  language: en
+  type: public-broadcaster
+  group: uk-eu
+  feeds:
+  - https://www.rte.ie/feeds/rss/?index=/news/business/
+  notes: Business feed. Added 2026-11-26 (global coverage plan, step 5).
+- id: irishtimes
+  name: The Irish Times
+  country: IE
+  language: en
+  type: mainstream
+  group: uk-eu
+  feeds:
+  - https://www.irishtimes.com/arc/outboundfeeds/feed-business/?outputType=xml
+  notes: Business feed. Added 2026-11-26 (global coverage plan, step 5).
+- id: ansa
+  name: ANSA
+  country: IT
+  language: it
+  type: wire
+  group: uk-eu
+  feeds:
+  - https://www.ansa.it/sito/ansait_rss.xml
+  notes: All-news feed (the technology feed is frozen). Added 2026-11-26 (global coverage plan, step 5).
+- id: sole24ore
+  name: Il Sole 24 Ore
+  country: IT
+  language: it
+  type: business
+  group: uk-eu
+  feeds:
+  - https://www.ilsole24ore.com/rss/tecnologia.xml
+  notes: Technology section. Added 2026-11-26 (global coverage plan, step 5).
+- id: repubblica
+  name: la Repubblica
+  country: IT
+  language: it
+  type: mainstream
+  group: uk-eu
+  feeds:
+  - https://www.repubblica.it/rss/tecnologia/rss2.0.xml
+  notes: Technology section. Added 2026-11-26 (global coverage plan, step 5).
+- id: puntoinformatico
+  name: Punto Informatico
+  country: IT
+  language: it
+  type: trade
+  group: uk-eu
+  feeds:
+  - https://www.punto-informatico.it/feed/
+  notes: Added 2026-11-26 (global coverage plan, step 5).
+- id: fd
+  name: Het Financieele Dagblad
+  country: NL
+  language: nl
+  type: business
+  group: uk-eu
+  feeds:
+  - https://fd.nl/?rss
+  notes: Paywalled; headline and summary only. Added 2026-11-26 (global coverage plan, step 5).
+- id: nos
+  name: NOS
+  country: NL
+  language: nl
+  type: public-broadcaster
+  group: uk-eu
+  feeds:
+  - https://feeds.nos.nl/nosnieuwstech
+  notes: Technology section. Added 2026-11-26 (global coverage plan, step 5).
+- id: nrc
+  name: NRC
+  country: NL
+  language: nl
+  type: mainstream
+  group: uk-eu
+  feeds:
+  - https://www.nrc.nl/rss/
+  notes: All-news feed. Added 2026-11-26 (global coverage plan, step 5).
+- id: tweakers
+  name: Tweakers
+  country: NL
+  language: nl
+  type: trade
+  group: uk-eu
+  feeds:
+  - https://tweakers.net/feeds/mixed.xml
+  notes: Added 2026-11-26 (global coverage plan, step 5).
+- id: eco
+  name: ECO
+  country: PT
+  language: pt
+  type: business
+  group: uk-eu
+  feeds:
+  - https://eco.sapo.pt/feed/
+  notes: All-news feed. Added 2026-11-26 (global coverage plan, step 5).
+- id: observador
+  name: Observador
+  country: PT
+  language: pt
+  type: mainstream
+  group: uk-eu
+  feeds:
+  - https://observador.pt/feed/
+  notes: All-news feed. Added 2026-11-26 (global coverage plan, step 5).
+- id: lupa
+  name: Lupa.cz
+  country: CZ
+  language: cs
+  type: trade
+  group: cee
+  feeds:
+  - https://www.lupa.cz/rss/clanky/
+  notes: Added 2026-11-26 (global coverage plan, step 6).
+- id: dr
+  name: DR
+  country: DK
+  language: da
+  type: public-broadcaster
+  group: nordics
+  feeds:
+  - https://www.dr.dk/nyheder/service/feeds/allenyheder
+  notes: All-news feed. Added 2026-11-26 (global coverage plan, step 6).
+- id: version2
+  name: Version2
+  country: DK
+  language: da
+  type: trade
+  group: nordics
+  feeds:
+  - https://www.version2.dk/rss
+  notes: Added 2026-11-26 (global coverage plan, step 6).
+- id: err
+  name: ERR News
+  country: EE
+  language: en
+  type: public-broadcaster
+  group: cee
+  feeds:
+  - https://news.err.ee/rss
+  notes: English all-news feed. Added 2026-11-26 (global coverage plan, step 6).
+- id: hs
+  name: Helsingin Sanomat
+  country: FI
+  language: fi
+  type: mainstream
+  group: nordics
+  feeds:
+  - https://www.hs.fi/rss/tuoreimmat.xml
+  notes: Latest news (the technology feed is frozen). Added 2026-11-26 (global coverage plan, step 6).
+- id: telex
+  name: Telex
+  country: HU
+  language: hu
+  type: mainstream
+  group: cee
+  feeds:
+  - https://telex.hu/rss
+  notes: All-news feed. Added 2026-11-26 (global coverage plan, step 6).
+- id: digi
+  name: Digi.no
+  country: 'NO'
+  language: 'no'  # quoted: YAML reads a bare no as false
+  type: trade
+  group: nordics
+  feeds:
+  - https://www.digi.no/rss
+  notes: Added 2026-11-26 (global coverage plan, step 6).
+- id: e24
+  name: E24
+  country: 'NO'
+  language: 'no'  # quoted: YAML reads a bare no as false
+  type: business
+  group: nordics
+  feeds:
+  - https://e24.no/rss2/
+  notes: Added 2026-11-26 (global coverage plan, step 6).
+- id: nrk
+  name: NRK
+  country: 'NO'
+  language: 'no'  # quoted: YAML reads a bare no as false
+  type: public-broadcaster
+  group: nordics
+  feeds:
+  - https://www.nrk.no/toppsaker.rss
+  notes: Top stories feed; little AI. Added 2026-11-26 (global coverage plan, step 6).
+- id: rp
+  name: Rzeczpospolita
+  country: PL
+  language: pl
+  type: mainstream
+  group: cee
+  feeds:
+  - https://www.rp.pl/rss_main
+  notes: All-news feed. Added 2026-11-26 (global coverage plan, step 6).
+- id: spidersweb
+  name: 'Spider''s Web'
+  country: PL
+  language: pl
+  type: trade
+  group: cee
+  feeds:
+  - https://spidersweb.pl/feed
+  notes: Added 2026-11-26 (global coverage plan, step 6).
+- id: tvn24
+  name: TVN24
+  country: PL
+  language: pl
+  type: mainstream
+  group: cee
+  feeds:
+  - https://tvn24.pl/najnowsze.xml
+  notes: Latest news. Added 2026-11-26 (global coverage plan, step 6).
+- id: dou
+  name: DOU
+  country: UA
+  language: uk
+  type: trade
+  group: cee
+  feeds:
+  - https://dou.ua/feed/
+  notes: Ukrainian developer community and news. Added 2026-11-26 (global coverage plan, step 6).
+- id: tass
+  name: TASS
+  country: RU
+  language: en
+  type: state-aligned
+  group: cee
+  feeds:
+  - https://tass.com/rss/v2.xml
+  notes: 'Russian state news agency. English all-news feed (Benjamin, 2026-11-26: add as state-aligned). Added 2026-11-26 (global coverage plan, step 6).'
 gdelt_outlets:
 - id: reuters
   name: Reuters

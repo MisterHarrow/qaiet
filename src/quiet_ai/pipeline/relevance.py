@@ -17,7 +17,8 @@ log = logging.getLogger(__name__)
 TASK = "relevance"
 
 # Languages the keyword lists below cover (the About page says how many).
-LANGUAGES = ("en", "sv", "de", "fr", "es", "pt", "ja", "ko", "zh", "hi", "id", "vi", "ar", "tr")
+LANGUAGES = ("en", "sv", "de", "fr", "es", "pt", "it", "nl", "no", "da", "fi", "pl", "cs", "hu", "uk",
+             "ja", "ko", "zh", "hi", "id", "vi", "ar", "tr")
 
 # Latin acronyms and names sit inside Japanese, Chinese and Korean text with no space ("生成AIが", "OpenAI发布"),
 # where \b never matches (those scripts count as word characters). So they are bounded by "no Latin letter or
@@ -33,12 +34,18 @@ _STRONG_CS = re.compile(
 )
 _STRONG_CI = re.compile(
     r"\b(artificial intelligence|künstliche[rn]? intelligenz|intelligence artificielle|inteligencia artificial|inteligência artificial|"
-    r"artificiell intelligens|yapay zek[aâ]\w*|kecerdasan buatan|kecerdasan artifisial|trí tuệ nhân tạo|"
-    r"machine learning|maskininlärning|aprendizaje automático|aprendizado de máquina|deep learning|neural net\w*|"
-    r"large language models?|language models?|språkmodell\w*|sprachmodell\w*|modelos? de (?:lenguaje|linguagem)|büyük dil modeli\w*|"
+    r"artificiell intelligens|intelligenza artificiale|kunstmatige intelligentie|kunstig intelligens|tekoäly\w*|"
+    r"sztuczn\w+ inteligencj\w+|uměl\w+ inteligenc\w+|mesterséges intelligenci\w*|"
+    r"yapay zek[aâ]\w*|kecerdasan buatan|kecerdasan artifisial|trí tuệ nhân tạo|"
+    r"machine learning|maskininlärning|maskinlæring|apprendimento automatico|aprendizaje automático|aprendizado de máquina|"
+    r"deep learning|neural net\w*|"
+    r"large language models?|language models?|språkmodell\w*|sprogmodel\w*|sprachmodell\w*|taalmodel\w*|kielimalli\w*|"
+    r"modelos? de (?:lenguaje|linguagem)|modell[io] linguistic\w*|model\w* językow\w*|jazykov\w+ model\w*|nyelvi modell\w*|"
+    r"büyük dil modeli\w*|"
     r"generative? ai|generativ\w* ai|"
     r"chatbot\w*|deepfakes?|superintelligen\w*|foundation models?|frontier models?|ai agents?|agentic|"
-    r"hugging face|stable diffusion|data ?cent(?:er|re)s?|datacenters?|centros? de (?:datos|dados)|veri merkez\w*|pusat data|"
+    r"hugging face|stable diffusion|data ?cent(?:er|re)s?|datacenters?|datacentr\w*|datasent\w*|datakeskus\w*|adatközpont\w*|"
+    r"centr\w* danych|datov\w+ centr\w*|centros? de (?:datos|dados)|veri merkez\w*|pusat data|"
     r"ai[- ]chips?|"
     r"sam altman|altman|dario amodei|amodei|demis hassabis|hassabis|jensen huang|mustafa suleyman|"
     r"yann lecun|geoffrey hinton|ilya sutskever|mira murati)\b",
@@ -51,7 +58,9 @@ _STRONG_SCRIPT = re.compile(
     "エヌビディア|オープンAI|チャットGPT|"
     "인공지능|생성형|초거대|거대언어모델|엔비디아|오픈AI|챗GPT|챗봇|젠슨 황|"
     "الذكاء الاصطناعي|ذكاء اصطناعي|إنفيديا|انفيديا|أوبن إيه آي|شات جي بي تي|روبوت دردشة|"
-    "एआई|आर्टिफिशियल इंटेलिजेंस|कृत्रिम बुद्धिमत्ता|चैटजीपीटी|एनवीडिया"
+    "एआई|आर्टिफिशियल इंटेलिजेंस|कृत्रिम बुद्धिमत्ता|चैटजीपीटी|एनवीडिया|"
+    # Ukrainian: the acronym ШІ only as a word of its own
+    "(?i:штучн[а-яіїєґ]* інтелект[а-яіїєґ]*|нейромереж[а-яіїєґ]*)|(?<![А-ЯІЇЄҐа-яіїєґ])ШІ(?![А-ЯІЇЄҐа-яіїєґ])"
 )
 # Topics often but not always about AI: decided by Haiku.
 _WEAK = re.compile(

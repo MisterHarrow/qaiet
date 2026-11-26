@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>FD - Home</title>
+    <link>https://fd.nl/</link>
+    <description>De RSS feed van FD.nl</description>
+    <language>nl</language>
+    <copyright>2026 Het Financieele Dagblad Amsterdam. This RSS feed is intended solely for personal, non-commercial use. All use of RSS feeds from Het Financieele Dagblad is subject to the General Terms and Conditions for Subscriptions, Services, and Registrations: https://fdmg.nl/wp-content/uploads/AV_Abonnementen.pdf.</copyright>
+    <pubDate>Thu, 26 Nov 2026 10:28:26 GMT</pubDate>
+    <lastBuildDate>Thu, 26 Nov 2026 10:00:00 GMT</lastBuildDate>
+    <webMaster>webmaster@fd.nl</webMaster>
+    <ttl>10</ttl>
+    <category>Home</category>
+    <item>
+      <title>Beursgang lonkt voor bouwbedrijf Wessels Stevin na fusie</title>
+      <link>https://fd.nl/bedrijfsleven/1620797/nieuwe-bouwcombinatie-wessels-stevin-krijgt-peter-berdowski-als-ceo</link>
+      <description>De bouwbedrijven VolkerWessels en Van Wijnen gaan onder de paraplu van investeringsmaatschappij HAL verder onder de naam Wessels Stevin.</description>
+      <enclosure url="https://images.fd.nl/5b9ef5f7fbf583e55cbcf131e5f16faf88d6c0df.jpeg?fit=crop&amp;crop=faces&amp;auto=format%2Ccompress&amp;q=45&amp;w=140&amp;h=140&amp;fm=jpg&amp;cs=tinysrgb" length="0" type="image/jpeg" />
+      <pubDate>Thu, 26 Nov 2026 07:57:17 GMT</pubDate>
+      <guid>https://fd.nl/bedrijfsleven/1620797/nieuwe-bouwcombinatie-wessels-stevin-krijgt-peter-berdowski-als-ceo</guid>
+    </item>
+    <item>
+      <title>Banque de France-econoom gelooft niet in groen monetair beleid: ‘Je opent de doos van Pandora’</title>
+      <link>https://fd.nl/economie/1620581/banque-de-france-econoom-gelooft-niet-in-groen-monetair-beleid-je-opent-de-doos-van-pandora</link>
+      <description>Agnès Bénassy-Quéré is een van de belangrijkste economen van Frankrijk. Als bestuurder van de Banque de France pleit ze voor meer weerbaarheid tegen energieschokken. ‘Weg van olie.’</description>
+      <enclosure url="https://images.fd.nl/228d453ecb57626e1033c6090b1bf37c42caf735.jpeg?fit=crop&amp;crop=faces&amp;auto=format%2Ccompress&amp;q=45&amp;w=140&amp;h=140&amp;fm=jpg&amp;cs=tinysrgb" length="0" type="image/jpeg" />
+      <pubDate>Thu, 26 Nov 2026 05:00:00 GMT</pubDate>
+      <guid>https://fd.nl/economie/1620581/banque-de-france-econoom-gelooft-niet-in-groen-monetair-beleid-je-opent-de-doos-van-pandora</guid>
+    </item>
+    <item>
+      <title>Live: AEX meer dan 1% in de plus na opleving op Wall Street</title>
+      <link>https://fd.nl/financiele-markten/1620713/live-aziatische-beurzen-veren-op-na-beperkt-verlies-wall-street</link>
+      <description>De Amerikanen vieren vandaag Thanksgiving. Wall Street houdt daardoor de deuren dicht. Beleggers kunnen zo even op adem komen, na alle onrust over de AI-beleggingen.</description>
+      <pubDate>Thu, 26 Nov 2026 06:04:20 GMT</pubDate>
+      <guid>https://fd.nl/financiele-markten/1620713/live-aziatische-beurzen-veren-op-na-beperkt-verlies-wall-street</guid>
+    </item>
+    <item>
+      <title>EU-top over begroting is pas geslaagd als hij mislukt</title>
+      <link>https://fd.nl/politiek/1620715/eu-top-over-begroting-is-pas-geslaagd-als-hij-mislukt</link>
+      <description>Naar verwachting zullen de EU-leiders deze top over de meerjarenbegroting vooral gebruiken om de verschillen scherp neer te zetten. De knopen worden pas in december doorgehakt.</description>
+      <enclosure url="https://images.fd.nl/0390cd4862b213a468143ddbe4a49568204455ad.jpeg?fit=crop&amp;crop=faces&amp;auto=format%2Ccompress&amp;q=45&amp;w=140&amp;h=140&amp;fm=jpg&amp;cs=tinysrgb" length="0" type="image/jpeg" />
+      <pubDate>Thu, 26 Nov 2026 08:56:36 GMT</pubDate>
+      <guid>https://fd.nl/politiek/1620715/eu-top-over-begroting-is-pas-geslaagd-als-hij-mislukt</guid>
+    </item>
+    <item>
+      <title>Strenge duurzaamheidskeuzes kosten pensioenfondsen rendement</title>
+      <link>https://fd.nl/financiele-markten/1620644/strenge-duurzaamheidskeuzes-kosten-pensioenfondsen-rendement</link>
+      <description>De conclusie voedt de discussie over hoe pensioenfondsen beleggen. Politiek Den Haag nam in 2024 een motie aan die ze verplicht het rendement op de eerste plaats te zetten. </description>
+      <enclosure url="https://images.fd.nl/62ec1bf4adbb5b1a31ec21edba94f74071c9ff6c.jpeg?fit=crop&amp;crop=faces&amp;auto=format%2Ccompress&amp;q=45&amp;w=140&amp;h=140&amp;fm=jpg&amp;cs=tinysrgb" length="0" type="image/jpeg" />
+      <pubDate>Wed, 25 Nov 2026 23:01:00 GMT</pubDate>
+      <guid>https://fd.nl/financiele-markten/1620644/strenge-duurzaamheidskeuzes-kosten-pensioenfondsen-rendement</guid>
+    </item>
+  </channel>
+</rss>

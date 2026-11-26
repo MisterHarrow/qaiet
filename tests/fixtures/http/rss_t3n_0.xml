@@ -1,0 +1,65 @@
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title><![CDATA[t3n.de - News]]></title>
+    <description><![CDATA[t3n digital pioneers - News]]></description>
+    <link>https://t3n.de</link>
+    <image>
+      <url>https://cdn.t3n.de/global/images/icons/t3n-rss-feed-600x600.png?class=default</url>
+      <title>t3n.de - News</title>
+      <link>https://t3n.de</link>
+    </image>
+    <language>de-DE</language>
+    <copyright>Copyright 2026 yeebase media GmbH 2005</copyright>
+    <item>
+      <title><![CDATA[Neue Funktion in Whatsapp: So versendest du Geburtstagsgrüße bis zu 14 Tage im Voraus]]></title>
+      <enclosure url="https://cdn.t3n.de/news/wp-content/uploads/2025/04/whatsapp.jpg?class=hero" length="20480" type="image/jpeg"/>
+      
+      <description><![CDATA[Der Messenger baut seinen Funktionsumfang stetig aus. Nutzer:innen können den Versandzeitpunkt von Nachrichten jetzt vorab einplanen. Diese werden in Whatsapp versendet, auch wenn sie selbst offline sind.
+<a href='https://t3n.de/news/neue-funktion-in-whatsapp-so-versendest-du-geburtstagsgruesse-bis-zu-14-tage-im-voraus-1775472/?utm_source=rss&amp;utm_medium=newsFeed&amp;utm_campaign=newsFeed'>weiterlesen auf t3n.de</a> ]]></description>
+      <link><![CDATA[https://t3n.de/news/neue-funktion-in-whatsapp-so-versendest-du-geburtstagsgruesse-bis-zu-14-tage-im-voraus-1775472/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed]]></link>
+      <guid isPermaLink="false"><![CDATA[news-article-1775472]]></guid>
+      <pubDate>Thu, 26 Nov 2026 10:30:26 +0100</pubDate>
+      <category><![CDATA[android]]></category><category><![CDATA[apps]]></category><category><![CDATA[ios]]></category><category><![CDATA[messenger]]></category><category><![CDATA[server]]></category><category><![CDATA[whatsapp]]></category>
+    </item><item>
+      <title><![CDATA[Claude Ship: Wie Anthropic den Code-Review-Engpass löst und Produktivität steigert]]></title>
+      <enclosure url="https://cdn.t3n.de/news/wp-content/uploads/2025/08/software-entwickler.jpg?class=hero" length="20480" type="image/jpeg"/>
+      
+      <description><![CDATA[Anthropic hat Claude Ship vorgestellt. Die neue Suite soll Entwickler:innen dabei helfen, KI-generierten Code schneller zu prüfen und freizugeben – und dadurch ihre Produktivität steigern.
+<a href='https://t3n.de/news/claude-ship-anthropic-code-review-produktivitaet-1775032/?utm_source=rss&amp;utm_medium=newsFeed&amp;utm_campaign=newsFeed'>weiterlesen auf t3n.de</a> ]]></description>
+      <link><![CDATA[https://t3n.de/news/claude-ship-anthropic-code-review-produktivitaet-1775032/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed]]></link>
+      <guid isPermaLink="false"><![CDATA[news-article-1775032]]></guid>
+      <pubDate>Thu, 26 Nov 2026 09:55:00 +0100</pubDate>
+      <category><![CDATA[claude]]></category><category><![CDATA[github]]></category><category><![CDATA[ki-agenten]]></category><category><![CDATA[kuenstliche-intelligenz]]></category><category><![CDATA[produktivitaet]]></category><category><![CDATA[studie]]></category><category><![CDATA[t3npro-ki-artikel]]></category>
+    </item><item>
+      <title><![CDATA[Black Friday: Balkonkraftwerk mit Anker SOLIX 4 Pro Speicher für 1.599 Euro]]></title>
+      <enclosure url="https://cdn.t3n.de/news/wp-content/uploads/2026/11/kkw_bw26_header1.jpg?class=hero" length="20480" type="image/jpeg"/>
+      
+      <description><![CDATA[Ein Balkonkraftwerk mit Speicher, das sich rechnet: Das Quattro XL mit dem heise Technologiesieger Anker SOLIX 4 Pro gibt es in der Black Week für 1.599 Euro – inklusive 300 Euro Rabatt im Vergleich zum regulären Preis.
+<a href='https://t3n.de/news/balkonkraftwerk-speicher-quattro-xl-anker-solix-1775174/?utm_source=rss&amp;utm_medium=newsFeed&amp;utm_campaign=newsFeed'>weiterlesen auf t3n.de</a> ]]></description>
+      <link><![CDATA[https://t3n.de/news/balkonkraftwerk-speicher-quattro-xl-anker-solix-1775174/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed]]></link>
+      <guid isPermaLink="false"><![CDATA[news-article-1775174]]></guid>
+      <pubDate>Thu, 26 Nov 2026 09:05:08 +0100</pubDate>
+      <category><![CDATA[balkonkraftwerk]]></category><category><![CDATA[black-friday]]></category>
+    </item><item>
+      <title><![CDATA[Black Friday: So baust du mit ChatGPT einen Preisalarm]]></title>
+      <enclosure url="https://cdn.t3n.de/news/wp-content/uploads/2026/11/Black-Friday-Rabatte-Symbolbild-schere.png?class=hero" length="20480" type="image/jpeg"/>
+      <media:content url="https://cdn.t3n.de/news/wp-content/uploads/2026/11/Black-Friday-Rabatte-Symbolbild-schere.png?class=hero" medium="image"><media:credit>KI-generiert</media:credit></media:content>
+      <description><![CDATA[Ein Satz genügt, und ChatGPT überwacht Preise im Hintergrund. Im Podcast t3n MeisterPrompter testet Prompt Engineer Susanne Renate Schneider, wie gut das klappt und was du bei der Nutzung beachten musst.
+<a href='https://t3n.de/news/black-friday-preisalarm-mit-chatgpt-prompt-1775229/?utm_source=rss&amp;utm_medium=newsFeed&amp;utm_campaign=newsFeed'>weiterlesen auf t3n.de</a> ]]></description>
+      <link><![CDATA[https://t3n.de/news/black-friday-preisalarm-mit-chatgpt-prompt-1775229/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed]]></link>
+      <guid isPermaLink="false"><![CDATA[news-article-1775229]]></guid>
+      <pubDate>Thu, 26 Nov 2026 09:00:53 +0100</pubDate>
+      <category><![CDATA[apps]]></category><category><![CDATA[black-friday]]></category><category><![CDATA[chat-gpt]]></category><category><![CDATA[fake-news]]></category><category><![CDATA[google]]></category><category><![CDATA[ki-agenten]]></category><category><![CDATA[kuenstliche-intelligenz]]></category><category><![CDATA[personalisierung]]></category><category><![CDATA[t3npro-ki-artikel]]></category><category><![CDATA[werbung]]></category>
+    </item><item>
+      <title><![CDATA[ChatGPT: Wer künftig schneller an sein Nutzungslimit stoßen könnte]]></title>
+      <enclosure url="https://cdn.t3n.de/news/wp-content/uploads/2026/06/chatgpt.jpeg?class=hero" length="20480" type="image/jpeg"/>
+      
+      <description><![CDATA[OpenAI startet mit dem Rollout der gemeinsamen Oberfläche für Chat und Work – zunächst nur für einen kleinen Teil der Nutzer. Doch die profitieren nicht nur. Für manche könnte sich gar einen Nachteil ergeben.
+<a href='https://t3n.de/news/chatgpt-wer-kuenftig-schneller-an-sein-nutzungslimit-stossen-koennte-1775437/?utm_source=rss&amp;utm_medium=newsFeed&amp;utm_campaign=newsFeed'>weiterlesen auf t3n.de</a> ]]></description>
+      <link><![CDATA[https://t3n.de/news/chatgpt-wer-kuenftig-schneller-an-sein-nutzungslimit-stossen-koennte-1775437/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed]]></link>
+      <guid isPermaLink="false"><![CDATA[news-article-1775437]]></guid>
+      <pubDate>Thu, 26 Nov 2026 08:45:21 +0100</pubDate>
+      <category><![CDATA[apps]]></category><category><![CDATA[chat-gpt]]></category><category><![CDATA[open-ai]]></category>
+    </item>
+  </channel>
+</rss>

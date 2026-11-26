@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="/public/style.xsl" type="text/xsl"?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:dcterms="http://purl.org/dc/terms/" version="2.0">
+  <channel>
+    <title><![CDATA[NOS Tech]]></title>
+    <link><![CDATA[https://nos.nl]]></link>
+    <description><![CDATA[NOS Tech]]></description>
+    <language>nl</language>
+    <copyright>Copyright NOS</copyright>
+    <pubDate>Thu, 26 Nov 2026 11:27:31 +0100</pubDate>
+    <webMaster>digitalemediatechniek@nos.nl (NOS Digitale Media)</webMaster>
+    <item>
+      <title><![CDATA[AI-gebruik door bedrijven verdubbeld, inhaalslag bij mkb'ers]]></title>
+      <link>https://nos.nl/l/2641047</link>
+      <description>Het aantal bedrijven dat gebruikmaakt van kunstmatige intelligentie, oftewel AI, is in een jaar meer dan verdubbeld. 41 procent van de bedrijven maakt daar gebruik van. Een jaar eerder was dat nog 18 procent, meldt het Centraal Bureau voor de Statistiek (CBS). Bij de grotere bedrijven is het gebruik van AI het hoogst, maar in het midden- en kleinbedrijf (mkb) is het gebruik het sterkst gegroeid. "Het lijkt erop dat de grote bedrijven bij nieuwe technologieën meteen de middelen en de mensen…</description>
+      <enclosure type="image/webp" url="https://images.cdn.nos.nl/3/F/8/v/H/x/9y8P8k9dFVEiPzcxcpjcCRDtzNCWasEy2GQtanA/0x197x4000x2250-1024x576.webp"/>
+      <pubDate>Thu, 26 Nov 2026 06:53:10 +0100</pubDate>
+      <guid isPermaLink="true">https://nos.nl/l/2641047</guid>
+    </item>
+    <item>
+      <title><![CDATA[Podcast De Dag: wat is de waarde van Jensen Huang?]]></title>
+      <link>https://nos.nl/l/2640979</link>
+      <description>Jensen Huang werd nog geen twee weken geleden weggestuurd bij chipbedrijf Nvidia, na onthullingen over meerdere affaires, waaronder met een vrouw die wordt verdacht van spionage voor China. Maar deze week keerde hij alweer terug als topman. Bij Nvidia werd hij met applaus ontvangen en de beurskoers van het Amerikaanse bedrijf schoot omhoog. Hoe kan één man zo belangrijk zijn voor een bedrijf? Luisteren? Deze aflevering van De Dag luister je via NPO Luister en alle andere podcastapps. Bevalt…</description>
+      <enclosure type="image/webp" url="https://images.cdn.nos.nl/3/2/H/6/G/6/8LHfxrvEoiiuME1bo9h3k1TwJMRMAraBzay4jGV/0x0x1920x1080-1024x576.webp"/>
+      <pubDate>Wed, 25 Nov 2026 15:31:27 +0100</pubDate>
+      <guid isPermaLink="true">https://nos.nl/l/2640979</guid>
+    </item>
+    <item>
+      <title><![CDATA[Nederlandse hackersgroep zelf gehackt, 'door autonome AI-agents']]></title>
+      <link>https://nos.nl/l/2640968</link>
+      <description>Aanvallers hebben met behulp van AI ingebroken bij DIVD, een Nederlands verband van ethische hackers. De aanvallers lieten AI-programma's waarschijnlijk autonoom inbreken op de systemen, die daardoor veel sneller konden werken dan mensen, stellen externe onderzoekers in een vandaag verschenen rapport. Het in 2019 opgerichte DIVD speurt onder meer het internet af op zoek naar te hacken ict-systemen en doet zelf onderzoek naar kwetsbaarheden in software. De organisatie heeft dus ook zelf veel…</description>
+      <enclosure type="image/webp" url="https://images.cdn.nos.nl/2/7/a/A/c/H/podRc5aTcm7dX5yj453jnJFcCJ25cMWuhW4PK8B/506x724x3488x1962-1024x576.webp"/>
+      <pubDate>Wed, 25 Nov 2026 13:37:02 +0100</pubDate>
+      <guid isPermaLink="true">https://nos.nl/l/2640968</guid>
+    </item>
+    <item>
+      <title><![CDATA[Huawei in VS schuldig bevonden aan diefstal van bedrijfsgeheimen]]></title>
+      <link>https://nos.nl/l/2640907</link>
+      <description>Het Chinese technologiebedrijf Huawei is door een Amerikaanse jury schuldig bevonden aan het samenzweren voor het stelen van bedrijfsgeheimen, bankfraude en het omzeilen van Amerikaanse sancties. Van de ernstigste aanklacht - het runnen van een criminele organisatie - werd het bedrijf echter vrijgesproken. Het bedrijf werd ervan beschuldigd banken te hebben misleid over bedrijfsactiviteiten in Iran en bedrijfsgeheimen van Amerikaanse ondernemingen te hebben gestolen. In 2018 werd Meng Wanzhou…</description>
+      <enclosure type="image/webp" url="https://images.cdn.nos.nl/2/7/1/E/D/K/si193UFqWo3UnBimU4BaqLJoxTFVXYn8epPfwTM/60x247x3792x2133-1024x576.webp"/>
+      <pubDate>Wed, 25 Nov 2026 01:48:05 +0100</pubDate>
+      <guid isPermaLink="true">https://nos.nl/l/2640907</guid>
+    </item>
+    <item>
+      <title><![CDATA[Maker GTA VI: recordomzet na eerste verkoopdag van 3,8 miljard dollar ]]></title>
+      <link>https://nos.nl/l/2640349</link>
+      <description>De ontwikkelaar van GTA VI zegt dat het spel na de eerste verkoopdag een recordomzet heeft gehaald van 3,79 miljard dollar (3,46 miljard euro). Volgens Rockstar Games is daarmee een record gevestigd bij de verkoop van een nieuw computerspel. Het bedrijf baseert het cijfer op wereldwijde schattingen tot en met donderdag, de dag waarop de populaire game werd uitgebracht. Al voor de officiële lancering waren volgens Rockstar 32,5 miljoen spellen verkocht. Over de hele wereld werd afgeteld naar de…</description>
+      <enclosure type="image/webp" url="https://images.cdn.nos.nl/7/C/B/t/6/p/NxezPd9Lymd9keCEZMd4tLJkh3rhAfh8GUiQASm/8x105x3984x2241-1024x576.webp"/>
+      <pubDate>Fri, 20 Nov 2026 22:28:47 +0100</pubDate>
+      <guid isPermaLink="true">https://nos.nl/l/2640349</guid>
+    </item>
+  </channel>
+</rss>

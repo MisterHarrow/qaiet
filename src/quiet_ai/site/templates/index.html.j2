@@ -60,7 +60,7 @@
   <p class="geo-head">Outlet coverage</p>
   <div class="geo" tabindex="0" role="img" aria-label="Where the coverage in this view comes from. {{ geo_label }}.">
     <ul class="geo-legend" aria-hidden="true">
-      {% for r in geo.regions %}<li{% if not r.n %} class="geo-none"{% endif %}><span class="geo-region">{{ r.name }}</span>{% for c in r.countries %}<i class="geo-sq{% if c.n > 3 %} n3{% elif c.n > 1 %} n2{% elif c.n %} n1{% endif %}" title="{{ c.name }}: {{ c.n }} outlet{{ "s" if c.n != 1 }}"></i>{% endfor %}</li>{% endfor %}
+      {% for r in geo.regions %}<li{% if not r.n %} class="geo-none"{% endif %}><span class="geo-region">{{ r.name }}</span><span class="geo-sqs">{% for c in r.countries %}<i class="geo-sq{% if c.n > 3 %} n3{% elif c.n > 1 %} n2{% elif c.n %} n1{% endif %}" title="{{ c.name }}: {{ c.n }} outlet{{ "s" if c.n != 1 }}"></i>{% endfor %}</span></li>{% endfor %}
     </ul>
     {{ geo.svg }}
     <span class="geo-tip" aria-hidden="true"><span class="tip-head">{{ geo.outlets }} outlet{{ "s" if geo.outlets != 1 }} · {{ geo.countries|length }} countr{{ "ies" if geo.countries|length != 1 else "y" }}</span>{% for c, n in geo.countries %}<span class="tip-row">{{ country_names.get(c, c) }}<b>{{ n }}</b></span>{% endfor %}</span>
@@ -144,7 +144,7 @@
   <ul class="frames" aria-label="How the outlets frame it">
     {% for f in frames %}
     <li class="fr-row"><span class="fr-text">{{ f.frame }}</span>
-      {%- if f.outlets %} <span class="fr-who" tabindex="0" aria-label="{{ f.outlets }} outlet{{ "s" if f.outlets != 1 }}{% if f.countries %} in {% for c in f.countries %}{{ country_names.get(c, c) }}{% if not loop.last %}, {% endif %}{% endfor %}{% endif %}: show their headlines"><span class="fr-arrow" aria-hidden="true">←</span> {{ f.outlets }} outlet{{ "s" if f.outlets != 1 }}{% if f.countries %} <span class="sep">·</span> <span class="fr-cc">{{ f.countries|join(" ") }}</span>{% endif %}</span>
+      {%- if f.outlets %} <span class="fr-who" tabindex="0" aria-label="{{ f.outlets }} outlet{{ "s" if f.outlets != 1 }}{% if f.countries %} in {% for c in f.countries %}{{ country_names.get(c, c) }}{% if not loop.last %}, {% endif %}{% endfor %}{% endif %}: show their headlines"><span class="fr-arrow" aria-hidden="true">←</span> {{ f.outlets }} outlet{{ "s" if f.outlets != 1 }}{% if f.countries %} <span class="sep">·</span> <span class="fr-cc">{{ f.countries[:6]|join(" ") }}{% if f.countries|length > 6 %} +{{ f.countries|length - 6 }}{% endif %}</span>{% endif %}</span>
       <span class="fr-tip">
         {%- for c in f["items"] %}
         <span class="fr-src"><span class="outlet"><span class="dot st{{ c.stance }}" aria-hidden="true"></span>{{ c.outlet }}{% if c.country %} <span class="country">{{ c.country }}</span>{% endif %}</span><a href="{{ c.url }}" rel="noopener">{{ c.title_en or c.title }}</a></span>

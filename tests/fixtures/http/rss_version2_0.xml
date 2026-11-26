@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xml:base="https://www.version2.dk/">
+  <channel>
+    <title>Version2 articles</title>
+    <link>https://www.version2.dk/</link>
+    <description/>
+    <language>da</language>
+    <atom:link href="https://www.version2.dk/rss" rel="self" type="application/rss+xml"/>
+    <item>
+  <title>Hospital delte Anne-Maries dybt private data med Microsoft uden samtykke: »Det gør mig rigtig vred«</title>
+  <link>https://www.version2.dk/artikel/hospital-delte-anne-maries-dybt-private-data-med-microsoft-uden-samtykke-det-goer-mig-rigtig-vred</link>
+  <description>Ikke anonymiserede sundhedsdata om Anne-Marie Krogsbøll er via en AI-løsning blevet delt til bla. Microsoft med fuldt overlæg fra Region Hovedstaden, der ikke vil svare på, hvem der har haft adgang til dem.</description>
+  <pubDate>Thu, 26 Nov 2026 05:00:00 +0100</pubDate>
+    <dc:creator>Katrine Juel Friis, Mads Oddershede</dc:creator>
+    <guid isPermaLink="true">https://www.version2.dk/artikel/hospital-delte-anne-maries-dybt-private-data-med-microsoft-uden-samtykke-det-goer-mig-rigtig-vred</guid>
+    <category>Sundhedsdata</category>
+    </item>
+<item>
+  <title>Synspunkt: Fantasifulde tal, løse påstande og mørklagte ejere mudrer debatten om datacentre</title>
+  <link>https://www.version2.dk/holdning/fantasifulde-tal-loese-paastande-og-moerklagte-ejere-mudrer-debatten-om-datacentre</link>
+  <description>En ukendt aktør vil bygge Nordeuropas største datacenter ved Kalundborg med fantasi-beregninger og løse påstande. Vi mangler fakta og rettidig omhu i den nødvendige debat om byggeri og prioritering af datacentre.</description>
+  <pubDate>Wed, 25 Nov 2026 11:00:00 +0100</pubDate>
+    <dc:creator/>
+    <guid isPermaLink="true">https://www.version2.dk/holdning/fantasifulde-tal-loese-paastande-og-moerklagte-ejere-mudrer-debatten-om-datacentre</guid>
+    <category>Datacenter</category>
+    </item>
+<item>
+  <title>Politi dropper Palantir: Køber ukendt tysk dataplatform</title>
+  <link>https://www.version2.dk/artikel/politi-dropper-palantir-koeber-ukendt-tysk-dataplatform</link>
+  <description>Tysklands største delstat Nordrhein-Westfalen skrotter Palantir til fordel for en tysk leverandør.</description>
+  <pubDate>Wed, 25 Nov 2026 10:51:00 +0100</pubDate>
+    <dc:creator>Peter Christian Bech-Nielsen</dc:creator>
+    <guid isPermaLink="true">https://www.version2.dk/artikel/politi-dropper-palantir-koeber-ukendt-tysk-dataplatform</guid>
+    <category>Politi-IT</category>
+    </item>
+<item>
+  <title>Dyk ned i Danmarks nye datacentre: Få hele overblikket her</title>
+  <link>https://www.version2.dk/artikel/dyk-ned-i-danmarks-nye-datacentre-faa-hele-overblikket-her</link>
+  <description>Ingeniøren har gennemgået de mange datacenter-projekter, som kommuner over hele landet arbejder på lige nu. Hvad ved vi? Hvad mangler vi svar på?</description>
+  <pubDate>Tue, 24 Nov 2026 12:00:00 +0100</pubDate>
+    <dc:creator>Louise Olifent</dc:creator>
+    <guid isPermaLink="true">https://www.version2.dk/artikel/dyk-ned-i-danmarks-nye-datacentre-faa-hele-overblikket-her</guid>
+    <category>Datacenter</category>
+    </item>
+<item>
+  <title>Synspunkt: ITU-rektor svarer i AI-debat: Forskere og ledelser på landets universiteter sidder med samme spørgsmål som de studerende</title>
+  <link>https://www.version2.dk/holdning/itu-rektor-svarer-i-ai-debat-forskere-og-ledelser-paa-landets-universiteter-sidder-med-samme</link>
+  <description>I et indlæg i Ingeniøren skriver Herbert Hertz van den Berk, som er studerende på IT-Universitetet i København, at det i spørgsmålet om kunstig intelligens er op til den »enkelte studerende selv at navigere mellem industriens løfter, mediernes katastrofefortællinger og universitetets akademiske kritiske blik.« Som rektor på ITU er jeg glad for, at en studerende bringer et kritisk perspektiv på banen.AI fylder selvsagt meget på ITU. Den kritisk analytiske tilgang, som Herbert Hertz van den Berk…</description>
+  <pubDate>Tue, 24 Nov 2026 12:00:00 +0100</pubDate>
+    <dc:creator>Per Bruun Brockhoff</dc:creator>
+    <guid isPermaLink="true">https://www.version2.dk/holdning/itu-rektor-svarer-i-ai-debat-forskere-og-ledelser-paa-landets-universiteter-sidder-med-samme</guid>
+    <category>Kunstig intelligens</category>
+    </item>
+
+  </channel>
+</rss>

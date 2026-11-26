@@ -312,7 +312,7 @@ def test_stories_filter_by_region_and_country(tmp_path):
                                                      ("Africa", 0), ("East Asia", 0), ("South Asia", 0), ("Southeast Asia", 0),
                                                      ("Oceania", 0)]
     assert [(c["code"], c["n"]) for c in places[2]["countries"]] == [("GB", 1), ("SE", 1)]  # stories per country, only those with any
-    assert places[2]["codes"] == ["GB", "SE", "DE", "FR", "BE", "ES"]
+    assert places[2]["codes"] == ["GB", "IE", "FR", "BE", "NL", "DE", "CH", "AT", "ES", "PT", "IT", "SE", "NO", "DK", "FI", "EE", "PL", "CZ", "HU", "UA", "RU"]
     assert build.place_filters([builders_only]) == []
 
     html = build.render(edition(), tmp_path).read_text()
@@ -320,7 +320,7 @@ def test_stories_filter_by_region_and_country(tmp_path):
     assert '<nav class="filters places" aria-label="Filter stories by where their outlets are" hidden>' in html  # app.js shows it
     assert '<button type="button" data-region="North America" data-codes="US CA" aria-pressed="false">North America <span class="n">1</span></button>' in html
     assert 'data-region="Latin America" data-codes="MX CO PE BR CL AR" aria-pressed="false" disabled>' in html
-    assert 'data-region="Europe" data-codes="GB SE DE FR BE ES" aria-pressed="false" disabled>' in html
+    assert 'data-region="Europe" data-codes="GB IE FR BE NL DE CH AT ES PT IT SE NO DK FI EE PL CZ HU UA RU" aria-pressed="false" disabled>' in html
     assert '<span class="place-row"' not in html  # one country in the view: no country line to pick from
 
 
@@ -344,3 +344,12 @@ def test_card_lists_framings_with_their_outlets(tmp_path):
     assert '<ul class="frames" aria-label="How the outlets frame it">' in html and '<p class="coverage">' not in html
     assert '<li class="fr-row"><span class="fr-text">Report the return plainly</span> <span class="fr-who" tabindex="0" aria-label="1 outlet in United States: show their headlines">' in html
     assert '<span class="fr-cc">US</span>' in html and '<span class="fr-tip">' in html
+    # The country codes after a framing stop at six, then "+N", so the row can't overflow a phone screen.
+    many = edition()
+    codes = ["US", "GB", "DE", "SE", "FR", "JP", "KR", "IN"]
+    many["stories"][0]["coverage"] = [{"stance": "0", "items": [
+        {"outlet": f"O{i}", "country": c, "kind": "news", "lang": "en", "title": f"T{i}", "title_en": None, "url": f"https://o/{i}",
+         "frame": "neutral", "evidence": [], "rationale": None, "llm_opt_out": False} for i, c in enumerate(codes)]}]
+    many["stories"][0]["summary"]["frames"] = [{"frame": "Report it", "outlets": [f"O{i}" for i in range(len(codes))]}]
+    html = build.render(many, tmp_path).read_text()
+    assert '<span class="fr-cc">US GB DE SE FR JP +2</span>' in html

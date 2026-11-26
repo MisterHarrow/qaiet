@@ -28,12 +28,14 @@ STANCE_NAMES = {
 KIND_NAMES = {"news": "", "newsletter": "commentary"}
 # Outlet countries (ISO codes in sources.yaml), named on hover.
 COUNTRY_NAMES = {
-    "AE": "United Arab Emirates", "AR": "Argentina", "AU": "Australia", "BE": "Belgium", "BR": "Brazil", "CA": "Canada", "CL": "Chile", "CN": "China",
-    "BD": "Bangladesh", "CO": "Colombia", "DE": "Germany", "EG": "Egypt", "ES": "Spain", "FR": "France", "GB": "United Kingdom",
-    "GH": "Ghana", "HK": "Hong Kong", "ID": "Indonesia", "IL": "Israel", "IN": "India", "JP": "Japan", "KR": "South Korea",
-    "MX": "Mexico", "MY": "Malaysia", "NG": "Nigeria", "NZ": "New Zealand", "PE": "Peru", "PH": "Philippines", "PK": "Pakistan",
-    "QA": "Qatar", "SA": "Saudi Arabia", "SE": "Sweden", "SG": "Singapore", "TH": "Thailand", "TR": "Turkey", "TW": "Taiwan",
-    "US": "United States", "VN": "Vietnam", "ZA": "South Africa",
+    "AE": "United Arab Emirates", "AR": "Argentina", "AT": "Austria", "AU": "Australia", "BE": "Belgium", "BR": "Brazil", "CA": "Canada", "CL": "Chile", "CN": "China",
+    "BD": "Bangladesh", "CH": "Switzerland", "CO": "Colombia", "CZ": "Czechia", "DE": "Germany", "DK": "Denmark", "EE": "Estonia",
+    "EG": "Egypt", "ES": "Spain", "FI": "Finland", "FR": "France", "GB": "United Kingdom", "GH": "Ghana", "HK": "Hong Kong",
+    "HU": "Hungary", "ID": "Indonesia", "IE": "Ireland", "IL": "Israel", "IN": "India", "IT": "Italy", "JP": "Japan",
+    "KR": "South Korea", "MX": "Mexico", "MY": "Malaysia", "NG": "Nigeria", "NL": "Netherlands", "NO": "Norway",
+    "NZ": "New Zealand", "PE": "Peru", "PH": "Philippines", "PK": "Pakistan", "PL": "Poland", "PT": "Portugal", "QA": "Qatar",
+    "RU": "Russia", "SA": "Saudi Arabia", "SE": "Sweden", "SG": "Singapore", "TH": "Thailand", "TR": "Turkey", "TW": "Taiwan",
+    "UA": "Ukraine", "US": "United States", "VN": "Vietnam", "ZA": "South Africa",
 }
 
 
@@ -64,7 +66,9 @@ COUNTRY_POS = {"US": (39, -98), "CA": (56, -106), "GB": (54, -2), "SE": (62, 16)
                "SG": (1, 104), "AU": (-25, 134), "MX": (23, -102), "CO": (4, -73), "PE": (-10, -76), "BR": (-10, -52),
                "CL": (-33, -71), "AR": (-34, -64), "EG": (26, 30), "GH": (8, -1), "NG": (9, 8), "ZA": (-29, 24), "TR": (39, 35),
                "IL": (31.5, 35), "SA": (24, 45), "AE": (24, 54), "NZ": (-41, 174), "TW": (23.7, 121), "PK": (30, 70),
-               "BD": (24, 90), "MY": (4, 102), "TH": (15, 101), "VN": (16, 107), "ID": (-2, 118), "PH": (12, 122)}
+               "BD": (24, 90), "MY": (4, 102), "TH": (15, 101), "VN": (16, 107), "ID": (-2, 118), "PH": (12, 122), "IE": (53, -8),
+               "NL": (52, 5), "CH": (47, 8), "AT": (47.5, 14.5), "PT": (39.5, -8), "IT": (42.5, 12.5), "NO": (61, 9), "DK": (56, 10),
+               "FI": (63, 26), "EE": (59, 25), "PL": (52, 19), "CZ": (49.8, 15.5), "HU": (47, 19.5), "UA": (49, 32), "RU": (55.8, 37.6)}
 MAP_W, MAP_H = 170, 70
 
 

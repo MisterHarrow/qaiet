@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel>
+        <title>Nieuws, achtergronden en onderzoeksjournalistiek - NRC</title>
+        <description>Nieuws, achtergronden en onderzoeksjournalistiek</description>
+        <link>https://www.nrc.nl/</link>
+        <atom:link href="https://www.nrc.nl/rss/" rel="self" type="application/rss+xml" />
+        <copyright>Mediahuis NRC BV, Amsterdam. Deze RSS-feed is uitsluitend bedoeld voor persoonlijk, niet-commercieel gebruik. Op ieder gebruik van RSS-feeds van NRC zijn de Leveringsvoorwaarden van toepassing: https://www.nrc.nl/leveringsvoorwaarden/.</copyright>
+        <image>
+            <link>https://www.nrc.nl/</link>
+            <url>https://assets.nrc.nl/static/front/img/nrc-logo.svg</url>
+            <title>Nieuws, achtergronden en onderzoeksjournalistiek - NRC</title>
+            <description>Nieuws, achtergronden en onderzoeksjournalistiek</description>
+        </image>
+        <ttl>5</ttl>
+
+            <item>
+                <title><![CDATA[Dat Jensen Huang ineens een katoenen jasje droeg viel op: techbro’s zweren bij leren jasjes ]]></title>
+                <description>
+                    <![CDATA[ Na twintig jaar vrijwel alleen maar leren jasjes te hebben gedragen, sprak Jensen Huang zijn medewerkers deze week toe in een nederig katoenen jasje. Wat wil hij daarmee zeggen? En waarom houden tech-ceo’s zo van leren jasjes? ]]>
+                </description>
+                <pubDate>Thu, 26 Nov 2026 11:20:16 +0100</pubDate>
+                    <enclosure url="https://images.nrc.nl/lqQcaWndI4QSqY7OS2_pm9z_ySM=/1280x/filters:no_upscale()/s3/static.nrc.nl/wp-content/uploads/2026/11/26090426/261126CUL_2039065854_meaculpa.jpg"
+                               length="0" type="image/jpeg"/>
+                    <category domain="index/block">Cultuur</category>
+                <link>https://www.nrc.nl/nieuws/2026/11/26/dat-jensen-huang-ineens-een-katoenen-jasje-droeg-viel-op-techbros-zweren-bij-leren-jasjes-a4942305</link>
+                <guid isPermaLink="false">http://www.nrc.nl/4942305</guid>
+
+            </item>
+            <item>
+                <title><![CDATA[Zonder &#8216;rijwindkoeling&#8217; gaan alle kippen hijgen, zei de pluimveehouder ]]></title>
+                <description>
+                    <![CDATA[ <p>In het slachthuis zag de inspecteur dat de aangevoerde kuikens veel te weinig plek hadden. Niet alleen de slachterij kreeg een boete, ook de pluimveehouder. Maar hij vond het zijn verantwoordelijkheid niet en ging in beroep.</p> ]]>
+                </description>
+                <pubDate>Thu, 26 Nov 2026 11:17:44 +0100</pubDate>
+                    <enclosure url="https://images.nrc.nl/rWk6CbAKLO_1-kz0J60exzL72Po=/1280x/filters:no_upscale()/s3/static.nrc.nl/wp-content/uploads/2026/11/25113016/261126ECO_2038942941_-web2.jpg"
+                               length="0" type="image/jpeg"/>
+                    <category domain="index/block">Economie</category>
+                <link>https://www.nrc.nl/nieuws/2026/11/26/zonder-rijwindkoeling-gaan-alle-kippen-hijgen-zei-de-pluimveehouder-a4942098</link>
+                <guid isPermaLink="false">http://www.nrc.nl/4942098</guid>
+
+            </item>
+            <item>
+                <title><![CDATA[Dubbelfunctie Yesilgöz schuurt, zegt oud-partijvoorzitter Christianne van der Wal: ‘Heel veel VVD-leden voelen ongemak’ ]]></title>
+                <description>
+                    <![CDATA[ Binnen de VVD klinkt steeds meer onvrede over de dubbelfunctie van Dilan Yesilgöz als partijleider en minister. Nadat gedeputeerden eerder deze week kritiek uitten, besprak oud-minister en oud-voorzitter Christianne van der Wal haar zorgen bij Pauw en de Wit. ]]>
+                </description>
+                <pubDate>Thu, 26 Nov 2026 08:40:41 +0100</pubDate>
+                    <enclosure url="https://images.nrc.nl/752eXg-dC0ddxgo69mpUOZPI4Gs=/1280x/filters:no_upscale()/s3/static.nrc.nl/wp-content/uploads/2026/11/26073014/261126VER_2039089411_dilan.jpg"
+                               length="0" type="image/jpeg"/>
+                    <category domain="index/block">Vandaag</category>
+                <link>https://www.nrc.nl/nieuws/2026/11/26/dubbelfunctie-yesilgozschuurt-zegt-oud-partijvoorzitter-christianne-van-der-wal-heel-veel-leden-voelen-ongemak-a4942343</link>
+                <guid isPermaLink="false">http://www.nrc.nl/4942343</guid>
+
+            </item>
+            <item>
+                <title><![CDATA[Bij de noodzakelijke verbouwing van de wetenschap ontstaat ook ruimte voor gekke ideeën ]]></title>
+                <description>
+                    <![CDATA[ <p>De toekomst is aan AI en individuele wetenschappers, denkt het Witte Huis. Universiteiten nemen te weinig risico. Die visie op de ‘nieuwe gouden eeuw’ is niet helemáál fout.</p> ]]>
+                </description>
+                <pubDate>Thu, 26 Nov 2026 07:00:00 +0100</pubDate>
+                    <enclosure url="https://images.nrc.nl/ZUMaliFo0lRnoZ5gBRyHCv5FG1M=/1280x/filters:no_upscale():format(jpeg):fill(f8f8f8,true)/s3/static.nrc.nl/taxonomy/31c3a62-DijkgraafRobbert1280.png"
+                               length="0" type="image/jpeg"/>
+                    <category domain="index/block">Wetenschap</category>
+                <link>https://www.nrc.nl/nieuws/2026/11/26/bij-de-noodzakelijke-verbouwing-van-de-wetenschap-ontstaat-ook-ruimte-voor-gekke-ideeen-a4942155</link>
+                <guid isPermaLink="false">http://www.nrc.nl/4942155</guid>
+
+            </item>
+            <item>
+                <title><![CDATA[17 procent van de lhbtqia+ mensen ervaart discriminatie, anderhalf keer meer dan de rest van de bevolking ]]></title>
+                <description>
+                    <![CDATA[ Lhbtqia+ personen voelen zich vaker gediscrimineerd – ook door instanties en professionals zoals artsen. „Dat is extra schrijnend als je bedenkt dat interseks, trans- en non-binaire personen meer met de zorg te maken hebben.” ]]>
+                </description>
+                <pubDate>Thu, 26 Nov 2026 06:30:00 +0100</pubDate>
+                    <enclosure url="https://images.nrc.nl/-p__cFfD0kx_KeQ4qzRSzj8WPDw=/1280x/filters:no_upscale()/s3/static.nrc.nl/wp-content/uploads/2026/11/25200909/251126BIN_2039069023_-regenboog.jpg"
+                               length="0" type="image/jpeg"/>
+                    <category domain="index/block">Vandaag</category>
+                <link>https://www.nrc.nl/nieuws/2026/11/26/17-procent-van-de-lhbtqia-mensen-ervaart-discriminatie-anderhalf-keer-meer-dan-de-rest-van-de-bevolking-a4942298</link>
+                <guid isPermaLink="false">http://www.nrc.nl/4942298</guid>
+
+            </item>
+
+    </channel>
+</rss>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+  xmlns:orfon="http://rss.orf.at/1.0/"
+  xmlns="http://purl.org/rss/1.0/"
+>
+<channel rdf:about="https://orf.at/">
+   <title>news.ORF.at</title>
+   <link>https://orf.at/</link>
+   <dc:date>2026-11-26T11:23:58+01:00</dc:date>
+      <description>Die aktuellsten Nachrichten auf einen Blick - aus Österreich und der ganzen Welt. In Text, Bild und Video.</description>
+   <dc:publisher>ORF Österreichischer Rundfunk, Wien</dc:publisher>
+   <dc:creator>ORF Online und Teletext GmbH &amp; Co KG</dc:creator>
+   <dc:language>de</dc:language>
+   <dc:rights>Copyright &#169; 2026 ORF Online und Teletext GmbH &amp; Co KG</dc:rights>
+   <sy:updatePeriod>hourly</sy:updatePeriod>
+   <sy:updateFrequency>2</sy:updateFrequency>
+   <sy:updateBase>2000-01-01T00:00:00Z</sy:updateBase>
+   <orfon:site>news.ORF.at</orfon:site>
+
+
+
+   <items>
+      <rdf:Seq>
+         <rdf:li rdf:resource="https://orf.at/stories/3449328/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3449323/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3449305/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3449320/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3449317/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3449309/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3449304/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3449303/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3449302/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3449301/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3449300/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3449021/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3449297/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3449035/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3449296/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3449294/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3449293/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3449233/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3449290/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3449289/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3449288/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3449285/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3449234/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3449282/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3449280/" />
+
+
+      </rdf:Seq>
+   </items>
+</channel>
+<item rdf:about="https://orf.at/stories/3449328/">
+   <title>Verletzte nach Explosion in Raffinerie in Bangkok</title>
+   
+   <link>https://orf.at/stories/3449328/</link>
+   <dc:subject>Chronik</dc:subject>
+   <dc:date>2026-11-26T11:23:58+01:00</dc:date>
+
+   <orfon:usid>news:3449328</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Nachrichten/Chronik" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3449323/">
+   <title>Tote bei israelischen Angriffen im Gazastreifen</title>
+   
+   <link>https://orf.at/stories/3449323/</link>
+   <dc:subject>Ausland</dc:subject>
+   <dc:date>2026-11-26T10:54:48+01:00</dc:date>
+
+   <orfon:usid>news:3449323</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Politik/PolitikAusland" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3449305/">
+   <title>Moskau soll Ukraine-Krieg nicht „ausweiten“</title>
+   <description>US-Präsident Donald Trump und NATO-Generalsekretär Mark Rutte haben an Russland appelliert, den Krieg in der Ukraine nicht „auszuweiten“. Es müsse so schnell wie möglich eine Friedenslösung gefunden werden, erklärten sie nach ihrem Treffen auf Trumps Anwesen Mar-a-Lago in Florida am Mittwoch (Ortszeit). Der Krieg ging währenddessen mit gegenseitigen Angriffen unvermindert weiter.</description>
+   <link>https://orf.at/stories/3449305/</link>
+   <dc:subject>Ausland</dc:subject>
+   <dc:date>2026-11-26T10:03:33+01:00</dc:date>
+
+   <orfon:usid>news:3449305</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Politik/PolitikAusland" />
+   <orfon:storyType rdf:resource="urn:orfon:type:story" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3449320/">
+   <title>Unis fordern Neuverhandlung über Budget</title>
+   
+   <link>https://orf.at/stories/3449320/</link>
+   <dc:subject>Inland</dc:subject>
+   <dc:date>2026-11-26T10:01:23+01:00</dc:date>
+
+   <orfon:usid>news:3449320</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Politik/PolitikInland" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3449317/">
+   <title>Nehammer in Pilnacek-U-Ausschuss</title>
+   
+   <link>https://orf.at/stories/3449317/</link>
+   <dc:subject>Inland</dc:subject>
+   <dc:date>2026-11-26T09:47:44+01:00</dc:date>
+
+   <orfon:usid>news:3449317</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Politik/PolitikInland" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+
+</rdf:RDF>
+
+

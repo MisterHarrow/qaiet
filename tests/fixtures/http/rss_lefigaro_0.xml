@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+    <channel>
+        <atom:link href="https://www.lefigaro.fr/rss/figaro_secteur_high-tech.xml" rel="self" type="application/rss+xml"/>
+        <category>Tech &amp; Web</category>
+        <title>Le Figaro - Actualités High Tech, nouveautés Web &amp; mobile par Le Figaro</title>
+        <description>High-Tech : Retrouvez l&#039;actualité du web, high-tech, nouvelles technologies, jeux vidéos, réseaux sociaux, blog smartphone, iphone, sur Le Figaro</description>
+        <link>http://www.lefigaro.fr</link>
+        <language>fr</language>
+        <copyright>Droits de reproduction et de diffusion réservés LeFigaro.fr</copyright>
+        <lastBuildDate>Thu, 26 Nov 2026 11:26:23 +0100</lastBuildDate>
+        <docs>https://www.lefigaro.fr/rss</docs>
+        <image>
+            <title>Le Figaro - Actualités High Tech, nouveautés Web &amp; mobile par Le Figaro</title>
+            <url>https://static.lefigaro.fr/common/logos/logo-150x150.png</url>
+            <link>http://www.lefigaro.fr</link>
+            <description>High-Tech : Retrouvez l&#039;actualité du web, high-tech, nouvelles technologies, jeux vidéos, réseaux sociaux, blog smartphone, iphone, sur Le Figaro</description>
+        </image>
+
+                    <item>
+                <guid>https://www.lefigaro.fr/secteur/high-tech/pannes-informatiques-en-serie-comment-l-urgence-imposee-par-l-ia-met-internet-et-les-entreprises-sous-pression-20261125</guid>
+                <title>Pannes informatiques en série : comment l’urgence imposée par l’IA met Internet et les entreprises sous pression</title>
+                                <link>https://www.lefigaro.fr/secteur/high-tech/pannes-informatiques-en-serie-comment-l-urgence-imposee-par-l-ia-met-internet-et-les-entreprises-sous-pression-20261125</link>
+                                    <description>DÉCRYPTAGE - De nombreuses perturbations de systèmes et applications ont semé la pagaille des deux côtés de l’Atlantique ces derniers temps. Résultat d’un cocktail d’ingrédients, ces pannes risquent de se multiplier à l’avenir.</description>
+                                                    <category>Tech &amp; Web</category>
+                                <pubDate>Wed, 25 Nov 2026 15:20:44 +0100</pubDate>
+
+                                                            <media:content url="https://i.f1g.fr/media/cms/3000x1949_crop/2026/11/24/944c9084277b47a467827cc72389d1c4cd0b8642645ca61cd330b8dfc91dd1ec.jpg" width="3000" height="1949">
+                            <media:description type="plain">Plus de 100 000 vulnérabilités ont été divulguées cette année, soit plus du double du total de 2025, et l’équivalent de l’ensemble des failles recensées entre 2000 et 2018. Une accélération permise par les modèles d’IA de pointe.</media:description>
+                            <media:credit>Kacper Pempel / REUTERS</media:credit>
+                        </media:content>
+                                    
+                            </item>
+                    <item>
+                <guid>https://www.lefigaro.fr/secteur/high-tech/simulateur-de-cocus-comment-gta-vi-fait-paniquer-les-joueurs-masculinistes-20261125</guid>
+                <title>« Simulateur de cocus » : comment GTA VI fait paniquer les joueurs masculinistes</title>
+                                <link>https://www.lefigaro.fr/secteur/high-tech/simulateur-de-cocus-comment-gta-vi-fait-paniquer-les-joueurs-masculinistes-20261125</link>
+                                    <description>DÉCRYPTAGE - Accusé de ne pas être assez viril, Jason, l’un des deux protagonistes du dernier blockbuster de Rockstar est la cible d’attaques issues de la mouvance masculiniste, qui s’immisce dans la notation du jeu.</description>
+                                                    <category>Tech &amp; Web</category>
+                                <pubDate>Wed, 25 Nov 2026 10:53:07 +0100</pubDate>
+
+                                                            <media:content url="https://i.f1g.fr/media/cms/3000x2109_crop/2026/11/24/7da3f8eabd6a60670932663b66c4f6bf3d8f0b7a4317252f6281a9403d3b87aa.jpg" width="3000" height="2109">
+                            <media:description type="plain">Des joueurs issus de la mouvance masculiniste s’en prennent aux personnages du dernier GTA.</media:description>
+                            <media:credit>Isabel Infantes / REUTERS</media:credit>
+                        </media:content>
+                                    
+                            </item>
+                    <item>
+                <guid>https://www.lefigaro.fr/secteur/high-tech/affaire-nvidia-l-intervention-de-donald-trump-en-faveur-de-jensen-huang-tourne-a-l-affaire-d-etat-20261124</guid>
+                <title>Affaire Nvidia : l’intervention de Donald Trump en faveur de Jensen Huang tourne à l’affaire d’État</title>
+                                <link>https://www.lefigaro.fr/secteur/high-tech/affaire-nvidia-l-intervention-de-donald-trump-en-faveur-de-jensen-huang-tourne-a-l-affaire-d-etat-20261124</link>
+                                    <description>RÉCIT - L’appui du président américain pour le retour du PDG évincé le 12 novembre suscite des réactions indignées au Congrès, qui doit auditionner le dirigeant du géant mondial des puces électroniques début décembre.</description>
+                                                    <category>Tech &amp; Web</category>
+                                <pubDate>Wed, 25 Nov 2026 09:44:33 +0100</pubDate>
+
+                                                            <media:content url="https://i.f1g.fr/media/cms/1536x1024_crop/2026/11/24/cac9fc5849a0345f4e2fd8cb3ee8719e9bc428b9e5280112b12076dfc7ec518e.jpg" width="1536" height="1024">
+                            <media:description type="plain">Lundi, Jensen Huang réintègre ses fonctions précédentes chez Nvidia, au siège de Santa Clara, en Californie.</media:description>
+                            <media:credit>HANDOUT / AFP</media:credit>
+                        </media:content>
+                                    
+                            </item>
+                    <item>
+                <guid>https://www.lefigaro.fr/societes/ter-intercites-eurostar-ouigo-uber-evolue-et-permet-a-ses-utilisateurs-de-reserver-des-billets-de-train-20261124</guid>
+                <title>TER, Intercités, Eurostar, Ouigo… Uber évolue et permet à ses utilisateurs de réserver des billets de train</title>
+                                <link>https://www.lefigaro.fr/societes/ter-intercites-eurostar-ouigo-uber-evolue-et-permet-a-ses-utilisateurs-de-reserver-des-billets-de-train-20261124</link>
+                                    <description>DÉCRYPTAGE - L’application américaine, qui étend toujours plus ses services, veut « accompagner les voyageurs de A à Z ».</description>
+                                                    <category>Entreprises</category>
+                                <pubDate>Tue, 24 Nov 2026 20:30:00 +0100</pubDate>
+
+                                                            <media:content url="https://i.f1g.fr/media/cms/3000x1688_crop/2026/11/24/68b29d0d51083c431b3b17455a1593d922ed502f925d69e520c17fb105b727ac.jpg" width="3000" height="1688">
+                            <media:description type="plain">La plateforme souhaite devenir « le compagnon de voyage des Français ».</media:description>
+                            <media:credit>Diego / ADOBE STOCK</media:credit>
+                        </media:content>
+                                    
+                            </item>
+                    <item>
+                <guid>https://www.lefigaro.fr/secteur/high-tech/too-big-to-fail-derriere-le-retour-de-jensen-huang-l-ultradependance-de-l-amerique-a-l-ia-20261124</guid>
+                <title>« Too big to fail » : derrière le retour de Jensen Huang, l’ultradépendance de l’Amérique à l’IA</title>
+                                <link>https://www.lefigaro.fr/secteur/high-tech/too-big-to-fail-derriere-le-retour-de-jensen-huang-l-ultradependance-de-l-amerique-a-l-ia-20261124</link>
+                                    <description>ANALYSE - Appuyée directement par Donald Trump, la réintégration du fondateur et directeur général de Nvidia, onze jours après sa démission, illustre à quel point le secteur de l’IA reste dépendant de son parrain. Et l’économie américaine de son champion technologique.</description>
+                                                    <category>Tech &amp; Web</category>
+                                <pubDate>Tue, 24 Nov 2026 20:12:45 +0100</pubDate>
+
+                                                            <media:content url="https://i.f1g.fr/media/cms/1218x685_crop/2026/11/24/d0413f4afabdcfa49e9471ede02164e7f939d6e956a6e3cc23e46fcc2a56c327.jpg" width="1218" height="685">
+                            <media:description type="plain">Le retour du directeur général a été salué par ses employés en interne. </media:description>
+                            <media:credit>Zhengzhong Tu / Zhengzhong Tu via REUTERS</media:credit>
+                        </media:content>
+                                    
+                            </item>
+            </channel>
+</rss>

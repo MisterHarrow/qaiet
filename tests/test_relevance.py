@@ -40,6 +40,11 @@ def test_keyword_verdicts():
               "الذكاء الاصطناعي في مصر", "एआई से नौकरियां", "Yapay zekâ ve eğitim", "Kecerdasan buatan di sekolah",
               "Trí tuệ nhân tạo thay đổi việc làm", "삼성, AI 반도체 투자"]:
         assert v(title=t) == (True, "keyword"), t
+    for t in ["L’intelligenza artificiale cambia il lavoro", "Kabinet wil regels voor kunstmatige intelligentie",
+              "Regjeringen satser på kunstig intelligens", "Tekoäly mullistaa koulut", "Sztuczna inteligencja w szkołach",
+              "Umělá inteligence a práce", "A mesterséges intelligencia hatása", "Штучний інтелект у школах", "Як ШІ змінює роботу"]:
+        assert v(title=t) == (True, "keyword"), t
+    assert v(title="ШІСТЬ новин") == (False, "keyword")  # the Ukrainian acronym only as a word of its own
     assert v(title="半导体出口管制") == (None, "ambiguous")
     assert v(title="KIA launches a new EV") == (False, "keyword")  # KI (German for AI) only as a word of its own
     assert v(title="東京で大雨") == (False, "keyword")

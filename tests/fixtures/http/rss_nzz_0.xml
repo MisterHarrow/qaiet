@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Technologie – News, Hintergründe &amp; Kommentare | NZZ</title>
+    <link>https://www.nzz.ch/technologie/</link>
+    <description>Nachrichten, Hintergründe &amp; Kommentare aus der Welt der Technologie.</description>
+    <language>de-ch</language>
+    <copyright>Copyright ©Neue Zürcher Zeitung AG. Alle Rechte vorbehalten. Eine Weiterverarbeitung, Wiederveröffentlichung oder dauerhafte Speicherung zu gewerblichen oder anderen Zwecken ohne vorherige ausdrückliche Erlaubnis von Neue Zürcher Zeitung ist nicht gestattet.</copyright>
+    <item>
+      <title>PODCAST «NZZ GEOPOLITIK» - Von Nvidia bis zur ETH: Wie China uns seit Jahrzehnten systematisch ausspioniert</title>
+      <description>Die Affäre um den Nvidia-Chef Jensen Huang zeige eindrücklich, mit welcher Konsequenz China zur technologischen Weltmacht aufsteigen wolle, sagt die China-Expertin Ariane Knüsel im Podcast. Und zeigt auf, mit welchen Methoden Peking operiert und weshalb der Westen immer wieder darauf hereinfällt.</description>
+      <media:thumbnail width="200" height="200" url="https://img-msp-prod.nzz.ch/2026/11/24/45d55303-d092-4483-8f4a-a1ce529c5687.jpg?width=200&amp;height=200&amp;fit=bounds&amp;quality=75&amp;auto=webp&amp;crop=3000,3000,x0,y0"/>
+      <link>https://www.nzz.ch/podcast/von-nvidia-bis-zur-eth-wie-china-uns-seit-jahrzehnten-systematisch-ausspioniert-ld.10073560</link>
+      <pubDate>Wed, 25 Nov 2026 04:30:00 GMT</pubDate>
+      <guid isPermaLink="false">ld.10073560</guid>
+    </item>
+    <item>
+      <title>PODCAST «NZZ AKZENT» - Jensen Huangs zweite Chance: Wird sie zum Problem für Nvidia und die KI-Branche?</title>
+      <description>Bei vielen ist die Freude über die Rückkehr des Nvidia-Chefs gross. Doch die Affären und Probleme sind damit nicht ausgestanden. Rechtfertigt Huangs Stellung das Risiko?</description>
+      <media:thumbnail width="200" height="200" url="https://img-msp-prod.nzz.ch/2026/11/23/f5dd044a-0ca8-4534-ae97-d539ab04ae63.jpg?width=200&amp;height=200&amp;fit=bounds&amp;quality=75&amp;auto=webp&amp;crop=3000,3000,x0,y0"/>
+      <link>https://www.nzz.ch/podcast/akzent/jensen-huangs-zweite-chance-wird-sie-zum-problem-fuer-nvidia-und-die-ki-branche-ld.10072800</link>
+      <pubDate>Tue, 24 Nov 2026 16:50:00 GMT</pubDate>
+      <guid isPermaLink="false">ld.10072800</guid>
+    </item>
+    <item>
+      <title>Die Grossmächte USA und Russland zögern ein Verbot von Killerrobotern hinaus</title>
+      <description>Eine fünftägige Konferenz der Uno-Waffenkonvention endet in Genf mit einem vagen Kompromiss. Sind die Vereinten Nationen erneut gescheitert? Und wie geht es jetzt weiter?</description>
+      <media:thumbnail width="200" height="200" url="https://img-msp-prod.nzz.ch/2026/11/22/98be3311-d531-4064-a445-c86e1ca086ef.jpg?width=200&amp;height=200&amp;fit=bounds&amp;quality=75&amp;auto=webp&amp;crop=4480,4480,x1786,y0"/>
+      <link>https://www.nzz.ch/technologie/die-grossmaechte-usa-und-russland-zoegern-ein-verbot-von-killerrobotern-hinaus-ld.10070079</link>
+      <pubDate>Sun, 22 Nov 2026 04:24:00 GMT</pubDate>
+      <guid isPermaLink="false">ld.10070079</guid>
+    </item>
+    <item>
+      <title>KOMMENTAR - Schweizer Abstimmungen: Chat-GPT taugt nicht für die Meinungsbildung</title>
+      <description>Befragt man KI-Chatbots zu Abstimmungsvorlagen, würden sie idealerweise alle Optionen neutral darstellen. Beim meistgenutzten Dienst passiert das noch nicht zuverlässig. Wer KI-Dienste zur Meinungsbildung heranzieht, muss sich bewusst sein, dass sie eine eigene politische Linie haben.</description>
+      <media:thumbnail width="200" height="200" url="https://img-msp-prod.nzz.ch/2026/11/18/6c19e553-1781-41df-9a3e-1719b114c225.jpg?width=200&amp;height=200&amp;fit=bounds&amp;quality=75&amp;auto=webp&amp;crop=5504,5504,x2039,y0"/>
+      <link>https://www.nzz.ch/meinung/schweizer-abstimmungen-chat-gpt-taugt-nicht-fuer-die-meinungsbildung-ld.10069897</link>
+      <pubDate>Sat, 21 Nov 2026 04:30:00 GMT</pubDate>
+      <guid isPermaLink="false">ld.10069897</guid>
+    </item>
+    <item>
+      <title>Warnungen vor katastrophalen Folgen von KI überschatten den Börsengang von Anthropic</title>
+      <description>Sicherheitsforscher schlagen Alarm. Sie sorgen sich wegen KI, der der Mensch nicht mehr hinterherkommt. Ironischerweise profitieren sie selbst vom Boom der Branche. Ein Stimmungsbericht aus dem Silicon Valley.</description>
+      <media:thumbnail width="200" height="200" url="https://img-msp-prod.nzz.ch/2026/11/19/4ddc5be3-b9b2-4555-9712-2bc835c9d620.jpg?width=200&amp;height=200&amp;fit=bounds&amp;quality=75&amp;auto=webp&amp;crop=2001,2001,x472,y0"/>
+      <link>https://www.nzz.ch/technologie/warnungen-vor-katastrophalen-folgen-von-ki-ueberschatten-den-boersengang-von-anthropic-ld.10069116</link>
+      <pubDate>Sat, 21 Nov 2026 04:30:00 GMT</pubDate>
+      <guid isPermaLink="false">ld.10069116</guid>
+    </item>
+  </channel>
+</rss>

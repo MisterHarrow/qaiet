@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="https://www.w3.org/2005/Atom"><channel><title>TASS</title>
+<description>TASS News Agency</description>
+<language>en</language>
+<link><![CDATA[https://tass.com]]></link>
+<copyright>TASS</copyright>
+<image><url><![CDATA[https://tass.com/i/rss/en/logo.png]]></url>
+<title>TASS</title>
+<link><![CDATA[https://tass.com]]></link>
+</image>
+<atom:link href="https://tass.com/rss/v2.xml" rel="self" type="application/rss+xml"></atom:link>
+<item><title>Russian Embassy in US congratulates Ovechkin with Washington Caps new record in assists</title>
+<link><![CDATA[https://tass.com/sports/2225183]]></link>
+<guid><![CDATA[https://tass.com/sports/2225183]]></guid>
+<pubDate>Thu, 26 Nov 2026 13:21:46 +0300</pubDate>
+<description>The team organized a ceremony dedicated to Alexander Ovechkin’s club record</description>
+<category>Sports</category>
+</item>
+<item><title>As many as 63% of employed Russians support using AI in their work — pollster</title>
+<link><![CDATA[https://tass.com/society/2225177]]></link>
+<guid><![CDATA[https://tass.com/society/2225177]]></guid>
+<pubDate>Thu, 26 Nov 2026 13:16:25 +0300</pubDate>
+<description>According to the survey, 36% of respondents had used AI for work over the past year</description>
+<category>Society &amp; Culture</category>
+</item>
+<item><title>International AI conference kicks off in Moscow</title>
+<link><![CDATA[https://tass.com/economy/2225175]]></link>
+<guid><![CDATA[https://tass.com/economy/2225175]]></guid>
+<pubDate>Thu, 26 Nov 2026 13:13:53 +0300</pubDate>
+<description>More than 30 international AI experts will deliver presentations at the event</description>
+<category>Business &amp; Economy</category>
+<category>Internet &amp; Telecom</category>
+</item>
+<item><title>Russia, Ukraine may hold prisoner swap soon — Kremlin</title>
+<link><![CDATA[https://tass.com/politics/2225171]]></link>
+<guid><![CDATA[https://tass.com/politics/2225171]]></guid>
+<pubDate>Thu, 26 Nov 2026 13:08:36 +0300</pubDate>
+<description>Dmitry Peskov declined to give a date or specify how many people might be exchanged</description>
+<category>FOREIGN POLICY</category>
+<category>Russian Politics &amp; Diplomacy</category>
+</item>
+<item><title>Press review: France open to talks with Moscow as EU prepares new sanctions on Russia</title>
+<link><![CDATA[https://tass.com/pressreview/2225057]]></link>
+<guid><![CDATA[https://tass.com/pressreview/2225057]]></guid>
+<pubDate>Thu, 26 Nov 2026 13:00:00 +0300</pubDate>
+<description>Top stories from the Russian press on Thursday, November 26th</description>
+<category>Press Review</category>
+</item>
+</channel>
+</rss>

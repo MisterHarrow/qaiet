@@ -497,6 +497,12 @@
   "status": 200,
   "url": "https://www.amarujala.com/rss/technology.xml"
  },
+ "rss:ansa:0": {
+  "content_type": "text/xml; charset=utf-8",
+  "file": "rss_ansa_0.xml",
+  "status": 200,
+  "url": "https://www.ansa.it/sito/ansait_rss.xml"
+ },
  "rss:antara:0": {
   "content_type": "text/xml",
   "file": "rss_antara_0.xml",
@@ -671,11 +677,23 @@
   "status": 200,
   "url": "https://deepmind.google/blog/rss.xml"
  },
+ "rss:derstandard:0": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_derstandard_0.xml",
+  "status": 200,
+  "url": "https://www.derstandard.at/rss/web"
+ },
  "rss:di:0": {
   "content_type": "application/rss+xml; charset=utf-8",
   "file": "rss_di_0.xml",
   "status": 200,
   "url": "https://www.di.se/rss"
+ },
+ "rss:digi:0": {
+  "content_type": "text/xml;charset=UTF-8",
+  "file": "rss_digi_0.xml",
+  "status": 200,
+  "url": "https://www.digi.no/rss"
  },
  "rss:digitimes:0": {
   "content_type": "text/xml",
@@ -695,6 +713,18 @@
   "status": 200,
   "url": "https://www.dn.se/rss/ekonomi/"
  },
+ "rss:dou:0": {
+  "content_type": "application/rss+xml; charset=utf-8",
+  "file": "rss_dou_0.xml",
+  "status": 200,
+  "url": "https://dou.ua/feed/"
+ },
+ "rss:dr:0": {
+  "content_type": "application/rss+xml; charset=utf-8",
+  "file": "rss_dr_0.xml",
+  "status": 200,
+  "url": "https://www.dr.dk/nyheder/service/feeds/allenyheder"
+ },
  "rss:dw:0": {
   "content_type": "text/xml; charset=UTF-8",
   "file": "rss_dw_0.xml",
@@ -707,11 +737,23 @@
   "status": 200,
   "url": "https://www.dwarkesh.com/feed"
  },
+ "rss:e24:0": {
+  "content_type": "application/xml",
+  "file": "rss_e24_0.xml",
+  "status": 200,
+  "url": "https://e24.no/rss2/"
+ },
  "rss:e27:0": {
   "content_type": "application/rss+xml; charset=UTF-8",
   "file": "rss_e27_0.xml",
   "status": 200,
   "url": "https://e27.co/feed/"
+ },
+ "rss:eco:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_eco_0.xml",
+  "status": 200,
+  "url": "https://eco.sapo.pt/feed/"
  },
  "rss:economist:0": {
   "content_type": "text/xml",
@@ -761,6 +803,12 @@
   "status": 200,
   "url": "https://epoch.ai/atom.xml"
  },
+ "rss:err:0": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_err_0.xml",
+  "status": 200,
+  "url": "https://news.err.ee/rss"
+ },
  "rss:et:0": {
   "content_type": "text/xml;charset=UTF-8",
   "file": "rss_et_0.xml",
@@ -772,6 +820,12 @@
   "file": "rss_etnews_0.xml",
   "status": 200,
   "url": "https://rss.etnews.com/Section901.xml"
+ },
+ "rss:euobserver:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_euobserver_0.xml",
+  "status": 200,
+  "url": "https://euobserver.com/feed/"
  },
  "rss:exame:0": {
   "content_type": "text/xml",
@@ -790,6 +844,18 @@
   "file": "rss_expview_0.xml",
   "status": 200,
   "url": "https://www.exponentialview.co/feed"
+ },
+ "rss:faz:0": {
+  "content_type": "application/xml; charset=UTF-8",
+  "file": "rss_faz_0.xml",
+  "status": 200,
+  "url": "https://www.faz.net/rss/aktuell/"
+ },
+ "rss:fd:0": {
+  "content_type": "application/rss+xml;charset=UTF-8",
+  "file": "rss_fd_0.xml",
+  "status": 200,
+  "url": "https://fd.nl/?rss"
  },
  "rss:fmt:0": {
   "content_type": "application/rss+xml; charset=utf-8",
@@ -820,6 +886,12 @@
   "file": "rss_france24_0.xml",
   "status": 200,
   "url": "https://www.france24.com/en/rss"
+ },
+ "rss:franceinfo:0": {
+  "content_type": "text/xml; charset=UTF-8",
+  "file": "rss_franceinfo_0.xml",
+  "status": 200,
+  "url": "https://www.francetvinfo.fr/internet.rss"
  },
  "rss:freepress:0": {
   "content_type": "application/xml; charset=utf-8",
@@ -911,6 +983,12 @@
   "status": 200,
   "url": "https://huggingface.co/blog/feed.xml"
  },
+ "rss:hs:0": {
+  "content_type": "text/xml; charset=UTF-8",
+  "file": "rss_hs_0.xml",
+  "status": 200,
+  "url": "https://www.hs.fi/rss/tuoreimmat.xml"
+ },
  "rss:hyperdimensional:0": {
   "content_type": "application/xml; charset=utf-8",
   "file": "rss_hyperdimensional_0.xml",
@@ -958,6 +1036,12 @@
   "file": "rss_iol_0.xml",
   "status": 200,
   "url": "https://www.iol.co.za/rss"
+ },
+ "rss:irishtimes:0": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_irishtimes_0.xml",
+  "status": 200,
+  "url": "https://www.irishtimes.com/arc/outboundfeeds/feed-business/?outputType=xml"
  },
  "rss:ithome:0": {
   "content_type": "text/xml; charset=utf-8",
@@ -1025,11 +1109,29 @@
   "status": 200,
   "url": "https://www.latercera.com/arc/outboundfeeds/rss/?outputType=xml"
  },
+ "rss:lefigaro:0": {
+  "content_type": "application/xml",
+  "file": "rss_lefigaro_0.xml",
+  "status": 200,
+  "url": "https://www.lefigaro.fr/rss/figaro_secteur_high-tech.xml"
+ },
  "rss:lemonde:0": {
   "content_type": "application/xml; charset=UTF-8",
   "file": "rss_lemonde_0.xml",
   "status": 200,
   "url": "https://www.lemonde.fr/intelligence-artificielle/rss_full.xml"
+ },
+ "rss:liberation:0": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_liberation_0.xml",
+  "status": 200,
+  "url": "https://www.liberation.fr/arc/outboundfeeds/rss/?outputType=xml"
+ },
+ "rss:lupa:0": {
+  "content_type": "text/xml; charset=utf-8",
+  "file": "rss_lupa_0.xml",
+  "status": 200,
+  "url": "https://www.lupa.cz/rss/clanky/"
  },
  "rss:marcus:0": {
   "content_type": "application/xml; charset=utf-8",
@@ -1121,11 +1223,29 @@
   "status": 200,
   "url": "https://www.normaltech.ai/feed"
  },
+ "rss:nos:0": {
+  "content_type": "text/xml; charset=utf-8",
+  "file": "rss_nos_0.xml",
+  "status": 200,
+  "url": "https://feeds.nos.nl/nosnieuwstech"
+ },
  "rss:npr:0": {
   "content_type": "text/xml;charset=UTF-8",
   "file": "rss_npr_0.xml",
   "status": 200,
   "url": "https://feeds.npr.org/1019/rss.xml"
+ },
+ "rss:nrc:0": {
+  "content_type": "application/rss+xml;charset=utf-8",
+  "file": "rss_nrc_0.xml",
+  "status": 200,
+  "url": "https://www.nrc.nl/rss/"
+ },
+ "rss:nrk:0": {
+  "content_type": "application/xml",
+  "file": "rss_nrk_0.xml",
+  "status": 200,
+  "url": "https://www.nrk.no/toppsaker.rss"
  },
  "rss:nucleo:0": {
   "content_type": "application/rss+xml; charset=utf-8",
@@ -1157,6 +1277,18 @@
   "status": 200,
   "url": "https://www.nyteknik.se/digitalisering?lab_viewport=rss"
  },
+ "rss:nzz:0": {
+  "content_type": "text/xml; charset=utf-8",
+  "file": "rss_nzz_0.xml",
+  "status": 200,
+  "url": "https://www.nzz.ch/technologie.rss"
+ },
+ "rss:observador:0": {
+  "content_type": "text/xml; charset=utf-8",
+  "file": "rss_observador_0.xml",
+  "status": 200,
+  "url": "https://observador.pt/feed/"
+ },
  "rss:onenews:0": {
   "content_type": "application/xml; charset=utf-8",
   "file": "rss_onenews_0.xml",
@@ -1174,6 +1306,12 @@
   "file": "rss_openai_0.xml",
   "status": 200,
   "url": "https://openai.com/news/rss.xml"
+ },
+ "rss:orf:0": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_orf_0.xml",
+  "status": 200,
+  "url": "https://rss.orf.at/news.xml"
  },
  "rss:pandaily:0": {
   "content_type": "application/xml; charset=utf-8",
@@ -1217,6 +1355,12 @@
   "status": 200,
   "url": "https://www.producthunt.com/feed?category=artificial-intelligence"
  },
+ "rss:puntoinformatico:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_puntoinformatico_0.xml",
+  "status": 200,
+  "url": "https://www.punto-informatico.it/feed/"
+ },
  "rss:qbitai:0": {
   "content_type": "application/rss+xml; charset=UTF-8",
   "file": "rss_qbitai_0.xml",
@@ -1241,6 +1385,12 @@
   "status": 200,
   "url": "https://reason.com/feed/"
  },
+ "rss:repubblica:0": {
+  "content_type": "application/xml",
+  "file": "rss_repubblica_0.xml",
+  "status": 200,
+  "url": "https://www.repubblica.it/rss/tecnologia/rss2.0.xml"
+ },
  "rss:restofworld:0": {
   "content_type": "application/xml; charset=utf-8",
   "file": "rss_restofworld_0.xml",
@@ -1252,6 +1402,18 @@
   "file": "rss_rnz_0.xml",
   "status": 200,
   "url": "https://www.rnz.co.nz/rss/business.xml"
+ },
+ "rss:rp:0": {
+  "content_type": "xml",
+  "file": "rss_rp_0.xml",
+  "status": 200,
+  "url": "https://www.rp.pl/rss_main"
+ },
+ "rss:rte:0": {
+  "content_type": "application/rss+xml; charset=utf-8",
+  "file": "rss_rte_0.xml",
+  "status": 200,
+  "url": "https://www.rte.ie/feeds/rss/?index=/news/business/"
  },
  "rss:rundown:0": {
   "content_type": "application/rss+xml; charset=utf-8",
@@ -1331,11 +1493,29 @@
   "status": 200,
   "url": "https://www.smh.com.au/rss/technology.xml"
  },
+ "rss:sole24ore:0": {
+  "content_type": "text/xml",
+  "file": "rss_sole24ore_0.xml",
+  "status": 200,
+  "url": "https://www.ilsole24ore.com/rss/tecnologia.xml"
+ },
+ "rss:spidersweb:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_spidersweb_0.xml",
+  "status": 200,
+  "url": "https://spidersweb.pl/feed"
+ },
  "rss:spiegel:0": {
   "content_type": "application/rss+xml; charset=utf-8",
   "file": "rss_spiegel_0.xml",
   "status": 200,
   "url": "https://www.spiegel.de/thema/kuenstliche_intelligenz/index.rss"
+ },
+ "rss:srf:0": {
+  "content_type": "text/xml; charset=UTF-8",
+  "file": "rss_srf_0.xml",
+  "status": 200,
+  "url": "https://www.srf.ch/news/bnf/rss/1922"
  },
  "rss:startupdaily:0": {
   "content_type": "application/rss+xml; charset=UTF-8",
@@ -1367,11 +1547,29 @@
   "status": 200,
   "url": "https://www.svt.se/nyheter/ekonomi/rss.xml"
  },
+ "rss:sz:0": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_sz_0.xml",
+  "status": 200,
+  "url": "https://rss.sueddeutsche.de/rss/Digital"
+ },
+ "rss:t3n:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_t3n_0.xml",
+  "status": 200,
+  "url": "https://t3n.de/rss.xml"
+ },
  "rss:taipeitimes:0": {
   "content_type": "text/xml;charset=UTF-8",
   "file": "rss_taipeitimes_0.xml",
   "status": 200,
   "url": "https://www.taipeitimes.com/xml/index.rss"
+ },
+ "rss:tass:0": {
+  "content_type": "application/rss+xml, application/rdf+xml;q=0.8, application/atom+xml;q=0.6, application/xml;q=0.4, text/xml;q=0.4; charset=utf-8",
+  "file": "rss_tass_0.xml",
+  "status": 200,
+  "url": "https://tass.com/rss/v2.xml"
  },
  "rss:techcabal:0": {
   "content_type": "application/rss+xml; charset=UTF-8",
@@ -1427,6 +1625,12 @@
   "status": 200,
   "url": "https://www.telegraph.co.uk/business/rss.xml"
  },
+ "rss:telex:0": {
+  "content_type": "text/xml; charset=UTF-8",
+  "file": "rss_telex_0.xml",
+  "status": 200,
+  "url": "https://telex.hu/rss"
+ },
  "rss:thehill:0": {
   "content_type": "application/rss+xml; charset=UTF-8",
   "file": "rss_thehill_0.xml",
@@ -1481,6 +1685,18 @@
   "status": 200,
   "url": "https://tuoitre.vn/rss/cong-nghe.rss"
  },
+ "rss:tvn24:0": {
+  "content_type": "text/xml; charset=utf-8",
+  "file": "rss_tvn24_0.xml",
+  "status": 200,
+  "url": "https://tvn24.pl/najnowsze.xml"
+ },
+ "rss:tweakers:0": {
+  "content_type": "application/rss+xml",
+  "file": "rss_tweakers_0.xml",
+  "status": 200,
+  "url": "https://tweakers.net/feeds/mixed.xml"
+ },
  "rss:understandingai:0": {
   "content_type": "application/xml; charset=utf-8",
   "file": "rss_understandingai_0.xml",
@@ -1492,6 +1708,12 @@
   "file": "rss_verge_0.xml",
   "status": 200,
   "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"
+ },
+ "rss:version2:0": {
+  "content_type": "application/rss+xml; charset=utf-8",
+  "file": "rss_version2_0.xml",
+  "status": 200,
+  "url": "https://www.version2.dk/rss"
  },
  "rss:vietnamplus:0": {
   "content_type": "text/xml;charset=utf-8",
@@ -1534,6 +1756,12 @@
   "file": "rss_wsj_0.xml",
   "status": 200,
   "url": "https://feeds.content.dowjones.io/public/rss/RSSWSJD"
+ },
+ "rss:xataka:0": {
+  "content_type": "text/xml; charset=UTF-8",
+  "file": "rss_xataka_0.xml",
+  "status": 200,
+  "url": "https://www.xataka.com/feedburner.xml"
  },
  "rss:xtech:0": {
   "content_type": "application/rdf+xml",

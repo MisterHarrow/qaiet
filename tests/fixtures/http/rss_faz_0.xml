@@ -1,0 +1,69 @@
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+  <channel>
+    <title>Aktuell - FAZ.NET</title>
+    <link>https://www.faz.net/aktuell/</link>
+    <description>News, Nachrichten und aktuelle Meldungen aus allen Ressorts. Politik, Wirtschaft, Sport, Feuilleton und Finanzen im Überblick.</description>
+    <category>Aktuell - FAZ.NET</category>
+    <language>de-de</language>
+    <lastBuildDate>Thu, 26 Nov 2026 10:22:57 GMT</lastBuildDate>
+    <atom:link href="https://www.faz.net/rss/aktuell/" rel="self" type="application/rss+xml"/>
+    <copyright>Copyright 2001-2026 Frankfurter Allgemeine Zeitung GmbH. Alle Rechte vorbehalten.</copyright>
+    <generator>FAZ - Frankfurter Allgemeine Zeitung</generator>
+    <ttl>5</ttl>
+    <item>
+      <title>Hans-Werner Sinn: „Die fetten Jahre sind vorbei“</title>
+      <link>https://www.faz.net/aktuell/wirtschaft/hans-werner-sinn-ueber-merz-und-trump-die-fetten-jahre-sind-vorbei-accg-201716573.html</link>
+      <guid isPermaLink="true">https://www.faz.net/aktuell/wirtschaft/hans-werner-sinn-ueber-merz-und-trump-die-fetten-jahre-sind-vorbei-accg-201716573.html</guid>
+      <description>Der Ökonom Hans-Werner Sinn über Deutschlands Aufrüstung, Rente ohne Kinder, hohe Stromkosten, Eurobonds gegen französische Atomwaffen, den richtigen Umgang mit China und die Zukunft der Arbeit im Zeitalter der Künstlichen Intelligenz.</description>
+      
+      <pubDate>Thu, 26 Nov 2026 09:07:10 GMT</pubDate>
+      <dc:creator>Alexander Armbruster</dc:creator>
+      <media:thumbnail url="https://media0.faz.net/image/44470189a980/w4688h2637x645y253/202510/43601.0.1390983387/hans-werner-sinn-war.webp" width="400" height="225"/>
+      <media:content url="https://media0.faz.net/image/44470189a980/w4688h2637x645y253/202510/43601.0.1390983387/hans-werner-sinn-war.webp" type="image/webp" medium="image" width="1200" height="675"/>
+    </item>
+    <item>
+      <title>Volkswagen: „Wenn ich nicht die Moral hätte, würde ich verkaufen“</title>
+      <link>https://www.faz.net/aktuell/wirtschaft/unternehmen/vw-krise-ernst-piech-wuerde-anteile-verkaufen-haelt-aber-aus-moral-durch-accg-201716307.html</link>
+      <guid isPermaLink="true">https://www.faz.net/aktuell/wirtschaft/unternehmen/vw-krise-ernst-piech-wuerde-anteile-verkaufen-haelt-aber-aus-moral-durch-accg-201716307.html</guid>
+      <description>Die Familien Porsche und Piëch haben VW geprägt. Doch das Erbe wird zur Last: Wie lange wollen – und können – die Nachfahren daran festhalten? Eine neue Folge des Podcasts „Die VW-Story“ blickt hinter die Kulissen einer Unternehmerdynastie in der Krise.</description>
+      
+      <pubDate>Thu, 26 Nov 2026 06:47:57 GMT</pubDate>
+      <dc:creator>Christian Müßgens, Corinna Budras</dc:creator>
+      <media:thumbnail url="https://media0.faz.net/image/77636707a451/w6144h3456x0y320/202611/7b7e1ee5-4c39-438e-80d4-9f65d55670fd/goetterdaemmerung-in-wolfsburg.webp" width="400" height="225"/>
+      <media:content url="https://media0.faz.net/image/77636707a451/w6144h3456x0y320/202611/7b7e1ee5-4c39-438e-80d4-9f65d55670fd/goetterdaemmerung-in-wolfsburg.webp" type="image/webp" medium="image" width="1200" height="675"/>
+    </item>
+    <item>
+      <title>Die VW-Story – Folge 7: Folge 7 - Wirft die Familie hin?</title>
+      <link>https://www.faz.net/podcasts/vw-story/vw-podcast-endspiel-um-volkswagen-stirbt-die-autoindustrie-201716355.html</link>
+      <guid isPermaLink="true">https://www.faz.net/podcasts/vw-story/vw-podcast-endspiel-um-volkswagen-stirbt-die-autoindustrie-201716355.html</guid>
+      <description>Die Familien Porsche und Piëch sind für Außenstehende kaum zu durchblicken. Nur einer redet jetzt Tacheles.</description>
+      
+      <pubDate>Thu, 26 Nov 2026 04:03:00 GMT</pubDate>
+      <dc:creator>Christian Müßgens, Corinna Budras</dc:creator>
+      <media:thumbnail url="https://media0.faz.net/image/41ef1aa10fd1/w5176h2912x0y158/202507/43601.0.1170305308/die-oberhaeupter-hans-michel.webp" width="400" height="225"/>
+      <media:content url="https://media0.faz.net/image/41ef1aa10fd1/w5176h2912x0y158/202507/43601.0.1170305308/die-oberhaeupter-hans-michel.webp" type="image/webp" medium="image" width="1200" height="675"/>
+    </item>
+    <item>
+      <title>Podcast-Serie der F.A.Z.: Eine Legende kämpft ums Überleben</title>
+      <link>https://www.faz.net/podcasts/vw-story/vw-podcast-die-legende-volkswagen-kaempft-im-schicksalsjahr-2026-ums-ueberleben-faz-200799082.html</link>
+      <guid isPermaLink="true">https://www.faz.net/podcasts/vw-story/vw-podcast-die-legende-volkswagen-kaempft-im-schicksalsjahr-2026-ums-ueberleben-faz-200799082.html</guid>
+      <description>„Die VW-Story“: Baut Volkswagen bald Rüstung statt Autos? Der Konzern steckt tief in der Krise. 2026 wird zum Schicksalsjahr. Schafft das Unternehmen die Wende? Jetzt im FAZ-Podcast anhören!</description>
+      
+      <pubDate>Thu, 04 Jun 2026 06:25:04 GMT</pubDate>
+      <dc:creator>Christian Müßgens, Corinna Budras</dc:creator>
+      <media:thumbnail url="https://media0.faz.net/image/2df174284935/w1364h767x127y347/202605/43601.0.2046375129/4360102046375129.webp" width="400" height="225"/>
+      <media:content url="https://media0.faz.net/image/2df174284935/w1364h767x127y347/202605/43601.0.2046375129/4360102046375129.webp" type="image/webp" medium="image" width="1200" height="675"/>
+    </item>
+    <item>
+      <title>Blackout im Privatjet: Tesla-Chef Musk stammelt während Live-Schalte herum</title>
+      <link>https://www.faz.net/aktuell/wirtschaft/unternehmen/tesla-chef-elon-musk-stammelt-waehrend-live-schalte-herum-accg-201718594.html</link>
+      <guid isPermaLink="true">https://www.faz.net/aktuell/wirtschaft/unternehmen/tesla-chef-elon-musk-stammelt-waehrend-live-schalte-herum-accg-201718594.html</guid>
+      <description>Zur Eröffnung des ersten Tesla-Ladens in Argentinien ist Elon Musk aus seinem Flieger zugeschaltet. Es wird ein skurriler Auftritt vor dem argentinischen Präsidenten.</description>
+      
+      <pubDate>Thu, 26 Nov 2026 07:39:30 GMT</pubDate>
+      <dc:creator>Dominik Jäger</dc:creator>
+      <media:thumbnail url="https://media0.faz.net/image/9520d4f6f0d8/w5596h3148x0y292/202611/ea7bc256-195d-4a62-8e22-7abf569f994b/reuters.webp" width="400" height="225"/>
+      <media:content url="https://media0.faz.net/image/9520d4f6f0d8/w5596h3148x0y292/202611/ea7bc256-195d-4a62-8e22-7abf569f994b/reuters.webp" type="image/webp" medium="image" width="1200" height="675"/>
+    </item>
+  </channel>
+</rss>
