@@ -8,7 +8,7 @@ Drafted 2026-11-26 for Benjamin to approve step by step. Nothing in `config/sour
 - **I checked 321 candidate feeds** in 69 countries with the project's own HTTP client and its generic user agent. 225 have a working feed that robots.txt allows. 17 are disallowed by robots.txt, 29 refuse our client (HTTP 403, left alone), 48 have no working or current feed, and 2 set `Content-Signal: ai-input=no` (Corriere della Sera, New Straits Times).
 - **The pipeline is ready for Latin-script languages, not for the others.** The keyword filter marks AI headlines in Japanese, Korean, Chinese, Arabic and Hindi as "not AI" before a model ever sees them, and Portuguese, Turkish or Indonesian ones too when they spell the term out. "生成AI", "인공지능" and "inteligência artificial" all fail today. Clustering also needs the English title for non-Latin scripts: untranslated, a Japanese headline scores 0.46 against its English twin, below the 0.62 join threshold.
 - **Cost is not the constraint.** Haiku costs about $0.00003 per item for relevance plus translation and $0.00008 per label (measured from `llm_calls`). All six source steps together add about $0.08 a day, or $2.30 a month. Sonnet summaries are capped by the number of top stories, not by sources: at most about $0.45 a day even in the worst case. The month would stay under $15 against the $30 cap.
-- **The plan has eight steps**, each a separate yes or no. The first adds 24 outlets in Latin America and Africa in languages the pipeline already reads (Spanish, Portuguese, English). It gives both continents a daily index and cuts the US share of labeled outlets from about 49% to about 36%.
+- **The plan has eight steps**, each a separate yes or no. The first adds 24 outlets in Latin America and Africa in languages the pipeline already reads (Spanish, Portuguese, English). It gives both continents a daily index and cuts the US share of labeled outlets from about 49% to about 36%. Benjamin's decisions of 26 November are in section 6 and folded into the steps.
 
 ## 1. Baseline
 
@@ -121,7 +121,7 @@ Notes:
 
 - **robots.txt blocks:** Times of Israel, Canaltech, El Universal, Webrazzi, MediaNama, NHK, news.com.au, CTV, RTVE, L'Usine Digitale, Die Zeit, netzpolitik.org, Tech.eu, TheJournal.ie, El Universo; robots.txt unreachable (so disallowed): News24, detikInet.
 - **403 to our client** (bot protection, not worked around): many large sites in Africa, the Gulf and South Asia, among them Arab News, Al Arabiya, Haaretz, Moneycontrol, Business Standard, MyBroadband, BusinessTech, Techpoint Africa, Tech in Asia, Les Echos, Il Post, Silicon Republic, Kathimerini. This is the main reason the list leans toward some countries within each region.
-- **Content signals:** only Corriere della Sera and the New Straits Times say `ai-input=no`; they are left out (Corriere's feed is also frozen). Inc42, Focus Taiwan, iThome and ShiftDelete say `ai-input=yes` outright. Thirteen sites (several on the same CDN) send `search=yes,ai-train=no,use=reference`; `use=reference` is not part of Cloudflare's signals and nothing says `ai-input=no`, so under today's rule they are usable. Two planned outlets carry it: Techeconomy (step 1) and Newsroom (step 2). Benjamin may prefer to treat it as a no.
+- **Content signals:** only Corriere della Sera and the New Straits Times say `ai-input=no`; they are left out (Corriere's feed is also frozen). Inc42, Focus Taiwan, iThome and ShiftDelete say `ai-input=yes` outright. Thirteen sites (several on the same CDN) send `search=yes,ai-train=no,use=reference`; `use=reference` is not part of Cloudflare's signals and nothing says `ai-input=no`, so under today's rule they are usable. Two planned outlets carry it: Techeconomy (step 1) and Newsroom (step 2). Decided 26 November: treat it as allowed, like any signal that doesn't say `ai-input=no`.
 - **Aggregators.** allAfrica's feed works and robots.txt allows it; it republishes many African outlets and could later count like Techmeme (a signal, not an outlet). Google News stays out (robots.txt). GDELT could find outlets per country (`sourcecountry:`), but with 429 on 65% of runs it should only be used by hand for discovery, not as a feed.
 - **Regional newsletters.** Most regional AI newsletters are on Substack, which answers GitHub's servers with 403 (ChinAI and Marcus already fail). I'd add none until that changes.
 - **Bluesky.** The public AppView's actor search works without a key. Active accounts found that come from or cover places outside the US and UK: Rest of World (41k followers), AlgorithmWatch (DE), netzpolitik.org (DE), La Quadrature du Net (FR), Audrey Tang (TW), Ronaldo Lemos (BR), R3D (MX), Coding Rights (BR), Jathan Sadowski and Toby Walsh (AU). Several searches found the wrong person (for "Paola Ricaurte", "Nikhil Pahwa", "Mutale Nkonde"), so each needs the same hand check as `accounts.yaml`. Bluesky feeds the social signal only; it doesn't change any outlet count.
@@ -138,7 +138,7 @@ Proposed `REGIONS` (step 1 adds the Americas split and Africa; step 3 splits Asi
 REGIONS = [
     ("North America", ["US", "CA"]),
     ("Latin America", ["MX", "CO", "PE", "CL", "AR", "BR"]),
-    ("Europe", ["GB", "IE", "FR", "BE", "NL", "DE", "CH", "AT", "ES", "PT", "IT", "SE", "NO", "DK", "FI", "EE", "PL", "CZ", "HU", "UA"]),
+    ("Europe", ["GB", "IE", "FR", "BE", "NL", "DE", "CH", "AT", "ES", "PT", "IT", "SE", "NO", "DK", "FI", "EE", "PL", "CZ", "HU", "UA", "RU"]),
     ("Middle East", ["TR", "IL", "SA", "AE", "QA"]),
     ("Africa", ["EG", "NG", "GH", "ZA"]),
     ("East Asia", ["CN", "HK", "TW", "JP", "KR"]),
@@ -148,8 +148,8 @@ REGIONS = [
 ]
 ```
 
-- Egypt goes in Africa (UN M49). It could as well go in the Middle East; Benjamin's call.
-- `COUNTRY_NAMES` and `COUNTRY_POS` in `site/build.py` need each new code. Rough centres (lat, lon): MX 23,−102 · CO 4,−73 · PE −10,−76 · CL −33,−71 · AR −34,−64 · BR −10,−52 · NG 9,8 · GH 8,−1 · EG 26,30 · ZA −29,24 · TR 39,35 · IL 31.5,35 · SA 24,45 · AE 24,54 · NZ −41,174 · TW 23.7,121 · PK 30,70 · BD 24,90 · MY 4,102 · TH 15,101 · VN 16,107 · ID −2,118 · PH 12,122 · IE 53,−8 · NL 52,5 · CH 47,8 · AT 47.5,14.5 · PT 39.5,−8 · IT 42.5,12.5 · NO 61,9 · DK 56,10 · FI 63,26 · EE 59,25 · PL 52,19 · CZ 49.8,15.5 · HU 47,19.5 · UA 49,32.
+- Egypt goes in Africa (UN M49; Benjamin, 26 November).
+- `COUNTRY_NAMES` and `COUNTRY_POS` in `site/build.py` need each new code. Rough centres (lat, lon): MX 23,−102 · CO 4,−73 · PE −10,−76 · CL −33,−71 · AR −34,−64 · BR −10,−52 · NG 9,8 · GH 8,−1 · EG 26,30 · ZA −29,24 · TR 39,35 · IL 31.5,35 · SA 24,45 · AE 24,54 · NZ −41,174 · TW 23.7,121 · PK 30,70 · BD 24,90 · MY 4,102 · TH 15,101 · VN 16,107 · ID −2,118 · PH 12,122 · IE 53,−8 · NL 52,5 · CH 47,8 · AT 47.5,14.5 · PT 39.5,−8 · IT 42.5,12.5 · NO 61,9 · DK 56,10 · FI 63,26 · EE 59,25 · PL 52,19 · CZ 49.8,15.5 · HU 47,19.5 · UA 49,32 · RU 55.8,37.6 (Moscow, where the outlet is; the country's centre is far east).
 - The map's continent outlines already include South America and Africa, so the dots light up without new map data. Several European dots will merge on the 5-degree grid; that is fine for a dot map.
 - The place filter and the sentiment index per place read `REGIONS`, so they follow. Nine regions plus up to 60 countries make the filter long; on phones it may need the countries folded under their region (check at 380px).
 - Frozen editions don't store region names, so the archive is unaffected.
@@ -192,7 +192,7 @@ Unrelated pairs stayed at −0.05 to 0.15. So Latin-script languages cluster wit
 The labels have never been checked outside English, Swedish and German: the 50 items in `tests/gold/labels.yaml` (for Benjamin's hand labels) and the Opus cross-check are 40 English, 6 Swedish and 4 German. Two cheap safeguards:
 
 - Extend `qa eval crosscheck` with about 10 items per new language after each step. The last run, 50 items, cost $0.16.
-- Optionally keep a new language's outlets out of the sentiment index for its first two weeks (a source flag such as `index: false`), while they still appear on cards. Benjamin's call; it adds a setting.
+- **Decided 26 November: a new language's outlets stay out of the sentiment index for their first two weeks.** Each gets `index_from: <date two weeks after it is added>` in `sources.yaml`; the index (overall and per place) skips its labels before that date. A date lifts itself, so no second change is needed. Its articles are still labeled, shown on cards and counted in ranking. In those two weeks, run the cross-check on about 10 of its items per language (Opus costs money, so only with Benjamin's OK each time). Outlets in languages the site already reads (English, Spanish, French, German, Swedish) skip this.
 
 ### 4.6 Ranking: should regions be weighed?
 
@@ -246,7 +246,7 @@ Expected outlets with a confident label on a typical day, by region (sum over ou
 | After step 3 | 28.8 | 10.7 | 16.5 | 5.6 | 6.9 | **27.5** | 5.1 | 25% | $0.34 |
 | After step 4 | 28.8 | 10.7 | 16.5 | **8.9** | **7.8** | **40.8** | 5.1 | 22% | $1.24 |
 | After step 5 | 28.8 | 10.7 | **33.9** | 8.9 | 7.8 | 40.8 | 5.1 | 19% | $0.24 |
-| After step 6 | 28.8 | 10.7 | **42.3** | 8.9 | 7.8 | 40.8 | 5.1 | 18% | $0.10 |
+| After step 6 | 28.8 | 10.7 | **43.2** | 8.9 | 7.8 | 40.8 | 5.1 | 18% | $0.12 |
 
 Within Asia after step 3: East Asia 11.9, South Asia 7.9, Southeast Asia 7.8; after step 4: 21.6, 9.7, 9.6.
 
@@ -285,16 +285,16 @@ The two empty continents, in languages the pipeline already reads.
 | ITWeb | ZA | en | trade | `www.itweb.co.za/rss` | 1.4 |
 | TechCentral | ZA | en | trade | `techcentral.co.za/feed/` | 2.3 |
 
-Code in the same step: `REGIONS` split into North America and Latin America, Africa added; names and map positions for BR, MX, AR, CL, CO, PE, NG, ZA, GH, EG; Portuguese terms in the keyword list (with tests); About page groups and the new Limits text (4.9); stance stripe counted per outlet (4.8).
+Code in the same step: `REGIONS` split into North America and Latin America, Africa added; names and map positions for BR, MX, AR, CL, CO, PE, NG, ZA, GH, EG; Portuguese terms in the keyword list (with tests); About page groups and the new Limits text (4.9); stance stripe counted per outlet (4.8); `index_from` for the two-week index wait (4.5), set on the five Portuguese outlets.
 
-- **Effect:** Latin America 0 → about 11 outlets labeled a day, Africa 0 → about 7. Both get a daily index. The US share of labeled outlets falls from 49% to about 36%.
+- **Effect:** Latin America 0 → about 11 outlets labeled a day, Africa 0 → about 7. Both get a daily index. For the first two weeks Latin America's index comes from its eight Spanish-language outlets (about 6 labeled a day), still above the threshold. The US share of labeled outlets falls from 49% to about 36%.
 - **Cost:** about $0.01 a day, $0.29 a month.
 - **Risks:**
   - Spanish and Portuguese all-news feeds (La Tercera, Semana, La Nación: about 100 items a day each) mean more keyword work and some extra Haiku calls (in the cost).
   - Africa will be mostly Nigeria and South Africa. Kenya's outlets returned 403 or carried almost no AI news; francophone African outlets had no AI items. Egypt is the only North African country.
   - Labels in Spanish and Portuguese haven't been cross-checked yet; add them to the next crosscheck.
   - Infobae alone writes about 24 AI articles a day (hence 4.8).
-  - Techeconomy sends the unrecognised `use=reference` signal.
+  - Techeconomy sends the unrecognised `use=reference` signal (treated as allowed).
 
 ### Step 2: Middle East, Oceania and Canada (19 outlets)
 
@@ -319,15 +319,15 @@ Regions that exist but are too thin to count, all in English or French.
 | RNZ | NZ | en | public-broadcaster | `www.rnz.co.nz/rss/business.xml` | 1.0 |
 | Asharq Al-Awsat (English) | SA | en | state-aligned | `english.aawsat.com/feed/` | 3.0 |
 | Saudi Gazette | SA | en | state-aligned | `saudigazette.com.sa/rssFeed/74` | 0.8 |
-| Anadolu Agency | TR | en | wire | `www.aa.com.tr/en/rss/default?cat=science-technology` | 1.3 |
+| Anadolu Agency | TR | en | state-aligned (wire) | `www.aa.com.tr/en/rss/default?cat=science-technology` | 1.3 |
 | Daily Sabah | TR | en | state-aligned | `www.dailysabah.com/rss/business/tech` | 2.6 |
 
 - **Effect:** Middle East 1 → about 6 labeled a day, Oceania 1 → about 5, Canada 0 → about 3. Both regions get a daily index. US share about 31%.
 - **Cost:** about $0.003 a day, $0.10 a month.
 - **Risks:**
-  - The Middle East would lean Gulf and Turkish state-aligned: Asharq Al-Awsat and Saudi Gazette are close to the Saudi state, Daily Sabah is pro-government, Anadolu is the Turkish state agency. They should carry `type: state-aligned` (as Al Jazeera's note already says it is Qatari state-funded). Israel has only Globes: Times of Israel is blocked by robots.txt and Haaretz returns 403. Iran has nothing usable.
+  - The Middle East would lean Gulf and Turkish state-aligned: Asharq Al-Awsat and Saudi Gazette are close to the Saudi state, Daily Sabah is pro-government, Anadolu is the Turkish state agency. All four carry `type: state-aligned` (decided 26 November), so the About page lists them as such. Israel has only Globes: Times of Israel is blocked by robots.txt and Haaretz returns 403. Iran has nothing usable.
   - CBC stays disabled; Canada is four commercial outlets and Radio-Canada.
-  - Newsroom (NZ) sends `use=reference`.
+  - Newsroom (NZ) sends `use=reference` (treated as allowed).
 
 ### Step 3: Asia in English (23 outlets)
 
@@ -395,12 +395,12 @@ Code: split Asia into East, South and Southeast Asia; names and positions for th
 | iThome | TW | zh | trade | `www.ithome.com.tw/rss` | 8.0 |
 | Tuổi Trẻ | VN | vi | mainstream | `tuoitre.vn/rss/cong-nghe.rss` | 29.0 |
 
-Code first, in the same step: the keyword and word-boundary fixes (4.2) with tests; hold back untranslated non-Latin items from clustering (4.4); duplicate-title check for non-Latin scripts. Consider `news_label_v4` for English entity names (4.4; relabels the window, about $0.05–0.10).
+Code first, in the same step: the keyword and word-boundary fixes (4.2) with tests; hold back untranslated non-Latin items from clustering (4.4); duplicate-title check for non-Latin scripts; `index_from` on all 20 outlets (every one is in a new language). Consider `news_label_v4` for English entity names (4.4; relabels the window, about $0.05–0.10).
 
 - **Effect:** Asia about 41 labeled a day (East Asia about 22), Middle East about 9, Africa about 8 (Youm7). Japanese, Korean and Chinese readers' own press enters the picture, not just its English editions.
 - **Cost:** about $0.04 a day, $1.24 a month (double tokens for these scripts included).
 - **Risks:**
-  - This is the step where labels are least checked: stance wording differs across languages and cultures. Cross-check before letting these outlets into the index (4.5).
+  - This is the step where labels are least checked: stance wording differs across languages and cultures. The two-week index wait and the cross-check (4.5) are there for this.
   - AI Times Korea, ITmedia AI+ and QbitAI are AI-only trade feeds with high volume (mark `ai_focused: true` where the whole feed is AI).
   - East Asia would outnumber Europe. If that's too much, drop GIGAZINE, etnews and iThome (Taiwan) and keep 17.
   - cnBeta and Solidot are optional: both mainland Chinese, often aggregating other sites.
@@ -434,13 +434,13 @@ Code first, in the same step: the keyword and word-boundary fixes (4.2) with tes
 | ECO | PT | pt | business | `eco.sapo.pt/feed/` | 2.0 |
 | Observador | PT | pt | mainstream | `observador.pt/feed/` | 3.0 |
 
-Code: names and positions for IT, NL, IE, PT, CH, AT; Italian and Dutch keywords (from step 4's list if that went first).
+Code: names and positions for IT, NL, IE, PT, CH, AT; Italian and Dutch keywords (from step 4's list if that went first); `index_from` on the Italian and Dutch outlets (Portuguese will have served its wait in step 1).
 
-- **Effect:** Europe 16.5 → about 34 labeled a day. Italy, the Netherlands, Ireland, Portugal, Switzerland and Austria reach the per-country threshold on most days.
+- **Effect:** Europe 16.5 → about 34 labeled a day. Italy, the Netherlands, Ireland, Portugal, Switzerland and Austria reach the per-country threshold on most days (Italy and the Netherlands after their two-week wait).
 - **Cost:** about $0.008 a day, $0.24 a month.
 - **Risks:** Corriere della Sera is out (`ai-input=no`, feed frozen). FAZ and SZ add German right and left of centre; Germany would have seven outlets, more than any country but the US. Il Post and Les Echos return 403.
 
-### Step 6: Nordics, Central and Eastern Europe, Ukraine (13 outlets)
+### Step 6: Nordics, Central and Eastern Europe, Ukraine, Russia (14 outlets)
 
 | Outlet | Country | Lang | Type | Feed | AI items/day |
 |---|---|---|---|---|---|
@@ -457,13 +457,14 @@ Code: names and positions for IT, NL, IE, PT, CH, AT; Italian and Dutch keywords
 | Spider's Web | PL | pl | trade | `spidersweb.pl/feed` | 2.5 |
 | TVN24 | PL | pl | mainstream | `tvn24.pl/najnowsze.xml` | 0.6 |
 | DOU | UA | uk | trade | `dou.ua/feed/` | 1.0 |
+| TASS | RU | en | state-aligned | `tass.com/rss/v2.xml` | 3.0 |
 
-Code: names and positions for NO, DK, FI, PL, HU, CZ, EE, UA; Norwegian, Danish, Finnish, Polish, Hungarian, Czech and Ukrainian keywords.
+Code: names and positions for NO, DK, FI, PL, HU, CZ, EE, UA, RU; Norwegian, Danish, Finnish, Polish, Hungarian, Czech and Ukrainian keywords; `index_from` on the outlets in those languages (not ERR News or TASS, which are in English).
 
-- **Effect:** Europe about 42 labeled a day. Smaller countries mostly stay under the per-country threshold; they count in the region.
-- **Cost:** about $0.003 a day, $0.10 a month.
+- **Effect:** Europe about 43 labeled a day. Smaller countries mostly stay under the per-country threshold; they count in the region.
+- **Cost:** about $0.004 a day, $0.12 a month.
 - **Risks:** NRK's front-page feed carries little AI (0.2 a day); Yle's English feed had none and is left out. Ukraine's English outlets (Kyiv Independent, Ukrainska Pravda) had no AI items; DOU is a developer community site.
-- **Left for Benjamin:** Russia. TASS (state agency, English feed works, about 3 AI items a day), Meduza and The Moscow Times (exile media, little AI) are all reachable. Including TASS fills the state-aligned gap for Russia but brings sanctions-era state media onto the page; my suggestion is to leave Russia out unless Benjamin wants it, and say so on the About page.
+- **Russia (decided 26 November: add TASS).** TASS is the Russian state news agency; its English feed carries about 100 items a day, about 3 of them on AI. It goes in as `type: state-aligned`, so the source list says so, and it counts in Europe. Meduza and The Moscow Times (exile media, little AI) stay in reserve.
 
 ### Step 7: Weighting decisions (no new sources)
 
@@ -476,14 +477,17 @@ After steps 1–3 and two weeks of data: compute ranking options B and C (4.6) a
 
 Hand-check the accounts listed in section 3 and add the right ones to `config/accounts.yaml`. Affects the social signal only. Cost: none (Bluesky is free; their posts are not labeled).
 
-## 6. Decisions for Benjamin
+## 6. Decisions
 
-1. Approve step 1 (24 outlets, Latin America and Africa, plus the region split and the stance-stripe change)?
-2. Egypt in Africa or the Middle East?
-3. Treat `Content-Signal: use=reference` as allowed (current rule) or as a no?
-4. Mark the Gulf and Turkish outlets in step 2 as `state-aligned`?
-5. Russia: leave out, or add TASS as state-aligned?
-6. Keep new-language outlets out of the index for two weeks (4.5)?
+Benjamin, 26 November:
+
+1. **Egypt:** in Africa.
+2. **`Content-Signal: use=reference`:** allowed (it doesn't say `ai-input=no`), so Techeconomy and Newsroom stay in.
+3. **Gulf and Turkish outlets in step 2:** `type: state-aligned` (Asharq Al-Awsat, Saudi Gazette, Daily Sabah, Anadolu). Step 3's state-owned outlets (Sixth Tone, Antara, VietnamPlus) are marked the same way.
+4. **Russia:** add TASS as state-aligned, in step 6.
+5. **New languages:** two weeks out of the sentiment index, through `index_from` (4.5).
+
+Still open: approval of each step, starting with step 1.
 
 ## Appendix: every candidate checked
 
@@ -764,7 +768,7 @@ Hand-check the accounts listed in section 3 and add the right ones to `config/ac
 | Al-Monitor | US | en | mainstream | `www.al-monitor.com/rss` | allows | none | works, 20/day | 0.0 | no (little AI) |
 | Bloomberg Línea | US | es | business | `www.bloomberglinea.com/arc/outboundfeeds/rss/?outputType=xml` | allows | none | works, 14/day | 2.0 | opt. (Miami HQ: country?) |
 
-### Europe (86 checked, 70 with a working feed, 37 in the plan)
+### Europe (86 checked, 70 with a working feed, 38 in the plan)
 
 | Outlet | Country | Lang | Type | Feed checked | robots.txt | Content-Signal | Feed | AI/day | Plan |
 |---|---|---|---|---|---|---|---|---|---|
@@ -830,12 +834,12 @@ Hand-check the accounts listed in section 3 and add the right ones to `config/ac
 | Punto Informatico | IT | it | trade | `www.punto-informatico.it/feed/` | allows | none | works, 20/day | 4.0 | Step 5 |
 | Wired Italia | IT | it | trade | `www.wired.it/feed/rss` | allows | none | stale (newest 148 days) | – | no |
 | LSM (Latvia) | LV | en | public-broadcaster | `eng.lsm.lv/rss/` | allows | none | works, 16/day | 0.0 | no (little AI) |
-| Meduza | LV | en | mainstream | `meduza.io/rss/en/all` | allows | none | works, 18/day | 0.0 | Benjamin's call |
+| Meduza | LV | en | mainstream | `meduza.io/rss/en/all` | allows | none | works, 18/day | 0.0 | opt. |
 | de Volkskrant | NL | nl | mainstream | `www.volkskrant.nl/tech/rss.xml` | allows | none | works, 1/day | 0.6 | opt. |
 | Het Financieele Dagblad | NL | nl | business | `fd.nl/?rss` | allows | none | works, 5/day | 0.7 | Step 5 |
 | NOS | NL | nl | public-broadcaster | `feeds.nos.nl/nosnieuwstech` | allows | none | works, 1/day | 0.7 | Step 5 |
 | NRC | NL | nl | mainstream | `www.nrc.nl/rss/` | allows | none | works, 18/day | 1.0 | Step 5 |
-| The Moscow Times | NL | en | mainstream | `www.themoscowtimes.com/rss/news` | allows | none | works, 8/day | 0.2 | Benjamin's call |
+| The Moscow Times | NL | en | mainstream | `www.themoscowtimes.com/rss/news` | allows | none | works, 8/day | 0.2 | opt. |
 | Tweakers | NL | nl | trade | `tweakers.net/feeds/mixed.xml` | allows | none | works, 24/day | 8.2 | Step 5 |
 | Digi.no | NO | no | trade | `www.digi.no/rss` | allows | none | works, 6/day | 2.1 | Step 6 |
 | E24 | NO | no | business | `e24.no/rss2/` | allows | none | works, 23/day | 4.8 | Step 6 |
@@ -850,7 +854,7 @@ Hand-check the accounts listed in section 3 and add the right ones to `config/ac
 | G4Media | RO | ro | mainstream | `www.g4media.ro/feed` | allows | none | works, 30/day | 0.0 | no (little AI) |
 | Habr (AI hub) | RU | ru | trade | `habr.com/ru/rss/hub/artificial_intelligence/` | allows | none | works, 40/day | 33.0 | no (user blogs) |
 | Kommersant | RU | ru | business | `www.kommersant.ru/RSS/section-hitech.xml` | allows | none | empty feed | – | no |
-| TASS | RU | en | state-aligned | `tass.com/rss/v2.xml` | allows | none | works, 100/day | 3.0 | Benjamin's call (state) |
+| TASS | RU | en | state-aligned | `tass.com/rss/v2.xml` | allows | none | works, 100/day | 3.0 | Step 6 |
 | DOU | UA | uk | trade | `dou.ua/feed/` | allows | none | works, 5/day | 1.0 | Step 6 |
 | The Kyiv Independent | UA | en | mainstream | `kyivindependent.com/news-archive/rss/` | allows | none | works, 15/day | 0.0 | opt. |
 | Ukrainska Pravda | UA | en | mainstream | `www.pravda.com.ua/eng/rss/` | allows | none | works, 20/day | 0.0 | opt. |
