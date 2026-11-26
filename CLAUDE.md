@@ -113,6 +113,7 @@ uv run pytest          # must pass before every push; no network, no model calls
   - GitHub drops scheduled runs, so `.github/scripts/plan.sh` publishes from any scheduled run once today's edition isn't live yet (see `docs/m5-notes.md`). It reads the live `edition.json` at `SITE_URL` in `run.yml` (news.b3njamin.ai).
 - **Hosting:**
   - Vercel serves the site at news.b3njamin.ai: each publish uploads `site/` to the Vercel project `energaized/qaiet` with a pinned `vercel` CLI. Vercel never builds. Secrets: `VERCEL_TOKEN`, `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID`.
+  - The Vercel project is connected to the GitHub repo (`vercel link --yes` does that), so the root `vercel.json` turns off Git deploys (`git.deploymentEnabled: false`). **Never remove it**: without it every push to `main` deploys the repo root as production and the site returns 404 (it happened on 2026-11-25).
   - A failed Vercel deploy fails the run. Fix it quickly: until today's edition is live, every scheduled run publishes again (and spends model money).
   - `qa build` writes `site/vercel.json` with `trailingSlash: true`; the relative links break without it.
   - DNS is at Namecheap: a CNAME for `news` points to Vercel. The apex b3njamin.ai is a separate Vercel project.

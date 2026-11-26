@@ -85,7 +85,7 @@ uv run qa ingest --record        # live fetch, writes fixtures, stores nothing
    - prunes old data (items not about AI after 15 days, everything after 400 days; snapshots thinned after 7 days).
 3. Uploads the database back to the release, plus a dated daily snapshot (14 kept).
 4. Commits new frozen editions. The daily commit also keeps GitHub from pausing the schedule after 60 days of inactivity.
-5. Deploys `site/` to Vercel (news.b3njamin.ai) with the Vercel CLI; Vercel never builds. GitHub Pages only serves a forward from the old address (`deploy/pages-redirect/`).
+5. Deploys `site/` to Vercel (news.b3njamin.ai) with the Vercel CLI; Vercel never builds (the root `vercel.json` turns off its Git deploys, which `vercel link` connects; with them on, every push to `main` would replace the site with the repo root). GitHub Pages only serves a forward from the old address (`deploy/pages-redirect/`).
 
 - **deploy**, manual only (`gh workflow run run.yml -f mode=deploy`): rebuilds the site from the saved database with no model calls and deploys it. For page changes; run it after the morning publish.
 
