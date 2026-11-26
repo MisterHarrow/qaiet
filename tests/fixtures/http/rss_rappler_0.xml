@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	 xmlns:media="http://search.yahoo.com/mrss/" >
+
+<channel>
+	<title>Technology</title>
+	<atom:link href="https://www.rappler.com/technology/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.rappler.com/technology/</link>
+	<description>RAPPLER &#124; Philippine &#38; World News &#124; Investigative Journalism &#124; Data &#124; Civic Engagement &#124; Public Interest</description>
+	<lastBuildDate>Thu, 26 Nov 2026 17:14:41 +0800</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://www.altis-dxp.com/?v=6.8.6</generator>
+
+<image>
+	<url>https://www.rappler.com/tachyon/2022/11/cropped-Piano-Small.png?fit=32%2C32</url>
+	<title>Technology</title>
+	<link>https://www.rappler.com/technology/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>TRACKER: Data leaks in the country</title>
+		<link>https://www.rappler.com/technology/philippine-data-leaks-tracker/</link>
+					<comments>https://www.rappler.com/technology/philippine-data-leaks-tracker/#respond</comments>
+		
+		<dc:creator><![CDATA[Lourence Angelo Marcellana]]></dc:creator>
+		<pubDate>Thu, 26 Nov 2026 14:14:52 +0800</pubDate>
+				<category><![CDATA[Newsbreak]]></category>
+		<category><![CDATA[Rappler IQ]]></category>
+		<category><![CDATA[Technology]]></category>
+		<category><![CDATA[data privacy]]></category>
+		<category><![CDATA[data protection policy]]></category>
+		<category><![CDATA[data security]]></category>
+		<guid isPermaLink="false"></guid>
+
+					<description><![CDATA[Your sensitive information may already be out there. Here are the notable data breaches in the country.]]></description>
+										
+					
+					<wfw:commentRss>https://www.rappler.com/technology/philippine-data-leaks-tracker/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		
+<image>https://www.rappler.com/tachyon/2026/11/PH-data-leaks-tracker-November-17-2026.jpg</image>	</item>
+		<item>
+		<title>US officials divided over Chinese spying allegations following Jensen Huang&#8217;s return</title>
+		<link>https://www.rappler.com/technology/us-officials-divided-chinese-spying-allegations-jensen-huang-return/</link>
+					<comments>https://www.rappler.com/technology/us-officials-divided-chinese-spying-allegations-jensen-huang-return/#respond</comments>
+		
+		<dc:creator><![CDATA[Reuters]]></dc:creator>
+		<pubDate>Thu, 26 Nov 2026 13:21:00 +0800</pubDate>
+				<category><![CDATA[Technology]]></category>
+		<category><![CDATA[US & Canada]]></category>
+		<category><![CDATA[World]]></category>
+		<category><![CDATA[investigations on tech companies]]></category>
+		<category><![CDATA[United States]]></category>
+		<category><![CDATA[US-China relations]]></category>
+		<guid isPermaLink="false"></guid>
+
+					<description><![CDATA[The interpretation of the facts is important for understanding US President Donald Trump's decision to push for Jensen Huang's reinstatement as CEO of Nvidia]]></description>
+										
+					
+					<wfw:commentRss>https://www.rappler.com/technology/us-officials-divided-chinese-spying-allegations-jensen-huang-return/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		
+<image>https://www.rappler.com/tachyon/2026/11/alice-huang-jensen-huang-computex-june-2-2024-reuters.jpg</image>	</item>
+		<item>
+		<title>How China got access to Nvidia&#8217;s AI chips despite rules to stop them</title>
+		<link>https://www.rappler.com/world/us-canada/how-china-got-access-nvidia-ai-chips/</link>
+					<comments>https://www.rappler.com/world/us-canada/how-china-got-access-nvidia-ai-chips/#respond</comments>
+		
+		<dc:creator><![CDATA[Reuters]]></dc:creator>
+		<pubDate>Thu, 26 Nov 2026 09:08:31 +0800</pubDate>
+				<category><![CDATA[Technology]]></category>
+		<category><![CDATA[US & Canada]]></category>
+		<category><![CDATA[World]]></category>
+		<category><![CDATA[artificial intelligence]]></category>
+		<category><![CDATA[China]]></category>
+		<category><![CDATA[investigations on tech companies]]></category>
+		<category><![CDATA[tech companies]]></category>
+		<category><![CDATA[United States]]></category>
+		<guid isPermaLink="false"></guid>
+
+					<description><![CDATA[The drama around Nvidia, the top US exporter of AI chips to China, thrusts the rules into the spotlight]]></description>
+										
+					
+					<wfw:commentRss>https://www.rappler.com/world/us-canada/how-china-got-access-nvidia-ai-chips/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		
+		<media:thumbnail url="https://www.rappler.com/tachyon/2026/11/jensen-huang-december-3-2025-reuters.jpg?resize=75%2C75&amp;crop=114px%2C0px%2C760px%2C760px" />
+		<media:content url="https://www.rappler.com/tachyon/2026/11/jensen-huang-december-3-2025-reuters.jpg" medium="image">
+			<media:title type="html">FILE PHOTO: Nvidia founder and CEO Jensen Huang arrives for a meeting with the Senate Banking Committee on Capitol Hill in Washington</media:title>
+			<media:description type="html">JENSEN HUANG. Nvidia founder and CEO Jensen Huang speaks with the media ahead of a meeting with the Senate Banking Committee on Capitol Hill in Washington, D.C., USA, December 3, 2025.</media:description>
+			<media:thumbnail url="https://www.rappler.com/tachyon/2026/11/jensen-huang-december-3-2025-reuters.jpg?resize=75%2C75&amp;crop=114px%2C0px%2C760px%2C760px" />
+		</media:content>
+<image>https://www.rappler.com/tachyon/2026/01/nvidia-logo-china-flag-august-27-2025-reuters.jpg</image>	</item>
+		<item>
+		<title>76% of Australians struggling to tell apart real and AI content – new report</title>
+		<link>https://www.rappler.com/technology/australians-struggling-real-ai-content-report/</link>
+					<comments>https://www.rappler.com/technology/australians-struggling-real-ai-content-report/#respond</comments>
+		
+		<dc:creator><![CDATA[The Conversation]]></dc:creator>
+		<pubDate>Thu, 26 Nov 2026 08:43:28 +0800</pubDate>
+				<category><![CDATA[Asia Pacific]]></category>
+		<category><![CDATA[Technology]]></category>
+		<category><![CDATA[World]]></category>
+		<category><![CDATA[artificial intelligence]]></category>
+		<category><![CDATA[Australia]]></category>
+		<guid isPermaLink="false"></guid>
+
+					<description><![CDATA[The challenge is not just that AI-generated content is becoming more realistic. It’s that many people are unsure whether they’re able to recognize it at all.]]></description>
+										
+					
+					<wfw:commentRss>https://www.rappler.com/technology/australians-struggling-real-ai-content-report/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		
+		<media:thumbnail url="https://www.rappler.com/tachyon/2026/10/brazil-elections-AI-oct-26-2026.jpg?resize=75%2C75&amp;crop=355px%2C0px%2C1080px%2C1080px" />
+		<media:content url="https://www.rappler.com/tachyon/2026/10/brazil-elections-AI-oct-26-2026.jpg" medium="image">
+			<media:title type="html">brazil-elections-AI-oct-26-2026</media:title>
+			<media:thumbnail url="https://www.rappler.com/tachyon/2026/10/brazil-elections-AI-oct-26-2026.jpg?resize=75%2C75&amp;crop=355px%2C0px%2C1080px%2C1080px" />
+		</media:content>
+		<media:content url="https://www.rappler.com/tachyon/2026/11/maria-ressa-ai-asean-1-scaled.jpeg" medium="image">
+			<media:title type="html">maria-ressa-ai-asean (1)</media:title>
+			<media:description type="html">TRUST. Rappler CEO Maria Ressa delivers a keynote speech about trust in the age of AI at the ASEAN Business and Investment Summit on November 15, 2026.</media:description>
+			<media:thumbnail url="https://www.rappler.com/tachyon/2026/11/maria-ressa-ai-asean-1-scaled.jpeg?resize=75%2C75&amp;crop=155px%2C0px%2C1440px%2C1440px" />
+		</media:content>
+<image>https://www.rappler.com/tachyon/2026/10/ai-reuters-2026-10-scaled.jpg</image>	</item>
+		<item>
+		<title>EXPLAINER: How scammers reach you, with or without your data</title>
+		<link>https://www.rappler.com/technology/explainer-how-scammers-reach-you-with-or-without-your-data/</link>
+					<comments>https://www.rappler.com/technology/explainer-how-scammers-reach-you-with-or-without-your-data/#respond</comments>
+		
+		<dc:creator><![CDATA[Alex Culla]]></dc:creator>
+		<pubDate>Thu, 26 Nov 2026 07:27:16 +0800</pubDate>
+				<category><![CDATA[Philippine News]]></category>
+		<category><![CDATA[Technology]]></category>
+		<category><![CDATA[#ScamAlert]]></category>
+		<category><![CDATA[Cyber crime]]></category>
+		<category><![CDATA[cybersecurity]]></category>
+		<category><![CDATA[online scams]]></category>
+		<guid isPermaLink="false"></guid>
+
+					<description><![CDATA[Scammers are no longer just sliding into your DMs; they have found new ways to slip onto your screen ]]></description>
+										
+					
+					<wfw:commentRss>https://www.rappler.com/technology/explainer-how-scammers-reach-you-with-or-without-your-data/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		
+		<media:thumbnail url="https://www.rappler.com/tachyon/2026/11/christmas-scams-nov-12-2026.jpg?resize=75%2C75&amp;crop=428px%2C0px%2C1080px%2C1080px" />
+		<media:content url="https://www.rappler.com/tachyon/2026/11/christmas-scams-nov-12-2026.jpg" medium="image">
+			<media:title type="html">christmas-scams-nov-12-2026</media:title>
+			<media:thumbnail url="https://www.rappler.com/tachyon/2026/11/christmas-scams-nov-12-2026.jpg?resize=75%2C75&amp;crop=428px%2C0px%2C1080px%2C1080px" />
+		</media:content>
+		<media:content url="https://www.rappler.com/tachyon/2026/11/1-1.jpg" medium="image">
+			<media:title type="html">1</media:title>
+			<media:thumbnail url="https://www.rappler.com/tachyon/2026/11/1-1.jpg?resize=75%2C75&amp;crop_strategy=attention" />
+		</media:content>
+		<media:content url="https://www.rappler.com/tachyon/2026/11/3-1.jpg" medium="image">
+			<media:title type="html">3</media:title>
+			<media:thumbnail url="https://www.rappler.com/tachyon/2026/11/3-1.jpg?resize=75%2C75&amp;crop_strategy=attention" />
+		</media:content>
+		<media:content url="https://www.rappler.com/public.flourish.studio/visualisation/31037517/thumbnail" medium="image">
+			<media:title type="html">table visualization</media:title>
+		</media:content>
+		<media:content url="https://www.rappler.com/tachyon/2026/11/Scam_Smishing1.jpg" medium="image">
+			<media:title type="html">Scam_Smishing1</media:title>
+			<media:thumbnail url="https://www.rappler.com/tachyon/2026/11/Scam_Smishing1.jpg?resize=75%2C75&amp;crop_strategy=attention" />
+		</media:content>
+		<media:content url="https://www.rappler.com/tachyon/2026/11/2-1.jpg" medium="image">
+			<media:title type="html">2</media:title>
+			<media:thumbnail url="https://www.rappler.com/tachyon/2026/11/2-1.jpg?resize=75%2C75&amp;crop_strategy=attention" />
+		</media:content>
+		<media:content url="https://www.rappler.com/tachyon/2024/09/received_825812582875097.jpeg" medium="image">
+			<media:title type="html">scam-hub-angeles-city</media:title>
+			<media:description type="html">SCAM HUB. A small-scale BPO in Angeles City is raided by the National Bureau of Investigation-Pampanga District Office on September 20, 2024, over alleged cyberfraud activities.</media:description>
+			<media:thumbnail url="https://www.rappler.com/tachyon/2024/09/received_825812582875097.jpeg?resize=75%2C75&amp;crop=290px%2C0px%2C1536px%2C1536px" />
+		</media:content>
+<image>https://www.rappler.com/tachyon/2026/11/scammers-reaching-users-explainer-November-25-2026.jpg</image>	</item>
+	</channel>
+</rss>

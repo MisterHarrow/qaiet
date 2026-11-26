@@ -418,7 +418,7 @@ sources:
   country: HK
   language: en
   type: mainstream
-  group: asia
+  group: east-asia
   feeds:
   - https://www.scmp.com/rss/320663/feed
 - id: nikkei
@@ -426,7 +426,7 @@ sources:
   country: JP
   language: en
   type: business
-  group: asia
+  group: east-asia
   feeds:
   - https://asia.nikkei.com/rss/feed/nar
   notes: Items carry no dates; use first-seen time.
@@ -435,7 +435,7 @@ sources:
   country: SG
   language: en
   type: mainstream
-  group: asia
+  group: southeast-asia
   feeds:
   - https://www.straitstimes.com/news/business/rss.xml
   notes: Tech section feed returns 400; business feed used.
@@ -444,7 +444,7 @@ sources:
   country: IN
   language: en
   type: business
-  group: asia
+  group: south-asia
   feeds:
   - https://economictimes.indiatimes.com/tech/rssfeeds/13357270.cms
 - id: koreaherald
@@ -452,7 +452,7 @@ sources:
   country: KR
   language: en
   type: mainstream
-  group: asia
+  group: east-asia
   feeds:
   - https://www.koreaherald.com/rss/newsAll
   notes: All-news firehose (~200/day), mostly non-AI.
@@ -524,7 +524,7 @@ sources:
   country: CN
   language: en
   type: trade
-  group: asia
+  group: east-asia
   feeds:
   - https://technode.com/feed/
   notes: China tech, privately owned. Feed returns ~2000 items per fetch, so use conditional GET. Added in round 2.
@@ -533,7 +533,7 @@ sources:
   country: CN
   language: en
   type: trade
-  group: asia
+  group: east-asia
   feeds:
   - https://pandaily.com/feed/
   notes: China tech, privately owned. Added in round 2.
@@ -948,6 +948,213 @@ sources:
   feeds:
   - https://www.lapresse.ca/affaires/techno/rss
   notes: Technology section. Added 2026-11-26 (global coverage plan, step 2).
+- id: thehindu
+  name: The Hindu
+  country: IN
+  language: en
+  type: mainstream
+  group: south-asia
+  feeds:
+  - https://www.thehindu.com/sci-tech/technology/feeder/default.rss
+  notes: Technology section. Added 2026-11-26 (global coverage plan, step 3).
+- id: mint
+  name: Mint
+  country: IN
+  language: en
+  type: business
+  group: south-asia
+  feeds:
+  - https://www.livemint.com/rss/technology
+  notes: Technology section. Added 2026-11-26 (global coverage plan, step 3).
+- id: indianexpress
+  name: The Indian Express
+  country: IN
+  language: en
+  type: mainstream
+  group: south-asia
+  feeds:
+  - https://indianexpress.com/section/technology/feed/
+  notes: Technology section. Added 2026-11-26 (global coverage plan, step 3).
+- id: inc42
+  name: Inc42
+  country: IN
+  language: en
+  type: trade
+  group: south-asia
+  feeds:
+  - https://inc42.com/feed/
+  notes: Indian startups. robots.txt Content-Signal says ai-input=yes. Added 2026-11-26 (global coverage plan, step 3).
+- id: aim
+  name: Analytics India Magazine
+  country: IN
+  language: en
+  type: trade
+  group: south-asia
+  feeds:
+  - https://analyticsindiamag.com/feed/
+  notes: AI and data science trade press. Added 2026-11-26 (global coverage plan, step 3).
+- id: scroll
+  name: Scroll.in
+  country: IN
+  language: en
+  type: mainstream
+  group: south-asia
+  feeds:
+  - https://feeds.feedburner.com/ScrollinArticles.rss
+  notes: All-news feed. Added 2026-11-26 (global coverage plan, step 3).
+- id: dawn
+  name: Dawn
+  country: PK
+  language: en
+  type: mainstream
+  group: south-asia
+  feeds:
+  - https://www.dawn.com/feeds/home
+  notes: All-news feed (the sci-tech feed URL failed). Added 2026-11-26 (global coverage plan, step 3).
+- id: tribunepk
+  name: The Express Tribune
+  country: PK
+  language: en
+  type: mainstream
+  group: south-asia
+  feeds:
+  - https://tribune.com.pk/feed/technology
+  notes: Technology section. Added 2026-11-26 (global coverage plan, step 3).
+- id: dailystarbd
+  name: The Daily Star
+  country: BD
+  language: en
+  type: mainstream
+  group: south-asia
+  feeds:
+  - https://www.thedailystar.net/tech-startup/rss.xml
+  notes: Tech and startup section. Added 2026-11-26 (global coverage plan, step 3).
+- id: yonhap
+  name: Yonhap News Agency
+  country: KR
+  language: en
+  type: wire
+  group: east-asia
+  feeds:
+  - https://en.yna.co.kr/RSS/news.xml
+  notes: English all-news feed. Added 2026-11-26 (global coverage plan, step 3).
+- id: koreatimes
+  name: The Korea Times
+  country: KR
+  language: en
+  type: mainstream
+  group: east-asia
+  feeds:
+  - https://www.koreatimes.co.kr/www/rss/rss.xml
+  notes: All-news feed. Added 2026-11-26 (global coverage plan, step 3).
+- id: thelec
+  name: The Elec
+  country: KR
+  language: en
+  type: trade
+  group: east-asia
+  feeds:
+  - https://www.thelec.net/rss/allArticle.xml
+  notes: Chips, displays and batteries. Added 2026-11-26 (global coverage plan, step 3).
+- id: digitimes
+  name: DigiTimes Asia
+  country: TW
+  language: en
+  type: trade
+  group: east-asia
+  feeds:
+  - https://www.digitimes.com/rss/daily.xml
+  notes: 'Supply chain and chips. Partly paywalled: headline and summary only. Added 2026-11-26 (global coverage plan, step 3).'
+- id: taipeitimes
+  name: Taipei Times
+  country: TW
+  language: en
+  type: mainstream
+  group: east-asia
+  feeds:
+  - https://www.taipeitimes.com/xml/index.rss
+  notes: All-news feed. Added 2026-11-26 (global coverage plan, step 3).
+- id: sixthtone
+  name: Sixth Tone
+  country: CN
+  language: en
+  type: state-aligned
+  group: east-asia
+  feeds:
+  - https://www.sixthtone.com/rss
+  notes: Published by the state-owned Shanghai United Media Group. Added 2026-11-26 (global coverage plan, step 3).
+- id: cna
+  name: CNA
+  country: SG
+  language: en
+  type: public-broadcaster
+  group: southeast-asia
+  feeds:
+  - https://www.channelnewsasia.com/api/v1/rss-outbound-feed?_format=xml&category=6936
+  notes: Mediacorp. Business feed. Added 2026-11-26 (global coverage plan, step 3).
+- id: e27
+  name: e27
+  country: SG
+  language: en
+  type: trade
+  group: southeast-asia
+  feeds:
+  - https://e27.co/feed/
+  notes: Southeast Asian startups. Added 2026-11-26 (global coverage plan, step 3).
+- id: rappler
+  name: Rappler
+  country: PH
+  language: en
+  type: mainstream
+  group: southeast-asia
+  feeds:
+  - https://www.rappler.com/technology/feed/
+  notes: Technology section. Added 2026-11-26 (global coverage plan, step 3).
+- id: bworld
+  name: BusinessWorld
+  country: PH
+  language: en
+  type: business
+  group: southeast-asia
+  feeds:
+  - https://www.bworldonline.com/feed/
+  notes: All-news feed. Added 2026-11-26 (global coverage plan, step 3).
+- id: fmt
+  name: Free Malaysia Today
+  country: MY
+  language: en
+  type: mainstream
+  group: southeast-asia
+  feeds:
+  - https://www.freemalaysiatoday.com/feed/
+  notes: All-news feed. Added 2026-11-26 (global coverage plan, step 3).
+- id: antara
+  name: Antara
+  country: ID
+  language: en
+  type: state-aligned
+  group: southeast-asia
+  feeds:
+  - https://en.antaranews.com/rss/news.xml
+  notes: Indonesian state news agency. English feed. Added 2026-11-26 (global coverage plan, step 3).
+- id: vietnamplus
+  name: VietnamPlus
+  country: VN
+  language: en
+  type: state-aligned
+  group: southeast-asia
+  feeds:
+  - https://en.vietnamplus.vn/rss/home.rss
+  notes: Vietnam News Agency (state). English feed. Added 2026-11-26 (global coverage plan, step 3).
+- id: bangkokpost
+  name: Bangkok Post
+  country: TH
+  language: en
+  type: mainstream
+  group: southeast-asia
+  feeds:
+  - https://www.bangkokpost.com/rss/data/business.xml
+  notes: Business feed (the tech feed URL returns 404). Added 2026-11-26 (global coverage plan, step 3).
 gdelt_outlets:
 - id: reuters
   name: Reuters

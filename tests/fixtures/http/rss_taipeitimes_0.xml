@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+xmlns="http://purl.org/rss/1.0/">
+
+<channel rdf:about="https://www.taipeitimes.com/">
+<title>Taipei Times</title>
+<link>https://www.taipeitimes.com/</link>
+<description>
+Bringing Taiwan to the World and the World to Taiwan
+</description>
+<sy:updatePeriod>daily</sy:updatePeriod>
+<sy:updateFrequency>1</sy:updateFrequency>
+<sy:updateBase>2005-02-14T08:00:00+08:00</sy:updateBase>
+
+<items>
+<rdf:Seq><rdf:li resource="https://www.taipeitimes.com/News/front/archives/2026/11/26/2003868404"/><rdf:li resource="https://www.taipeitimes.com/News/front/archives/2026/11/26/2003868405"/><rdf:li resource="https://www.taipeitimes.com/News/front/archives/2026/11/26/2003868406"/><rdf:li resource="https://www.taipeitimes.com/News/front/archives/2026/11/26/2003868407"/><rdf:li resource="https://www.taipeitimes.com/News/front/archives/2026/11/26/2003868408"/><rdf:li resource="https://www.taipeitimes.com/News/taiwan/archives/2026/11/26/2003868414"/><rdf:li resource="https://www.taipeitimes.com/News/taiwan/archives/2026/11/26/2003868415"/><rdf:li resource="https://www.taipeitimes.com/News/taiwan/archives/2026/11/26/2003868416"/><rdf:li resource="https://www.taipeitimes.com/News/taiwan/archives/2026/11/26/2003868417"/><rdf:li resource="https://www.taipeitimes.com/News/taiwan/archives/2026/11/26/2003868418"/><rdf:li resource="https://www.taipeitimes.com/News/taiwan/archives/2026/11/26/2003868419"/><rdf:li resource="https://www.taipeitimes.com/News/taiwan/archives/2026/11/26/2003868420"/><rdf:li resource="https://www.taipeitimes.com/News/taiwan/archives/2026/11/26/2003868421"/><rdf:li resource="https://www.taipeitimes.com/News/taiwan/archives/2026/11/26/2003868422"/><rdf:li resource="https://www.taipeitimes.com/News/taiwan/archives/2026/11/26/2003868423"/><rdf:li resource="https://www.taipeitimes.com/News/taiwan/archives/2026/11/26/2003868424"/><rdf:li resource="https://www.taipeitimes.com/News/taiwan/archives/2026/11/26/2003868425"/><rdf:li resource="https://www.taipeitimes.com/News/taiwan/archives/2026/11/26/2003868426"/><rdf:li resource="https://www.taipeitimes.com/News/biz/archives/2026/11/26/2003868385"/><rdf:li resource="https://www.taipeitimes.com/News/biz/archives/2026/11/26/2003868386"/><rdf:li resource="https://www.taipeitimes.com/News/biz/archives/2026/11/26/2003868387"/><rdf:li resource="https://www.taipeitimes.com/News/biz/archives/2026/11/26/2003868388"/><rdf:li resource="https://www.taipeitimes.com/News/biz/archives/2026/11/26/2003868389"/><rdf:li resource="https://www.taipeitimes.com/News/biz/archives/2026/11/26/2003868390"/><rdf:li resource="https://www.taipeitimes.com/News/biz/archives/2026/11/26/2003868391"/><rdf:li resource="https://www.taipeitimes.com/News/biz/archives/2026/11/26/2003868392"/><rdf:li resource="https://www.taipeitimes.com/News/editorials/archives/2026/11/26/2003868393"/><rdf:li resource="https://www.taipeitimes.com/News/editorials/archives/2026/11/26/2003868394"/><rdf:li resource="https://www.taipeitimes.com/News/editorials/archives/2026/11/26/2003868395"/><rdf:li resource="https://www.taipeitimes.com/News/editorials/archives/2026/11/26/2003868396"/><rdf:li resource="https://www.taipeitimes.com/News/editorials/archives/2026/11/26/2003868397"/><rdf:li resource="https://www.taipeitimes.com/News/editorials/archives/2026/11/26/2003868398"/><rdf:li resource="https://www.taipeitimes.com/News/editorials/archives/2026/11/26/2003868399"/><rdf:li resource="https://www.taipeitimes.com/News/sport/archives/2026/11/26/2003868409"/><rdf:li resource="https://www.taipeitimes.com/News/sport/archives/2026/11/26/2003868410"/><rdf:li resource="https://www.taipeitimes.com/News/sport/archives/2026/11/26/2003868411"/><rdf:li resource="https://www.taipeitimes.com/News/sport/archives/2026/11/26/2003868412"/><rdf:li resource="https://www.taipeitimes.com/News/sport/archives/2026/11/26/2003868413"/><rdf:li resource="https://www.taipeitimes.com/News/world/archives/2026/11/26/2003868427"/><rdf:li resource="https://www.taipeitimes.com/News/world/archives/2026/11/26/2003868428"/><rdf:li resource="https://www.taipeitimes.com/News/world/archives/2026/11/26/2003868429"/><rdf:li resource="https://www.taipeitimes.com/News/world/archives/2026/11/26/2003868430"/><rdf:li resource="https://www.taipeitimes.com/News/world/archives/2026/11/26/2003868431"/><rdf:li resource="https://www.taipeitimes.com/News/world/archives/2026/11/26/2003868432"/><rdf:li resource="https://www.taipeitimes.com/News/world/archives/2026/11/26/2003868433"/><rdf:li resource="https://www.taipeitimes.com/News/feat/archives/2026/11/26/2003868400"/><rdf:li resource="https://www.taipeitimes.com/News/feat/archives/2026/11/26/2003868401"/><rdf:li resource="https://www.taipeitimes.com/News/feat/archives/2026/11/26/2003868402"/><rdf:li resource="https://www.taipeitimes.com/News/feat/archives/2026/11/26/2003868403"/><rdf:li resource="https://www.taipeitimes.com/News/lang/archives/2026/11/26/2003868384"/>
+</rdf:Seq>
+</items>
+</channel><item rdf:about="https://www.taipeitimes.com/News/front/archives/2026/11/26/2003868404">
+<title><![CDATA[US report warns of Chinese AI persona tactics targeting Taiwan elections]]></title>
+<link>https://www.taipeitimes.com/News/front/archives/2026/11/26/2003868404</link>
+<description></description>
+<dc:subject></dc:subject>
+<dc:creator></dc:creator>
+<dc:date>2026-11-26T08:00:00+08:00</dc:date>
+</item><item rdf:about="https://www.taipeitimes.com/News/front/archives/2026/11/26/2003868405">
+<title><![CDATA[US proposed new tariffs on 14 trading partners, including Taiwan, China]]></title>
+<link>https://www.taipeitimes.com/News/front/archives/2026/11/26/2003868405</link>
+<description></description>
+<dc:subject></dc:subject>
+<dc:creator></dc:creator>
+<dc:date>2026-11-26T08:00:00+08:00</dc:date>
+</item><item rdf:about="https://www.taipeitimes.com/News/front/archives/2026/11/26/2003868406">
+<title><![CDATA[Huawei found guilty in US case]]></title>
+<link>https://www.taipeitimes.com/News/front/archives/2026/11/26/2003868406</link>
+<description></description>
+<dc:subject></dc:subject>
+<dc:creator></dc:creator>
+<dc:date>2026-11-26T08:00:00+08:00</dc:date>
+</item><item rdf:about="https://www.taipeitimes.com/News/front/archives/2026/11/26/2003868407">
+<title><![CDATA[Ministry hails green iguana removal program]]></title>
+<link>https://www.taipeitimes.com/News/front/archives/2026/11/26/2003868407</link>
+<description></description>
+<dc:subject></dc:subject>
+<dc:creator></dc:creator>
+<dc:date>2026-11-26T08:00:00+08:00</dc:date>
+</item><item rdf:about="https://www.taipeitimes.com/News/front/archives/2026/11/26/2003868408">
+<title><![CDATA[North Korea expels head of Swiss diplomatic office]]></title>
+<link>https://www.taipeitimes.com/News/front/archives/2026/11/26/2003868408</link>
+<description></description>
+<dc:subject></dc:subject>
+<dc:creator></dc:creator>
+<dc:date>2026-11-26T08:00:00+08:00</dc:date>
+</item>
+</rdf:RDF>

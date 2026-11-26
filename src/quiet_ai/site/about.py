@@ -26,7 +26,9 @@ GROUP_NAMES = {
     "nordics": "Nordics",
     "africa": "Africa",
     "middle-east": "Middle East",
-    "asia": "Asia",
+    "east-asia": "East Asia",
+    "south-asia": "South Asia",
+    "southeast-asia": "Southeast Asia",
     "oceania": "Oceania",
     "global": "Global",
 }

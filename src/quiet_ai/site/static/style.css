@@ -138,7 +138,7 @@ button { font: inherit; }
 .geo-legend { margin: 0; padding: 0; list-style: none; font: 0.6rem/1 var(--mono); letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted); }
 .geo-legend li { display: flex; align-items: center; gap: 0.2rem; height: 0.85rem; }
 .geo-legend .geo-none { color: var(--faint); }
-.geo-region { width: 5.6rem; }
+.geo-region { width: 5.8rem; white-space: nowrap; }  /* fits "Southeast Asia" on one line */
 .geo-sq { display: block; width: 0.45rem; height: 0.45rem; border-radius: 1px; background: var(--rule); }
 .geo-sq.n1 { background: var(--ink); opacity: 0.4; }
 .geo-sq.n2 { background: var(--ink); opacity: 0.65; }

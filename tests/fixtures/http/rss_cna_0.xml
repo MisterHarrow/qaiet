@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet title="XSL_formatting" type="text/xsl" href="/static/rss/nolsol.xsl"?>
+<rss version="2.0" xml:base="https://www.channelnewsasia.com/"  xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:og="http://ogp.me/ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:schema="http://schema.org/" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:sioct="http://rdfs.org/sioc/types#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <channel>
+    <title>Latest News</title>
+    <link>https://www.channelnewsasia.com/</link>
+    <description>mediacorp feed news</description>
+            <lastBuildDate>Thu, 26 Nov 2026 17:25:46 +0800 </lastBuildDate>
+              <generator>Mediacorp</generator>
+              <ttl> 20 </ttl>
+        <image>
+        <url>https://www.channelnewsasia.com/image/8395694/1x1/114/114/eb06a179c414e4534ff4417b64f3710c/kC/apple-touch-icon.png</url>
+                  <title>Latest News</title>
+                <link>https://www.channelnewsasia.com/</link>
+        <width>114</width>
+                <height>114</height>
+                <description>mediacorp feed news</description>
+      </image>
+        
+    <item>
+  <title>Meta battles political storm in India as Congress party sues, stages protests</title>
+  <link>https://www.channelnewsasia.com/business/meta-battles-political-storm-in-india-congress-party-sues-stages-protests-6584706</link>
+    <description></description>
+  <pubDate>Thu, 26 Nov 2026 17:07:55 +0800</pubDate>
+    <guid isPermaLink="false">https://www.channelnewsasia.com/business/meta-battles-political-storm-in-india-congress-party-sues-stages-protests-6584706</guid>
+    <category>Business</category>
+    <media:thumbnail url="https://dam.mediacorp.sg/image/upload/s--O-SALGB5--/fl_relative,g_south_east,l_mediacorp:cna:watermark:2024-04:reuters_1,w_0.1/f_auto,q_auto/c_fill,g_auto,h_468,w_830/v1/one-cms/core/2026-11-26T090755Z_1_LYNXNPEMAP0PQ_RTROPTP_3_META-PLATFORMS-MESSAGING-WHATSAPP.JPG?itok=cO00DTjE" width="830" height="468" />
+    </item>
+<item>
+  <title>Vietnam seeks US trade deal as tariffs threaten clothing, footwear exports</title>
+  <link>https://www.channelnewsasia.com/asia/vietnam-us-trade-deal-tariffs-clothing-footwear-exports-6584591</link>
+    <description>Vietnam runs the largest trade surplus of any US partner.</description>
+  <pubDate>Thu, 26 Nov 2026 16:38:00 +0800</pubDate>
+    <guid isPermaLink="false">https://www.channelnewsasia.com/asia/vietnam-us-trade-deal-tariffs-clothing-footwear-exports-6584591</guid>
+    <category>Asia ,Business</category>
+    <media:thumbnail url="https://dam.mediacorp.sg/image/upload/s--u1Qekrat--/fl_relative,g_south_east,l_mediacorp:cna:watermark:2024-04:reuters_1,w_0.1/f_auto,q_auto/c_fill,g_auto,h_468,w_830/v1/one-cms/core/2026-10-03T011119Z_1_LYNXMPEM9200V_RTROPTP_3_VIETNAM-ECONOMY.JPG?itok=Y_mTkoeb" width="830" height="468" />
+    </item>
+<item>
+  <title>China says reserves right to take &#039;measures&#039; after new US tariffs</title>
+  <link>https://www.channelnewsasia.com/east-asia/china-threaten-measures-after-new-us-tariffs-6584526</link>
+    <description>China urges the United States to return to dialogue after Washington unveils new tariffs of up to 20 per cent, with Beijing reserving the right to respond.</description>
+  <pubDate>Thu, 26 Nov 2026 16:25:00 +0800</pubDate>
+    <guid isPermaLink="false">https://www.channelnewsasia.com/east-asia/china-threaten-measures-after-new-us-tariffs-6584526</guid>
+    <category>East Asia ,Business ,Asia ,World</category>
+    <media:thumbnail url="https://dam.mediacorp.sg/image/upload/s--fmOcoRJj--/c_crop,h_1125,w_1999,x_1,y_77/fl_relative,g_south_east,l_one-cms:core:watermark:ap_data-1,w_0.1/f_auto,q_auto/c_fill,g_auto,h_468,w_830/v1/mediacorp/cna/image/2026/11/26/ap26329166736512.jpg?itok=F6oxjp4u" width="830" height="468" />
+    </item>
+<item>
+  <title>BOJ&#039;s net income shrinks on higher interest payments on reserves</title>
+  <link>https://www.channelnewsasia.com/business/bojs-net-income-shrinks-higher-interest-payments-reserves-6584556</link>
+    <description></description>
+  <pubDate>Thu, 26 Nov 2026 16:01:02 +0800</pubDate>
+    <guid isPermaLink="false">https://www.channelnewsasia.com/business/bojs-net-income-shrinks-higher-interest-payments-reserves-6584556</guid>
+    <category>Business</category>
+    <media:thumbnail url="https://dam.mediacorp.sg/image/upload/s--wiW5IA9W--/fl_relative,g_south_east,l_mediacorp:cna:watermark:2024-04:reuters_1,w_0.1/f_auto,q_auto/c_fill,g_auto,h_468,w_830/v1/one-cms/core/2026-11-26T080014Z_1_LYNXNPEMAP0K1_RTROPTP_3_JAPAN-BOJ.JPG?itok=CXr_xSa4" width="830" height="468" />
+    </item>
+<item>
+  <title>S&amp;P warns Nvidia&#039;s board may be compromised, puts chipmaker&#039;s rating on downgrade watch</title>
+  <link>https://www.channelnewsasia.com/business/s-and-p-nvidia-board-compromised-rating-downgrade-watch-6582441</link>
+    <description>S&amp;amp;P&amp;nbsp;said it could downgrade Nvidia within the next 90 days, but expects any potential downgrade to be limited to one notch, unless investigations and other disclosures harm the company&#039;s reputation or future business prospects.</description>
+  <pubDate>Thu, 26 Nov 2026 13:17:58 +0800</pubDate>
+    <guid isPermaLink="false">https://www.channelnewsasia.com/business/s-and-p-nvidia-board-compromised-rating-downgrade-watch-6582441</guid>
+    <category>Business ,World</category>
+    <media:thumbnail url="https://dam.mediacorp.sg/image/upload/s--jXSeqaEJ--/fl_relative,g_south_east,l_mediacorp:cna:watermark:2024-04:reuters_1,w_0.1/f_auto,q_auto/c_fill,g_auto,h_468,w_830/v1/one-cms/core/2026-11-26T033733Z_1_LYNXNPEMAP07Z_RTROPTP_3_NVIDIA-CEO-ALICE-CHIPS.JPG?itok=jCSs_I6S" width="830" height="468" />
+    </item>
+
+  </channel>
+</rss>

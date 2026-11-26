@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title>Scroll.in</title>
+    <link>https://scroll.in</link>
+    <description>A digital daily of things that matter.</description>
+    <atom:link href="https://scroll.in" rel="self"/>
+    <docs>http://www.rssboard.org/rss-specification</docs>
+    <generator>python-feedgen</generator>
+    <image>
+      <url>http://s3-ap-southeast-1.amazonaws.com/scroll-feeds/scroll_logo_small.png</url>
+      <title>Scroll.in</title>
+      <link>https://scroll.in</link>
+    </image>
+    <language>en</language>
+    <lastBuildDate>Thu, 26 Nov 2026 08:45:50 +0000</lastBuildDate>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
+    <item>
+      <title>A new book recounts how one honest conversation helped Ford survive the 2008 financial crisis</title>
+      <link>https://scroll.in/article/1097180/a-new-book-recounts-how-one-honest-conversation-helped-ford-survive-the-2008-financial-crisis?utm_source=rss&amp;utm_medium=public</link>
+      <description>An excerpt from ‘Nobody Wins Alone: The Magic of Teamwork’, by Prakash Iyer.</description>
+      
+      <guid isPermaLink="false">https://scroll.in/article/1097180/a-new-book-recounts-how-one-honest-conversation-helped-ford-survive-the-2008-financial-crisis?utm_source=rss&amp;utm_medium=public</guid>
+      <enclosure url="https://sc0.blr1.cdn.digitaloceanspaces.com/article/216650-qrptainkjp-1795073628.jpg" length="0" type="image/jpeg"/>
+      <pubDate>Thu, 26 Nov 2026 08:00:01 +0000</pubDate>
+      <dc:creator>Prakash Iyer</dc:creator>
+    </item>
+    <item>
+      <title>SC says it can do ‘nothing much’ on IDBI staff pension plea citing Centre’s move to sell bank stakes</title>
+      <link>https://scroll.in/latest/1097327/sc-says-it-can-do-nothing-much-on-idbi-staff-pension-plea-citing-centres-move-to-sell-bank-stakes?utm_source=rss&amp;utm_medium=public</link>
+      <description>The Union government and the Life Insurance Corporation are selling their combined 60.7% share in the bank to a Canadian firm.</description>
+      
+      <guid isPermaLink="false">https://scroll.in/latest/1097327/sc-says-it-can-do-nothing-much-on-idbi-staff-pension-plea-citing-centres-move-to-sell-bank-stakes?utm_source=rss&amp;utm_medium=public</guid>
+      <enclosure url="https://sc0.blr1.cdn.digitaloceanspaces.com/article/216097-xzhxgnabbv-1791981053.jpg" length="0" type="image/jpeg"/>
+      <pubDate>Thu, 26 Nov 2026 07:45:17 +0000</pubDate>
+      <dc:creator>Scroll Staff</dc:creator>
+    </item>
+    <item>
+      <title>2026 Kamaladevi Chattopadhyay NIF Book Prize: Sam Dalrymple wins for debut book ‘Shattered Lands’</title>
+      <link>https://scroll.in/article/1097300/2026-kamaladevi-chattopadhyay-nif-book-prize-sam-dalrymple-wins-for-debut-book-shattered-lands?utm_source=rss&amp;utm_medium=public</link>
+      <description>He will receive a cash prize of Rs 15 lakh on December 12 at the Bangalore Literature Festival.</description>
+      
+      <guid isPermaLink="false">https://scroll.in/article/1097300/2026-kamaladevi-chattopadhyay-nif-book-prize-sam-dalrymple-wins-for-debut-book-shattered-lands?utm_source=rss&amp;utm_medium=public</guid>
+      <enclosure url="https://sc0.blr1.cdn.digitaloceanspaces.com/article/208961-ufvgskgiuz-1755934187.jpg" length="0" type="image/jpeg"/>
+      <pubDate>Thu, 26 Nov 2026 07:30:00 +0000</pubDate>
+      <dc:creator>Scroll Staff</dc:creator>
+    </item>
+    <item>
+      <title>Ensure packaged food carries warning labels for high levels of fat, sugar and salt, SC to FSSAI</title>
+      <link>https://scroll.in/latest/1097330/ensure-packaged-food-carries-warning-labels-for-high-levels-of-fat-sugar-and-salt-sc-to-fssai?utm_source=rss&amp;utm_medium=public</link>
+      <description>Each pictorial warning should occupy 4% to 5% of the packet’s principal display panel, the bench held.</description>
+      
+      <guid isPermaLink="false">https://scroll.in/latest/1097330/ensure-packaged-food-carries-warning-labels-for-high-levels-of-fat-sugar-and-salt-sc-to-fssai?utm_source=rss&amp;utm_medium=public</guid>
+      <enclosure url="https://sc0.blr1.cdn.digitaloceanspaces.com/article/212568-biisgnbchy-1774197119.jpg" length="0" type="image/jpeg"/>
+      <pubDate>Thu, 26 Nov 2026 07:13:28 +0000</pubDate>
+      <dc:creator>Scroll Staff</dc:creator>
+    </item>
+    <item>
+      <title>Allahabad HC’s ‘hijab not essential religious practice’ verdict not a precedent, says SC</title>
+      <link>https://scroll.in/latest/1097325/allahabad-hcs-hijab-not-essential-religious-practice-verdict-not-a-precedent-says-sc?utm_source=rss&amp;utm_medium=public</link>
+      <description>The High Court ruling undermines constitutional rights and adversely affects Muslim women’s access to education, petitioners submitted before the Supreme Court.</description>
+      
+      <guid isPermaLink="false">https://scroll.in/latest/1097325/allahabad-hcs-hijab-not-essential-religious-practice-verdict-not-a-precedent-says-sc?utm_source=rss&amp;utm_medium=public</guid>
+      <enclosure url="https://sc0.blr1.cdn.digitaloceanspaces.com/article/212453-yxgwzrnsfx-1773472539.jpg" length="0" type="image/jpeg"/>
+      <pubDate>Thu, 26 Nov 2026 05:47:52 +0000</pubDate>
+      <dc:creator>Scroll Staff</dc:creator>
+    </item>
+  </channel>
+</rss>

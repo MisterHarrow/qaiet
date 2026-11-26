@@ -148,7 +148,7 @@ def test_about_page_reads_config_and_health(tmp_path, settings):
     assert ctx["waiting"]["until"] == "10 December" and "join the index two weeks later (" in html
     assert ctx["us_share"] is None  # no labels in this store
     assert 'Daily Sabah <span class="country">TR, state-aligned</span>' in html  # state media are marked in the list
-    assert "<h3>Canada</h3>" in html and "<h3>Middle East</h3>" in html and "Americas" not in html
+    assert "<h3>Canada</h3>" in html and "<h3>Middle East</h3>" in html and "<h3>Southeast Asia</h3>" in html and "Americas" not in html
     assert "<img" not in html and not re.search(r'<script[^>]*src="(?!\.\./static/app\.js")', html)  # only our own script
 
 
@@ -291,7 +291,8 @@ def test_coverage_map_lights_up_the_outlets_countries(tmp_path):
                {"coverage": [{"items": [{"outlet": "WSJ", "country": "US"}]}]}]
     geo = build.coverage_map(stories)
     assert geo["outlets"] == 3 and geo["countries"] == [["US", 2], ["SE", 1]]  # one per outlet
-    assert [(r["name"], r["n"]) for r in geo["regions"]] == [("North America", 2), ("Latin America", 0), ("Europe", 1), ("Middle East", 0), ("Africa", 0), ("Asia", 0), ("Oceania", 0)]
+    assert [(r["name"], r["n"]) for r in geo["regions"]] == [("North America", 2), ("Latin America", 0), ("Europe", 1), ("Middle East", 0), ("Africa", 0),
+                                                              ("East Asia", 0), ("South Asia", 0), ("Southeast Asia", 0), ("Oceania", 0)]
     svg = str(geo["svg"])
     assert svg.startswith('<svg class="geo-map" viewBox="0 0 170 70" width="170" height="70"') and 'class="geo-land"' in svg
     assert svg.count('<circle class="lit') > 4 and "--d:" in svg
@@ -307,7 +308,8 @@ def test_stories_filter_by_region_and_country(tmp_path):
     assert build.story_countries(us_se) == ["US", "SE"] and build.story_countries(builders_only) == []  # legend order
     places = build.place_filters([us_se, gb_ca, builders_only])
     assert [(r["name"], r["n"]) for r in places] == [("North America", 2), ("Latin America", 0), ("Europe", 2), ("Middle East", 0),
-                                                     ("Africa", 0), ("Asia", 0), ("Oceania", 0)]
+                                                     ("Africa", 0), ("East Asia", 0), ("South Asia", 0), ("Southeast Asia", 0),
+                                                     ("Oceania", 0)]
     assert [(c["code"], c["n"]) for c in places[2]["countries"]] == [("GB", 1), ("SE", 1)]  # stories per country, only those with any
     assert places[2]["codes"] == ["GB", "SE", "DE", "FR", "BE", "ES"]
     assert build.place_filters([builders_only]) == []

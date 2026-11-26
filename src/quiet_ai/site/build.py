@@ -29,10 +29,11 @@ KIND_NAMES = {"news": "", "newsletter": "commentary"}
 # Outlet countries (ISO codes in sources.yaml), named on hover.
 COUNTRY_NAMES = {
     "AE": "United Arab Emirates", "AR": "Argentina", "AU": "Australia", "BE": "Belgium", "BR": "Brazil", "CA": "Canada", "CL": "Chile", "CN": "China",
-    "CO": "Colombia", "DE": "Germany", "EG": "Egypt", "ES": "Spain", "FR": "France", "GB": "United Kingdom", "GH": "Ghana",
-    "HK": "Hong Kong", "IL": "Israel", "IN": "India", "JP": "Japan", "KR": "South Korea", "MX": "Mexico", "NG": "Nigeria",
-    "NZ": "New Zealand", "PE": "Peru", "QA": "Qatar", "SA": "Saudi Arabia", "SE": "Sweden", "SG": "Singapore", "TR": "Turkey",
-    "US": "United States", "ZA": "South Africa",
+    "BD": "Bangladesh", "CO": "Colombia", "DE": "Germany", "EG": "Egypt", "ES": "Spain", "FR": "France", "GB": "United Kingdom",
+    "GH": "Ghana", "HK": "Hong Kong", "ID": "Indonesia", "IL": "Israel", "IN": "India", "JP": "Japan", "KR": "South Korea",
+    "MX": "Mexico", "MY": "Malaysia", "NG": "Nigeria", "NZ": "New Zealand", "PE": "Peru", "PH": "Philippines", "PK": "Pakistan",
+    "QA": "Qatar", "SA": "Saudi Arabia", "SE": "Sweden", "SG": "Singapore", "TH": "Thailand", "TR": "Turkey", "TW": "Taiwan",
+    "US": "United States", "VN": "Vietnam", "ZA": "South Africa",
 }
 
 
@@ -62,7 +63,8 @@ COUNTRY_POS = {"US": (39, -98), "CA": (56, -106), "GB": (54, -2), "SE": (62, 16)
                "ES": (40, -4), "QA": (25, 51), "CN": (34, 104), "HK": (22, 114), "IN": (22, 79), "JP": (36, 138), "KR": (36, 128),
                "SG": (1, 104), "AU": (-25, 134), "MX": (23, -102), "CO": (4, -73), "PE": (-10, -76), "BR": (-10, -52),
                "CL": (-33, -71), "AR": (-34, -64), "EG": (26, 30), "GH": (8, -1), "NG": (9, 8), "ZA": (-29, 24), "TR": (39, 35),
-               "IL": (31.5, 35), "SA": (24, 45), "AE": (24, 54), "NZ": (-41, 174)}
+               "IL": (31.5, 35), "SA": (24, 45), "AE": (24, 54), "NZ": (-41, 174), "TW": (23.7, 121), "PK": (30, 70),
+               "BD": (24, 90), "MY": (4, 102), "TH": (15, 101), "VN": (16, 107), "ID": (-2, 118), "PH": (12, 122)}
 MAP_W, MAP_H = 170, 70
 
 

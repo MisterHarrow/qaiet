@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"  xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/">
+	<channel>
+		<title><![CDATA[Yonhap News Agency | All News]]></title>
+		<link>https://en.yna.co.kr/news</link>
+		<atom:link href="https://en.yna.co.kr/RSS/news.xml" rel="self" type="application/rss+xml"/>
+		<description><![CDATA[Yonhap News Agency | All News]]></description>
+		<language>en</language>
+		<copyright><![CDATA[Yonhap News Agency]]></copyright>
+		<sy:updatePeriod>hourly</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+		<lastBuildDate>Thu, 26 Nov 2026 17:52:48 +0900</lastBuildDate>
+		<pubDate>Thu, 26 Nov 2026 17:52:48 +0900</pubDate>
+		<item>
+			<title><![CDATA[Lee touts new deposit system as effective in curbing illegal fishing by Chinese vessels]]></title>
+			<link>https://en.yna.co.kr/view/AEN20261126011700315</link>
+			<guid isPermaLink="true">https://en.yna.co.kr/view/AEN20261126011700315</guid>
+			<pubDate>Thu, 26 Nov 2026 17:52:48 +0900</pubDate>
+			<dc:creator>Park Boram</dc:creator>
+			<description><![CDATA[SEOUL, Nov. 26 (Yonhap) -- President Lee Jae Myung on Thursday touted a tightene...]]></description>
+			<media:content url="https://img.yna.co.kr/etc/inner/EN/2026/11/26/AEN20261126011700315_01_i_P2.jpg" type="image/jpeg"/>
+		</item>
+		<item>
+			<title><![CDATA[Yonhap News Summary]]></title>
+			<link>https://en.yna.co.kr/view/AEN20261126011600315</link>
+			<guid isPermaLink="true">https://en.yna.co.kr/view/AEN20261126011600315</guid>
+			<pubDate>Thu, 26 Nov 2026 17:09:46 +0900</pubDate>
+			<dc:creator>Lee Minji</dc:creator>
+			<description><![CDATA[The following is the second summary of major stories moved by Yonhap News Agency...]]></description>
+			<media:content url="https://img.yna.co.kr/photo/yna/YH/2026/10/29/PYH2026102905910001300_P2.jpg" type="image/jpeg"/>
+		</item>
+		<item>
+			<title><![CDATA[(LEAD) Unionized rail workers launch work-to-rule campaign; 3 train services canceled]]></title>
+			<link>https://en.yna.co.kr/view/AEN20261126002451315</link>
+			<guid isPermaLink="true">https://en.yna.co.kr/view/AEN20261126002451315</guid>
+			<pubDate>Thu, 26 Nov 2026 16:56:51 +0900</pubDate>
+			<dc:creator>Chae Yun-hwan</dc:creator>
+			<description><![CDATA[SEOUL, Nov. 26 (Yonhap) -- Unionized workers of Korea Railroad Corp. (KORAIL) la...]]></description>
+			<media:content url="https://img.yna.co.kr/photo/yna/YH/2026/11/26/PYH2026112602130005500_P2.jpg" type="image/jpeg"/>
+		</item>
+		<item>
+			<title><![CDATA[Defense minister calls for easing tension with Russia after air defense zone entry]]></title>
+			<link>https://en.yna.co.kr/view/AEN20261126010200315</link>
+			<guid isPermaLink="true">https://en.yna.co.kr/view/AEN20261126010200315</guid>
+			<pubDate>Thu, 26 Nov 2026 16:55:58 +0900</pubDate>
+			<dc:creator>Kim Seung-yeon</dc:creator>
+			<description><![CDATA[SEOUL, Nov. 26 (Yonhap) -- Defense Minister Kang Shin-chul on Thursday called fo...]]></description>
+			<media:content url="https://img.yna.co.kr/photo/yna/YH/2026/11/26/PYH2026112616950001300_P2.jpg" type="image/jpeg"/>
+		</item>
+		<item>
+			<title><![CDATA[Kim Do-yeong joins elite company with 2nd career KBO MVP award]]></title>
+			<link>https://en.yna.co.kr/view/AEN20261126010500315</link>
+			<guid isPermaLink="true">https://en.yna.co.kr/view/AEN20261126010500315</guid>
+			<pubDate>Thu, 26 Nov 2026 16:55:44 +0900</pubDate>
+			<dc:creator>Yoo Jee-ho</dc:creator>
+			<description><![CDATA[SEOUL, Nov. 26 (Yonhap) -- Just five years into his career in the Korea Baseball...]]></description>
+			<media:content url="https://img.yna.co.kr/photo/yna/YH/2026/11/26/PYH2026112619770001300_P2.jpg" type="image/jpeg"/>
+			<media:content url="https://img.yna.co.kr/photo/yna/YH/2026/11/26/PYH2026112619610001300_P2.jpg" type="image/jpeg"/>
+		</item>
+	</channel>
+</rss>

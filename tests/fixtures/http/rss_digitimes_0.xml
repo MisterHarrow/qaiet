@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+<channel>
+<atom:link href="https://www.digitimes.com/rss/daily.xml" rel="self" type="application/rss+xml" />
+<title>DIGITIMES: News and Insight of the Global Supply Chain</title>
+<link>https://www.digitimes.com</link>
+<description>A platform bridging customers and suppliers</description>
+<language>en-us</language>
+<copyright>Copyright 2026 DIGITIMES Inc.</copyright>
+<lastBuildDate>Thu, 26 Nov 2026 09:00:03 GMT</lastBuildDate>
+<ttl>240</ttl>
+<image>
+<title>DIGITIMES</title>
+<width>131</width>
+<height>62</height>
+<link>https://www.digitimes.com</link>
+<url>https://www.digitimes.com/images/rss_logo.jpg</url>
+</image>
+<item>
+<title>Chip substrate makers face 30-month waits for key equipment</title>
+<pubDate>Thu, 26 Nov 2026 08:12:06 GMT</pubDate>
+<link>https://www.digitimes.com/news/a20261126VL223/fc-bga-equipment-substrate-capacity-demand-production.html</link>
+<description>Delivery times for some equipment used to manufacture advanced chip substrates have stretched from six months to 30 months as manufacturers race to expand production to meet surging demand for artificial intelligence (AI) chips.</description>
+<dc:creator>DIGITIMES</dc:creator>
+<category>Semiconductors</category>
+<guid isPermaLink="true">https://www.digitimes.com/news/a20261126VL223/fc-bga-equipment-substrate-capacity-demand-production.html</guid>
+<media:content url="https://img.digitimes.com/newsshow/20261126vl223_files/2_b.jpg" type="image/jpeg" expression="full">
+<media:description type="plain"><![CDATA[Ushio's lithography equipment for advanced IC package substrates. Credit: Ushio]]></media:description>
+</media:content></item>
+<item>
+<title>Micron, Samsung, SK Hynix strike multiyear memory deals</title>
+<pubDate>Thu, 26 Nov 2026 07:57:31 GMT</pubDate>
+<link>https://www.digitimes.com/news/a20261126VL222/sk-hynix-micron-chipmakers-demand-chips.html</link>
+<description>The world's three largest memory chipmakers are securing multiyear supply agreements as shortages driven by AI demand push customers to commit cash years before chips are delivered.</description>
+<dc:creator>DIGITIMES</dc:creator>
+<category>Semiconductors</category>
+<guid isPermaLink="true">https://www.digitimes.com/news/a20261126VL222/sk-hynix-micron-chipmakers-demand-chips.html</guid>
+<media:content url="https://img.digitimes.com/newsshow/20261126vl222_files/2_b.jpg" type="image/jpeg" expression="full">
+<media:description type="plain"><![CDATA[Credit: Micron]]></media:description>
+</media:content></item>
+<item>
+<title>Nvidia reportedly halts server shipments to four Southeast Asian countries as new US chip rule bites</title>
+<pubDate>Thu, 26 Nov 2026 07:33:30 GMT</pubDate>
+<link>https://www.digitimes.com/news/a20261126VL220/nvidia-chips-manufacturing-shipping-data.html</link>
+<description>Nvidia has told its manufacturing partners to stop shipping servers to Malaysia, Singapore, Thailand, and Indonesia, the &lt;em&gt;Financial Times&lt;/em&gt; (&lt;em&gt;FT&lt;/em&gt;) reported on November 26, as a new US rule against Chinese companies' rented access to AI computing hits the region's data center boom and governments there race to show Washington they will comply.</description>
+<dc:creator>DIGITIMES</dc:creator>
+<category>AI Infra</category>
+<guid isPermaLink="true">https://www.digitimes.com/news/a20261126VL220/nvidia-chips-manufacturing-shipping-data.html</guid>
+<media:content url="https://img.digitimes.com/newsshow/20261126vl220_files/1_2b.jpg" type="image/jpeg" expression="full">
+<media:description type="plain"><![CDATA[Credit: DIGITIMES]]></media:description>
+</media:content></item>
+<item>
+<title>CBTech launches TGV foundry production line, secures sample orders from 5 major customers</title>
+<pubDate>Thu, 26 Nov 2026 07:32:51 GMT</pubDate>
+<link>https://www.digitimes.com/news/a20261125PD232/tgv-equipment-packaging-production-taiwan.html</link>
+<description>Precision exposure equipment maker Chime Ball Technology (CBTech) announced on November 25 that Taiwan's first full-process foundry production line for through glass via (TGV) and glass core substrates (GCS) has been completed and has begun operations at its headquarters in Luzhu, Taoyuan.</description>
+<dc:creator>Eifeh Strom</dc:creator>
+<category>Semiconductors</category>
+<guid isPermaLink="true">https://www.digitimes.com/news/a20261125PD232/tgv-equipment-packaging-production-taiwan.html</guid>
+<media:content url="https://img.digitimes.com/newsshow/20261125pd232_files/2_r.jpg" type="image/jpeg" expression="full">
+<media:description type="plain"><![CDATA[CBTech Chairman Hung-Ming Chang. Credit: CBTech]]></media:description>
+</media:content></item>
+<item>
+<title>Intel lawsuit details Trump's push for US$8.9 billion stake</title>
+<pubDate>Thu, 26 Nov 2026 07:28:45 GMT</pubDate>
+<link>https://www.digitimes.com/news/a20261126VL221/intel-lawsuit-government-2025-management.html</link>
+<description>A US Commerce Department lawyer warned Intel's management in August 2025 against treating a proposed government equity stake as a negotiation, according to internal company records cited in a shareholder lawsuit and reported by &lt;em&gt;Wired&lt;/em&gt;.</description>
+<dc:creator>DIGITIMES</dc:creator>
+<category>Semiconductors</category>
+<guid isPermaLink="true">https://www.digitimes.com/news/a20261126VL221/intel-lawsuit-government-2025-management.html</guid>
+<media:content url="https://img.digitimes.com/newsshow/20261126vl221_files/2_2b.jpg" type="image/jpeg" expression="full">
+<media:description type="plain"><![CDATA[Credit: Howard Lutnick via X]]></media:description>
+</media:content></item>
+</channel>
+</rss>
+

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	xmlns:media="http://search.yahoo.com/mrss/"
+		>
+
+<channel>
+	<title>Technology | The Indian Express</title>
+	<atom:link href="https://indianexpress.com/section/technology/feed/" rel="self" type="application/rss+xml" />
+	<link>https://indianexpress.com</link>
+	<description>Latest News Today, Breaking News, India News, Top Headlines</description>
+	<lastBuildDate>Thu, 26 Nov 2026 05:20:02 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=7.1.5</generator>
+
+<image>
+	<url>https://images.indianexpress.com/2018/10/fav-icon.png</url>
+	<title>Technology | The Indian Express</title>
+	<link>https://indianexpress.com</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+<site xmlns="com-wordpress:feed-additions:1">150893645</site>	<item>
+		<title>Apple pulls MiniMax AI chatbot from App Store over child safety concerns</title>
+		<link>https://indianexpress.com/article/technology/artificial-intelligence/apple-pulls-minimax-ai-chatbot-from-app-store-over-child-safety-concerns-10979117/</link>
+		
+		<dc:creator><![CDATA[]]></dc:creator>
+		<pubDate>Thu, 26 Nov 2026 05:20:00 +0000</pubDate>
+		<category><![CDATA[Artificial Intelligence]]></category><category><![CDATA[Technology]]></category>		<guid isPermaLink="false">https://indianexpress.com/?post_type=article&#038;p=10979117</guid>
+
+					<description><![CDATA[]]></description>
+										
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">10979117</post-id>
+		<media:thumbnail url="https://images.indianexpress.com/2026/11/apple-logo_20261117184624.jpg" />
+		<media:content url="https://images.indianexpress.com/2026/11/apple-logo_20261117184624.jpg" medium="image">
+			<media:title type="html">apple-logo_20261117184624.jpg</media:title>
+		</media:content>
+	</item>
+		<item>
+		<title>Retailers face rising AI cyberattack threat ahead of Black Friday, many uninsured</title>
+		<link>https://indianexpress.com/article/technology/tech-news-technology/retailers-face-rising-ai-cyberattack-threat-ahead-of-black-friday-many-uninsured-10979088/</link>
+		
+		<dc:creator><![CDATA[]]></dc:creator>
+		<pubDate>Thu, 26 Nov 2026 05:08:09 +0000</pubDate>
+		<category><![CDATA[Tech]]></category><category><![CDATA[Technology]]></category>		<guid isPermaLink="false">https://indianexpress.com/?post_type=article&#038;p=10979088</guid>
+
+					<description><![CDATA[]]></description>
+										
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">10979088</post-id>
+		<media:thumbnail url="https://images.indianexpress.com/2025/09/online-shopping-4532460_1280_20250917091428.jpg" />
+		<media:content url="https://images.indianexpress.com/2025/09/online-shopping-4532460_1280_20250917091428.jpg" medium="image">
+			<media:title type="html">Online shopping</media:title>
+		</media:content>
+	</item>
+		<item>
+		<title>With Ear (note), Nothing reimagines the charging case as an AI-powered notetaker</title>
+		<link>https://indianexpress.com/article/technology/tech-news-technology/with-ear-note-nothing-reimagines-the-charging-case-as-an-ai-powered-notetaker-10979039/</link>
+		
+		<dc:creator><![CDATA[Anuj Bhatia]]></dc:creator>
+		<pubDate>Thu, 26 Nov 2026 04:22:27 +0000</pubDate>
+		<category><![CDATA[Tech]]></category><category><![CDATA[Technology]]></category>		<guid isPermaLink="false">https://indianexpress.com/?post_type=article&#038;p=10979039</guid>
+
+					<description><![CDATA[]]></description>
+										
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">10979039</post-id>
+		<media:thumbnail url="https://images.indianexpress.com/2026/11/Nothing-ear-note.jpg" />
+		<media:content url="https://images.indianexpress.com/2026/11/Nothing-ear-note.jpg" medium="image">
+			<media:title type="html">Nothing ear note</media:title>
+		</media:content>
+	</item>
+		<item>
+		<title>WhatsApp rolls out long-awaited ‘schedule messages’ feature: Here&#8217;s how to use it</title>
+		<link>https://indianexpress.com/article/technology/tech-news-technology/whatsapp-rolls-out-long-awaited-schedule-messages-how-to-use-10979005/</link>
+		
+		<dc:creator><![CDATA[]]></dc:creator>
+		<pubDate>Thu, 26 Nov 2026 03:38:13 +0000</pubDate>
+		<category><![CDATA[Tech]]></category><category><![CDATA[Technology]]></category>		<guid isPermaLink="false">https://indianexpress.com/?post_type=article&#038;p=10979005</guid>
+
+					<description><![CDATA[]]></description>
+										
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">10979005</post-id>
+		<media:thumbnail url="https://images.indianexpress.com/2026/11/Tech-featured-image.png" />
+		<media:content url="https://images.indianexpress.com/2026/11/Tech-featured-image.png" medium="image">
+			<media:title type="html">WhatsApp schedule messages</media:title>
+		</media:content>
+	</item>
+		<item>
+		<title>Samsung Galaxy Tab S12 Ultra, S12+ review: Rethinking what a tablet can do</title>
+		<link>https://indianexpress.com/article/technology/tech-reviews/samsung-galaxy-tab-s12-ultra-s12-plus-review-2026-10977964/</link>
+		
+		<dc:creator><![CDATA[Anuj Bhatia]]></dc:creator>
+		<pubDate>Wed, 25 Nov 2026 10:38:13 +0000</pubDate>
+		<category><![CDATA[Tech Reviews]]></category><category><![CDATA[Technology]]></category>		<guid isPermaLink="false">https://indianexpress.com/?post_type=article&#038;p=10977964</guid>
+
+					<description><![CDATA[]]></description>
+										
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">10977964</post-id>
+		<media:thumbnail url="https://images.indianexpress.com/2026/11/Tab-S12-Ultra.jpg" />
+		<media:content url="https://images.indianexpress.com/2026/11/Tab-S12-Ultra.jpg" medium="image">
+			<media:title type="html">Tab S12 Ultra</media:title>
+		</media:content>
+
+		<media:content url="https://indianexpress.com/wp-content/uploads/2026/11/Tab-S12-Ultra-3.jpg" medium="image">
+			<media:title type="html">Samsung Galaxy Tab S12</media:title>
+		</media:content>
+
+		<media:content url="https://indianexpress.com/wp-content/uploads/2026/11/Tab-S12-Ultra-2.jpg" medium="image">
+			<media:title type="html">Samsung Galaxy Tab S12</media:title>
+		</media:content>
+
+		<media:content url="https://indianexpress.com/wp-content/uploads/2026/11/s128.jpg" medium="image">
+			<media:title type="html">s12 line</media:title>
+		</media:content>
+
+		<media:content url="https://indianexpress.com/wp-content/uploads/2026/11/S12-ULtra-5.jpg" medium="image">
+			<media:title type="html">S12</media:title>
+		</media:content>
+	</item>
+	</channel>
+</rss>
