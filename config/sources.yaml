@@ -9,8 +9,8 @@
 # type also allows `wire` (news agencies).
 # sitemap: for sources with no feed. Only URLs modified within ingest.max_age_days and not seen before are read.
 # ai_focused: true = an AI-only feed (AI section, AI newsletter, lab blog); its items skip the relevance check.
-# index_from: date = this outlet's labels count in the sentiment index from that day. Step 1's Portuguese outlets wait
-#   two weeks; from step 4 on Benjamin chose no wait (2026-11-26; docs/global-coverage-plan.md).
+# index_from: date = this outlet's labels count in the sentiment index from that day. Optional; Benjamin chose no
+#   wait for new languages (2026-11-26; docs/global-coverage-plan.md), so no source sets it today.
 verified_at: '2026-11-24'
 sources:
 - id: nyt
@@ -564,8 +564,7 @@ sources:
   group: latam
   feeds:
   - https://feeds.folha.uol.com.br/tec/rss091.xml
-  notes: Technology section. Added 2026-11-26 (global coverage plan, step 1). Portuguese is a new language here, so its labels join the sentiment index from index_from.
-  index_from: 2026-12-10
+  notes: Technology section. Added 2026-11-26 (global coverage plan, step 1).
 - id: g1
   name: g1 (Globo)
   country: BR
@@ -574,8 +573,7 @@ sources:
   group: latam
   feeds:
   - https://g1.globo.com/rss/g1/tecnologia/
-  notes: Technology section. Added 2026-11-26 (global coverage plan, step 1). Portuguese is a new language here, so its labels join the sentiment index from index_from.
-  index_from: 2026-12-10
+  notes: Technology section. Added 2026-11-26 (global coverage plan, step 1).
 - id: exame
   name: Exame
   country: BR
@@ -584,8 +582,7 @@ sources:
   group: latam
   feeds:
   - https://exame.com/feed/
-  notes: All-news feed. Added 2026-11-26 (global coverage plan, step 1). Portuguese is a new language here, so its labels join the sentiment index from index_from.
-  index_from: 2026-12-10
+  notes: All-news feed. Added 2026-11-26 (global coverage plan, step 1).
 - id: tecnoblog
   name: Tecnoblog
   country: BR
@@ -594,8 +591,7 @@ sources:
   group: latam
   feeds:
   - https://tecnoblog.net/feed/
-  notes: Added 2026-11-26 (global coverage plan, step 1). Portuguese is a new language here, so its labels join the sentiment index from index_from.
-  index_from: 2026-12-10
+  notes: Added 2026-11-26 (global coverage plan, step 1).
 - id: nucleo
   name: Núcleo Jornalismo
   country: BR
@@ -604,8 +600,7 @@ sources:
   group: latam
   feeds:
   - https://nucleo.jor.br/feed/
-  notes: Independent tech and AI accountability reporting. Added 2026-11-26 (global coverage plan, step 1). Portuguese is a new language here, so its labels join the sentiment index from index_from.
-  index_from: 2026-12-10
+  notes: Independent tech and AI accountability reporting. Added 2026-11-26 (global coverage plan, step 1).
 - id: elfinanciero
   name: El Financiero
   country: MX

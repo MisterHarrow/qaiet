@@ -1,6 +1,6 @@
 # Global coverage plan
 
-Drafted 2026-11-26 for Benjamin to approve step by step. **Steps 1–3 are implemented** (step 1: 24 outlets, the region split, Portuguese keywords, the `index_from` wait, the per-outlet stripe and the About page's limits; step 2: 19 outlets in the Middle East, Oceania and Canada, with the About page's source list grouped by region; step 3: 23 English-language outlets in Asia, and Asia split into East, South and Southeast Asia, The Indian Express disabled after GitHub's servers got HTTP 403; step 4: 20 outlets in Japanese, Korean, Chinese, Hindi, Indonesian, Vietnamese, Arabic and Turkish, the keyword filter for those scripts, and translation before clustering. Benjamin chose no two-week index wait for step 4's outlets.) Steps 5–8 are not started.
+Drafted 2026-11-26 for Benjamin to approve step by step. **Steps 1–3 are implemented** (step 1: 24 outlets, the region split, Portuguese keywords, the `index_from` wait, the per-outlet stripe and the About page's limits; step 2: 19 outlets in the Middle East, Oceania and Canada, with the About page's source list grouped by region; step 3: 23 English-language outlets in Asia, and Asia split into East, South and Southeast Asia, The Indian Express disabled after GitHub's servers got HTTP 403; step 4: 20 outlets in Japanese, Korean, Chinese, Hindi, Indonesian, Vietnamese, Arabic and Turkish, the keyword filter for those scripts, and translation before clustering. Benjamin then dropped the two-week index wait altogether, for step 4's outlets and the Portuguese ones too.) Steps 5–8 are not started.
 
 ## Summary
 
@@ -192,7 +192,7 @@ Unrelated pairs stayed at −0.05 to 0.15. So Latin-script languages cluster wit
 The labels have never been checked outside English, Swedish and German: the 50 items in `tests/gold/labels.yaml` (for Benjamin's hand labels) and the Opus cross-check are 40 English, 6 Swedish and 4 German. Two cheap safeguards:
 
 - Extend `qa eval crosscheck` with about 10 items per new language after each step. The last run, 50 items, cost $0.16.
-- **Decided 26 November: a new language's outlets stay out of the sentiment index for their first two weeks.** Each gets `index_from: <date two weeks after it is added>` in `sources.yaml`; the index (overall and per place) skips its labels before that date. A date lifts itself, so no second change is needed. Its articles are still labeled, shown on cards and counted in ranking. In those two weeks, run the cross-check on about 10 of its items per language (Opus costs money, so only with Benjamin's OK each time). Outlets in languages the site already reads (English, Spanish, French, German, Swedish) skip this.
+- **Decided 26 November, then reversed the same day: no wait.** Benjamin first chose a two-week wait, then dropped it for step 4 and for step 1's Portuguese outlets; `index_from` stays in the code, unused. What the wait would have done: Each gets `index_from: <date two weeks after it is added>` in `sources.yaml`; the index (overall and per place) skips its labels before that date. A date lifts itself, so no second change is needed. Its articles are still labeled, shown on cards and counted in ranking. In those two weeks, run the cross-check on about 10 of its items per language (Opus costs money, so only with Benjamin's OK each time). Outlets in languages the site already reads (English, Spanish, French, German, Swedish) skip this.
 
 ### 4.6 Ranking: should regions be weighed?
 
@@ -485,7 +485,7 @@ Benjamin, 26 November:
 2. **`Content-Signal: use=reference`:** allowed (it doesn't say `ai-input=no`), so Techeconomy and Newsroom stay in.
 3. **Gulf and Turkish outlets in step 2:** `type: state-aligned` (Asharq Al-Awsat, Saudi Gazette, Daily Sabah, Anadolu). Step 3's state-owned outlets (Sixth Tone, Antara, VietnamPlus) are marked the same way.
 4. **Russia:** add TASS as state-aligned, in step 6.
-5. **New languages:** two weeks out of the sentiment index, through `index_from` (4.5).
+5. **New languages:** first two weeks out of the sentiment index, through `index_from` (4.5); later the same day, no wait at all.
 
 Still open: approval of each step, starting with step 1.
 
