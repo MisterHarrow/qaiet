@@ -153,7 +153,8 @@ def cluster(
 
     r, cl = result.relevance, result.cluster
     console.print("relevance: " + ", ".join(f"{k} {v}" for k, v in sorted(r.by.items())) +
-                  f"; duplicates {r.duplicates}; haiku {r.llm_items} items in {r.llm_calls} calls (${r.llm_cost_usd:.4f}); undecided {r.pending}")
+                  f"; duplicates {r.duplicates}; haiku {r.llm_items} items, {r.translated} translations, in {r.llm_calls} calls "
+                  f"(${r.llm_cost_usd:.4f}); undecided {r.pending}")
     if r.note:
         console.print(f"[yellow]note: {r.note}[/]")
     console.print(f"embedded {result.embedded} with {result.embedder}; placed {cl.placed} items: "

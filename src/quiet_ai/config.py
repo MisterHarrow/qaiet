@@ -139,6 +139,7 @@ class RelevanceSettings(_Model):
     always_sources: list[str] = Field(default_factory=lambda: ["hf_posts"])
     llm_batch_size: int = 25
     prompt: str = "relevance_v2"
+    translate_prompt: str = "translate_v1"  # English titles the relevance call left empty
 
 
 class EmbedSettings(_Model):

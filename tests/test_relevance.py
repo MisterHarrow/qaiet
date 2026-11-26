@@ -115,6 +115,44 @@ def test_run_with_llm_decides_ambiguous_translates_and_caches(settings):
     assert len(msgs.calls) == 1
 
 
+class LazyTranslator(FakeMessages):
+    """The relevance call leaves every English title empty (as Haiku sometimes does); the translation call fills them,
+    except for headlines containing "skip", which come back blank."""
+
+    def parse(self, **kw):
+        self.calls.append(kw)
+        out = []
+        for line in kw["messages"][0]["content"].splitlines():
+            n, lang, text = re.match(r"\[(\d+)\] \((\w+)\) (.*)", line).groups()
+            if kw["output_format"] is relevance._Translations:
+                out.append({"i": int(n), "title_en": "" if "skip" in text else f"EN: {text}"})
+            else:
+                out.append({"i": int(n), "about_ai": True, "title_en": None})
+        usage = SimpleNamespace(input_tokens=100, output_tokens=20, cache_read_input_tokens=0, cache_creation_input_tokens=0)
+        return SimpleNamespace(parsed_output=kw["output_format"].model_validate({"items": out}), usage=usage, stop_reason="end_turn")
+
+
+def test_titles_the_relevance_call_left_untranslated_get_a_translation_call(settings):
+    store = Store(":memory:")
+    store.upsert_items([
+        Item(id="j", source="itm", kind="news", url="https://e.com/j", title="生成AIが変える仕事", lang="ja", fetched_at=NOW),
+        Item(id="k", source="lupa", kind="news", url="https://e.com/k", title="Umělá inteligence skip", lang="cs", fetched_at=NOW),
+        Item(id="m", source="nyt", kind="news", url="https://e.com/m", title="OpenAI raises prices", fetched_at=NOW),
+    ], NOW)
+    msgs = LazyTranslator()
+    llm = fake_llm(store, msgs)
+    since = iso(NOW - timedelta(hours=72))
+    stats = relevance.run(store, settings, SourcesConfig(feeds=[]), llm, since)
+    titles = dict(store.conn.execute("SELECT id, title_en FROM items").fetchall())
+    assert titles == {"j": "EN: 生成AIが変える仕事", "k": None, "m": None}  # English needs none; a blank answer isn't kept
+    assert stats.translated == 1 and [c["output_format"] for c in msgs.calls] == [relevance._Batch, relevance._Translations]
+    assert store.conn.execute("SELECT task FROM llm_calls ORDER BY id").fetchall()[-1][0] == "translate"
+    # Next run: the translated one is done; the blank one is asked again, the relevance answers come from the cache.
+    relevance.run(store, settings, SourcesConfig(feeds=[]), llm, since)
+    assert [c["output_format"] for c in msgs.calls[2:]] == [relevance._Translations]
+    assert msgs.calls[2]["messages"][0]["content"] == "[0] (cs) Umělá inteligence skip"
+
+
 def test_run_without_llm_leaves_ambiguous_pending(settings):
     store = Store(":memory:")
     seed(store)

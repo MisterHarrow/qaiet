@@ -71,6 +71,9 @@ relevance:
   always_sources: [hf_posts]
   llm_batch_size: 25              # ambiguous items per Haiku call
   prompt: relevance_v2            # src/quiet_ai/llm/prompts/<prompt>.md
+  # The relevance call often leaves title_en empty (and its cached answer is never asked again). A translation-only
+  # call fills in the English title of every relevant headline still without one (added 2026-11-26).
+  translate_prompt: translate_v1
 
 embed:
   # Local ONNX model via fastembed, CPU. Multilingual: Swedish/German/French/Spanish headlines land

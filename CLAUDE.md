@@ -57,7 +57,7 @@ uv run pytest          # must pass before every push; no network, no model calls
   - Store only a headline and a summary of at most 500 characters.
   - `llm: false` on a source (publishers with `Content-Signal: ai-input=no`) means its text never goes to a model. Other content signals (such as `use=reference`) don't change that (Benjamin, 2026-11-26).
   - A new language needs its AI terms in the keyword lists in `pipeline/relevance.py` first (`LANGUAGES` there; non-Latin scripts go in `_STRONG_SCRIPT`), or its AI headlines are dropped before a model sees them. `index_from` on a source keeps its labels out of the sentiment index until that day; Benjamin chose no wait for new languages (2026-11-26), so no source sets it.
-  - Headlines in a non-Latin script (`text.NON_LATIN`) are clustered only once they have an English title.
+  - Headlines in a non-Latin script (`text.NON_LATIN`) are clustered only once they have an English title. The relevance call sometimes leaves `title_en` empty, so `relevance.translate_missing` asks for the missing ones with `translate_v1` (Haiku), every run until they have one.
   - State media and outlets close to a government get `type: state-aligned`; the About page marks them.
 - **The page loads nothing from other sites:**
   - System fonts only: no web fonts, no CDNs.

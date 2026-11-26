@@ -15,6 +15,7 @@ from quiet_ai.store.db import Store
 
 log = logging.getLogger(__name__)
 TASK = "relevance"
+TRANSLATE_TASK = "translate"
 
 # Languages the keyword lists below cover (the About page says how many).
 LANGUAGES = ("en", "sv", "de", "fr", "es", "pt", "it", "nl", "no", "da", "fi", "pl", "cs", "hu", "uk",
@@ -95,6 +96,15 @@ class _Batch(BaseModel):
     items: list[_Verdict]
 
 
+class _Translation(BaseModel):
+    i: int
+    title_en: str
+
+
+class _Translations(BaseModel):
+    items: list[_Translation]
+
+
 @dataclass
 class RelevanceStats:
     by: dict[str, int] = field(default_factory=dict)
@@ -102,6 +112,7 @@ class RelevanceStats:
     llm_calls: int = 0
     llm_cost_usd: float = 0.0
     pending: int = 0  # ambiguous items left undecided (no LLM)
+    translated: int = 0  # English titles filled in by the translation-only call
     duplicates: int = 0
     note: str = ""
 
@@ -224,7 +235,56 @@ def run(store: Store, settings: Settings, sources: SourcesConfig, llm: LLM | Non
         store.conn.executemany("UPDATE items SET relevant = ?, relevance_by = ?, title_en = COALESCE(?, title_en) WHERE id = ?", updates)
         # A new English title changes what gets embedded.
         store.conn.executemany("DELETE FROM embeddings WHERE item_id = ?", [(u[3],) for u in updates if u[2]])
+    stats.translated, note = translate_missing(store, settings, llm, since_iso, no_llm)
+    stats.note = stats.note or note
+    stats.llm_calls, stats.llm_cost_usd = llm.calls, llm.cost_usd
     stats.pending = store.conn.execute(
         "SELECT COUNT(*) FROM items WHERE relevance_by = 'ambiguous' AND first_seen_at >= ?", (since_iso,)
     ).fetchone()[0]
     return stats
+
+
+def translate_missing(store: Store, settings: Settings, llm: LLM, since_iso: str, no_llm: set[str]) -> tuple[int, str]:
+    """English titles for relevant headlines in other languages that still have none. The relevance call leaves
+    title_en empty for some of them, and its cached answer is never asked again, so they would stay untranslated:
+    shown in the original language and, in a non-Latin script, never clustered. A translation-only call fills them in.
+    Empty answers aren't cached, so they are asked again next run. Returns (titles filled, note)."""
+    rows = store.conn.execute(
+        "SELECT id, title, lang, content_hash FROM items WHERE first_seen_at >= ? AND relevant = 1 AND dup_of IS NULL AND "
+        "lang IS NOT NULL AND lang != 'en' AND title_en IS NULL "
+        f"AND source NOT IN ({','.join('?' * len(no_llm))}) ORDER BY first_seen_at DESC",
+        (since_iso, *sorted(no_llm)),
+    ).fetchall()
+    if not rows:
+        return 0, ""
+    version = settings.relevance.translate_prompt
+    cached = llm.cached(TRANSLATE_TASK, version, [r["content_hash"] for r in rows])
+    todo = [r for r in rows if r["content_hash"] not in cached]
+    system = load_prompt(version)
+    size = settings.relevance.llm_batch_size
+    note = ""
+    for start in range(0, len(todo), size):
+        batch = todo[start : start + size]
+        user = "\n".join(f"[{n}] ({r['lang']}) {r['title']}" for n, r in enumerate(batch))
+        try:
+            out = llm.parse(TRANSLATE_TASK, settings.llm.item_model, system, user, _Translations,
+                            max_tokens=200 + 150 * len(batch), thinking=NO_THINKING)
+        except LLMUnavailable as e:
+            note = str(e)
+            break
+        except Exception as e:  # API errors: retry next run
+            log.warning("translation batch failed: %s", e)
+            note = f"LLM error: {type(e).__name__}"
+            continue
+        results = {}
+        for t in out.items:
+            text = " ".join(t.title_en.split())[: settings.ingest.title_max_chars]
+            if 0 <= t.i < len(batch) and text:
+                results[batch[t.i]["content_hash"]] = {"title_en": text}
+        llm.remember(TRANSLATE_TASK, version, settings.llm.item_model, results)
+        cached.update(results)
+    updates = [(cached[r["content_hash"]]["title_en"], r["id"]) for r in rows if r["content_hash"] in cached]
+    with store.conn:
+        store.conn.executemany("UPDATE items SET title_en = ? WHERE id = ? AND title_en IS NULL", updates)
+        store.conn.executemany("DELETE FROM embeddings WHERE item_id = ?", [(u[1],) for u in updates])  # re-embed in English
+    return len(updates), note
