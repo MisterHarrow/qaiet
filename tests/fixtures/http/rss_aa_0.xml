@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel xmlns:atom="http://www.w3.org/2005/Atom">
+    <title>Anadolu Ajansı Güncel Haberler</title>
+    <link>https://www.aa.com.tr/</link>
+    <description>Türkiye'den ve Dünya'dan Güncel Haberler</description>
+    <language>en</language>
+    <image>
+      <url>https://www.aa.com.tr/images/meta-photo.png</url>
+      <title>Anadolu Ajansı Güncel Haberler</title>
+      <link>https://www.aa.com.tr/</link>
+    </image>
+    <item>
+      <guid isPermaLink="false">4137796</guid>
+      <link>https://www.aa.com.tr/en/americas/new-york-bans-ai-chatbot-toys-for-5-years-over-child-safety-concerns/4137796</link>
+      <title>New York bans AI chatbot toys for 5 years over child safety concerns</title>
+      <description>Law prohibits manufacture, distribution, and sale of toys with integrated AI chatbots, takes effect in February 2027</description>
+      <pubDate>Wed, 25 Nov 2026 19:38:47 +0300</pubDate>
+      <image>https://cdnuploads.aa.com.tr/uploads/Contents/2026/11/25/thumbs_b_c_01583c00278e243da78078a32524542e.jpg</image>
+    </item>
+    <item>
+      <guid isPermaLink="false">4136538</guid>
+      <link>https://www.aa.com.tr/en/science-technology/chinas-space-station-hosts-maiden-foreigner-in-1st-pakistan-astronaut/4136538</link>
+      <title>China's space station hosts maiden foreigner in 1st Pakistan astronaut</title>
+      <description>Part of 3-member crew, Pakistani fighter pilot Muhammad Zeeshan Ali boards Tiangong space station after historic launch
+</description>
+      <pubDate>Wed, 25 Nov 2026 03:25:49 +0300</pubDate>
+      <image>https://cdnuploads.aa.com.tr/uploads/Contents/2026/11/25/thumbs_b_c_1e84c3e9a14e2f50d9e6d8c2abd30600.jpg</image>
+    </item>
+    <item>
+      <guid isPermaLink="false">4136091</guid>
+      <link>https://www.aa.com.tr/en/world/insiders-say-anthropic-openai-struggle-to-contain-unreleased-ai-models-axios/4136091</link>
+      <title>Insiders say Anthropic, OpenAI struggle to contain unreleased AI models: Axios</title>
+      <description>Over 2 dozen sources describe internal debate about whether most advanced systems can be safely released</description>
+      <pubDate>Tue, 24 Nov 2026 18:31:53 +0300</pubDate>
+      <image>https://cdnuploads.aa.com.tr/uploads/Contents/2026/11/24/thumbs_b_c_6bbe5d5fbce2376c9c5d11e7d18b1ea7.jpg</image>
+    </item>
+    <item>
+      <guid isPermaLink="false">4135143</guid>
+      <link>https://www.aa.com.tr/en/economy/amazon-to-buy-decarts-ai-optimization-technology/4135143</link>
+      <title>Amazon to buy Decart's AI optimization technology</title>
+      <description>Deal brings Decart Optimization Stack and co-founders Dean Leitersdorf, Moshe Shalev, and Orian Leitersdorf to Amazon</description>
+      <pubDate>Mon, 23 Nov 2026 23:32:41 +0300</pubDate>
+      <image>https://cdnuploads.aa.com.tr/uploads/Contents/2026/11/23/thumbs_b_c_d339ac44151f37f05ec1fda8c978680b.jpg</image>
+    </item>
+    <item>
+      <guid isPermaLink="false">4135142</guid>
+      <link>https://www.aa.com.tr/en/science-technology/anthropic-rolls-out-zero-data-retention-option-for-advanced-ai-models-report/4135142</link>
+      <title>Anthropic rolls out zero-data-retention option for advanced AI models: Report</title>
+      <description>Company plans to release early version of enterprise frontier safeguards for customers using Mythos and Fable AI models, Bloomberg reports</description>
+      <pubDate>Mon, 23 Nov 2026 23:29:15 +0300</pubDate>
+      <image>https://cdnuploads.aa.com.tr/uploads/Contents/2026/11/23/thumbs_b_c_8298506d1453ee62a424386defb5636a.jpg</image>
+    </item>
+  </channel>
+</rss>

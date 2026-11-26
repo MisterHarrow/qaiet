@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>News - Globes</title>
+    <link>https://en.globes.co.il/en/mador.aspx?fid=1725#utm_source=RSS</link>
+    <description>Israel's Business Arena</description>
+    <copyright>Globes</copyright>
+    <language>en</language>
+    <lastBuildDate>Thu, 26 Nov 2026 08:43:21 GMT</lastBuildDate>
+    <managingEditor>feedback@globes.co.il</managingEditor>
+    <ttl>10</ttl>
+    <image>
+      <height>70</height>
+      <width>144</width>
+      <url>https://images.globes.co.il/rss/Globes_logo_RSS_ENG.png</url>
+      <link>https://en.globes.co.il/en/mador.aspx?fid=1725#utm_source=RSS</link>
+      <title>News - Globes</title>
+    </image>
+    <item>
+      <title>Greece receives shipment of Israeli munitions</title>
+      <link>https://en.globes.co.il/en/article-1001565086#utm_source=RSS</link>
+      <guid isPermaLink="false">1001565086</guid>
+      <description>Greece has received its first shipment of air-to-ground munitions from Israel, including Spice bombs and Rampage missiles, senior officials told the Greek media.</description>
+      <author>Dean Shmuel Elmas</author>
+      <pubDate>Thu, 26 Nov 2026 07:54:18 GMT</pubDate>
+      <enn>enn</enn>
+      <category>Aerospace &amp; defense</category>
+      <media:content url="https://res.cloudinary.com/globes/image/upload/t_800X392/v1677408297/one%20time%20use%20only/%D7%A8%D7%9E%D7%A4%D7%99%D7%99%D7%92_1_wqtuz6.jpg" type="image/jpg" expression="full" width="800" height="392">
+        <media:description>Rampage missile  credit:  Elbit Systems</media:description>
+      </media:content>
+    </item>
+    <item>
+      <title>Shekel slides to 14-month weakest against dollar</title>
+      <link>https://en.globes.co.il/en/article-1001565069#utm_source=RSS</link>
+      <guid isPermaLink="false">1001565069</guid>
+      <description>Wall Street losses, the global strength of the dollar, political and geopolitical uncertainties and interest rate differentials are all weighing on the Israeli currency.</description>
+      <author>Tomer Padova</author>
+      <pubDate>Thu, 26 Nov 2026 05:15:00 GMT</pubDate>
+      <enn>enn</enn>
+      <category>Market</category>
+      <media:content url="https://images.globes.co.il/images/NewGlobes/big_image_800/2017/Money2-800px.jpg" type="image/jpg" expression="full" width="800" height="392">
+        <media:description>Shekel-dollar ASAP Creative</media:description>
+      </media:content>
+    </item>
+    <item>
+      <title>Fattal invests €160m in three new hotels</title>
+      <link>https://en.globes.co.il/en/article-1001565053#utm_source=RSS</link>
+      <guid isPermaLink="false">1001565053</guid>
+      <description>The hotels are being acquired in the UK, France and Greece, sources inform &amp;ldquo;Globes.&amp;rdquo;</description>
+      <author>Galit Hatan and Nevo Shafir</author>
+      <pubDate>Wed, 25 Nov 2026 17:17:17 GMT</pubDate>
+      <enn>enn</enn>
+      <category>Tourism</category>
+      <category>Market</category>
+      <media:content url="https://res.cloudinary.com/globes/image/upload/t_800X392/v1795618392/800_f18bou.jpg" type="image/jpg" expression="full" width="800" height="392">
+        <media:description>Renaissance Hotel Paris inset David Fattal credit: Shutterstock, Cadya Levy</media:description>
+      </media:content>
+    </item>
+    <item>
+      <title>Blue Bird doubles number of Israel-Europe flights in December</title>
+      <link>https://en.globes.co.il/en/article-1001564946#utm_source=RSS</link>
+      <guid isPermaLink="false">1001564946</guid>
+      <description>Ahead of the Hanukkah holiday and Europe&amp;rsquo;s Christmas season next month, Blue Bird Airways is significantly expanding its operations in Israel.</description>
+      <author>Alon Pearl</author>
+      <pubDate>Wed, 25 Nov 2026 13:57:00 GMT</pubDate>
+      <enn>enn</enn>
+      <category>Tourism</category>
+      <media:content url="https://res.cloudinary.com/globes/image/upload/t_800X392/v1716285702/direct/shutterstock_2234027415_g8zsth.jpg" type="image/jpg" expression="full" width="800" height="392">
+        <media:description>Blue Bird aircraft credit: Shutterstock</media:description>
+      </media:content>
+    </item>
+    <item>
+      <title>Israel Tax Authority demands NIS 12b more from Wiz founders</title>
+      <link>https://en.globes.co.il/en/article-1001564934#utm_source=RSS</link>
+      <guid isPermaLink="false">1001564934</guid>
+      <description>The dispute involves the taxation of options and intellectual property and the shekel-dollar exchange rate used to calculate the tax.</description>
+      <author>Ela Levi-Weinrib and Assaf Gilead</author>
+      <pubDate>Wed, 25 Nov 2026 13:08:00 GMT</pubDate>
+      <enn>enn</enn>
+      <category>Legal</category>
+      <media:content url="https://res.cloudinary.com/globes/image/upload/t_800X392/v1711535156/direct/Wiz_Founders._Credit_-_Avishag_Shaar-Yashuv_opytj1.jpg" type="image/jpg" expression="full" width="800" height="392">
+        <media:description>Wiz founders Yinon Costica, Assaf Rappaport, Ami Luttwak, Roy Reznik credit: Avishag Shaar Yishuv</media:description>
+      </media:content>
+    </item>
+  </channel>
+</rss>

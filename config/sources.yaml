@@ -418,7 +418,7 @@ sources:
   country: HK
   language: en
   type: mainstream
-  group: asia-me
+  group: asia
   feeds:
   - https://www.scmp.com/rss/320663/feed
 - id: nikkei
@@ -426,7 +426,7 @@ sources:
   country: JP
   language: en
   type: business
-  group: asia-me
+  group: asia
   feeds:
   - https://asia.nikkei.com/rss/feed/nar
   notes: Items carry no dates; use first-seen time.
@@ -435,7 +435,7 @@ sources:
   country: SG
   language: en
   type: mainstream
-  group: asia-me
+  group: asia
   feeds:
   - https://www.straitstimes.com/news/business/rss.xml
   notes: Tech section feed returns 400; business feed used.
@@ -444,7 +444,7 @@ sources:
   country: IN
   language: en
   type: business
-  group: asia-me
+  group: asia
   feeds:
   - https://economictimes.indiatimes.com/tech/rssfeeds/13357270.cms
 - id: koreaherald
@@ -452,7 +452,7 @@ sources:
   country: KR
   language: en
   type: mainstream
-  group: asia-me
+  group: asia
   feeds:
   - https://www.koreaherald.com/rss/newsAll
   notes: All-news firehose (~200/day), mostly non-AI.
@@ -461,7 +461,7 @@ sources:
   country: QA
   language: en
   type: mainstream
-  group: asia-me
+  group: middle-east
   feeds:
   - https://www.aljazeera.com/xml/rss/all.xml
   notes: Qatari state-funded. All-news feed.
@@ -524,7 +524,7 @@ sources:
   country: CN
   language: en
   type: trade
-  group: asia-me
+  group: asia
   feeds:
   - https://technode.com/feed/
   notes: China tech, privately owned. Feed returns ~2000 items per fetch, so use conditional GET. Added in round 2.
@@ -533,7 +533,7 @@ sources:
   country: CN
   language: en
   type: trade
-  group: asia-me
+  group: asia
   feeds:
   - https://pandaily.com/feed/
   notes: China tech, privately owned. Added in round 2.
@@ -542,7 +542,7 @@ sources:
   country: CA
   language: en
   type: public-broadcaster
-  group: americas
+  group: canada
   feeds:
   - https://www.cbc.ca/webfeed/rss/rss-technology
   notes: 'Disabled 2026-11-24: cbc.ca drops connections from our client (worked during M0 with a different user agent). Not working around it.'
@@ -552,7 +552,7 @@ sources:
   country: AU
   language: en
   type: public-broadcaster
-  group: asia-me
+  group: oceania
   feeds:
   - https://www.abc.net.au/news/feed/51120/rss.xml
   notes: All-news feed. Added in round 2.
@@ -777,6 +777,177 @@ sources:
   feeds:
   - https://egyptindependent.com/feed/
   notes: All-news feed. Added 2026-11-26 (global coverage plan, step 1).
+- id: thenational
+  name: The National
+  country: AE
+  language: en
+  type: mainstream
+  group: middle-east
+  feeds:
+  - https://www.thenationalnews.com/arc/outboundfeeds/rss/?outputType=xml
+  notes: Abu Dhabi; owned by International Media Investments. All-news feed. Added 2026-11-26 (global coverage plan, step 2).
+- id: gulfnews
+  name: Gulf News
+  country: AE
+  language: en
+  type: mainstream
+  group: middle-east
+  feeds:
+  - https://gulfnews.com/feed
+  notes: Dubai. All-news feed. Added 2026-11-26 (global coverage plan, step 2).
+- id: aawsat
+  name: Asharq Al-Awsat (English)
+  country: SA
+  language: en
+  type: state-aligned
+  group: middle-east
+  feeds:
+  - https://english.aawsat.com/feed/
+  notes: Owned by the Saudi Research and Media Group, close to the Saudi state. All-news feed. Added 2026-11-26 (global coverage plan, step 2).
+- id: saudigazette
+  name: Saudi Gazette
+  country: SA
+  language: en
+  type: state-aligned
+  group: middle-east
+  feeds:
+  - https://saudigazette.com.sa/rssFeed/74
+  notes: Close to the Saudi state. Added 2026-11-26 (global coverage plan, step 2).
+- id: globes
+  name: Globes
+  country: IL
+  language: en
+  type: business
+  group: middle-east
+  feeds:
+  - https://en.globes.co.il/WebService/Rss/RssFeeder.asmx/FeederNode?iID=1725
+  notes: 'English edition. (Times of Israel: robots.txt disallows; Haaretz: HTTP 403.) Added 2026-11-26 (global coverage plan, step 2).'
+- id: dailysabah
+  name: Daily Sabah
+  country: TR
+  language: en
+  type: state-aligned
+  group: middle-east
+  feeds:
+  - https://www.dailysabah.com/rss/business/tech
+  notes: Pro-government (Turkuvaz Media). Tech section. Added 2026-11-26 (global coverage plan, step 2).
+- id: aa
+  name: Anadolu Agency
+  country: TR
+  language: en
+  type: state-aligned
+  group: middle-east
+  feeds:
+  - https://www.aa.com.tr/en/rss/default?cat=science-technology
+  notes: Turkish state news agency. Science and technology feed. Added 2026-11-26 (global coverage plan, step 2).
+- id: itnews
+  name: iTnews
+  country: AU
+  language: en
+  type: trade
+  group: oceania
+  feeds:
+  - https://www.itnews.com.au/RSS/rss.ashx
+  notes: Added 2026-11-26 (global coverage plan, step 2).
+- id: smh
+  name: The Sydney Morning Herald
+  country: AU
+  language: en
+  type: mainstream
+  group: oceania
+  feeds:
+  - https://www.smh.com.au/rss/technology.xml
+  notes: Technology section. Added 2026-11-26 (global coverage plan, step 2).
+- id: crikey
+  name: Crikey
+  country: AU
+  language: en
+  type: opinion
+  group: oceania
+  feeds:
+  - https://www.crikey.com.au/feed/
+  notes: Added 2026-11-26 (global coverage plan, step 2).
+- id: startupdaily
+  name: Startup Daily
+  country: AU
+  language: en
+  type: trade
+  group: oceania
+  feeds:
+  - https://www.startupdaily.net/feed/
+  notes: Added 2026-11-26 (global coverage plan, step 2).
+- id: rnz
+  name: RNZ
+  country: NZ
+  language: en
+  type: public-broadcaster
+  group: oceania
+  feeds:
+  - https://www.rnz.co.nz/rss/business.xml
+  notes: Business feed. Added 2026-11-26 (global coverage plan, step 2).
+- id: newsroomnz
+  name: Newsroom
+  country: NZ
+  language: en
+  type: mainstream
+  group: oceania
+  feeds:
+  - https://newsroom.co.nz/feed/
+  notes: 'robots.txt Content-Signal: search=yes, ai-train=no, use=reference (no ai-input=no, so allowed; Benjamin, 2026-11-26). Added 2026-11-26 (global coverage plan, step 2).'
+- id: onenews
+  name: 1News (TVNZ)
+  country: NZ
+  language: en
+  type: public-broadcaster
+  group: oceania
+  feeds:
+  - https://www.1news.co.nz/arc/outboundfeeds/rss/?outputType=xml
+  notes: All-news feed. Added 2026-11-26 (global coverage plan, step 2).
+- id: globeandmail
+  name: The Globe and Mail
+  country: CA
+  language: en
+  type: mainstream
+  group: canada
+  feeds:
+  - https://www.theglobeandmail.com/arc/outboundfeeds/rss/category/business/technology/
+  notes: Technology section. Added 2026-11-26 (global coverage plan, step 2).
+- id: betakit
+  name: BetaKit
+  country: CA
+  language: en
+  type: trade
+  group: canada
+  feeds:
+  - https://betakit.com/feed/
+  notes: Canadian startups and tech. Added 2026-11-26 (global coverage plan, step 2).
+- id: globalnews
+  name: Global News
+  country: CA
+  language: en
+  type: mainstream
+  group: canada
+  feeds:
+  - https://globalnews.ca/tech/feed/
+  notes: Technology section. Added 2026-11-26 (global coverage plan, step 2).
+- id: radiocanada
+  name: Radio-Canada
+  country: CA
+  language: fr
+  type: public-broadcaster
+  group: canada
+  feeds:
+  - https://ici.radio-canada.ca/rss/5717
+  notes: French-language public broadcaster. Business feed (Économie). Added 2026-11-26 (global coverage plan, step 2).
+- id: lapresse
+  name: La Presse
+  country: CA
+  language: fr
+  type: mainstream
+  group: canada
+  feeds:
+  - https://www.lapresse.ca/affaires/techno/rss
+  notes: Technology section. Added 2026-11-26 (global coverage plan, step 2).
 gdelt_outlets:
 - id: reuters
   name: Reuters

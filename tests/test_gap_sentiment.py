@@ -143,10 +143,10 @@ def test_sentiment_by_place_uses_only_that_places_outlets(settings):
     labeled(st, 10, "se1", "technical", 1, confidence="low")  # unclear: left out, as in the overall index
     country = {"se1": "SE", "se2": "SE", "de1": "DE", "us1": "US", "us2": "US", "us3": "US", "digest": None}
     today = NOW.date().isoformat()
-    daily = sentiment.by_place(st, settings, country, {"Europe": ["SE", "DE"], "SE": ["SE"], "Americas": ["US", "CA"]}, today)
+    daily = sentiment.by_place(st, settings, country, {"Europe": ["SE", "DE"], "SE": ["SE"], "North America": ["US", "CA"]}, today)
     eu = sentiment.place_value(daily["Europe"], [today])
     assert eu == {"values": {"all": -1.67, "technical": None, "political": -1.67, "economic": None}, "words": "critical", "days": 1}
-    assert sentiment.place_value(daily["Americas"], [today])["values"]["all"] == 1.67
+    assert sentiment.place_value(daily["North America"], [today])["values"]["all"] == 1.67
     # Sweden has two outlets: below min_outlets, so no figure rather than a figure from too few voices.
     assert sentiment.place_value(daily["SE"], [today]) == {"values": dict.fromkeys(sentiment.TRACKS), "words": None, "days": 0}
     # Days outside the view don't count.

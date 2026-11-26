@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="https://www.w3.org/2005/Atom">
+  <channel>
+    <atom:link href="https://ici.radio-canada.ca/info/rss/info/economie/en-continu" rel="self" type="application/rss+xml" />
+    <title>Radio-Canada | Économie</title>
+    <link>https://ici.radio-canada.ca/info/rss/info/economie/en-continu</link>
+    <description><![CDATA[ Mise à jour à toutes les 15 minutes tous les jours. - Pour usage personnel seulement. ]]></description>
+    <language>fr-ca</language>
+    <lastBuildDate>Thu, 26 Nov 2026 09:10:15 GMT</lastBuildDate>
+    <copyright>Copyright: © Radio-Canada, https://cbc.radio-canada.ca/fr/vision/gouvernance/conditions-dutilisations-espace-numerique</copyright>
+    <docs>https://ici.radio-canada.ca/rss/</docs>
+    <item>
+      <title><![CDATA[ Taxe déguisée pour le 911? Toronto veut ajouter 2 $ par mois à votre forfait mobile ]]></title>
+      <link>https://ici.radio-canada.ca/article/info/2303096/toronto-telephone-taxe</link>
+      <guid>https://ici.radio-canada.ca/article/info/2303096/toronto-telephone-taxe</guid>
+      <description><![CDATA[ <p>Ce prélèvement pourrait rapporter jusqu&#x27;à 65,1&nbsp;millions de dollars par an.</p> ]]></description>
+      <pubDate>Thu, 26 Nov 2026 09:00:00 GMT</pubDate>
+      <enclosure type="image/jpeg" length="0" url="https://images.radio-canada.ca/q_auto,w_635/v1/ici-info/16x9/facture-telephone-mobile.jpg" />
+    </item>
+    <item>
+      <title><![CDATA[ Le Témiscamingue mise sur les stages pour attirer les jeunes travailleurs ]]></title>
+      <link>https://ici.radio-canada.ca/article/info/2303124/temiscamingue-stages-jeunes-attraction-carriere</link>
+      <guid>https://ici.radio-canada.ca/article/info/2303124/temiscamingue-stages-jeunes-attraction-carriere</guid>
+      <description><![CDATA[ <p>Ancrage Témiscamingue veut répondre aux défis du déficit migratoire et du renouvellement de la main-d’œuvre.</p> ]]></description>
+      <pubDate>Wed, 25 Nov 2026 23:40:15 GMT</pubDate>
+      <enclosure type="image/jpeg" length="0" url="https://images.radio-canada.ca/q_auto,w_635/v1/ici-info/16x9/ancrage-temiscamingue-carrefour-rencontre.jpg" />
+    </item>
+    <item>
+      <title><![CDATA[ Alstom accélère la cadence à La Pocatière ]]></title>
+      <link>https://ici.radio-canada.ca/videos/1-10818932/alstom-accelere-cadence-a-pocatiere</link>
+      <guid>https://ici.radio-canada.ca/videos/1-10818932/alstom-accelere-cadence-a-pocatiere</guid>
+      <description><![CDATA[ <p>L'entreprise Alstom modernise son usine afin de produire les trains de VIA Rail, du métro de Toronto et du tramway de Québec, après avoir injecté 14 millions de dollars dans une première vague d'investissement dans son usine.</p> ]]></description>
+      <pubDate>Wed, 25 Nov 2026 23:27:39 GMT</pubDate>
+      <enclosure type="image/jpeg" length="0" url="https://images.radio-canada.ca/q_auto,w_635/v1/ici-info/16x9/build-canadian.png" />
+    </item>
+    <item>
+      <title><![CDATA[ ATCO tente de rassurer les consommateurs du Yukon ]]></title>
+      <link>https://ici.radio-canada.ca/article/info/2303111/electricite-facturation-temperatures-extremes</link>
+      <guid>https://ici.radio-canada.ca/article/info/2303111/electricite-facturation-temperatures-extremes</guid>
+      <description><![CDATA[ <p>La forte consommation de chauffage l’hiver dernier aurait dépassé les estimations du système d&#x27;ATCO.</p> ]]></description>
+      <pubDate>Wed, 25 Nov 2026 23:01:30 GMT</pubDate>
+      <enclosure type="image/jpeg" length="0" url="https://images.radio-canada.ca/q_auto,w_635/v1/ici-info/16x9/yukon-atco-electricite.png" />
+    </item>
+    <item>
+      <title><![CDATA[ Le projet Dumont Nickel se dote d’un comité de suivi à Launay ]]></title>
+      <link>https://ici.radio-canada.ca/article/info/2303104/mine-dumont-nickel-comite-suivi</link>
+      <guid>https://ici.radio-canada.ca/article/info/2303104/mine-dumont-nickel-comite-suivi</guid>
+      <description><![CDATA[ <p>L’entreprise a également présenté au public les plus récentes mises à jour du projet, mardi soir.</p> ]]></description>
+      <pubDate>Wed, 25 Nov 2026 22:35:54 GMT</pubDate>
+      <enclosure type="image/jpeg" length="0" url="https://images.radio-canada.ca/q_auto,w_635/v1/ici-info/16x9/dumont-nickel-comite-suivi.jpeg" />
+    </item>
+  </channel>
+</rss>

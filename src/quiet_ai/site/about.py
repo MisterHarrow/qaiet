@@ -20,12 +20,14 @@ GROUP_NAMES = {
     "us-left": "United States, left-leaning and opinion",
     "us-right": "United States, right-leaning and libertarian",
     "tech": "Technology trade press",
+    "canada": "Canada",
+    "latam": "Latin America",
     "uk-eu": "United Kingdom and Europe",
     "nordics": "Nordics",
-    "latam": "Latin America",
     "africa": "Africa",
-    "asia-me": "Asia and the Middle East",
-    "americas": "Americas",
+    "middle-east": "Middle East",
+    "asia": "Asia",
+    "oceania": "Oceania",
     "global": "Global",
 }
 FEATURE_NAMES = {

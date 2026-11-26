@@ -431,6 +431,18 @@
   "status": 200,
   "url": "https://www.404media.co/rss/"
  },
+ "rss:aa:0": {
+  "content_type": "application/xml",
+  "file": "rss_aa_0.xml",
+  "status": 200,
+  "url": "https://www.aa.com.tr/en/rss/default?cat=science-technology"
+ },
+ "rss:aawsat:0": {
+  "content_type": "application/rss+xml; charset=utf-8",
+  "file": "rss_aawsat_0.xml",
+  "status": 200,
+  "url": "https://english.aawsat.com/feed/"
+ },
  "rss:abcau:0": {
   "content_type": "application/rss+xml",
   "file": "rss_abcau_0.xml",
@@ -497,6 +509,12 @@
   "status": 200,
   "url": "https://www.bensbites.com/feed"
  },
+ "rss:betakit:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_betakit_0.xml",
+  "status": 200,
+  "url": "https://betakit.com/feed/"
+ },
  "rss:bi:0": {
   "content_type": "application/atom+xml",
   "file": "rss_bi_0.xml",
@@ -551,6 +569,12 @@
   "status": 200,
   "url": "https://www.cnbc.com/id/19854910/device/rss/rss.html"
  },
+ "rss:crikey:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_crikey_0.xml",
+  "status": 200,
+  "url": "https://www.crikey.com.au/feed/"
+ },
  "rss:dailycaller:0": {
   "content_type": "text/xml; charset=UTF-8",
   "file": "rss_dailycaller_0.xml",
@@ -562,6 +586,12 @@
   "file": "rss_dailymaverick_0.xml",
   "status": 200,
   "url": "https://www.dailymaverick.co.za/dmrss/"
+ },
+ "rss:dailysabah:0": {
+  "content_type": "text/xml; charset=UTF-8",
+  "file": "rss_dailysabah_0.xml",
+  "status": 200,
+  "url": "https://www.dailysabah.com/rss/business/tech"
  },
  "rss:deepmind:0": {
   "content_type": "application/xml",
@@ -713,6 +743,24 @@
   "status": 200,
   "url": "https://g1.globo.com/rss/g1/tecnologia/"
  },
+ "rss:globalnews:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_globalnews_0.xml",
+  "status": 200,
+  "url": "https://globalnews.ca/tech/feed/"
+ },
+ "rss:globeandmail:0": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_globeandmail_0.xml",
+  "status": 200,
+  "url": "https://www.theglobeandmail.com/arc/outboundfeeds/rss/category/business/technology/"
+ },
+ "rss:globes:0": {
+  "content_type": "text/xml; charset=utf-8",
+  "file": "rss_globes_0.xml",
+  "status": 200,
+  "url": "https://en.globes.co.il/WebService/Rss/RssFeeder.asmx/FeederNode?iID=1725"
+ },
  "rss:googleai:0": {
   "content_type": "application/xml; charset=utf-8",
   "file": "rss_googleai_0.xml",
@@ -736,6 +784,12 @@
   "file": "rss_guardian_1.xml",
   "status": 200,
   "url": "https://www.theguardian.com/us/technology/rss"
+ },
+ "rss:gulfnews:0": {
+  "content_type": "text/xml; application/rss+xml; charset=utf-8",
+  "file": "rss_gulfnews_0.xml",
+  "status": 200,
+  "url": "https://gulfnews.com/feed"
  },
  "rss:handelsblatt:0": {
   "content_type": "application/rss+xml; charset=utf-8",
@@ -791,6 +845,12 @@
   "status": 200,
   "url": "https://www.iol.co.za/rss"
  },
+ "rss:itnews:0": {
+  "content_type": "application/xml",
+  "file": "rss_itnews_0.xml",
+  "status": 200,
+  "url": "https://www.itnews.com.au/RSS/rss.ashx"
+ },
  "rss:itweb:0": {
   "content_type": "application/rss+xml; charset=utf-8",
   "file": "rss_itweb_0.xml",
@@ -808,6 +868,12 @@
   "file": "rss_lanacion_0.xml",
   "status": 200,
   "url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/?outputType=xml"
+ },
+ "rss:lapresse:0": {
+  "content_type": "text/xml;charset=UTF-8",
+  "file": "rss_lapresse_0.xml",
+  "status": 200,
+  "url": "https://www.lapresse.ca/affaires/techno/rss"
  },
  "rss:lastweekinai:0": {
   "content_type": "application/xml; charset=utf-8",
@@ -887,6 +953,12 @@
   "status": 200,
   "url": "https://www.nationalreview.com/feed/"
  },
+ "rss:newsroomnz:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_newsroomnz_0.xml",
+  "status": 200,
+  "url": "https://newsroom.co.nz/feed/"
+ },
  "rss:nikkei:0": {
   "content_type": "application/rss+xml",
   "file": "rss_nikkei_0.xml",
@@ -934,6 +1006,12 @@
   "file": "rss_nyteknik_0.xml",
   "status": 200,
   "url": "https://www.nyteknik.se/digitalisering?lab_viewport=rss"
+ },
+ "rss:onenews:0": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_onenews_0.xml",
+  "status": 200,
+  "url": "https://www.1news.co.nz/arc/outboundfeeds/rss/?outputType=xml"
  },
  "rss:oneuseful:0": {
   "content_type": "application/xml; charset=utf-8",
@@ -989,6 +1067,12 @@
   "status": 200,
   "url": "https://www.producthunt.com/feed?category=artificial-intelligence"
  },
+ "rss:radiocanada:0": {
+  "content_type": "text/xml; charset=utf-8",
+  "file": "rss_radiocanada_0.xml",
+  "status": 200,
+  "url": "https://ici.radio-canada.ca/rss/5717"
+ },
  "rss:reason:0": {
   "content_type": "application/rss+xml; charset=UTF-8",
   "file": "rss_reason_0.xml",
@@ -1001,11 +1085,23 @@
   "status": 200,
   "url": "https://restofworld.org/feed/latest/"
  },
+ "rss:rnz:0": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_rnz_0.xml",
+  "status": 200,
+  "url": "https://www.rnz.co.nz/rss/business.xml"
+ },
  "rss:rundown:0": {
   "content_type": "application/rss+xml; charset=utf-8",
   "file": "rss_rundown_0.xml",
   "status": 200,
   "url": "https://www.therundown.ai/feed"
+ },
+ "rss:saudigazette:0": {
+  "content_type": "text/xml; charset=UTF-8",
+  "file": "rss_saudigazette_0.xml",
+  "status": 200,
+  "url": "https://saudigazette.com.sa/rssFeed/74"
  },
  "rss:scmp:0": {
   "content_type": "text/xml; charset=utf-8",
@@ -1043,11 +1139,23 @@
   "status": 200,
   "url": "https://slate.com/feeds/technology.rss"
  },
+ "rss:smh:0": {
+  "content_type": "application/xml",
+  "file": "rss_smh_0.xml",
+  "status": 200,
+  "url": "https://www.smh.com.au/rss/technology.xml"
+ },
  "rss:spiegel:0": {
   "content_type": "application/rss+xml; charset=utf-8",
   "file": "rss_spiegel_0.xml",
   "status": 200,
   "url": "https://www.spiegel.de/thema/kuenstliche_intelligenz/index.rss"
+ },
+ "rss:startupdaily:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_startupdaily_0.xml",
+  "status": 200,
+  "url": "https://www.startupdaily.net/feed/"
  },
  "rss:straitstimes:0": {
   "content_type": "application/rss+xml; charset=utf-8",
@@ -1126,6 +1234,12 @@
   "file": "rss_thehill_0.xml",
   "status": 200,
   "url": "https://thehill.com/policy/technology/feed/"
+ },
+ "rss:thenational:0": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_thenational_0.xml",
+  "status": 200,
+  "url": "https://www.thenationalnews.com/arc/outboundfeeds/rss/?outputType=xml"
  },
  "rss:tldrai:0": {
   "content_type": "text/xml",

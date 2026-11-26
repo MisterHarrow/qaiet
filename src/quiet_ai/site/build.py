@@ -28,10 +28,11 @@ STANCE_NAMES = {
 KIND_NAMES = {"news": "", "newsletter": "commentary"}
 # Outlet countries (ISO codes in sources.yaml), named on hover.
 COUNTRY_NAMES = {
-    "AR": "Argentina", "AU": "Australia", "BE": "Belgium", "BR": "Brazil", "CA": "Canada", "CL": "Chile", "CN": "China",
+    "AE": "United Arab Emirates", "AR": "Argentina", "AU": "Australia", "BE": "Belgium", "BR": "Brazil", "CA": "Canada", "CL": "Chile", "CN": "China",
     "CO": "Colombia", "DE": "Germany", "EG": "Egypt", "ES": "Spain", "FR": "France", "GB": "United Kingdom", "GH": "Ghana",
-    "HK": "Hong Kong", "IN": "India", "JP": "Japan", "KR": "South Korea", "MX": "Mexico", "NG": "Nigeria", "PE": "Peru",
-    "QA": "Qatar", "SE": "Sweden", "SG": "Singapore", "US": "United States", "ZA": "South Africa",
+    "HK": "Hong Kong", "IL": "Israel", "IN": "India", "JP": "Japan", "KR": "South Korea", "MX": "Mexico", "NG": "Nigeria",
+    "NZ": "New Zealand", "PE": "Peru", "QA": "Qatar", "SA": "Saudi Arabia", "SE": "Sweden", "SG": "Singapore", "TR": "Turkey",
+    "US": "United States", "ZA": "South Africa",
 }
 
 
@@ -60,7 +61,8 @@ _CONTINENTS = [
 COUNTRY_POS = {"US": (39, -98), "CA": (56, -106), "GB": (54, -2), "SE": (62, 16), "DE": (51, 10), "FR": (46, 2), "BE": (50.5, 4.5),
                "ES": (40, -4), "QA": (25, 51), "CN": (34, 104), "HK": (22, 114), "IN": (22, 79), "JP": (36, 138), "KR": (36, 128),
                "SG": (1, 104), "AU": (-25, 134), "MX": (23, -102), "CO": (4, -73), "PE": (-10, -76), "BR": (-10, -52),
-               "CL": (-33, -71), "AR": (-34, -64), "EG": (26, 30), "GH": (8, -1), "NG": (9, 8), "ZA": (-29, 24)}
+               "CL": (-33, -71), "AR": (-34, -64), "EG": (26, 30), "GH": (8, -1), "NG": (9, 8), "ZA": (-29, 24), "TR": (39, 35),
+               "IL": (31.5, 35), "SA": (24, 45), "AE": (24, 54), "NZ": (-41, 174)}
 MAP_W, MAP_H = 170, 70
 
 

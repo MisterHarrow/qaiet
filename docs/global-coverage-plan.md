@@ -1,6 +1,6 @@
 # Global coverage plan
 
-Drafted 2026-11-26 for Benjamin to approve step by step. **Step 1 is approved and implemented** (24 outlets, the region split, Portuguese keywords, the `index_from` wait, the per-outlet stripe and the About page's limits); steps 2–8 are not started.
+Drafted 2026-11-26 for Benjamin to approve step by step. **Steps 1 and 2 are implemented** (step 1: 24 outlets, the region split, Portuguese keywords, the `index_from` wait, the per-outlet stripe and the About page's limits; step 2: 19 outlets in the Middle East, Oceania and Canada, with the About page's source list grouped by region). Steps 3–8 are not started.
 
 ## Summary
 

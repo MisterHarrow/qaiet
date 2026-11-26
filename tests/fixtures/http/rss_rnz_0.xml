@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+<title>RNZ Business Headlines</title>
+<description>The Latest Business headlines from RNZ News</description>
+<link>https://www.rnz.co.nz/news/business</link>
+<copyright>Radio New Zealand</copyright>
+<ttl>60</ttl>
+<atom:link rel="self" type="application/rss+xml" href="https://www.rnz.co.nz/rss/business.xml"/>
+<item>
+  <title>RNZ Asia, business and technology teams face cuts as fallout continues</title>
+  <description>
+    <![CDATA[It comes after news rural reporters have also received change proposals.]]>
+  </description>
+  <pubDate>Thu, 26 Nov 2026 17:19:26 +1300</pubDate>
+  <link>https://www.rnz.co.nz/news/country/2791214/rnz-asia-business-and-technology-teams-face-cuts-as-fallout-continues</link>
+  <guid isPermaLink="false">42376581403cee379245be6ff3063342fa6df8a4</guid>
+</item>
+<item>
+  <title>NZ burying valuable energy source in landfills, biogas company says</title>
+  <description>
+    <![CDATA[Ecogas wants to see more waste collection with 622,000 tonnes of food put into landfill each year according to a government report.]]>
+  </description>
+  <pubDate>Thu, 26 Nov 2026 16:58:28 +1300</pubDate>
+  <link>https://www.rnz.co.nz/news/environment/2799873/nz-burying-valuable-energy-source-in-landfills-biogas-company-says</link>
+  <guid isPermaLink="false">89c43c63d7d651b33b643c7c7d71d219cb4f918f</guid>
+</item>
+<item>
+  <title>Farmers staff set to strike over wage negotiations impasse</title>
+  <description>
+    <![CDATA[A union says some of the workers are receiving some of the lowest wages in the retail sector.]]>
+  </description>
+  <pubDate>Thu, 26 Nov 2026 14:03:09 +1300</pubDate>
+  <link>https://www.rnz.co.nz/news/business/2789306/farmers-staff-set-to-strike-over-wage-negotiations-impasse</link>
+  <guid isPermaLink="false">0042acbeaf1e4ea2697b62a2f71180b16624c6d9</guid>
+</item>
+<item>
+  <title>Designs for Kiwirail's new Cook Strait ferries unveiled</title>
+  <description>
+    <![CDATA[The two hybrid ferries will have more space for vehicles and passengers, and better fuel efficiency.]]>
+  </description>
+  <pubDate>Thu, 26 Nov 2026 13:29:06 +1300</pubDate>
+  <link>https://www.rnz.co.nz/news/business/2793694/designs-for-kiwirail-s-new-cook-strait-ferries-unveiled</link>
+  <guid isPermaLink="false">e04192f73a89e55307ebeeed5b5da5b78db8f530</guid>
+</item>
+<item>
+  <title>RNZ continuing to manage attempted cyber breach</title>
+  <description>
+    <![CDATA[A spokesperson said the technology team was working with specialist cyber security support providers to monitor its impact and find solutions.]]>
+  </description>
+  <pubDate>Thu, 26 Nov 2026 12:30:59 +1300</pubDate>
+  <link>https://www.rnz.co.nz/news/business/2791565/rnz-continuing-to-manage-attempted-cyber-breach</link>
+  <guid isPermaLink="false">cd048b2e73bdc11ebe0ba6059f78f61d2f187f5a</guid>
+</item>
+  </channel>
+</rss>

@@ -2,5 +2,5 @@
 story filter by place and the sentiment index per place)."""
 
 REGIONS = [("North America", ["US", "CA"]), ("Latin America", ["MX", "CO", "PE", "BR", "CL", "AR"]),
-           ("Europe", ["GB", "SE", "DE", "FR", "BE", "ES"]), ("Middle East", ["QA"]), ("Africa", ["EG", "GH", "NG", "ZA"]),
-           ("Asia", ["CN", "HK", "IN", "JP", "KR", "SG"]), ("Oceania", ["AU"])]
+           ("Europe", ["GB", "SE", "DE", "FR", "BE", "ES"]), ("Middle East", ["TR", "IL", "SA", "AE", "QA"]), ("Africa", ["EG", "GH", "NG", "ZA"]),
+           ("Asia", ["CN", "HK", "IN", "JP", "KR", "SG"]), ("Oceania", ["AU", "NZ"])]

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	xmlns:media="http://search.yahoo.com/mrss/"
+		>
+
+<channel>
+	<title> : Tech</title>
+	<atom:link href="https://globalnews.ca/tech/feed/" rel="self" type="application/rss+xml" />
+	<link>https://globalnews.ca</link>
+	<description>Global News Technology -  breaking tech and gadget news; get the latest news and updates on all things tech and digital on GlobalNews.ca</description>
+	<lastBuildDate>Wed, 25 Nov 2026 17:51:35 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	
+<site xmlns="com-wordpress:feed-additions:1">176892389</site>	<item>
+		<title>Microsoft declares ‘Code Red’ following 24-hour outage: Here’s what that means</title>
+		<link>https://globalnews.ca/news/12165881/microsoft-code-red/</link>
+					<comments>https://globalnews.ca/news/12165881/microsoft-code-red/#respond</comments>
+		
+		<dc:creator><![CDATA[Rachel Morgan]]></dc:creator>
+		<pubDate>Wed, 25 Nov 2026 17:51:35 +0000</pubDate>
+				<category><![CDATA[Economy]]></category>
+		<category><![CDATA[Tech]]></category>
+		<category><![CDATA[World]]></category>
+		<category><![CDATA[Microsoft]]></category>
+		<category><![CDATA[microsoft outage]]></category>
+		<guid isPermaLink="false">https://globalnews.ca/?p=12165881</guid>
+
+					<description><![CDATA[The Nov. 12-13 outage disrupted Exchange Online, its cloud-based email service, as well as Outlook, Teams, its Copilot AI assistant and other Microsoft 365 products.]]></description>
+										
+					
+					<wfw:commentRss>https://globalnews.ca/news/12165881/microsoft-code-red/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">12165881</post-id><enclosure url="https://globalnews.ca/wp-content/uploads/2026/07/Microsoft-Xbox-Job-Cuts.jpg-e1783444669814.jpg?quality=65&#038;strip=all&#038;w=720&#038;h=480&#038;crop=1" length="56828000"  type="image/jpeg"/>
+		<media:thumbnail url="https://globalnews.ca/wp-content/uploads/2026/07/Microsoft-Xbox-Job-Cuts.jpg-e1783444669814.jpg?quality=65&#038;strip=all" />
+		<media:content url="https://globalnews.ca/wp-content/uploads/2026/07/Microsoft-Xbox-Job-Cuts.jpg-e1783444669814.jpg?quality=65&#038;strip=all" medium="image">
+			<media:title type="html">Xbox Rival Consoles</media:title>
+		</media:content>
+	</item>
+		<item>
+		<title>Explainer: Nvidia CEO and &#8216;AI Godfather&#8217; Jensen Huang and his ties to Trump</title>
+		<link>https://globalnews.ca/news/12163972/nvidia-ceo-jensen-huang-timeline/</link>
+					<comments>https://globalnews.ca/news/12163972/nvidia-ceo-jensen-huang-timeline/#respond</comments>
+		
+		<dc:creator><![CDATA[Ari Rabinovitch]]></dc:creator>
+		<pubDate>Wed, 25 Nov 2026 17:42:55 +0000</pubDate>
+				<category><![CDATA[Economy]]></category>
+		<category><![CDATA[Tech]]></category>
+		<category><![CDATA[U.S. News]]></category>
+		<category><![CDATA[World]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Donald Trump]]></category>
+		<category><![CDATA[Jensen Huang]]></category>
+		<category><![CDATA[Nvidia]]></category>
+		<guid isPermaLink="false">https://globalnews.ca/?p=12163972</guid>
+
+					<description><![CDATA[Jensen Huang has found himself at the centre of a string of extraordinary developments at Nvidia, where he is CEO, with implications reaching far beyond Wall Street.]]></description>
+										
+					
+					<wfw:commentRss>https://globalnews.ca/news/12163972/nvidia-ceo-jensen-huang-timeline/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">12163972</post-id><enclosure url="https://globalnews.ca/wp-content/uploads/2026/11/CP177257745-e1795552478861.jpg?quality=65&#038;strip=all&#038;w=720&#038;h=480&#038;crop=1" length="64744000"  type="image/jpeg"/>
+		<media:thumbnail url="https://globalnews.ca/wp-content/uploads/2026/11/CP177257745-e1795552478861.jpg?quality=65&#038;strip=all" />
+		<media:content url="https://globalnews.ca/wp-content/uploads/2026/11/CP177257745-e1795552478861.jpg?quality=65&#038;strip=all" medium="image">
+			<media:title type="html">Nvidia</media:title>
+		</media:content>
+	</item>
+		<item>
+		<title>Some Bell customers&#8217; information accessed in cybersecurity incident</title>
+		<link>https://globalnews.ca/news/12162247/bell-cyber-security-incident-personal-info-accessed/</link>
+					<comments>https://globalnews.ca/news/12162247/bell-cyber-security-incident-personal-info-accessed/#comments</comments>
+		
+		<dc:creator><![CDATA[Sean Previl]]></dc:creator>
+		<pubDate>Mon, 23 Nov 2026 16:14:58 +0000</pubDate>
+				<category><![CDATA[Canada]]></category>
+		<category><![CDATA[Tech]]></category>
+		<category><![CDATA[Bell]]></category>
+		<category><![CDATA[Cyberattack]]></category>
+		<category><![CDATA[cybersecurity]]></category>
+		<guid isPermaLink="false">https://globalnews.ca/?p=12162247</guid>
+
+					<description><![CDATA[It's the latest in a series of cybersecurity incidents across Canada and globally in recent days, with some seeing personal data accessed. ]]></description>
+										
+					
+					<wfw:commentRss>https://globalnews.ca/news/12162247/bell-cyber-security-incident-personal-info-accessed/feed/</wfw:commentRss>
+			<slash:comments>7</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">12162247</post-id><enclosure url="https://globalnews.ca/wp-content/uploads/2026/11/bell-logo.jpg?quality=65&#038;strip=all&#038;w=720&#038;h=480&#038;crop=1" length="62410000"  type="image/jpeg"/>
+		<media:thumbnail url="https://globalnews.ca/wp-content/uploads/2026/11/bell-logo.jpg?quality=65&#038;strip=all" />
+		<media:content url="https://globalnews.ca/wp-content/uploads/2026/11/bell-logo.jpg?quality=65&#038;strip=all" medium="image">
+			<media:title type="html">Bell Canada</media:title>
+		</media:content>
+	</item>
+		<item>
+		<title>Jensen Huang returns as Nvidia CEO, Democrats vow investigations</title>
+		<link>https://globalnews.ca/news/12162192/nvidia-board-reinstates-jensen-huang-ceo/</link>
+					<comments>https://globalnews.ca/news/12162192/nvidia-board-reinstates-jensen-huang-ceo/#comments</comments>
+		
+		<dc:creator><![CDATA[Uday Rana]]></dc:creator>
+		<pubDate>Mon, 23 Nov 2026 14:18:11 +0000</pubDate>
+				<category><![CDATA[Tech]]></category>
+		<category><![CDATA[Jensen Huang]]></category>
+		<category><![CDATA[Nvidia]]></category>
+		<guid isPermaLink="false">https://globalnews.ca/?p=12162192</guid>
+
+					<description><![CDATA[Jensen Huang, who stepped down as CEO of tech giant Nvidia earlier this month after reports of alleged affairs surfaced, has been reinstated.]]></description>
+										
+					
+					<wfw:commentRss>https://globalnews.ca/news/12162192/nvidia-board-reinstates-jensen-huang-ceo/feed/</wfw:commentRss>
+			<slash:comments>44</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">12162192</post-id><enclosure url="https://globalnews.ca/wp-content/uploads/2026/11/Jensen-Huang-returns.jpg?quality=65&#038;strip=all&#038;w=720&#038;h=480&#038;crop=1" length="63093000"  type="image/jpeg"/>
+		<media:thumbnail url="https://globalnews.ca/wp-content/uploads/2026/11/Jensen-Huang-returns.jpg?quality=65&#038;strip=all" />
+		<media:content url="https://globalnews.ca/wp-content/uploads/2026/11/Jensen-Huang-returns.jpg?quality=65&#038;strip=all" medium="image">
+			<media:title type="html">NVIDIA AI Jensen Huang</media:title>
+		</media:content>
+	</item>
+		<item>
+		<title>Before you hit ‘buy’: How AI is making Black Friday scams harder to spot</title>
+		<link>https://globalnews.ca/news/12161533/ai-black-friday-scams-harder-to-spot/</link>
+					<comments>https://globalnews.ca/news/12161533/ai-black-friday-scams-harder-to-spot/#respond</comments>
+		
+		<dc:creator><![CDATA[Pooja Misra]]></dc:creator>
+		<pubDate>Sun, 22 Nov 2026 20:22:03 +0000</pubDate>
+				<category><![CDATA[Consumer]]></category>
+		<category><![CDATA[Tech]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Black Friday]]></category>
+		<category><![CDATA[holiday shopping scams]]></category>
+		<guid isPermaLink="false">https://globalnews.ca/?p=12161533</guid>
+
+					<description><![CDATA[AI is making fake Black Friday deals harder to spot. RBC’s Amit Sadhu explains how scammers use texts and social media to reach shoppers and what to check before you buy.]]></description>
+										
+					
+					<wfw:commentRss>https://globalnews.ca/news/12161533/ai-black-friday-scams-harder-to-spot/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">12161533</post-id><enclosure url="https://globalnews.ca/wp-content/uploads/2026/11/Sequence-02.00_00_20_04.Still003.jpg?quality=65&#038;strip=all&#038;w=720&#038;h=480&#038;crop=1" length="61719000"  type="image/jpeg"/>
+		<media:thumbnail url="https://globalnews.ca/wp-content/uploads/2026/11/Sequence-02.00_00_20_04.Still003.jpg?quality=65&#038;strip=all" />
+		<media:content url="https://globalnews.ca/wp-content/uploads/2026/11/Sequence-02.00_00_20_04.Still003.jpg?quality=65&#038;strip=all" medium="image">
+			<media:title type="html">Sequence 02.00_00_20_04.Still003</media:title>
+		</media:content>
+	</item>
+	</channel>
+</rss>

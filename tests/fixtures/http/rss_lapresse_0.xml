@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss
+    version="2.0"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:atom="http://www.w3.org/2005/Atom"
+>
+    <channel>
+        <language>FR-CA</language>
+        <title>LaPresse.ca - Techno</title>
+        <link>https://www.lapresse.ca/affaires/techno/</link>
+        <description />
+        <lastBuildDate>Thu, 26 Nov 2026 04:15:18 -0500</lastBuildDate>
+        <image>
+            <url>https://static.lpcdn.ca/lpweb/lapresse/img/icon-logo-rss.gif</url>
+            <title>LaPresse.ca - Techno</title>
+            <link>https://www.lapresse.ca/affaires/techno/</link>
+            <description>LaPresse.ca - Techno</description>
+        </image>
+
+        <atom:link href="https://www.lapresse.ca/affaires/techno/" rel="self" type="application/rss+xml" />
+
+                                        <item>
+            <title><![CDATA[Trouvez réponse à vos questions | Boîte de réception]]></title>
+                            <enclosure
+                                        length="194712"                     type="image/jpeg"                     url="https://mobile-img.lpcdn.ca/v2/924x/r3996/31193e9f615b311ead8fd64ca69f2f25.jpg"
+                />
+            
+            <link>https://www.lapresse.ca/affaires/techno/2026-01-09/trouvez-reponse-a-vos-questions/boite-de-reception.php?utm_source=rss&amp;utm_medium=fil&amp;utm_campaign=affaires&amp;utm_content=techno</link>            <guid isPermaLink="false">47f815c0d4c43cbda80337b648b79233</guid>
+            <pubDate>Fri, 09 Jan 2026 10:10:23 -0500</pubDate>
+
+            <description><![CDATA[Chaque mercredi, notre journaliste répond à vos questions en lien avec le numérique et les nouvelles technologies. ]]></description>
+            <dc:creator><![CDATA[]]></dc:creator>
+            <dc:source><![CDATA[La Presse]]></dc:source>
+        </item>
+                                        <item>
+            <title><![CDATA[Boîte de réception | Centres de données, livres numériques et Google]]></title>
+                            <enclosure
+                                        length="295460"                     type="image/jpeg"                     url="https://mobile-img.lpcdn.ca/v2/924x/r3996/b319378d6a49374d8d0d059dadd8861c.jpg"
+                />
+            
+            <link>https://www.lapresse.ca/affaires/techno/2026-11-25/boite-de-reception/centres-de-donnees-livres-numeriques-et-google.php?utm_source=rss&amp;utm_medium=fil&amp;utm_campaign=affaires&amp;utm_content=techno</link>            <guid isPermaLink="false">a16587dd11b63d429a6b23314a4ef8b2</guid>
+            <pubDate>Wed, 25 Nov 2026 07:00:00 -0500</pubDate>
+
+            <description><![CDATA[Chaque mercredi, notre journaliste répond à vos questions en lien avec le numérique et les nouvelles technologies. Cette semaine, on visite les centres de données québécois, on charge des livres numériques sur sa liseuse, et on fait des recherches sur le web sans Google.]]></description>
+            <dc:creator><![CDATA[Alain McKenna]]></dc:creator>
+            <dc:source><![CDATA[La Presse]]></dc:source>
+        </item>
+                                        <item>
+            <title><![CDATA[Vie numérique | Tout est en train de péter (et ce n’est pas fini)]]></title>
+                            <enclosure
+                                        length="263315"                     type="image/jpeg"                     url="https://mobile-img.lpcdn.ca/v2/924x/r3996/600359abc4d531b0a0993c60fe7afdfc.jpg"
+                />
+            
+            <link>https://www.lapresse.ca/affaires/techno/2026-11-25/vie-numerique/tout-est-en-train-de-peter-et-ce-n-est-pas-fini.php?utm_source=rss&amp;utm_medium=fil&amp;utm_campaign=affaires&amp;utm_content=techno</link>            <guid isPermaLink="false">eedb35411f723c149a4bb6ace4d42966</guid>
+            <pubDate>Wed, 25 Nov 2026 06:00:00 -0500</pubDate>
+
+            <description><![CDATA[Des frigos européens aux avions américains, il semble que la preuve soit en train de se faire : rien n’est éternel, encore moins les systèmes informatisés. Une combinaison inédite de facteurs explique pourquoi il y a lieu de s’inquiéter, car ce n’est pas terminé. Quelque part, un agent d’IA est en train de dire : « Tenez ma bière… »]]></description>
+            <dc:creator><![CDATA[Alain McKenna]]></dc:creator>
+            <dc:source><![CDATA[La Presse]]></dc:source>
+        </item>
+                                        <item>
+            <title><![CDATA[L’intelligence artificielle au travail | Note aux patrons : l’IA ne remplace ni l’expertise ni les jeunes]]></title>
+                            <enclosure
+                                        length="167506"                     type="image/jpeg"                     url="https://mobile-img.lpcdn.ca/v2/924x/r3996/2002ce98ba713274a5fcf1031a69d140.jpg"
+                />
+            
+            <link>https://www.lapresse.ca/affaires/techno/2026-11-24/l-intelligence-artificielle-au-travail/note-aux-patrons-l-ia-ne-remplace-ni-l-expertise-ni-les-jeunes.php?utm_source=rss&amp;utm_medium=fil&amp;utm_campaign=affaires&amp;utm_content=techno</link>            <guid isPermaLink="false">3919895a4d763f5e9250f6c594c91581</guid>
+            <pubDate>Tue, 24 Nov 2026 08:00:00 -0500</pubDate>
+
+            <description><![CDATA[Il y a une certaine tendance au sein de nombreuses entreprises à confier à des agents d’intelligence artificielle des tâches ou même des emplois entiers qui autrement iraient à de jeunes débutants. Or, c’est risqué, révèle une étude montréalaise qui porte sur la relation entre les jeunes travailleurs et la technologie.]]></description>
+            <dc:creator><![CDATA[Alain McKenna]]></dc:creator>
+            <dc:source><![CDATA[La Presse]]></dc:source>
+        </item>
+                                        <item>
+            <title><![CDATA[GTA VI marque « le plus grand lancement de l’histoire de PlayStation »]]></title>
+                            <enclosure
+                                        length="246641"                     type="image/jpeg"                     url="https://mobile-img.lpcdn.ca/v2/924x/r3996/4076cdbe83813f61b1aadbf0930526e4.jpg"
+                />
+            
+            <link>https://www.lapresse.ca/affaires/techno/2026-11-24/gta-vi-marque-le-plus-grand-lancement-de-l-histoire-de-playstation.php?utm_source=rss&amp;utm_medium=fil&amp;utm_campaign=affaires&amp;utm_content=techno</link>            <guid isPermaLink="false">b7f7ec3f46683316a07d2ea48834790c</guid>
+            <pubDate>Tue, 24 Nov 2026 06:49:48 -0500</pubDate>
+
+            <description><![CDATA[ La superproduction Grand Theft Auto VI a marqué « le plus grand lancement de l’histoire de PlayStation », avec plus de 39 millions de joueurs uniques qui ont lancé le jeu depuis sa sortie jeudi, a indiqué Sony dans une publication de blogue. ]]></description>
+            <dc:creator><![CDATA[]]></dc:creator>
+            <dc:source><![CDATA[Agence France-Presse]]></dc:source>
+        </item>
+        
+    </channel>
+</rss>

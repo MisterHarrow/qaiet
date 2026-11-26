@@ -147,6 +147,8 @@ def test_about_page_reads_config_and_health(tmp_path, settings):
     assert f"North America {regions['North America']}, Latin America {regions['Latin America']}, Europe" in html
     assert ctx["waiting"]["until"] == "10 December" and "join the index two weeks later (" in html
     assert ctx["us_share"] is None  # no labels in this store
+    assert 'Daily Sabah <span class="country">TR, state-aligned</span>' in html  # state media are marked in the list
+    assert "<h3>Canada</h3>" in html and "<h3>Middle East</h3>" in html and "Americas" not in html
     assert "<img" not in html and not re.search(r'<script[^>]*src="(?!\.\./static/app\.js")', html)  # only our own script
 
 
