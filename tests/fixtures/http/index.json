@@ -893,12 +893,6 @@
   "status": 200,
   "url": "https://inc42.com/feed/"
  },
- "rss:indianexpress:0": {
-  "content_type": "application/rss+xml; charset=UTF-8",
-  "file": "rss_indianexpress_0.xml",
-  "status": 200,
-  "url": "https://indianexpress.com/section/technology/feed/"
- },
  "rss:infobae:0": {
   "content_type": "application/xml; charset=utf-8",
   "file": "rss_infobae_0.xml",

@@ -974,7 +974,8 @@ sources:
   group: south-asia
   feeds:
   - https://indianexpress.com/section/technology/feed/
-  notes: Technology section. Added 2026-11-26 (global coverage plan, step 3).
+  notes: 'Technology section. Added 2026-11-26 (global coverage plan, step 3). Disabled the same day: indianexpress.com answers GitHub''s servers with HTTP 403 (it answered a Mac). Not working around it.'
+  enabled: false
 - id: inc42
   name: Inc42
   country: IN
