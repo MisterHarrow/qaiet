@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Archive · Qaiet Times</title>
+<title>Archive · {% if desk_label %}{{ desk_label }} · {% endif %}Qaiet Times</title>
 <meta name="description" content="Every past morning edition of Qaiet Times.">
 {{ brand.favicon() }}
 {{ brand.theme_boot() }}
@@ -15,12 +15,13 @@
 <header class="masthead">
   <div class="masthead-top">
     {{ brand.wordmark(root) }}
-    {{ brand.nav(root, "archive") }}
+    {{ brand.nav(root, "archive", base) }}
   </div>
+  {% if desks %}{{ brand.desks(desks) }}{% endif %}
   <hr class="rule">
 </header>
 <main class="prose wide">
-<h1>Archive</h1>
+<h1>{% if desk_label %}{{ desk_label }} archive{% else %}Archive{% endif %}</h1>
 <p class="lede">Every morning's edition, as it was published.</p>
 {% if days %}
 <ol class="archive-list">

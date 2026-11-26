@@ -15,11 +15,24 @@
 <p class="wordmark"><a href="{{ href }}"><svg class="mark" viewBox="0 0 25 18" aria-hidden="true" focusable="false"><rect class="m1" x="0" y="8" width="3.8" height="10"/><rect class="m2" x="5.3" y="4" width="3.8" height="14"/><rect class="m3" x="10.6" y="0" width="3.8" height="18"/><rect class="m4" x="15.9" y="5" width="3.8" height="13"/><rect class="m5" x="21.2" y="10" width="3.8" height="8"/></svg><span class="wm">Qaiet Times</span></a></p>
 {%- endmacro %}
 
-{% macro nav(root, current) -%}
+{# `base` is the current desk's folder from this page (Today, Narratives, Index and Archive are the desk's own);
+   About is the site's. #}
+{% macro nav(root, current, base=None) -%}
+{%- set base = base if base is string else root %}
 <nav class="sitenav" aria-label="Site">
-  {%- for key, href, label in [("today", root or "./", "Today"), ("narratives", root ~ "narratives/", "Narratives"), ("index", root ~ "sentiment/", "Index"), ("archive", root ~ "archive/", "Archive"), ("about", root ~ "about/", "About")] %}
+  {%- for key, href, label in [("today", base or "./", "Today"), ("narratives", base ~ "narratives/", "Narratives"), ("index", base ~ "sentiment/", "Index"), ("archive", base ~ "archive/", "Archive"), ("about", root ~ "about/", "About")] %}
   <a href="{{ href }}"{% if key == current %} aria-current="page"{% endif %}>{{ label }}</a>
   {%- endfor %}
   <button type="button" class="theme-toggle" aria-pressed="false" hidden><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.5a6.5 6.5 0 0 1 0 13z" fill="currentColor"/></svg>Dark</button>
+</nav>
+{%- endmacro %}
+
+{# The desks: one row of sections under the nameplate, each with its sentiment in its first view (umber or sage by
+   sign). `desks` is a list of {key, label, href, active, value} (build.desk_row). #}
+{% macro desks(desks) -%}
+<nav class="desks" aria-label="Desks">
+  {%- for d in desks %}
+  <a href="{{ d.href }}"{% if d.active %} aria-current="page"{% endif %}><span class="desk-name">{{ d.label }}</span>{% if d.value is not none %} <span class="desk-sent{% if d.value <= -0.15 %} crit{% elif d.value >= 0.15 %} pos{% endif %}" title="{{ d.label }} sentiment">{{ "%+.2f"|format(d.value)|replace("-", "−") }}</span>{% endif %}</a>
+  {%- endfor %}
 </nav>
 {%- endmacro %}

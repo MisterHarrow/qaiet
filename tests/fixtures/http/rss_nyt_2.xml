@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:nyt="http://www.nytimes.com/namespaces/rss/2.0" version="2.0">
+  <channel>
+    <title>NYT &gt; Health</title>
+    <link>https://www.nytimes.com/section/health</link>
+    <atom:link href="https://rss.nytimes.com/services/xml/rss/nyt/Health.xml" rel="self" type="application/rss+xml"></atom:link>
+    <description></description>
+    <language>en-us</language>
+    <copyright>Copyright 2026 The New York Times Company</copyright>
+    <lastBuildDate>Thu, 26 Nov 2026 14:40:31 +0000</lastBuildDate>
+    <pubDate>Thu, 26 Nov 2026 07:08:12 +0000</pubDate>
+    <image>
+      <title>NYT &gt; Health</title>
+      <url>https://static01.nyt.com/images/misc/NYT_logo_rss_250x40.png</url>
+      <link>https://www.nytimes.com/section/health</link>
+    </image>
+    <item>
+      <title>Medicare Hospice Caps Leave Patients Without Care</title>
+      <link>https://www.nytimes.com/2026/11/24/business/medicare-hospice-caps-patients-lose-care.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2026/11/24/business/medicare-hospice-caps-patients-lose-care.html</guid>
+      <atom:link href="https://www.nytimes.com/2026/11/24/business/medicare-hospice-caps-patients-lose-care.html" rel="standout"></atom:link>
+      <description>Critics say the payment limits to companies penalize patients who are not dying on the government’s timetable.</description>
+      <dc:creator>Christopher Rowland</dc:creator>
+      <pubDate>Wed, 25 Nov 2026 19:35:44 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Hospice Care</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Medicare</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Elder Care</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Health Insurance and Managed Care</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Nursing Homes</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Law and Legislation</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Centers for Medicare and Medicaid Services</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Government Accountability Office</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Oz, Mehmet C</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Trump, Donald J</category>
+      <media:content height="1799" medium="image" url="https://static01.nyt.com/images/2026/11/23/multimedia/23biz-hospice-01-mpjw/23biz-hospice-01-mpjw-mediumSquareAt3X.jpg" width="1800"></media:content>
+      <media:credit>Margaret Albaugh for The New York Times</media:credit>
+      <media:description>Amy Lynn Birmingham believes hospice extended her life. Since she was dropped from hospice care, she has been paying out of her own pocket for in-home care because she realized the benefit to her well-being.</media:description>
+    </item>
+    <item>
+      <title>The Mortality Gap Between Black and White Americans Is Shrinking</title>
+      <link>https://www.nytimes.com/2026/11/24/well/black-white-americans-health-death-rates.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2026/11/24/well/black-white-americans-health-death-rates.html</guid>
+      <atom:link href="https://www.nytimes.com/2026/11/24/well/black-white-americans-health-death-rates.html" rel="standout"></atom:link>
+      <description>A new report shows significant progress on racial health disparities, though many still persist.</description>
+      <dc:creator>Roni Caryn Rabin</dc:creator>
+      <pubDate>Tue, 24 Nov 2026 19:00:00 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Minorities</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Deaths (Fatalities)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Black People</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Whites</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Race and Ethnicity</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Medicine and Health</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Annals of Internal Medicine</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">United States</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">American Cancer Society</category>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2026/11/24/multimedia/24WELL-DISPARITIES1-ztmq/24WELL-DISPARITIES1-ztmq-mediumSquareAt3X.jpg" width="1800"></media:content>
+      <media:credit>Erin Schaff/The New York Times</media:credit>
+    </item>
+    <item>
+      <title>Measles Is a Growing Risk for Adults in the United States</title>
+      <link>https://www.nytimes.com/2026/11/23/health/measles-adults-vaccine-boosters.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2026/11/23/health/measles-adults-vaccine-boosters.html</guid>
+      <atom:link href="https://www.nytimes.com/2026/11/23/health/measles-adults-vaccine-boosters.html" rel="standout"></atom:link>
+      <description>The danger is greatest for those who are unvaccinated, but vaccinated people born before 1989 may no longer be sufficiently protected, medical experts said.</description>
+      <dc:creator>Apoorva Mandavilli</dc:creator>
+      <pubDate>Mon, 23 Nov 2026 22:19:34 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Measles</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Epidemics</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Vaccination and Immunization</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Disease Rates</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Immune System</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Age, Chronological</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Centers for Disease Control and Prevention</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">United States</category>
+      <media:content height="1799" medium="image" url="https://static01.nyt.com/images/2026/11/21/multimedia/21DC-MEASLES-ADULT-01-fbtw/21DC-MEASLES-ADULT-01-fbtw-mediumSquareAt3X.jpg" width="1800"></media:content>
+      <media:credit>Grant Hindsley for The New York Times</media:credit>
+      <media:description>Rita, who asked to be identified by her first name to protect her privacy, was treated for measles in March, despite having been vaccinated when she was a child.</media:description>
+    </item>
+    <item>
+      <title>How a Scientist Behind the Mediterranean Diet Got Caught in Trump’s War on Harvard</title>
+      <link>https://www.nytimes.com/2026/11/23/us/politics/walter-willett-trump-harvard.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2026/11/23/us/politics/walter-willett-trump-harvard.html</guid>
+      <atom:link href="https://www.nytimes.com/2026/11/23/us/politics/walter-willett-trump-harvard.html" rel="standout"></atom:link>
+      <description>Walter Willett studies the link between diet and health, a high priority for Health Secretary Robert F. Kennedy Jr. His grants were frozen anyway.</description>
+      <dc:creator>Sheryl Gay Stolberg</dc:creator>
+      <pubDate>Tue, 24 Nov 2026 18:21:19 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Willett, Walter C</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Diet and Nutrition</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Harvard University</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Trump, Donald J</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Federal Aid (US)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">National Institutes of Health</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Colleges and Universities</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Research</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Medicine and Health</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Food</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Kennedy, Robert F Jr</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Means, Calley</category>
+      <media:content height="1799" medium="image" url="https://static01.nyt.com/images/2026/11/20/multimedia/DC-WILLETT-HEADER-ALT-2-cgbm/DC-WILLETT-HEADER-ALT-2-cgbm-mediumSquareAt3X-v3.jpg" width="1800"></media:content>
+      <media:credit>Tony Luong for The New York Times</media:credit>
+    </item>
+    <item>
+      <title>CVS Health’s Planned Breakup Hasn’t Quieted Antitrust Critics</title>
+      <link>https://www.nytimes.com/2026/11/23/business/cvs-pharmacy-health-federal-investigations-antitrust.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2026/11/23/business/cvs-pharmacy-health-federal-investigations-antitrust.html</guid>
+      <atom:link href="https://www.nytimes.com/2026/11/23/business/cvs-pharmacy-health-federal-investigations-antitrust.html" rel="standout"></atom:link>
+      <description>Lawmakers are warning that spinning off the health care conglomerate’s drugstores will not end scrutiny over its power.</description>
+      <dc:creator>Reed Abelson and Rebecca Robbins</dc:creator>
+      <pubDate>Mon, 23 Nov 2026 10:03:26 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">CVS Caremark Corporation</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Drugs (Pharmaceuticals)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Health Insurance and Managed Care</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Drugstores</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Mergers, Acquisitions and Divestitures</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Shopping and Retail</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Regulation and Deregulation of Industry</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Aetna Inc</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Senate</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">UnitedHealth Group Inc</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Hawley, Josh D (1979- )</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Warren, Elizabeth</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">CVS Health</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">CVS Pharmacy Inc</category>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2026/11/23/multimedia/23biz-cvs-lkcq/23biz-cvs-lkcq-mediumSquareAt3X.jpg" width="1800"></media:content>
+      <media:credit>Philip Cheung for The New York Times</media:credit>
+      <media:description>CVS has grown over the past two decades to encompass a vast array of health care businesses.</media:description>
+    </item>
+  </channel>
+</rss>

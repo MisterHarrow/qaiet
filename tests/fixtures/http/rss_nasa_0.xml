@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	xmlns:media="http://search.yahoo.com/mrss/" >
+
+<channel>
+	<title>NASA</title>
+	<atom:link href="https://www.nasa.gov/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.nasa.gov</link>
+	<description>Official National Aeronautics and Space Administration Website</description>
+	<lastBuildDate>Thu, 26 Nov 2026 05:05:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=7.1.5</generator>
+	<item>
+		<title>APOD: 2026 November 26 – Eye in the Sky: The Milky Way over Lençóis</title>
+		<link>https://science.nasa.gov/image-article/apod-2026-november-26-eye-in-the-sky-the-milky-way-over-lencois/</link>
+		
+		<dc:creator><![CDATA[]]></dc:creator>
+		<pubDate>Thu, 26 Nov 2026 05:05:00 +0000</pubDate>
+				<category><![CDATA[APOD]]></category>
+		<guid isPermaLink="false">https://science.nasa.gov/image-article/apod-2026-november-26-eye-in-the-sky-the-milky-way-over-lencois/</guid>
+
+					<description><![CDATA[APOD Science APOD APOD: 2026 November 26 – Eye… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos! Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer. Eye in [&#8230;]]]></description>
+										
+					
+		
+		
+			</item>
+		<item>
+		<title>Seeking Refuge on Resolution Island</title>
+		<link>https://science.nasa.gov/earth/earth-observatory/seeking-refuge-on-resolution-island/</link>
+		
+		<dc:creator><![CDATA[]]></dc:creator>
+		<pubDate>Thu, 26 Nov 2026 05:01:00 +0000</pubDate>
+				<category><![CDATA[Earth Observatory]]></category>
+		<category><![CDATA[Landsat 9]]></category>
+		<category><![CDATA[Topography]]></category>
+		<category><![CDATA[Wildlife]]></category>
+		<guid isPermaLink="false">https://science.nasa.gov/earth/earth-observatory/seeking-refuge-on-resolution-island/</guid>
+
+					<description><![CDATA[New Zealanders have long envisioned the island as a predator-free zone for native birds, but swimming stoats have shown a resolve of their own.]]></description>
+										
+					
+		
+		
+			</item>
+		<item>
+		<title>NASA Enhances Supplier Program, Announces Mentor-Protégé Agreement</title>
+		<link>https://www.nasa.gov/organizations/osbp/nasa-enhances-supplier-program-announces-mentor-protege-agreement/</link>
+		
+		<dc:creator><![CDATA[Jennifer M. Dooren]]></dc:creator>
+		<pubDate>Wed, 25 Nov 2026 19:06:56 +0000</pubDate>
+				<category><![CDATA[Office of Small Business Programs (OSBP)]]></category>
+		<guid isPermaLink="false">https://www.nasa.gov/?p=1068194</guid>
+
+					<description><![CDATA[How NASA works with small businesses is evolving, and as a result, the agency is strengthening the domestic aerospace industrial base to support future exploration missions through its recently renamed Small Business Supplier Development Program. As part of the program, NASA announced its latest Mentor-Protégé Agreement, this one signed between The Boeing Company and GRACE [&#8230;]]]></description>
+										
+					
+		
+		
+			</item>
+		<item>
+		<title>NASA Eyes Crop Candidates for Future Menus</title>
+		<link>https://science.nasa.gov/directorates/smd/nasa-eyes-crop-candidates-for-future-menus/</link>
+		
+		<dc:creator><![CDATA[]]></dc:creator>
+		<pubDate>Wed, 25 Nov 2026 17:53:42 +0000</pubDate>
+				<category><![CDATA[Biological & Physical Sciences]]></category>
+		<category><![CDATA[International Space Station (ISS)]]></category>
+		<category><![CDATA[Science Mission Directorate]]></category>
+		<guid isPermaLink="false">https://science.nasa.gov/directorates/smd/nasa-eyes-crop-candidates-for-future-menus/</guid>
+
+					<description><![CDATA[As NASA prepares for future missions to the Moon and Mars, researchers are studying crops that could provide astronauts with fresh food, nutrition, and variety far from Earth. Such crop variety can help with menus in deep space, something top of mind this week as the nation celebrates Thanksgiving.    Recent testing points to strawberries, […]]]></description>
+										
+					
+		
+		
+			</item>
+		<item>
+		<title>Childhood, Career Come Full Circle for Budget Analyst at NASA Goddard</title>
+		<link>https://www.nasa.gov/centers-and-facilities/goddard/childhood-career-come-full-circle-for-budget-analyst-at-nasa-goddard/</link>
+		
+		<dc:creator><![CDATA[Rob Garner]]></dc:creator>
+		<pubDate>Wed, 25 Nov 2026 16:47:29 +0000</pubDate>
+				<category><![CDATA[Goddard Space Flight Center]]></category>
+		<category><![CDATA[People of Goddard]]></category>
+		<category><![CDATA[People of NASA]]></category>
+		<guid isPermaLink="false">https://www.nasa.gov/?p=1067811</guid>
+
+					<description><![CDATA[Conversations about NASA were the norm around the dinner table during Ashley Knight’s childhood. Her parents worked at NASA’s Goddard Space Flight Center in Greenbelt, Maryland, and discussions about happenings at the agency continued even when they came home from the office. “I remember a poignant dialogue we had after the space shuttle Challenger disaster,” [&#8230;]]]></description>
+										
+					
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -802,3 +802,18 @@ ol.nl { margin: 2.2rem 0 0; padding: 0; list-style: none; }
   .narr-hero { grid-template-columns: minmax(0, 1fr); }
   .narr-hero .seal { order: -1; width: 8.5rem; }
 }
+
+/* Desks: a row of sections under the nameplate (AI, Energy, ...), in the headline serif so it reads as the paper's
+   sections, apart from the mono site navigation above it. Each desk shows its sentiment in its first view. */
+.desks { display: flex; flex-wrap: wrap; gap: 0.1rem 1.7rem; margin: 0 0 0.7rem; padding: 0.55rem 0 0; border-top: 1px solid var(--rule); font: 1.02rem/1.3 var(--serif); }
+.desks a { position: relative; padding: 0.2rem 0 0.25rem; color: var(--muted); text-decoration: none; border-bottom: 2px solid transparent; white-space: nowrap; }
+.desks a:hover { color: var(--ink); }
+.desks a[aria-current="page"] { color: var(--ink); border-bottom-color: var(--signal); }
+.desks a::after { content: ""; position: absolute; inset: -0.5rem -0.5rem; }
+.desk-sent { font: 600 0.68rem/1 var(--mono); color: var(--faint); font-variant-numeric: tabular-nums; margin-left: 0.15em; }
+.desk-sent.crit { color: var(--crit); }
+.desk-sent.pos { color: var(--pos); }
+@media (max-width: 38rem) {
+  .desks { justify-content: space-between; gap: 0.1rem 0.8rem; font-size: 0.95rem; }
+  .desk-sent { display: none; }
+}

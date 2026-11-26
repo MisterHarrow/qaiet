@@ -9,7 +9,7 @@
 <channel rdf:about="https://orf.at/">
    <title>news.ORF.at</title>
    <link>https://orf.at/</link>
-   <dc:date>2026-11-26T11:23:58+01:00</dc:date>
+   <dc:date>2026-11-26T15:01:38+01:00</dc:date>
       <description>Die aktuellsten Nachrichten auf einen Blick - aus Österreich und der ganzen Welt. In Text, Bild und Video.</description>
    <dc:publisher>ORF Österreichischer Rundfunk, Wien</dc:publisher>
    <dc:creator>ORF Online und Teletext GmbH &amp; Co KG</dc:creator>
@@ -24,7 +24,47 @@
 
    <items>
       <rdf:Seq>
-         <rdf:li rdf:resource="https://orf.at/stories/3449328/" />
+         <rdf:li rdf:resource="https://orf.at/stories/3449364/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3449363/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3449347/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3449360/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3449359/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3449356/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3449355/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3449354/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3449349/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3449348/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3449345/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3449341/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3449340/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3449339/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3449337/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3449336/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3449332/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3449127/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3449329/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3449331/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3449328/" />
 
    <rdf:li rdf:resource="https://orf.at/stories/3449323/" />
 
@@ -36,105 +76,67 @@
 
    <rdf:li rdf:resource="https://orf.at/stories/3449309/" />
 
-   <rdf:li rdf:resource="https://orf.at/stories/3449304/" />
-
-   <rdf:li rdf:resource="https://orf.at/stories/3449303/" />
-
-   <rdf:li rdf:resource="https://orf.at/stories/3449302/" />
-
-   <rdf:li rdf:resource="https://orf.at/stories/3449301/" />
-
-   <rdf:li rdf:resource="https://orf.at/stories/3449300/" />
-
-   <rdf:li rdf:resource="https://orf.at/stories/3449021/" />
-
-   <rdf:li rdf:resource="https://orf.at/stories/3449297/" />
-
-   <rdf:li rdf:resource="https://orf.at/stories/3449035/" />
-
-   <rdf:li rdf:resource="https://orf.at/stories/3449296/" />
-
-   <rdf:li rdf:resource="https://orf.at/stories/3449294/" />
-
-   <rdf:li rdf:resource="https://orf.at/stories/3449293/" />
-
-   <rdf:li rdf:resource="https://orf.at/stories/3449233/" />
-
-   <rdf:li rdf:resource="https://orf.at/stories/3449290/" />
-
-   <rdf:li rdf:resource="https://orf.at/stories/3449289/" />
-
-   <rdf:li rdf:resource="https://orf.at/stories/3449288/" />
-
-   <rdf:li rdf:resource="https://orf.at/stories/3449285/" />
-
-   <rdf:li rdf:resource="https://orf.at/stories/3449234/" />
-
-   <rdf:li rdf:resource="https://orf.at/stories/3449282/" />
-
-   <rdf:li rdf:resource="https://orf.at/stories/3449280/" />
-
 
       </rdf:Seq>
    </items>
 </channel>
-<item rdf:about="https://orf.at/stories/3449328/">
-   <title>Verletzte nach Explosion in Raffinerie in Bangkok</title>
+<item rdf:about="https://orf.at/stories/3449364/">
+   <title>Spritpreis: Hattmannsdorfer für Ende des Margeneingriffs</title>
    
-   <link>https://orf.at/stories/3449328/</link>
-   <dc:subject>Chronik</dc:subject>
-   <dc:date>2026-11-26T11:23:58+01:00</dc:date>
+   <link>https://orf.at/stories/3449364/</link>
+   <dc:subject>Wirtschaft</dc:subject>
+   <dc:date>2026-11-26T15:01:38+01:00</dc:date>
 
-   <orfon:usid>news:3449328</orfon:usid>
+   <orfon:usid>news:3449364</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Wirtschaft/Wirtschaftspolitik" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3449363/">
+   <title>Spanier de Cos soll Nachfolger von EZB-Chefin Lagarde werden</title>
+   
+   <link>https://orf.at/stories/3449363/</link>
+   <dc:subject>Wirtschaft</dc:subject>
+   <dc:date>2026-11-26T14:59:07+01:00</dc:date>
+
+   <orfon:usid>news:3449363</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Wirtschaft/Wirtschaftspolitik" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3449347/">
+   <title>Neue Regeln für AHS-Eintritt gefordert</title>
+   <description>Mit einem Sehr gut oder Gut in Deutsch und Mathematik am Ende der Volksschule hat man die AHS-Reife erreicht und darf ins Gymnasium wechseln. AHS-Direktorinnen und -Direktoren forderten am Donnerstag neue Regeln für den Übertritt, denn die Noten in den Volksschulen würden „häufig“ zu wohlwollend vergeben. Bildungsminister Christoph Wiederkehr (NEOS) schloss aber bereits aus, Ergebnisse externer Bildungsstandards für eine Auswahl heranzuziehen.</description>
+   <link>https://orf.at/stories/3449347/</link>
+   <dc:subject>Inland</dc:subject>
+   <dc:date>2026-11-26T14:42:36+01:00</dc:date>
+
+   <orfon:usid>news:3449347</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Politik/PolitikInland" />
+   <orfon:storyType rdf:resource="urn:orfon:type:story" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3449360/">
+   <title>Depardieu wird wegen Vergewaltigung angeklagt</title>
+   
+   <link>https://orf.at/stories/3449360/</link>
+   <dc:subject>Chronik</dc:subject>
+   <dc:date>2026-11-26T14:33:58+01:00</dc:date>
+
+   <orfon:usid>news:3449360</orfon:usid>
    <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Nachrichten/Chronik" />
    <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
 </item>
 
-<item rdf:about="https://orf.at/stories/3449323/">
-   <title>Tote bei israelischen Angriffen im Gazastreifen</title>
+<item rdf:about="https://orf.at/stories/3449359/">
+   <title>Katz droht Hamas mit Massenumsiedlung von Palästinensern</title>
    
-   <link>https://orf.at/stories/3449323/</link>
+   <link>https://orf.at/stories/3449359/</link>
    <dc:subject>Ausland</dc:subject>
-   <dc:date>2026-11-26T10:54:48+01:00</dc:date>
+   <dc:date>2026-11-26T14:29:20+01:00</dc:date>
 
-   <orfon:usid>news:3449323</orfon:usid>
+   <orfon:usid>news:3449359</orfon:usid>
    <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Politik/PolitikAusland" />
-   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
-</item>
-
-<item rdf:about="https://orf.at/stories/3449305/">
-   <title>Moskau soll Ukraine-Krieg nicht „ausweiten“</title>
-   <description>US-Präsident Donald Trump und NATO-Generalsekretär Mark Rutte haben an Russland appelliert, den Krieg in der Ukraine nicht „auszuweiten“. Es müsse so schnell wie möglich eine Friedenslösung gefunden werden, erklärten sie nach ihrem Treffen auf Trumps Anwesen Mar-a-Lago in Florida am Mittwoch (Ortszeit). Der Krieg ging währenddessen mit gegenseitigen Angriffen unvermindert weiter.</description>
-   <link>https://orf.at/stories/3449305/</link>
-   <dc:subject>Ausland</dc:subject>
-   <dc:date>2026-11-26T10:03:33+01:00</dc:date>
-
-   <orfon:usid>news:3449305</orfon:usid>
-   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Politik/PolitikAusland" />
-   <orfon:storyType rdf:resource="urn:orfon:type:story" />
-</item>
-
-<item rdf:about="https://orf.at/stories/3449320/">
-   <title>Unis fordern Neuverhandlung über Budget</title>
-   
-   <link>https://orf.at/stories/3449320/</link>
-   <dc:subject>Inland</dc:subject>
-   <dc:date>2026-11-26T10:01:23+01:00</dc:date>
-
-   <orfon:usid>news:3449320</orfon:usid>
-   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Politik/PolitikInland" />
-   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
-</item>
-
-<item rdf:about="https://orf.at/stories/3449317/">
-   <title>Nehammer in Pilnacek-U-Ausschuss</title>
-   
-   <link>https://orf.at/stories/3449317/</link>
-   <dc:subject>Inland</dc:subject>
-   <dc:date>2026-11-26T09:47:44+01:00</dc:date>
-
-   <orfon:usid>news:3449317</orfon:usid>
-   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Politik/PolitikInland" />
    <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
 </item>
 

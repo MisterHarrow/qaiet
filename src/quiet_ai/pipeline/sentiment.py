@@ -1,4 +1,4 @@
-"""The AI sentiment index: per local day, the mean stance (-2..+2) of the coverage, overall and
+"""The sentiment index, one per desk (AI, energy, ...): per local day, the mean stance (-2..+2) of the coverage, overall and
 per track. Outlet-balanced: each outlet's confident labels are averaged first (weighted by
 confidence), then outlets are averaged, so one high-volume outlet counts as one voice. An outlet with
 `index_from` (one in a language the site has just started reading) counts only from that day."""
@@ -20,12 +20,13 @@ def waiting(sources: SourcesConfig) -> dict[str, str]:
     return {f.id: f.index_from.isoformat() for f in sources.feeds if f.index_from}
 
 
-def _rows(store: Store, since: datetime) -> list:
+def _rows(store: Store, since: datetime, desk: str = "ai") -> list:
     return store.conn.execute(
         "SELECT i.source, MIN(COALESCE(i.published_at, i.first_seen_at), i.first_seen_at) AS at, l.track, l.stance, l.confidence "
         "FROM item_labels l JOIN items i ON i.id = l.item_id "
-        "WHERE l.task = 'news' AND l.stance IS NOT NULL AND i.relevant = 1 AND i.dup_of IS NULL AND i.first_seen_at >= ?",
-        (iso(since),),
+        "WHERE l.task = 'news' AND l.stance IS NOT NULL AND i.relevant = 1 AND COALESCE(i.desk, 'ai') = ? AND i.dup_of IS NULL "
+        "AND i.first_seen_at >= ?",
+        (desk, iso(since)),
     ).fetchall()
 
 
@@ -62,31 +63,31 @@ def _daily(rows: list, settings: Settings, first_day: str, outlets: set[str] | N
     return out
 
 
-def compute(store: Store, settings: Settings, now: datetime, wait: dict[str, str] | None = None) -> int:
-    """Recompute the last `recompute_days` local dates. Returns rows written."""
+def compute(store: Store, settings: Settings, now: datetime, wait: dict[str, str] | None = None, desk: str = "ai") -> int:
+    """Recompute one desk's last `recompute_days` local dates. Returns rows written."""
     s = settings.sentiment
     zone = ZoneInfo(settings.site.timezone)
-    rows = _rows(store, now - timedelta(days=s.recompute_days + 1))
+    rows = _rows(store, now - timedelta(days=s.recompute_days + 1), desk)
     first_day = (now.astimezone(zone) - timedelta(days=s.recompute_days - 1)).date().isoformat()
     # Days before collection started only hold the feeds' backlog: too partial to count.
     started = store.conn.execute("SELECT MIN(first_seen_at) FROM items").fetchone()[0]
     if started:
         first_day = max(first_day, datetime.fromisoformat(started).astimezone(zone).date().isoformat())
-    out = [(day, track, value, n, labels, iso(now)) for (day, track), (value, n, labels) in _daily(rows, settings, first_day, wait=wait).items()]
+    out = [(desk, day, track, value, n, labels, iso(now)) for (day, track), (value, n, labels) in _daily(rows, settings, first_day, wait=wait).items()]
     with store.conn:
-        store.conn.execute("DELETE FROM sentiment_daily WHERE date >= ? OR date < ?", (first_day, started[:10] if started else ""))
-        store.conn.executemany("INSERT INTO sentiment_daily VALUES (?, ?, ?, ?, ?, ?)", out)
+        store.conn.execute("DELETE FROM sentiment_daily WHERE desk = ? AND (date >= ? OR date < ?)", (desk, first_day, started[:10] if started else ""))
+        store.conn.executemany("INSERT INTO sentiment_daily(desk, date, track, value, outlets, labels, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)", out)
     return len(out)
 
 
 def by_place(store: Store, settings: Settings, outlet_country: dict[str, str | None], places: dict[str, list[str]],
-             first_day: str, wait: dict[str, str] | None = None) -> dict[str, dict[tuple[str, str], tuple[float, int, int]]]:
+             first_day: str, wait: dict[str, str] | None = None, desk: str = "ai") -> dict[str, dict[tuple[str, str], tuple[float, int, int]]]:
     """The daily index again, once per place (a region or a country, as country codes), from that place's outlets
     only: place -> (date, track) -> (value, outlets, labels). Same rules as the overall index, so a day counts
     only when at least `min_outlets` outlets there were labeled."""
     zone = ZoneInfo(settings.site.timezone)
     since = datetime.fromisoformat(first_day).replace(tzinfo=zone) - timedelta(days=1)
-    rows = _rows(store, since)
+    rows = _rows(store, since, desk)
     return {key: _daily(rows, settings, first_day, {o for o, c in outlet_country.items() if c in codes}, wait)
             for key, codes in places.items()}
 
@@ -116,13 +117,13 @@ def place_value(daily: dict[tuple[str, str], tuple[float, int, int]], dates: lis
     return {"values": values, "words": describe(values["all"]), "days": sum((d, "all") in daily for d in dates)}
 
 
-def history(store: Store, days: int | None = None) -> dict[str, list[dict]]:
-    """track -> [{date, value, outlets, labels}] oldest first."""
-    q = "SELECT * FROM sentiment_daily"
-    args: tuple = ()
+def history(store: Store, days: int | None = None, desk: str = "ai") -> dict[str, list[dict]]:
+    """One desk's index: track -> [{date, value, outlets, labels}] oldest first."""
+    q = "SELECT * FROM sentiment_daily WHERE desk = ?"
+    args: tuple = (desk,)
     if days:
-        q += " WHERE date >= date('now', ?)"
-        args = (f"-{days} days",)
+        q += " AND date >= date('now', ?)"
+        args = (desk, f"-{days} days")
     out: dict[str, list[dict]] = {t: [] for t in TRACKS}
     for r in store.conn.execute(q + " ORDER BY date", args):
         out.setdefault(r["track"], []).append({"date": r["date"], "value": r["value"], "outlets": r["outlets"], "labels": r["labels"]})

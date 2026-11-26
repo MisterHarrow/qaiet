@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	xmlns:dcterms="http://purl.org/dc/terms/"
+>
+
+<channel>
+	<title>Healthcare News</title>
+	<atom:link href="https://thehill.com/policy/healthcare/feed/" rel="self" type="application/rss+xml" />
+	<link>https://thehill.com</link>
+	<description>Unbiased Politics News</description>
+	<lastBuildDate>Wed, 25 Nov 2026 17:58:07 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.9.12</generator>
+
+<image>
+	<url>https://thehill.com/wp-content/uploads/sites/2/2023/03/cropped-favicon-512px-1.png?w=32</url>
+	<title>Healthcare News</title>
+	<link>https://thehill.com</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Ibuprofen recalled nationwide over contaminent: FDA</title>
+		<link>https://thehill.com/policy/healthcare/6242753-ibuprofen-recalled-nationwide-over-contaminent-fda/</link>
+		
+		<dc:creator><![CDATA[Dylan Furbay]]></dc:creator>
+		<pubDate>Wed, 25 Nov 2026 17:58:05 +0000</pubDate>
+		<category><![CDATA[Healthcare]]></category>		
+		<guid isPermaLink="false">https://thehill.com/?p=6242753</guid>
+
+					<description><![CDATA[The lot was sold to medical supply company McKesson, which has been advised to return the product to GSMS.]]></description>
+		
+		
+		
+		<enclosure url="https://thehill.com/wp-content/uploads/sites/2/2026/11/image_2_212.png?w=900" type="image/png" length="155053" />
+<dcterms:modified>2026-11-25T17:58:07+00:00</dcterms:modified>
+	</item>
+		<item>
+		<title>Army detonates explosives in Iowa amid toxic lead risks</title>
+		<link>https://thehill.com/policy/energy-environment/6240967-army-lead-explosives-iowa-epa/</link>
+		
+		<dc:creator><![CDATA[Rachel Frazin]]></dc:creator>
+		<pubDate>Wed, 25 Nov 2026 15:17:31 +0000</pubDate>
+		<category><![CDATA[Energy & Environment]]></category>		<category><![CDATA[Administration]]></category>
+		<category><![CDATA[Defense]]></category>
+		
+		<category><![CDATA[Healthcare]]></category>
+		<category><![CDATA[State Watch]]></category>
+		<category><![CDATA[Army]]></category>
+		<category><![CDATA[Environmental Protection Agency]]></category>
+		<category><![CDATA[EPA]]></category>
+		<category><![CDATA[Iowa]]></category>
+		<category><![CDATA[Iowa lead]]></category>
+		<category><![CDATA[lead]]></category>
+		<category><![CDATA[lead azide]]></category>
+		<category><![CDATA[Lead munitions]]></category>
+		<category><![CDATA[Middletown]]></category>
+		<guid isPermaLink="false">https://thehill.com/?p=6240967</guid>
+
+					<description><![CDATA[The Army detonated a set of explosives in Iowa on Wednesday, a controversial move that is expected to spew toxic lead into the air. The government has said the detonation was necessary to prevent an accidental explosion, though critics have questioned why the situation was allowed to get to the point where lead azide-containing weapons...]]></description>
+		
+		
+		
+		<enclosure url="https://thehill.com/wp-content/uploads/sites/2/2026/11/iowadetonation_11252026getty.jpg?w=900" type="image/jpeg" length="983724" />
+<dcterms:modified>2026-11-25T16:58:14+00:00</dcterms:modified>
+	</item>
+		<item>
+		<title>Newborn hepatitis B vaccination rates dropped sharply after RFK Jr.-led confusion</title>
+		<link>https://thehill.com/policy/healthcare/6240970-hepatitis-b-vaccine-rates-drop/</link>
+		
+		<dc:creator><![CDATA[Sarah Davis]]></dc:creator>
+		<pubDate>Tue, 24 Nov 2026 21:44:58 +0000</pubDate>
+		<category><![CDATA[Healthcare]]></category>		
+		<guid isPermaLink="false">https://thehill.com/?p=6240970</guid>
+
+					<description><![CDATA[Far fewer newborns are being vaccinated against hepatitis B, according to a new study, as parents continue to reject an immunization once considered routine. The rate of infants who received the hepatitis B Virus (HBV) vaccine fell to 65.6 percent in 2026, down from around 80 percent from 2020 to 2022, according to a study...]]></description>
+		
+		
+		
+		<enclosure url="https://thehill.com/wp-content/uploads/sites/2/2026/11/AP26302043885459-e1794430240508.jpg?w=900" type="image/jpeg" length="98849" />
+<dcterms:modified>2026-11-24T22:08:24+00:00</dcterms:modified>
+	</item>
+		<item>
+		<title>Army set to detonate lead munitions in Iowa: What to know</title>
+		<link>https://thehill.com/policy/energy-environment/6240870-army-iowa-lead-munitions-detonations-evacuations/</link>
+		
+		<dc:creator><![CDATA[Rachel Frazin]]></dc:creator>
+		<pubDate>Tue, 24 Nov 2026 20:32:00 +0000</pubDate>
+		<category><![CDATA[Energy & Environment]]></category>		<category><![CDATA[Administration]]></category>
+		<category><![CDATA[Defense]]></category>
+		
+		<category><![CDATA[Healthcare]]></category>
+		<category><![CDATA[State Watch]]></category>
+		<category><![CDATA[Army]]></category>
+		<category><![CDATA[Earthjustice]]></category>
+		<category><![CDATA[Environmental Protection Agency]]></category>
+		<category><![CDATA[Iowa]]></category>
+		<category><![CDATA[Iowa Army Ammunition Plant]]></category>
+		<category><![CDATA[Iowa lead]]></category>
+		<category><![CDATA[Middletown]]></category>
+		<guid isPermaLink="false">https://thehill.com/?p=6240870</guid>
+
+					<description><![CDATA[The Army is poised to detonate lead-containing weapons in Iowa on Wednesday, sending a burst of lead dust into the air. The controlled destruction of the munitions has been highly controversial, both over potential health risks and how the issue advanced to this situation in the first place. Here’s what the public needs to know:...]]></description>
+		
+		
+		
+		<enclosure url="https://thehill.com/wp-content/uploads/sites/2/2026/11/IowaArmyDetonation_112426.png?w=900" type="image/png" length="2174716" />
+<dcterms:modified>2026-11-24T21:28:22+00:00</dcterms:modified>
+	</item>
+		<item>
+		<title>GLP-1s could prevent millions of deaths, free up farmland: Study</title>
+		<link>https://thehill.com/policy/healthcare/6239129-weight-loss-drugs-death-prevention-farmland-study/</link>
+		
+		<dc:creator><![CDATA[Sean Noone]]></dc:creator>
+		<pubDate>Tue, 24 Nov 2026 19:06:04 +0000</pubDate>
+		<category><![CDATA[Healthcare]]></category>		
+		<category><![CDATA[Policy]]></category>
+		<guid isPermaLink="false">https://thehill.com/?p=6239129/</guid>
+
+					<description><![CDATA[The research is the latest in surprising findings suggesting that the drugs originally meant to treat diabetes have wider-ranging impacts.]]></description>
+		
+		
+		
+		<enclosure url="https://thehill.com/wp-content/uploads/sites/2/2026/11/AP23182605439027-e1795546677321.jpg?w=900" type="image/jpeg" length="101605" />
+<dcterms:modified>2026-11-24T19:06:07+00:00</dcterms:modified>
+	</item>
+	</channel>
+</rss>

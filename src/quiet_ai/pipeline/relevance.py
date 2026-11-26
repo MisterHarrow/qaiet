@@ -1,11 +1,19 @@
-"""Relevance filter: is this item about AI? Keywords first, Haiku for the ambiguous rest.
-Also fills title_en for non-English items (same Haiku call), and marks near-duplicate titles."""
+"""Relevance filter: which desk (AI, energy, biotech, space, food) is this item about, if any?
+Keywords first for AI, Haiku for the rest. Also fills title_en for non-English items (same Haiku call), and marks
+near-duplicate titles.
+
+With only the AI desk, items with no AI keyword are dropped without a model call. With more desks, press items
+(news, newsletters, aggregators, Hacker News) with no AI keyword go to Haiku too, which sorts them onto a desk or
+drops them; so no desk needs keyword lists in every language. Sources that opted out of AI input are sorted by
+keywords alone (`DESK_KEYWORDS`, English)."""
 
 from __future__ import annotations
 
 import logging
 import re
 from dataclasses import dataclass, field
+
+from typing import Literal
 
 from pydantic import BaseModel
 
@@ -79,6 +87,32 @@ def _strong(text: str) -> bool:
     return bool(_STRONG_CS.search(text) or _STRONG_CI.search(text) or _STRONG_SCRIPT.search(text))
 
 
+# Sources with `llm: false` never reach the model, so their items are sorted by these (English) keywords.
+DESK_KEYWORDS: dict[str, re.Pattern] = {
+    "energy": re.compile(
+        r"\b(energy|oil prices?|crude|lng|opec|nuclear (?:power|plants?|energy|reactors?)|fusion energy|solar (?:power|panels?|farms?)|"
+        r"wind (?:farms?|power|turbines?)|power grids?|electricity|renewables?|coal|hydrogen|batteries|heat pumps?|"
+        r"emissions|carbon capture|uranium|pipelines?|blackouts?)\b", re.I),
+    "biotech": re.compile(
+        r"\b(biotech\w*|vaccines?|gene (?:therapy|editing)|crispr|mrna|drugmakers?|drug (?:prices?|approvals?|trials?)|fda|"
+        r"clinical trials?|pharma\w*|glp-1|ozempic|wegovy|medtech|novo nordisk|eli lilly|pfizer|astrazeneca)\b", re.I),
+    "space": re.compile(
+        r"\b(spacex|nasa|esa|rockets?|satellites?|starship|starlink|lunar|moon (?:landing|mission)|mars|astronauts?|"
+        r"space station|spacecraft|telescope|asteroid|blue origin)\b", re.I),
+    "food": re.compile(
+        r"\b(farmers?|agricultur\w*|crops?|harvests?|wheat|maize|rice prices?|soybeans?|cocoa|fertili[sz]ers?|"
+        r"food (?:prices?|security|supply|aid|inflation|crisis)|famine|hunger|livestock|fisheries)\b", re.I),
+}
+# Kinds that can be about another desk; everything else collected (repos, models, Bluesky posts from AI accounts...)
+# is AI or nothing.
+DESK_KINDS = ("news", "newsletter", "aggregator", "hn")
+
+
+def keyword_desk(text: str, desks: set[str]) -> str | None:
+    """The first non-AI desk whose keywords appear in the text (for sources the model never sees)."""
+    return next((d for d, rx in DESK_KEYWORDS.items() if d in desks and rx.search(text)), None)
+
+
 def _weak(text: str) -> bool:
     return bool(_WEAK.search(text) or _WEAK_SCRIPT.search(text))
 
@@ -86,9 +120,12 @@ def _weak(text: str) -> bool:
 _NORM = re.compile(r"[\W_]+")  # any script's letters and digits count
 
 
+DeskKey = Literal["ai", "energy", "biotech", "space", "food"]
+
+
 class _Verdict(BaseModel):
     i: int
-    about_ai: bool
+    desk: DeskKey | None
     title_en: str | None
 
 
@@ -158,26 +195,40 @@ def mark_duplicates(store: Store) -> int:
 def run(store: Store, settings: Settings, sources: SourcesConfig, llm: LLM | None, since_iso: str) -> RelevanceStats:
     stats = RelevanceStats()
     stats.duplicates = mark_duplicates(store)
+    desks = {d.key for d in settings.active_desks}
     ai_sources = {f.id for f in sources.feeds if f.ai_focused}
+    desk_sources = {f.id: f.desk for f in sources.feeds if f.desk and not f.ai_focused and f.desk in desks}
     # Publishers that opted out of AI input (Content-Signal: ai-input=no): keywords only, never Haiku.
     no_llm = {f.id for f in sources.feeds if not f.llm}
     rel = settings.relevance
 
     # 1. Keyword pass on items not yet decided (ambiguous ones again, so keyword fixes apply).
     rows = store.conn.execute(
-        "SELECT id, kind, source, title, summary FROM items "
+        "SELECT id, kind, source, title, summary, dup_of FROM items "
         "WHERE (relevance_by IS NULL OR relevance_by = 'ambiguous') AND first_seen_at >= ?", (since_iso,)
     ).fetchall()
     updates = []
+    others = desks - {"ai"}
     for r in rows:
+        if r["source"] in desk_sources:  # a feed wholly about one desk
+            updates.append((1, "source", desk_sources[r["source"]], r["id"]))
+            stats.by["source"] = stats.by.get("source", 0) + 1
+            continue
         verdict, by = keyword_verdict(r["kind"], r["source"], r["title"], r["summary"], ai_sources, set(rel.always_kinds), set(rel.always_sources))
+        desk = "ai" if verdict else None
         if verdict is None and r["source"] in no_llm:
-            body = r["summary"] or ""
-            verdict, by = _strong(body), "keyword"
-        updates.append((None if verdict is None else int(verdict), by, r["id"]))
+            verdict, by = _strong(r["summary"] or ""), "keyword"
+            desk = "ai" if verdict else None
+        if verdict is False and others and r["kind"] in DESK_KINDS and not r["dup_of"]:
+            if r["source"] in no_llm:  # sorted by keywords only
+                desk = keyword_desk(f"{r['title']} {r['summary'] or ''}", others)
+                verdict = desk is not None
+            else:  # not AI by its words; the model decides whether another desk takes it
+                verdict, by = None, "ambiguous"
+        updates.append((None if verdict is None else int(verdict), by, desk, r["id"]))
         stats.by[by] = stats.by.get(by, 0) + 1
     with store.conn:
-        store.conn.executemany("UPDATE items SET relevant = ?, relevance_by = ? WHERE id = ?", updates)
+        store.conn.executemany("UPDATE items SET relevant = ?, relevance_by = ?, desk = ? WHERE id = ?", updates)
 
     # 2. Haiku: ambiguous items, plus relevant non-English items that still need an English title.
     queue = store.conn.execute(
@@ -215,7 +266,7 @@ def run(store: Store, settings: Settings, sources: SourcesConfig, llm: LLM | Non
         results = {}
         for v in out.items:
             if 0 <= v.i < len(batch):
-                results[batch[v.i]["content_hash"]] = {"about_ai": v.about_ai, "title_en": v.title_en}
+                results[batch[v.i]["content_hash"]] = {"desk": v.desk, "title_en": v.title_en}
         llm.remember(TASK, version, settings.llm.item_model, results)
         cached.update(results)
         stats.llm_items += len(results)
@@ -228,13 +279,18 @@ def run(store: Store, settings: Settings, sources: SourcesConfig, llm: LLM | Non
             continue
         title_en = res.get("title_en") if (r["lang"] or "en") != "en" else None
         if r["relevance_by"] == "ambiguous":
-            updates.append((int(bool(res["about_ai"])), "llm", title_en, r["id"]))
+            desk = res.get("desk")
+            if desk is None and res.get("about_ai"):  # answers cached by relevance_v2
+                desk = "ai"
+            desk = desk if desk in desks else None
+            updates.append((int(desk is not None), "llm", desk, title_en, r["id"]))
         else:
-            updates.append((1, r["relevance_by"], title_en, r["id"]))
+            updates.append((1, r["relevance_by"], None, title_en, r["id"]))
     with store.conn:
-        store.conn.executemany("UPDATE items SET relevant = ?, relevance_by = ?, title_en = COALESCE(?, title_en) WHERE id = ?", updates)
+        store.conn.executemany("UPDATE items SET relevant = ?, relevance_by = ?, desk = COALESCE(?, desk), "
+                               "title_en = COALESCE(?, title_en) WHERE id = ?", updates)
         # A new English title changes what gets embedded.
-        store.conn.executemany("DELETE FROM embeddings WHERE item_id = ?", [(u[3],) for u in updates if u[2]])
+        store.conn.executemany("DELETE FROM embeddings WHERE item_id = ?", [(u[4],) for u in updates if u[3]])
     stats.translated, note = translate_missing(store, settings, llm, since_iso, no_llm)
     stats.note = stats.note or note
     stats.llm_calls, stats.llm_cost_usd = llm.calls, llm.cost_usd

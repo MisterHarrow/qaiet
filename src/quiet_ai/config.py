@@ -40,10 +40,16 @@ class FeedSource(_Model):
     sitemap: str | None = None  # for sites with no feed: read new URLs from the sitemap
     sitemap_include: str | None = None  # regex the URL must match
     sitemap_max_pages: int = 15  # pages read per run (only URLs not seen before)
-    ai_focused: bool = False  # an AI-only feed: every item counts as relevant
+    ai_focused: bool = False  # an AI-only feed: every item counts as relevant (the same as desk: ai)
+    desk: str | None = None  # a feed wholly about one desk (energy, biotech, ...): every item goes to that desk
     mentions: bool = False  # a recap of X/Reddit: keep the posts and threads it links (pipeline/mentions.py)
     index_from: date | None = None  # its labels count in the sentiment index from this local day (a new language waits two weeks)
     enabled: bool = True
+
+    @property
+    def desk_key(self) -> str | None:
+        """The desk every item of this feed belongs to, or None when each item is sorted by relevance."""
+        return "ai" if self.ai_focused else self.desk
 
 
 class GdeltOutlet(_Model):
@@ -138,7 +144,7 @@ class RelevanceSettings(_Model):
     always_kinds: list[str] = Field(default_factory=lambda: ["repo", "model", "dataset", "space", "paper", "launch"])
     always_sources: list[str] = Field(default_factory=lambda: ["hf_posts"])
     llm_batch_size: int = 25
-    prompt: str = "relevance_v2"
+    prompt: str = "relevance_v3"
     translate_prompt: str = "translate_v1"  # English titles the relevance call left empty
 
 
@@ -186,6 +192,22 @@ class AnalysisSettings(_Model):
     builder_label_top: int = 30      # label this many Rising candidates (plus builders in top stories)
     stance_kinds: list[str] = Field(default_factory=lambda: ["news", "newsletter"])
     top_stories: int = 12            # stories on the page
+
+
+class DeskSettings(_Model):
+    """One subject the site covers. Every desk is a full copy of the page: its own stories, sentiment, narratives
+    and day's line. Stance always means stance toward that desk's subject, so desks are never averaged together.
+    Prompts left empty fall back to `analysis` (the AI desk's)."""
+    key: str                         # ai, energy, ...; also the folder (/energy/), except for the first desk (the front page)
+    label: str                       # short name in the desk row ("Energy")
+    name: str                        # full name ("Biotech & health tech")
+    subject: str = ""                # one line for the prompts: what the desk is about
+    stance: str = ""                 # what the stance measures, for the pages ("how alarmed or hopeful it is about ...")
+    news_prompt: str | None = None
+    summary_prompt: str | None = None
+    weather_prompt: str | None = None
+    builders: bool = False           # Rising and The gap (builder listings exist only for AI)
+    enabled: bool = True
 
 
 class PeriodSettings(_Model):
@@ -284,6 +306,24 @@ class Settings(_Model):
     gap: GapSettings = Field(default_factory=GapSettings)
     sentiment: SentimentSettings = Field(default_factory=SentimentSettings)
     narratives: NarrativeSettings = Field(default_factory=NarrativeSettings)
+    desks: list[DeskSettings] = Field(default_factory=lambda: [DeskSettings(key="ai", label="AI", name="AI", builders=True)])
+
+    @property
+    def active_desks(self) -> list[DeskSettings]:
+        """The enabled desks in display order; the first is the front page."""
+        return [d for d in self.desks if d.enabled]
+
+    def desk(self, key: str) -> DeskSettings:
+        return next(d for d in self.desks if d.key == key)
+
+    def news_prompt(self, desk: str) -> str:
+        return self.desk(desk).news_prompt or self.analysis.news_prompt
+
+    def summary_prompt(self, desk: str) -> str:
+        return self.desk(desk).summary_prompt or self.analysis.summary_prompt
+
+    def weather_prompt(self, desk: str) -> str:
+        return self.desk(desk).weather_prompt or self.analysis.weather_prompt
 
 
 def _yaml(path: Path) -> dict:

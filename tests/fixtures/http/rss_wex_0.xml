@@ -13,7 +13,7 @@
 	<atom:link href="https://www.washingtonexaminer.com/tag/technology/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.washingtonexaminer.com/tag/technology/</link>
 	<description>Political News and Conservative Analysis About Congress, the President, and the Federal Government</description>
-	<lastBuildDate>Mon, 23 Nov 2026 20:49:22 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 25 Nov 2026 22:15:14 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -29,118 +29,122 @@
 	<height>32</height>
 </image> 
 <site xmlns="com-wordpress:feed-additions:1">244949569</site>	<item>
-		<title>Jeffries wants NDAA to include ‘ironclad export control legislation’ in wake of Nvidia’s Jensen Huang decision</title>
-		<link>https://www.washingtonexaminer.com/news/house/4812798/jeffries-ndaa-export-control-nvidia-jensen-huang/</link>
+		<title>AI is coming to school. Don&#8217;t repeat the Chromebook mistake</title>
+		<link>https://www.washingtonexaminer.com/op-eds/4810303/ai-in-schools-parents-input/</link>
 		
-		<dc:creator><![CDATA[Molly Parks]]></dc:creator>
-		<pubDate>Mon, 23 Nov 2026 20:49:20 +0000</pubDate>
-				<category><![CDATA[House]]></category>
-		<category><![CDATA[Technology]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Defense]]></category>
-		<category><![CDATA[Hakeem Jeffries]]></category>
-		<category><![CDATA[NDAA]]></category>
-		<category><![CDATA[Nvidia]]></category>
-		<guid isPermaLink="false">https://www.washingtonexaminer.com/?p=4812798</guid>
-
-					<description><![CDATA[House Minority Leader Hakeem Jeffries (D-NY) is pushing for Congress to include tightened export controls on artificial intelligence technology in the final National Defense Authorization Act for 2027 after Nvidia reinstated Jensen Huang as CEO. Nvidia’s board of directors said Monday that Huang would be returning as the AI chip-making company’s chief, effective immediately. The [&#8230;]]]></description>
-										
-					
-		
-		
-			<media:content url="https://www.washingtonexaminer.com/wp-content/uploads/2026/11/111826_WEX_JEFFRIES_LEADER-11-e1795025250149.jpg?w=1024" medium="image" />
-<post-id xmlns="com-wordpress:feed-additions:1">4812798</post-id>	</item>
-		<item>
-		<title>Democrats blast &#8216;reckless&#8217; decision to reinstate Jensen Huang as Nvidia CEO</title>
-		<link>https://www.washingtonexaminer.com/policy/technology/4812279/democrats-blast-reckless-decision-reinstate-jensen-huang-nvidia-ceo/</link>
-		
-		<dc:creator><![CDATA[Molly Parks]]></dc:creator>
-		<pubDate>Mon, 23 Nov 2026 18:34:03 +0000</pubDate>
-				<category><![CDATA[National Security]]></category>
-		<category><![CDATA[Technology]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Business]]></category>
-		<category><![CDATA[Democrats]]></category>
-		<category><![CDATA[Elizabeth Warren]]></category>
-		<category><![CDATA[Nvidia]]></category>
-		<category><![CDATA[Ruben Gallego]]></category>
-		<guid isPermaLink="false">https://www.washingtonexaminer.com/?p=4812279</guid>
-
-					<description><![CDATA[Democrats are knocking Nvidia’s decision to reinstate Jensen Huang as its president and CEO after he was axed following news of his affair with a suspected Chinese spy. Nvidia’s board of directors announced on Monday that Huang would be returning as the artificial intelligence chip-making company’s chief effective immediately. The move comes despite his extramarital [&#8230;]]]></description>
-										
-					
-		
-		
-			<media:content url="https://www.washingtonexaminer.com/wp-content/uploads/2026/11/AP26316465276155_f30573.jpg?w=1024" medium="image" />
-<post-id xmlns="com-wordpress:feed-additions:1">4812279</post-id>	</item>
-		<item>
-		<title>Nvidia reinstates Jensen Huang as president and CEO</title>
-		<link>https://www.washingtonexaminer.com/policy/technology/4812128/nvidia-reinstates-jensen-huang-president-ceo/</link>
-		
-		<dc:creator><![CDATA[Emily Hallas]]></dc:creator>
-		<pubDate>Mon, 23 Nov 2026 14:18:06 +0000</pubDate>
-				<category><![CDATA[Business]]></category>
-		<category><![CDATA[Technology]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Donald Trump]]></category>
-		<category><![CDATA[Nvidia]]></category>
-		<guid isPermaLink="false">https://www.washingtonexaminer.com/?p=4812128</guid>
-
-					<description><![CDATA[Jensen Huang was reinstated as head of Nvidia, the technology company’s board announced Monday, less than two weeks after he was ousted from the company over revelations he had an affair with a suspected spy for China. Huang’s relationship with Alice Huang, whom U.S. officials reportedly believe exploited the relationship to gather intelligence for Beijing, [&#8230;]]]></description>
-										
-					
-		
-		
-			<media:content url="https://www.washingtonexaminer.com/wp-content/uploads/2026/11/jensen-huang-spy-affair.jpg?w=1024" medium="image" />
-<post-id xmlns="com-wordpress:feed-additions:1">4812128</post-id>	</item>
-		<item>
-		<title>AI is already saving lives on our roads, rails, and runways</title>
-		<link>https://www.washingtonexaminer.com/op-eds/4810072/ai-transportation-safety-computing-capacity-cutting-traffic-split-second-braking-and-signaling/</link>
-		
-		<dc:creator><![CDATA[Carrie Sheffield]]></dc:creator>
-		<pubDate>Mon, 23 Nov 2026 10:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[Neeraja Deshpande]]></dc:creator>
+		<pubDate>Thu, 26 Nov 2026 10:00:00 +0000</pubDate>
 				<category><![CDATA[Op-Eds]]></category>
 		<category><![CDATA[Opinion]]></category>
-		<category><![CDATA[Air Travel]]></category>
 		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Auto Safety]]></category>
 		<category><![CDATA[Data Centers]]></category>
-		<category><![CDATA[Railroads]]></category>
-		<category><![CDATA[safety]]></category>
+		<category><![CDATA[Education]]></category>
+		<category><![CDATA[Schools]]></category>
 		<category><![CDATA[Technology]]></category>
-		<category><![CDATA[Transportation]]></category>
-		<guid isPermaLink="false">https://www.washingtonexaminer.com/?p=4810072</guid>
+		<guid isPermaLink="false">https://www.washingtonexaminer.com/?p=4810303</guid>
 
-					<description><![CDATA[‘Now, Not Someday’ is an op-ed series in partnership with Independent Women, in which five leading experts discuss how artificial intelligence and data centers are saving lives and helping families in every major industry. Somewhere in America today, a car will automatically brake and avoid the vehicle in front of it. The driver may never [&#8230;]]]></description>
+					<description><![CDATA[‘Now, Not Someday’ is an op-ed series in partnership with Independent Women, in which five leading experts discuss how artificial intelligence and data centers are saving lives and helping families in every major industry. Parents wary of artificial intelligence are not a fringe. In one national poll, 56% of K-12 parents said they want schools [&#8230;]]]></description>
 										
 					
 		
 		
-			<media:content url="https://www.washingtonexaminer.com/wp-content/uploads/2026/11/AI_Transportation_1-e1795198041377.jpg?w=1024" medium="image" />
-<post-id xmlns="com-wordpress:feed-additions:1">4810072</post-id>	</item>
+			<media:content url="https://www.washingtonexaminer.com/wp-content/uploads/2026/11/AI_Education_1.jpg?w=1024" medium="image" />
+<post-id xmlns="com-wordpress:feed-additions:1">4810303</post-id>	</item>
 		<item>
-		<title>Clayton says public should expect tech disruptions amid upgrades but remain ‘resilient’</title>
-		<link>https://www.washingtonexaminer.com/policy/national-security/4811724/clayton-expect-tech-disruptions-remain-resilient/</link>
+		<title>America&#8217;s most unnerving November since 1963</title>
+		<link>https://www.washingtonexaminer.com/opinion/columnists/4815894/america-most-unnerving-november-since-1963/</link>
 		
-		<dc:creator><![CDATA[Molly Parks]]></dc:creator>
-		<pubDate>Sun, 22 Nov 2026 21:35:50 +0000</pubDate>
-				<category><![CDATA[National Security]]></category>
+		<dc:creator><![CDATA[Michael Barone]]></dc:creator>
+		<pubDate>Wed, 25 Nov 2026 22:15:13 +0000</pubDate>
+				<category><![CDATA[Columnists]]></category>
+		<category><![CDATA[Opinion]]></category>
 		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Cybersecurity]]></category>
-		<category><![CDATA[Donald Trump]]></category>
-		<category><![CDATA[Intelligence]]></category>
-		<category><![CDATA[Jay Clayton]]></category>
+		<category><![CDATA[Federal Aviation Administration]]></category>
+		<category><![CDATA[Jensen Huang]]></category>
+		<category><![CDATA[Microsoft]]></category>
+		<category><![CDATA[Nvidia]]></category>
 		<category><![CDATA[Technology]]></category>
 		<category><![CDATA[Trump Administration]]></category>
-		<category><![CDATA[Washington DC]]></category>
-		<guid isPermaLink="false">https://www.washingtonexaminer.com/?p=4811724</guid>
+		<category><![CDATA[Washington D.C.]]></category>
+		<guid isPermaLink="false">https://www.washingtonexaminer.com/?p=4815894</guid>
 
-					<description><![CDATA[U.S. Director of National Intelligence Jay Clayton said the public should continue to expect “glitches, gaps, and interruptions in service” as technology systems upgrade in the era of artificial intelligence. Clayton appeared on CNN’s State of the Union on Sunday to address the series of outages and technological disruptions that have hit the United States [&#8230;]]]></description>
+					<description><![CDATA[“We’re in an insane moment right now,” the normally unflappable Nate Silver tweeted Tuesday evening, in the short workweek before Thanksgiving. “It’s because of AI,” he wrote later, adding that the technology “is moving way too fast.” “Over the past three weeks, the news has been f***ing crazy,” he continued. That note of disorientation, if [&#8230;]]]></description>
 										
 					
 		
 		
-			<media:content url="https://www.washingtonexaminer.com/wp-content/uploads/2026/07/071526_WEX_JAY_CLAYTON-10-e1784131182668.jpg?w=1024" medium="image" />
-<post-id xmlns="com-wordpress:feed-additions:1">4811724</post-id>	</item>
+			<media:content url="https://www.washingtonexaminer.com/wp-content/uploads/2026/11/duffy-outages.jpg?w=1024" medium="image" />
+<post-id xmlns="com-wordpress:feed-additions:1">4815894</post-id>	</item>
+		<item>
+		<title>Silicon Valley can’t answer AI’s biggest question. It needs the church</title>
+		<link>https://www.washingtonexaminer.com/in_focus/4815470/silicon-valley-needs-church-answer-ai-biggest-question/</link>
+		
+		<dc:creator><![CDATA[Charles Camosy]]></dc:creator>
+		<pubDate>Wed, 25 Nov 2026 21:00:00 +0000</pubDate>
+				<category><![CDATA[In Focus]]></category>
+		<category><![CDATA[Anthropic]]></category>
+		<category><![CDATA[Catholicism]]></category>
+		<category><![CDATA[Christianity]]></category>
+		<category><![CDATA[Microsoft]]></category>
+		<category><![CDATA[OpenAI]]></category>
+		<category><![CDATA[Pope Leo XIV]]></category>
+		<category><![CDATA[Silicon Valley]]></category>
+		<category><![CDATA[Technology]]></category>
+		<guid isPermaLink="false">https://www.washingtonexaminer.com/?p=4815470</guid>
+
+					<description><![CDATA[On Dec. 4, the University of Notre Dame will host a contingent from OpenAI for several private discussions and a public event, to be recorded by the OpenAI Forum. The event has the urgent energy of the moment: a clear sense that something big and dramatic needs to happen to respond to what the artificial [&#8230;]]]></description>
+										
+					
+		
+		
+			<media:content url="https://www.washingtonexaminer.com/wp-content/uploads/2026/11/AI_Church_tech_a1-e1795637051591.jpg?w=1024" medium="image" />
+<post-id xmlns="com-wordpress:feed-additions:1">4815470</post-id>	</item>
+		<item>
+		<title>Democrats’ new AI proposals collide with real China risks</title>
+		<link>https://www.washingtonexaminer.com/restoring-america/courage-strength-optimism/4815295/democrats-new-ai-proposals-collide-real-china-risks/</link>
+		
+		<dc:creator><![CDATA[Jessica Melugin]]></dc:creator>
+		<pubDate>Wed, 25 Nov 2026 20:00:00 +0000</pubDate>
+				<category><![CDATA[Courage, Strength, and Optimism]]></category>
+		<category><![CDATA[Opinion]]></category>
+		<category><![CDATA[Restoring America]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[China]]></category>
+		<category><![CDATA[Congress]]></category>
+		<category><![CDATA[Democrats]]></category>
+		<category><![CDATA[Technology]]></category>
+		<guid isPermaLink="false">https://www.washingtonexaminer.com/?p=4815295</guid>
+
+					<description><![CDATA[Incoming congressional progressives are champing at the bit to saddle artificial intelligence with a new federal agency, government licenses, and new classes of lawsuits against developers. Each would pull the reins on American companies while Chinese companies continue unabated. Rep.-elect Scott Wiener (D-CA) made a name for himself with efforts to regulate AI in his [&#8230;]]]></description>
+										
+					
+		
+		
+			<media:content url="https://www.washingtonexaminer.com/wp-content/uploads/2026/02/iStock-1680392149-e1795632949185.jpg?w=1024" medium="image" />
+<post-id xmlns="com-wordpress:feed-additions:1">4815295</post-id>	</item>
+		<item>
+		<title>The China threat everyone watches but nobody sees is on sale this week</title>
+		<link>https://www.washingtonexaminer.com/op-eds/4812775/chinese-smart-tvs-national-security-risk-manufacturers-silently-alerting-americans-screens/</link>
+		
+		<dc:creator><![CDATA[John Costello]]></dc:creator>
+		<pubDate>Wed, 25 Nov 2026 15:00:00 +0000</pubDate>
+				<category><![CDATA[Op-Eds]]></category>
+		<category><![CDATA[Opinion]]></category>
+		<category><![CDATA[China]]></category>
+		<category><![CDATA[Consumers]]></category>
+		<category><![CDATA[Retail]]></category>
+		<category><![CDATA[Spying]]></category>
+		<category><![CDATA[Technology]]></category>
+		<category><![CDATA[Thanksgiving]]></category>
+		<category><![CDATA[TV]]></category>
+		<guid isPermaLink="false">https://www.washingtonexaminer.com/?p=4812775</guid>
+
+					<description><![CDATA[Between Black Friday and Cyber Monday, Americans will buy more televisions than at any other time of year, and the deals are real. Walmart has a 98-inch TCL for $898. Amazon has a 75-inch Hisense for $699. Shoppers will see the picture. They won’t see who controls the software inside the set or who can [&#8230;]]]></description>
+										
+					
+		
+		
+			<media:content url="https://www.washingtonexaminer.com/wp-content/uploads/2023/12/c5fae90001657cb59c863ed79b5b1286-scaled-e1795461927945.jpg?w=1011" medium="image" />
+<post-id xmlns="com-wordpress:feed-additions:1">4812775</post-id>	</item>
 	</channel>
 </rss>

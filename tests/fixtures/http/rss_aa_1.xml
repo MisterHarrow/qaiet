@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel xmlns:atom="http://www.w3.org/2005/Atom">
+    <title>Anadolu Ajansı Güncel Haberler</title>
+    <link>https://www.aa.com.tr/</link>
+    <description>Türkiye'den ve Dünya'dan Güncel Haberler</description>
+    <language>en</language>
+    <image>
+      <url>https://www.aa.com.tr/images/meta-photo.png</url>
+      <title>Anadolu Ajansı Güncel Haberler</title>
+      <link>https://www.aa.com.tr/</link>
+    </image>
+    <item>
+      <guid isPermaLink="false">4138366</guid>
+      <link>https://www.aa.com.tr/en/health/ebola-cases-cross-12-000-in-dr-congo/4138366</link>
+      <title>Ebola cases cross 12,000 in DR Congo</title>
+      <description>Death toll from virus reaches 5,904 since May, according to health authorities</description>
+      <pubDate>Thu, 26 Nov 2026 11:55:06 +0300</pubDate>
+      <image>https://cdnuploads.aa.com.tr/uploads/Contents/2026/11/26/thumbs_b_c_d3ccec9c95b757c421e7f07a26ac2818.jpg</image>
+    </item>
+    <item>
+      <guid isPermaLink="false">4135887</guid>
+      <link>https://www.aa.com.tr/en/americas/4-recent-h5-bird-flu-cases-in-us-cdc-says/4135887</link>
+      <title>4 recent H5 bird flu cases in US, CDC says</title>
+      <description>4 adults, all workers at affected dairy farms, were infected between October and November, according to CDC</description>
+      <pubDate>Tue, 24 Nov 2026 16:10:05 +0300</pubDate>
+      <image>https://cdnuploads.aa.com.tr/uploads/Contents/2026/11/24/thumbs_b_c_4bae7817d3073bb428e246619fcf5597.jpg</image>
+    </item>
+    <item>
+      <guid isPermaLink="false">4135539</guid>
+      <link>https://www.aa.com.tr/en/turkiye/turkiye-joins-global-research-call-to-combat-drug-resistant-microbes/4135539</link>
+      <title>Türkiye joins global research call to combat drug-resistant microbes</title>
+      <description>Tubitak opens applications under European One Health Antimicrobial Resistance Partnership backed by $33.7M budget</description>
+      <pubDate>Tue, 24 Nov 2026 12:26:10 +0300</pubDate>
+      <image>https://cdnuploads.aa.com.tr/uploads/Contents/2026/11/24/thumbs_b_c_5a1950f9c8ea57a8966e9b1910c57ef6.jpg</image>
+    </item>
+    <item>
+      <guid isPermaLink="false">4134304</guid>
+      <link>https://www.aa.com.tr/en/health/uk-launches-worlds-largest-ai-assisted-breast-cancer-screening-trial/4134304</link>
+      <title>UK launches 'world's largest' AI-assisted breast cancer screening trial</title>
+      <description>NHS invites nearly 700,000 women to take part in 3-year study on early detection, clinician workload</description>
+      <pubDate>Mon, 23 Nov 2026 13:35:05 +0300</pubDate>
+      <image>https://cdnuploads.aa.com.tr/uploads/Contents/2026/11/23/thumbs_b_c_160f748904d299048fc0caa8a95bd0ff.jpg</image>
+    </item>
+    <item>
+      <guid isPermaLink="false">4132323</guid>
+      <link>https://www.aa.com.tr/en/health/nearly-100-schools-affected-by-ebola-in-eastern-congo/4132323</link>
+      <title>Nearly 100 schools affected by Ebola in eastern Congo</title>
+      <description>64 Ebola cases have been confirmed among students in Ituri province alone, including 33 deaths, according to official data</description>
+      <pubDate>Fri, 20 Nov 2026 17:29:14 +0300</pubDate>
+      <image>https://cdnuploads.aa.com.tr/uploads/Contents/2026/11/20/thumbs_b_c_7c86ff859268c20fb599cbce1c0525b7.jpg</image>
+    </item>
+  </channel>
+</rss>

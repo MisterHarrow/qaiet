@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+    <channel>
+        <atom:link href="https://www.lefigaro.fr/rss/figaro_sante.xml" rel="self" type="application/rss+xml"/>
+        <category>Santé</category>
+        <title>Le Figaro - Santé : Actualité scientifique et médicale, médecine, santé, écologie</title>
+        <description>Santé : Retrouvez toute l&#039;actualité des sciences et de la médecine, santé, écologie et sciences humaines sur Le Figaro</description>
+        <link>http://www.lefigaro.fr</link>
+        <language>fr</language>
+        <copyright>Droits de reproduction et de diffusion réservés LeFigaro.fr</copyright>
+        <lastBuildDate>Thu, 26 Nov 2026 15:40:03 +0100</lastBuildDate>
+        <docs>https://www.lefigaro.fr/rss</docs>
+        <image>
+            <title>Le Figaro - Santé : Actualité scientifique et médicale, médecine, santé, écologie</title>
+            <url>https://static.lefigaro.fr/common/logos/logo-150x150.png</url>
+            <link>http://www.lefigaro.fr</link>
+            <description>Santé : Retrouvez toute l&#039;actualité des sciences et de la médecine, santé, écologie et sciences humaines sur Le Figaro</description>
+        </image>
+
+                    <item>
+                <guid>https://sante.lefigaro.fr/social/sante-publique/herve-chneiweiss-en-medecine-l-ethique-protege-nos-libertes-face-aux-frenesies-de-la-technologie-20261126</guid>
+                <title>Hervé Chneiweiss : «En médecine, l’éthique protège nos libertés face aux frénésies de la technologie»</title>
+                                <link>https://sante.lefigaro.fr/social/sante-publique/herve-chneiweiss-en-medecine-l-ethique-protege-nos-libertes-face-aux-frenesies-de-la-technologie-20261126</link>
+                                    <description>ENTRETIEN - Implants cérébraux, génomes modifiés, IA, traitements innovants et hors de prix… Le monde médical va si vite et son impact sur nos vies si important qu’il doit savoir se remettre en question et s’ouvrir au débat citoyen.</description>
+                                                    <category>Santé publique</category>
+                                <pubDate>Thu, 26 Nov 2026 07:15:00 +0100</pubDate>
+
+                                                            <media:content url="https://i.f1g.fr/media/cms/2367x1331_crop/2026/10/13/6868920c58538f2d6f4d188df2727cc30172b9487e38210bf5002623dea567ee.jpg" width="2367" height="1331">
+                            <media:description type="plain">L’un des piliers de l’éthique, c’est le principe de responsabilité.</media:description>
+                            <media:credit>Grispb / ADOBE STOCK</media:credit>
+                        </media:content>
+                                    
+                            </item>
+                    <item>
+                <guid>https://sante.lefigaro.fr/trois-malaises-sur-le-terrain-en-trois-mois-derriere-les-absences-du-footballeur-jamal-musiala-une-probable-epilepsie-qui-ne-dit-pas-son-nom-20261125</guid>
+                <title>Trois malaises sur le terrain en trois mois : derrière les «absences» du footballeur Jamal Musiala, une probable épilepsie qui ne dit pas son nom</title>
+                                <link>https://sante.lefigaro.fr/trois-malaises-sur-le-terrain-en-trois-mois-derriere-les-absences-du-footballeur-jamal-musiala-une-probable-epilepsie-qui-ne-dit-pas-son-nom-20261125</link>
+                                    <description>DÉCRYPTAGE - L’attaquant du Bayern Munich a fait son retour sur les terrains le vendredi 20 novembre, quelques jours après avoir visiblement subi un troisième malaise depuis août. Pourtant, aucun diagnostic officiel n’a été communiqué par le joueur de 23 ans ou le club.</description>
+                                                    <category>Actualité Santé</category>
+                                <pubDate>Wed, 25 Nov 2026 15:30:00 +0100</pubDate>
+
+                                                            <media:content url="https://i.f1g.fr/media/cms/1993x1372_crop/2026/11/25/f8246df99b693127ac5426f977d63f057f4529922d9479f1eeecbe4d309a9ce5.jpg" width="1993" height="1372">
+                            <media:description type="plain">Jamal Musiala et le Bayern Munich affrontent Lille ce mercredi 25 novembre, pour la 5e journée de la phase régulière de la Ligue des champions.</media:description>
+                            <media:credit>Heiko Becker / REUTERS</media:credit>
+                        </media:content>
+                                    
+                            </item>
+                    <item>
+                <guid>https://sante.lefigaro.fr/medecine/medicaments-quand-personne-n-a-une-vision-complete-de-vos-traitements-le-risque-d-accident-augmente-20261125</guid>
+                <title>Médicaments : quand personne n’a une vision complète de vos traitements, le risque d’accident augmente</title>
+                                <link>https://sante.lefigaro.fr/medecine/medicaments-quand-personne-n-a-une-vision-complete-de-vos-traitements-le-risque-d-accident-augmente-20261125</link>
+                                    <description>DÉCRYPTAGE - La fragmentation des informations médicales entre professionnels de santé et aidants augmente le risque d’accidents liés aux médicaments.</description>
+                                                    <category>Médecine</category>
+                                <pubDate>Wed, 25 Nov 2026 07:15:00 +0100</pubDate>
+
+                                                            <media:content url="https://i.f1g.fr/media/cms/2850x1604_crop/2026/11/24/bd84175a3531d38b1ea487a86dda979949931e5637bd3338f7c096cbb999fcdd.jpg" width="2850" height="1604">
+                            <media:description type="plain">Dans un parcours de soins de plus en plus fragmenté, aucun professionnel ne dispose d’une vision complète des traitements pris par un patient.</media:description>
+                            <media:credit>sosiukin / ADOBE STOCK</media:credit>
+                        </media:content>
+                                    
+                            </item>
+                    <item>
+                <guid>https://sante.lefigaro.fr/medecine/cocaine-lsd-et-champignons-hallucinogenes-quand-les-drogues-investissent-le-musee-de-l-homme-20261124</guid>
+                <title>Cocaïne, LSD et champignons hallucinogènes : quand les drogues investissent le Musée de l’Homme</title>
+                                <link>https://sante.lefigaro.fr/medecine/cocaine-lsd-et-champignons-hallucinogenes-quand-les-drogues-investissent-le-musee-de-l-homme-20261124</link>
+                                    <description>RÉCIT - Du café aux plantes des rituels chamaniques, l’exposition parisienne Drogues interroge sans tabou notre rapport aux substances psychoactives.</description>
+                                                    <category>Médecine</category>
+                                <pubDate>Tue, 24 Nov 2026 07:15:00 +0100</pubDate>
+
+                                                            <media:content url="https://i.f1g.fr/media/cms/2781x1565_crop/2026/11/23/5fbc9f173a5b6099ee56aae13d8e4a01763ad860e590dbbeedb040ac900b64f9.jpg" width="2781" height="1565">
+                            <media:description type="plain">La collection de substances psychoactives de la chimiothèque du Muséum national d’histoire naturelle.</media:description>
+                            <media:credit>MNHN - J.-C. Domenech</media:credit>
+                        </media:content>
+                                    
+                            </item>
+                    <item>
+                <guid>https://sante.lefigaro.fr/mieux-etre/faut-il-vraiment-se-muscler-pour-soulager-son-mal-de-dos-20261123</guid>
+                <title>Faut-il vraiment se muscler pour soulager son mal de dos?</title>
+                                <link>https://sante.lefigaro.fr/mieux-etre/faut-il-vraiment-se-muscler-pour-soulager-son-mal-de-dos-20261123</link>
+                                    <description>DÉCRYPTAGE - Une vaste étude menée grâce à l’intelligence artificielle explore l’idée courante selon laquelle les douleurs de dos seraient favorisées par un manque de tonus musculaire.</description>
+                                                    <category>Forme et bien être</category>
+                                <pubDate>Mon, 23 Nov 2026 16:00:00 +0100</pubDate>
+
+                                                            <media:content url="https://i.f1g.fr/media/cms/1953x1099_crop/2026/11/23/eced685e7e09dfe9f11336e22e1ab15b26450836bfe40f317bffc640de9c652d.jpg" width="1953" height="1099">
+                            <media:description type="plain">Une équipe de recherche de l’Université de Stanford (Californie) a essayé de déterminer  s’il existe un rapport entre les muscles et les douleurs au dos. </media:description>
+                            <media:credit>Konstantin Postumitenko / Prostock-studio - ADOBE STOCK</media:credit>
+                        </media:content>
+                                    
+                            </item>
+            </channel>
+</rss>

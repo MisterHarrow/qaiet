@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss
+    version="2.0"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:atom="http://www.w3.org/2005/Atom"
+>
+    <channel>
+        <language>FR-CA</language>
+        <title>LaPresse.ca - Sciences</title>
+        <link>https://www.lapresse.ca/actualites/sciences/</link>
+        <description />
+        <lastBuildDate>Thu, 26 Nov 2026 09:45:27 -0500</lastBuildDate>
+        <image>
+            <url>https://static.lpcdn.ca/lpweb/lapresse/img/icon-logo-rss.gif</url>
+            <title>LaPresse.ca - Sciences</title>
+            <link>https://www.lapresse.ca/actualites/sciences/</link>
+            <description>LaPresse.ca - Sciences</description>
+        </image>
+
+        <atom:link href="https://www.lapresse.ca/actualites/sciences/" rel="self" type="application/rss+xml" />
+
+                                        <item>
+            <title><![CDATA[Étude | L’intelligence artificielle jette un nouvel éclairage sur les maux de dos]]></title>
+                            <enclosure
+                                        length="174948"                     type="image/jpeg"                     url="https://mobile-img.lpcdn.ca/v2/924x/r3996/eb36d2061040397fb306fdd0e7496b9c.jpg"
+                />
+            
+            <link>https://www.lapresse.ca/actualites/sciences/2026-11-25/etude/l-intelligence-artificielle-jette-un-nouvel-eclairage-sur-les-maux-de-dos.php?utm_source=rss&amp;utm_medium=fil&amp;utm_campaign=actualites&amp;utm_content=sciences</link>            <guid isPermaLink="false">a4c984d65f8d3563921eb7bf83e5d41a</guid>
+            <pubDate>Wed, 25 Nov 2026 11:38:16 -0500</pubDate>
+
+            <description><![CDATA[La faiblesse des muscles abdominaux ne cause pas nécessairement les maux de dos, et leur renforcement ne suffira donc pas nécessairement à les régler, prévient ― de manière un peu surprenante ― une nouvelle étude. ]]></description>
+            <dc:creator><![CDATA[Jean-Benoit Legault]]></dc:creator>
+            <dc:source><![CDATA[La Presse Canadienne]]></dc:source>
+        </item>
+                                        <item>
+            <title><![CDATA[Nouveau traitement | Percée majeure face au cancer du pancréas]]></title>
+                            <enclosure
+                                        length="122616"                     type="image/jpeg"                     url="https://mobile-img.lpcdn.ca/v2/924x/r3996/639adc47b4233fffa6bfa23b2a3d3ebc.jpg"
+                />
+            
+            <link>https://www.lapresse.ca/actualites/sciences/2026-11-25/nouveau-traitement/percee-majeure-face-au-cancer-du-pancreas.php?utm_source=rss&amp;utm_medium=fil&amp;utm_campaign=actualites&amp;utm_content=sciences</link>            <guid isPermaLink="false">abc8355cda063bae9f27bf2851a6c1cf</guid>
+            <pubDate>Wed, 25 Nov 2026 10:41:48 -0500</pubDate>
+
+            <description><![CDATA[Un nouveau traitement qui bloque l’action de la protéine qui permet à certaines cellules cancéreuses de se propager hors de contrôle est perçu par plusieurs experts comme étant la percée la plus prometteuse face au cancer du pancréas depuis des décennies. ]]></description>
+            <dc:creator><![CDATA[Jean-Benoit Legault]]></dc:creator>
+            <dc:source><![CDATA[La Presse Canadienne]]></dc:source>
+        </item>
+                                        <item>
+            <title><![CDATA[Étude | De courtes séances de marche permettent de mieux contrôler la glycémie]]></title>
+                            <enclosure
+                                        length="167023"                     type="image/jpeg"                     url="https://mobile-img.lpcdn.ca/v2/924x/r3996/9fc53d3ac93f32e1b2f0031ed186800d.jpg"
+                />
+            
+            <link>https://www.lapresse.ca/actualites/sciences/2026-11-24/etude/de-courtes-seances-de-marche-permettent-de-mieux-controler-la-glycemie.php?utm_source=rss&amp;utm_medium=fil&amp;utm_campaign=actualites&amp;utm_content=sciences</link>            <guid isPermaLink="false">01ba4806116a3c41b4dbc47a3a70a5a8</guid>
+            <pubDate>Tue, 24 Nov 2026 08:33:00 -0500</pubDate>
+
+            <description><![CDATA[De brèves séances d’activité physique permettent un meilleur contrôle de la glycémie qu’une séance prolongée, du moins chez les individus en situation de surpoids ou d’obésité, montre une nouvelle étude réalisée par des chercheurs français et américains. ]]></description>
+            <dc:creator><![CDATA[]]></dc:creator>
+            <dc:source><![CDATA[La Presse Canadienne]]></dc:source>
+        </item>
+                                        <item>
+            <title><![CDATA[Cancer du sein | Une radiothérapie plus courte serait tout aussi efficace, selon une étude]]></title>
+                            <enclosure
+                                        length="99877"                     type="image/jpeg"                     url="https://mobile-img.lpcdn.ca/v2/924x/r3996/b92856ff49ef3b119efc38e88c45f9d3.jpg"
+                />
+            
+            <link>https://www.lapresse.ca/actualites/sciences/2026-11-23/cancer-du-sein/une-radiotherapie-plus-courte-serait-tout-aussi-efficace-selon-une-etude.php?utm_source=rss&amp;utm_medium=fil&amp;utm_campaign=actualites&amp;utm_content=sciences</link>            <guid isPermaLink="false">636fc4468e403fb1a6c511303030fae8</guid>
+            <pubDate>Mon, 23 Nov 2026 11:55:09 -0500</pubDate>
+
+            <description><![CDATA[Les schémas de radiothérapie plus courts sont aussi sûrs et efficaces que le traitement standard de cinq semaines chez les patientes atteintes d’un cancer du sein qui subissent une ablation et une reconstruction mammaires, montre une nouvelle étude américaine. ]]></description>
+            <dc:creator><![CDATA[]]></dc:creator>
+            <dc:source><![CDATA[La Presse Canadienne]]></dc:source>
+        </item>
+                                        <item>
+            <title><![CDATA[Du 23 au 25 novembre | Cinq choses à savoir sur la superlune]]></title>
+                            <enclosure
+                                        length="96716"                     type="image/jpeg"                     url="https://mobile-img.lpcdn.ca/v2/924x/r3996/24c8bf12398831ceaa94fbdef81c3e6f.jpg"
+                />
+            
+            <link>https://www.lapresse.ca/actualites/sciences/2026-11-23/du-23-au-25-novembre/cinq-choses-a-savoir-sur-la-superlune.php?utm_source=rss&amp;utm_medium=fil&amp;utm_campaign=actualites&amp;utm_content=sciences</link>            <guid isPermaLink="false">9dd2474ea8b03cff8b942cfa62bb3676</guid>
+            <pubDate>Mon, 23 Nov 2026 11:36:53 -0500</pubDate>
+
+            <description><![CDATA[Une superlune – celle du gel – sera visible du 23 au 25 novembre. Voici cinq choses à savoir sur cet évènement céleste.]]></description>
+            <dc:creator><![CDATA[Maryse Tessier]]></dc:creator>
+            <dc:source><![CDATA[La Presse]]></dc:source>
+        </item>
+        
+    </channel>
+</rss>

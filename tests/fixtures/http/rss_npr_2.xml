@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:npr="https://www.npr.org/rss/" xmlns:nprml="https://api.npr.org/nprml" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+  <channel>
+    <title>NPR Topics: Health</title>
+    <link>https://www.npr.org/templates/story/story.php?storyId=1128</link>
+    <description>Comprehensive health news from NPR. Follow for updates on medical research, wellness trends, public health policy, patient care and healthcare systems.</description>
+    <language>en</language>
+    <copyright>Copyright 2024 NPR - For Personal Use Only</copyright>
+    <generator>Story API Shim 1.2.24</generator>
+    <lastBuildDate>Thu, 26 Nov 2026 09:39:15 -0500</lastBuildDate>
+    <image>
+      <url>https://media.npr.org/images/podcasts/primary/npr_generic_image_300.jpg?s=200</url>
+      <title>NPR Topics: Health</title>
+      <link>https://www.npr.org/sections/health/</link>
+    </image>
+    <item>
+      <title>Public health specialist discusses the aftermath of the munitions detonation in Iowa</title>
+      <description>NPR&apos;s A Martinez speaks with public health specialist Will Sander of the University of Illinois Urbana-Champaign about the aftermath of the Iowa munitions detonation.</description>
+      <pubDate>Thu, 26 Nov 2026 04:42:38 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/26/nx-s1-6053950/public-health-specialist-discusses-the-aftermath-of-the-munitions-detonation-in-iowa</link>
+      <guid>https://www.npr.org/2026/11/26/nx-s1-6053950/public-health-specialist-discusses-the-aftermath-of-the-munitions-detonation-in-iowa</guid>
+      
+      <dc:creator>A Martínez</dc:creator>
+    </item>
+    <item>
+      <title>How American Thanksgiving took root -- and evolved -- in Liberia</title>
+      <description>The first settlers of Liberia were African Americans who brought along the holiday of Thanksgiving — which has evolved to reflect the history and identity of this new nation.</description>
+      <pubDate>Wed, 25 Nov 2026 09:14:34 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/25/nx-s1-6048614/thanksgiving-liberia-gratitude-prayer</link>
+      <guid>https://www.npr.org/2026/11/25/nx-s1-6048614/thanksgiving-liberia-gratitude-prayer</guid>
+      
+      <dc:creator>Ari Daniel</dc:creator>
+    </item>
+    <item>
+      <title>This group of seamstresses mends shirts to make chemo easier for cancer patients</title>
+      <description>Seamstresses in Ohio and other states are making zippered shirts for cancer patients so they can more comfortably undergo chemotherapy treatments.</description>
+      <pubDate>Tue, 24 Nov 2026 16:19:27 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/24/nx-s1-6044239-e1/this-group-of-seamstresses-mends-shirts-to-make-chemo-easier-for-cancer-patients</link>
+      <guid>https://www.npr.org/2026/11/24/nx-s1-6044239-e1/this-group-of-seamstresses-mends-shirts-to-make-chemo-easier-for-cancer-patients</guid>
+      
+      <dc:creator>Kendall Crawford</dc:creator>
+    </item>
+    <item>
+      <title>Here&apos;s the public health guidance for possible lead exposure in Iowa</title>
+      <description>NPR&apos;s Juana Summers talks with Dr. Dan McCabe, medical director of the Iowa Poison Control Center, about how people can protect themselves after the Army detonates degraded lead azide.</description>
+      <pubDate>Tue, 24 Nov 2026 16:16:46 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/24/nx-s1-6052351/heres-the-public-health-guidance-for-possible-lead-exposure-in-iowa</link>
+      <guid>https://www.npr.org/2026/11/24/nx-s1-6052351/heres-the-public-health-guidance-for-possible-lead-exposure-in-iowa</guid>
+      
+      <dc:creator>Michelle Aslam</dc:creator>
+    </item>
+    <item>
+      <title>Doctors struggle to save babies after parents refuse vitamin K</title>
+      <description>Doctors are fighting an uphill battle against disinformation about routine vitamin K shots given to newborns in the hospital. It helps prevent a rare but devastating bleeding disorder.  </description>
+      <pubDate>Tue, 24 Nov 2026 05:00:00 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/24/nx-s1-6001723/vitamin-k-deficiency-refusal-vaccine-misinformation-newborn-bleeding</link>
+      <guid>https://www.npr.org/2026/11/24/nx-s1-6001723/vitamin-k-deficiency-refusal-vaccine-misinformation-newborn-bleeding</guid>
+      
+      <dc:creator>Kate Wells</dc:creator>
+    </item>
+  </channel>
+</rss>

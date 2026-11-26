@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="/css/rss.xsl" type="text/xsl"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <!-- 
+        If you're seeing this, you've clicked on a link for ESA's RSS feeds. 
+        This file is not meant to be read by a Web browser directly. 
+        Instead you're meant to copy the URL for the file, and paste it into your favorite RSS reader.
+    -->
+
+    <channel>
+        <title>ESA Space News</title>
+        <description>ESA Space News</description>
+                    <link>https://www.esa.int/search?subjects=160315</link>
+        
+        <atom:link href="https://www.esa.int/rss/latest-news-homepage.en.rss" rel="self" type="application/rss+xml" />
+        <pubDate>Thu, 26 Nov 2026 01:01:41 +0100</pubDate>
+        <lastBuildDate>Thu, 26 Nov 2026 01:01:41 +0100</lastBuildDate>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs> 
+
+        <category>space</category>
+        <language>en</language>
+
+        <ttl>600</ttl>
+        <copyright>Copyright European Space Agency</copyright>
+        <managingEditor>rss@esa.int (ESA rss manager)</managingEditor>
+
+                    <item>
+                <title><![CDATA[Hera reveals stadium-sized asteroid crater from spacecraft impact]]></title>
+                <link>https://www.esa.int/articles/about-us/directorates/operations/space-safety/hera/hera-reveals-stadium-sized-asteroid-crater-left-after-spacecraft-impact</link>
+                <guid isPermaLink="false">dataobject_161575</guid>
+                <description><![CDATA[<img src="https://media.esa.int/global/public/common/misc/2026/11/402774/image-thumb__402774__fit_large/hera-afc-dimorphos-crater-261107crop.0c2ee86a.webp" alt="Dimorphos asteroid with crater from DART impact">
+Arriving at the site of humankind&#039;s first planetary defence experiment, the European Space Agency&#039;s Hera mission has found a miniature world of surprises. ]]></description>
+                <pubDate>Wed, 25 Nov 2026 12:02:51 +0100</pubDate>
+            </item>
+                    <item>
+                <title><![CDATA[Euclid breaks own quasar record by 40 million years]]></title>
+                <link>https://www.esa.int/articles/about-us/directorates/science/euclid/euclid-breaks-own-quasar-record-by-40-million-years</link>
+                <guid isPermaLink="false">dataobject_161368</guid>
+                <description><![CDATA[<img src="https://media.esa.int/global/public/common/image/2026/11/402420/image-thumb__402420__fit_large/j1504-6252-euclid-press-master-16bit-jpg.bfc2f054.webp" alt="Euclid&#039;s image of the farthest quasar">
+The European Space Agency’s Euclid space telescope has discovered the most distant quasar to date: a rare 360 million-sun-mass galactic core seen just 630 million years after the Big Bang. The discovery breaks Euclid’s own previous record, announced only a few months ago[1.1], by peering back in time an additional 40 million years. It also raises a compelling question: how could such an enormous black hole have formed and grown so rapidly after the Big Bang?]]></description>
+                <pubDate>Tue, 24 Nov 2026 09:00:00 +0100</pubDate>
+            </item>
+                    <item>
+                <title><![CDATA[BepiColombo safely in Mercury orbit despite unexpected challenge  ]]></title>
+                <link>https://www.esa.int/articles/about-us/directorates/operations/bepicolombo-safely-in-mercury-orbit-despite-unexpected-challenge</link>
+                <guid isPermaLink="false">dataobject_161558</guid>
+                <description>On 21 November, starting at 18:24 UTC, BepiColombo achieved Mercury orbit insertion (MOI), the second major milestone of its planetary arrival phase. As soon as the signal from the spacecraft was re-established after a scheduled loss of contact, the Mission Control Team at the European Space Operations Centre (ESOC) in Darmstadt, Germany, saw that the spacecraft had entered safe mode. An issue occurred during the thruster burn, causing the manoeuvre to end earlier than expected. Since then…</description>
+                <pubDate>Mon, 23 Nov 2026 19:00:00 +0100</pubDate>
+            </item>
+                    <item>
+                <title><![CDATA[Hera’s Didymos asteroid in eclipse]]></title>
+                <link>https://www.esa.int/articles/about-us/directorates/operations/space-safety/hera/hera-s-didymos-asteroid-in-eclipse</link>
+                <guid isPermaLink="false">dataobject_161548</guid>
+                <description><![CDATA[<img src="https://media.esa.int/global/public/common/misc/2026/11/402718/image-thumb__402718__fit_large/9af921b0-62dc-45f0-8de7-2615a6beddc4-4-5005-c-2-crop.5aad3c61.webp" alt="Didymos asteroid eclipsed by Dimorphos moonlet">
+A solar eclipse in deep space, shown in this early view of the Didymos binary asteroids from the European Space Agency’s Hera mission for planetary defence. The smaller Dimorphos moonlet is seen casting its shadow across part of its Didymos parent body, to blank out the Sun across the shaded stretch of rocky surface.]]></description>
+                <pubDate>Mon, 23 Nov 2026 15:10:46 +0100</pubDate>
+            </item>
+                    <item>
+                <title><![CDATA[Rain breaks up Earth’s natural sunshades]]></title>
+                <link>https://www.esa.int/articles/about-us/directorates/earth-observation-programmes/futureeo/earthcare/rain-breaks-up-earth-s-natural-sunshades</link>
+                <guid isPermaLink="false">dataobject_161524</guid>
+                <description><![CDATA[<img src="https://media.esa.int/global/public/on-demand/image/2026/11/402674/image-thumb__402674__fit_large/goes-marine-stratocumulus.63b40dbc.webp" alt="Marine stratocumulus clouds">
+EarthCARE sheds light on one of the processes that leads to the breakup of vast, bright clouds that help keep our planet cool – with rain emerging as a key driver.]]></description>
+                <pubDate>Thu, 19 Nov 2026 13:00:00 +0100</pubDate>
+            </item>
+            </channel>
+</rss>

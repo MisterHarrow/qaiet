@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	 xmlns:media="http://search.yahoo.com/mrss/">
+
+<channel>
+	<title>Farmer&#039;s Weekly SA</title>
+	<atom:link href="https://www.farmersweekly.co.za/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.farmersweekly.co.za/</link>
+	<description>Serving agriculture since 1911</description>
+	<lastBuildDate>Thu, 26 Nov 2026 13:48:58 +0000</lastBuildDate>
+	<language>en-ZA</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	
+
+<image>
+	<url>https://www.farmersweekly.co.za/wp-content/uploads/2026/10/cropped-favfarmers-32x32.jpg</url>
+	<title>Farmer&#039;s Weekly SA</title>
+	<link>https://www.farmersweekly.co.za/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>THL ends milling season early amid grower payment uncertainty</title>
+		<link>https://www.farmersweekly.co.za/agri-news/south-africa/thl-ends-milling-season-early-amid-grower-payment-uncertainty/</link>
+		
+		<dc:creator><![CDATA[Jyothi Laldas]]></dc:creator>
+		<pubDate>Thu, 26 Nov 2026 12:25:55 +0000</pubDate>
+				<category><![CDATA[South Africa]]></category>
+		<guid isPermaLink="false">https://www.farmersweekly.co.za/?p=132223</guid>
+
+					<description><![CDATA[Thousands of sugar cane growers in KwaZulu-Natal (KZN) face mounting uncertainty after Tongaat Hulett Limited (THL) ended its milling season prematurely and confirmed that it would be unable to pay growers for October cane deliveries on the usual date.]]></description>
+										
+					
+		
+		
+		<media:content url="https://www.farmersweekly.co.za/wp-content/uploads/2026/11/Sugarcane.jpg" medium="image" width="1200" height="800" type="image/jpeg" /><media:thumbnail url="https://www.farmersweekly.co.za/wp-content/uploads/2026/11/Sugarcane.jpg" width="1200" height="800" />	</item>
+		<item>
+		<title>Mbizana maize hub aims to process 24 000t a year</title>
+		<link>https://www.farmersweekly.co.za/agri-news/south-africa/mbizana-maize-hub-aims-to-process-24-000t-a-year/</link>
+		
+		<dc:creator><![CDATA[Octavia Avesca Spandiel]]></dc:creator>
+		<pubDate>Wed, 25 Nov 2026 11:00:34 +0000</pubDate>
+				<category><![CDATA[South Africa]]></category>
+		<category><![CDATA[maize (corn) farming]]></category>
+		<guid isPermaLink="false">https://www.farmersweekly.co.za/?p=132030</guid>
+
+					<description><![CDATA[The Mbizana Rural Enterprise Development Hub in the Eastern Cape has procured its first 150t of WM1 maize for the 2025/25 season from an emerging farmer in Mthatha, marking the start of its commercial operations as it targets annual processing 24 000t.]]></description>
+										
+					
+		
+		
+		<media:content url="https://www.farmersweekly.co.za/wp-content/uploads/2026/11/Mbizana_redhub.jpg" medium="image" width="1200" height="800" type="image/jpeg" /><media:thumbnail url="https://www.farmersweekly.co.za/wp-content/uploads/2026/11/Mbizana_redhub.jpg" width="1200" height="800" />	</item>
+		<item>
+		<title>Improving wheat yields: make in-season nitrogen applications count</title>
+		<link>https://www.farmersweekly.co.za/crops/field-crops/improving-wheat-yields-make-in-season-nitrogen-applications-count/</link>
+		
+		<dc:creator><![CDATA[Lindi Botha]]></dc:creator>
+		<pubDate>Wed, 25 Nov 2026 06:04:43 +0000</pubDate>
+				<category><![CDATA[Field Crops]]></category>
+		<guid isPermaLink="false">https://www.farmersweekly.co.za/?p=132014</guid>
+
+					<description><![CDATA[Applying more fertiliser does not necessarily improve wheat yields or grain quality. Research shows that nutrient imbalances can prevent wheat from using the nutrients already available, leaving farmers spending money on fertiliser that may not deliver the expected results. Lindi Botha reports on how farmers can identify nutritional limitations and make more effective in-season fertiliser decisions.]]></description>
+										
+					
+		
+		
+		<media:content url="https://www.farmersweekly.co.za/wp-content/uploads/2026/11/wheat-FW-archivejpg.jpg" medium="image" width="1200" height="800" type="image/jpeg" /><media:thumbnail url="https://www.farmersweekly.co.za/wp-content/uploads/2026/11/wheat-FW-archivejpg.jpg" width="1200" height="800" />	</item>
+		<item>
+		<title>Zimbabwe pays nearly 50% of BIPPA compensation</title>
+		<link>https://www.farmersweekly.co.za/agri-news/africa/zimbabwe-pays-nearly-50-of-bippa-compensation/</link>
+		
+		<dc:creator><![CDATA[Clemence Manyukwe]]></dc:creator>
+		<pubDate>Tue, 24 Nov 2026 09:00:37 +0000</pubDate>
+				<category><![CDATA[Africa]]></category>
+		<category><![CDATA[Bilateral Investment Promotion and Protection Agreement (BIPPA)]]></category>
+		<guid isPermaLink="false">https://www.farmersweekly.co.za/?p=131930</guid>
+
+					<description><![CDATA[Zimbabwe has paid nearly 50% of compensation owed to foreign farmers protected under Bilateral Investment Promotion and Protection Agreements (BIPPAs) who lost their properties during the country’s land reform programme, with plans to settle the outstanding amounts by 2028.]]></description>
+										
+					
+		
+		
+		<media:content url="https://www.farmersweekly.co.za/wp-content/uploads/2026/11/Land-Clemence-Manyukwe.jpg" medium="image" width="1200" height="800" type="image/jpeg" /><media:thumbnail url="https://www.farmersweekly.co.za/wp-content/uploads/2026/11/Land-Clemence-Manyukwe.jpg" width="1200" height="800" />	</item>
+		<item>
+		<title>Babylonstoren’s Chianina herd focuses on quality, productivity, and animal care</title>
+		<link>https://www.farmersweekly.co.za/animals/cattle/babylonstorens-chianina-herd-focuses-on-quality-productivity-and-animal-care/</link>
+		
+		<dc:creator><![CDATA[Annelie Coleman]]></dc:creator>
+		<pubDate>Tue, 24 Nov 2026 03:00:36 +0000</pubDate>
+				<category><![CDATA[Cattle]]></category>
+		<category><![CDATA[Chianina cattle]]></category>
+		<guid isPermaLink="false">https://www.farmersweekly.co.za/?p=130670</guid>
+
+					<description><![CDATA[Babylonstoren’s Chianina herd is a perfect example of how farming and food can come together, from raising the cattle on the farm to serving their beef in its restaurants and offering it through the farm shop, herdmaster Kobus Lambrechts tells Annelie Coleman.]]></description>
+										
+					
+		
+		
+		<media:content url="https://www.farmersweekly.co.za/wp-content/uploads/2026/11/The-farms-herd-of-Chianinas.jpg" medium="image" width="1200" height="800" type="image/jpeg" /><media:thumbnail url="https://www.farmersweekly.co.za/wp-content/uploads/2026/11/The-farms-herd-of-Chianinas.jpg" width="1200" height="800" />	</item>
+	</channel>
+</rss>

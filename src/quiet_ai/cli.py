@@ -24,7 +24,7 @@ from quiet_ai.pipeline import momentum
 from quiet_ai.pipeline import narratives as narratives_mod
 from quiet_ai.pipeline import stories as story_views
 from quiet_ai.pipeline.ingest import build_tasks, ingest as run_ingest
-from quiet_ai.pipeline.process import build_editions, default_embedder, run_analysis, run_cluster
+from quiet_ai.pipeline.process import all_narratives, build_all_editions, default_embedder, run_analysis, run_cluster
 from quiet_ai.render_terminal import render
 from quiet_ai.site import build as site_build
 from quiet_ai.site.about import about_context
@@ -184,12 +184,13 @@ def _analyze_and_print(store: Store, now: datetime, dry_run: bool, no_llm: bool,
     render(console, ed)
     if build_site:
         tz = settings.site.timezone
-        editions = _editions(store, settings, sources, now, res.views)
-        archive.save_day_edition(store, editions[0], now, tz)
+        editions = _editions(store, settings, sources, now, res.desk_views)
+        for desk, eds in editions.items():
+            archive.save_day_edition(store, eds[0], now, tz, desk)
         frozen = archive.freeze(store, ROOT / settings.site.editions_dir, now, tz)
         pruned = archive.prune(store, now, vacuum=bool(frozen))
         _render_site(store, settings, sources, now, editions, ROOT / settings.site.out_dir)
-        console.print(f"[dim]site: {len(editions)} views, /about, /archive in {settings.site.out_dir}/; "
+        console.print(f"[dim]site: {len(editions)} desks × {len(settings.site.periods)} views, /about, /archive in {settings.site.out_dir}/; "
                       f"froze {', '.join(frozen) or 'nothing'}; pruned {sum(pruned.values())} rows[/]")
     n, b, s = res.news, res.builders, res.summaries
     cost = llm.cost_usd if llm else 0.0
@@ -257,18 +258,23 @@ def run(
     store.close()
 
 
-def _editions(store: Store, settings, sources, now: datetime, views=None) -> list[dict]:
-    return build_editions(store, settings, sources, now, views)
+def _editions(store: Store, settings, sources, now: datetime, desk_views=None) -> dict[str, list[dict]]:
+    """desk -> its editions, one per view. Narratives are detected once per desk and shared by its views."""
+    return build_all_editions(store, settings, sources, now, desk_views, all_narratives(store, settings, sources, now))
 
 
-def _render_site(store: Store, settings, sources, now: datetime, editions: list[dict], out: Path) -> Path:
-    """Every view, /about and /archive (from the frozen files in editions/)."""
+def _render_site(store: Store, settings, sources, now: datetime, editions: dict[str, list[dict]], out: Path) -> Path:
+    """Every desk's views, narratives, index and archive (from the frozen files in editions/), plus /about."""
     tz = settings.site.timezone
-    pages = site_build.render_all(editions, out, tz)
+    desks = site_build.desk_list(settings.active_desks, editions)
+    pages = []
+    for d in desks:
+        pages += site_build.render_all(editions[d["key"]], out, tz, d, desks)
+        folder = archive.desk_dir(ROOT / settings.site.editions_dir, d["key"])
+        site_build.render_archive(archive.load_frozen(folder), out, tz, d, desks)
+        site_build.render_sentiment(sentiment_mod.history(store, desk=d["key"]), out, tz, d, desks)
+        site_build.render_narratives(narratives_mod.detect(store, settings, sources, now, d["key"]), out, tz, settings.narratives.min_days, d, desks)
     site_build.render_about(about_context(store, settings, sources, load_accounts(), now, gold=GOLD, crosscheck=crosscheck_path()), out, tz)
-    site_build.render_archive(archive.load_frozen(ROOT / settings.site.editions_dir), out, tz)
-    site_build.render_sentiment(sentiment_mod.history(store), out, tz)
-    site_build.render_narratives(narratives_mod.detect(store, settings, sources, now), out, tz, settings.narratives.min_days)
     site_build.render_404(out)
     site_build.write_host_config(out)
     return pages[0]

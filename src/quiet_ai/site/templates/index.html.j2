@@ -5,8 +5,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Qaiet Times · {% if frozen_date %}{{ frozen_date }}{% else %}{{ period.label }} · {{ date_long }}{% endif %}</title>
-<meta name="description" content="Qaiet Times, a quiet daily overview of AI: what happened, how it is framed, and what builders are making.">
+<title>Qaiet Times · {% if desk_label %}{{ desk_label }} · {% endif %}{% if frozen_date %}{{ frozen_date }}{% else %}{{ period.label }} · {{ date_long }}{% endif %}</title>
+<meta name="description" content="Qaiet Times, a quiet daily overview{% if desk_label %} of {{ desk_label|lower }}: what happened and how it is framed{% else %} of AI: what happened, how it is framed, and what builders are making{% endif %}.">
 {{ brand.favicon() }}
 {{ brand.theme_boot() }}
 <link rel="stylesheet" href="{{ root }}static/style.css">
@@ -18,8 +18,9 @@
 <header class="masthead">
   <div class="masthead-top">
     {{ brand.wordmark(root or './') }}
-    {{ brand.nav(root, "archive" if frozen_date else "today") }}
+    {{ brand.nav(root, "archive" if frozen_date else "today", base) }}
   </div>
+  {% if desks %}{{ brand.desks(desks) }}{% endif %}
   {% if mix_segments %}
   <p class="spectrum" role="img" aria-label="{{ mix_label }}" title="{{ mix_label }}">{% for seg in mix_segments %}<span class="seg st{{ seg.key }}" style="width:{{ seg.pct }}%"></span>{% endfor %}</p>
   {% else %}
@@ -32,7 +33,7 @@
   {# The greeting: the day's sentiment under the nameplate. On the first page of a visit the figure counts up
      from zero and the line steps in (app.js and .greet); otherwise, and without JS, it simply shows. #}
   <div class="sentiment">
-    <p class="sent-line"><a class="sent-label step" href="{{ root }}sentiment/">The sentiment</a>
+    <p class="sent-line"><a class="sent-label step" href="{{ base }}sentiment/">The sentiment</a>
       <span class="sent-num step" data-value="{{ sv['all'] }}">{{ sv["all"]|signed }}</span>
       <span class="sent-word step">{{ e.sentiment.words }}{% if e.sentiment.days > 1 %} <span class="sent-note">{{ e.sentiment.days }}-day average</span>{% endif %}</span>
       <span class="sent-track step">Technical <b data-track="technical">{{ sv.get("technical")|signed }}</b></span><span class="sent-track step">Political <b data-track="political">{{ sv.get("political")|signed }}</b></span><span class="sent-track step">Economic <b data-track="economic">{{ sv.get("economic")|signed }}</b></span></p>
@@ -70,7 +71,7 @@
   {# The day's line runs across the page under both. #}
   <div class="mb-lead">
   {% if frozen_date %}
-  <p class="partial">The edition published on {{ frozen_date }} at {{ updated }} {{ tz_name }}. It no longer changes. <a href="{{ root }}">Today's overview</a></p>
+  <p class="partial">The edition published on {{ frozen_date }} at {{ updated }} {{ tz_name }}. It no longer changes. <a href="{{ base or './' }}">Today's overview</a></p>
   {% endif %}
   {% if data_since and not frozen_date %}
   <p class="partial">Collecting since {{ data_since }}, so this view covers less than {{ period.label }} so far. It fills in as the days pass.</p>
@@ -122,6 +123,9 @@
 </header>
 
 <main>
+{% if not e.stories %}
+<p class="notice">No stories here yet. {% if desk_label %}This desk is new: its outlets' articles are sorted onto it and labeled at each morning's edition, and stories appear as they come in.{% else %}They appear as articles come in.{% endif %}</p>
+{% endif %}
 <section class="stories" aria-label="Top stories">
 {% for s in e.stories %}
 <article class="card" id="{{ s.id }}" data-track="{{ s.track or 'none' }}" data-terms="{{ s.terms|join('|') }}" data-countries="{{ s|story_countries|join(' ') }}">
@@ -199,7 +203,7 @@
   {% endif %}
   {% if s.narrative and s.narrative.timeline %}
   {# The narrative's seal on the card's top edge: this story has been covered for days; the seal links to how it evolved. #}
-  <a class="seal-link" href="{{ root }}narratives/{{ s.narrative.id }}/" aria-label="Part of a narrative: {{ s.narrative.days }} days of coverage. See how it evolved" title="A narrative: {{ s.narrative.days }} days of coverage, {{ s.narrative.first|date_range(s.narrative.last) }}">{{ s.narrative|seal }}</a>
+  <a class="seal-link" href="{{ base }}narratives/{{ s.narrative.id }}/" aria-label="Part of a narrative: {{ s.narrative.days }} days of coverage. See how it evolved" title="A narrative: {{ s.narrative.days }} days of coverage, {{ s.narrative.first|date_range(s.narrative.last) }}">{{ s.narrative|seal }}</a>
   {% endif %}
 </article>
 {# Opened from the card's summary, the headlines take the whole row under the card's row
@@ -274,8 +278,8 @@
 <section class="narratives" aria-labelledby="narr-h">
   <h2 id="narr-h">Narratives</h2>
   <p class="section-note">Stories the press has covered {{ nv.min_days }} days or more in a row, and how their stance moved.</p>
-  <ol class="narr-list">{% for n in nv["items"] %}{{ nar.row(n, root) }}{% endfor %}</ol>
-  <p class="num narr-more"><a href="{{ root }}narratives/">All narratives{% if nv.total > nv["items"]|length %}, {{ nv.total }} in all{% endif %}</a></p>
+  <ol class="narr-list">{% for n in nv["items"] %}{{ nar.row(n, base) }}{% endfor %}</ol>
+  <p class="num narr-more"><a href="{{ base }}narratives/">All narratives{% if nv.total > nv["items"]|length %}, {{ nv.total }} in all{% endif %}</a></p>
 </section>
 {% endif %}
 

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:npr="https://www.npr.org/rss/" xmlns:nprml="https://api.npr.org/nprml" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+  <channel>
+    <title>NPR Topics: Science</title>
+    <link>https://www.npr.org/templates/story/story.php?storyId=1007</link>
+    <description>Explore scientific breakthroughs, space discoveries, research trends and everyday mysteries with NPR’s science team. Plus episodes from the Short Wave podcast.</description>
+    <language>en</language>
+    <copyright>Copyright 2024 NPR - For Personal Use Only</copyright>
+    <generator>Story API Shim 1.2.24</generator>
+    <lastBuildDate>Thu, 26 Nov 2026 09:35:17 -0500</lastBuildDate>
+    <image>
+      <url>https://media.npr.org/images/podcasts/primary/npr_generic_image_300.jpg?s=200</url>
+      <title>NPR Topics: Science</title>
+      <link>https://www.npr.org/sections/science/</link>
+    </image>
+    <item>
+      <title>Invading armies, subterfuge and conquest: How fire ant wars affect ecosystems</title>
+      <description>Ants disperse seeds, scavenge, turn soil and serve as a food source in their ecosystems. If local ants are displaced by invasive ants from elsewhere, the effects are widely felt.</description>
+      <pubDate>Mon, 23 Nov 2026 18:12:05 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/23/nx-s1-6037814/invading-armies-subterfuge-and-conquest-how-fire-ant-wars-affect-ecosystems</link>
+      <guid>https://www.npr.org/2026/11/23/nx-s1-6037814/invading-armies-subterfuge-and-conquest-how-fire-ant-wars-affect-ecosystems</guid>
+      
+      <dc:creator>Ari Daniel</dc:creator>
+    </item>
+    <item>
+      <title>&apos;Medicare for all&apos; is back on the drawing board. Does it stand a better chance this time?</title>
+      <description>Several newly elected Democratic U.S. senators campaigned on Medicare for All. Could this be the time it actually gets traction?</description>
+      <pubDate>Mon, 23 Nov 2026 11:00:49 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/23/nx-s1-6047706/health-medicare-for-all-chances</link>
+      <guid>https://www.npr.org/2026/11/23/nx-s1-6047706/health-medicare-for-all-chances</guid>
+      
+      <dc:creator>Julie Rovner</dc:creator>
+    </item>
+    <item>
+      <title>Scientists sequenced a whale&apos;s entire genome using drones and whale snot</title>
+      <description>Scientists were able to sequence the entire genome of a whale using samples of its snot. They used sharp flying skills and commercial drones affixed with petri dishes to collect the samples.</description>
+      <pubDate>Sat, 21 Nov 2026 07:40:15 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/21/nx-s1-6044816/scientists-sequenced-a-whales-entire-genome-using-drones-and-whale-snot</link>
+      <guid>https://www.npr.org/2026/11/21/nx-s1-6044816/scientists-sequenced-a-whales-entire-genome-using-drones-and-whale-snot</guid>
+      
+      <dc:creator>Nathan Rott</dc:creator>
+    </item>
+    <item>
+      <title>New research gives insight to where your brain plans out your speech</title>
+      <description>New research shows where this all takes place and what it means for possibly treating those who have speech difficulties.</description>
+      <pubDate>Fri, 20 Nov 2026 16:38:25 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/20/nx-s1-6047695/new-research-gives-insight-to-where-your-brain-plans-out-your-speech</link>
+      <guid>https://www.npr.org/2026/11/20/nx-s1-6047695/new-research-gives-insight-to-where-your-brain-plans-out-your-speech</guid>
+      
+      <dc:creator>Jon Hamilton</dc:creator>
+    </item>
+    <item>
+      <title>More people are getting the flu. Should you get a flu shot before you travel?</title>
+      <description>Thanksgiving is just around the corner, just as millions of Americans are expected to travel for the holidays. Another thing that&apos;s upon us? Cold and flu season. </description>
+      <pubDate>Tue, 17 Nov 2026 05:00:00 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/17/nx-s1-6043086/thanksgiving-travel-cold-flu-vaccine-shot-booster</link>
+      <guid>https://www.npr.org/2026/11/17/nx-s1-6043086/thanksgiving-travel-cold-flu-vaccine-shot-booster</guid>
+      
+      <dc:creator>Sydney Lupkin</dc:creator>
+    </item>
+  </channel>
+</rss>

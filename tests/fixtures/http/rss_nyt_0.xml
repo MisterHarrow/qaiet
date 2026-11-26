@@ -7,13 +7,62 @@
     <description></description>
     <language>en-us</language>
     <copyright>Copyright 2026 The New York Times Company</copyright>
-    <lastBuildDate>Tue, 24 Nov 2026 08:14:48 +0000</lastBuildDate>
-    <pubDate>Tue, 24 Nov 2026 08:00:35 +0000</pubDate>
+    <lastBuildDate>Thu, 26 Nov 2026 14:41:45 +0000</lastBuildDate>
+    <pubDate>Thu, 26 Nov 2026 12:04:01 +0000</pubDate>
     <image>
       <title>NYT &gt; Technology</title>
       <url>https://static01.nyt.com/images/misc/NYT_logo_rss_250x40.png</url>
       <link>https://www.nytimes.com/section/technology</link>
     </image>
+    <item>
+      <title>Anthropic’s Stock Debut Could Hurt Tech Start-Ups</title>
+      <link>https://www.nytimes.com/2026/11/25/technology/anthropic-stock-tech-start-ups.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2026/11/25/technology/anthropic-stock-tech-start-ups.html</guid>
+      <atom:link href="https://www.nytimes.com/2026/11/25/technology/anthropic-stock-tech-start-ups.html" rel="standout"></atom:link>
+      <description>As the share price drops, it could act as a brake on Silicon Valley’s frenzied investing in younger companies.</description>
+      <dc:creator>Cory Weinberg</dc:creator>
+      <pubDate>Wed, 25 Nov 2026 21:30:58 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Anthropic AI LLC</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Initial Public Offerings</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Artificial Intelligence</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Computers and the Internet</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Start-ups</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Stocks and Bonds</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Venture Capital</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">OpenAI Labs</category>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2026/11/26/multimedia/25biz-anthropic-pop-2-qlhp/25biz-anthropic-pop-2-qlhp-mediumSquareAt3X.jpg" width="1800"></media:content>
+      <media:credit>Karsten Moran for The New York Times</media:credit>
+      <media:description>Anthropic’s chief executive, Dario Amodei, on a screen at the New York Stock Exchange during the company’s initial public offering last Thursday.</media:description>
+    </item>
+    <item>
+      <title>Jensen Huang Apologizes to Nvidia Employees, Says He Is in Therapy</title>
+      <link>https://www.nytimes.com/2026/11/24/technology/jensen-huang-apology-nvidia-ceo.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2026/11/24/technology/jensen-huang-apology-nvidia-ceo.html</guid>
+      <atom:link href="https://www.nytimes.com/2026/11/24/technology/jensen-huang-apology-nvidia-ceo.html" rel="standout"></atom:link>
+      <description>A day after returning to his company, Mr. Huang acknowledged that he had violated Nvidia’s code of conduct and “made some terrible mistakes.”</description>
+      <dc:creator>Tripp Mickle and Kalley Huang</dc:creator>
+      <pubDate>Tue, 24 Nov 2026 21:46:11 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">NVIDIA Corporation</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Huang, Jen-Hsun</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Apologies</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Artificial Intelligence</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Computer Chips</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Workplace Hazards and Violations</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Boards of Directors</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Adultery</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Huang, Lori</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Kress, Colette</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Huang, Alice (Technology Executive)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">China</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Industrial Espionage</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Espionage and Intelligence Services</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States International Relations</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Trump, Donald J</category>
+      <media:content height="1536" medium="image" url="https://static01.nyt.com/images/2026/11/24/multimedia/NVIDIA-MEETING-1-ltjp/NVIDIA-MEETING-1-ltjp-mediumSquareAt3X.jpg" width="1536"></media:content>
+      <media:credit>Agence France-Presse — Getty Images</media:credit>
+      <media:description>A photo posted to an Nvidia social media account on Monday showed Jensen Huang returning to the company’s headquarters in Santa Clara, Calif.</media:description>
+    </item>
     <item>
       <title>With Jensen Huang’s Return as C.E.O., Trump Effectively Overrode Nvidia’s Board</title>
       <link>https://www.nytimes.com/2026/11/23/technology/jensen-huang-nvidia-board-trump.html</link>
@@ -21,7 +70,7 @@
       <atom:link href="https://www.nytimes.com/2026/11/23/technology/jensen-huang-nvidia-board-trump.html" rel="standout"></atom:link>
       <description>Nvidia’s board said Mr. Huang would not be back. But President Trump, who pushed for Mr. Huang’s reinstatement, effectively overrode the board, governance experts said.</description>
       <dc:creator>Kalley Huang, Jordyn Holman, Lauren Hirsch and Ryan Mac</dc:creator>
-      <pubDate>Mon, 23 Nov 2026 21:26:52 +0000</pubDate>
+      <pubDate>Tue, 24 Nov 2026 15:40:14 +0000</pubDate>
       <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Huang, Jen-Hsun</category>
       <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">NVIDIA Corporation</category>
       <category domain="http://www.nytimes.com/namespaces/keywords/des">Boards of Directors</category>
@@ -39,100 +88,46 @@
       <media:description>On Monday, Nvidia said that the board had “voted unanimously” to bring Jensen Huang back as the company’s leader.</media:description>
     </item>
     <item>
-      <title>Trump Is Said to Have Pushed to Reinstate Nvidia CEO Jensen Huang</title>
-      <link>https://www.nytimes.com/2026/11/23/us/politics/trump-nvidia-huang.html</link>
-      <guid isPermaLink="true">https://www.nytimes.com/2026/11/23/us/politics/trump-nvidia-huang.html</guid>
-      <atom:link href="https://www.nytimes.com/2026/11/23/us/politics/trump-nvidia-huang.html" rel="standout"></atom:link>
-      <description>The president set in motion a weekend of maneuvering, led by Vice President JD Vance, to help Jensen Huang get his old job back.</description>
-      <dc:creator>Maggie Haberman, Jonathan Swan and Julian E. Barnes</dc:creator>
-      <pubDate>Mon, 23 Nov 2026 23:41:29 +0000</pubDate>
-      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States Politics and Government</category>
-      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">NVIDIA Corporation</category>
-      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Huang, Jen-Hsun</category>
-      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Trump, Donald J</category>
-      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Vance, J D</category>
+      <title>From Chinese Factory Town to the Nvidia Scandal: The Rise of Alice Huang</title>
+      <link>https://www.nytimes.com/2026/11/24/business/nvidia-alice-huang-china.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2026/11/24/business/nvidia-alice-huang-china.html</guid>
+      <atom:link href="https://www.nytimes.com/2026/11/24/business/nvidia-alice-huang-china.html" rel="standout"></atom:link>
+      <description>The woman whose role has become a focus of the Nvidia spying saga grew up in a small town built around a weapons factory. Her jump to finance and the tech world paralleled China’s own.</description>
+      <dc:creator>Paul Mozur, Keith Bradsher, Mara Hvistendahl, Michael Forsythe and Ana Swanson</dc:creator>
+      <pubDate>Tue, 24 Nov 2026 19:19:59 +0000</pubDate>
       <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">China</category>
-      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">United States</category>
-      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States International Relations</category>
-      <category domain="http://www.nytimes.com/namespaces/keywords/des">Stocks and Bonds</category>
-      <category domain="http://www.nytimes.com/namespaces/keywords/des">Industrial Espionage</category>
-      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Commerce Department</category>
-      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Justice Department</category>
-      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Megaspeed International Pte Ltd</category>
-      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Office of the Director of National Intelligence</category>
-      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">State Department</category>
-      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Bessent, Scott</category>
-      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Blanche, Todd (Attorney)</category>
-      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Clayton, Walter J</category>
       <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Huang, Alice (Technology Executive)</category>
-      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Lutnick, Howard W</category>
-      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Rubio, Marco</category>
-      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2026/11/23/multimedia/23nvidia-Trump-interview-gwmt/23nvidia-Trump-interview-gwmt-mediumSquareAt3X.jpg" width="1800"></media:content>
-      <media:credit>Haiyun Jiang/The New York Times</media:credit>
-      <media:description>President Trump at the White House on Friday.</media:description>
-    </item>
-    <item>
-      <title>Trump Administration Imposes Sanctions on Megaspeed, Singaporean Firm at Center of Nvidia Scandal</title>
-      <link>https://www.nytimes.com/2026/11/23/business/trump-administration-megaspeed-trade-blacklist-nvidia.html</link>
-      <guid isPermaLink="true">https://www.nytimes.com/2026/11/23/business/trump-administration-megaspeed-trade-blacklist-nvidia.html</guid>
-      <atom:link href="https://www.nytimes.com/2026/11/23/business/trump-administration-megaspeed-trade-blacklist-nvidia.html" rel="standout"></atom:link>
-      <description>The administration added Megaspeed to the entity list, a trade blacklist, after weeks of sparring among top officials on the decision.</description>
-      <dc:creator>Ana Swanson</dc:creator>
-      <pubDate>Tue, 24 Nov 2026 05:39:23 +0000</pubDate>
-      <category domain="http://www.nytimes.com/namespaces/keywords/des">Blacklisting</category>
-      <category domain="http://www.nytimes.com/namespaces/keywords/des">Adultery</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Hunan Province (China)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Espionage and Intelligence Services</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Megaspeed International Pte Ltd</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Factories and Manufacturing</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Huang Yu</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Huang, Jen-Hsun</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Ministry of State Security of the People&#39;s Republic of China</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">NVIDIA Corporation</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Content Type: Personal Profile</category>
       <category domain="http://www.nytimes.com/namespaces/keywords/des">Computer Chips</category>
       <category domain="http://www.nytimes.com/namespaces/keywords/des">Artificial Intelligence</category>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2026/11/23/business/00alice-huang/00alice-huang-mediumSquareAt3X.jpg" width="1800"></media:content>
+      <media:credit>Illustration by Joan Wong; Photograph by Ann Wang/Reuters</media:credit>
+    </item>
+    <item>
+      <title>Nvidia Halts Sales to Southeast Asia as U.S. Tightens China Restrictions</title>
+      <link>https://www.nytimes.com/2026/11/26/business/nvidia-southeast-asia-sales.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2026/11/26/business/nvidia-southeast-asia-sales.html</guid>
+      <atom:link href="https://www.nytimes.com/2026/11/26/business/nvidia-southeast-asia-sales.html" rel="standout"></atom:link>
+      <description>The shipping halt, which hit four countries, follows a new U.S. rule that would require licenses for companies in the countries to buy advanced A.I. chips.</description>
+      <dc:creator>Adam Satariano and Paul Mozur</dc:creator>
+      <pubDate>Thu, 26 Nov 2026 12:04:01 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Southeast Asia</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Artificial Intelligence</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Computer Chips</category>
       <category domain="http://www.nytimes.com/namespaces/keywords/des">Data Centers</category>
-      <category domain="http://www.nytimes.com/namespaces/keywords/des">Computer Security</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">NVIDIA Corporation</category>
       <category domain="http://www.nytimes.com/namespaces/keywords/des">United States Politics and Government</category>
       <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Commerce Department</category>
-      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Treasury Department</category>
-      <category domain="http://www.nytimes.com/namespaces/keywords/des">International Trade and World Market</category>
-      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Megaspeed International Pte Ltd</category>
-      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">NVIDIA Corporation</category>
-      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Huang, Jen-Hsun</category>
-      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Huang, Alice (Technology Executive)</category>
-      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Bessent, Scott</category>
-      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Lutnick, Howard W</category>
-      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2026/11/23/multimedia/23nvidia-megaspeed-wltb/23nvidia-megaspeed-wltb-mediumSquareAt3X.jpg" width="1800"></media:content>
-      <media:credit>Taryn Ng/Agence France-Presse — Getty Images</media:credit>
-      <media:description>Megaspeed’s addition to the list will prevent companies from shipping U.S. technology to the firm without first obtaining a government license.</media:description>
-    </item>
-    <item>
-      <title>Elon Musk Faces an A.I. Dilemma at SpaceX</title>
-      <link>https://www.nytimes.com/2026/11/23/business/elon-musk-ai-anthropic-google.html</link>
-      <guid isPermaLink="true">https://www.nytimes.com/2026/11/23/business/elon-musk-ai-anthropic-google.html</guid>
-      <atom:link href="https://www.nytimes.com/2026/11/23/business/elon-musk-ai-anthropic-google.html" rel="standout"></atom:link>
-      <description>Mr. Musk’s SpaceX is renting out computing power from its data centers to competitors, including Anthropic. That’s making it harder for his own A.I. effort.</description>
-      <dc:creator>Grace Kay and Ryan Mac</dc:creator>
-      <pubDate>Mon, 23 Nov 2026 16:13:32 +0000</pubDate>
-      <category domain="http://www.nytimes.com/namespaces/keywords/des">Artificial Intelligence</category>
-      <category domain="http://www.nytimes.com/namespaces/keywords/des">Data Centers</category>
-      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Space Exploration Technologies Corp</category>
-      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Anthropic AI LLC</category>
-      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Google Inc</category>
-      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Musk, Elon</category>
-      <media:content height="1798" medium="image" url="https://static01.nyt.com/images/2026/11/24/multimedia/24biz-musk-anthropic-xai-hzpg/24biz-musk-anthropic-xai-hzpg-mediumSquareAt3X.jpg" width="1800"></media:content>
-      <media:credit>Kevin Wurm/Reuters</media:credit>
-      <media:description>A data center in Southaven, Miss. Elon Musk has spent billions building data centers to catch up with rivals.</media:description>
-    </item>
-    <item>
-      <title>OpenAI Engineer Secretly Recorded Dozens of Meetings, Prosecutors Say</title>
-      <link>https://www.nytimes.com/2026/11/23/technology/openai-engineer-secret-recordings.html</link>
-      <guid isPermaLink="true">https://www.nytimes.com/2026/11/23/technology/openai-engineer-secret-recordings.html</guid>
-      <atom:link href="https://www.nytimes.com/2026/11/23/technology/openai-engineer-secret-recordings.html" rel="standout"></atom:link>
-      <description>A court filing said the engineer captured meetings on customers, A.I. safety and a foreign government briefing. Federal prosecutors are investigating what he did with the recordings.</description>
-      <dc:creator>Emmy Martin</dc:creator>
-      <pubDate>Tue, 24 Nov 2026 01:36:36 +0000</pubDate>
-      <category domain="http://www.nytimes.com/namespaces/keywords/des">Artificial Intelligence</category>
-      <category domain="http://www.nytimes.com/namespaces/keywords/des">Wiretapping and Other Eavesdropping Devices and Methods</category>
-      <category domain="http://www.nytimes.com/namespaces/keywords/des">Computer Security</category>
-      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Alfozan, Abdulrahman</category>
-      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">OpenAI Labs</category>
-      <media:content height="1801" medium="image" url="https://static01.nyt.com/images/2026/11/23/multimedia/23biz-openai-bugging-1-jmpw/23biz-openai-bugging-1-jmpw-mediumSquareAt3X.jpg" width="1800"></media:content>
-      <media:credit>Heather Diehl for The New York Times</media:credit>
-      <media:description>Prosecutors say they still do not know why the man made his recordings.</media:description>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Malaysia</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Singapore</category>
     </item>
   </channel>
 </rss>

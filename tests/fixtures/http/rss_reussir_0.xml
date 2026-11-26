@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xml:base="https://www.reussir.fr">
+    <channel>
+        <title><![CDATA[Réussir]]></title>
+        <link><![CDATA[http://www.reussir.fr/rss.xml]]></link>
+        <description><![CDATA[Retrouver toutes nos actualités en direct via nos flux RSS]]></description>
+        <language>fr-FR</language>
+        <pubDate>Thu, 26 Nov 2026 14:23:21 +0100</pubDate>
+
+                    <item>
+                <title><![CDATA[Bâtiments d'élevage : comment garder les vaches au frais dans le bâtiment ?]]></title>
+                <link>https://www.reussir.fr/articles/batiments-delevage-comment-garder-les-vaches-au-frais-dans-le-batiment</link>
+                <description><![CDATA[Face à des étés de plus en plus chauds, les bâtiments d'élevage doivent être repensés pour préserver le bien-être des…]]></description>
+                <dc:creator><![CDATA[Mélodie Comte]]></dc:creator>
+                <pubDate>Thu, 26 Nov 2026 14:23:21 +0100</pubDate>
+                                    <enclosure url="https://medias.reussir.fr/myreussir/styles/article_desktop/azblob/2026-11/Gaia_43341.jpeg.webp" />
+                                <guid isPermaLink="false">7b87c7a8-9c2d-4a93-89dc-52d4dbaef8e9</guid>
+                                    <category>ventilation, canicule, coup de chaleur, bâtiment d&#039;élevage, bâtiment, Massif central</category>
+                            </item>
+                    <item>
+                <title><![CDATA[Concours charolais de Montmarault : une édition 2026 qui résiste à la sécheresse]]></title>
+                <link>https://www.reussir.fr/articles/concours-charolais-de-montmarault-une-edition-2026-qui-resiste-la-secheresse</link>
+                <description><![CDATA[Les concours bovins et ovins de Montmarault se sont tenus le 17&nbsp;novembre pour les reproducteurs, le 19&nbsp;novembre…]]></description>
+                <dc:creator><![CDATA[Anne Cabanel]]></dc:creator>
+                <pubDate>Thu, 26 Nov 2026 14:14:04 +0100</pubDate>
+                                    <enclosure url="https://medias.reussir.fr/myreussir/styles/article_desktop/azblob/2026-11/montmarault3.jpg.webp" />
+                                <guid isPermaLink="false">9a3a4104-020e-4681-a672-157a53834555</guid>
+                                    <category>bovin, concours d&#039;animaux de boucherie, concours, ovin, charolaise</category>
+                            </item>
+                    <item>
+                <title><![CDATA[Marché des oléagineux du 25 novembre 2026 –  Le soja poursuit sa progression sur le CBOT, tandis que le colza sur Euronext cède de nouveau du terrain]]></title>
+                <link>https://www.reussir.fr/articles/marche-des-oleagineux-du-25-novembre-2026-le-soja-poursuit-sa-progression-sur-le-cbot</link>
+                <description><![CDATA[L’évolution des prix du colza et du tournesol français entre le 24 et le 25 novembre 2026, expliquée par La Dépêche Le…]]></description>
+                <dc:creator><![CDATA[Damien Jouen]]></dc:creator>
+                <pubDate>Thu, 26 Nov 2026 13:39:27 +0100</pubDate>
+                                    <enclosure url="https://medias.reussir.fr/myreussir/styles/article_desktop/azblob/2026-11/graphique_olea%2025112026.png.webp" />
+                                <guid isPermaLink="false">6bb41741-6d0f-4b70-9408-8e43cccc31cf</guid>
+                                    <category>marché à terme, marchés, prix, soja, colza, énergie, tournesol, oléagineux</category>
+                            </item>
+                    <item>
+                <title><![CDATA[Marché des céréales du 25 novembre 2026 – Le prix du blé recule, le prix du maïs franchit les 455 cents/bu à Chicago]]></title>
+                <link>https://www.reussir.fr/articles/marche-des-cereales-du-25-novembre-2026-le-prix-du-ble-recule-le-prix-du-mais-franchit-les</link>
+                <description><![CDATA[L’évolution des prix du blé et du maïs français entre le 24 et le 25 novembre 2026, expliquée par La Dépêche Le petit…]]></description>
+                <dc:creator><![CDATA[Laurent Morin]]></dc:creator>
+                <pubDate>Thu, 26 Nov 2026 13:42:04 +0100</pubDate>
+                                    <enclosure url="https://medias.reussir.fr/myreussir/styles/article_desktop/azblob/2026-11/graphcereales_25112026.png.webp" />
+                                <guid isPermaLink="false">4feb0feb-81d4-42c4-b358-258ba9d8d2e9</guid>
+                                    <category>orge, marché à terme, marchés, prix, blé, énergie, maïs</category>
+                            </item>
+                    <item>
+                <title><![CDATA[Sécheresse : « L'État doit garantir une juste indemnisation des pertes subies par les éleveurs »]]></title>
+                <link>https://www.reussir.fr/articles/secheresse-letat-doit-garantir-une-juste-indemnisation-des-pertes-subies-par-les-eleveurs</link>
+                <description><![CDATA[Après les lourdes pertes provoquées par la sécheresse historique de cet été, la FNSEA et ses associations spécialisées…]]></description>
+                <dc:creator><![CDATA[Sophie Chatenet]]></dc:creator>
+                <pubDate>Thu, 26 Nov 2026 13:52:09 +0100</pubDate>
+                                    <enclosure url="https://medias.reussir.fr/myreussir/styles/article_desktop/azblob/2026-11/Gaia_43371.jpg.webp" />
+                                <guid isPermaLink="false">9347ca3c-7181-453a-b5e8-ee75f43b3a2e</guid>
+                                    <category>sécheresse, Massif central</category>
+                            </item>
+            </channel>
+</rss>

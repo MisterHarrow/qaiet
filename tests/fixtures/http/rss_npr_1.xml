@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:npr="https://www.npr.org/rss/" xmlns:nprml="https://api.npr.org/nprml" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+  <channel>
+    <title>NPR Topics: Climate</title>
+    <link>https://www.npr.org/templates/story/story.php?storyId=1167</link>
+    <description>In-depth coverage of climate change, weather events, climate science, emissions targets and adaptation strategies from NPR’s climate reporters.</description>
+    <language>en</language>
+    <copyright>Copyright 2024 NPR - For Personal Use Only</copyright>
+    <generator>Story API Shim 1.2.24</generator>
+    <lastBuildDate>Thu, 26 Nov 2026 09:35:59 -0500</lastBuildDate>
+    <image>
+      <url>https://media.npr.org/images/podcasts/primary/npr_generic_image_300.jpg?s=200</url>
+      <title>NPR Topics: Climate</title>
+      <link>https://www.npr.org/sections/climate</link>
+    </image>
+    <item>
+      <title>These deer walk 300 miles a year. The race is on to save their migration</title>
+      <description>Mule deer in Wyoming make some of the longest land migrations in the lower 48 states. They&apos;re trying to adapt to a changing climate, but growing development could stand in their way.</description>
+      <pubDate>Tue, 24 Nov 2026 17:52:44 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/24/nx-s1-6022517/wildlife-migration-wyoming-deer-yellowstone</link>
+      <guid>https://www.npr.org/2026/11/24/nx-s1-6022517/wildlife-migration-wyoming-deer-yellowstone</guid>
+      
+      <dc:creator>Lauren Sommer</dc:creator>
+    </item>
+    <item>
+      <title>COP31 ends with no deal after negotiators fail to reach an agreement on fossil fuels</title>
+      <description>International climate talks in Turkey ended in disappointment with countries failing to reach agreement over fossil fuels -- the primary driver of climate change.</description>
+      <pubDate>Mon, 23 Nov 2026 04:42:33 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/23/nx-s1-6050273/cop31-ends-with-no-deal-after-negotiators-fail-to-reach-an-agreement-on-fossil-fuels</link>
+      <guid>https://www.npr.org/2026/11/23/nx-s1-6050273/cop31-ends-with-no-deal-after-negotiators-fail-to-reach-an-agreement-on-fossil-fuels</guid>
+      
+      <dc:creator>Rachel Waldholz</dc:creator>
+    </item>
+    <item>
+      <title>Climate policy analyst on the failed negotiations at COP31</title>
+      <description>NPR&apos;s Michel Martin speaks with climate policy analyst Alden Meyer about why negotiators at COP31 failed to reach an agreement.</description>
+      <pubDate>Mon, 23 Nov 2026 04:42:19 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/23/nx-s1-6050230/climate-policy-analyst-on-the-failed-negotiations-at-cop31</link>
+      <guid>https://www.npr.org/2026/11/23/nx-s1-6050230/climate-policy-analyst-on-the-failed-negotiations-at-cop31</guid>
+      
+      <dc:creator>Michel Martin</dc:creator>
+    </item>
+    <item>
+      <title>Climate change talks fall apart in final hours over fossil fuels</title>
+      <description>Some 200 countries gathered in Antalya, Turkey, for COP31, the annual climate negotiations. Countries failed to reach an agreement over fossil fuels - the primary driver of global warming.</description>
+      <pubDate>Sun, 22 Nov 2026 11:33:22 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/22/nx-s1-6046195/cop31-climate-talks-close-disappointment</link>
+      <guid>https://www.npr.org/2026/11/22/nx-s1-6046195/cop31-climate-talks-close-disappointment</guid>
+      
+      <dc:creator>Lauren Sommer</dc:creator>
+    </item>
+    <item>
+      <title>Deadlocked again? U.N. climate talks in Turkey go into overtime</title>
+      <description>United Nations climate talks are heading into super overtime this weekend in Turkey. Negotiations were supposed to wrap up Friday but talks have spilled into a second night.</description>
+      <pubDate>Sat, 21 Nov 2026 17:01:38 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/21/nx-s1-6047730/deadlocked-again-u-n-climate-talks-in-turkey-go-into-overtime</link>
+      <guid>https://www.npr.org/2026/11/21/nx-s1-6047730/deadlocked-again-u-n-climate-talks-in-turkey-go-into-overtime</guid>
+      
+      <dc:creator>Rachel Waldholz</dc:creator>
+    </item>
+  </channel>
+</rss>

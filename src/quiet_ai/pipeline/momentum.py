@@ -172,8 +172,9 @@ def merge_groups(store: Store, settings: Settings, activity: dict[str, tuple], p
     return out
 
 
-def score_stories(store: Store, settings: Settings, sources: SourcesConfig, now: datetime, period: PeriodSettings | None = None) -> list[StoryScore]:
-    """Rank stories by activity inside a period (the front-page period by default)."""
+def score_stories(store: Store, settings: Settings, sources: SourcesConfig, now: datetime, period: PeriodSettings | None = None,
+                  desk: str = "ai") -> list[StoryScore]:
+    """Rank one desk's stories by activity inside a period (the front-page period by default)."""
     m = settings.momentum
     first = settings.site.periods[0]
     period = period or first
@@ -182,8 +183,9 @@ def score_stories(store: Store, settings: Settings, sources: SourcesConfig, now:
     digests = {f.id for f in sources.feeds if f.role == "digest"}
     rows = store.conn.execute(
         f"SELECT i.id, i.story_id, i.kind, i.source, i.metrics, {EVENT_AT} AS event_at FROM items i "
-        f"JOIN stories s ON s.id = i.story_id WHERE s.merged_into IS NULL AND i.relevant = 1 AND i.dup_of IS NULL AND {EVENT_AT} >= ?",
-        (since,),
+        f"JOIN stories s ON s.id = i.story_id WHERE s.merged_into IS NULL AND COALESCE(s.desk, 'ai') = ? "
+        f"AND i.relevant = 1 AND i.dup_of IS NULL AND {EVENT_AT} >= ?",
+        (desk, since),
     ).fetchall()
     if not rows:
         return []

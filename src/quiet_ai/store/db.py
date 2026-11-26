@@ -11,7 +11,7 @@ from pathlib import Path
 
 from quiet_ai.store.models import Item
 
-SCHEMA_VERSION = 5
+SCHEMA_VERSION = 6
 
 # Applied in order to databases older than the version key. SCHEMA below is version 1.
 MIGRATIONS: dict[int, list[str]] = {
@@ -109,6 +109,38 @@ MIGRATIONS: dict[int, list[str]] = {
             labels     INTEGER NOT NULL,
             updated_at TEXT NOT NULL,
             PRIMARY KEY (date, track))""",
+    ],
+    6: [
+        # Desks (2026-11-26): the site covers more subjects than AI. An item and its story belong to one desk;
+        # everything collected so far was AI. Editions and the sentiment index are kept per desk.
+        "ALTER TABLE items ADD COLUMN desk TEXT",            # ai | energy | biotech | space | food; NULL when not relevant
+        "UPDATE items SET desk = 'ai' WHERE relevant = 1",
+        "ALTER TABLE stories ADD COLUMN desk TEXT",
+        "UPDATE stories SET desk = 'ai'",
+        """CREATE TABLE sentiment_daily_desk (
+            desk       TEXT NOT NULL DEFAULT 'ai',
+            date       TEXT NOT NULL,
+            track      TEXT NOT NULL,
+            value      REAL NOT NULL,
+            outlets    INTEGER NOT NULL,
+            labels     INTEGER NOT NULL,
+            updated_at TEXT NOT NULL,
+            PRIMARY KEY (desk, date, track))""",
+        "INSERT INTO sentiment_daily_desk SELECT 'ai', date, track, value, outlets, labels, updated_at FROM sentiment_daily",
+        "DROP TABLE sentiment_daily",
+        "ALTER TABLE sentiment_daily_desk RENAME TO sentiment_daily",
+        """CREATE TABLE editions_desk (
+            desk       TEXT NOT NULL DEFAULT 'ai',
+            date       TEXT NOT NULL,
+            data       TEXT NOT NULL,
+            updated_at TEXT NOT NULL,
+            PRIMARY KEY (desk, date))""",
+        "INSERT INTO editions_desk SELECT 'ai', date, data, updated_at FROM editions",
+        "DROP TABLE editions",
+        "ALTER TABLE editions_desk RENAME TO editions",
+        # Items of the last three days that the AI filter turned away are sorted again, now that other desks can
+        # take them (one relevance call per 25 items).
+        "UPDATE items SET relevant = NULL, relevance_by = NULL WHERE relevant = 0 AND first_seen_at >= strftime('%Y-%m-%dT%H:%M:%S', 'now', '-3 days')",
     ],
 }
 

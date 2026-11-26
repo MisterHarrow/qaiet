@@ -5,111 +5,110 @@
     <link>https://rss.politico.com/technology.xml</link>
     <description>News, Analysis and Opinion from POLITICO</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Nov 2026 12:24:52 EST</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 20:00:13 EST</lastBuildDate>
     <item>
-      <title>Senate schedules Jensen Huang hearing</title>
-      <link>https://www.politico.com/live-updates/2026/11/23/congress/jensen-huang-testify-senate-banking-nvidia-congress-01180480</link>
-      <description>The Senate Banking hearing sets the stage for a blockbuster public interrogation of the reinstated Nvidia CEO.</description>
+      <title>‘Not a close case:’ Judge blocks review of ABC’s broadcast licenses</title>
+      <link>https://www.politico.com/news/2026/11/25/judge-blocks-review-abc-broadcast-license-01184266</link>
+      <description>A federal judge ruled that the Federal Communications Commission “may not retaliate against or punish Plaintiffs and other broadcast license holders for disfavored speech.”</description>
       <category>Technology</category>
       <category>DC</category>
-      <category>Congress</category>
-      <guid isPermaLink="false">000001a2-096f-d8fb-a7b3-3d7f1ecb0000</guid>
-      <pubDate>Mon, 23 Nov 2026 12:24:52 EST</pubDate>
-      <media:content type="image/jpeg" url="https://static.politico.com/f3/f9/d2d5edb24dc583dd455b3d5c04fa/u-s-congress-33894.jpg">
-        <media:credit scheme="urn:ebu">Francis Chung/POLITICO</media:credit>
-        <media:title>The U.S. Capitol building is seen on Nov. 19, 2026.</media:title>
-        <media:thumbnail url="https://static.politico.com/f3/f9/d2d5edb24dc583dd455b3d5c04fa/u-s-congress-33894.jpg" />
-      </media:content>
-      <dc:creator>By Jasper Goodman</dc:creator>
-      <dc:contributor>By Jasper Goodman</dc:contributor>
-    </item>
-    <item>
-      <title>Nvidia stock soars after Huang’s reinstatement</title>
-      <link>https://www.politico.com/news/2026/11/23/nvidia-stock-huang-reinstatement-01180520</link>
-      <description>Shares of the company were up as much as 36%, a reversal of the tech sell-off over the past two weeks.</description>
       <category>Technology</category>
-      <category>DC</category>
-      <category>Nvidia</category>
-      <category>Jensen Huang</category>
-      <category>Stock Market</category>
-      <category>Financial Services</category>
-      <category>Finance</category>
-      <category>Economy</category>
+      <category>ABC News</category>
+      <category>ABC</category>
+      <category>FCC</category>
+      <category>Brendan Carr</category>
+      <category>Journalism</category>
       <category>Donald Trump</category>
-      <guid isPermaLink="false">000001a2-0956-d48e-a1ef-2b77fab20000</guid>
-      <pubDate>Mon, 23 Nov 2026 12:14:26 EST</pubDate>
-      <media:content type="image/jpeg" url="https://static.politico.com/a3/a1/b4b7678e4505bac9b69c0c31eae2/nvidia-16211.jpg">
-        <media:credit scheme="urn:ebu">Chiang Ying-ying/AP</media:credit>
-        <media:title>A logo of Nvidia is displayed at the Computex Taipei exhibition, one of the world's largest computer and technology expos, in Taipei, Taiwan, on June 3, 2026.</media:title>
-        <media:thumbnail url="https://static.politico.com/a3/a1/b4b7678e4505bac9b69c0c31eae2/nvidia-16211.jpg" />
-      </media:content>
-      <dc:creator>By Casey He</dc:creator>
-      <dc:contributor>By Casey He</dc:contributor>
-    </item>
-    <item>
-      <title>Trump says US government ‘has no reason to believe’ Huang poses national security risk</title>
-      <link>https://www.politico.com/news/2026/11/23/trump-nvidia-jensen-huang-national-security-01180437</link>
-      <description>The president, a close ally of Jensen Huang, has repeatedly called for Nvidia’s CEO to be reinstated after he resigned over several affairs.</description>
-      <category>Technology</category>
-      <category>DC</category>
-      <category>Technology</category>
-      <category>Jensen Huang</category>
-      <category>Nvidia</category>
-      <category>Artificial Intelligence</category>
-      <category>China</category>
-      <category>Donald Trump</category>
-      <guid isPermaLink="false">000001a2-08eb-d8aa-a5f6-ecfb455b0000</guid>
-      <pubDate>Mon, 23 Nov 2026 10:00:26 EST</pubDate>
-      <media:content type="image/jpeg" url="https://static.politico.com/80/b1/d18b573147dea92b0d15ac6cbff0/us-nvidia-jensen-huang-fallout-83942.jpg">
-        <media:credit scheme="urn:ebu">Julia Demaree Nikhinson/AP</media:credit>
-        <media:title>President Donald Trump, right, presents the National Medal of Science to Nvidia CEO Jensen Huang during an event at the U.S. Institute of Peace on Oct. 8, 2026, in Washington.</media:title>
-        <media:thumbnail url="https://static.politico.com/80/b1/d18b573147dea92b0d15ac6cbff0/us-nvidia-jensen-huang-fallout-83942.jpg" />
-      </media:content>
-      <dc:creator>By Casey He</dc:creator>
-      <dc:contributor>By Casey He</dc:contributor>
-    </item>
-    <item>
-      <dcterms:modified>2026-11-23T09:56:40-05</dcterms:modified>
-      <title>Nvidia board reinstates Huang as CEO</title>
-      <link>https://www.politico.com/news/2026/11/23/jensen-huang-nvidia-return-01180321</link>
-      <description>White House spokesperson Steve Cheung said President Donald Trump was “totally involved” and praised the company’s decision to bring back Jensen Huang.</description>
-      <category>Technology</category>
-      <category>DC</category>
-      <category>Nvidia</category>
-      <category>Jensen Huang</category>
-      <category>Donald Trump</category>
-      <category>White House</category>
-      <category>Department Of Justice</category>
-      <guid isPermaLink="false">000001a2-08b9-d8fb-a7b3-3db95b420000</guid>
-      <pubDate>Mon, 23 Nov 2026 09:16:10 EST</pubDate>
-      <media:content type="image/jpeg" url="https://static.politico.com/7b/52/236940fc477a8ab3d278af84aaff/artificial-intelligence-11536.jpg">
-        <media:credit scheme="urn:ebu">Francis Chung/POLITICO</media:credit>
-        <media:title>Nvidia President and CEO Jensen Huang speaks during the "Hello, America" event at the Mellon Auditorium in Washington on Sept. 29, 2026.</media:title>
-        <media:thumbnail url="https://static.politico.com/7b/52/236940fc477a8ab3d278af84aaff/artificial-intelligence-11536.jpg" />
-      </media:content>
-      <dc:creator>By Jalen Beckford and Owen Dahlkamp</dc:creator>
-      <dc:contributor>By Jalen Beckford and Owen Dahlkamp</dc:contributor>
-    </item>
-    <item>
-      <title>American bishops plan for ‘groundswell’ of political action for AI regulation</title>
-      <link>https://www.politico.com/news/2026/11/22/catholic-church-ai-regulation-lobbying-01179266</link>
-      <description>Bishop Oscar Cantú of San Jose, who leads the U.S. Conference of Catholic Bishops’ AI task force, told POLITICO that advocacy and lobbying lawmakers will be one of its main goals.</description>
-      <category>Technology</category>
-      <category>DC</category>
-      <category>Technology</category>
-      <category>California &amp; Tech</category>
-      <category>Artificial Intelligence</category>
-      <category>U.S. Conference Of Catholic Bishops</category>
-      <category>Catholic Church</category>
-      <guid isPermaLink="false">000001a1-fb20-d4f2-aded-fbe1c1e20000</guid>
-      <pubDate>Sun, 22 Nov 2026 14:00:00 EST</pubDate>
-      <media:content type="image/jpeg" url="https://static.politico.com/28/cf/44eec1f14fbca7f1732811d1c92e/uruguay-pope-99384.jpg">
+      <guid isPermaLink="false">000001a2-155c-d4f2-adef-97fd535e0000</guid>
+      <pubDate>Wed, 25 Nov 2026 20:00:13 EST</pubDate>
+      <media:content type="image/jpeg" url="https://static.politico.com/4a/62/5f8f1a484d4f9cbcbfffeb555113/media-abc-fcc-566-6.jpg">
         <media:credit scheme="urn:ebu">AP</media:credit>
-        <media:title>Pope Leo XIV arrives to preside over Mass at Parque París Londres in Paysandú, Uruguay, on the second day of his twelve-day apostolic journey to South America, Saturday, Nov. 7, 2026. (AP Photo/Andrew Medichini)</media:title>
-        <media:thumbnail url="https://static.politico.com/28/cf/44eec1f14fbca7f1732811d1c92e/uruguay-pope-99384.jpg" />
+        <media:title>The ruling is a blow for FCC Chair Brendan Carr's media agenda.</media:title>
+        <media:thumbnail url="https://static.politico.com/4a/62/5f8f1a484d4f9cbcbfffeb555113/media-abc-fcc-566-6.jpg" />
       </media:content>
-      <dc:creator>By Ashley Ahn</dc:creator>
-      <dc:contributor>By Ashley Ahn</dc:contributor>
+      <dc:creator>By John Hendel, Josh Gerstein and Kyle Cheney</dc:creator>
+      <dc:contributor>By John Hendel, Josh Gerstein and Kyle Cheney</dc:contributor>
+    </item>
+    <item>
+      <title>FCC authorizes Elon Musk’s plans for data centers in space</title>
+      <link>https://www.politico.com/news/2026/11/25/elon-musk-space-datacenters-fcc-01183330</link>
+      <description>Brendan Carr said the decision could usher in a million of the orbital centers and boost U.S. prominence in artificial intelligence.</description>
+      <category>Technology</category>
+      <category>DC</category>
+      <category>Technology</category>
+      <category>Elon Musk</category>
+      <category>Data Centers</category>
+      <category>FCC</category>
+      <category>Brendan Carr</category>
+      <category>SpaceX</category>
+      <guid isPermaLink="false">000001a2-13c9-d48e-a1ef-33edc1cb0000</guid>
+      <pubDate>Wed, 25 Nov 2026 12:39:34 EST</pubDate>
+      <media:content type="image/jpeg" url="https://static.politico.com/1d/a6/2a0776564942a326d037b04877e8/spacex-starship-launch-27729.jpg">
+        <media:credit scheme="urn:ebu">Eric Gay/AP</media:credit>
+        <media:title>Elon Musk said these space plans will help both the U.S. and world.</media:title>
+        <media:thumbnail url="https://static.politico.com/1d/a6/2a0776564942a326d037b04877e8/spacex-starship-launch-27729.jpg" />
+      </media:content>
+      <dc:creator>By John Hendel</dc:creator>
+      <dc:contributor>By John Hendel</dc:contributor>
+    </item>
+    <item>
+      <title>House Dems demand clarity on Homeland Security tech contracts</title>
+      <link>https://www.politico.com/news/2026/11/25/house-dems-homeland-security-tech-contracts-01182450</link>
+      <description>Democrats have requested information from companies including Palantir, Flock and Clearview AI about how their technology is being used by the Department of Homeland Security.</description>
+      <category>Technology</category>
+      <category>DC</category>
+      <category>Technology</category>
+      <category>DHS</category>
+      <category>AI</category>
+      <category>Artificial Intelligence</category>
+      <guid isPermaLink="false">000001a2-101a-d4f2-adef-92fbc4fb0000</guid>
+      <pubDate>Wed, 25 Nov 2026 05:45:00 EST</pubDate>
+      <media:content type="application/octet-stream" url="https://static.politico.com/32/5b/303835064ae8b199c68f74ee1aad/https-delivery-gettyimages.com/downloads/2301813498">
+        <media:credit scheme="urn:ebu">Alex Wroblewski/AFP via Getty Images</media:credit>
+        <media:title>A mobile surveillance camera stands near the Washington Monument in Washington, D.C., on Oct. 27, 2026. The Trump administration has deployed cameras near multiple construction projects on the National Mall and throughout the city citing concerns of vandalism.</media:title>
+        <media:thumbnail url="https://static.politico.com/32/5b/303835064ae8b199c68f74ee1aad/https-delivery-gettyimages.com/downloads/2301813498" />
+      </media:content>
+      <dc:creator>By Gabby Miller</dc:creator>
+      <dc:contributor>By Gabby Miller</dc:contributor>
+    </item>
+    <item>
+      <title>Nvidia braces for a long fight on Capitol Hill</title>
+      <link>https://www.politico.com/news/2026/11/24/huang-oversight-hill-01182637</link>
+      <description>Nvidia has assembled a cadre of Washington lawyers and lobbyists including congressional investigations attorney Joshua A. Levy ahead of Jensen Huang’s testimony next week.</description>
+      <category>Technology</category>
+      <category>DC</category>
+      <category>Technology</category>
+      <category>Influence</category>
+      <category>Congress</category>
+      <guid isPermaLink="false">000001a2-0fcc-d8aa-a5f6-efdc7c9f0009</guid>
+      <pubDate>Tue, 24 Nov 2026 18:03:32 EST</pubDate>
+      <media:content type="image/jpeg" url="https://static.politico.com/24/a8/bf18ddf34988850a881d4f4c7011/gettyimages-2299714787.jpg">
+        <media:credit scheme="urn:ebu">Sarmento Matos/Bloomberg/Getty Images</media:credit>
+        <media:title>Jensen Huang, Chief Executive officer of Nvidia Corp., during a Bloomberg Television interview in London, UK, on Wednesday, Oct. 14, 2026.</media:title>
+        <media:thumbnail url="https://static.politico.com/24/a8/bf18ddf34988850a881d4f4c7011/gettyimages-2299714787.jpg" />
+      </media:content>
+      <dc:creator>By Owen Dahlkamp, Daniel Barnes, Jacob Wendler and Jasper Goodman</dc:creator>
+      <dc:contributor>By Owen Dahlkamp, Daniel Barnes, Jacob Wendler and Jasper Goodman</dc:contributor>
+    </item>
+    <item>
+      <title>Huang’s return rattles Sacramento and Silicon Valley</title>
+      <link>https://www.politico.com/news/2026/11/24/huangs-return-rattles-sacramento-and-silicon-valley-01181364</link>
+      <description>Nvidia’s CEO is back at the helm. California officials and industry insiders can’t agree whether that’s a triumph or a liability.</description>
+      <category>Technology</category>
+      <category>DC</category>
+      <category>Technology</category>
+      <category>California</category>
+      <category>Jensen Huang</category>
+      <category>Nvidia</category>
+      <guid isPermaLink="false">000001a2-0b7b-d8fb-a7b3-3f7b88060000</guid>
+      <pubDate>Tue, 24 Nov 2026 08:03:00 EST</pubDate>
+      <media:content type="image/jpeg" url="https://static.politico.com/19/f6/b6672d554c1e95217f3e0d6ccfa2/nvidia-99217.jpg">
+        <media:credit scheme="urn:ebu">Julia Demaree Nikhinson/AP</media:credit>
+        <media:title>Nvidia’s board of directors voted unanimously to reinstate Jensen Huang as CEO and president.</media:title>
+        <media:thumbnail url="https://static.politico.com/19/f6/b6672d554c1e95217f3e0d6ccfa2/nvidia-99217.jpg" />
+      </media:content>
+      <dc:creator>By Aaron Mak and Tyler Katzenberger</dc:creator>
+      <dc:contributor>By Aaron Mak and Tyler Katzenberger</dc:contributor>
     </item>
   </channel>
 </rss>

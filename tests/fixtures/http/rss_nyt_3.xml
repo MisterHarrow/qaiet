@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:nyt="http://www.nytimes.com/namespaces/rss/2.0" version="2.0">
+  <channel>
+    <title>NYT &gt; Science &gt; Space &amp; Cosmos</title>
+    <link>https://www.nytimes.com/section/science/space</link>
+    <atom:link href="https://rss.nytimes.com/services/xml/rss/nyt/Space.xml" rel="self" type="application/rss+xml"></atom:link>
+    <description></description>
+    <language>en-us</language>
+    <copyright>Copyright 2026 The New York Times Company</copyright>
+    <lastBuildDate>Thu, 26 Nov 2026 14:42:40 +0000</lastBuildDate>
+    <pubDate>Tue, 24 Nov 2026 19:05:29 +0000</pubDate>
+    <image>
+      <title>NYT &gt; Science &gt; Space &amp; Cosmos</title>
+      <url>https://static01.nyt.com/images/misc/NYT_logo_rss_250x40.png</url>
+      <link>https://www.nytimes.com/section/science/space</link>
+    </image>
+    <item>
+      <title>Meet NASA’s first and only female launch director</title>
+      <link>https://www.nytimes.com/2026/11/23/science/space/women-charlie-blackwell-thompson-nasa.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2026/11/23/science/space/women-charlie-blackwell-thompson-nasa.html</guid>
+      <atom:link href="https://www.nytimes.com/2026/11/23/science/space/women-charlie-blackwell-thompson-nasa.html" rel="standout"></atom:link>
+      <description>Charlie Blackwell-Thompson is the first and only woman to serve as NASA’s launch director.</description>
+      <dc:creator>Eilene Zimmerman</dc:creator>
+      <pubDate>Mon, 23 Nov 2026 21:19:12 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Blackwell-Thompson, Charlie</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">National Aeronautics and Space Administration</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Women and Girls</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Space and Astronomy</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Space Shuttles</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Artemis Program</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Content Type: Personal Profile</category>
+      <media:content height="934" medium="image" url="https://static01.nyt.com/images/2026/11/25/multimedia/25sp-women-thompson-inyt-01-cmlp/25sp-women-thompson-inyt-01-cmlp-mediumSquareAt3X.jpg" width="933"></media:content>
+      <media:credit>NASA</media:credit>
+      <media:description>Charlie Blackwell-Thompson, the first female launch director at NASA.</media:description>
+    </item>
+    <item>
+      <title>SpaceX is betting mechanical arms can ‘catch’ its reusable rockets.</title>
+      <link>https://www.nytimes.com/live/2026/11/14/science/spacex-starship-launch/spacex-is-betting-mechanical-arms-can-catch-its-reusable-rockets</link>
+      <guid isPermaLink="true">https://www.nytimes.com/live/2026/11/14/science/spacex-starship-launch/spacex-is-betting-mechanical-arms-can-catch-its-reusable-rockets</guid>
+      <atom:link href="https://www.nytimes.com/live/2026/11/14/science/spacex-starship-launch/spacex-is-betting-mechanical-arms-can-catch-its-reusable-rockets" rel="standout"></atom:link>
+      <description></description>
+      <dc:creator>Mack Liederman</dc:creator>
+      <pubDate>Sat, 14 Nov 2026 21:02:13 +0000</pubDate>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2026/11/14/multimedia/14starship-live-arms-topart-mwqk/14starship-live-arms-topart-mwqk-mediumSquareAt3X.jpg" width="1800"></media:content>
+      <media:credit>Joe Skipper/Reuters</media:credit>
+      <media:description>Starship launched on Friday from SpaceX’s “Mechazilla” tower. The company is planning for the tower’s mechanical arms to catch the returning rocket on Saturday.</media:description>
+    </item>
+    <item>
+      <title>Starship will play a big role in Artemis III.</title>
+      <link>https://www.nytimes.com/live/2026/11/14/science/spacex-starship-launch/how-starship-will-play-a-big-role-in-artemis-iii</link>
+      <guid isPermaLink="true">https://www.nytimes.com/live/2026/11/14/science/spacex-starship-launch/how-starship-will-play-a-big-role-in-artemis-iii</guid>
+      <atom:link href="https://www.nytimes.com/live/2026/11/14/science/spacex-starship-launch/how-starship-will-play-a-big-role-in-artemis-iii" rel="standout"></atom:link>
+      <description></description>
+      <dc:creator>Kenneth Chang</dc:creator>
+      <pubDate>Sat, 14 Nov 2026 21:03:26 +0000</pubDate>
+      <media:content height="1799" medium="image" url="https://static01.nyt.com/images/2026/11/14/multimedia/14starship-live-artemis-iii-topart-qpvc/14starship-live-artemis-iii-topart-qpvc-mediumSquareAt3X.jpg" width="1800"></media:content>
+      <media:credit>Kenny Holston/The New York Times</media:credit>
+      <media:description>An Orion spacecraft sitting on top of the Space Launch System rocket before the Artemis II mission. During Artemis III, Orion will try to dock with Starship.</media:description>
+    </item>
+    <item>
+      <title>Inside Starfactory, where Starships are born.</title>
+      <link>https://www.nytimes.com/live/2026/11/14/science/spacex-starship-launch/inside-starfactory-where-starships-are-born</link>
+      <guid isPermaLink="true">https://www.nytimes.com/live/2026/11/14/science/spacex-starship-launch/inside-starfactory-where-starships-are-born</guid>
+      <atom:link href="https://www.nytimes.com/live/2026/11/14/science/spacex-starship-launch/inside-starfactory-where-starships-are-born" rel="standout"></atom:link>
+      <description></description>
+      <dc:creator>Kenneth Chang</dc:creator>
+      <pubDate>Sat, 14 Nov 2026 20:30:14 +0000</pubDate>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2026/11/14/science/14starship-live-starfactory-topart/14starship-live-starfactory-topart-mediumSquareAt3X.jpg" width="1800"></media:content>
+      <media:credit>Kenneth Chang/The New York Times</media:credit>
+      <media:description>SpaceX gave reporters a tour of the Starship manufacturing facility in Texas on Friday, but did not allow any photographs or videos to be taken inside.</media:description>
+    </item>
+    <item>
+      <title>How Boca Chica Village became Starbase.</title>
+      <link>https://www.nytimes.com/live/2026/11/14/science/spacex-starship-launch/starbase-spacex-boca-chica-village</link>
+      <guid isPermaLink="true">https://www.nytimes.com/live/2026/11/14/science/spacex-starship-launch/starbase-spacex-boca-chica-village</guid>
+      <atom:link href="https://www.nytimes.com/live/2026/11/14/science/spacex-starship-launch/starbase-spacex-boca-chica-village" rel="standout"></atom:link>
+      <description></description>
+      <dc:creator>Kenneth Chang</dc:creator>
+      <pubDate>Sat, 14 Nov 2026 20:02:26 +0000</pubDate>
+      <media:content height="1799" medium="image" url="https://static01.nyt.com/images/2026/11/14/us/14starship-live-2019-vs-2026-topart/14starship-live-2019-vs-2026-topart-mediumSquareAt3X.jpg" width="1800"></media:content>
+      <media:credit>Callaghan O&#39;Hare/Reuters</media:credit>
+      <media:description>A Starship prototype in Boca Chica Village, Texas, in 2019.</media:description>
+    </item>
+  </channel>
+</rss>

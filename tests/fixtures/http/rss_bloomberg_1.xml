@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
+    <channel>
+        <title><![CDATA[Bloomberg Industries]]></title>
+        <description><![CDATA[Bloomberg Industries]]></description>
+        <link>http://bloomberg.com/industries/</link>
+        <image>
+            <url>http://www.bloomberg.com/feeds/static/images/bloomberg_logo_blue.png</url>
+            <title>Bloomberg Industries</title>
+            <link>http://bloomberg.com/industries/</link>
+        </image>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Thu, 26 Nov 2026 14:44:00 GMT</lastBuildDate>
+        <atom:link href="https://www.bloomberg.com/feeds/industries/news.rss" rel="self" type="application/rss+xml"/>
+        <copyright><![CDATA[Copyright 2026 BLOOMBERG L.P. ALL RIGHTS RESERVED]]></copyright>
+        <language><![CDATA[en]]></language>
+        <item>
+            <title><![CDATA[Ares Funds $1.3 Billion Debt for Windshield Firm Cary Buyout]]></title>
+            <description><![CDATA[Ares is providing a financing package worth around 13 billion Swedish kronor ($1.3 billion) to support the buyout of Swedish windshield-repair company Cary Group AB, according to people familiar with the matter.]]></description>
+            <link>https://www.bloomberg.com/news/articles/2026-11-26/ares-funds-1-3-billion-debt-for-buyout-of-windshield-firm-cary</link>
+            <guid isPermaLink="false">TO8KLXT9NJLV00</guid>
+            <dc:creator><![CDATA[Leanna Reeves]]></dc:creator>
+            <pubDate>Thu, 26 Nov 2026 10:18:30 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[De Beers-Backed Kelp Blue Halts $114 Million Expansion in Regulatory Row]]></title>
+            <description><![CDATA[De Beers-backed Kelp Blue halted N$2 billion ($114 million) of planned investment in Namibia and moved some operations abroad after a five-year regulatory dispute, dealing a blow to the nation’s efforts to attract investment in new industries.]]></description>
+            <link>https://www.bloomberg.com/news/articles/2026-11-26/de-beers-backed-kelp-blue-halts-114-million-expansion-in-regulatory-row</link>
+            <guid isPermaLink="false">TP3ZGLRKV2TI00</guid>
+            <dc:creator><![CDATA[Kaula Nhongo]]></dc:creator>
+            <pubDate>Thu, 26 Nov 2026 14:07:40 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Fortress Weighs Poundstretcher Sale as UK Retail Pain Spreads]]></title>
+            <description><![CDATA[Fortress Investment Group is considering a sale of beleaguered UK discount retailer Poundstretcher Ltd., according to people familiar with the matter, after its larger rival Poundland collapsed in the latest sign of distress on Britain’s high streets.]]></description>
+            <link>https://www.bloomberg.com/news/articles/2026-11-26/fortress-weighs-poundstretcher-sale-as-uk-retail-pain-spreads</link>
+            <guid isPermaLink="false">TP3PG7T96OSH00</guid>
+            <dc:creator><![CDATA[Constantine Courcoulas and Jamie Nimmo]]></dc:creator>
+            <pubDate>Thu, 26 Nov 2026 13:59:45 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[German Court Backs Berlin Project Fürst Over UK Debt Rework]]></title>
+            <description><![CDATA[The developers behind one of Berlin’s biggest real estate projects won their appeal against a provisional ruling that would have required them to repay a creditor despite a debt restructuring in the UK.]]></description>
+            <link>https://www.bloomberg.com/news/articles/2026-11-26/german-court-backs-berlin-s-project-furst-over-uk-debt-rework</link>
+            <guid isPermaLink="false">TP247VKK3NY800</guid>
+            <dc:creator><![CDATA[Libby Cherry and Karin Matussek]]></dc:creator>
+            <pubDate>Thu, 26 Nov 2026 11:51:08 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Japan Tobacco Studies Deal for Imperial Brands]]></title>
+            <description><![CDATA[Japan Tobacco Inc. is studying a potential deal for British cigarette maker Imperial Brands Plc, according to people familiar with the matter.]]></description>
+            <link>https://www.bloomberg.com/news/articles/2026-11-26/japan-tobacco-studies-deal-for-imperial-brands</link>
+            <guid isPermaLink="false">TP36MQT96OSH00</guid>
+            <dc:creator><![CDATA[Crystal Tse, Manuel Baigorri, Dong Cao, Vinicy Chan and Eyk Henning]]></dc:creator>
+            <pubDate>Thu, 26 Nov 2026 12:08:21 GMT</pubDate>
+        </item>
+    </channel>
+</rss>
