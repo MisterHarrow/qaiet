@@ -83,7 +83,7 @@ def run_analysis(store: Store, settings: Settings, sources: SourcesConfig, now: 
     use_llm = llm is not None and llm.available
     notes = [] if use_llm else ["no ANTHROPIC_API_KEY: no labels, summaries or weather this run"]
     news = classify.label_news(store, settings, sources, llm, since) if use_llm else classify.LabelStats()
-    sentiment.compute(store, settings, now)
+    sentiment.compute(store, settings, now, sentiment.waiting(sources))
     views = period_views(store, settings, sources, now)  # after labels: merging uses their names
     builder_ids: list[str] = []
     for v in views.values():
@@ -122,7 +122,8 @@ def build_editions(store: Store, settings: Settings, sources: SourcesConfig, now
     outlet_country = {f.id: f.country for f in sources.feeds} | {g.id: g.country for g in sources.gdelt_outlets}
     places = dict(REGIONS) | {c: [c] for _, codes in REGIONS for c in codes}
     days_all = [p["date"] for p in hist.get("all") or []]
-    by_place = sentiment.by_place(store, settings, outlet_country, places, days_all[-max(view_days.values()):][0]) if days_all else {}
+    by_place = (sentiment.by_place(store, settings, outlet_country, places, days_all[-max(view_days.values()):][0], sentiment.waiting(sources))
+                if days_all else {})
     narr = narratives.detect(store, settings, sources, now) if narr is None else narr
     ongoing = [narratives.compact(n) for n in narr if n["ongoing"]][: settings.narratives.front_max]
     member_of = narratives.by_story(narr)

@@ -1,5 +1,6 @@
 """The regions of the outlet countries, in the order the page lists them (the coverage map's legend, the
 story filter by place and the sentiment index per place)."""
 
-REGIONS = [("Americas", ["US", "CA"]), ("Europe", ["GB", "SE", "DE", "FR", "BE", "ES"]), ("Middle East", ["QA"]),
+REGIONS = [("North America", ["US", "CA"]), ("Latin America", ["MX", "CO", "PE", "BR", "CL", "AR"]),
+           ("Europe", ["GB", "SE", "DE", "FR", "BE", "ES"]), ("Middle East", ["QA"]), ("Africa", ["EG", "GH", "NG", "ZA"]),
            ("Asia", ["CN", "HK", "IN", "JP", "KR", "SG"]), ("Oceania", ["AU"])]

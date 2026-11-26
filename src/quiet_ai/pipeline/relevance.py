@@ -24,18 +24,20 @@ _STRONG_CS = re.compile(
     r"Sora|Anthropic|DeepMind|Nvidia|NVIDIA)(?:s|'s|’s)?\b"
 )
 _STRONG_CI = re.compile(
-    r"\b(artificial intelligence|künstliche[rn]? intelligenz|intelligence artificielle|inteligencia artificial|"
-    r"artificiell intelligens|machine learning|maskininlärning|deep learning|neural net\w*|"
-    r"large language models?|language models?|språkmodell\w*|sprachmodell\w*|generative? ai|generativ\w* ai|"
+    r"\b(artificial intelligence|künstliche[rn]? intelligenz|intelligence artificielle|inteligencia artificial|inteligência artificial|"
+    r"artificiell intelligens|machine learning|maskininlärning|aprendizaje automático|aprendizado de máquina|deep learning|neural net\w*|"
+    r"large language models?|language models?|språkmodell\w*|sprachmodell\w*|modelos? de (?:lenguaje|linguagem)|"
+    r"generative? ai|generativ\w* ai|"
     r"chatbot\w*|deepfakes?|superintelligen\w*|foundation models?|frontier models?|ai agents?|agentic|"
-    r"hugging face|stable diffusion|data ?cent(?:er|re)s?|datacenters?|ai[- ]chips?|"
+    r"hugging face|stable diffusion|data ?cent(?:er|re)s?|datacenters?|centros? de (?:datos|dados)|ai[- ]chips?|"
     r"sam altman|altman|dario amodei|amodei|demis hassabis|hassabis|jensen huang|mustafa suleyman|"
     r"yann lecun|geoffrey hinton|ilya sutskever|mira murati)\b",
     re.IGNORECASE,
 )
 # Topics often but not always about AI: decided by Haiku.
 _WEAK = re.compile(
-    r"\b(chips?|chipmakers?|semiconductors?|halvledare|halbleiter|tsmc|asml|export controls?|robots?|robotics|"
+    r"\b(chips?|chipmakers?|semiconductors?|semiconductores|semicondutores|halvledare|halbleiter|tsmc|asml|export controls?|"
+    r"robots?|robôs?|robotics|robótica|algoritmos|"
     r"automation|algorithms?|autonomous|self-driving|microsoft|google|alphabet|meta|apple|amazon|musk|tesla|"
     r"zuckerberg|pichai|nadella|bezos|tech giants?|big tech|silicon valley|startup\w*|copyright|surveillance)\b",
     re.IGNORECASE,

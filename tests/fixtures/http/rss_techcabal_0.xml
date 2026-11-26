@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>TechCabal</title>
+	<atom:link href="https://techcabal.com/feed/" rel="self" type="application/rss+xml" />
+	<link>https://techcabal.com</link>
+	<description>Leading Africa’s Tech Conversation</description>
+	<lastBuildDate>Thu, 26 Nov 2026 06:39:46 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=7.1.2</generator>
+
+<image>
+	<url>https://techcabal.com/wp-content/uploads/tc/2018/10/cropped-tcbig-32x32.png</url>
+	<title>TechCabal</title>
+	<link>https://techcabal.com</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>👨🏿‍🚀TechCabal Daily – A house breach</title>
+		<link>https://techcabal.com/2026/11/26/%f0%9f%91%a8%f0%9f%8f%bf%f0%9f%9a%80techcabal-daily-a-house-breach/</link>
+		
+		<dc:creator><![CDATA[Emmanuel Nwosu]]></dc:creator>
+		<pubDate>Thu, 26 Nov 2026 06:39:43 +0000</pubDate>
+				<category><![CDATA[Newsletters]]></category>
+		<category><![CDATA[TC Daily]]></category>
+		<category><![CDATA[Dangote]]></category>
+		<category><![CDATA[Odola]]></category>
+		<category><![CDATA[raenest]]></category>
+		<category><![CDATA[SA Home Loans]]></category>
+		<category><![CDATA[WorldRemit]]></category>
+		<guid isPermaLink="false">https://techcabal.com/?p=203122</guid>
+
+					<description><![CDATA[In today's news: SA Home Loans hit by data breach &#124;&#124; Dangote refinery to list on NGX &#124;&#124; Raenest secures six US licences &#124;&#124; WorldRemit founder launches Odola]]></description>
+										
+					
+		
+		
+			</item>
+		<item>
+		<title>Why Nigerian companies are choosing Kenya for their next move</title>
+		<link>https://techcabal.com/2026/11/26/nigerian-companies-eyeing-kenya/</link>
+		
+		<dc:creator><![CDATA[Adonijah Ndege]]></dc:creator>
+		<pubDate>Thu, 26 Nov 2026 05:35:03 +0000</pubDate>
+				<category><![CDATA[Analysis]]></category>
+		<category><![CDATA[Dangote]]></category>
+		<category><![CDATA[Kenya]]></category>
+		<category><![CDATA[Moniepoint]]></category>
+		<category><![CDATA[NGX]]></category>
+		<guid isPermaLink="false">https://techcabal.com/?p=203119</guid>
+
+					<description><![CDATA[Dangote found a pipeline that can carry fuel to customers beyond Kenya. Moniepoint bought a bank that already lends to small businesses. Across energy, banking and capital markets, Nigerian companies are buying in Kenya what would take years to build from scratch.]]></description>
+										
+					
+		
+		
+			</item>
+		<item>
+		<title>Amini wants to turn Africa’s paper archives into data for AI </title>
+		<link>https://techcabal.com/2026/11/25/amini-africa-paper-archives-data-ai/</link>
+		
+		<dc:creator><![CDATA[John Adoyi]]></dc:creator>
+		<pubDate>Wed, 25 Nov 2026 14:54:24 +0000</pubDate>
+				<category><![CDATA[Startups]]></category>
+		<category><![CDATA[Africa]]></category>
+		<category><![CDATA[AI]]></category>
+		<category><![CDATA[Amini]]></category>
+		<category><![CDATA[Nigeria]]></category>
+		<category><![CDATA[startups]]></category>
+		<guid isPermaLink="false">https://techcabal.com/?p=203096</guid>
+
+					<description><![CDATA[Amini, a startup building sovereign AI infrastructure, has released Soma-1X Lite, an open-weight AI model designed to convert paper-based records into machine-readable data.]]></description>
+										
+					
+		
+		
+			</item>
+		<item>
+		<title>Wave’s 25 million-user blueprint: How low fees disrupted Francophone West Africa’s mobile money ‘cartels’</title>
+		<link>https://techcabal.com/2026/11/25/wave-in-waemu-region/</link>
+		
+		<dc:creator><![CDATA[Godfrey George]]></dc:creator>
+		<pubDate>Wed, 25 Nov 2026 12:33:55 +0000</pubDate>
+				<category><![CDATA[Features]]></category>
+		<category><![CDATA[Africa]]></category>
+		<category><![CDATA[Fintech]]></category>
+		<category><![CDATA[Francophone]]></category>
+		<category><![CDATA[startups]]></category>
+		<category><![CDATA[Wave]]></category>
+		<guid isPermaLink="false">https://techcabal.com/?p=203056</guid>
+
+					<description><![CDATA[Wave's Public Policy Lead tells TechCabal how the company forced down prices across the WAEMU region and details the structural and regulatory hurdles that still prevent informal businesses and women from participating fully in the digital economy.]]></description>
+										
+					
+		
+		
+			</item>
+		<item>
+		<title>He built a million-dollar business abroad. Now he wants to build Africa&#8217;s next generation of coders</title>
+		<link>https://techcabal.com/2026/11/25/chizzy-nnamchi-built-a-career-continents/</link>
+		
+		<dc:creator><![CDATA[John Adoyi]]></dc:creator>
+		<pubDate>Wed, 25 Nov 2026 11:37:44 +0000</pubDate>
+				<category><![CDATA[My Life In Tech]]></category>
+		<category><![CDATA[Simvo Africa]]></category>
+		<guid isPermaLink="false">https://techcabal.com/?p=203079</guid>
+
+					<description><![CDATA[After more than three decades in a career, what keeps someone going? Is it the money, the excitement of the work, or the desire to see what else they can achieve? For Chizzy Nnamchi, it is the excitement of imagining what is possible and helping others realise their potential. At 61, after decades of working [&#8230;]]]></description>
+										
+					
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -8,7 +8,7 @@ Qaiet Times (formerly "quiet ai"): a calm, text-first daily overview of AI. It s
 
 - Live: https://news.b3njamin.ai/ (Vercel). The old https://misterharrow.github.io/qaiet/ forwards there; https://misterharrow.github.io/quiet-ai/ stopped working when the repo was renamed on 2026-11-25.
 - Repo: `MisterHarrow/qaiet` (renamed from `quiet-ai`), **public**. Everything pushed is public.
-- Owner: Benjamin. History and the reasons behind decisions are in `docs/m0-report.md` … `docs/m6-notes.md`; commands are in `README.md`.
+- Owner: Benjamin. History and the reasons behind decisions are in `docs/m0-report.md` … `docs/m6-notes.md`; the plan for covering more of the world, step by step, is `docs/global-coverage-plan.md`; commands are in `README.md`.
 
 ## Run it
 
@@ -55,7 +55,9 @@ uv run pytest          # must pass before every push; no network, no model calls
   - Never work around a block (403/429): no proxies, no browser user agents.
   - Use the generic user agent only. Never put Benjamin's name, email or other personal details in requests.
   - Store only a headline and a summary of at most 500 characters.
-  - `llm: false` on a source (publishers with `Content-Signal: ai-input=no`) means its text never goes to a model.
+  - `llm: false` on a source (publishers with `Content-Signal: ai-input=no`) means its text never goes to a model. Other content signals (such as `use=reference`) don't change that (Benjamin, 2026-11-26).
+  - An outlet in a language the site didn't read before gets `index_from`, two weeks after it is added: its labels count in the sentiment index only from that day (Benjamin, 2026-11-26). Add the language's AI terms to the keyword lists in `pipeline/relevance.py` first.
+  - State media and outlets close to a government get `type: state-aligned`; the About page marks them.
 - **The page loads nothing from other sites:**
   - System fonts only: no web fonts, no CDNs.
   - No images, analytics, cookies or third-party scripts (inline `data:` SVGs only: the favicon and the seal's paper grain).

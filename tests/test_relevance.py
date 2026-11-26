@@ -28,6 +28,13 @@ def test_keyword_verdicts():
     assert v(title="Regeringen vill reglera AI i skolan") == (True, "keyword")
     assert v(title="Nvidias jakt på ny vd") == (True, "keyword")
     assert v(title="OpenAI’s new model") == (True, "keyword")
+    # Latin America: Spanish and Portuguese, spelled out or abbreviated
+    assert v(title="O avanço da inteligência artificial no Brasil") == (True, "keyword")
+    assert v(title="Governo lança plano nacional de IA") == (True, "keyword")
+    assert v(title="México atrae inversiones en centros de datos") == (True, "keyword")
+    assert v(title="Novos modelos de linguagem em português") == (True, "keyword")
+    assert v(title="Big techs e semicondutores", summary=None) == (None, "ambiguous")
+    assert v(title="Flamengo vence o clássico") == (False, "keyword")
     assert v(title="Microsoft reports earnings") == (None, "ambiguous")
     assert v(title="Markets fall", summary="Investors worry about artificial intelligence spending") == (None, "ambiguous")
     assert v(title="Local team wins final") == (False, "keyword")

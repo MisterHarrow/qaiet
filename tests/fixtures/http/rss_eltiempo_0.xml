@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" version="2.0">
+    <channel>
+        <title>EL TIEMPO.COM -Tecnología</title>
+        <description>Noticias de Todas las últimas noticias de tecnología en Colombia y el mundo: gadgets,  computadores, avances tecnológicos y la actualidad de Facebook, Google,  Apple, Samsumg.</description>
+        <image>
+            <url>https://www.eltiempo.com/bundles/eltiempocms/images/et-rss.png</url>
+            <title>EL TIEMPO.COM -Tecnología</title>
+            <link>https://www.eltiempo.com</link>
+        </image>
+        <pubDate>Thu, 26 Nov 2026 03:48:44 -0500</pubDate>
+        <lastBuildDate>Thu, 26 Nov 2026 03:48:44 -0500</lastBuildDate>
+        <generator>Wf Feed Generator (https://www.eltiempo.com)</generator>
+        <link>https://www.eltiempo.com</link>
+                    <category>Tecnología</category>
+                <atom:link rel="self" type="application/rss+xml" href="https://www.eltiempo.com/rss/tecnosfera.xml"/>
+        
+                                                
+            <item>
+                <title>Electrolux refuerza su apuesta en Colombia con IA, pequeños electrodomésticos sin competir por precio</title>
+                <pubDate>2026-11-25T14:00:12-05:00</pubDate>
+                <link>https://www.eltiempo.com/tecnosfera/dispositivos/electrolux-refuerza-su-apuesta-en-colombia-con-ia-pequenos-electrodomesticos-sin-competir-por-precio-3604252</link>
+                <guid>https://www.eltiempo.com/tecnosfera/dispositivos/electrolux-refuerza-su-apuesta-en-colombia-con-ia-pequenos-electrodomesticos-sin-competir-por-precio-3604252</guid>
+                                    <enclosure type="image/jpeg" length="" url="https://imagenes2.eltiempo.com/files/og_thumbnail/files/fp/uploads/2026/11/25/6b072ef97a533.r_d.1002-457-0.jpeg"/>
+                                <category>Dispositivos</category>
+                <description>Gustavo Mancera, nuevo gerente para Región Andina de la marca, explica las novedades y estrategias para el cierre de año de la marca.</description>
+                                <slash:comments>0</slash:comments>
+            </item>
+                                                
+            <item>
+                <title>&#039;La inteligencia artificial no reemplaza la chispa humana&#039;: José Alberto Terán, CEO de Omnicom, sobre el futuro de la publicidad</title>
+                <pubDate>2026-11-25T13:43:51-05:00</pubDate>
+                <link>https://www.eltiempo.com/tecnosfera/novedades-tecnologia/la-inteligencia-artificial-no-reemplaza-la-chispa-humana-jose-alberto-teran-ceo-de-omnicom-sobre-el-futuro-de-la-publicidad-3604244</link>
+                <guid>https://www.eltiempo.com/tecnosfera/novedades-tecnologia/la-inteligencia-artificial-no-reemplaza-la-chispa-humana-jose-alberto-teran-ceo-de-omnicom-sobre-el-futuro-de-la-publicidad-3604244</guid>
+                                    <enclosure type="image/jpeg" length="" url="https://imagenes2.eltiempo.com/files/og_thumbnail/files/fp/uploads/2026/11/25/6b072bb990faa.r_d.643-667-0.jpeg"/>
+                                <category>Novedades Tecnología</category>
+                <description>El líder creativo estuvo en Colombia para la revisión y ajuste de varios cambios en las agencias más tradicionales de publicidad del país.</description>
+                                <slash:comments>0</slash:comments>
+            </item>
+                                                
+            <item>
+                <title>EA Sports FC 27 recuperará con inteligencia artificial la voz de John Motson, histórico comentarista de los videojuegos Fifa</title>
+                <pubDate>2026-11-25T13:29:09-05:00</pubDate>
+                <link>https://www.eltiempo.com/tecnosfera/videojuegos/ea-sports-fc-27-recuperara-con-inteligencia-artificial-la-voz-de-john-motson-historico-comentarista-de-los-videojuegos-fifa-3604246</link>
+                <guid>https://www.eltiempo.com/tecnosfera/videojuegos/ea-sports-fc-27-recuperara-con-inteligencia-artificial-la-voz-de-john-motson-historico-comentarista-de-los-videojuegos-fifa-3604246</guid>
+                                    <enclosure type="image/png" length="" url="https://imagenes2.eltiempo.com/files/og_thumbnail/uploads/2025/07/16/6877e7d2eb859.png"/>
+                                <category>Videojuegos</category>
+                <description>Electronic Arts utilizó grabaciones antiguas para recrear la narración del periodista británico, fallecido en febrero de 2023.</description>
+                                <slash:comments>0</slash:comments>
+            </item>
+                                                
+            <item>
+                <title>Meta lanza Muse, su agente de inteligencia artificial personalizado que compra, envía correos y reserva viajes: ¿cuándo llegará a Colombia?</title>
+                <pubDate>2026-11-25T12:24:27-05:00</pubDate>
+                <link>https://www.eltiempo.com/tecnosfera/inteligencia-artificial/meta-lanza-muse-su-agente-de-inteligencia-artificial-personalizado-que-compra-envia-correos-y-reserva-viajes-cuando-llegara-a-colombia-3603878</link>
+                <guid>https://www.eltiempo.com/tecnosfera/inteligencia-artificial/meta-lanza-muse-su-agente-de-inteligencia-artificial-personalizado-que-compra-envia-correos-y-reserva-viajes-cuando-llegara-a-colombia-3603878</guid>
+                                    <enclosure type="image/png" length="" url="https://imagenes2.eltiempo.com/files/og_thumbnail/uploads/2026/11/24/6b0601e586b64.png"/>
+                                <category>Inteligencia Artificial</category>
+                <description>La compañía amplía el alcance de su asistente autónomo con un nuevo lanzamiento en Europa, aunque ya está disponible en México desde noviembre.</description>
+                                <slash:comments>0</slash:comments>
+            </item>
+                                                
+            <item>
+                <title>Investigador de Anthropic alerta que la IA podría volver ‘inempleables’ a los humanos: &#039;Wall-E es un ejemplo: están felices, pero no tienen control&#039;</title>
+                <pubDate>2026-11-25T10:30:03-05:00</pubDate>
+                <link>https://www.eltiempo.com/tecnosfera/inteligencia-artificial/investigador-de-anthropic-alerta-que-la-ia-podria-volver-inempleables-a-los-humanos-wall-e-es-un-ejemplo-estan-felices-pero-no-tienen-control-3604148</link>
+                <guid>https://www.eltiempo.com/tecnosfera/inteligencia-artificial/investigador-de-anthropic-alerta-que-la-ia-podria-volver-inempleables-a-los-humanos-wall-e-es-un-ejemplo-estan-felices-pero-no-tienen-control-3604148</guid>
+                                    <enclosure type="image/png" length="" url="https://imagenes2.eltiempo.com/files/og_thumbnail/files/fp/uploads/2026/11/25/6b06fc053e886.r_d.1042-226-0.png"/>
+                                <category>Inteligencia Artificial</category>
+                <description>Tao Lin estima que la superinteligencia podría llegar a finales de 2027 y advierte sobre los riesgos de perder el control de esta tecnología.</description>
+                                <slash:comments>0</slash:comments>
+            </item>
+            </channel>
+</rss>

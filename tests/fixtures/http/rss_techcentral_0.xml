@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	 xmlns:media="http://search.yahoo.com/mrss/" >
+
+<channel>
+	<title>TechCentral</title>
+	<atom:link href="https://techcentral.co.za/feed/" rel="self" type="application/rss+xml" />
+	<link>https://techcentral.co.za/</link>
+	<description>Technology News Leader In South Africa</description>
+	<lastBuildDate>Thu, 26 Nov 2026 08:58:57 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=7.1.5</generator>
+
+<image>
+	<url>https://techcentral.co.za/wp-content/uploads/2023/01/cropped-techcentral-thumbnail-for-socials-2023-32x32.jpg</url>
+	<title>TechCentral</title>
+	<link>https://techcentral.co.za/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>AI will cost &#8216;ridiculous numbers of jobs&#8217;, says AI policy panel chair</title>
+		<link>https://techcentral.co.za/ai-jobs-south-africa-rosman-ai-policy/288746/</link>
+					<comments>https://techcentral.co.za/ai-jobs-south-africa-rosman-ai-policy/288746/#respond</comments>
+		
+		<dc:creator><![CDATA[Fanie van Rooyen]]></dc:creator>
+		<pubDate>Thu, 26 Nov 2026 08:58:56 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[Policy and regulation]]></category>
+		<category><![CDATA[Sections]]></category>
+		<category><![CDATA[Anthropic]]></category>
+		<category><![CDATA[Benjamin Rosman]]></category>
+		<category><![CDATA[Department of Communications & Digital Technologies]]></category>
+		<category><![CDATA[Hugging Face]]></category>
+		<category><![CDATA[Levent Alpöge]]></category>
+		<category><![CDATA[OpenAI]]></category>
+		<category><![CDATA[Rob Bonta]]></category>
+		<category><![CDATA[Solly Malatsi]]></category>
+		<category><![CDATA[State Security Agency]]></category>
+		<category><![CDATA[Wits University]]></category>
+		<guid isPermaLink="false">https://techcentral.co.za/?p=288746</guid>
+
+					<description><![CDATA[Benjamin Rosman sees no long game in which AI doesn't cost 'ridiculous numbers of jobs'.]]></description>
+		
+					<wfw:commentRss>https://techcentral.co.za/ai-jobs-south-africa-rosman-ai-policy/288746/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		
+	</item>
+		<item>
+		<title>28East and FiveFriday power Collins and Sons&#8217; national expansion</title>
+		<link>https://techcentral.co.za/28east-fivefriday-collins-sons-last-mile-delivery/288737/</link>
+		
+		<dc:creator><![CDATA[28East]]></dc:creator>
+		<pubDate>Thu, 26 Nov 2026 08:21:15 +0000</pubDate>
+				<category><![CDATA[Company News]]></category>
+		<category><![CDATA[Enterprise software]]></category>
+		<category><![CDATA[Sections]]></category>
+		<category><![CDATA[28East]]></category>
+		<category><![CDATA[Andreas van der Merwe]]></category>
+		<category><![CDATA[Collins and Sons Transport]]></category>
+		<category><![CDATA[Ethan Hamilton]]></category>
+		<category><![CDATA[FiveFriday]]></category>
+		<category><![CDATA[Google]]></category>
+		<category><![CDATA[Kyle McAdam]]></category>
+		<category><![CDATA[Louis Collins]]></category>
+		<category><![CDATA[Marius van der Merwe]]></category>
+		<guid isPermaLink="false">https://techcentral.co.za/?p=288737</guid>
+
+					<description><![CDATA[CargoSwift, built on Google Maps Platform Mobility, gives furniture retailers Uber-style same-day delivery.]]></description>
+		
+		
+		
+		
+	</item>
+		<item>
+		<title>EasyEquities locks client logins after security incident</title>
+		<link>https://techcentral.co.za/easyequities-security-incident-client-logins/288730/</link>
+					<comments>https://techcentral.co.za/easyequities-security-incident-client-logins/288730/#respond</comments>
+		
+		<dc:creator><![CDATA[Staff Reporter]]></dc:creator>
+		<pubDate>Thu, 26 Nov 2026 07:50:41 +0000</pubDate>
+				<category><![CDATA[Information security]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Sections]]></category>
+		<category><![CDATA[EasyEquities]]></category>
+		<category><![CDATA[Purple Group]]></category>
+		<category><![CDATA[RelyComply]]></category>
+		<category><![CDATA[SA Home Loans]]></category>
+		<category><![CDATA[Satrix]]></category>
+		<guid isPermaLink="false">https://techcentral.co.za/?p=288730</guid>
+
+					<description><![CDATA[EasyEquities clients can't log in after the platform restricted access while investigating a security incident.]]></description>
+		
+					<wfw:commentRss>https://techcentral.co.za/easyequities-security-incident-client-logins/288730/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		
+	</item>
+		<item>
+		<title>SevenC and Microsoft show how to turn Copilot pilots into business value</title>
+		<link>https://techcentral.co.za/sevenc-microsoft-copilot-advantage-ai-adoption/288726/</link>
+		
+		<dc:creator><![CDATA[SevenC]]></dc:creator>
+		<pubDate>Thu, 26 Nov 2026 07:31:26 +0000</pubDate>
+				<category><![CDATA[Company News]]></category>
+		<category><![CDATA[Enterprise software]]></category>
+		<category><![CDATA[Sections]]></category>
+		<category><![CDATA[Cloud On Demand]]></category>
+		<category><![CDATA[Elaine van der Plank]]></category>
+		<category><![CDATA[Enrique Caixeiro]]></category>
+		<category><![CDATA[Graeme Millar]]></category>
+		<category><![CDATA[Grant Hughes]]></category>
+		<category><![CDATA[Microsoft]]></category>
+		<category><![CDATA[Othelo Vieira]]></category>
+		<category><![CDATA[SevenC]]></category>
+		<guid isPermaLink="false">https://techcentral.co.za/?p=288726</guid>
+
+					<description><![CDATA[SevenC's Copilot Advantage event set out a practical road map from AI pilot to impact.]]></description>
+		
+		
+		
+		
+	</item>
+		<item>
+		<title>SpaceX wins approval for a million-satellite AI network</title>
+		<link>https://techcentral.co.za/spacex-million-satellite-ai-network-fcc/288719/</link>
+					<comments>https://techcentral.co.za/spacex-million-satellite-ai-network-fcc/288719/#respond</comments>
+		
+		<dc:creator><![CDATA[Agency Staff]]></dc:creator>
+		<pubDate>Thu, 26 Nov 2026 05:41:11 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[Satellite communications]]></category>
+		<category><![CDATA[Sections]]></category>
+		<category><![CDATA[Amazon]]></category>
+		<category><![CDATA[Amazon Leo]]></category>
+		<category><![CDATA[Brendan Carr]]></category>
+		<category><![CDATA[Elon Musk]]></category>
+		<category><![CDATA[Federal Communications Commission]]></category>
+		<category><![CDATA[SpaceX]]></category>
+		<category><![CDATA[Starlink]]></category>
+		<guid isPermaLink="false">https://techcentral.co.za/?p=288719</guid>
+
+					<description><![CDATA[SpaceX must start deploying its Starmind constellation by 2033 and reach 100 000 satellites by 2035.]]></description>
+		
+					<wfw:commentRss>https://techcentral.co.za/spacex-million-satellite-ai-network-fcc/288719/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		
+	</item>
+	</channel>
+</rss>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <rss
+            version="2.0"
+            xmlns:content="http://purl.org/rss/1.0/modules/content/"
+            xmlns:media="http://search.yahoo.com/mrss/"
+            xmlns:atom="http://www.w3.org/2005/Atom"
+            xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+        >
+            <channel>
+                <title>IOL</title>
+                <link>https://iol.co.za/</link>
+                <atom:link href="https://iol.co.za/rss/" rel="self" type="application/rss+xml"/>
+                <description>IOL RSS Feed</description>
+                <language>en-za</language>
+                <copyright>2026 IOL. All rights reserved. Use of this site constitutes acceptance of our Terms and Conditions and Privacy Policy.</copyright>
+                <lastBuildDate>Thu, 26 Nov 2026 09:03:39 GMT</lastBuildDate>
+                <ttl>5</ttl>
+                <sy:updatePeriod>hourly</sy:updatePeriod>
+                <sy:updateFrequency>1</sy:updateFrequency>
+                
+                    <image>
+                        <url>https://iol.co.za/_next/static/media/iol.2d0c9660.svg</url>
+                        <title>IOL</title>
+                        <link>https://iol.co.za/</link>
+                        <description>Read IOL</description>
+                    </image>
+                
+                
+        <item>
+            <title><![CDATA[WATCH: EFF’s Omphile Maotwe poised to become Tshwane deputy mayor as Mashaba backs Moya for another five years]]></title>
+            <link>https://iol.co.za/lge2026/2026-11-26-watch-effs-omphile-maotwe-poised-to-become-tshwane-deputy-mayor-as-mashaba-backs-moya-for-another-five-years/</link>
+            <author>Kamogelo.moichela@iol.co.za (Kamogelo Moichela)</author>
+            
+                <media:content
+                    height="2268"
+                    medium="image"
+                    url="https://iol-prod.appspot.com/image/c9f676e9ddeea8cff0e72da26e08c9885e155d7b"
+                    width="4032"
+                >
+                    <media:credit><![CDATA[Kamogelo Moichela / IOL News ]]></media:credit>
+                    <media:description><![CDATA[The city of Tshwane is convening its inaugural council sitting on Thursday. ]]></media:description>
+                    <media:thumbnail url="https://iol-prod.appspot.com/image/c9f676e9ddeea8cff0e72da26e08c9885e155d7b" />
+                </media:content>
+            
+            <description><![CDATA[ActionSA leader Herman Mashaba expressed confidence in Moya’s return, saying she should be given the opportunity to complete the work she started.]]></description>
+            
+            <pubDate>Thu, 26 Nov 2026 09:01:00 GMT</pubDate>
+            <guid isPermaLink="true">https://iol.co.za/lge2026/2026-11-26-watch-effs-omphile-maotwe-poised-to-become-tshwane-deputy-mayor-as-mashaba-backs-moya-for-another-five-years/</guid>
+        </item>
+    
+
+        <item>
+            <title><![CDATA[Simplex Crimson set sights on Premier League promotion]]></title>
+            <link>https://iol.co.za/thepost/community-news/2026-11-26-simplex-crimson-set-sights-on-premier-league-promotion/</link>
+            
+            
+                <media:content
+                    height="540"
+                    medium="image"
+                    url="https://iol-prod.appspot.com/image/dfc704d9e030039d892d6a25787e9e7b830caf2e"
+                    width="1066"
+                >
+                    <media:credit><![CDATA[Supplied]]></media:credit>
+                    <media:description><![CDATA[whose unity, commitment and collective effort are driving their campaign in the Promotion League as they pursue a place in the KZN Premier League.]]></media:description>
+                    <media:thumbnail url="https://iol-prod.appspot.com/image/dfc704d9e030039d892d6a25787e9e7b830caf2e" />
+                </media:content>
+            
+            <description><![CDATA[Reservoir Hills side leads the Promotion League standings as it pursues a place among KwaZulu-Natal's premier club cricket teams.]]></description>
+            
+            <pubDate>Thu, 26 Nov 2026 09:00:35 GMT</pubDate>
+            <guid isPermaLink="true">https://iol.co.za/thepost/community-news/2026-11-26-simplex-crimson-set-sights-on-premier-league-promotion/</guid>
+        </item>
+    
+
+        <item>
+            <title><![CDATA[Kieswetter warns organised crime is outpacing state as he proposes national crackdown]]></title>
+            <link>https://iol.co.za/capetimes/news/2026-11-26-kieswetter-warns-organised-crime-is-outpacing-state-as-he-proposes-national-crackdown/</link>
+            
+            
+                <media:content
+                    height="566"
+                    medium="image"
+                    url="https://iol-prod.appspot.com/image/5db99fe9a1f21efe009d4361db02aec09193f264"
+                    width="1121"
+                >
+                    <media:credit><![CDATA[Screenshot of live stream]]></media:credit>
+                    <media:description><![CDATA[Former SARS commissioner Edward Kieswetter told the Madlanga Commission that fragmented state institutions are struggling to keep pace with organised crime.]]></media:description>
+                    <media:thumbnail url="https://iol-prod.appspot.com/image/5db99fe9a1f21efe009d4361db02aec09193f264" />
+                </media:content>
+            
+            <description><![CDATA[Former SARS commissioner Edward Kieswetter has warned that organised crime is outpacing South Africa's ability to combat it, proposing a National Portfolio Office to improve co-ordination between government agencies.]]></description>
+            
+            <pubDate>Thu, 26 Nov 2026 09:00:00 GMT</pubDate>
+            <guid isPermaLink="true">https://iol.co.za/capetimes/news/2026-11-26-kieswetter-warns-organised-crime-is-outpacing-state-as-he-proposes-national-crackdown/</guid>
+        </item>
+    
+
+        <item>
+            <title><![CDATA[AA warns of wider crisis as Continental considers ending Gqeberha tyre production]]></title>
+            <link>https://iol.co.za/mercury/news/2026-11-26-aa-warns-of-wider-crisis-as-continental-considers-ending-gqeberha-tyre-production/</link>
+            
+            
+                <media:content
+                    height="1025"
+                    medium="image"
+                    url="https://iol-prod.appspot.com/image/8b298c3b4a2d516b5b3d85aa964b87244d5fde60"
+                    width="1536"
+                >
+                    <media:credit><![CDATA[South African Tyre Manufacture Conference (SARMC)]]></media:credit>
+                    <media:description><![CDATA[Continental is considering discontinuing tyre production at its Gqeberha plant, potentially affecting approximately 950 employees.]]></media:description>
+                    <media:thumbnail url="https://iol-prod.appspot.com/image/8b298c3b4a2d516b5b3d85aa964b87244d5fde60" />
+                </media:content>
+            
+            <description><![CDATA[Continental is considering closing its Gqeberha tyre plant by early 2027, putting about 950 jobs at risk. The Automobile Association says the proposal highlights mounting pressure on South Africa’s automotive supply chain.]]></description>
+            
+            <pubDate>Thu, 26 Nov 2026 09:00:00 GMT</pubDate>
+            <guid isPermaLink="true">https://iol.co.za/mercury/news/2026-11-26-aa-warns-of-wider-crisis-as-continental-considers-ending-gqeberha-tyre-production/</guid>
+        </item>
+    
+
+        <item>
+            <title><![CDATA[Feeling emotionally drained? How Sunderkand recitation may offer spiritual strength]]></title>
+            <link>https://iol.co.za/sunday-tribune/lifestyle/2026-11-26-feeling-emotionally-drained-how-sunderkand-recitation-may-offer-spiritual-strength/</link>
+            
+            
+                <media:content
+                    height="4752"
+                    medium="image"
+                    url="https://iol-prod.appspot.com/image/fc16227d97c1b9df3500950094e12e0b5a10c57c"
+                    width="3168"
+                >
+                    <media:credit><![CDATA[Pexels ]]></media:credit>
+                    <media:description><![CDATA[A reader facing prolonged emotional strain and court-related stress seeks spiritual guidance. The response recommends Sunderkand recitation while explaining its traditional devotional significance and encouraging appropriate practical support.]]></media:description>
+                    <media:thumbnail url="https://iol-prod.appspot.com/image/fc16227d97c1b9df3500950094e12e0b5a10c57c" />
+                </media:content>
+            
+            <description><![CDATA[Feeling emotionally overwhelmed or facing difficult circumstances? Sanjay recommends regular Sunderkand recitation as a spiritual practice to seek Lord Hanuman's blessings, overcome obstacles and restore confidence, inner strength and peace.]]></description>
+            
+            <pubDate>Thu, 26 Nov 2026 09:00:00 GMT</pubDate>
+            <guid isPermaLink="true">https://iol.co.za/sunday-tribune/lifestyle/2026-11-26-feeling-emotionally-drained-how-sunderkand-recitation-may-offer-spiritual-strength/</guid>
+        </item>
+    
+            </channel>
+        </rss>

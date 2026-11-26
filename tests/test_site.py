@@ -141,6 +141,12 @@ def test_about_page_reads_config_and_health(tmp_path, settings):
     assert 'href="../static/style.css"' in html and "How this site works" in html
     assert f"{ctx['counts']['outlets']} news outlets" in html and "1 of 2 sources answered normally" in html
     assert "CBC: robots blocked" in html and settings.analysis.news_prompt in html
+    # Limits: outlets per region, and the two-week wait for outlets in a new language
+    regions = dict((r["name"], r["n"]) for r in ctx["regions"])
+    assert regions["Latin America"] == sum(1 for f in sources.feeds if f.kind == "news" and f.enabled and f.group == "latam")
+    assert f"North America {regions['North America']}, Latin America {regions['Latin America']}, Europe" in html
+    assert ctx["waiting"]["until"] == "10 December" and "join the index two weeks later (" in html
+    assert ctx["us_share"] is None  # no labels in this store
     assert "<img" not in html and not re.search(r'<script[^>]*src="(?!\.\./static/app\.js")', html)  # only our own script
 
 
@@ -166,6 +172,23 @@ def test_brand_is_the_same_on_every_page(tmp_path):
     # The masthead rule is the stance mix of every article in the view; each card's top edge is its own.
     assert '<p class="spectrum" role="img" aria-label="Stance of every article in this view: 1 critical, 2 neutral, 1 positive, 1 not labeled"' in front
     assert '<p class="stripe" role="img"' in front and '<span class="rank">01</span>' in front
+
+
+def test_card_stripe_counts_each_outlet_once(tmp_path):
+    """One outlet filing five critical articles on a story counts once in the stripe; the stance chart still counts articles."""
+    from quiet_ai.pipeline.edition import outlet_stances
+
+    def m(src, stance, confidence="high", label=True):
+        return {"source": src, "stance": stance, "confidence": confidence, "label": {} if label else None}
+
+    press = [*(m("loud", -2) for _ in range(5)), m("a", 0), m("b", 1), m("b", 0), m("c", 2, "low"), m("d", None, label=False)]
+    got = outlet_stances(press)
+    assert (got["-2"], got["0"], got["1"], got["unclear"], got["unlabeled"]) == (1, 2, 0, 1, 1)  # b: mean 0.5 rounds to 0
+    e = edition()
+    e["stories"][0]["stance_outlets"] = {"-2": 1, "-1": 0, "0": 2, "1": 0, "2": 0, "unclear": 1, "unlabeled": 1}
+    card = re.search(r'<article class="card".*?</article>', build.render(e, tmp_path).read_text(), re.S).group(0)
+    assert '<p class="stripe" role="img" aria-label="Stance by outlet: 1 strongly critical, 2 neutral, 1 unclear, 1 not labeled"' in card
+    assert "Stance of the coverage: 1 critical, 2 neutral, 1 positive, 1 not labeled. Average" in card  # the chart: articles
 
 
 def test_card_links_its_top_source(tmp_path, settings):
@@ -266,7 +289,7 @@ def test_coverage_map_lights_up_the_outlets_countries(tmp_path):
                {"coverage": [{"items": [{"outlet": "WSJ", "country": "US"}]}]}]
     geo = build.coverage_map(stories)
     assert geo["outlets"] == 3 and geo["countries"] == [["US", 2], ["SE", 1]]  # one per outlet
-    assert [(r["name"], r["n"]) for r in geo["regions"]] == [("Americas", 2), ("Europe", 1), ("Middle East", 0), ("Asia", 0), ("Oceania", 0)]
+    assert [(r["name"], r["n"]) for r in geo["regions"]] == [("North America", 2), ("Latin America", 0), ("Europe", 1), ("Middle East", 0), ("Africa", 0), ("Asia", 0), ("Oceania", 0)]
     svg = str(geo["svg"])
     assert svg.startswith('<svg class="geo-map" viewBox="0 0 170 70" width="170" height="70"') and 'class="geo-land"' in svg
     assert svg.count('<circle class="lit') > 4 and "--d:" in svg
@@ -281,15 +304,17 @@ def test_stories_filter_by_region_and_country(tmp_path):
     builders_only = {"coverage": []}
     assert build.story_countries(us_se) == ["US", "SE"] and build.story_countries(builders_only) == []  # legend order
     places = build.place_filters([us_se, gb_ca, builders_only])
-    assert [(r["name"], r["n"]) for r in places] == [("Americas", 2), ("Europe", 2), ("Middle East", 0), ("Asia", 0), ("Oceania", 0)]
-    assert [(c["code"], c["n"]) for c in places[1]["countries"]] == [("GB", 1), ("SE", 1)]  # stories per country, only those with any
-    assert places[1]["codes"] == ["GB", "SE", "DE", "FR", "BE", "ES"]
+    assert [(r["name"], r["n"]) for r in places] == [("North America", 2), ("Latin America", 0), ("Europe", 2), ("Middle East", 0),
+                                                     ("Africa", 0), ("Asia", 0), ("Oceania", 0)]
+    assert [(c["code"], c["n"]) for c in places[2]["countries"]] == [("GB", 1), ("SE", 1)]  # stories per country, only those with any
+    assert places[2]["codes"] == ["GB", "SE", "DE", "FR", "BE", "ES"]
     assert build.place_filters([builders_only]) == []
 
     html = build.render(edition(), tmp_path).read_text()
     assert 'data-countries="US"' in html  # each card says where its outlets are
     assert '<nav class="filters places" aria-label="Filter stories by where their outlets are" hidden>' in html  # app.js shows it
-    assert '<button type="button" data-region="Americas" data-codes="US CA" aria-pressed="false">Americas <span class="n">1</span></button>' in html
+    assert '<button type="button" data-region="North America" data-codes="US CA" aria-pressed="false">North America <span class="n">1</span></button>' in html
+    assert 'data-region="Latin America" data-codes="MX CO PE BR CL AR" aria-pressed="false" disabled>' in html
     assert 'data-region="Europe" data-codes="GB SE DE FR BE ES" aria-pressed="false" disabled>' in html
     assert '<span class="place-row"' not in html  # one country in the view: no country line to pick from
 

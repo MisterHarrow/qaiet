@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from datetime import date
 from pathlib import Path
 
 import yaml
@@ -41,6 +42,7 @@ class FeedSource(_Model):
     sitemap_max_pages: int = 15  # pages read per run (only URLs not seen before)
     ai_focused: bool = False  # an AI-only feed: every item counts as relevant
     mentions: bool = False  # a recap of X/Reddit: keep the posts and threads it links (pipeline/mentions.py)
+    index_from: date | None = None  # its labels count in the sentiment index from this local day (a new language waits two weeks)
     enabled: bool = True
 
 

@@ -1,6 +1,6 @@
 # Global coverage plan
 
-Drafted 2026-11-26 for Benjamin to approve step by step. Nothing in `config/sources.yaml` or the pipeline has changed yet.
+Drafted 2026-11-26 for Benjamin to approve step by step. **Step 1 is approved and implemented** (24 outlets, the region split, Portuguese keywords, the `index_from` wait, the per-outlet stripe and the About page's limits); steps 2–8 are not started.
 
 ## Summary
 

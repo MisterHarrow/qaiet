@@ -9,6 +9,8 @@
 # type also allows `wire` (news agencies).
 # sitemap: for sources with no feed. Only URLs modified within ingest.max_age_days and not seen before are read.
 # ai_focused: true = an AI-only feed (AI section, AI newsletter, lab blog); its items skip the relevance check.
+# index_from: date = this outlet's labels count in the sentiment index from that day. Outlets in a language the site
+#   didn't read before wait two weeks (Benjamin, 2026-11-26; docs/global-coverage-plan.md).
 verified_at: '2026-11-24'
 sources:
 - id: nyt
@@ -554,6 +556,227 @@ sources:
   feeds:
   - https://www.abc.net.au/news/feed/51120/rss.xml
   notes: All-news feed. Added in round 2.
+- id: folha
+  name: Folha de S.Paulo
+  country: BR
+  language: pt
+  type: mainstream
+  group: latam
+  feeds:
+  - https://feeds.folha.uol.com.br/tec/rss091.xml
+  notes: Technology section. Added 2026-11-26 (global coverage plan, step 1). Portuguese is a new language here, so its labels join the sentiment index from index_from.
+  index_from: 2026-12-10
+- id: g1
+  name: g1 (Globo)
+  country: BR
+  language: pt
+  type: mainstream
+  group: latam
+  feeds:
+  - https://g1.globo.com/rss/g1/tecnologia/
+  notes: Technology section. Added 2026-11-26 (global coverage plan, step 1). Portuguese is a new language here, so its labels join the sentiment index from index_from.
+  index_from: 2026-12-10
+- id: exame
+  name: Exame
+  country: BR
+  language: pt
+  type: business
+  group: latam
+  feeds:
+  - https://exame.com/feed/
+  notes: All-news feed. Added 2026-11-26 (global coverage plan, step 1). Portuguese is a new language here, so its labels join the sentiment index from index_from.
+  index_from: 2026-12-10
+- id: tecnoblog
+  name: Tecnoblog
+  country: BR
+  language: pt
+  type: trade
+  group: latam
+  feeds:
+  - https://tecnoblog.net/feed/
+  notes: Added 2026-11-26 (global coverage plan, step 1). Portuguese is a new language here, so its labels join the sentiment index from index_from.
+  index_from: 2026-12-10
+- id: nucleo
+  name: Núcleo Jornalismo
+  country: BR
+  language: pt
+  type: trade
+  group: latam
+  feeds:
+  - https://nucleo.jor.br/feed/
+  notes: Independent tech and AI accountability reporting. Added 2026-11-26 (global coverage plan, step 1). Portuguese is a new language here, so its labels join the sentiment index from index_from.
+  index_from: 2026-12-10
+- id: elfinanciero
+  name: El Financiero
+  country: MX
+  language: es
+  type: business
+  group: latam
+  feeds:
+  - https://www.elfinanciero.com.mx/arc/outboundfeeds/rss/?outputType=xml
+  notes: All-news feed. Added 2026-11-26 (global coverage plan, step 1).
+- id: expansionmx
+  name: Expansión
+  country: MX
+  language: es
+  type: business
+  group: latam
+  feeds:
+  - https://expansion.mx/rss/tecnologia
+  notes: Technology section. Added 2026-11-26 (global coverage plan, step 1).
+- id: infobae
+  name: Infobae
+  country: AR
+  language: es
+  type: mainstream
+  group: latam
+  feeds:
+  - https://www.infobae.com/arc/outboundfeeds/rss/category/tecno/
+  notes: Technology section; about 24 AI articles a day. Added 2026-11-26 (global coverage plan, step 1).
+- id: lanacion
+  name: La Nación
+  country: AR
+  language: es
+  type: mainstream
+  group: latam
+  feeds:
+  - https://www.lanacion.com.ar/arc/outboundfeeds/rss/?outputType=xml
+  notes: All-news feed. Added 2026-11-26 (global coverage plan, step 1).
+- id: latercera
+  name: La Tercera
+  country: CL
+  language: es
+  type: mainstream
+  group: latam
+  feeds:
+  - https://www.latercera.com/arc/outboundfeeds/rss/?outputType=xml
+  notes: All-news feed. Added 2026-11-26 (global coverage plan, step 1).
+- id: eltiempo
+  name: El Tiempo
+  country: CO
+  language: es
+  type: mainstream
+  group: latam
+  feeds:
+  - https://www.eltiempo.com/rss/tecnosfera.xml
+  notes: Technology section (Tecnósfera). Added 2026-11-26 (global coverage plan, step 1).
+- id: semana
+  name: Semana
+  country: CO
+  language: es
+  type: mainstream
+  group: latam
+  feeds:
+  - https://www.semana.com/arc/outboundfeeds/rss/?outputType=xml
+  notes: All-news feed. Added 2026-11-26 (global coverage plan, step 1).
+- id: elcomercio
+  name: El Comercio
+  country: PE
+  language: es
+  type: mainstream
+  group: latam
+  feeds:
+  - https://elcomercio.pe/arc/outboundfeeds/rss/category/tecnologia/?outputType=xml
+  notes: Technology section. Added 2026-11-26 (global coverage plan, step 1).
+- id: techcabal
+  name: TechCabal
+  country: NG
+  language: en
+  type: trade
+  group: africa
+  feeds:
+  - https://techcabal.com/feed/
+  notes: Pan-African tech, based in Lagos. Added 2026-11-26 (global coverage plan, step 1).
+- id: techeconomy
+  name: Techeconomy
+  country: NG
+  language: en
+  type: trade
+  group: africa
+  feeds:
+  - https://techeconomy.ng/feed.xml
+  notes: 'robots.txt Content-Signal: search=yes, ai-train=no, use=reference (no ai-input=no, so allowed; Benjamin, 2026-11-26). Added 2026-11-26 (global coverage plan, step 1).'
+- id: premiumtimes
+  name: Premium Times
+  country: NG
+  language: en
+  type: mainstream
+  group: africa
+  feeds:
+  - https://www.premiumtimesng.com/feed
+  notes: All-news feed. Added 2026-11-26 (global coverage plan, step 1).
+- id: businessdayng
+  name: BusinessDay
+  country: NG
+  language: en
+  type: business
+  group: africa
+  feeds:
+  - https://businessday.ng/feed/
+  notes: All-news feed. Added 2026-11-26 (global coverage plan, step 1).
+- id: nairametrics
+  name: Nairametrics
+  country: NG
+  language: en
+  type: business
+  group: africa
+  feeds:
+  - https://nairametrics.com/feed/
+  notes: All-news feed. Added 2026-11-26 (global coverage plan, step 1).
+- id: techcentral
+  name: TechCentral
+  country: ZA
+  language: en
+  type: trade
+  group: africa
+  feeds:
+  - https://techcentral.co.za/feed/
+  notes: Added 2026-11-26 (global coverage plan, step 1).
+- id: itweb
+  name: ITWeb
+  country: ZA
+  language: en
+  type: trade
+  group: africa
+  feeds:
+  - https://www.itweb.co.za/rss
+  notes: Added 2026-11-26 (global coverage plan, step 1).
+- id: dailymaverick
+  name: Daily Maverick
+  country: ZA
+  language: en
+  type: mainstream
+  group: africa
+  feeds:
+  - https://www.dailymaverick.co.za/dmrss/
+  notes: All-news feed. Added 2026-11-26 (global coverage plan, step 1).
+- id: iol
+  name: IOL
+  country: ZA
+  language: en
+  type: mainstream
+  group: africa
+  feeds:
+  - https://www.iol.co.za/rss
+  notes: All-news feed. Added 2026-11-26 (global coverage plan, step 1).
+- id: myjoyonline
+  name: MyJoyOnline
+  country: GH
+  language: en
+  type: mainstream
+  group: africa
+  feeds:
+  - https://www.myjoyonline.com/feed/
+  notes: All-news feed. Added 2026-11-26 (global coverage plan, step 1).
+- id: egyptindependent
+  name: Egypt Independent
+  country: EG
+  language: en
+  type: mainstream
+  group: africa
+  feeds:
+  - https://egyptindependent.com/feed/
+  notes: All-news feed. Added 2026-11-26 (global coverage plan, step 1).
 gdelt_outlets:
 - id: reuters
   name: Reuters

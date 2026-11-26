@@ -46,7 +46,7 @@
     <summary>All {{ a.counts.outlets }} news outlets</summary>
     {% for g in a.groups %}
     <h3>{{ g.label }}</h3>
-    <p>{% for o in g.outlets %}{{ o.name }} <span class="country">{{ o.country }}{% if o.language != "en" %}, {{ o.language }}{% endif %}</span>{% if not loop.last %}<span class="sep">·</span>{% endif %}{% endfor %}</p>
+    <p>{% for o in g.outlets %}{{ o.name }} <span class="country">{{ o.country }}{% if o.language != "en" %}, {{ o.language }}{% endif %}{% if o.type == "state-aligned" %}, state-aligned{% endif %}</span>{% if not loop.last %}<span class="sep">·</span>{% endif %}{% endfor %}</p>
     {% endfor %}
     <h3>Through GDELT</h3>
     <p>{% for o in a.gdelt_outlets %}{{ o.name }} <span class="country">{{ o.country }}{% if o.type == "state-aligned" %}, state-aligned{% endif %}</span>{% if not loop.last %}<span class="sep">·</span>{% endif %}{% endfor %}</p>
@@ -69,7 +69,7 @@
   <p>Sources are collected every {{ a.collect_every_hours }} hours through the day and night, so nothing scrolls off a busy feed before we see it. Every morning from {{ a.publish_at }} (GitHub sometimes starts scheduled runs late, so it can be a little later) the rest of the chain runs:</p>
   <ol class="steps">
     <li><strong>Collect.</strong> Every source is fetched politely: one request at a time per site, a clear name in every request, and no refetching of feeds that haven't changed.</li>
-    <li><strong>Keep what is about AI.</strong> Items from AI-only sources are kept as they are. Others are checked for AI terms in five languages, and the unclear cases are decided by a small language model ({{ a.item_model }}). Headlines in other languages are translated into English for display; the original stays one hover away.</li>
+    <li><strong>Keep what is about AI.</strong> Items from AI-only sources are kept as they are. Others are checked for AI terms in six languages, and the unclear cases are decided by a small language model ({{ a.item_model }}). Headlines in other languages are translated into English for display; the original stays one hover away.</li>
     <li><strong>Group into stories.</strong> Each headline is turned into a numeric fingerprint of its meaning with a multilingual model that runs alongside the pipeline, not through an outside service ({{ a.embed_model.split("/")[-1] }}), so a Swedish and an English report of the same event land next to each other. Links count first: a Hacker News post or a Bluesky post that links to an article joins that article's story. Then headlines join the story they are closest to, but only when they are very close or share a name such as a company or a person. Stories stay open for {{ a.window_hours }} hours after their latest item.</li>
     <li><strong>Label each article.</strong> The language model reads only the headline and the start of the summary, never the outlet's name, and labels the angle, the framing and the stance (see below). It must quote the words that show its reasoning; a quote that is not really in the text is thrown out.</li>
     <li><strong>Rank.</strong> Stories are scored by how widely they are being picked up (see Ranking).</li>
@@ -171,7 +171,9 @@
   <h2>Limits</h2>
   <ul>
     <li>Labels are machine-made from a headline and a few lines of summary. A headline can frame a story differently from the article under it.</li>
-    <li>The outlet list shapes what you see. It leans toward English-language and Western outlets, and some publishers (Reuters, AP, CNN, Chinese state media) are only visible through a secondary index with headlines alone.</li>
+    <li>The outlet list decides what you see. It has {{ a.counts.outlets }} news outlets in {{ a.counts.countries }} countries and {{ a.counts.languages }} languages{% if a.regions %} ({% for r in a.regions if r.n %}{{ r.name }} {{ r.n }}{% if not loop.last %}, {% endif %}{% endfor %}){% endif %}. Only outlets with a free feed that allow automated readers can be on it, and many large outlets in Africa, the Gulf and South Asia turn such readers away, so each region leans toward the outlets that don't. Some publishers (Reuters, AP, CNN, Chinese state media) are only visible through a secondary index with headlines alone. State-aligned outlets are marked in the list of sources.</li>
+    <li>Headlines in other languages are translated by a small language model for display and for grouping; the labels are made from the original words.</li>
+    <li>The overall index counts each outlet once, so the region with the most outlets weighs most{% if a.us_share %}: on {{ a.us_share.day }}, {{ a.us_share.us }} of the {{ a.us_share.n }} news outlets in it were American{% endif %}. A region or country gets its own figure only on days when at least {{ a.sentiment.min_outlets }} of its outlets were labeled. Outlets in a language the site has only just started reading are labeled and shown at once but join the index two weeks later{% if a.waiting %} ({{ a.waiting.n }} outlet{{ "s" if a.waiting.n != 1 }} until {{ a.waiting.until }}){% endif %}.</li>
     <li>Grouping is automatic. Occasionally two related stories are split, or a loosely related piece joins a story.</li>
     <li>Social signals come from Bluesky and Hugging Face. X and Reddit are never read directly (both ask automated readers to stay away); their posts and threads show up only where the AINews recap links them, so they reflect what AINews picks.</li>
     <li>GitHub stars can be bought. Obvious clone spam (the same project name from many accounts) is filtered out, but a single inflated repository can still show up in Rising.</li>

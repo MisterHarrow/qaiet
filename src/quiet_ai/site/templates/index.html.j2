@@ -123,7 +123,7 @@
 {% for s in e.stories %}
 <article class="card" id="{{ s.id }}" data-track="{{ s.track or 'none' }}" data-terms="{{ s.terms|join('|') }}" data-countries="{{ s|story_countries|join(' ') }}">
   {% if s.segments %}
-  <p class="stripe" role="img" aria-label="{{ s.stance_label }}" title="{{ s.stance_label }}">{% for seg in s.segments %}<span class="seg st{{ seg.key }}" style="width:{{ seg.pct }}%"></span>{% endfor %}</p>
+  <p class="stripe" role="img" aria-label="{{ s.stripe_label }}" title="{{ s.stripe_label }}">{% for seg in s.segments %}<span class="seg st{{ seg.key }}" style="width:{{ seg.pct }}%"></span>{% endfor %}</p>
   {% else %}
   <p class="stripe stripe-none" aria-hidden="true"></p>
   {% endif %}

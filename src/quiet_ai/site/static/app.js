@@ -69,7 +69,7 @@
                 tracks: Array.prototype.map.call(sent.querySelectorAll(".sent-track b"), function (b) { return b.textContent; }) };
   }
   function signed(v) { return v === null || v === undefined ? "\u2013" : (v < 0 ? "\u2212" : "+") + Math.abs(v).toFixed(2); }
-  function placeName(name) { return /^(Americas|Middle East|United )/.test(name) ? "the " + name : name; }
+  function placeName(name) { return /^(Middle East|United )/.test(name) ? "the " + name : name; }
   function showSentiment(key, name) {
     if (!overall) return;
     var label = sent.querySelector(".sent-label"), num = sent.querySelector(".sent-num"), word = sent.querySelector(".sent-word");

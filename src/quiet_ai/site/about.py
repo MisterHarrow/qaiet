@@ -3,13 +3,16 @@ from what the pipeline actually does."""
 
 from __future__ import annotations
 
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 from quiet_ai import evaluate
 from quiet_ai.config import Account, Settings, SourcesConfig
+from quiet_ai.pipeline import sentiment
 from quiet_ai.pipeline.edition import data_since
 from quiet_ai.pipeline.stories import source_names
+from quiet_ai.regions import REGIONS
 from quiet_ai.store.db import Store, iso
 
 GROUP_NAMES = {
@@ -19,6 +22,8 @@ GROUP_NAMES = {
     "tech": "Technology trade press",
     "uk-eu": "United Kingdom and Europe",
     "nordics": "Nordics",
+    "latam": "Latin America",
+    "africa": "Africa",
     "asia-me": "Asia and the Middle East",
     "americas": "Americas",
     "global": "Global",
@@ -55,6 +60,25 @@ def ainews_x_accounts(path: Path = AINEWS_X) -> dict | None:
     """The X accounts AINews links to (a counted snapshot), for the sources list on /about."""
     import yaml
     return yaml.safe_load(path.read_text(encoding="utf-8")) if path.exists() else None
+
+
+def _us_share(store: Store, settings: Settings, sources: SourcesConfig, now: datetime) -> dict | None:
+    """Of the news outlets that counted in yesterday's index, how many were American (the Limits section)."""
+    country = {f.id: f.country for f in sources.feeds if f.kind == "news"} | {g.id: g.country for g in sources.gdelt_outlets}
+    day = (now.astimezone(ZoneInfo(settings.site.timezone)) - timedelta(days=1)).date()
+    outlets = [o for o in sentiment.labeled_outlets(store, settings, day.isoformat(), sentiment.waiting(sources)) if country.get(o)]
+    if not outlets:
+        return None
+    return {"day": f"{day.day} {day:%B}", "n": len(outlets), "us": sum(country[o] == "US" for o in outlets)}
+
+
+def _waiting(news: list, now: datetime) -> dict | None:
+    """Outlets still waiting to join the index (`index_from` after today), and the last day of the wait."""
+    dates = [f.index_from for f in news if f.index_from and f.index_from > now.date()]
+    if not dates:
+        return None
+    last = max(dates)
+    return {"n": len(dates), "until": f"{last.day} {last:%B}"}
 
 
 def about_context(store: Store, settings: Settings, sources: SourcesConfig, accounts: list[Account], now: datetime,
@@ -102,6 +126,9 @@ def about_context(store: Store, settings: Settings, sources: SourcesConfig, acco
             "gdelt": len(sources.gdelt_outlets),
         },
         "groups": groups,
+        "regions": [{"name": name, "n": sum(1 for f in news if f.country in codes)} for name, codes in REGIONS],
+        "us_share": _us_share(store, settings, sources, now),
+        "waiting": _waiting(news, now),
         "gdelt_outlets": [{"name": g.name, "country": g.country, "type": g.type} for g in sources.gdelt_outlets],
         "aggregators": [f.name for f in feeds if f.kind == "aggregator"],
         "newsletters": sorted((f.name for f in feeds if f.kind == "newsletter"), key=str.lower),

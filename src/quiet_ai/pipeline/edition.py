@@ -83,6 +83,23 @@ def _stance_key(m: dict) -> str:
     return str(m["stance"])
 
 
+def outlet_stances(press: list[dict]) -> Counter:
+    """One stance per outlet, like the sentiment index: the mean of its confident labels in the story, rounded;
+    "unclear" when it has only low-confidence ones, "unlabeled" when none. For the card's stripe, so an outlet that
+    files many articles on one story counts once."""
+    by_outlet: dict[str, list[dict]] = defaultdict(list)
+    for m in press:
+        by_outlet[m["source"]].append(m)
+    out: Counter = Counter()
+    for ms in by_outlet.values():
+        sure = [m["stance"] for m in ms if m["label"] is not None and m["confidence"] != "low" and m["stance"] is not None]
+        if sure:
+            out[str(round(sum(sure) / len(sure)))] += 1
+        else:
+            out["unclear" if any(m["label"] is not None for m in ms) else "unlabeled"] += 1
+    return out
+
+
 def story_entry(store: Store, sources: SourcesConfig, score: StoryScore, rank: int,
                 mentions: mentions_mod.Index = mentions_mod.EMPTY) -> dict[str, Any]:
     names = source_names(sources)
@@ -94,6 +111,7 @@ def story_entry(store: Store, sources: SourcesConfig, score: StoryScore, rank: i
 
     press = [m for m in members if m["kind"] in _PRESS_KINDS and not (m["kind"] == "newsletter" and (feeds.get(m["source"]) and feeds[m["source"]].role == "digest"))]
     stance = Counter(_stance_key(m) for m in press)
+    per_outlet = outlet_stances(press)
     groups: dict[str, list[dict]] = {}
     seen_outlets: set[str] = set()
     for m in sorted(press, key=lambda m: (m["source"], m["published_at"] or "")):
@@ -183,6 +201,7 @@ def story_entry(store: Store, sources: SourcesConfig, score: StoryScore, rank: i
         "outlets": int(score.features.get("outlets", 0)),
         "countries": int(score.features.get("countries", 0)),
         "stance": {k: stance.get(k, 0) for k in [*map(str, STANCES), "unclear", "unlabeled"]},
+        "stance_outlets": {k: per_outlet.get(k, 0) for k in [*map(str, STANCES), "unclear", "unlabeled"]},
         "stance_summary": stance_summary({k: stance.get(k, 0) for k in map(str, STANCES)}),
         "coverage": [{"stance": k, "items": groups[k], "countries": _countries(groups[k])}
                      for k in [*map(str, STANCES), "unclear", "unlabeled"] if k in groups],

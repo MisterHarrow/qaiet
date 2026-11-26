@@ -112,6 +112,29 @@ def test_sparkline_end_value_never_runs_into_an_axis_label():
     assert ">+1</text>" in near_floor and ">−1</text>" not in near_floor and ">−0.76</text>" in near_floor
 
 
+def test_outlets_in_a_new_language_wait_before_counting_in_the_index(settings):
+    from quiet_ai.config import FeedSource, SourcesConfig
+
+    st = Store(":memory:")
+    settings.sentiment.min_outlets = 3
+    for i, (src, stance) in enumerate([("a", 1), ("b", 1), ("c", 1), ("new", -2)]):
+        labeled(st, i, src, "political", stance)
+    today = NOW.date()
+    srcs = SourcesConfig(feeds=[FeedSource(id="new", name="New", kind="news", index_from=today + timedelta(days=14)),
+                                FeedSource(id="a", name="A", kind="news")])
+    wait = sentiment.waiting(srcs)
+    assert wait == {"new": (today + timedelta(days=14)).isoformat()}
+    sentiment.compute(st, settings, NOW, wait)
+    point = next(p for p in sentiment.history(st)["all"] if p["date"] == today.isoformat())
+    assert (point["value"], point["outlets"]) == (1.0, 3)  # "new" is labeled but not yet a voice
+    daily = sentiment.by_place(st, settings, {"a": "US", "b": "US", "c": "US", "new": "US"}, {"US": ["US"]}, today.isoformat(), wait)
+    assert sentiment.place_value(daily["US"], [today.isoformat()])["values"]["all"] == 1.0
+    assert sentiment.labeled_outlets(st, settings, today.isoformat(), wait) == {"a", "b", "c"}
+    sentiment.compute(st, settings, NOW, {"new": today.isoformat()})  # from its first day on, it counts
+    point = next(p for p in sentiment.history(st)["all"] if p["date"] == today.isoformat())
+    assert (point["value"], point["outlets"]) == (0.25, 4)
+
+
 def test_sentiment_by_place_uses_only_that_places_outlets(settings):
     st = Store(":memory:")
     settings.sentiment.min_outlets = 3
