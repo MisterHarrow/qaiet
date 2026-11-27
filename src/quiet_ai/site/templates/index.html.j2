@@ -91,6 +91,18 @@
     </ul>
   </section>
   {% endif %}
+  {% if e.food_data %}
+  {# EU farm-gate prices beside the food desk's news (pipeline/food_data.py): never labeled, never in the index. Ink only. #}
+  {% set fd = e.food_data %}
+  <section class="data-strip" aria-labelledby="farm-h">
+    <h2 class="eyebrow" id="farm-h">EU farm prices<span class="eyebrow-note">{% if fd.week %}week of {{ fd.week|day_label }}, {% endif %}EU average, change over 4 weeks (fertiliser: a month) · <a href="{{ fd.url }}">European Commission</a></span></h2>
+    <ul class="prices">
+      {% for f in fd.figures %}
+      <li><span class="zone">{{ f.label }}{% if f.monthly %} · {{ f.period|month_label }}{% endif %}</span><span class="pv">{{ f.value|eur if f.value >= 100 else f.value|eur2 }}</span><span class="range">{{ f.unit }}{% if f.change_pct is not none %} {{ f.change_pct|pct }}{% endif %}</span>{{ f.series|price_spark(f.label, f.unit_words, "price", "month" if f.monthly else "week", f.unit) }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
   {% if listen %}
   {# The edition read aloud (qa bulletin). The native player works without JS; app.js adds the speed buttons. #}
   <div class="listen" aria-labelledby="listen-h">

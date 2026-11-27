@@ -20,7 +20,7 @@ from quiet_ai.llm.client import LLM
 from quiet_ai.pipeline import archive
 from quiet_ai.pipeline import sentiment as sentiment_mod
 from quiet_ai.pipeline import edition as edition_mod
-from quiet_ai.pipeline import energy_data
+from quiet_ai.pipeline import energy_data, food_data
 from quiet_ai.pipeline import momentum
 from quiet_ai.pipeline import narratives as narratives_mod
 from quiet_ai.pipeline import stories as story_views
@@ -80,7 +80,7 @@ def ingest(
     try:
         reports = run_ingest(ctx, store, only=only, dry_run=dry_run)
         if record and not only:
-            console.print(f"[dim]energy data: {energy_data.update(store, ctx.http, ctx.settings, ctx.now)}[/]")
+            console.print(f"[dim]desk data: {_desk_data(store, ctx)}[/]")
     finally:
         ctx.http.close()
     if record:
@@ -174,7 +174,7 @@ def _open(dry_run: bool) -> tuple[Store, datetime]:
     store = Store(":memory:")
     ctx = _context("replay")
     run_ingest(ctx, store, dry_run=True)
-    energy_data.update(store, ctx.http, settings, ctx.now)
+    _desk_data(store, ctx)
     ctx.http.close()
     run_cluster(store, settings, sources, ctx.now, None, default_embedder(settings, offline=True))
     return store, ctx.now
@@ -250,7 +250,7 @@ def run(
     ctx = _context("live", fetch_state=store.load_fetch_state())
     ctx.known_urls = store.urls_for_sources([f.id for f in ctx.sources.feeds if f.sitemap])
     reports = run_ingest(ctx, store)
-    console.print(f"[dim]energy data: {energy_data.update(store, ctx.http, settings, ctx.now)}[/]")
+    console.print(f"[dim]desk data: {_desk_data(store, ctx)}[/]")
     ctx.http.close()
     bad = [r.result.source for r in reports if r.result.status not in ("ok", "not_modified")]
     console.print(f"[dim]ingest: {sum(r.new for r in reports)} new items; {len(bad)} sources failed {', '.join(bad[:8])}[/]")
@@ -306,18 +306,30 @@ def build(dry_run: DryRun = False, out: Out = None) -> None:
     console.print(f"wrote {_build_site(dry_run, out)}")
 
 
+def _desk_data(store: Store, ctx: Context) -> str:
+    """The figures beside the desks' news (energy prices, food prices). Never raises."""
+    return (f"energy: {energy_data.update(store, ctx.http, ctx.settings, ctx.now)}; "
+            f"food: {food_data.update(store, ctx.http, ctx.settings, ctx.now)}")
+
+
 @app.command()
-def energy() -> None:
-    """Fetch the energy desk's day-ahead prices into the database: one request, no model calls (qa run does
-    this too). The deploy runs it before qa build so a rebuilt page has today's prices. Never fails."""
+def data() -> None:
+    """Fetch the figures beside the desks' news (energy and food prices) into the database: a few requests, no
+    model calls (qa run does this too). The deploy runs it before qa build so a rebuilt page is current. Never fails."""
     settings = load_settings()
     store = Store(ROOT / settings.db_path)
     ctx = _context("live")
     try:
-        console.print(f"energy data: {energy_data.update(store, ctx.http, settings, ctx.now)}")
+        console.print(f"desk data: {_desk_data(store, ctx)}")
     finally:
         ctx.http.close()
         store.close()
+
+
+@app.command(hidden=True)
+def energy() -> None:
+    """Older name for qa data."""
+    data()
 
 
 @app.command()

@@ -218,6 +218,16 @@ CREATE TABLE IF NOT EXISTS energy_daily (
     updated_at TEXT NOT NULL,
     PRIMARY KEY (source, metric, zone, day)
 );
+
+-- Weekly or monthly figures beside a desk's news (pipeline/food_data.py): one value per metric and period.
+CREATE TABLE IF NOT EXISTS desk_figures (
+    desk       TEXT NOT NULL,   -- food
+    metric     TEXT NOT NULL,   -- cereal:BLTPAN | dairy:BUTTER | fertiliser:N (Nitrogen)
+    period     TEXT NOT NULL,   -- first day of the week or month (ISO date)
+    value      REAL NOT NULL,
+    updated_at TEXT NOT NULL,
+    PRIMARY KEY (desk, metric, period)
+);
 """
 
 

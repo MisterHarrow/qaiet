@@ -141,6 +141,9 @@ def about_context(store: Store, settings: Settings, sources: SourcesConfig, acco
                          "days": settings.energy_data.days}
                         if settings.energy_data.enabled and settings.energy_data.price_areas
                         and any(d.key == settings.energy_data.desk for d in settings.active_desks) else None),
+        "food_data": ({"desk": settings.food_data.desk,
+                       "figures": [f.label for f in settings.food_data.cereals + settings.food_data.dairy + settings.food_data.fertiliser]}
+                      if settings.food_data.enabled and any(d.key == settings.food_data.desk for d in settings.active_desks) else None),
         "regions": [{"name": name, "n": sum(1 for f in news if f.country in codes)} for name, codes in REGIONS],
         "us_share": _us_share(store, settings, sources, now),
         "waiting": _waiting(news, now),

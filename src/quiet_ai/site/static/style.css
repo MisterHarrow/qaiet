@@ -232,7 +232,8 @@ button { font: inherit; }
 @media (max-width: 34rem) {
   .prices { grid-template-columns: 1fr; gap: 0; }
   .prices li { grid-template-columns: minmax(0, 1fr) auto auto auto; grid-template-areas: "zone pv range spark"; padding: 0.35rem 0; }
-  .prices .zone { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .prices li { align-items: center; }
+  .prices .zone { min-width: 0; line-height: 1.25; } /* long names wrap rather than lose their end (a fertiliser's month) */
   .prices .pv { font-size: 1rem; }
 }
 .notice { max-width: 52rem; margin: 1.1rem 0 0; padding: 0.7rem 0.9rem; border-left: 3px solid var(--signal); background: var(--wash); font-size: 0.9rem; color: var(--muted); }

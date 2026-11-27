@@ -110,9 +110,9 @@ def test_qa_energy_fetches_into_the_database_and_never_fails(settings, tmp_path,
     monkeypatch.setattr(cli, "load_settings", lambda: settings)
     recs = quarter_hours("SE3", "2026-11-27", 80.0)
     monkeypatch.setattr(cli, "_context", lambda mode, fetch_state=None: make_ctx(settings, http_returning(settings, recs), now=NOW))
-    res = CliRunner().invoke(app, ["energy"])
+    res = CliRunner().invoke(app, ["data"])
     assert res.exit_code == 0 and "1 area-days" in res.output, res.output
     assert energy_data.block(Store(settings.db_path), settings, NOW)["areas"][0]["mean"] == 81.5
     monkeypatch.setattr(cli, "_context", lambda mode, fetch_state=None: make_ctx(settings, http_returning(settings, [], status=503), now=NOW))
-    res = CliRunner().invoke(app, ["energy"])
+    res = CliRunner().invoke(app, ["data"])
     assert res.exit_code == 0 and "prices not updated" in res.output  # a deploy never fails on it

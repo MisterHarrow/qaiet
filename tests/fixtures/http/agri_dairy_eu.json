@@ -1,0 +1,24 @@
+[
+ {
+  "memberStateCode": "EU",
+  "memberStateName": "European Union",
+  "beginDate": "16/11/2026",
+  "endDate": "22/11/2026",
+  "price": "€402.80",
+  "unit": "100KG",
+  "weekNumber": 47,
+  "year": 2026,
+  "product": "BUTTER"
+ },
+ {
+  "memberStateCode": "EU",
+  "memberStateName": "European Union",
+  "beginDate": "16/11/2026",
+  "endDate": "22/11/2026",
+  "price": "€348.69",
+  "unit": "100KG",
+  "weekNumber": 47,
+  "year": 2026,
+  "product": "SMP"
+ }
+]

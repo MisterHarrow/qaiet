@@ -19,7 +19,7 @@ uv run qa ingest -s github -s nyt  # only some sources or fetchers
 uv run qa ingest --dry-run       # replay recorded fixtures: no network, nothing written
 uv run qa run                    # everything: ingest, stories, labels, summaries, site
 uv run qa build                  # render site/ from the database (no LLM calls)
-uv run qa energy                 # fetch the energy desk's day-ahead prices (one request, no LLM calls)
+uv run qa data                   # fetch the desks' figures: energy and food prices (a few requests, no LLM calls)
 uv run qa serve                  # build and preview at http://localhost:8765
 uv run qa cluster                # relevance filter, embeddings, stories
 uv run qa classify               # labels (Haiku), momentum, summaries and weather (Sonnet); prints the edition

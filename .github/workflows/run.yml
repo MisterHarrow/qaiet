@@ -137,12 +137,12 @@ jobs:
             if [[ "$day" < "$cutoff" ]]; then gh release delete-asset audio "$asset" -y; fi
           done
 
-      # The energy desk's prices are one free request (no model calls), so a rebuilt page has today's figures
-      # even when the code that shows them was merged after the morning publish.
+      # The desks' figures (energy and food prices) are a few free requests (no model calls), so a rebuilt page has
+      # current figures even when the code that shows them was merged after the morning publish.
       - name: Build the site only (no model calls)
         if: env.MODE == 'deploy'
         run: |
-          uv run qa energy
+          uv run qa data
           uv run qa build
 
       - name: Save database

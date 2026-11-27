@@ -269,6 +269,9 @@ def _env() -> Environment:
     env.filters["narrative_chart"] = narrative_chart
     env.filters["seal"] = seal
     env.filters["price_spark"] = price_spark
+    env.filters["month_label"] = month_label
+    env.filters["pct"] = lambda v: "–" if v is None else (f"{v:+.1f}%".replace("-", "−"))
+    env.filters["eur2"] = lambda v: "–" if v is None else f"{v:,.2f}".replace("-", "−").replace(",", "\u202f")
     env.filters["eur"] = lambda v: "–" if v is None else f"{v:,.0f}".replace("-", "−").replace(",", "\u202f")
     env.globals.update(stance_names=STANCE_NAMES, kind_names=KIND_NAMES, country_names=COUNTRY_NAMES)
     return env
@@ -292,6 +295,12 @@ def day_label(d: str) -> str:
     """'2026-11-21' -> 'Sat 21 Nov'."""
     dt = datetime.fromisoformat(d)
     return f"{dt:%a} {dt.day} {dt:%b}"
+
+
+def month_label(d: str) -> str:
+    """'2026-09-01' -> 'Sep 2026'."""
+    dt = datetime.fromisoformat(d)
+    return f"{dt:%b %Y}"
 
 
 def _short_date(d: str) -> str:
@@ -692,9 +701,11 @@ def render_narratives(narratives: list[dict], out_dir: Path, tz: str = "Europe/S
     return page_dir / "index.html"
 
 
-def price_spark(points: list[dict], label: str) -> Markup:
-    """A week of daily mean prices as a small ink line, scaled to its own range, the last day marked. No color:
-    stance colors mean stance and --signal means navigation, so a price is drawn in ink only."""
+def price_spark(points: list[dict], label: str, unit: str = "€ per MWh", what: str = "daily mean", step: str = "day",
+                tip_unit: str = "€/MWh") -> Markup:
+    """Recent prices as a small ink line, scaled to its own range, the last point marked. No color: stance colors
+    mean stance and --signal means navigation, so a price is drawn in ink only. Energy: daily means; food: weekly
+    or monthly prices (`what`, `step`, `unit`)."""
     w, h, pad = 72, 22, 3
     vals = [p["value"] for p in points]
     if not vals:
@@ -705,14 +716,14 @@ def price_spark(points: list[dict], label: str) -> Markup:
     x = lambda i: pad + (w - 2 * pad) * (i / (n - 1) if n > 1 else 0.5)  # noqa: E731
     y = lambda v: pad + (h - 2 * pad) * ((hi - v) / span if hi > lo else 0.5)  # noqa: E731
     fmt = lambda v: f"{v:,.0f}".replace("-", "\u2212").replace(",", "\u202f")  # noqa: E731
-    desc = f"{label}: daily mean over {n} day{'s' if n != 1 else ''}, {fmt(vals[0])} to {fmt(vals[-1])} € per MWh"
+    desc = f"{label}: {what} over {n} {step}{'s' if n != 1 else ''}, {fmt(vals[0])} to {fmt(vals[-1])} {unit}"
     parts = [f'<svg class="spark-mini" viewBox="0 0 {w} {h}" width="{w}" height="{h}" role="img" aria-label="{escape(desc)}">']
     if n > 1:
         pts = " ".join(f"{x(i):.1f},{y(v):.1f}" for i, v in enumerate(vals))
         parts.append(f'<polyline points="{pts}"/>')
     for i, p in enumerate(points):
         parts.append(f'<circle class="{"now" if i == n - 1 else "day"}" cx="{x(i):.1f}" cy="{y(p["value"]):.1f}" r="{2 if i == n - 1 else 0.9}">'
-                     f'<title>{escape(day_label(p["date"]))}: {fmt(p["value"])} €/MWh</title></circle>')
+                     f'<title>{escape(day_label(p["date"]) if step != "month" else month_label(p["date"]))}: {fmt(p["value"])} {tip_unit}</title></circle>')
     parts.append("</svg>")
     return Markup("".join(parts))
 

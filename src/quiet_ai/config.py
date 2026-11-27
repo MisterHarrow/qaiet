@@ -320,6 +320,23 @@ class EnergyDataSettings(_Model):
     min_points: int = 88      # 15-minute prices in a day (92 on the short DST day); fewer marks the day partial
 
 
+class Figure(_Model):
+    code: str   # the API's product code or name, e.g. "BLTPAN", "BUTTER", "N (Nitrogen)"
+    label: str  # shown on the page
+
+
+class FoodDataSettings(_Model):
+    """EU farm-gate prices beside the food desk's news (pipeline/food_data.py, docs/food-data-plan.md). No model calls."""
+    enabled: bool = True
+    desk: str = "food"
+    api_url: str = "https://api.tech.ec.europa.eu/agrifood/api/"  # European Commission, CC BY 4.0
+    cereals: list[Figure] = Field(default_factory=list)      # weekly, EUR per tonne; label = the API's product name
+    dairy: list[Figure] = Field(default_factory=list)        # weekly, EUR per 100 kg
+    fertiliser: list[Figure] = Field(default_factory=list)   # monthly, EUR per tonne
+    points: int = 12          # sparkline length (weeks or months)
+    change_weeks: int = 4     # the change shown for weekly figures; monthly ones compare with the month before
+
+
 class Settings(_Model):
     db_path: str = "data/quiet-ai.db"
     db_release_url: str = ""  # public URL of the gzipped database the workflow saves (qa pull)
@@ -345,6 +362,7 @@ class Settings(_Model):
     narratives: NarrativeSettings = Field(default_factory=NarrativeSettings)
     bulletin: BulletinSettings = Field(default_factory=BulletinSettings)
     energy_data: EnergyDataSettings = Field(default_factory=EnergyDataSettings)
+    food_data: FoodDataSettings = Field(default_factory=FoodDataSettings)
     desks: list[DeskSettings] = Field(default_factory=lambda: [DeskSettings(key="ai", label="AI", name="AI", builders=True)])
 
     @property
