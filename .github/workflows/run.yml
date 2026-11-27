@@ -122,9 +122,10 @@ jobs:
       - name: Save audio
         if: env.MODE == 'publish'
         run: |
-          shopt -s nullglob
-          files=(data/audio/bulletin-$(TZ=Europe/Stockholm date +%F).*)
-          if [ ${#files[@]} -eq 0 ]; then echo "No bulletin today."; exit 0; fi
+          # Only a finished bulletin: a failed one leaves its script behind, which isn't worth keeping.
+          day=$(TZ=Europe/Stockholm date +%F)
+          if [ ! -f "data/audio/bulletin-$day.mp3" ]; then echo "No bulletin today."; exit 0; fi
+          files=(data/audio/bulletin-$day.*)
           gh release view audio >/dev/null 2>&1 || gh release create audio --prerelease --title "Audio" \
             --notes "The spoken bulletins: one MP3 per day with its script and details, made by the morning publish. The last 30 days are kept."
           gh release upload audio "${files[@]}" --clobber
