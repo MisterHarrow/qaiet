@@ -62,7 +62,9 @@ class LLM:
     def month_spend(self, now: datetime | None = None) -> float:
         now = now or datetime.now(timezone.utc)
         start = now.replace(day=1, hour=0, minute=0, second=0, microsecond=0)
-        row = self.store.conn.execute("SELECT COALESCE(SUM(cost_usd), 0) AS c FROM llm_calls WHERE created_at >= ?", (iso(start),)).fetchone()
+        # Text-to-speech (task "tts_...") is logged here too but has its own cap (bulletin.monthly_budget_usd).
+        row = self.store.conn.execute("SELECT COALESCE(SUM(cost_usd), 0) AS c FROM llm_calls WHERE created_at >= ? AND task NOT LIKE 'tts%'",
+                                      (iso(start),)).fetchone()
         return float(row["c"])
 
     def budget_left(self) -> float:

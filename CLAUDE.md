@@ -17,10 +17,11 @@ uv sync
 uv run qa pull         # replace data/quiet-ai.db with the live database (needed before build/serve)
 uv run qa build        # render site/ from the database; no model calls
 uv run qa serve        # build and preview at http://localhost:8765 (also the "quiet-ai" entry in .claude/launch.json)
+uv run qa bulletin     # today's spoken bulletin by hand (the Mac job makes it daily; Ming: uv sync --extra voice)
 uv run pytest          # must pass before every push; no network, no model calls
 ```
 
-- `.env` holds `ANTHROPIC_API_KEY`. Benjamin set it. **Never read, print or commit `.env`**, and never enter keys or tokens yourself.
+- `.env` holds `ANTHROPIC_API_KEY` (and `ELEVENLABS_API_KEY`, only used if `bulletin.tts_engine` is elevenlabs). Benjamin set them. **Never read, print or commit `.env`**, and never enter keys or tokens yourself.
 - `--dry-run` on `ingest`, `cluster` and `classify` replays recorded fixtures: no network, no model calls.
 - `qa run` is the full pipeline. It **calls the API and costs money**, so don't run it casually; `qa build` is enough for anything on the page.
 
@@ -46,6 +47,7 @@ uv run pytest          # must pass before every push; no network, no model calls
 
 ## Rules that don't bend
 
+- **Money:** agents never make budget or financial decisions; they only advise (Benjamin, 2026-11-27). Never set, raise or lower a spending cap or price (`llm.monthly_budget_usd`, `bulletin.monthly_budget_usd` and the like), never turn on a paid step or make one run more often, and never pick a paid plan or model for its cost, without Benjamin's explicit yes for that exact change. Propose the figure and the reason; Benjamin decides. A cap an agent changed without that yes is reverted.
 - **Sources:** free only. No X/Twitter and nothing that needs payment from Benjamin. The Anthropic API is the only cost.
   - Never fetch x.com or reddit.com (robots.txt blocks us; Reddit API access was requested 2026-11-25 and is pending). X posts and Reddit threads appear only second-hand, from the AINews recap (`mentions: true` on a source, `pipeline/mentions.py`):
     - Links a recap bullet puts next to a story's or project's URL: only the links, account, subreddit, thread title and activity count are kept.
@@ -65,10 +67,11 @@ uv run pytest          # must pass before every push; no network, no model calls
   - No images, analytics, cookies or third-party scripts (inline `data:` SVGs only: the favicon and the seal's paper grain).
   - Favicons are inline `data:` SVGs.
   - `tests/test_site.py` checks this.
-- **The page works without JavaScript.** `app.js` only adds the filters, the light/dark switch (hidden without JS, so the page stays light), the tabbed window that gathers open cards' sources (without JS each card's sources open under its own row), the greeting's count-up, and, on a narrative's page, the narrative seal writing out its days and then turning slowly. localStorage holds the theme choice and sessionStorage a flag that the greeting played this visit. No cookies.
+- **The page works without JavaScript.** `app.js` only adds the filters, the light/dark switch (hidden without JS, so the page stays light), the tabbed window that gathers open cards' sources (without JS each card's sources open under its own row), the greeting's count-up, and, on a narrative's page, the narrative seal writing out its days and then turning slowly, and the spoken bulletin's speed buttons. localStorage holds the theme choice and the bulletin's speed, sessionStorage a flag that the greeting played this visit. No cookies.
 - **Model costs:**
   - The monthly cap is $30 (`llm.monthly_budget_usd`). A daily publish costs about $0.05–0.15.
-  - Models: Haiku 5.5 for items, Sonnet 5.5 for story summaries and the daily line. Opus 5.5 is only for `qa eval crosscheck`; thinking can't be turned off on Opus 5.5.
+  - Models: Haiku 5.5 for items, Sonnet 5.5 for story summaries, the daily line and the bulletin's script. Opus 5.5 is only for `qa eval crosscheck`; thinking can't be turned off on Opus 5.5.
+  - The spoken bulletin (`pipeline/bulletin.py`, `bulletin:` in `settings.yaml`): the publish (`qa run`) has Sonnet write the day's script (about $0.04); the voice is Ming-3.0-tts (MIT, free; Benjamin chose it on 2026-11-27 after a full-length test, over ElevenLabs George, whose free tier is too small for daily use and blocked from GitHub's servers). Ming runs only on Apple Silicon (mlx-audio, the `voice` extra), so Benjamin's Mac voices it (`deploy/mac/`, launchd each morning). It is never made from the page. `tts_engine: elevenlabs` is still supported (paid, its own cap `bulletin.monthly_budget_usd`); switching to it is Benjamin's decision. A failed bulletin never stops the publish.
 - **Prompts are versioned:**
   - To change one, add a new file (`<task>_vN.md`) and point `settings.yaml` at it; never edit a version in place.
   - A new version relabels on the next run, which costs money. Say so before doing it.
@@ -125,5 +128,6 @@ uv run pytest          # must pass before every push; no network, no model calls
   - DNS is at Namecheap: a CNAME for `news` points to Vercel. The apex b3njamin.ai is a separate Vercel project.
   - GitHub Pages only serves `deploy/pages-redirect/` (a forward to news.b3njamin.ai, keeping the path), so old links keep working.
   - `.vercel/` and `.env.local` (from `vercel link`) are git-ignored; never commit them.
+- **The spoken bulletin**: the publish keeps the day's script as an `audio` release asset; `deploy/mac/bulletin.sh` on Benjamin's Mac (launchd, 07:10 to 11:10; `deploy/mac/install.sh`, `--remove` to undo) voices it offline with Ming, uploads the MP3 and starts `-f mode=deploy` (the one deploy that runs without asking: it is the bulletin's own step). The release keeps 30 days; every publish and deploy restores it, so the players stay. Audio never goes into git; Ming's weights stay in the Mac's Hugging Face cache and are never downloaded by the job (`HF_HUB_OFFLINE=1`). Log: `~/Library/Logs/qaiet-bulletin.log`.
 - **Changes to the page go live on the next publish**, or right away with `gh workflow run run.yml --repo MisterHarrow/qaiet -f mode=deploy`: it rebuilds the site from the saved database with no model calls. Run it only after the morning publish (the rebuilt page carries the current time, so earlier it would stop that day's publish). Both update the public site, so ask Benjamin first; `-f mode=publish` also costs model money.
 - The workflow commits `editions/*.json` to `main`. Run `git pull --rebase` before pushing.

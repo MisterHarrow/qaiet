@@ -485,6 +485,20 @@ def period_path(index: int, key: str) -> str:
     return "" if index == 0 else f"{key}/"
 
 
+def listen_files(bulletin: dict | None, out_dir: Path, root: str) -> dict | None:
+    """Copy a day's spoken bulletin (pipeline/bulletin.for_page) into the site's audio/ folder; links for the player."""
+    if not bulletin:
+        return None
+    audio = out_dir / "audio"
+    audio.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(bulletin["mp3"], audio / bulletin["mp3"].name)
+    listen = {"src": f"{root}audio/{bulletin['mp3'].name}", "minutes": bulletin.get("minutes"), "transcript": None}
+    if bulletin.get("txt"):
+        shutil.copy2(bulletin["txt"], audio / bulletin["txt"].name)
+        listen["transcript"] = f"{root}audio/{bulletin['txt'].name}"
+    return listen
+
+
 def desk_row(root: str, desks: list[dict] | None, active: str | None) -> list[dict]:
     """The desk row under the nameplate: every desk ({key, label, prefix, value}) with its link from this page.
     Empty with a single desk."""
@@ -503,10 +517,11 @@ def _desk_context(root: str, desk: dict | None, desks: list[dict] | None) -> dic
 
 
 def render(edition: dict, out_dir: Path, tz: str = "Europe/Stockholm", periods: list[dict] | None = None, rel_path: str | None = None,
-           extra: dict | None = None, desk: dict | None = None, desks: list[dict] | None = None) -> Path:
+           extra: dict | None = None, desk: dict | None = None, desks: list[dict] | None = None, bulletin: dict | None = None) -> Path:
     """Render one view. `periods` lists every view ({key, label, path}) for the switcher.
     `rel_path` overrides where the page goes (used for archive pages, which get no switcher).
-    `desk` is this page's desk ({key, label, name, prefix}); `desks` all of them, for the desk row."""
+    `desk` is this page's desk ({key, label, name, prefix}); `desks` all of them, for the desk row.
+    `bulletin` (pipeline/bulletin.for_page) adds the spoken edition's player."""
     period = edition.get("period") or {"key": "day", "label": "24 hours"}
     periods = periods if periods is not None else [{"key": period["key"], "label": period["label"], "path": ""}]
     me = next((p for p in periods if p["key"] == period["key"]), {"path": ""})
@@ -542,6 +557,7 @@ def render(edition: dict, out_dir: Path, tz: str = "Europe/Stockholm", periods: 
         updated=f"{local:%H:%M}",
         tz_name=tz.split("/")[-1],
         data_since=_long_date(datetime.fromisoformat(since).astimezone(zone)) if since else None,
+        listen=listen_files(bulletin, out_dir, root),
         **_desk_context(root, desk, desks),
         **(extra or {}),
     )
@@ -571,13 +587,23 @@ def write_host_config(out_dir: Path) -> Path:
 
 
 def render_all(editions: list[dict], out_dir: Path, tz: str = "Europe/Stockholm", desk: dict | None = None,
-               desks: list[dict] | None = None) -> list[Path]:
+               desks: list[dict] | None = None, audio_dir: Path | None = None) -> list[Path]:
     """Render every view of one desk with a shared switcher. `editions` are in display order. A desk other than
-    the first lives in its folder (/energy/, /energy/week/, ...)."""
+    the first lives in its folder (/energy/, /energy/week/, ...). The 24-hour view gets the player when that day's
+    spoken bulletin is in `audio_dir`."""
+    from quiet_ai.pipeline import bulletin
+
     prefix = (desk or {}).get("prefix", "")
     periods = [{"key": e["period"]["key"], "label": e["period"]["label"], "path": prefix + period_path(i, e["period"]["key"])}
                for i, e in enumerate(editions)]
-    return [render(e, out_dir, tz, periods, desk=desk, desks=desks) for e in editions]
+    zone = ZoneInfo(tz)
+
+    def spoken(e: dict) -> dict | None:
+        if e["period"]["key"] != "day":
+            return None
+        return bulletin.for_page(audio_dir, datetime.fromisoformat(e["generated_at"]).astimezone(zone).date().isoformat())
+
+    return [render(e, out_dir, tz, periods, desk=desk, desks=desks, bulletin=spoken(e)) for e in editions]
 
 
 def desk_list(desks, editions: dict[str, list[dict]]) -> list[dict]:
@@ -609,13 +635,17 @@ def render_about(context: dict, out_dir: Path, tz: str = "Europe/Stockholm") -> 
 
 
 def render_archive(editions: list[dict], out_dir: Path, tz: str = "Europe/Stockholm", desk: dict | None = None,
-                   desks: list[dict] | None = None) -> Path:
-    """One frozen page per finished day, plus <desk>/archive/ listing them (newest first)."""
+                   desks: list[dict] | None = None, audio_dir: Path | None = None) -> Path:
+    """One frozen page per finished day, plus <desk>/archive/ listing them (newest first). A day with a spoken
+    bulletin in `audio_dir` gets its player."""
+    from quiet_ai.pipeline import bulletin
+
     prefix = (desk or {}).get("prefix", "")
     days = []
     for e in editions:
         date = e["frozen"]["date"]
-        render(e, out_dir, tz, periods=[], rel_path=f"{prefix}archive/{date}/", desk=desk, desks=desks)
+        render(e, out_dir, tz, periods=[], rel_path=f"{prefix}archive/{date}/", desk=desk, desks=desks,
+               bulletin=bulletin.for_page(audio_dir, date))
         days.append({
             "date": date,
             "long": _long_date(datetime.fromisoformat(date)),

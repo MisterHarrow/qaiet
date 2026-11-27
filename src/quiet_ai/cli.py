@@ -189,6 +189,8 @@ def _analyze_and_print(store: Store, now: datetime, dry_run: bool, no_llm: bool,
             archive.save_day_edition(store, eds[0], now, tz, desk)
         frozen = archive.freeze(store, ROOT / settings.site.editions_dir, now, tz)
         pruned = archive.prune(store, now, vacuum=bool(frozen))
+        if settings.bulletin.daily and llm is not None:
+            console.print(f"[dim]bulletin: {_spoken(store, settings, now, llm, run_id)}[/]")
         _render_site(store, settings, sources, now, editions, ROOT / settings.site.out_dir)
         console.print(f"[dim]site: {len(editions)} desks × {len(settings.site.periods)} views, /about, /archive in {settings.site.out_dir}/; "
                       f"froze {', '.join(frozen) or 'nothing'}; pruned {sum(pruned.values())} rows[/]")
@@ -266,12 +268,14 @@ def _editions(store: Store, settings, sources, now: datetime, desk_views=None) -
 def _render_site(store: Store, settings, sources, now: datetime, editions: dict[str, list[dict]], out: Path) -> Path:
     """Every desk's views, narratives, index and archive (from the frozen files in editions/), plus /about."""
     tz = settings.site.timezone
+    audio = ROOT / settings.bulletin.audio_dir
     desks = site_build.desk_list(settings.active_desks, editions)
     pages = []
     for d in desks:
-        pages += site_build.render_all(editions[d["key"]], out, tz, d, desks)
+        spoken = audio if d["key"] == "ai" else None  # the bulletin reads AI's edition
+        pages += site_build.render_all(editions[d["key"]], out, tz, d, desks, spoken)
         folder = archive.desk_dir(ROOT / settings.site.editions_dir, d["key"])
-        site_build.render_archive(archive.load_frozen(folder), out, tz, d, desks)
+        site_build.render_archive(archive.load_frozen(folder), out, tz, d, desks, spoken)
         site_build.render_sentiment(sentiment_mod.history(store, desk=d["key"]), out, tz, d, desks)
         site_build.render_narratives(narratives_mod.detect(store, settings, sources, now, d["key"]), out, tz, settings.narratives.min_days, d, desks)
     site_build.render_about(about_context(store, settings, sources, load_accounts(), now, gold=GOLD, crosscheck=crosscheck_path()), out, tz)
@@ -349,6 +353,59 @@ def pull() -> None:
     n = store.conn.execute("SELECT COUNT(*) FROM items").fetchone()[0]
     store.close()
     console.print(f"pulled {target} ({target.stat().st_size / 1e6:.1f} MB, {n} items); previous copy kept as {target.with_suffix('.db.bak').name}")
+
+
+def _spoken(store: Store, settings, now: datetime, llm: LLM, run_id: str, day: str = "", script: str | None = None,
+            force: bool = False) -> str:
+    """Make the day's spoken bulletin unless it exists. Never raises: a failed bulletin must not stop a publish."""
+    from quiet_ai.pipeline import bulletin as bulletin_mod
+
+    day = day or archive.local_date(now, settings.site.timezone)
+    audio_dir = ROOT / settings.bulletin.audio_dir
+    files = bulletin_mod.paths(audio_dir, day)
+    if files["mp3"].exists() and not force:
+        return f"{day} already voiced"
+    if script is None and files["txt"].exists() and not force:
+        script = files["txt"].read_text(encoding="utf-8")  # an earlier try wrote it: voice it, don't pay for a new one
+    tts = bulletin_mod.engine(settings.bulletin)
+    try:
+        res = bulletin_mod.make(store, settings, day, audio_dir, llm, tts, now, run_id, script)
+    except Exception as e:  # no key, budget, ffmpeg, HTTP: say so and carry on
+        msg = str(e) if isinstance(e, bulletin_mod.BulletinUnavailable) else type(e).__name__
+        return f"[yellow]not made: {msg}[/]"
+    finally:
+        tts.close()
+    return (f"{res.mp3.relative_to(ROOT)}, {res.duration_s / 60:.1f} min, {res.paragraphs} paragraphs, {res.chars:,} characters; "
+            f"script ${res.script_cost_usd:.3f}, speech ${res.tts_cost_usd:.2f}")
+
+
+@app.command()
+def bulletin(
+    day: Annotated[str, typer.Option("--date", help="Local date of a saved edition (default: today).")] = "",
+    reuse_script: Annotated[bool, typer.Option("--reuse-script", help="Voice that day's existing script again: no Sonnet call.")] = False,
+    force: Annotated[bool, typer.Option("--force", help="Make it again even if that day's audio exists.")] = False,
+) -> None:
+    """Make the spoken bulletin by hand (qa run makes it every day): Sonnet script, ElevenLabs voice, about $0.60."""
+    from quiet_ai.pipeline import bulletin as bulletin_mod
+
+    load_dotenv()
+    settings = load_settings()
+    now = _now()
+    day = day or archive.local_date(now, settings.site.timezone)
+    txt = bulletin_mod.paths(ROOT / settings.bulletin.audio_dir, day)["txt"]
+    script = None
+    if reuse_script:
+        if not txt.exists():
+            raise typer.BadParameter(f"no script at {txt.relative_to(ROOT)} to reuse")
+        script = txt.read_text(encoding="utf-8")
+    store = Store(ROOT / settings.db_path)
+    run_id = store.start_run("bulletin", False, now)
+    note = _spoken(store, settings, now, LLM(settings.llm, store, run_id), run_id, day, script, force)
+    store.finish_run(run_id, _now())
+    store.close()
+    console.print(note)
+    if "not made" in note:
+        raise typer.Exit(1)
 
 
 @app.command()

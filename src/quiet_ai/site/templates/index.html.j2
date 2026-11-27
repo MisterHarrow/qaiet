@@ -79,6 +79,18 @@
   {% if e.weather %}
   <p class="weather">{{ e.weather }}</p>
   {% endif %}
+  {% if listen %}
+  {# The edition read aloud (qa bulletin). The native player works without JS; app.js adds the speed buttons. #}
+  <div class="listen" aria-labelledby="listen-h">
+    <p class="eyebrow" id="listen-h">Listen<span class="eyebrow-note">{% if listen.minutes %}{{ listen.minutes }} min, {% endif %}read by a synthetic voice{% if listen.transcript %} · <a href="{{ listen.transcript }}">transcript</a>{% endif %}</span></p>
+    <div class="listen-row">
+      <audio controls preload="none" src="{{ listen.src }}"></audio>
+      <div class="speed" role="group" aria-label="Playback speed" hidden>
+        {% for r in ["1", "1.25", "1.5", "1.75", "2"] %}<button type="button" data-rate="{{ r }}" aria-pressed="{{ 'true' if r == '1' else 'false' }}">{{ r }}×</button>{% endfor %}
+      </div>
+    </div>
+  </div>
+  {% endif %}
   </div>
   </div>
   {% if e.llm.budget_reached %}
