@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:nyt="http://www.nytimes.com/namespaces/rss/2.0" version="2.0">
+  <channel>
+    <title>NYT &gt; Climate and Environment</title>
+    <link>https://www.nytimes.com/section/climate</link>
+    <atom:link href="https://rss.nytimes.com/services/xml/rss/nyt/Climate.xml" rel="self" type="application/rss+xml"></atom:link>
+    <description></description>
+    <language>en-us</language>
+    <copyright>Copyright 2026 The New York Times Company</copyright>
+    <lastBuildDate>Thu, 26 Nov 2026 14:43:49 +0000</lastBuildDate>
+    <pubDate>Thu, 26 Nov 2026 10:04:04 +0000</pubDate>
+    <image>
+      <title>NYT &gt; Climate and Environment</title>
+      <url>https://static01.nyt.com/images/misc/NYT_logo_rss_250x40.png</url>
+      <link>https://www.nytimes.com/section/climate</link>
+    </image>
+    <item>
+      <title>After Extraordinary Iowa Explosion, Officials and Scientists Assess Fallout Risks</title>
+      <link>https://www.nytimes.com/2026/11/25/us/iowa-army-ammunition-blast.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2026/11/25/us/iowa-army-ammunition-blast.html</guid>
+      <atom:link href="https://www.nytimes.com/2026/11/25/us/iowa-army-ammunition-blast.html" rel="standout"></atom:link>
+      <description>Military and civilian authorities said the Army operation was a success. But testing will continue to make sure residents are safe from contamination.</description>
+      <dc:creator>Evan Halper, Quinn Glabicki and Hiroko Tabuchi</dc:creator>
+      <pubDate>Wed, 25 Nov 2026 23:09:50 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">live-detached</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Iowa Army Ammunition Plant (Middletown, Iowa)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States Defense and Military Forces</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Hazardous and Toxic Substances</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Lead</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Soil</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Water Pollution</category>
+    </item>
+    <item>
+      <title>A Pier Partially Collapses as California’s Tides Enter ‘Uncharted Territory’</title>
+      <link>https://www.nytimes.com/2026/11/25/weather/california-king-tides-sf-la.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2026/11/25/weather/california-king-tides-sf-la.html</guid>
+      <atom:link href="https://www.nytimes.com/2026/11/25/weather/california-king-tides-sf-la.html" rel="standout"></atom:link>
+      <description>High tide records were set in San Diego, Santa Barbara and Monterey on Wednesday.</description>
+      <dc:creator>Judson Jones, Amy Graff and Breena Kerr</dc:creator>
+      <pubDate>Wed, 25 Nov 2026 23:01:32 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">California</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Weather</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Floods</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Beaches</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Oceans and Seas</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">El Nino Southern Oscillation</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Santa Barbara (Calif)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Santa Cruz County (Calif)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">San Francisco Bay Area (Calif)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Marin County (Calif)</category>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2026/11/25/multimedia/25wea-CATIDES-vmlh/25wea-CATIDES-vmlh-mediumSquareAt3X.jpg" width="1800"></media:content>
+      <media:credit>Josh Edelson/Agence France-Presse — Getty Images</media:credit>
+      <media:description>After a storm cleared out on Wednesday morning, the waves began cresting under sunny November skies in Pacifica, Calif. </media:description>
+    </item>
+    <item>
+      <title>COP31 Climate Talks Broke Down. Now What?</title>
+      <link>https://www.nytimes.com/2026/11/23/climate/cop31-collapse-what-next.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2026/11/23/climate/cop31-collapse-what-next.html</guid>
+      <atom:link href="https://www.nytimes.com/2026/11/23/climate/cop31-collapse-what-next.html" rel="standout"></atom:link>
+      <description>With big diplomatic efforts faltering, smaller pacts, local leaders and booming clean energy take center stage.</description>
+      <dc:creator>Lisa Friedman and Chico Harlan</dc:creator>
+      <pubDate>Mon, 23 Nov 2026 16:18:49 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United Nations Framework Convention on Climate Change</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Global Warming</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Greenhouse Gas Emissions</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Antalya (Turkey)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">United Nations</category>
+      <category domain="">COP31</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Alternative and Renewable Energy</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Developing Countries</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Oil (Petroleum) and Gasoline</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Regulation and Deregulation of Industry</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Trump, Donald J</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Saudi Arabia</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Russia</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">European Union</category>
+      <media:content height="1718" medium="image" url="https://static01.nyt.com/images/2026/11/23/multimedia/23CLI-COP31-WHAT-NOW-1-fpgh/23CLI-COP31-WHAT-NOW-1-fpgh-mediumSquareAt3X-v2.jpg" width="1717"></media:content>
+      <media:credit>Chris McGrath/Getty Images</media:credit>
+      <media:description>Chris Bowen, the Australian president of negotiations, on Sunday in Antalya, Turkey.</media:description>
+    </item>
+    <item>
+      <title>Turkey’s Van Cats Contend With Rising Temperatures</title>
+      <link>https://www.nytimes.com/2026/11/20/climate/van-cats-turkey.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2026/11/20/climate/van-cats-turkey.html</guid>
+      <atom:link href="https://www.nytimes.com/2026/11/20/climate/van-cats-turkey.html" rel="standout"></atom:link>
+      <description>A feline research center in Turkey uses air-conditioning and pools to keep residents comfortable as their numbers recover. And yes, they like to swim.</description>
+      <dc:creator>Lisa Friedman and Rena Effendi</dc:creator>
+      <pubDate>Sat, 21 Nov 2026 12:31:35 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Cats</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Turkey</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Van (Turkey)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Global Warming</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Heat and Heat Waves</category>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2026/11/20/multimedia/20CLI-COP-CATS-stillpromo/20CLI-COP-CATS-stillpromo-mediumSquareAt3X.jpg" width="1800"></media:content>
+      <media:credit>Rena Effendi for The New York Times</media:credit>
+    </item>
+    <item>
+      <title>Senate Passes Major Permitting Bill to Speed Up Energy Projects</title>
+      <link>https://www.nytimes.com/2026/11/19/climate/senate-passes-baaja-permitting-bill-energy.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2026/11/19/climate/senate-passes-baaja-permitting-bill-energy.html</guid>
+      <atom:link href="https://www.nytimes.com/2026/11/19/climate/senate-passes-baaja-permitting-bill-energy.html" rel="standout"></atom:link>
+      <description>The bill would overhaul federal environmental laws to make it easier to build everything from gas pipelines to wind farms. But it faces hurdles in the House.</description>
+      <dc:creator>Brad Plumer and Olivia Diaz</dc:creator>
+      <pubDate>Fri, 20 Nov 2026 12:31:59 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">House of Representatives</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Republican Party</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Democratic Party</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Regulation and Deregulation of Industry</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Law and Legislation</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Environment</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Infrastructure (Public Works)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Electric Light and Power</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Wind Power</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Solar Energy</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Pipelines</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Oil (Petroleum) and Gasoline</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Natural Gas</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Water Pollution</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Artificial Intelligence</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Native Americans</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Federal Lands</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Data Centers</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Trump, Donald J</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Capito, Shelley Moore</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Heinrich, Martin</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Lee, Michael S (1971- )</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Whitehouse, Sheldon</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States Politics and Government</category>
+      <media:content height="1801" medium="image" url="https://static01.nyt.com/images/2026/11/20/multimedia/20cli-permitting-senate-HFO2-qlhz/20cli-permitting-senate-HFO2-qlhz-mediumSquareAt3X.jpg" width="1800"></media:content>
+      <media:credit>Nina Riggio for The New York Times</media:credit>
+      <media:description>Power lines that carry electricity from Utah’s Intermountain Power Plant to Los Angeles run through Delta, Utah.</media:description>
+    </item>
+  </channel>
+</rss>

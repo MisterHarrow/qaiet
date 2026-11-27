@@ -9,6 +9,7 @@
 # type also allows `wire` (news agencies).
 # sitemap: for sources with no feed. Only URLs modified within ingest.max_age_days and not seen before are read.
 # ai_focused: true = an AI-only feed (AI section, AI newsletter, lab blog); its items skip the relevance check.
+# desk: <key> = a feed wholly about another desk (energy, biotech, space, food); its items go there without a relevance call.
 # index_from: date = this outlet's labels count in the sentiment index from that day. Optional; Benjamin chose no
 #   wait for new languages (2026-11-26; docs/global-coverage-plan.md), so no source sets it today.
 verified_at: '2026-11-24'
@@ -21,6 +22,10 @@ sources:
   group: us-mainstream
   feeds:
   - https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml
+  - https://rss.nytimes.com/services/xml/rss/nyt/Climate.xml  # desks: energy (2026-11-26)
+  - https://rss.nytimes.com/services/xml/rss/nyt/Health.xml  # desks: biotech (2026-11-26)
+  - https://rss.nytimes.com/services/xml/rss/nyt/Space.xml  # desks: space (2026-11-26)
+  - https://rss.nytimes.com/services/xml/rss/nyt/Science.xml  # desks: space, biotech (2026-11-26)
 - id: wapo
   name: The Washington Post
   country: US
@@ -29,6 +34,7 @@ sources:
   group: us-mainstream
   feeds:
   - https://feeds.washingtonpost.com/rss/business/technology
+  - https://feeds.washingtonpost.com/rss/national/health-science  # desks: biotech (2026-11-26)
 - id: wsj
   name: The Wall Street Journal
   country: US
@@ -46,6 +52,7 @@ sources:
   group: us-mainstream
   feeds:
   - https://feeds.bloomberg.com/technology/news.rss
+  - https://feeds.bloomberg.com/industries/news.rss  # desks: energy, biotech (2026-11-26)
 - id: cnbc
   name: CNBC
   country: US
@@ -54,6 +61,8 @@ sources:
   group: us-mainstream
   feeds:
   - https://www.cnbc.com/id/19854910/device/rss/rss.html
+  - https://www.cnbc.com/id/19836768/device/rss/rss.html  # desks: energy (2026-11-26)
+  - https://www.cnbc.com/id/10000108/device/rss/rss.html  # desks: biotech (2026-11-26)
 - id: npr
   name: NPR
   country: US
@@ -62,6 +71,9 @@ sources:
   group: us-mainstream
   feeds:
   - https://feeds.npr.org/1019/rss.xml
+  - https://feeds.npr.org/1167/rss.xml  # desks: energy (2026-11-26)
+  - https://feeds.npr.org/1128/rss.xml  # desks: biotech (2026-11-26)
+  - https://feeds.npr.org/1007/rss.xml  # desks: space, biotech (2026-11-26)
 - id: politico
   name: Politico
   country: US
@@ -70,6 +82,9 @@ sources:
   group: us-mainstream
   feeds:
   - https://rss.politico.com/technology.xml
+  - https://rss.politico.com/energy.xml  # desks: energy (2026-11-26)
+  - https://rss.politico.com/healthcare.xml  # desks: biotech (2026-11-26)
+  - https://rss.politico.com/agriculture.xml  # desks: food (2026-11-26)
 - id: semafor
   name: Semafor
   country: US
@@ -87,6 +102,8 @@ sources:
   group: us-mainstream
   feeds:
   - https://thehill.com/policy/technology/feed/
+  - https://thehill.com/policy/energy-environment/feed/  # desks: energy (2026-11-26)
+  - https://thehill.com/policy/healthcare/feed/  # desks: biotech (2026-11-26)
 - id: fortune
   name: Fortune
   country: US
@@ -113,6 +130,8 @@ sources:
   group: us-left
   feeds:
   - https://www.theatlantic.com/feed/channel/technology/
+  - https://www.theatlantic.com/feed/channel/science/  # desks: space, biotech (2026-11-26)
+  - https://www.theatlantic.com/feed/channel/health/  # desks: biotech (2026-11-26)
   llm: false
   notes: 'robots.txt Content-Signal: ai-input=no. Headlines are listed and counted, never sent to the LLM, so no stance label.'
 - id: vox
@@ -123,6 +142,7 @@ sources:
   group: us-left
   feeds:
   - https://www.vox.com/rss/technology/index.xml
+  - https://www.vox.com/rss/climate/index.xml  # desks: energy (2026-11-26)
 - id: slate
   name: Slate
   country: US
@@ -148,6 +168,7 @@ sources:
   group: us-left
   feeds:
   - https://www.thenation.com/subject/technology/feed/
+  - https://www.thenation.com/subject/environment/feed/  # desks: energy (2026-11-26)
 - id: fox
   name: Fox News
   country: US
@@ -156,6 +177,7 @@ sources:
   group: us-right
   feeds:
   - https://moxie.foxnews.com/google-publisher/tech.xml
+  - https://moxie.foxnews.com/google-publisher/health.xml  # desks: biotech (2026-11-26)
 - id: nypost
   name: New York Post
   country: US
@@ -164,6 +186,7 @@ sources:
   group: us-right
   feeds:
   - https://nypost.com/tech/feed/
+  - https://nypost.com/health/feed/  # desks: biotech (2026-11-26)
 - id: wex
   name: Washington Examiner
   country: US
@@ -172,6 +195,7 @@ sources:
   group: us-right
   feeds:
   - https://www.washingtonexaminer.com/tag/technology/feed/
+  - https://www.washingtonexaminer.com/tag/energy/feed/  # desks: energy (2026-11-26)
 - id: natreview
   name: National Review
   country: US
@@ -286,6 +310,8 @@ sources:
   group: uk-eu
   feeds:
   - https://feeds.bbci.co.uk/news/technology/rss.xml
+  - https://feeds.bbci.co.uk/news/science_and_environment/rss.xml  # desks: space, energy, biotech (2026-11-26)
+  - https://feeds.bbci.co.uk/news/health/rss.xml  # desks: biotech (2026-11-26)
 - id: guardian
   name: The Guardian
   country: GB
@@ -295,6 +321,12 @@ sources:
   feeds:
   - https://www.theguardian.com/technology/artificialintelligenceai/rss
   - https://www.theguardian.com/us/technology/rss
+  - https://www.theguardian.com/environment/energy/rss  # desks: energy (2026-11-26)
+  - https://www.theguardian.com/science/space/rss  # desks: space (2026-11-26)
+  - https://www.theguardian.com/science/rss  # desks: space, biotech (2026-11-26)
+  - https://www.theguardian.com/environment/farming/rss  # desks: food (2026-11-26)
+  - https://www.theguardian.com/global-development/food-security/rss  # desks: food (2026-11-26)
+  - https://www.theguardian.com/business/pharmaceuticals-industry/rss  # desks: biotech (2026-11-26)
   notes: Guardian US merged in (same newsroom; counting it twice would double its coverage).
 - id: ft
   name: Financial Times
@@ -333,6 +365,8 @@ sources:
   group: uk-eu
   feeds:
   - https://www.politico.eu/section/technology/feed/
+  - https://www.politico.eu/section/energy/feed/  # desks: energy (2026-11-26)
+  - https://www.politico.eu/section/health-care/feed/  # desks: biotech (2026-11-26)
 - id: lemonde
   name: Le Monde
   country: FR
@@ -368,6 +402,9 @@ sources:
   group: uk-eu
   feeds:
   - https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/tecnologia/portada
+  - https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/clima-y-medio-ambiente/portada  # desks: energy (2026-11-26)
+  - https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/ciencia/portada  # desks: space, biotech (2026-11-26)
+  - https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/salud-y-bienestar/portada  # desks: biotech (2026-11-26)
 - id: dn
   name: Dagens Nyheter
   country: SE
@@ -412,6 +449,7 @@ sources:
   group: nordics
   feeds:
   - https://www.nyteknik.se/digitalisering?lab_viewport=rss
+  - https://www.nyteknik.se/energi?lab_viewport=rss  # desks: energy (2026-11-26)
   notes: Labrador CMS feed (lab_viewport=rss), linked from the site's own pages.
 - id: scmp
   name: South China Morning Post
@@ -447,6 +485,9 @@ sources:
   group: south-asia
   feeds:
   - https://economictimes.indiatimes.com/tech/rssfeeds/13357270.cms
+  - https://economictimes.indiatimes.com/industry/energy/rssfeeds/13358350.cms  # desks: energy (2026-11-26)
+  - https://economictimes.indiatimes.com/industry/healthcare/biotech/rssfeeds/13358050.cms  # desks: biotech (2026-11-26)
+  - https://economictimes.indiatimes.com/news/economy/agriculture/rssfeeds/1202099874.cms  # desks: food (2026-11-26)
 - id: koreaherald
   name: The Korea Herald
   country: KR
@@ -564,6 +605,9 @@ sources:
   group: latam
   feeds:
   - https://feeds.folha.uol.com.br/tec/rss091.xml
+  - https://feeds.folha.uol.com.br/ambiente/rss091.xml  # desks: energy (2026-11-26)
+  - https://feeds.folha.uol.com.br/ciencia/rss091.xml  # desks: space, biotech (2026-11-26)
+  - https://feeds.folha.uol.com.br/equilibrioesaude/rss091.xml  # desks: biotech (2026-11-26)
   notes: Technology section. Added 2026-11-26 (global coverage plan, step 1).
 - id: g1
   name: g1 (Globo)
@@ -573,6 +617,9 @@ sources:
   group: latam
   feeds:
   - https://g1.globo.com/rss/g1/tecnologia/
+  - https://g1.globo.com/rss/g1/economia/agronegocios/  # desks: food (2026-11-26)
+  - https://g1.globo.com/rss/g1/ciencia/  # desks: space, biotech (2026-11-26)
+  - https://g1.globo.com/rss/g1/saude/  # desks: biotech (2026-11-26)
   notes: Technology section. Added 2026-11-26 (global coverage plan, step 1).
 - id: exame
   name: Exame
@@ -627,6 +674,8 @@ sources:
   group: latam
   feeds:
   - https://www.infobae.com/arc/outboundfeeds/rss/category/tecno/
+  - https://www.infobae.com/arc/outboundfeeds/rss/category/america/ciencia-america/  # desks: space, biotech (2026-11-26)
+  - https://www.infobae.com/arc/outboundfeeds/rss/category/salud/  # desks: biotech (2026-11-26)
   notes: Technology section; about 24 AI articles a day. Added 2026-11-26 (global coverage plan, step 1).
 - id: lanacion
   name: La Nación
@@ -654,6 +703,8 @@ sources:
   group: latam
   feeds:
   - https://www.eltiempo.com/rss/tecnosfera.xml
+  - https://www.eltiempo.com/rss/vida_medio-ambiente.xml  # desks: energy (2026-11-26)
+  - https://www.eltiempo.com/rss/vida_ciencia.xml  # desks: space, biotech (2026-11-26)
   notes: Technology section (Tecnósfera). Added 2026-11-26 (global coverage plan, step 1).
 - id: semana
   name: Semana
@@ -699,6 +750,7 @@ sources:
   group: africa
   feeds:
   - https://www.premiumtimesng.com/feed
+  - https://www.premiumtimesng.com/health/feed  # desks: biotech (2026-11-26)
   notes: All-news feed. Added 2026-11-26 (global coverage plan, step 1).
 - id: businessdayng
   name: BusinessDay
@@ -780,6 +832,7 @@ sources:
   group: middle-east
   feeds:
   - https://www.thenationalnews.com/arc/outboundfeeds/rss/?outputType=xml
+  - https://www.thenationalnews.com/arc/outboundfeeds/rss/category/business/energy/?outputType=xml  # desks: energy (2026-11-26)
   notes: Abu Dhabi; owned by International Media Investments. All-news feed. Added 2026-11-26 (global coverage plan, step 2).
 - id: gulfnews
   name: Gulf News
@@ -825,6 +878,7 @@ sources:
   group: middle-east
   feeds:
   - https://www.dailysabah.com/rss/business/tech
+  - https://www.dailysabah.com/rss/business/energy  # desks: energy (2026-11-26)
   notes: Pro-government (Turkuvaz Media). Tech section. Added 2026-11-26 (global coverage plan, step 2).
 - id: aa
   name: Anadolu Agency
@@ -834,6 +888,7 @@ sources:
   group: middle-east
   feeds:
   - https://www.aa.com.tr/en/rss/default?cat=science-technology
+  - https://www.aa.com.tr/en/rss/default?cat=health  # desks: biotech (2026-11-26)
   notes: Turkish state news agency. Science and technology feed. Added 2026-11-26 (global coverage plan, step 2).
 - id: itnews
   name: iTnews
@@ -852,6 +907,7 @@ sources:
   group: oceania
   feeds:
   - https://www.smh.com.au/rss/technology.xml
+  - https://www.smh.com.au/rss/environment.xml  # desks: energy (2026-11-26)
   notes: Technology section. Added 2026-11-26 (global coverage plan, step 2).
 - id: crikey
   name: Crikey
@@ -879,6 +935,7 @@ sources:
   group: oceania
   feeds:
   - https://www.rnz.co.nz/rss/business.xml
+  - https://www.rnz.co.nz/rss/country.xml  # desks: food (2026-11-26)
   notes: Business feed. Added 2026-11-26 (global coverage plan, step 2).
 - id: newsroomnz
   name: Newsroom
@@ -888,6 +945,7 @@ sources:
   group: oceania
   feeds:
   - https://newsroom.co.nz/feed/
+  - https://newsroom.co.nz/category/climate-change/feed/  # desks: energy (2026-11-26)
   notes: 'robots.txt Content-Signal: search=yes, ai-train=no, use=reference (no ai-input=no, so allowed; Benjamin, 2026-11-26). Added 2026-11-26 (global coverage plan, step 2).'
 - id: onenews
   name: 1News (TVNZ)
@@ -906,6 +964,8 @@ sources:
   group: canada
   feeds:
   - https://www.theglobeandmail.com/arc/outboundfeeds/rss/category/business/technology/
+  - https://www.theglobeandmail.com/arc/outboundfeeds/rss/category/business/industry-news/energy-and-resources/  # desks: energy (2026-11-26)
+  - https://www.theglobeandmail.com/arc/outboundfeeds/rss/category/canada/science/  # desks: space, biotech (2026-11-26)
   notes: Technology section. Added 2026-11-26 (global coverage plan, step 2).
 - id: betakit
   name: BetaKit
@@ -924,6 +984,8 @@ sources:
   group: canada
   feeds:
   - https://globalnews.ca/tech/feed/
+  - https://globalnews.ca/environment/feed/  # desks: energy (2026-11-26)
+  - https://globalnews.ca/health/feed/  # desks: biotech (2026-11-26)
   notes: Technology section. Added 2026-11-26 (global coverage plan, step 2).
 - id: radiocanada
   name: Radio-Canada
@@ -942,6 +1004,8 @@ sources:
   group: canada
   feeds:
   - https://www.lapresse.ca/affaires/techno/rss
+  - https://www.lapresse.ca/actualites/environnement/rss  # desks: energy (2026-11-26)
+  - https://www.lapresse.ca/actualites/sciences/rss  # desks: space, biotech (2026-11-26)
   notes: Technology section. Added 2026-11-26 (global coverage plan, step 2).
 - id: thehindu
   name: The Hindu
@@ -951,6 +1015,10 @@ sources:
   group: south-asia
   feeds:
   - https://www.thehindu.com/sci-tech/technology/feeder/default.rss
+  - https://www.thehindu.com/sci-tech/energy-and-environment/feeder/default.rss  # desks: energy (2026-11-26)
+  - https://www.thehindu.com/sci-tech/science/feeder/default.rss  # desks: space, biotech (2026-11-26)
+  - https://www.thehindu.com/sci-tech/health/feeder/default.rss  # desks: biotech (2026-11-26)
+  - https://www.thehindu.com/sci-tech/agriculture/feeder/default.rss  # desks: food (2026-11-26)
   notes: Technology section. Added 2026-11-26 (global coverage plan, step 3).
 - id: mint
   name: Mint
@@ -1024,6 +1092,7 @@ sources:
   group: south-asia
   feeds:
   - https://www.thedailystar.net/tech-startup/rss.xml
+  - https://www.thedailystar.net/environment/rss.xml  # desks: energy (2026-11-26)
   notes: Tech and startup section. Added 2026-11-26 (global coverage plan, step 3).
 - id: yonhap
   name: Yonhap News Agency
@@ -1105,6 +1174,7 @@ sources:
   group: southeast-asia
   feeds:
   - https://www.rappler.com/technology/feed/
+  - https://www.rappler.com/environment/feed/  # desks: energy (2026-11-26)
   notes: Technology section. Added 2026-11-26 (global coverage plan, step 3).
 - id: bworld
   name: BusinessWorld
@@ -1342,6 +1412,7 @@ sources:
   group: uk-eu
   feeds:
   - https://www.derstandard.at/rss/web
+  - https://www.derstandard.at/rss/wissenschaft  # desks: space, biotech, energy (2026-11-26)
   notes: Web and technology section. Added 2026-11-26 (global coverage plan, step 5).
 - id: orf
   name: ORF
@@ -1351,6 +1422,7 @@ sources:
   group: uk-eu
   feeds:
   - https://rss.orf.at/news.xml
+  - https://rss.orf.at/science.xml  # desks: space, biotech (2026-11-26)
   notes: All-news feed. Added 2026-11-26 (global coverage plan, step 5).
 - id: euobserver
   name: EUobserver
@@ -1369,6 +1441,7 @@ sources:
   group: uk-eu
   feeds:
   - https://www.nzz.ch/technologie.rss
+  - https://www.nzz.ch/wissenschaft.rss  # desks: space, biotech (2026-11-26)
   notes: Technology section. Added 2026-11-26 (global coverage plan, step 5).
 - id: srf
   name: SRF
@@ -1387,6 +1460,8 @@ sources:
   group: uk-eu
   feeds:
   - https://www.faz.net/rss/aktuell/
+  - https://www.faz.net/rss/aktuell/wissen/  # desks: space, biotech (2026-11-26)
+  - https://www.faz.net/rss/aktuell/wirtschaft/klima-nachhaltigkeit/  # desks: energy (2026-11-26)
   notes: All-news feed (the Digitec feed failed). Added 2026-11-26 (global coverage plan, step 5).
 - id: sz
   name: Süddeutsche Zeitung
@@ -1396,6 +1471,7 @@ sources:
   group: uk-eu
   feeds:
   - https://rss.sueddeutsche.de/rss/Digital
+  - https://rss.sueddeutsche.de/rss/Wissen  # desks: space, biotech (2026-11-26)
   notes: Digital section. Added 2026-11-26 (global coverage plan, step 5).
 - id: t3n
   name: t3n
@@ -1423,6 +1499,9 @@ sources:
   group: uk-eu
   feeds:
   - https://www.francetvinfo.fr/internet.rss
+  - https://www.francetvinfo.fr/sciences/espace.rss  # desks: space (2026-11-26)
+  - https://www.francetvinfo.fr/sciences.rss  # desks: space, biotech (2026-11-26)
+  - https://www.francetvinfo.fr/sante.rss  # desks: biotech (2026-11-26)
   notes: Internet section. Added 2026-11-26 (global coverage plan, step 5).
 - id: lefigaro
   name: Le Figaro
@@ -1432,6 +1511,8 @@ sources:
   group: uk-eu
   feeds:
   - https://www.lefigaro.fr/rss/figaro_secteur_high-tech.xml
+  - https://www.lefigaro.fr/rss/figaro_sciences.xml  # desks: space, energy (2026-11-26)
+  - https://www.lefigaro.fr/rss/figaro_sante.xml  # desks: biotech (2026-11-26)
   notes: High-tech section. Added 2026-11-26 (global coverage plan, step 5).
 - id: liberation
   name: Libération
@@ -1450,6 +1531,8 @@ sources:
   group: uk-eu
   feeds:
   - https://www.rte.ie/feeds/rss/?index=/news/business/
+  - https://www.rte.ie/feeds/rss/?index=/news/environment/  # desks: energy (2026-11-26)
+  - https://www.rte.ie/feeds/rss/?index=/news/health/  # desks: biotech (2026-11-26)
   notes: Business feed. Added 2026-11-26 (global coverage plan, step 5).
 - id: irishtimes
   name: The Irish Times
@@ -1468,6 +1551,9 @@ sources:
   group: uk-eu
   feeds:
   - https://www.ansa.it/sito/ansait_rss.xml
+  - https://www.ansa.it/canale_scienza_tecnica/notizie/scienzaetecnica_rss.xml  # desks: space, biotech (2026-11-26)
+  - https://www.ansa.it/canale_terraegusto/notizie/terraegusto_rss.xml  # desks: food (2026-11-26)
+  - https://www.ansa.it/canale_saluteebenessere/notizie/saluteebenessere_rss.xml  # desks: biotech (2026-11-26)
   notes: All-news feed (the technology feed is frozen). Added 2026-11-26 (global coverage plan, step 5).
 - id: sole24ore
   name: Il Sole 24 Ore
@@ -1477,6 +1563,7 @@ sources:
   group: uk-eu
   feeds:
   - https://www.ilsole24ore.com/rss/tecnologia.xml
+  - https://www.ilsole24ore.com/rss/salute.xml  # desks: biotech (2026-11-26)
   notes: Technology section. Added 2026-11-26 (global coverage plan, step 5).
 - id: repubblica
   name: la Repubblica
@@ -1486,6 +1573,8 @@ sources:
   group: uk-eu
   feeds:
   - https://www.repubblica.it/rss/tecnologia/rss2.0.xml
+  - https://www.repubblica.it/rss/green-and-blue/rss2.0.xml  # desks: energy (2026-11-26)
+  - https://www.repubblica.it/rss/salute/rss2.0.xml  # desks: biotech (2026-11-26)
   notes: Technology section. Added 2026-11-26 (global coverage plan, step 5).
 - id: puntoinformatico
   name: Punto Informatico
@@ -1630,6 +1719,7 @@ sources:
   group: nordics
   feeds:
   - https://www.nrk.no/toppsaker.rss
+  - https://www.nrk.no/viten/toppsaker.rss  # desks: space, biotech (2026-11-26)
   notes: Top stories feed; little AI. Added 2026-11-26 (global coverage plan, step 6).
 - id: rp
   name: Rzeczpospolita
@@ -1677,6 +1767,463 @@ sources:
   feeds:
   - https://tass.com/rss/v2.xml
   notes: 'Russian state news agency. English all-news feed (Benjamin, 2026-11-26: add as state-aligned). Added 2026-11-26 (global coverage plan, step 6).'
+# Desks (2026-11-26): outlets wholly about one subject. `desk:` sends every item to that desk without a relevance
+# call; official bodies and outlets that mix in other subjects (general health, geopolitics) have no `desk:` and are
+# sorted by relevance like any outlet. Verified with the project's HTTP client on 2026-11-26 (robots.txt, one fetch,
+# no Content-Signal ai-input=no).
+- id: carbonbrief
+  name: Carbon Brief
+  country: GB
+  language: en
+  type: trade
+  group: desk-energy
+  feeds:
+  - https://www.carbonbrief.org/feed
+  desk: energy
+  notes: 'Climate and energy policy analysis; free. About 0.4 items/day (6 of 12 items in the last 14 days). Content-Signal:
+    none. Verified 2026-11-26.'
+- id: canarymedia
+  name: Canary Media
+  country: US
+  language: en
+  type: trade
+  group: desk-energy
+  feeds:
+  - https://www.canarymedia.com/rss.rss
+  desk: energy
+  notes: 'Clean-energy news; free. About 2.0 items/day (28 of 100 items in the last 14 days). Content-Signal: none. Verified
+    2026-11-26.'
+- id: utilitydive
+  name: Utility Dive
+  country: US
+  language: en
+  type: trade
+  group: desk-energy
+  feeds:
+  - https://www.utilitydive.com/feeds/news/
+  desk: energy
+  notes: 'Power utilities, grids, regulation; free. About 3.4 items/day (feed holds 10 items covering 2.9 days). Content-Signal:
+    none. Verified 2026-11-26.'
+- id: wnn
+  name: World Nuclear News
+  country: GB
+  language: en
+  type: trade
+  group: desk-energy
+  feeds:
+  - https://www.world-nuclear-news.org/rss
+  desk: energy
+  notes: 'Nuclear power; published by the World Nuclear Association (industry body): consider type note. About 3.4 items/day
+    (feed holds 45 items covering 13.2 days). Content-Signal: none. Verified 2026-11-26.'
+- id: pvmagazine
+  name: pv magazine (global)
+  country: DE
+  language: en
+  type: trade
+  group: desk-energy
+  feeds:
+  - https://www.pv-magazine.com/feed/
+  desk: energy
+  notes: 'Solar and storage; free. About 10.0 items/day (rough: the feed holds 10 items covering 6 h). Content-Signal: search=yes,ai-train=no,use=reference.
+    Verified 2026-11-26.'
+- id: pvmagazine_latam
+  name: pv magazine Latinoamérica
+  country: DE
+  language: es
+  type: trade
+  group: desk-energy
+  feeds:
+  - https://www.pv-magazine-latam.com/feed/
+  desk: energy
+  notes: 'Solar in Latin America (German publisher; set country as you prefer for the map); free. About 9.4 items/day (feed
+    holds 10 items covering 1.1 days). Content-Signal: none. Verified 2026-11-26.'
+- id: mercom
+  name: Mercom India
+  country: IN
+  language: en
+  type: trade
+  group: desk-energy
+  feeds:
+  - https://www.mercomindia.com/feed
+  desk: energy
+  notes: 'Indian renewables and power; free. About 10.0 items/day (rough: the feed holds 10 items covering 6 h). Content-Signal:
+    none. Verified 2026-11-26.'
+- id: reneweconomy
+  name: RenewEconomy
+  country: AU
+  language: en
+  type: trade
+  group: desk-energy
+  feeds:
+  - https://reneweconomy.com.au/feed/
+  desk: energy
+  notes: 'Australian clean energy and grid; free. About 8.1 items/day (feed holds 10 items covering 1.2 days). Content-Signal:
+    none. Verified 2026-11-26.'
+- id: energytracker
+  name: Energy Tracker Asia
+  country: HK
+  language: en
+  type: trade
+  group: desk-energy
+  feeds:
+  - https://energytracker.asia/feed/
+  desk: energy
+  notes: 'Asian energy transition, low volume; free. Country is my best guess (publisher in Hong Kong); check. About 0.4 items/day
+    (6 of 10 items in the last 14 days). Content-Signal: none. Verified 2026-11-26.'
+- id: oilprice
+  name: OilPrice.com
+  country: US
+  language: en
+  type: trade
+  group: desk-energy
+  feeds:
+  - https://oilprice.com/rss/main
+  notes: 'Oil, gas and commodity markets; free. Balances the renewables-heavy specialists; commercial site with opinion pieces.
+    About 15.0 items/day (rough: the feed holds 15 items covering 18 h). Content-Signal: none. Verified 2026-11-26.'
+- id: iaea
+  name: IAEA
+  country: AT
+  language: en
+  type: trade
+  group: desk-energy
+  feeds:
+  - https://www.iaea.org/feeds/topnews
+  notes: 'type: official (UN agency). Nuclear energy and safety plus institutional items; almost no summaries. About 0.9 items/day
+    (12 of 15 items in the last 14 days). Content-Signal: none. Verified 2026-11-26.'
+- id: stat
+  name: STAT
+  country: US
+  language: en
+  type: trade
+  group: desk-biotech
+  feeds:
+  - https://www.statnews.com/feed/
+  notes: 'Health and life sciences; STAT+ items are paywalled (marked ''STAT+:'' in titles) but headline and summary are in
+    the free feed. About 7.4 items/day (feed holds 20 items covering 2.7 days). Content-Signal: none. Verified 2026-11-26.'
+- id: biopharmadive
+  name: BioPharma Dive
+  country: US
+  language: en
+  type: trade
+  group: desk-biotech
+  feeds:
+  - https://www.biopharmadive.com/feeds/news/
+  desk: biotech
+  notes: 'Drug industry; free. About 1.7 items/day (feed holds 10 items covering 5.9 days). Content-Signal: none. Verified
+    2026-11-26.'
+- id: medtechdive
+  name: MedTech Dive
+  country: US
+  language: en
+  type: trade
+  group: desk-biotech
+  feeds:
+  - https://www.medtechdive.com/feeds/news/
+  desk: biotech
+  notes: 'Medical devices and diagnostics; free. About 1.7 items/day (feed holds 10 items covering 5.9 days). Content-Signal:
+    none. Verified 2026-11-26.'
+- id: genengnews
+  name: GEN - Genetic Engineering & Biotechnology News
+  country: US
+  language: en
+  type: trade
+  group: desk-biotech
+  feeds:
+  - https://www.genengnews.com/feed/
+  desk: biotech
+  notes: 'Biotech research and industry; free. About 3.7 items/day (feed holds 10 items covering 2.7 days). Content-Signal:
+    none. Verified 2026-11-26.'
+- id: pharmaphorum
+  name: pharmaphorum
+  country: GB
+  language: en
+  type: trade
+  group: desk-biotech
+  feeds:
+  - https://pharmaphorum.com/rss.xml
+  desk: biotech
+  notes: 'Pharma industry; free. About 8.3 items/day (feed holds 10 items covering 1.2 days). Content-Signal: none. Verified
+    2026-11-26.'
+- id: clinicaltrialsarena
+  name: Clinical Trials Arena
+  country: GB
+  language: en
+  type: trade
+  group: desk-biotech
+  feeds:
+  - https://www.clinicaltrialsarena.com/feed/
+  desk: biotech
+  notes: 'Trial results and readouts; free (GlobalData). About 4.6 items/day (feed holds 10 items covering 2.2 days). Content-Signal:
+    none. Verified 2026-11-26.'
+- id: labiotech
+  name: Labiotech.eu
+  country: DE
+  language: en
+  type: trade
+  group: desk-biotech
+  feeds:
+  - https://www.labiotech.eu/feed/
+  desk: biotech
+  notes: 'European biotech; free. robots.txt Content-Signal use=reference only. About 1.2 items/day (feed holds 12 items covering
+    10.0 days). Content-Signal: search=yes,ai-train=no,use=reference. Verified 2026-11-26.'
+- id: koreabiomed
+  name: Korea Biomedical Review
+  country: KR
+  language: en
+  type: trade
+  group: desk-biotech
+  feeds:
+  - https://www.koreabiomed.com/rss/allArticle.xml
+  notes: 'Korean pharma, biotech, health policy; some general health; free. About 16.8 items/day (feed holds 50 items covering
+    3.0 days). Content-Signal: none. Verified 2026-11-26.'
+- id: fda
+  name: U.S. FDA press releases
+  country: US
+  language: en
+  type: trade
+  group: desk-biotech
+  feeds:
+  - https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/press-releases/rss.xml
+  notes: 'type: official (regulator). About 0.4 items/day (5 of 20 items in the last 14 days). Content-Signal: none. Verified
+    2026-11-26.'
+- id: ema
+  name: European Medicines Agency
+  country: NL
+  language: en
+  type: trade
+  group: desk-biotech
+  feeds:
+  - https://www.ema.europa.eu/en/news.xml
+  notes: 'type: official (regulator). Very low volume. About 0.1 items/day (2 of 5 items in the last 14 days). Content-Signal:
+    none. Verified 2026-11-26.'
+- id: spacenews
+  name: SpaceNews
+  country: US
+  language: en
+  type: trade
+  group: desk-space
+  feeds:
+  - https://spacenews.com/feed/
+  desk: space
+  notes: 'Space industry and policy; free. About 0.9 items/day (feed holds 12 items covering 13.3 days). Content-Signal: none.
+    Verified 2026-11-26.'
+- id: spaceflightnow
+  name: Spaceflight Now
+  country: US
+  language: en
+  type: trade
+  group: desk-space
+  feeds:
+  - https://spaceflightnow.com/feed/
+  desk: space
+  notes: 'Launches; free. About 0.9 items/day (feed holds 10 items covering 11.1 days). Content-Signal: none. Verified 2026-11-26.'
+- id: nasaspaceflight
+  name: NASASpaceflight
+  country: US
+  language: en
+  type: trade
+  group: desk-space
+  feeds:
+  - https://www.nasaspaceflight.com/feed/
+  desk: space
+  notes: 'Launches and industry; free. robots.txt Content-Signal use=reference only. About 1.2 items/day (feed holds 10 items
+    covering 8.3 days). Content-Signal: search=yes,ai-train=no,use=reference. Verified 2026-11-26.'
+- id: payload
+  name: Payload
+  country: US
+  language: en
+  type: trade
+  group: desk-space
+  feeds:
+  - https://payloadspace.com/feed/
+  desk: space
+  notes: 'Space business; free. About 1.6 items/day (feed holds 13 items covering 8.1 days). Content-Signal: none. Verified
+    2026-11-26.'
+- id: europeanspaceflight
+  name: European Spaceflight
+  country: IE
+  language: en
+  type: trade
+  group: desk-space
+  feeds:
+  - https://europeanspaceflight.com/feed/
+  desk: space
+  notes: 'European launch and space industry; free. Country is a guess; check. About 1.1 items/day (feed holds 10 items covering
+    9.1 days). Content-Signal: none. Verified 2026-11-26.'
+- id: spaceinafrica
+  name: Space in Africa
+  country: NG
+  language: en
+  type: trade
+  group: desk-space
+  feeds:
+  - https://spaceinafrica.com/feed/
+  desk: space
+  notes: 'African space programs and industry; free. About 1.2 items/day (feed holds 10 items covering 8.3 days). Content-Signal:
+    none. Verified 2026-11-26.'
+- id: sorae
+  name: sorae
+  country: JP
+  language: ja
+  type: trade
+  group: desk-space
+  feeds:
+  - https://sorae.info/feed
+  desk: space
+  notes: 'Japanese space and astronomy news; free. About 3.9 items/day (feed holds 24 items covering 6.2 days). Content-Signal:
+    none. Verified 2026-11-26.'
+- id: latamsatelital
+  name: Latam Satelital
+  country: AR
+  language: es
+  type: trade
+  group: desk-space
+  feeds:
+  - https://latamsatelital.com/feed/
+  desk: space
+  notes: 'Latin American and Spanish space industry; free. Country is a guess; check. About 0.6 items/day (9 of 20 items in
+    the last 14 days). Content-Signal: none. Verified 2026-11-26.'
+- id: nasa
+  name: NASA
+  country: US
+  language: en
+  type: trade
+  group: desk-space
+  feeds:
+  - https://www.nasa.gov/feed/
+  notes: 'type: official (agency). Mixed: releases, features, APOD (news-release/feed/ returns the same feed). About 5.8 items/day
+    (feed holds 10 items covering 1.7 days). Content-Signal: none. Verified 2026-11-26.'
+- id: esa
+  name: ESA
+  country: FR
+  language: en
+  type: trade
+  group: desk-space
+  feeds:
+  - https://www.esa.int/rss/latest-news-homepage.rss
+  notes: 'type: official (agency; HQ Paris). Redirects to esa.int/rss/latest-news-homepage.rss. About 0.8 items/day (11 of
+    15 items in the last 14 days). Content-Signal: none. Verified 2026-11-26.'
+- id: agriland
+  name: Agriland
+  country: IE
+  language: en
+  type: trade
+  group: desk-food
+  feeds:
+  - https://www.agriland.ie/feed/
+  desk: food
+  notes: 'Irish and EU farming; free. About 20.3 items/day (feed holds 80 items covering 3.9 days). Content-Signal: none.
+    Verified 2026-11-26.'
+- id: reussir
+  name: Réussir
+  country: FR
+  language: fr
+  type: trade
+  group: desk-food
+  feeds:
+  - https://www.reussir.fr/rss.xml
+  desk: food
+  notes: 'French farm press; free headlines, some articles for subscribers. About 19.9 items/day (feed holds 20 items covering
+    1.0 days). Content-Signal: none. Verified 2026-11-26.'
+- id: agrarheute
+  name: agrarheute
+  country: DE
+  language: de
+  type: trade
+  group: desk-food
+  feeds:
+  - https://www.agrarheute.com/rss.xml
+  desk: food
+  notes: 'German farm news; free. Feed has no channel title. About 10.0 items/day (rough: the feed holds 10 items covering
+    12 h). Content-Signal: none. Verified 2026-11-26.'
+- id: farmersweeklysa
+  name: Farmer's Weekly (South Africa)
+  country: ZA
+  language: en
+  type: trade
+  group: desk-food
+  feeds:
+  - https://www.farmersweekly.co.za/feed/
+  desk: food
+  notes: 'South African agriculture; free. About 2.5 items/day (feed holds 20 items covering 8.0 days). Content-Signal: none.
+    Verified 2026-11-26.'
+- id: farmersreviewafrica
+  name: Farmers Review Africa
+  country: KE
+  language: en
+  type: trade
+  group: desk-food
+  feeds:
+  - https://farmersreviewafrica.com/feed/
+  desk: food
+  notes: 'Pan-African agriculture; free. About 4.3 items/day (feed holds 10 items covering 2.3 days). Content-Signal: none.
+    Verified 2026-11-26.'
+- id: businessline_agri
+  name: The Hindu BusinessLine - Agri-Business
+  country: IN
+  language: en
+  type: trade
+  group: desk-food
+  feeds:
+  - https://www.thehindubusinessline.com/economy/agri-business/feeder/default.rss
+  desk: food
+  notes: 'Indian crops, prices, fertilizer; metered, feed headlines free. About 9.5 items/day (feed holds 60 items covering
+    6.3 days). Content-Signal: none. Verified 2026-11-26.'
+- id: globorural
+  name: Globo Rural
+  country: BR
+  language: pt
+  type: trade
+  group: desk-food
+  feeds:
+  - https://globorural.globo.com/rss/globorural/
+  desk: food
+  notes: 'Brazilian agribusiness; free. About 43.9 items/day (feed holds 100 items covering 2.3 days). Content-Signal: none.
+    Verified 2026-11-26.'
+- id: graincentral
+  name: Grain Central
+  country: AU
+  language: en
+  type: trade
+  group: desk-food
+  feeds:
+  - https://www.graincentral.com/feed/
+  desk: food
+  notes: 'Australian grain markets; free. About 3.8 items/day (feed holds 10 items covering 2.6 days). Content-Signal: none.
+    Verified 2026-11-26.'
+- id: farmprogress
+  name: Farm Progress
+  country: US
+  language: en
+  type: trade
+  group: desk-food
+  feeds:
+  - https://www.farmprogress.com/rss.xml
+  desk: food
+  notes: 'US crops, markets, farm policy; free. About 8.0 items/day (feed holds 50 items covering 6.2 days). Content-Signal:
+    none. Verified 2026-11-26.'
+- id: undercurrent
+  name: Undercurrent News
+  country: GB
+  language: en
+  type: trade
+  group: desk-food
+  feeds:
+  - https://www.undercurrentnews.com/feed/
+  desk: food
+  notes: 'Seafood and fisheries trade; articles paywalled, feed headlines and summaries free. About 10.0 items/day (rough:
+    the feed holds 10 items covering 6 h). Content-Signal: none. Verified 2026-11-26.'
+- id: fao
+  name: FAO
+  country: IT
+  language: en
+  type: trade
+  group: desk-food
+  feeds:
+  - https://www.fao.org/feeds/fao-newsroom-rss
+  notes: 'type: official (UN agency). No summaries in the feed; low volume. About 0.6 items/day (9 of 20 items in the last
+    14 days). Content-Signal: none. Verified 2026-11-26.'
+
 gdelt_outlets:
 - id: reuters
   name: Reuters

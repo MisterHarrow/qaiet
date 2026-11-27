@@ -99,21 +99,21 @@ def _pick_headlines(items: list[dict], n: int) -> list[dict]:
     return sorted(picks, key=lambda c: (9 if _num(c["stance_key"]) is None else _num(c["stance_key"]), c["at"]))
 
 
-def _front_pages(store: Store, dates: set[str]) -> dict[str, dict[str, dict]]:
+def _front_pages(store: Store, dates: set[str], desk: str = "ai") -> dict[str, dict[str, dict]]:
     """date -> story id -> {rank, headline, coverage} from that morning's front-page edition."""
     if not dates:
         return {}
     out: dict[str, dict[str, dict]] = {}
     marks = ",".join("?" * len(dates))
-    for r in store.conn.execute(f"SELECT date, data FROM editions WHERE date IN ({marks})", sorted(dates)):
+    for r in store.conn.execute(f"SELECT date, data FROM editions WHERE desk = ? AND date IN ({marks})", (desk, *sorted(dates))):
         stories = json.loads(r["data"]).get("stories", [])
         out[r["date"]] = {s["id"]: {"rank": s.get("rank"), "headline": s.get("headline"),
                                     "coverage": (s.get("summary") or {}).get("coverage")} for s in stories}
     return out
 
 
-def detect(store: Store, settings: Settings, sources: SourcesConfig, now: datetime) -> list[dict]:
-    """Every narrative in the database, ongoing first, then by last covered day and outlets (newest first)."""
+def detect(store: Store, settings: Settings, sources: SourcesConfig, now: datetime, desk: str = "ai") -> list[dict]:
+    """Every narrative on one desk, ongoing first, then by last covered day and outlets (newest first)."""
     cfg = settings.narratives
     zone = ZoneInfo(settings.site.timezone)
     today = now.astimezone(zone).date()
@@ -124,7 +124,8 @@ def detect(store: Store, settings: Settings, sources: SourcesConfig, now: dateti
         f"SELECT i.id, i.story_id, i.source, i.kind, i.url, i.title, i.title_en, i.lang, {EVENT_AT} AS at, "
         "l.item_id AS labeled, l.stance, l.confidence FROM items i JOIN stories s ON s.id = i.story_id "
         "LEFT JOIN item_labels l ON l.item_id = i.id "
-        "WHERE s.merged_into IS NULL AND i.relevant = 1 AND i.dup_of IS NULL AND i.kind IN ('news', 'newsletter')"
+        "WHERE s.merged_into IS NULL AND COALESCE(s.desk, 'ai') = ? AND i.relevant = 1 AND i.dup_of IS NULL "
+        "AND i.kind IN ('news', 'newsletter')", (desk,)
     ).fetchall()
     per_story: dict[str, dict[str, list[dict]]] = defaultdict(lambda: defaultdict(list))
     for r in rows:
@@ -143,7 +144,7 @@ def detect(store: Store, settings: Settings, sources: SourcesConfig, now: dateti
     started = data_since(store)
     start_day = datetime.fromisoformat(started).astimezone(zone).date().isoformat() if started else None
     all_dates = {d for days in qualified.values() for d in days}
-    fronts = _front_pages(store, all_dates)
+    fronts = _front_pages(store, all_dates, desk)
     out = []
     for sid, days in qualified.items():
         dates = sorted(days)
@@ -179,7 +180,7 @@ def detect(store: Store, settings: Settings, sources: SourcesConfig, now: dateti
                     or representative_title(store, sid) or sid)
         overall = {k: total.get(k, 0) for k in STANCE_KEYS}
         out.append({
-            "id": sid, "headline": headline, "first": dates[0], "last": dates[-1],
+            "id": sid, "desk": desk, "headline": headline, "first": dates[0], "last": dates[-1],
             "days": (last - first).days + 1, "covered": len(dates), "streak": streak(dates),
             "ongoing": (today - last).days <= cfg.ongoing_days,
             "outlets": len(outlets), "countries": len({countries[s] for s in outlets if countries.get(s)}),
@@ -197,7 +198,7 @@ def compact(n: dict) -> dict:
     """What an edition keeps of a narrative: enough for the front-page row and its small chart."""
     keep = ("id", "headline", "first", "last", "days", "covered", "streak", "ongoing", "outlets", "countries", "mean",
             "first_mean", "last_mean", "trend")
-    return {**{k: n[k] for k in keep},
+    return {**{k: n[k] for k in keep}, "desk": n.get("desk", "ai"),
             "stance": n["stance"],  # every article's stance over all the days: it colors the seal's lattice
             "timeline": [{"date": t["date"], "quiet": t["quiet"], "outlets": t["outlets"], "mean": t["mean"]} for t in n["timeline"]]}
 

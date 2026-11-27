@@ -14,191 +14,177 @@
 	<atom:link href="https://nypost.com/tech/feed/" rel="self" type="application/rss+xml" />
 	<link>https://nypost.com</link>
 	<description>Your source for breaking news, news about New York, sports, business, entertainment, opinion, real estate, culture, fashion, and more.</description>
-	<lastBuildDate>Tue, 24 Nov 2026 03:34:28 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 25 Nov 2026 22:39:06 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>hourly</sy:updatePeriod>
 	<sy:updateFrequency>1</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.8.13</generator>
 <site xmlns="com-wordpress:feed-additions:1">163456144</site>		<item>
-		<title>Silicon Valley&#8217;s &#8216;perfect baby&#8217; race now includes screening embryos for autism: &#8216;There&#8217;s a lot of autism in Silicon Valley&#8217;</title>
-		<comments>https://nypost.com/2026/11/23/tech/silicon-valleys-startup-screening-embryos-for-autism/#respond</comments>
-		<pubDate>Mon, 23 Nov 2026 19:04:03 -0500</pubDate>
-		<dcterms:modified>2026-11-23T22:34:21-05:00</dcterms:modified>
-						<link>https://nypost.com/2026/11/23/tech/silicon-valleys-startup-screening-embryos-for-autism/</link>
-			<dc:creator>Vivi Lin</dc:creator>
+		<title>Elon Musk&#8217;s plan for SpaceX to launch 1 million satellites for &#8216;constellation&#8217; of data centers approved by FCC</title>
+		<comments>https://nypost.com/2026/11/25/business/fcc-approves-elon-musks-spacex-to-launch-1-million-satellites-for-data-centers-in-space/#respond</comments>
+		<pubDate>Wed, 25 Nov 2026 17:38:54 -0500</pubDate>
+		<dcterms:modified>2026-11-25T17:39:06-05:00</dcterms:modified>
+						<link>https://nypost.com/2026/11/25/business/fcc-approves-elon-musks-spacex-to-launch-1-million-satellites-for-data-centers-in-space/</link>
+			<dc:creator>Taylor Herzlich</dc:creator>
 		
-		<guid isPermaLink="false">https://nypost.com/?post_type=article&#038;p=42022529</guid>
-												<description><![CDATA[Last month, the embryo-testing startup Herasight launched NeuroRisk, a test it calls the first to screen embryos for autism and schizophrenia.]]></description>
+		<guid isPermaLink="false">https://nypost.com/?post_type=article&#038;p=42125188</guid>
+												<description><![CDATA[The orbital compute modules launched into space will be used to process massive amounts of data to be used back on Earth. ]]></description>
 			
-								<enclosure url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fnewspress-collage-s1dg1cxz1-1795478588378.jpg?quality%3D90%26strip%3Dall%261795460630"
+								<enclosure url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fnewspress-collage-gxhes2zbo-1795637265461.jpg?quality%3D90%26strip%3Dall%261795619278"
 						type="image/jpeg"
-						length="256258"
+						length="299620"
 					/>
 							<slash:comments>0</slash:comments>
-			<post-id xmlns="com-wordpress:feed-additions:1">42022529</post-id>
-		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fherasight-past-clients-babies-149849032.jpg?w%3D1024" medium="image">
-			<media:title type="html">Smiling baby lying on a pink and yellow blanket.</media:title>
+			<post-id xmlns="com-wordpress:feed-additions:1">42125188</post-id>
+		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2F150036936.jpg?w%3D1024" medium="image">
+			<media:title type="html">Illustration of a global digital communication network with glowing connection lines over Earth at night.</media:title>
 		</media:content>
 
-		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fcourtesy-photos-herasights-durham-north-149857526.jpg?w%3D1024" medium="image">
-			<media:title type="html">Jennifer Swift works in the lab in Durham, N.C.</media:title>
+		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fchairman-federal-communications-commission-150029035.jpg?w%3D1024" medium="image">
+			<media:title type="html">Federal Communications Commission Chairman Brendan Carr in a suit and tie listening at a rally.</media:title>
 		</media:content>
 
-		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fowner-elon-musk-holds-one-149828084.jpg?w%3D1024" medium="image">
-			<media:title type="html">Elon Musk carries one of his children on his shoulders while arriving at the Atreju event in Rome, Italy.</media:title>
+		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Ftesla-spacex-x-ceo-elon-149828120_b41f10.jpg?w%3D1024" medium="image">
+			<media:title type="html">Elon Musk wearing a suit and tie, surrounded by people outside the White House.</media:title>
 		</media:content>
 
-		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fwalter-isaacson-shares-photo-elon-30774014.jpg" medium="image">
-			<media:title type="html">Elon Musk and a toddler look at a humanoid robot suspended by cables, surrounded by engineers in a workshop.</media:title>
-		</media:content>
-
-		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fherasight-anomaly-lecture-jonathan-anomaly-149830206.jpg" medium="image">
-			<media:title type="html">Jonathan Anomaly delivers a lecture.</media:title>
-		</media:content>
-
-		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fcourtesy-photos-herasights-durham-north-149857523.jpg?w%3D1024" medium="image">
-			<media:title type="html">A lab technician analyzes embryo data at the Herasight lab in Durham, N.C.</media:title>
-		</media:content>
-
-		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fherasight-spencer-luciana-149830208.jpg" medium="image">
-			<media:title type="html">Spencer and Luciana smiling at each other outdoors.</media:title>
-		</media:content>
-
-		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fvictoria-fritz-husband-149830213.jpg?w%3D671" medium="image">
-			<media:title type="html">Victoria Fritz with husband in a park with a dog.</media:title>
-		</media:content>
-
-		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fherasight-past-clients-babies-149849037.jpg?w%3D764" medium="image">
-			<media:title type="html">A newborn baby wearing a striped hat and swaddled in a striped blanket smiles with eyes closed.</media:title>
+		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fgeneral-view-spacex-headquarters-august-150029054.jpg?w%3D1024" medium="image">
+			<media:title type="html">Exterior view of the SpaceX headquarters, featuring a large white building with the company logo and a landed Falcon 9 rocket outside.</media:title>
 		</media:content>
 	</item>
 				<item>
-		<title>I interview people for a living, and this tiny AI note taker is my secret weapon — now 20% off</title>
-		<comments>https://nypost.com/2026/11/23/shopping/plaud-ai-note-takers-are-20-off-for-black-friday/#respond</comments>
-		<pubDate>Mon, 23 Nov 2026 16:33:41 -0500</pubDate>
-		<dcterms:modified>2026-11-23T16:33:51-05:00</dcterms:modified>
-						<link>https://nypost.com/2026/11/23/shopping/plaud-ai-note-takers-are-20-off-for-black-friday/</link>
+		<title>Race to checkout: Nintendo Switch 2 just got a rare Black Friday price cut, with Mario Kart included</title>
+		<comments>https://nypost.com/2026/11/25/shopping/nintendo-switch-2-mario-kart-world-bundle-is-50-off-for-black-friday-2026/#respond</comments>
+		<pubDate>Wed, 25 Nov 2026 13:21:25 -0500</pubDate>
+		<dcterms:modified>2026-11-25T15:27:00-05:00</dcterms:modified>
+						<link>https://nypost.com/2026/11/25/shopping/nintendo-switch-2-mario-kart-world-bundle-is-50-off-for-black-friday-2026/</link>
 			<dc:creator>Nishka Dhawan</dc:creator>
 		
-		<guid isPermaLink="false">https://nypost.com/?post_type=article&#038;p=42070942</guid>
-												<description><![CDATA[Note-taking made easy.]]></description>
+		<guid isPermaLink="false">https://nypost.com/?post_type=article&#038;p=42116627</guid>
+												<description><![CDATA[Consoles on sale.]]></description>
 			
-								<enclosure url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2F2000_1333-Note-Pro-1.png"
-						type="image/png"
-						length="5285623"
+								<enclosure url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fnintendo-switc-cbuncle-.jpg?quality%3D90%26strip%3Dall"
+						type="image/jpeg"
+						length="1949095"
 					/>
 							<slash:comments>0</slash:comments>
-			<post-id xmlns="com-wordpress:feed-additions:1">42070942</post-id>
-		<media:thumbnail url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2F2000_1333-Note-Pro-1.png" />
-		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2F2000_1333-Note-Pro-1.png" medium="image">
-			<media:title type="html">Plaud</media:title>
+			<post-id xmlns="com-wordpress:feed-additions:1">42116627</post-id>
+		<media:thumbnail url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fnintendo-switc-cbuncle-.jpg?quality%3D90%26" />
+		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fnintendo-switc-cbuncle-.jpg?quality%3D90%26strip%3Dall" medium="image">
+			<media:title type="html">nintendo switc c=buncle</media:title>
 		</media:content>
 
-		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2FNotePin-S.png?w%3D1024" medium="image">
-			<media:title type="html">NotePin S device in gray.</media:title>
-		</media:content>
-
-		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2FNotePro.png?w%3D1024" medium="image">
-			<media:title type="html">NotePro device with the PLAUD logo.</media:title>
+		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fmario-kart-world.jpg?w%3D1024" medium="image">
+			<media:title type="html">Illustration of the Mario Kart World Nintendo Switch console bundle box.</media:title>
 		</media:content>
 	</item>
 				<item>
-		<title>Elizabeth Warren, lawmakers slam Nvidia&#8217;s &#8216;reckless&#8217; decision to reinstate Jensen Huang</title>
-		<comments>https://nypost.com/2026/11/23/business/elizabeth-warren-lawmakers-slam-nvidias-reckless-decision-to-reinstate-jensen-huang/#respond</comments>
-		<pubDate>Mon, 23 Nov 2026 11:27:29 -0500</pubDate>
-		<dcterms:modified>2026-11-23T14:53:24-05:00</dcterms:modified>
-						<link>https://nypost.com/2026/11/23/business/elizabeth-warren-lawmakers-slam-nvidias-reckless-decision-to-reinstate-jensen-huang/</link>
-			<dc:creator>Reuters</dc:creator>
+		<title>PETA has beef with Nvidia boss Jensen Huang’s iconic leather jacket — offers him $875 coat made from olives, instead</title>
+		<comments>https://nypost.com/2026/11/25/business/peta-has-beef-with-nvidia-boss-jensen-huangs-iconic-leather-jacket-offers-him-875-coat-made-from-olives-instead/#respond</comments>
+		<pubDate>Wed, 25 Nov 2026 13:10:53 -0500</pubDate>
+		<dcterms:modified>2026-11-25T13:11:04-05:00</dcterms:modified>
+						<link>https://nypost.com/2026/11/25/business/peta-has-beef-with-nvidia-boss-jensen-huangs-iconic-leather-jacket-offers-him-875-coat-made-from-olives-instead/</link>
+			<dc:creator>Ariel Zilber</dc:creator>
 		
-		<guid isPermaLink="false">https://nypost.com/?post_type=article&#038;p=42060353</guid>
-												<description><![CDATA[Warren was joined by lawmakers on both sides of the aisle who criticized the move.]]></description>
+		<guid isPermaLink="false">https://nypost.com/?post_type=article&#038;p=42119170</guid>
+												<description><![CDATA[As Jensen Huang seeks to rehabilitate his image during his shocking return to the helm of Nvidia, he should change his wardrobe, too, PETA says.]]></description>
 			
-								<enclosure url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Felizabeth-warren-jensen-huang.jpg?quality%3D90%26strip%3Dall%261795431234"
+								<enclosure url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2F150025644.jpg?quality%3D90%26strip%3Dall"
 						type="image/jpeg"
-						length="287338"
+						length="747477"
 					/>
 							<slash:comments>0</slash:comments>
-			<post-id xmlns="com-wordpress:feed-additions:1">42060353</post-id>
-		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fattends-senate-committee-armed-services-149104511.jpg?w%3D1024" medium="image">
-			<media:title type="html">U.S. Senator Elizabeth Warren attends a Senate Armed Services Committee hearing on Capitol Hill.</media:title>
+			<post-id xmlns="com-wordpress:feed-additions:1">42119170</post-id>
+		<media:thumbnail url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2F150025644.jpg?quality%3D90%26" />
+		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2F150025644.jpg?quality%3D90%26strip%3Dall" medium="image">
+			<media:title type="html">150025644</media:title>
 		</media:content>
 
-		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fd-ny-speaks-press-conference-149418494_8e66bd.jpg?w%3D1024" medium="image">
-			<media:title type="html">Senate Minority Leader Chuck Schumer speaks at a press conference at the U.S. Capitol.</media:title>
+		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fnvidia-ceo-jensen-huang-participates-149959877_3ec022.jpg?w%3D1024" medium="image">
+			<media:title type="html">Nvidia CEO Jensen Huang has been sporting his trademark black leather jackets for more than two decades.</media:title>
 		</media:content>
 
-		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2F2026-nvidia-november-23-reinstated-149816382.jpg?w%3D1024" medium="image">
-			<media:title type="html">Nvidia CEO Jensen Huang giving a thumbs up at a press conference with Fujitsu in Tokyo.</media:title>
+		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fjensen-huang-peta-poster-150025392.jpg" medium="image">
+			<media:title type="html">PETA unveiled a campaign urging Huang to trade his signature leather jacket for a plant-based alternative.</media:title>
+		</media:content>
+
+		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2F100-olive-leather-benedetti-life-150025508.jpg?w%3D1024" medium="image">
+			<media:title type="html">A screenshot of the Benedetti Life online store displaying the Olive Leather Men&#039;s Jacket for €800,00.</media:title>
+		</media:content>
+
+		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2F2026-seoul-south-korea-nvidia-149960410.jpg?w%3D1024" medium="image">
+			<media:title type="html">The Nvidia boss has said his nearly all-black wardrobe saves him from having to decide what to wear each morning.</media:title>
 		</media:content>
 	</item>
 				<item>
-		<title>Why tech outages could be the new normal for months across the US</title>
-		<comments>https://nypost.com/2026/11/22/us-news/why-tech-outages-could-be-the-new-normal-for-months/#respond</comments>
-		<pubDate>Sun, 22 Nov 2026 15:14:31 -0500</pubDate>
-		<dcterms:modified>2026-11-22T15:35:01-05:00</dcterms:modified>
-						<link>https://nypost.com/2026/11/22/us-news/why-tech-outages-could-be-the-new-normal-for-months/</link>
-			<dc:creator>Alex Mitchell</dc:creator>
+		<title>Why is Silicon Valley making AI we fear and not what we actually need?</title>
+		<comments>https://nypost.com/2026/11/24/opinion/why-is-silicon-valley-making-ai-we-fear-and-not-the-ai-we-need/#respond</comments>
+		<pubDate>Tue, 24 Nov 2026 17:13:55 -0500</pubDate>
+		<dcterms:modified>2026-11-24T17:14:06-05:00</dcterms:modified>
+						<link>https://nypost.com/2026/11/24/opinion/why-is-silicon-valley-making-ai-we-fear-and-not-the-ai-we-need/</link>
+			<dc:creator>Rikki Schlott</dc:creator>
 		
-		<guid isPermaLink="false">https://nypost.com/?post_type=article&#038;p=41980065</guid>
-												<description><![CDATA[“In many cases, you’ve got AI-powered humans that are on offense, and you have traditional software-powered humans that are playing defense."]]></description>
+		<guid isPermaLink="false">https://nypost.com/?post_type=article&#038;p=42089571</guid>
+												<description><![CDATA[AI companies are pursuing the most powerful, scary, and even downright dangerous models imaginable. But what about the rest of us?]]></description>
 			
-								<enclosure url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2FOutages.jpg?quality%3D90%26strip%3Dall"
+								<enclosure url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fcrop-42101213.jpg?quality%3D90%26strip%3Dall"
 						type="image/jpeg"
-						length="543786"
+						length="4626823"
 					/>
 							<slash:comments>0</slash:comments>
-			<post-id xmlns="com-wordpress:feed-additions:1">41980065</post-id>
-		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2F2304612484.jpg?w%3D1024" medium="image">
-			<media:title type="html">Cyber experts fear that America&#039;s recent tech problems may be setting up a future, larger attack. The LaGuardia Airport departure board is shown one day after the FAA&#039;s historic ground stop on Nov. 13.</media:title>
+			<post-id xmlns="com-wordpress:feed-additions:1">42089571</post-id>
+		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fpresident-donald-trump-speaks-reporters-149846293.jpg?w%3D1024" medium="image">
+			<media:title type="html">President Donald Trump speaks to reporters at the White House alongside prominent technology executives.</media:title>
 		</media:content>
 
-		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fshutterstock_editorial_Microsoft_outage_disrupts_UK_s_17274859h.jpg?w%3D1024" medium="image">
-			<media:title type="html">Some experts expect outages to continue for months.</media:title>
+		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2F2025-youtube-turned-20-years-149936665.jpg?w%3D1024" medium="image">
+			<media:title type="html">The YouTube logo stands outside the company&#039;s corporate headquarters in San Bruno, California.</media:title>
 		</media:content>
 
-		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2F2304593499.jpg?w%3D1024" medium="image">
-			<media:title type="html">US Transportation Secretary Sean Duffy (R) speaks alongside FAA Administrator Bryan Bedford (L) after the Nov. 13 ground stop.</media:title>
+		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2F2026-u-s-capitol-washington-149936670.jpg?w%3D1024" medium="image">
+			<media:title type="html">Max Tegmark speaks to journalists at the U.S. Capitol.</media:title>
 		</media:content>
 
-		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2FAdobeStock_1055759939.jpg?w%3D1024" medium="image">
-			<media:title type="html">A person holding a smartphone surrounded by digital graphics of a red warning triangle, padlocks, and binary code, representing a cyberattack.</media:title>
-		</media:content>
-
-		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2F2304608447.jpg?w%3D1024" medium="image">
-			<media:title type="html">Air travel has been tremendously impacted by the outages. Seen is a lengthy line at Chicago O&#039;Hare International Airport.</media:title>
+		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2F2023-seattle-experts-warning-spread-149936660.jpg?w%3D1024" medium="image">
+			<media:title type="html">Oren Etzioni stands in front of a white board</media:title>
 		</media:content>
 	</item>
 				<item>
-		<title>Scientist warns officials against dismissing mystery object in solar system after mission is scrubbed</title>
-		<comments>https://nypost.com/2026/11/22/tech/mystery-object-in-solar-system-should-not-be-ignored-scientists-warn/#respond</comments>
-		<pubDate>Sun, 22 Nov 2026 12:12:58 -0500</pubDate>
-		<dcterms:modified>2026-11-22T12:13:02-05:00</dcterms:modified>
-						<link>https://nypost.com/2026/11/22/tech/mystery-object-in-solar-system-should-not-be-ignored-scientists-warn/</link>
-			<dc:creator>Fox News</dc:creator>
+		<title>NYC Kalshi users lost over $52M in 2026 &#8212; with young adults accounting for large portion of losses: City Council</title>
+		<comments>https://nypost.com/2026/11/24/business/nyc-kalshi-users-lost-over-52m-in-2026-city-council/#respond</comments>
+		<pubDate>Tue, 24 Nov 2026 16:18:17 -0500</pubDate>
+		<dcterms:modified>2026-11-24T16:18:28-05:00</dcterms:modified>
+						<link>https://nypost.com/2026/11/24/business/nyc-kalshi-users-lost-over-52m-in-2026-city-council/</link>
+			<dc:creator>Ariel Zilber</dc:creator>
 		
-		<guid isPermaLink="false">https://nypost.com/?post_type=article&#038;p=42043374</guid>
-												<description><![CDATA[The Harvard astrophysicist claims the object may be a lost Soviet probe Phobos 1, not a natural asteroid]]></description>
+		<guid isPermaLink="false">https://nypost.com/?post_type=article&#038;p=42089505</guid>
+												<description><![CDATA[Individual Kalshi users with New York City addresses collectively lost $52.5 million between Jan. 1 and Nov. 1, according to New York City Council.]]></description>
 			
-								<enclosure url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2F149736652.jpg?quality%3D90%26strip%3Dall"
+								<enclosure url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2F149919284.jpg?quality%3D90%26strip%3Dall"
 						type="image/jpeg"
-						length="645624"
+						length="969777"
 					/>
 							<slash:comments>0</slash:comments>
-			<post-id xmlns="com-wordpress:feed-additions:1">42043374</post-id>
-		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Flarge-asteroid-closing-earth-large-148981446_195c2c.jpg?w%3D1024" medium="image">
-			<media:title type="html">Illustration of a large asteroid closing in on Earth.</media:title>
+			<post-id xmlns="com-wordpress:feed-additions:1">42089505</post-id>
+		<media:thumbnail url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2F149919284.jpg?quality%3D90%26" />
+		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2F149919284.jpg?quality%3D90%26strip%3Dall" medium="image">
+			<media:title type="html">149919284</media:title>
 		</media:content>
 
-		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Favi-loeb-frank-b-baird-148857584_985807.jpg?w%3D683" medium="image">
-			<media:title type="html">Avi Loeb speaks at the SALT conference in Manhattan, New York.</media:title>
+		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2F2026-agreement-lyft-cap-cost-149848975.jpg?w%3D1024" medium="image">
+			<media:title type="html">City Council Speaker Julie Menin accused prediction market operators of using deceptive marketing tactics to attract young customers.</media:title>
 		</media:content>
 
-		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fabraham-avi-loeb-harvard-university-148857490.jpg?w%3D1024" medium="image">
-			<media:title type="html">Harvard astrophysicist Abraham &#039;Avi&#039; Loeb sits in a chair in his home office, smiling at the camera.</media:title>
+		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fgeneral-view-kalshi-logo-displayed-125429741_104bc1.jpg?w%3D1024" medium="image">
+			<media:title type="html">Individual Kalshi users with New York City addresses racked up $52.5 million in net trading losses between Jan. 1 and Nov. 1, according to the City Council.</media:title>
 		</media:content>
 
-		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fasteroid-1998-149736562.jpg?w%3D1024" medium="image">
-			<media:title type="html">Asteroid 1998 KY26 against a black background.</media:title>
+		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fgeneral-view-advertisement-kalshi-sports-130833866_fcdfb6.jpg?w%3D1024" medium="image">
+			<media:title type="html">Kalshi introduced a default monthly deposit limit of $2,500 for customers between the ages of 18 and 20 in October.</media:title>
+		</media:content>
+
+		<media:content url="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2F2026-flatbush-neighborhood-brooklyn-borough-148670041.jpg?w%3D1024" medium="image">
+			<media:title type="html">New York Attorney General Letitia James has accused Kalshi of operating an illegal sports gambling business without a state license.</media:title>
 		</media:content>
 	</item>
 			</channel>

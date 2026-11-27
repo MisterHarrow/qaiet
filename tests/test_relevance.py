@@ -68,8 +68,9 @@ class FakeMessages:
         for line in lines:
             m = re.match(r"\[(\d+)\] \((\w+)\) (.*)", line)
             n, lang, text = int(m.group(1)), m.group(2), m.group(3)
-            out.append({"i": n, "about_ai": "algorithm" in text.lower() or "ki" in text.lower(),
-                        "title_en": None if lang == "en" else "EN: " + text.split(" | ")[0]})
+            low = text.lower()
+            desk = "ai" if ("algorithm" in low or "ki" in low) else "energy" if "power plant" in low else None
+            out.append({"i": n, "desk": desk, "title_en": None if lang == "en" else "EN: " + text.split(" | ")[0]})
         parsed = kw["output_format"].model_validate({"items": out})
         usage = SimpleNamespace(input_tokens=1000, output_tokens=200, cache_read_input_tokens=0, cache_creation_input_tokens=0)
         return SimpleNamespace(parsed_output=parsed, usage=usage, stop_reason="refusal" if self.refuse else "end_turn")
@@ -87,6 +88,7 @@ def seed(store):
         Item(id="c", source="dn", kind="news", url="https://e.com/c", title="Regeringen satsar på AI", lang="sv", fetched_at=NOW),
         Item(id="d", source="nyt", kind="news", url="https://e.com/d", title="Weather is nice", fetched_at=NOW),
         Item(id="e", source="nyt", kind="news", url="https://e.com/e2", title="Weather is nice", fetched_at=NOW),
+        Item(id="f", source="nyt", kind="news", url="https://e.com/f", title="Utility opens a new power plant", fetched_at=NOW),
     ]
     store.upsert_items(items, NOW)
 
@@ -99,11 +101,13 @@ def test_run_with_llm_decides_ambiguous_translates_and_caches(settings):
     srcs = SourcesConfig(feeds=[FeedSource(id="nyt", name="NYT", kind="news", feeds=["x"])])
     since = iso(NOW - timedelta(hours=72))
     stats = relevance.run(store, settings, srcs, llm, since)
-    rows = {r["id"]: r for r in store.conn.execute("SELECT id, relevant, relevance_by, title_en, dup_of FROM items")}
-    assert (rows["a"]["relevant"], rows["a"]["relevance_by"]) == (1, "llm")
-    assert (rows["b"]["relevant"], rows["b"]["relevance_by"]) == (0, "llm")
-    assert (rows["c"]["relevant"], rows["c"]["title_en"]) == (1, "EN: Regeringen satsar på AI")
-    assert rows["d"]["relevant"] == 0 and rows["e"]["dup_of"] == "d"
+    rows = {r["id"]: r for r in store.conn.execute("SELECT id, relevant, relevance_by, desk, title_en, dup_of FROM items")}
+    assert (rows["a"]["relevant"], rows["a"]["relevance_by"], rows["a"]["desk"]) == (1, "llm", "ai")
+    assert (rows["b"]["relevant"], rows["b"]["relevance_by"], rows["b"]["desk"]) == (0, "llm", None)
+    assert (rows["c"]["relevant"], rows["c"]["title_en"], rows["c"]["desk"]) == (1, "EN: Regeringen satsar på AI", "ai")
+    # No AI word: with more desks than AI, the model sorts it (onto Energy here, or nowhere).
+    assert (rows["d"]["relevant"], rows["d"]["relevance_by"]) == (0, "llm") and rows["e"]["dup_of"] == "d"
+    assert (rows["f"]["relevant"], rows["f"]["relevance_by"], rows["f"]["desk"]) == (1, "llm", "energy")
     assert stats.duplicates == 1 and stats.pending == 0 and len(msgs.calls) == 1
     call = msgs.calls[0]
     assert call["model"] == "claude-haiku-5-5" and call["system"][0]["cache_control"] == {"type": "ephemeral"}
@@ -127,7 +131,7 @@ class LazyTranslator(FakeMessages):
             if kw["output_format"] is relevance._Translations:
                 out.append({"i": int(n), "title_en": "" if "skip" in text else f"EN: {text}"})
             else:
-                out.append({"i": int(n), "about_ai": True, "title_en": None})
+                out.append({"i": int(n), "desk": "ai", "title_en": None})
         usage = SimpleNamespace(input_tokens=100, output_tokens=20, cache_read_input_tokens=0, cache_creation_input_tokens=0)
         return SimpleNamespace(parsed_output=kw["output_format"].model_validate({"items": out}), usage=usage, stop_reason="end_turn")
 
@@ -157,7 +161,7 @@ def test_run_without_llm_leaves_ambiguous_pending(settings):
     store = Store(":memory:")
     seed(store)
     stats = relevance.run(store, settings, SourcesConfig(feeds=[]), None, iso(NOW - timedelta(hours=72)))
-    assert stats.pending == 2 and "ANTHROPIC_API_KEY" in stats.note
+    assert stats.pending == 4 and "ANTHROPIC_API_KEY" in stats.note  # a, b, d, f (e is d's duplicate)
     assert store.conn.execute("SELECT relevant FROM items WHERE id='a'").fetchone()[0] is None
 
 
@@ -167,14 +171,14 @@ def test_budget_cap_stops_llm_calls(settings):
     msgs = FakeMessages()
     llm = fake_llm(store, msgs, budget=0.0)
     stats = relevance.run(store, settings, SourcesConfig(feeds=[]), llm, iso(NOW - timedelta(hours=72)))
-    assert msgs.calls == [] and "budget" in stats.note and stats.pending == 2
+    assert msgs.calls == [] and "budget" in stats.note and stats.pending == 4
 
 
 def test_refusal_is_not_applied(settings):
     store = Store(":memory:")
     seed(store)
     stats = relevance.run(store, settings, SourcesConfig(feeds=[]), fake_llm(store, FakeMessages(refuse=True)), iso(NOW - timedelta(hours=72)))
-    assert stats.pending == 2 and "declined" in stats.note
+    assert stats.pending == 4 and "declined" in stats.note
 
 
 def test_llm_false_sources_never_reach_the_llm(settings):
@@ -189,3 +193,30 @@ def test_llm_false_sources_never_reach_the_llm(settings):
     assert msgs.calls == []
     rows = dict(store.conn.execute("SELECT id, relevant FROM items").fetchall())
     assert rows == {"x": 1, "y": 0}
+
+
+def test_with_only_the_ai_desk_items_without_ai_words_are_dropped_without_a_call(settings):
+    settings = settings.model_copy(update={"desks": [d for d in settings.desks if d.key == "ai"]})
+    store = Store(":memory:")
+    seed(store)
+    msgs = FakeMessages()
+    relevance.run(store, settings, SourcesConfig(feeds=[]), fake_llm(store, msgs), iso(NOW - timedelta(hours=72)))
+    rows = dict(store.conn.execute("SELECT id, relevance_by FROM items").fetchall())
+    assert rows["d"] == "keyword" and rows["f"] == "keyword"
+    assert "power plant" not in msgs.calls[0]["messages"][0]["content"]
+
+
+def test_desk_sources_and_llm_false_sources_by_keyword(settings):
+    store = Store(":memory:")
+    store.upsert_items([
+        Item(id="s", source="spacenews", kind="news", url="https://e.com/s", title="Launch delayed again", fetched_at=NOW),
+        Item(id="g", source="atlantic", kind="news", url="https://e.com/g", title="Why electricity bills keep rising", fetched_at=NOW),
+        Item(id="h", source="atlantic", kind="news", url="https://e.com/h", title="A new novel", fetched_at=NOW),
+    ], NOW)
+    msgs = FakeMessages()
+    srcs = SourcesConfig(feeds=[FeedSource(id="spacenews", name="SpaceNews", kind="news", feeds=["x"], desk="space"),
+                                FeedSource(id="atlantic", name="The Atlantic", kind="news", feeds=["x"], llm=False)])
+    relevance.run(store, settings, srcs, fake_llm(store, msgs), iso(NOW - timedelta(hours=72)))
+    assert msgs.calls == []
+    rows = {r["id"]: (r["relevant"], r["desk"]) for r in store.conn.execute("SELECT id, relevant, desk FROM items")}
+    assert rows == {"s": (1, "space"), "g": (1, "energy"), "h": (0, None)}

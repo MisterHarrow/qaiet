@@ -499,10 +499,28 @@ def listen_files(bulletin: dict | None, out_dir: Path, root: str) -> dict | None
     return listen
 
 
+def desk_row(root: str, desks: list[dict] | None, active: str | None) -> list[dict]:
+    """The desk row under the nameplate: every desk ({key, label, prefix, value}) with its link from this page.
+    Empty with a single desk."""
+    if not desks or len(desks) < 2:
+        return []
+    return [{"key": d["key"], "label": d["label"], "href": (root + d["prefix"]) or "./", "active": d["key"] == active,
+             "value": d.get("value")} for d in desks]
+
+
+def _desk_context(root: str, desk: dict | None, desks: list[dict] | None) -> dict:
+    """What every page of a desk needs: `base`, the desk's folder from this page (its narratives, index and
+    archive live under it), the desk row, and the desk's names."""
+    desk = desk or {"key": "ai", "label": "AI", "name": "AI", "prefix": ""}
+    return {"base": root + desk["prefix"], "desks": desk_row(root, desks, desk["key"]), "desk": desk,
+            "desk_label": desk["name"] if desk["prefix"] else None}
+
+
 def render(edition: dict, out_dir: Path, tz: str = "Europe/Stockholm", periods: list[dict] | None = None, rel_path: str | None = None,
-           bulletin: dict | None = None) -> Path:
+           extra: dict | None = None, desk: dict | None = None, desks: list[dict] | None = None, bulletin: dict | None = None) -> Path:
     """Render one view. `periods` lists every view ({key, label, path}) for the switcher.
     `rel_path` overrides where the page goes (used for archive pages, which get no switcher).
+    `desk` is this page's desk ({key, label, name, prefix}); `desks` all of them, for the desk row.
     `bulletin` (pipeline/bulletin.for_page) adds the spoken edition's player."""
     period = edition.get("period") or {"key": "day", "label": "24 hours"}
     periods = periods if periods is not None else [{"key": period["key"], "label": period["label"], "path": ""}]
@@ -540,6 +558,8 @@ def render(edition: dict, out_dir: Path, tz: str = "Europe/Stockholm", periods: 
         tz_name=tz.split("/")[-1],
         data_since=_long_date(datetime.fromisoformat(since).astimezone(zone)) if since else None,
         listen=listen_files(bulletin, out_dir, root),
+        **_desk_context(root, desk, desks),
+        **(extra or {}),
     )
     (page_dir / "index.html").write_text(html, encoding="utf-8")
     shutil.copytree(HERE / "static", out_dir / "static", dirs_exist_ok=True)
@@ -566,12 +586,16 @@ def write_host_config(out_dir: Path) -> Path:
     return path
 
 
-def render_all(editions: list[dict], out_dir: Path, tz: str = "Europe/Stockholm", audio_dir: Path | None = None) -> list[Path]:
-    """Render every view with a shared switcher. `editions` are in display order. The 24-hour view gets the player
-    when that day's spoken bulletin is in `audio_dir`."""
+def render_all(editions: list[dict], out_dir: Path, tz: str = "Europe/Stockholm", desk: dict | None = None,
+               desks: list[dict] | None = None, audio_dir: Path | None = None) -> list[Path]:
+    """Render every view of one desk with a shared switcher. `editions` are in display order. A desk other than
+    the first lives in its folder (/energy/, /energy/week/, ...). The 24-hour view gets the player when that day's
+    spoken bulletin is in `audio_dir`."""
     from quiet_ai.pipeline import bulletin
 
-    periods = [{"key": e["period"]["key"], "label": e["period"]["label"], "path": period_path(i, e["period"]["key"])} for i, e in enumerate(editions)]
+    prefix = (desk or {}).get("prefix", "")
+    periods = [{"key": e["period"]["key"], "label": e["period"]["label"], "path": prefix + period_path(i, e["period"]["key"])}
+               for i, e in enumerate(editions)]
     zone = ZoneInfo(tz)
 
     def spoken(e: dict) -> dict | None:
@@ -579,7 +603,19 @@ def render_all(editions: list[dict], out_dir: Path, tz: str = "Europe/Stockholm"
             return None
         return bulletin.for_page(audio_dir, datetime.fromisoformat(e["generated_at"]).astimezone(zone).date().isoformat())
 
-    return [render(e, out_dir, tz, periods, bulletin=spoken(e)) for e in editions]
+    return [render(e, out_dir, tz, periods, desk=desk, desks=desks, bulletin=spoken(e)) for e in editions]
+
+
+def desk_list(desks, editions: dict[str, list[dict]]) -> list[dict]:
+    """The desks as the pages see them ({key, label, name, subject, prefix, value}): the first desk is the front page,
+    the others live in /<key>/. `value` is the desk's sentiment in its first view, for the desk row."""
+    out = []
+    for i, d in enumerate(desks):
+        eds = editions.get(d.key) or []
+        value = ((eds[0].get("sentiment") or {}).get("values") or {}).get("all") if eds else None
+        out.append({"key": d.key, "label": d.label, "name": d.name, "subject": d.subject, "stance": d.stance, "prefix": "" if i == 0 else f"{d.key}/",
+                    "value": value, "builders": d.builders})
+    return out
 
 
 def render_about(context: dict, out_dir: Path, tz: str = "Europe/Stockholm") -> Path:
@@ -598,15 +634,18 @@ def render_about(context: dict, out_dir: Path, tz: str = "Europe/Stockholm") -> 
     return page_dir / "index.html"
 
 
-def render_archive(editions: list[dict], out_dir: Path, tz: str = "Europe/Stockholm", audio_dir: Path | None = None) -> Path:
-    """One frozen page per finished day, plus /archive/ listing them (newest first). A day with a spoken
+def render_archive(editions: list[dict], out_dir: Path, tz: str = "Europe/Stockholm", desk: dict | None = None,
+                   desks: list[dict] | None = None, audio_dir: Path | None = None) -> Path:
+    """One frozen page per finished day, plus <desk>/archive/ listing them (newest first). A day with a spoken
     bulletin in `audio_dir` gets its player."""
     from quiet_ai.pipeline import bulletin
 
+    prefix = (desk or {}).get("prefix", "")
     days = []
     for e in editions:
         date = e["frozen"]["date"]
-        render(e, out_dir, tz, periods=[], rel_path=f"archive/{date}/", bulletin=bulletin.for_page(audio_dir, date))
+        render(e, out_dir, tz, periods=[], rel_path=f"{prefix}archive/{date}/", desk=desk, desks=desks,
+               bulletin=bulletin.for_page(audio_dir, date))
         days.append({
             "date": date,
             "long": _long_date(datetime.fromisoformat(date)),
@@ -614,30 +653,38 @@ def render_archive(editions: list[dict], out_dir: Path, tz: str = "Europe/Stockh
             "headlines": [s["headline"] for s in e.get("stories", [])[:3]],
             "stories": len(e.get("stories", [])),
         })
-    page_dir = out_dir / "archive"
+    page_dir = out_dir / prefix / "archive"
     page_dir.mkdir(parents=True, exist_ok=True)
-    (page_dir / "index.html").write_text(_env().get_template("archive.html.j2").render(days=days, root="../"), encoding="utf-8")
+    root = "../" * (prefix.count("/") + 1)
+    (page_dir / "index.html").write_text(_env().get_template("archive.html.j2").render(days=days, root=root, **_desk_context(root, desk, desks)),
+                                         encoding="utf-8")
     shutil.copytree(HERE / "static", out_dir / "static", dirs_exist_ok=True)
     return page_dir / "index.html"
 
 
-def render_narratives(narratives: list[dict], out_dir: Path, tz: str = "Europe/Stockholm", min_days: int = 4) -> Path:
-    """/narratives/ (ongoing, then ended) and one page per narrative at /narratives/<story id>/."""
+def render_narratives(narratives: list[dict], out_dir: Path, tz: str = "Europe/Stockholm", min_days: int = 4, desk: dict | None = None,
+                      desks: list[dict] | None = None) -> Path:
+    """<desk>/narratives/ (ongoing, then ended) and one page per narrative at <desk>/narratives/<story id>/."""
     env = _env()
-    page_dir = out_dir / "narratives"
+    prefix = (desk or {}).get("prefix", "")
+    page_dir = out_dir / prefix / "narratives"
     page_dir.mkdir(parents=True, exist_ok=True)
+    depth = prefix.count("/")
     for n in narratives:
         d = page_dir / n["id"]
         d.mkdir(parents=True, exist_ok=True)
         for t in n["timeline"]:
             t["segments"] = stance_segments(t["stance"]) if t.get("stance") else []
             t["stance_label"] = stance_label(t["stance"], f"Stance on {day_label(t['date'])}") if t.get("stance") else ""
+        root = "../" * (depth + 2)
         (d / "index.html").write_text(env.get_template("narrative.html.j2").render(
-            n=n, root="../../", seal_defs=seal_defs([n]), segments=stance_segments(n["stance"]), stance_text=stance_label(n["stance"], "Stance of every article"),
+            n=n, root=root, **_desk_context(root, desk, desks), seal_defs=seal_defs([n]), segments=stance_segments(n["stance"]), stance_text=stance_label(n["stance"], "Stance of every article"),
             min_days=min_days), encoding="utf-8")
     ongoing = [n for n in narratives if n["ongoing"]]
     ended = [n for n in narratives if not n["ongoing"]]
-    html = env.get_template("narratives.html.j2").render(ongoing=ongoing, ended=ended, root="../", min_days=min_days, seal_defs=seal_defs(narratives))
+    root = "../" * (depth + 1)
+    html = env.get_template("narratives.html.j2").render(ongoing=ongoing, ended=ended, root=root, min_days=min_days, seal_defs=seal_defs(narratives),
+                                                         **_desk_context(root, desk, desks))
     (page_dir / "index.html").write_text(html, encoding="utf-8")
     shutil.copytree(HERE / "static", out_dir / "static", dirs_exist_ok=True)
     return page_dir / "index.html"
@@ -692,21 +739,33 @@ TRACK_NOTES = {
 }
 
 
-def render_sentiment(history: dict, out_dir: Path, tz: str = "Europe/Stockholm") -> Path:
-    """/sentiment/: the daily AI sentiment index, overall and per track, with a table view."""
+# The same for the other desks, whose label prompts define the tracks per subject.
+DESK_TRACK_NOTES = {
+    "all": "Every labeled article, whatever its angle.",
+    "technical": "Technologies, research, projects and results.",
+    "political": "Policy, regulation, geopolitics and courts.",
+    "economic": "Prices, markets, companies, investment and jobs.",
+}
+
+
+def render_sentiment(history: dict, out_dir: Path, tz: str = "Europe/Stockholm", desk: dict | None = None, desks: list[dict] | None = None) -> Path:
+    """<desk>/sentiment/: a desk's daily sentiment index, overall and per track, with a table view."""
     from quiet_ai.pipeline.sentiment import describe
 
-    page_dir = out_dir / "sentiment"
+    prefix = (desk or {}).get("prefix", "")
+    notes = TRACK_NOTES if (desk or {}).get("key", "ai") == "ai" else DESK_TRACK_NOTES
+    page_dir = out_dir / prefix / "sentiment"
     page_dir.mkdir(parents=True, exist_ok=True)
+    root = "../" * (prefix.count("/") + 1)
     series = [("all", "All coverage"), ("technical", "Technical"), ("political", "Political"), ("economic", "Economic")]
-    charts = [{"key": k, "label": lab, "note": TRACK_NOTES[k], "svg": sparkline(history.get(k, []), lab), "latest": (history.get(k) or [None])[-1]}
+    charts = [{"key": k, "label": lab, "note": notes[k], "svg": sparkline(history.get(k, []), lab), "latest": (history.get(k) or [None])[-1]}
               for k, lab in series]
     dates = sorted({p["date"] for pts in history.values() for p in pts}, reverse=True)
     table = [{"date": d, "long": _long_date(datetime.fromisoformat(d)), "short": _short_date(d),
               **{k: next((p for p in history.get(k, []) if p["date"] == d), None) for k, _ in series}} for d in dates[:60]]
     latest = charts[0]["latest"]
     html = _env().get_template("sentiment.html.j2").render(
-        root="../", charts=charts, table=table, latest=latest,
+        root=root, **_desk_context(root, desk, desks), charts=charts, table=table, latest=latest,
         latest_long=_long_date(datetime.fromisoformat(latest["date"])) if latest else None,
         words=describe(latest["value"]) if latest else None, tracks=charts[1:], days=len(dates),
     )

@@ -1,0 +1,68 @@
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+  <channel>
+    <title>Wissen - FAZ.NET</title>
+    <link>https://www.faz.net/aktuell/wissen/</link>
+    <description>News aus allen Bereichen der Wissenschaft. Hintergrundberichte und ausführliche Reportagen aus Forschung und Entwicklung: Medizin, Klima, Weltraum, Archäologie und Naturwissenschaft.</description>
+    <category>Wissen - FAZ.NET</category>
+    <language>de-de</language>
+    <lastBuildDate>Thu, 26 Nov 2026 14:32:35 GMT</lastBuildDate>
+    <atom:link href="https://www.faz.net/rss/aktuell/wissen/" rel="self" type="application/rss+xml"/>
+    <copyright>Copyright 2001-2026 Frankfurter Allgemeine Zeitung GmbH. Alle Rechte vorbehalten.</copyright>
+    <generator>FAZ - Frankfurter Allgemeine Zeitung</generator>
+    <ttl>5</ttl>
+    <item>
+      <title>Wahlprüfungsbeschwerde: Das Karlsruher BSW-Urteil ist eine verpasste Chance</title>
+      <link>https://www.faz.net/aktuell/wissen/geist-soziales/zum-bsw-urteil-des-bundesverfassungsgericht-accg-201711919.html</link>
+      <guid isPermaLink="true">https://www.faz.net/aktuell/wissen/geist-soziales/zum-bsw-urteil-des-bundesverfassungsgericht-accg-201711919.html</guid>
+      <description>Karlsruhe hat die Wahlprüfungsbeschwerde des BSW zur vergangenen Bundestagswahl zurückgewiesen. Doch seine Argumente überzeugen nicht. Ein Zwischenruf aus der Politikwissenschaft.</description>
+      
+      <pubDate>Thu, 26 Nov 2026 09:36:42 GMT</pubDate>
+      <dc:creator>Eckhard Jesse und Uwe Wagschal</dc:creator>
+      <media:thumbnail url="https://media0.faz.net/image/1954a502803c/w5000h2812x0y287/202609/43601.0.2596066542/das-bundesverfassungsgericht.webp" width="400" height="225"/>
+      <media:content url="https://media0.faz.net/image/1954a502803c/w5000h2812x0y287/202609/43601.0.2596066542/das-bundesverfassungsgericht.webp" type="image/webp" medium="image" width="1200" height="675"/>
+    </item>
+    <item>
+      <title>ME/CFS: Gesund werden – oder finanziell abgesichert sein?</title>
+      <link>https://www.faz.net/aktuell/wissen/medizin-ernaehrung/reha-vor-rente-ist-fuer-me-cfs-patienten-oft-das-falsche-wo-bleibt-der-kurswechsel-accg-201709443.html</link>
+      <guid isPermaLink="true">https://www.faz.net/aktuell/wissen/medizin-ernaehrung/reha-vor-rente-ist-fuer-me-cfs-patienten-oft-das-falsche-wo-bleibt-der-kurswechsel-accg-201709443.html</guid>
+      <description>Reha-Programme können Menschen mit ME/CFS überlasten. Aber wer sie nicht durchläuft, hat keine Chance auf Leistungen der Sozialversicherungen.</description>
+      
+      <pubDate>Thu, 26 Nov 2026 05:41:39 GMT</pubDate>
+      <dc:creator>Martin Rücker</dc:creator>
+      <media:thumbnail url="https://media0.faz.net/image/f3f0f0c9a9d9/w6018h3385x1108y0/202611/0e70a222-5861-4476-860b-c84588a3c8d2/viele-menschen-mit-me-cfs-sind.webp" width="400" height="225"/>
+      <media:content url="https://media0.faz.net/image/f3f0f0c9a9d9/w6018h3385x1108y0/202611/0e70a222-5861-4476-860b-c84588a3c8d2/viele-menschen-mit-me-cfs-sind.webp" type="image/webp" medium="image" width="1200" height="675"/>
+    </item>
+    <item>
+      <title>Asteroidenmission „Hera“: An einem angeschossenen Mond</title>
+      <link>https://www.faz.net/aktuell/wissen/weltraum/esa-sonde-hera-erreicht-dimorphos-was-der-nasa-einschlag-hinterliess-201713150.html</link>
+      <guid isPermaLink="true">https://www.faz.net/aktuell/wissen/weltraum/esa-sonde-hera-erreicht-dimorphos-was-der-nasa-einschlag-hinterliess-201713150.html</guid>
+      <description>Vor vier Jahren rammt eine NASA-Sonde den kleinen Mond eines Asteroiden. Nun ist eine europäische Raumsonde am Tatort eingetroffen, um den Schaden zu besichtigen. Eine erste Überraschung gibt es bereits.</description>
+      
+      <pubDate>Wed, 25 Nov 2026 17:43:22 GMT</pubDate>
+      <dc:creator>Ulf von Rauchhaupt</dc:creator>
+      <media:thumbnail url="https://media0.faz.net/image/a29b60a9a3b2/w1020h574x0y305/202611/ac606325-c576-4da7-89b6-b4b76c2eeabe/der-asteroid-didymos-und-sein.webp" width="400" height="225"/>
+      <media:content url="https://media0.faz.net/image/a29b60a9a3b2/w1020h574x0y305/202611/ac606325-c576-4da7-89b6-b4b76c2eeabe/der-asteroid-didymos-und-sein.webp" type="image/webp" medium="image" width="1200" height="675"/>
+    </item>
+    <item>
+      <title>Botanik-Kolumne: Wenn es dem Kaktus zu heiß wird</title>
+      <link>https://www.faz.net/aktuell/wissen/ab-in-die-botanik/hitze-und-duerre-setzen-auch-kakteen-zu-201688865.html</link>
+      <guid isPermaLink="true">https://www.faz.net/aktuell/wissen/ab-in-die-botanik/hitze-und-duerre-setzen-auch-kakteen-zu-201688865.html</guid>
+      <description>Kakteen sind nicht so unverwüstlich wie gedacht. Auch ihnen fehlt in der größten Hitze das Wasser. Was das für unsere Fensterbänke bedeutet.</description>
+      
+      <pubDate>Wed, 25 Nov 2026 14:56:14 GMT</pubDate>
+      <dc:creator>Frauke Zbikowski</dc:creator>
+      <media:thumbnail url="https://media0.faz.net/image/e719fa7f4769/w5288h2974x0y1157/202606/43601.0.2207753147/die-koenigin-der-nacht.webp" width="400" height="225"/>
+      <media:content url="https://media0.faz.net/image/e719fa7f4769/w5288h2974x0y1157/202606/43601.0.2207753147/die-koenigin-der-nacht.webp" type="image/webp" medium="image" width="1200" height="675"/>
+    </item>
+    <item>
+      <title>Weltraum-Premiere: China schickt erstmals Ausländer zu seiner Raumstation</title>
+      <link>https://www.faz.net/aktuell/wissen/weltraum/shenzhou-24-muhammad-zeeshan-fliegt-als-erster-auslaender-zur-tiangong-accg-201714673.html</link>
+      <guid isPermaLink="true">https://www.faz.net/aktuell/wissen/weltraum/shenzhou-24-muhammad-zeeshan-fliegt-als-erster-auslaender-zur-tiangong-accg-201714673.html</guid>
+      <description>Erstmals schickt China mit einem Raumfahrer aus Pakistan einen Ausländer zu seiner Raumstation. Es ist nicht die einzige Neuerung bei der „Shenzhou 24“-Mission. Was erwartet die Männer im All?</description>
+      
+      <pubDate>Wed, 25 Nov 2026 01:54:12 GMT</pubDate>
+      <media:thumbnail url="https://media0.faz.net/image/7820c9232299/w7209h4055x0y455/202611/c5c1487d-e71d-4f85-b410-90396b57295f/die-raumfahrer-tang-hongbo.webp" width="400" height="225"/>
+      <media:content url="https://media0.faz.net/image/7820c9232299/w7209h4055x0y455/202611/c5c1487d-e71d-4f85-b410-90396b57295f/die-raumfahrer-tang-hongbo.webp" type="image/webp" medium="image" width="1200" height="675"/>
+    </item>
+  </channel>
+</rss>

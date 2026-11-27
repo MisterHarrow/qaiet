@@ -20,30 +20,38 @@ def local_date(now: datetime, tz: str) -> str:
     return now.astimezone(ZoneInfo(tz)).date().isoformat()
 
 
-def save_day_edition(store: Store, edition: dict, now: datetime, tz: str) -> str:
+def save_day_edition(store: Store, edition: dict, now: datetime, tz: str, desk: str = "ai") -> str:
     date = local_date(now, tz)
     with store.conn:
         store.conn.execute(
-            "INSERT INTO editions(date, data, updated_at) VALUES (?, ?, ?) "
-            "ON CONFLICT(date) DO UPDATE SET data = excluded.data, updated_at = excluded.updated_at",
-            (date, json.dumps(edition, ensure_ascii=False, default=str), iso(now)),
+            "INSERT INTO editions(desk, date, data, updated_at) VALUES (?, ?, ?, ?) "
+            "ON CONFLICT(desk, date) DO UPDATE SET data = excluded.data, updated_at = excluded.updated_at",
+            (desk, date, json.dumps(edition, ensure_ascii=False, default=str), iso(now)),
         )
     return date
 
 
+def desk_dir(editions_dir: Path, desk: str) -> Path:
+    """AI's editions stay at editions/<date>.json; other desks' go to editions/<desk>/<date>.json."""
+    return editions_dir if desk == "ai" else editions_dir / desk
+
+
 def freeze(store: Store, editions_dir: Path, now: datetime, tz: str) -> list[str]:
-    """Write every finished day that has no file yet. Returns the dates written."""
+    """Write every desk's finished days that have no file yet. Returns what was written (dates; desk/date for desks
+    other than AI)."""
     today = local_date(now, tz)
     editions_dir.mkdir(parents=True, exist_ok=True)
     written = []
-    for r in store.conn.execute("SELECT date, data FROM editions WHERE date < ? ORDER BY date", (today,)):
-        path = editions_dir / f"{r['date']}.json"
+    for r in store.conn.execute("SELECT desk, date, data FROM editions WHERE date < ? ORDER BY desk = 'ai' DESC, desk, date", (today,)):
+        folder = desk_dir(editions_dir, r["desk"])
+        folder.mkdir(parents=True, exist_ok=True)
+        path = folder / f"{r['date']}.json"
         if path.exists():
             continue
         edition = json.loads(r["data"])
         edition["frozen"] = {"date": r["date"], "at": iso(now)}
         path.write_text(json.dumps(edition, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-        written.append(r["date"])
+        written.append(r["date"] if r["desk"] == "ai" else f"{r['desk']}/{r['date']}")
     return written
 
 

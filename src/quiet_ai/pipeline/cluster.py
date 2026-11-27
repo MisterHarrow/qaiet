@@ -9,6 +9,7 @@ Each run only places items that have no story yet, in time order:
    models, datasets, spaces, papers and launches, whose descriptions are generic).
 3. Otherwise the item starts a new story, whose ID derives from the item's ID.
 Then near-identical stories that share a name are merged into the older one.
+A story belongs to one desk (AI, energy, ...): items join, and stories merge with, stories of their own desk only.
 """
 
 from __future__ import annotations
@@ -124,6 +125,7 @@ class _Story:
     is_new: bool = False
     dirty: bool = False
     loose: bool = False  # has a member outside the strict kinds (news, HN, posts...)
+    desk: str = "ai"
 
     @property
     def unit(self) -> np.ndarray:
@@ -152,7 +154,8 @@ class ClusterStats:
 
 def _window_items(store: Store, model: str, since: str, strict_kinds: set[str]) -> list[dict]:
     rows = store.conn.execute(
-        f"SELECT i.id, i.kind, i.url, i.title, i.title_en, i.extra, i.story_id, {EVENT_AT} AS event_at, e.vector, l.data AS label "
+        f"SELECT i.id, i.kind, i.url, i.title, i.title_en, i.extra, i.story_id, COALESCE(i.desk, 'ai') AS desk, "
+        f"{EVENT_AT} AS event_at, e.vector, l.data AS label "
         "FROM items i JOIN embeddings e ON e.item_id = i.id AND e.model = ? LEFT JOIN item_labels l ON l.item_id = i.id "
         f"WHERE i.relevant = 1 AND i.dup_of IS NULL AND {EVENT_AT} >= ? ORDER BY event_at, i.id",
         (model, since),
@@ -162,7 +165,7 @@ def _window_items(store: Store, model: str, since: str, strict_kinds: set[str]) 
         extra = json.loads(r["extra"] or "{}")
         text = r["title_en"] or r["title"]
         out.append({
-            "id": r["id"], "kind": r["kind"], "strict": r["kind"] in strict_kinds, "story_id": r["story_id"], "event_at": r["event_at"], "vec": from_blob(r["vector"]),
+            "id": r["id"], "kind": r["kind"], "desk": r["desk"], "strict": r["kind"] in strict_kinds, "story_id": r["story_id"], "event_at": r["event_at"], "vec": from_blob(r["vector"]),
             "ents": entities(text, json.loads(r["label"]).get("entities") if r["label"] else None),
             "keys": link_keys(r["kind"], r["url"], extra),
         })
@@ -183,7 +186,7 @@ def _load_stories(store: Store, model: str, since: str, members: dict[str, list[
             mean = np.mean([m["vec"] for m in mem], axis=0)
         else:
             continue
-        st = _Story(r["id"], mean, r["item_count"], r["first_item_at"], r["last_item_at"], r["created_at"])
+        st = _Story(r["id"], mean, r["item_count"], r["first_item_at"], r["last_item_at"], r["created_at"], desk=r["desk"] or "ai")
         st.loose = any(not m["strict"] for m in mem)
         for m in mem:
             st.entities.update(m["ents"])
@@ -214,12 +217,13 @@ def run(store: Store, model: str, cfg: ClusterSettings, now: datetime) -> Cluste
         if it["story_id"]:  # its story left the window; leave the item where it is
             continue
         target, how = None, ""
-        linked = {sid for k in it["keys"] for sid in key_index.get(k, ()) if sid in stories}
+        linked = {sid for k in it["keys"] for sid in key_index.get(k, ()) if sid in stories and stories[sid].desk == it["desk"]}
+        same_desk = [s for s in stories if stories[s].desk == it["desk"]]
         if linked:
             target = max(linked, key=lambda sid: float(stories[sid].unit @ it["vec"]))
             how = "link"
-        elif stories:
-            ids = list(stories)
+        elif same_desk:
+            ids = same_desk
             sims = np.stack([stories[s].unit for s in ids]) @ it["vec"]
             boost = np.array([cfg.entity_boost * min(sum(1 for e in it["ents"] if e in stories[s].entities), 2) for s in ids])
             # Repos, models and papers have generic descriptions ("an agent framework for..."):
@@ -245,7 +249,7 @@ def run(store: Store, model: str, cfg: ClusterSettings, now: datetime) -> Cluste
         else:
             target = story_id_for(it["id"])
             stories[target] = _Story(target, it["vec"].copy(), 1, it["event_at"], it["event_at"], iso(now),
-                                     Counter(it["ents"]), set(it["keys"]), is_new=True, dirty=True, loose=not it["strict"])
+                                     Counter(it["ents"]), set(it["keys"]), is_new=True, dirty=True, loose=not it["strict"], desk=it["desk"])
             stats.new_stories += 1
         for k in it["keys"]:
             key_index.setdefault(k, set()).add(target)
@@ -267,11 +271,11 @@ def run(store: Store, model: str, cfg: ClusterSettings, now: datetime) -> Cluste
                 continue
             count = store.conn.execute("SELECT COUNT(*) FROM items WHERE story_id = ?", (st.id,)).fetchone()[0]
             store.conn.execute(
-                "INSERT INTO stories(id, created_at, updated_at, first_item_at, last_item_at, item_count, centroid, model) "
-                "VALUES (?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT(id) DO UPDATE SET updated_at = excluded.updated_at, "
+                "INSERT INTO stories(id, created_at, updated_at, first_item_at, last_item_at, item_count, centroid, model, desk) "
+                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT(id) DO UPDATE SET updated_at = excluded.updated_at, "
                 "first_item_at = excluded.first_item_at, last_item_at = excluded.last_item_at, "
                 "item_count = excluded.item_count, centroid = excluded.centroid, model = excluded.model, merged_into = NULL",
-                (st.id, st.created_at, iso(now), st.first_at, st.last_at, count, to_blob(st.mean), model),
+                (st.id, st.created_at, iso(now), st.first_at, st.last_at, count, to_blob(st.mean), model, st.desk),
             )
     stats.active_stories = len(stories)
     return stats
@@ -294,6 +298,8 @@ def _merge(stories: dict[str, _Story], cfg: ClusterSettings) -> list[tuple[str, 
         if x in gone or y in gone:
             continue
         sx, sy = stories[x], stories[y]
+        if sx.desk != sy.desk:
+            continue
         shared_link = bool(sx.keys & sy.keys)
         if not shared_link and (not (sx.loose and sy.loose) or not set(sx.entities) & set(sy.entities)):
             continue

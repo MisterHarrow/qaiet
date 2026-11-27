@@ -32,6 +32,10 @@ GROUP_NAMES = {
     "southeast-asia": "Southeast Asia",
     "oceania": "Oceania",
     "global": "Global",
+    "desk-energy": "Energy press and agencies",
+    "desk-biotech": "Biotech and health press and regulators",
+    "desk-space": "Space press and agencies",
+    "desk-food": "Farm and food press and agencies",
 }
 FEATURE_NAMES = {
     "outlets": "Number of news outlets covering it",
@@ -131,6 +135,8 @@ def about_context(store: Store, settings: Settings, sources: SourcesConfig, acco
             "gdelt": len(sources.gdelt_outlets),
         },
         "groups": groups,
+        "desks": [{"key": d.key, "name": d.name, "subject": d.subject, "stance": d.stance, "builders": d.builders,
+                   "prefix": "" if i == 0 else f"{d.key}/"} for i, d in enumerate(settings.active_desks)],
         "regions": [{"name": name, "n": sum(1 for f in news if f.country in codes)} for name, codes in REGIONS],
         "us_share": _us_share(store, settings, sources, now),
         "waiting": _waiting(news, now),

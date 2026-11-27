@@ -323,7 +323,7 @@ def paths(audio_dir: Path, day: str) -> dict[str, Path]:
 
 
 def day_edition(store: Store, day: str) -> dict | None:
-    row = store.conn.execute("SELECT data FROM editions WHERE date = ?", (day,)).fetchone()
+    row = store.conn.execute("SELECT data FROM editions WHERE desk = 'ai' AND date = ?", (day,)).fetchone()  # the bulletin reads AI's edition
     return json.loads(row["data"]) if row else None
 
 

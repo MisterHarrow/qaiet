@@ -47,7 +47,8 @@ class PeriodView:
 
 @dataclass
 class AnalysisRun:
-    views: dict[str, PeriodView]
+    views: dict[str, PeriodView]  # the first desk's (AI's) views
+    desk_views: dict[str, dict[str, PeriodView]]  # desk -> its views
     news: classify.LabelStats
     builders: classify.LabelStats
     summaries: summarize.SummaryStats
@@ -67,11 +68,18 @@ class AnalysisRun:
         return self.front.rising
 
 
-def period_views(store: Store, settings: Settings, sources: SourcesConfig, now: datetime) -> dict[str, PeriodView]:
+def period_views(store: Store, settings: Settings, sources: SourcesConfig, now: datetime, desk: str = "ai") -> dict[str, PeriodView]:
+    """One desk's views. Rising (builder listings) belongs to the desks with builders: AI."""
+    builders = settings.desk(desk).builders if any(d.key == desk for d in settings.desks) else desk == "ai"
     return {
-        p.key: PeriodView(p, momentum.score_stories(store, settings, sources, now, p), momentum.rising(store, settings, now, p.hours))
+        p.key: PeriodView(p, momentum.score_stories(store, settings, sources, now, p, desk),
+                          momentum.rising(store, settings, now, p.hours) if builders else [])
         for p in settings.site.periods
     }
+
+
+def all_views(store: Store, settings: Settings, sources: SourcesConfig, now: datetime) -> dict[str, dict[str, PeriodView]]:
+    return {d.key: period_views(store, settings, sources, now, d.key) for d in settings.active_desks}
 
 
 def run_analysis(store: Store, settings: Settings, sources: SourcesConfig, now: datetime, llm: LLM | None) -> AnalysisRun:
@@ -83,8 +91,10 @@ def run_analysis(store: Store, settings: Settings, sources: SourcesConfig, now: 
     use_llm = llm is not None and llm.available
     notes = [] if use_llm else ["no ANTHROPIC_API_KEY: no labels, summaries or weather this run"]
     news = classify.label_news(store, settings, sources, llm, since) if use_llm else classify.LabelStats()
-    sentiment.compute(store, settings, now, sentiment.waiting(sources))
-    views = period_views(store, settings, sources, now)  # after labels: merging uses their names
+    for d in settings.active_desks:
+        sentiment.compute(store, settings, now, sentiment.waiting(sources), d.key)
+    desk_views = all_views(store, settings, sources, now)  # after labels: merging uses their names
+    views = desk_views[settings.active_desks[0].key]
     builder_ids: list[str] = []
     for v in views.values():
         builder_ids += [r.item_id for r in v.rising]
@@ -97,43 +107,58 @@ def run_analysis(store: Store, settings: Settings, sources: SourcesConfig, now: 
     builders = classify.label_builders(store, settings, llm, list(dict.fromkeys(builder_ids))) if use_llm else classify.LabelStats()
     sums, wx = summarize.SummaryStats(), summarize.SummaryStats()
     if use_llm:
-        for v in views.values():
-            st = summarize.summarize_top(store, settings, sources, llm, v.scores, now)
-            sums.summarized += st.summarized
-            sums.unchanged += st.unchanged
-            sums.notes += [n for n in st.notes if n not in sums.notes]
-            w = summarize.weather(store, settings, sources, llm, v.scores, v.rising, a.top_stories, now, v.period)
-            wx.weather = wx.weather or w.weather
-            wx.notes += [n for n in w.notes if n not in wx.notes]
+        for desk, dviews in desk_views.items():
+            for v in dviews.values():
+                st = summarize.summarize_top(store, settings, sources, llm, v.scores, now, desk)
+                sums.summarized += st.summarized
+                sums.unchanged += st.unchanged
+                sums.notes += [n for n in st.notes if n not in sums.notes]
+                w = summarize.weather(store, settings, sources, llm, v.scores, v.rising, a.top_stories, now, v.period, desk)
+                wx.weather = wx.weather or w.weather
+                wx.notes += [n for n in w.notes if n not in wx.notes]
     for st in (news, builders, sums, wx):
         notes += [n for n in st.notes if n not in notes]
-    return AnalysisRun(views, news, builders, sums, wx, notes)
+    return AnalysisRun(views, desk_views, news, builders, sums, wx, notes)
+
+
+def build_all_editions(store: Store, settings: Settings, sources: SourcesConfig, now: datetime,
+                       desk_views: dict[str, dict[str, PeriodView]] | None = None, narr: dict[str, list[dict]] | None = None) -> dict[str, list[dict]]:
+    """Every desk's editions: desk -> one edition per view (in display order)."""
+    desk_views = desk_views or {}
+    narr = narr or {}
+    return {d.key: build_editions(store, settings, sources, now, desk_views.get(d.key), narr.get(d.key), d.key) for d in settings.active_desks}
+
+
+def all_narratives(store: Store, settings: Settings, sources: SourcesConfig, now: datetime) -> dict[str, list[dict]]:
+    return {d.key: narratives.detect(store, settings, sources, now, d.key) for d in settings.active_desks}
 
 
 def build_editions(store: Store, settings: Settings, sources: SourcesConfig, now: datetime, views: dict[str, PeriodView] | None = None,
-                   narr: list[dict] | None = None) -> list[dict]:
-    """One edition per view, with The gap, the sentiment index for that period and the ongoing narratives."""
+                   narr: list[dict] | None = None, desk: str = "ai") -> list[dict]:
+    """One desk's editions, one per view, with The gap (desks with builders), the desk's sentiment index for that
+    period and its ongoing narratives."""
     import math
 
-    views = views or period_views(store, settings, sources, now)
-    hist = sentiment.history(store)
+    views = views or period_views(store, settings, sources, now, desk)
+    builders = settings.desk(desk).builders if any(d.key == desk for d in settings.desks) else desk == "ai"
+    hist = sentiment.history(store, desk=desk)
     view_days = {k: max(1, math.ceil(v.period.hours / 24)) for k, v in views.items()}
     # The index per region and per country, for the story filter by place (app.js swaps the line's figures).
     outlet_country = {f.id: f.country for f in sources.feeds} | {g.id: g.country for g in sources.gdelt_outlets}
     places = dict(REGIONS) | {c: [c] for _, codes in REGIONS for c in codes}
     days_all = [p["date"] for p in hist.get("all") or []]
-    by_place = (sentiment.by_place(store, settings, outlet_country, places, days_all[-max(view_days.values()):][0], sentiment.waiting(sources))
+    by_place = (sentiment.by_place(store, settings, outlet_country, places, days_all[-max(view_days.values()):][0], sentiment.waiting(sources), desk)
                 if days_all else {})
-    narr = narratives.detect(store, settings, sources, now) if narr is None else narr
+    narr = narratives.detect(store, settings, sources, now, desk) if narr is None else narr
     ongoing = [narratives.compact(n) for n in narr if n["ongoing"]][: settings.narratives.front_max]
     member_of = narratives.by_story(narr)
     out = []
     for v in views.values():
-        ed = edition.build(store, settings, sources, v.scores, v.rising, now, settings.analysis.top_stories, v.period)
+        ed = edition.build(store, settings, sources, v.scores, v.rising, now, settings.analysis.top_stories, v.period, desk)
         ed["narratives"] = {"min_days": settings.narratives.min_days, "total": len(narr), "items": ongoing}
         for st, sc in zip(ed["stories"], v.scores):  # which narrative a story (or a merged group) is part of
             st["narrative"] = next((member_of[m] for m in sc.members if m in member_of), None)
-        ed["gap"] = gap.compute(store, settings, sources, v.scores)
+        ed["gap"] = gap.compute(store, settings, sources, v.scores) if builders else {}
         days = view_days[v.period.key]
         values = sentiment.period_value(hist, days)
         latest = hist["all"][-1]["date"] if hist.get("all") else None

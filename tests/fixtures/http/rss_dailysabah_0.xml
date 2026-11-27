@@ -9,10 +9,21 @@
     <link>https://www.dailysabah.com</link>
     <description>Daily Sabah - Business - Tech</description>
     <language>en-US</language>
-    <lastBuildDate>Thu, 26 Nov 2026 12:15:18 +0300</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 17:44:25 +0300</lastBuildDate>
     <generator>DAILYSABAH Software Team</generator>
     <docs>https://www.rssboard.org/rss-specification</docs>
     <copyright>Copyright © 2003-2026 TURKUVAZ HABERLEŞME VE YAYINCILIK A.Ş</copyright>
+                
+        <item>
+                <title><![CDATA[Nvidia halts chip server shipments to 4 Asian nations]]></title>
+                <link>https://www.dailysabah.com/business/tech/nvidia-halts-chip-server-shipments-to-4-asian-nations</link>
+                <description><![CDATA[Nvidia ​has told manufacturing partners to stop shipping servers containing its chips to ⁠Malaysia, Singapore, Thailand ⁠and Indonesia, the Financial Times reported on Thursday. Th...]]></description>
+                <guid isPermaLink="true">https://www.dailysabah.com/business/tech/nvidia-halts-chip-server-shipments-to-4-asian-nations</guid>
+                <enclosure url="https://idsb.tmgrup.com.tr/ly/uploads/images/2026/11/26/472137.JPG" length="50000" type="image/jpeg" />
+        <media:content url="https://idsb.tmgrup.com.tr/ly/uploads/images/2026/11/26/472137.JPG" type="image/jpeg" />
+                        <category><![CDATA[Business - Tech]]></category>
+                        <pubDate>Thu, 26 Nov 2026 11:50:00 +0300</pubDate>
+            </item>
                 
         <item>
                 <title><![CDATA[Firms tied to Alice Huang listed millions in AI hardware in China: Report]]></title>
@@ -56,17 +67,6 @@
         <media:content url="https://idsb.tmgrup.com.tr/ly/uploads/images/2026/11/25/471931.JPG" type="image/jpeg" />
                         <category><![CDATA[Business - Tech]]></category>
                         <pubDate>Wed, 25 Nov 2026 11:28:00 +0300</pubDate>
-            </item>
-                
-        <item>
-                <title><![CDATA[Huawei found guilty on 10 counts in sprawling US criminal case]]></title>
-                <link>https://www.dailysabah.com/business/economy/huawei-found-guilty-on-10-counts-in-sprawling-us-criminal-case</link>
-                <description><![CDATA[Chinese tech giant Huawei was convicted by a jury in New York on Tuesday in a sprawling, nearly decade-old U.S. criminal case on charges that it deceived banks about its business i...]]></description>
-                <guid isPermaLink="true">https://www.dailysabah.com/business/economy/huawei-found-guilty-on-10-counts-in-sprawling-us-criminal-case</guid>
-                <enclosure url="https://idsb.tmgrup.com.tr/ly/uploads/images/2026/11/25/471924.jpg" length="50000" type="image/jpeg" />
-        <media:content url="https://idsb.tmgrup.com.tr/ly/uploads/images/2026/11/25/471924.jpg" type="image/jpeg" />
-                        <category><![CDATA[Business - Tech]]></category>
-                        <pubDate>Wed, 25 Nov 2026 10:54:00 +0300</pubDate>
             </item>
     </channel>
 </rss>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xml:base="https://www.farmprogress.com"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:atom="http://www.w3.org/2005/Atom"
+    xmlns:media="http://search.yahoo.com/mrss/"
+    xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>farmprogress</title>
+        <link>https://www.farmprogress.com</link>
+        <description>Public RSS feed</description>
+                <language>en</language>
+        <atom:link href="https://www.farmprogress.com/feeds/rss.xml" rel="self" type="application/rss+xml" />
+                 <item>
+            <title><![CDATA[The potential plight of ‘light’ trading]]></title>
+            <link><![CDATA[https://www.farmprogress.com/markets-and-quotes/afternoon-market-recap]]></link>
+                        <description><![CDATA[Afternoon Market Recap: Corn and soybeans refused to get pushed around in midweek trading.]]></description>
+                                                        <pubDate>Wed, 25 Nov 2026 20:31:13 GMT</pubDate>
+                                                                <dc:creator>Ben Potter</dc:creator>
+                                    <guid isPermaLink="false"><![CDATA[https://www.farmprogress.com/markets-and-quotes/afternoon-market-recap]]></guid>
+                             
+                <media:thumbnail url="https://eu-images.contentstack.com/v3/assets/bltdd43779342bd9107/blt6ce4e3b0f023e664/6526a29ce9c52ec2a1c537e3/Getty_afternoon_markets_LED_screen_1800x1012.jpg?width=720&amp;quality=80&amp;disable=upscale" />
+                <media:content url="https://eu-images.contentstack.com/v3/assets/bltdd43779342bd9107/blt6ce4e3b0f023e664/6526a29ce9c52ec2a1c537e3/Getty_afternoon_markets_LED_screen_1800x1012.jpg?width=720&amp;quality=80&amp;disable=upscale" medium="image">
+                    <media:title type="html">Getty_afternoon_markets_LED_screen_1800x1012.jpg</media:title>
+                </media:content>
+                                    </item>        <item>
+            <title><![CDATA[USDA Exports: China buys soybeans]]></title>
+            <link><![CDATA[https://www.farmprogress.com/marketing/flash-sales]]></link>
+                        <description><![CDATA[The 2026-27 marketing year for corn and soybeans began Sept. 1]]></description>
+                                                        <pubDate>Wed, 25 Nov 2026 16:24:44 GMT</pubDate>
+                                                                <dc:creator>Farm Progress staff</dc:creator>
+                                    <guid isPermaLink="false"><![CDATA[https://www.farmprogress.com/marketing/flash-sales]]></guid>
+                             
+                <media:thumbnail url="https://eu-images.contentstack.com/v3/assets/bltdd43779342bd9107/blt9a4255e1e8309496/63c95070c8dc4c6b1f0b9bbc/exports.jpg?width=720&amp;quality=80&amp;disable=upscale" />
+                <media:content url="https://eu-images.contentstack.com/v3/assets/bltdd43779342bd9107/blt9a4255e1e8309496/63c95070c8dc4c6b1f0b9bbc/exports.jpg?width=720&amp;quality=80&amp;disable=upscale" medium="image">
+                    <media:title type="html">exports.jpg</media:title>
+                </media:content>
+                                    </item>        <item>
+            <title><![CDATA[Dear Santa: All we want for Christmas is a nice grain rally]]></title>
+            <link><![CDATA[https://www.farmprogress.com/markets-and-quotes/morning-market-review]]></link>
+                        <description><![CDATA[Morning Market Analysis: Soybean futures slumped overnight in a pullback from four-week highs as tariff concerns pressure grain complex ahead of holiday.]]></description>
+                                                        <pubDate>Wed, 25 Nov 2026 13:33:19 GMT</pubDate>
+                                                                <dc:creator>Bruce Blythe</dc:creator>
+                                    <guid isPermaLink="false"><![CDATA[https://www.farmprogress.com/markets-and-quotes/morning-market-review]]></guid>
+                             
+                <media:thumbnail url="https://eu-images.contentstack.com/v3/assets/bltdd43779342bd9107/bltb33b79d2c912930e/6526a21ef49f03543116f190/Getty_morning_market_recap_1800x1012.jpg?width=720&amp;quality=80&amp;disable=upscale" />
+                <media:content url="https://eu-images.contentstack.com/v3/assets/bltdd43779342bd9107/bltb33b79d2c912930e/6526a21ef49f03543116f190/Getty_morning_market_recap_1800x1012.jpg?width=720&amp;quality=80&amp;disable=upscale" medium="image">
+                    <media:title type="html">Getty_morning_market_recap_1800x1012.jpg</media:title>
+                </media:content>
+                                    </item>        <item>
+            <title><![CDATA[Farm costs squeeze growers, drive bankruptcy surge]]></title>
+            <link><![CDATA[https://www.farmprogress.com/tv-and-radio/farm-costs-squeeze-growers-drive-bankruptcy-surge]]></link>
+                        <description><![CDATA[Farm Progress America: Rising diesel and fertilizer costs push Arkansas farm bankruptcies to the nation's highest, while disease pressure threatens yields nationwide.]]></description>
+                                                        <pubDate>Wed, 25 Nov 2026 12:58:02 GMT</pubDate>
+                                                                <dc:creator></dc:creator>
+                                    <guid isPermaLink="false"><![CDATA[https://www.farmprogress.com/tv-and-radio/farm-costs-squeeze-growers-drive-bankruptcy-surge]]></guid>
+                             
+                <media:thumbnail url="https://eu-images.contentstack.com/v3/assets/bltdd43779342bd9107/blt52a6b37d990f1933/6b06db8036096867e7f212b5/discouraged-farmer-182152467.jpg?width=720&amp;quality=80&amp;disable=upscale" />
+                <media:content url="https://eu-images.contentstack.com/v3/assets/bltdd43779342bd9107/blt52a6b37d990f1933/6b06db8036096867e7f212b5/discouraged-farmer-182152467.jpg?width=720&amp;quality=80&amp;disable=upscale" medium="image">
+                    <media:title type="html">discouraged-farmer-182152467.jpg</media:title>
+                </media:content>
+                                    </item>        <item>
+            <title><![CDATA[Then and now: How growing up in the Delta has changed over 4 decades]]></title>
+            <link><![CDATA[https://www.farmprogress.com/farm-life/then-and-now-how-growing-up-in-the-delta-has-changed-over-4-decades]]></link>
+                        <description><![CDATA[Rural life has undergone major changes in my lifetime. Here’s my midlife perspective.]]></description>
+                                                        <pubDate>Wed, 25 Nov 2026 08:00:00 GMT</pubDate>
+                                                                <dc:creator>Whitney Shannon</dc:creator>
+                                    <guid isPermaLink="false"><![CDATA[https://www.farmprogress.com/farm-life/then-and-now-how-growing-up-in-the-delta-has-changed-over-4-decades]]></guid>
+                             
+                <media:thumbnail url="https://eu-images.contentstack.com/v3/assets/bltdd43779342bd9107/blt159bb3515820e587/6b0480b9187d8b09d9ba029f/1123W1-4038A-1800x1012.jpg?width=720&amp;quality=80&amp;disable=upscale" />
+                <media:content url="https://eu-images.contentstack.com/v3/assets/bltdd43779342bd9107/blt159bb3515820e587/6b0480b9187d8b09d9ba029f/1123W1-4038A-1800x1012.jpg?width=720&amp;quality=80&amp;disable=upscale" medium="image">
+                    <media:title type="html">1123W1-4038A-1800x1012.jpg</media:title>
+                </media:content>
+                                    </item>    </channel>
+</rss>

@@ -22,7 +22,7 @@ STANCES = (-2, -1, 0, 1, 2)
 _PRESS_KINDS = ("news", "newsletter")
 
 
-def top_terms(store: Store, sources: SourcesConfig, settings: Settings, now, hours: float = 24) -> list[dict]:
+def top_terms(store: Store, sources: SourcesConfig, settings: Settings, now, hours: float = 24, desk: str = "ai") -> list[dict]:
     """The names most outlets mentioned in the last `hours`, from the item labels.
     Counted once per outlet, so one outlet repeating a name doesn't inflate it."""
     s = settings.site
@@ -31,8 +31,8 @@ def top_terms(store: Store, sources: SourcesConfig, settings: Settings, now, hou
     outlet_names = {f.name.lower() for f in sources.feeds} | {g.name.lower() for g in sources.gdelt_outlets}
     rows = store.conn.execute(
         "SELECT i.source, l.data FROM item_labels l JOIN items i ON i.id = l.item_id "
-        "WHERE l.task = 'news' AND i.relevant = 1 AND i.first_seen_at >= ?",
-        (iso(now - timedelta(hours=hours)),),
+        "WHERE l.task = 'news' AND i.relevant = 1 AND COALESCE(i.desk, 'ai') = ? AND i.first_seen_at >= ?",
+        (desk, iso(now - timedelta(hours=hours))),
     ).fetchall()
     outlets: dict[str, set] = defaultdict(set)
     spellings: dict[str, Counter] = defaultdict(Counter)
@@ -287,8 +287,8 @@ def rising_groups(entries: list[dict]) -> list[dict]:
     return groups
 
 
-def weather_kind(period_key: str) -> str:
-    return f"weather:{period_key}"
+def weather_kind(period_key: str, desk: str = "ai") -> str:
+    return f"weather:{period_key}" if desk == "ai" else f"weather:{desk}:{period_key}"
 
 
 # Feeds carry roughly a day of older items, so the first run already covers about 24 hours.
@@ -310,15 +310,15 @@ def covered_hours(store: Store, now: datetime) -> float | None:
 
 
 def build(store: Store, settings: Settings, sources: SourcesConfig, scores: list[StoryScore], rising: list[RisingItem], now: datetime,
-          top: int, period: PeriodSettings | None = None) -> dict[str, Any]:
+          top: int, period: PeriodSettings | None = None, desk: str = "ai") -> dict[str, Any]:
     period = period or settings.site.periods[0]
-    weather = store.conn.execute("SELECT data FROM reports WHERE kind = ? ORDER BY id DESC LIMIT 1", (weather_kind(period.key),)).fetchone()
+    weather = store.conn.execute("SELECT data FROM reports WHERE kind = ? ORDER BY id DESC LIMIT 1", (weather_kind(period.key, desk),)).fetchone()
     month_start = now.replace(day=1, hour=0, minute=0, second=0, microsecond=0)
     spend = store.conn.execute("SELECT COALESCE(SUM(cost_usd), 0) FROM llm_calls WHERE created_at >= ?", (iso(month_start),)).fetchone()[0]
     since = data_since(store)
     covered = covered_hours(store, now)
     partial = covered is not None and covered < period.hours
-    terms = top_terms(store, sources, settings, now, period.hours)
+    terms = top_terms(store, sources, settings, now, period.hours, desk)
     keys = {t["key"] for t in terms}
     aliases = {k.lower(): v for k, v in settings.site.term_aliases.items()}
     talk = mentions_mod.load(store, [f.id for f in sources.feeds if f.mentions and f.enabled], now, period.hours)
@@ -330,6 +330,7 @@ def build(store: Store, settings: Settings, sources: SourcesConfig, scores: list
                 t["stories"] = t.get("stories", 0) + 1
     return {
         "generated_at": iso(now),
+        "desk": desk,
         "period": {"key": period.key, "label": period.label, "hours": period.hours},
         "data_since": since if partial else None,  # set when the period reaches back before our first data
         "weather": json.loads(weather["data"])["sentence"] if weather else None,

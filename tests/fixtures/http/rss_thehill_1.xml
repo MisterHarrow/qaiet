@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	xmlns:dcterms="http://purl.org/dc/terms/"
+>
+
+<channel>
+	<title>Energy & Environment News</title>
+	<atom:link href="https://thehill.com/policy/energy-environment/feed/" rel="self" type="application/rss+xml" />
+	<link>https://thehill.com</link>
+	<description>Unbiased Politics News</description>
+	<lastBuildDate>Thu, 26 Nov 2026 14:06:03 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.9.12</generator>
+
+<image>
+	<url>https://thehill.com/wp-content/uploads/sites/2/2023/03/cropped-favicon-512px-1.png?w=32</url>
+	<title>Energy & Environment News</title>
+	<link>https://thehill.com</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Severe weather wreaks havoc on Thanksgiving travel, festivities  </title>
+		<link>https://thehill.com/policy/energy-environment/6244557-severe-weather-thanksgiving-travel-delays/</link>
+		
+		<dc:creator><![CDATA[Caroline Vakil]]></dc:creator>
+		<pubDate>Thu, 26 Nov 2026 13:54:20 +0000</pubDate>
+		<category><![CDATA[Energy & Environment]]></category>		
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Policy]]></category>
+		<category><![CDATA[State Watch]]></category>
+		<category><![CDATA[East Coast]]></category>
+		<category><![CDATA[flooding]]></category>
+		<category><![CDATA[inclement weather]]></category>
+		<category><![CDATA[National Weather Service]]></category>
+		<category><![CDATA[Nor'easter]]></category>
+		<category><![CDATA[Pacific Northwest]]></category>
+		<category><![CDATA[Thanksgiving Day 2026]]></category>
+		<guid isPermaLink="false">https://thehill.com/?p=6244557</guid>
+
+					<description><![CDATA[Severe storms and flooding on both the Pacific Northwest and East Coasts are wreaking havoc on Thanksgiving travel and festivities this week.   The National Weather Service (NWS) noted in a short-range forecast discussion published Thursday that low pressure moving upward from the southeast would bring heavy rain on New England — including potential flash...]]></description>
+		
+		
+		
+		<enclosure url="https://thehill.com/wp-content/uploads/sites/2/2026/11/AP26328801677690-e1795701200963.jpg?w=900" type="image/jpeg" length="229802" />
+<dcterms:modified>2026-11-26T13:54:26+00:00</dcterms:modified>
+	</item>
+		<item>
+		<title>Live updates: Inclement weather upends Thanksgiving plans; Iowa lifts shelter-in-place</title>
+		<link>https://thehill.com/homenews/administration/6244342-live-updates-inclement-weather-thanksgiving-issues-iowa-detonation-fallout/</link>
+		
+		<dc:creator><![CDATA[The Hill Staff]]></dc:creator>
+		<pubDate>Thu, 26 Nov 2026 13:30:00 +0000</pubDate>
+		<category><![CDATA[Administration]]></category>		
+		<category><![CDATA[Energy & Environment]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Policy]]></category>
+		<category><![CDATA[State Watch]]></category>
+		<guid isPermaLink="false">https://thehill.com/?p=6244342</guid>
+
+					<description><![CDATA[Severe weather is upending Thanksgiving plans across the country, with travelers bracing for flight delays and cancellations as a powerful nor’easter moves up the East Coast. The storm has already pushed back the annual Macy’s Thanksgiving Day Parade to Saturday and prompted emergency declarations in New York and New Jersey. Meanwhile, federal officials will continue...]]></description>
+		
+		
+		
+		<enclosure url="https://thehill.com/wp-content/uploads/sites/2/2026/11/AP24094625032067-e1795699999589.jpg?w=900" type="image/jpeg" length="151543" />
+<dcterms:modified>2026-11-26T14:06:03+00:00</dcterms:modified>
+	</item>
+		<item>
+		<title>Trump rips Obama, CNN as he touts ‘perfect’ Iowa detonation </title>
+		<link>https://thehill.com/homenews/administration/6244532-trump-obama-cnn-army-iowa-lead-azide-detonation/</link>
+		
+		<dc:creator><![CDATA[Caroline Vakil]]></dc:creator>
+		<pubDate>Thu, 26 Nov 2026 13:08:10 +0000</pubDate>
+		<category><![CDATA[Administration]]></category>		
+		<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Energy & Environment]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Policy]]></category>
+		<category><![CDATA[State Watch]]></category>
+		<category><![CDATA[Adam Telle]]></category>
+		<category><![CDATA[CNN]]></category>
+		<category><![CDATA[Iowa]]></category>
+		<category><![CDATA[Iowa detonation]]></category>
+		<category><![CDATA[lead azide]]></category>
+		<category><![CDATA[Obama administration]]></category>
+		<category><![CDATA[Trumo administration]]></category>
+		<category><![CDATA[U.S. Army]]></category>
+		<guid isPermaLink="false">https://thehill.com/?p=6244532</guid>
+
+					<description><![CDATA[President Trump took swipes at former President Obama and CNN over what he described as his administration’s “perfect” detonation of degraded lead azide in Iowa — a controversial move that’s raised questions around how the explosive material accumulated to that degree in the first place.   In a post on Truth Social early Thursday, Trump...]]></description>
+		
+		
+		
+		<enclosure url="https://thehill.com/wp-content/uploads/sites/2/2026/11/AP26328774593930-e1795697958345.jpg?w=900" type="image/jpeg" length="104513" />
+<dcterms:modified>2026-11-26T13:08:16+00:00</dcterms:modified>
+	</item>
+		<item>
+		<title>Trump: Iowa Gov.-elect Sand was &#039;absolutely no help&#039; in controlled lead blast</title>
+		<link>https://thehill.com/homenews/administration/6243848-trump-criticizes-sand-iowa-lead-blast/</link>
+		
+		<dc:creator><![CDATA[Julia Manchester]]></dc:creator>
+		<pubDate>Wed, 25 Nov 2026 21:46:01 +0000</pubDate>
+		<category><![CDATA[Administration]]></category>		
+		<category><![CDATA[Energy & Environment]]></category>
+		<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://thehill.com/?p=6243848</guid>
+
+					<description><![CDATA[President Trump criticized Iowa Gov.-elect Rob Sand (D) in the wake of the controlled lead blast in the state Wednesday, accusing the incoming governor of hurting the process.   “Rob, the new future Governor of Iowa, is obviously unhappy that the Obama created (2009!) mess was so perfectly handled by the U.S. Army through a flawless...]]></description>
+		
+		
+		
+		<enclosure url="https://thehill.com/wp-content/uploads/sites/2/2026/11/Trump_Sand_Nov25.jpg?w=900" type="image/jpeg" length="141050" />
+<dcterms:modified>2026-11-25T22:16:36+00:00</dcterms:modified>
+	</item>
+		<item>
+		<title>Miller touts Iowa blast as &#039;tremendous display of unity&#039; under Trump</title>
+		<link>https://thehill.com/homenews/administration/6243542-miller-praises-iowa-munitions-detonation-trump/</link>
+		
+		<dc:creator><![CDATA[Ford McCracken]]></dc:creator>
+		<pubDate>Wed, 25 Nov 2026 20:35:00 +0000</pubDate>
+		<category><![CDATA[Administration]]></category>		
+		<category><![CDATA[Energy & Environment]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[State Watch]]></category>
+		<guid isPermaLink="false">https://thehill.com/?p=6243542</guid>
+
+					<description><![CDATA[White House chief of staff Stephen Miller praised the U.S. Army's lead-based munitions detonation in Iowa on Wednesday as a success by the Trump administration, as early reports suggest the spread of lead pollution is lower than expected. “Every single extraordinary mitigation measure put into place far exceeded expectations, and the technical mastery of the...]]></description>
+		
+		
+		
+		<enclosure url="https://thehill.com/wp-content/uploads/sites/2/2026/11/AP26324678013402-e1795200837724.jpg?w=900" type="image/jpeg" length="112732" />
+<dcterms:modified>2026-11-25T20:56:43+00:00</dcterms:modified>
+	</item>
+	</channel>
+</rss>

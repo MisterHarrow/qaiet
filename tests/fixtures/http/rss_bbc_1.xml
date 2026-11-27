@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
+    <channel>
+        <title><![CDATA[BBC News]]></title>
+        <description><![CDATA[BBC News - Science & Environment]]></description>
+        <link>https://www.bbc.co.uk/news/science_and_environment</link>
+        <image>
+            <url>https://news.bbcimg.co.uk/nol/shared/img/bbc_news_120x60.gif</url>
+            <title>BBC News</title>
+            <link>https://www.bbc.co.uk/news/science_and_environment</link>
+        </image>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Thu, 26 Nov 2026 14:45:07 GMT</lastBuildDate>
+        <atom:link href="https://feeds.bbci.co.uk/news/science_and_environment/rss.xml" rel="self" type="application/rss+xml"/>
+        <copyright><![CDATA[Copyright: (C) British Broadcasting Corporation, see https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds for terms and conditions of reuse.]]></copyright>
+        <language><![CDATA[en-gb]]></language>
+        <ttl>15</ttl>
+        <item>
+            <title><![CDATA[US Army says controlled blast of explosives in Iowa was 'huge success']]></title>
+            <description><![CDATA[Officials say no lead has been detected in the surrounding area, which continues to be tested following concerns from locals.]]></description>
+            <link>https://www.bbc.co.uk/news/articles/cwg7l5ve251ko?at_medium=RSS&amp;at_campaign=rss</link>
+            <guid isPermaLink="false">https://www.bbc.co.uk/news/articles/cwg7l5ve251ko#0</guid>
+            <pubDate>Thu, 26 Nov 2026 10:38:35 GMT</pubDate>
+            <media:thumbnail width="240" height="135" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9049/live/be474ac0-e8f9-11f1-b8b0-a95064d74c5f.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Musk's plan to send a million SpaceX data satellites into space approved]]></title>
+            <description><![CDATA[The Starmind constellation aims to be the most cost and energy-efficient way to meet the growing demand for AI computing power.]]></description>
+            <link>https://www.bbc.co.uk/news/articles/cwp836l8n1jgo?at_medium=RSS&amp;at_campaign=rss</link>
+            <guid isPermaLink="false">https://www.bbc.co.uk/news/articles/cwp836l8n1jgo#0</guid>
+            <pubDate>Thu, 26 Nov 2026 09:27:44 GMT</pubDate>
+            <media:thumbnail width="240" height="135" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5383/live/4c315c90-e968-11f1-a094-5fdc692f3e33.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[California warns of flooding as King Tides peak over Thanksgiving]]></title>
+            <description><![CDATA[Parts of the Canadian province of British Columbia may also be affected by the storms and flooding, which come as millions of people travel for the holiday. ]]></description>
+            <link>https://www.bbc.co.uk/news/articles/ckn806qq760po?at_medium=RSS&amp;at_campaign=rss</link>
+            <guid isPermaLink="false">https://www.bbc.co.uk/news/articles/ckn806qq760po#0</guid>
+            <pubDate>Thu, 26 Nov 2026 01:22:55 GMT</pubDate>
+            <media:thumbnail width="240" height="135" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6396/live/c71ce590-e919-11f1-8383-53f283141713.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[What UK season changes mean for you]]></title>
+            <description><![CDATA[Frosts will become less common and hot summer days more frequent in the UK, the Met Office says.]]></description>
+            <link>https://www.bbc.co.uk/weather/videos/c804wd3wwqpyo?at_medium=RSS&amp;at_campaign=rss</link>
+            <guid isPermaLink="false">https://www.bbc.co.uk/weather/videos/c804wd3wwqpyo#0</guid>
+            <pubDate>Thu, 26 Nov 2026 00:14:16 GMT</pubDate>
+            <media:thumbnail width="240" height="135" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9001/live/d4588420-e8ed-11f1-a094-5fdc692f3e33.png"/>
+        </item>
+        <item>
+            <title><![CDATA[Expect fewer frosts and more hot days as UK seasons shift, says Met Office]]></title>
+            <description><![CDATA[Changing seasons are affecting wildlife and leading some farmers to grow different crops.]]></description>
+            <link>https://www.bbc.co.uk/weather/articles/cr3eg1py3gv5o?at_medium=RSS&amp;at_campaign=rss</link>
+            <guid isPermaLink="false">https://www.bbc.co.uk/weather/articles/cr3eg1py3gv5o#0</guid>
+            <pubDate>Thu, 26 Nov 2026 00:08:07 GMT</pubDate>
+            <media:thumbnail width="240" height="135" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f0a2/live/0f7bb370-e749-11f1-88dc-f746e0cde621.jpg"/>
+        </item>
+    </channel>
+</rss>

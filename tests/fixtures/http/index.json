@@ -437,6 +437,12 @@
   "status": 200,
   "url": "https://www.aa.com.tr/en/rss/default?cat=science-technology"
  },
+ "rss:aa:1": {
+  "content_type": "application/xml",
+  "file": "rss_aa_1.xml",
+  "status": 200,
+  "url": "https://www.aa.com.tr/en/rss/default?cat=health"
+ },
  "rss:aawsat:0": {
   "content_type": "application/rss+xml; charset=utf-8",
   "file": "rss_aawsat_0.xml",
@@ -448,6 +454,18 @@
   "file": "rss_abcau_0.xml",
   "status": 200,
   "url": "https://www.abc.net.au/news/feed/51120/rss.xml"
+ },
+ "rss:agrarheute:0": {
+  "content_type": "application/rss+xml; charset=utf-8",
+  "file": "rss_agrarheute_0.xml",
+  "status": 200,
+  "url": "https://www.agrarheute.com/rss.xml"
+ },
+ "rss:agriland:0": {
+  "content_type": "application/rss+xml; charset=utf-8",
+  "file": "rss_agriland_0.xml",
+  "status": 200,
+  "url": "https://www.agriland.ie/feed/"
  },
  "rss:aheadofai:0": {
   "content_type": "application/xml; charset=utf-8",
@@ -503,6 +521,24 @@
   "status": 200,
   "url": "https://www.ansa.it/sito/ansait_rss.xml"
  },
+ "rss:ansa:1": {
+  "content_type": "text/xml; charset=utf-8",
+  "file": "rss_ansa_1.xml",
+  "status": 200,
+  "url": "https://www.ansa.it/canale_scienza_tecnica/notizie/scienzaetecnica_rss.xml"
+ },
+ "rss:ansa:2": {
+  "content_type": "text/xml; charset=utf-8",
+  "file": "rss_ansa_2.xml",
+  "status": 200,
+  "url": "https://www.ansa.it/canale_terraegusto/notizie/terraegusto_rss.xml"
+ },
+ "rss:ansa:3": {
+  "content_type": "text/xml; charset=utf-8",
+  "file": "rss_ansa_3.xml",
+  "status": 200,
+  "url": "https://www.ansa.it/canale_saluteebenessere/notizie/saluteebenessere_rss.xml"
+ },
  "rss:antara:0": {
   "content_type": "text/xml",
   "file": "rss_antara_0.xml",
@@ -527,6 +563,18 @@
   "status": 200,
   "url": "https://www.theatlantic.com/feed/channel/technology/"
  },
+ "rss:atlantic:1": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_atlantic_1.xml",
+  "status": 200,
+  "url": "https://www.theatlantic.com/feed/channel/science/"
+ },
+ "rss:atlantic:2": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_atlantic_2.xml",
+  "status": 200,
+  "url": "https://www.theatlantic.com/feed/channel/health/"
+ },
  "rss:awsml:0": {
   "content_type": "application/rss+xml;charset=UTF-8",
   "file": "rss_awsml_0.xml",
@@ -544,6 +592,18 @@
   "file": "rss_bbc_0.xml",
   "status": 200,
   "url": "https://feeds.bbci.co.uk/news/technology/rss.xml"
+ },
+ "rss:bbc:1": {
+  "content_type": "text/xml; charset=utf-8",
+  "file": "rss_bbc_1.xml",
+  "status": 200,
+  "url": "https://feeds.bbci.co.uk/news/science_and_environment/rss.xml"
+ },
+ "rss:bbc:2": {
+  "content_type": "text/xml; charset=utf-8",
+  "file": "rss_bbc_2.xml",
+  "status": 200,
+  "url": "https://feeds.bbci.co.uk/news/health/rss.xml"
  },
  "rss:bensbites:0": {
   "content_type": "application/xml; charset=utf-8",
@@ -563,6 +623,12 @@
   "status": 200,
   "url": "https://feeds.businessinsider.com/custom/all"
  },
+ "rss:biopharmadive:0": {
+  "content_type": "application/rss+xml; charset=utf-8",
+  "file": "rss_biopharmadive_0.xml",
+  "status": 200,
+  "url": "https://www.biopharmadive.com/feeds/news/"
+ },
  "rss:bitm:0": {
   "content_type": "application/xml; charset=utf-8",
   "file": "rss_bitm_0.xml",
@@ -574,6 +640,12 @@
   "file": "rss_bloomberg_0.xml",
   "status": 200,
   "url": "https://feeds.bloomberg.com/technology/news.rss"
+ },
+ "rss:bloomberg:1": {
+  "content_type": "text/xml; charset=utf-8",
+  "file": "rss_bloomberg_1.xml",
+  "status": 200,
+  "url": "https://feeds.bloomberg.com/industries/news.rss"
  },
  "rss:breakit:0": {
   "content_type": "application/xml",
@@ -593,11 +665,29 @@
   "status": 200,
   "url": "https://businessday.ng/feed/"
  },
+ "rss:businessline_agri:0": {
+  "content_type": "application/xml",
+  "file": "rss_businessline_agri_0.xml",
+  "status": 200,
+  "url": "https://www.thehindubusinessline.com/economy/agri-business/feeder/default.rss"
+ },
  "rss:bworld:0": {
   "content_type": "application/rss+xml; charset=UTF-8",
   "file": "rss_bworld_0.xml",
   "status": 200,
   "url": "https://www.bworldonline.com/feed/"
+ },
+ "rss:canarymedia:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_canarymedia_0.xml",
+  "status": 200,
+  "url": "https://www.canarymedia.com/rss.rss"
+ },
+ "rss:carbonbrief:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_carbonbrief_0.xml",
+  "status": 200,
+  "url": "https://www.carbonbrief.org/feed"
  },
  "rss:chinai:0": {
   "content_type": "application/xml; charset=utf-8",
@@ -617,6 +707,12 @@
   "status": 200,
   "url": "https://www.chosun.com/arc/outboundfeeds/rss/?outputType=xml"
  },
+ "rss:clinicaltrialsarena:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_clinicaltrialsarena_0.xml",
+  "status": 200,
+  "url": "https://www.clinicaltrialsarena.com/feed/"
+ },
  "rss:cna:0": {
   "content_type": "application/rss+xml; charset=utf-8",
   "file": "rss_cna_0.xml",
@@ -628,6 +724,18 @@
   "file": "rss_cnbc_0.xml",
   "status": 200,
   "url": "https://www.cnbc.com/id/19854910/device/rss/rss.html"
+ },
+ "rss:cnbc:1": {
+  "content_type": "application/xml",
+  "file": "rss_cnbc_1.xml",
+  "status": 200,
+  "url": "https://www.cnbc.com/id/19836768/device/rss/rss.html"
+ },
+ "rss:cnbc:2": {
+  "content_type": "application/xml",
+  "file": "rss_cnbc_2.xml",
+  "status": 200,
+  "url": "https://www.cnbc.com/id/10000108/device/rss/rss.html"
  },
  "rss:cnnid:0": {
   "content_type": "text/xml;charset=UTF-8",
@@ -659,11 +767,23 @@
   "status": 200,
   "url": "https://www.dailysabah.com/rss/business/tech"
  },
+ "rss:dailysabah:1": {
+  "content_type": "text/xml; charset=UTF-8",
+  "file": "rss_dailysabah_1.xml",
+  "status": 200,
+  "url": "https://www.dailysabah.com/rss/business/energy"
+ },
  "rss:dailystarbd:0": {
   "content_type": "application/rss+xml; charset=utf-8",
   "file": "rss_dailystarbd_0.xml",
   "status": 200,
   "url": "https://www.thedailystar.net/tech-startup/rss.xml"
+ },
+ "rss:dailystarbd:1": {
+  "content_type": "application/rss+xml; charset=utf-8",
+  "file": "rss_dailystarbd_1.xml",
+  "status": 200,
+  "url": "https://www.thedailystar.net/environment/rss.xml"
  },
  "rss:dawn:0": {
   "content_type": "application/xml; charset=UTF-8",
@@ -682,6 +802,12 @@
   "file": "rss_derstandard_0.xml",
   "status": 200,
   "url": "https://www.derstandard.at/rss/web"
+ },
+ "rss:derstandard:1": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_derstandard_1.xml",
+  "status": 200,
+  "url": "https://www.derstandard.at/rss/wissenschaft"
  },
  "rss:di:0": {
   "content_type": "application/rss+xml; charset=utf-8",
@@ -791,11 +917,53 @@
   "status": 200,
   "url": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/tecnologia/portada"
  },
+ "rss:elpais:1": {
+  "content_type": "application/xml",
+  "file": "rss_elpais_1.xml",
+  "status": 200,
+  "url": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/clima-y-medio-ambiente/portada"
+ },
+ "rss:elpais:2": {
+  "content_type": "application/xml",
+  "file": "rss_elpais_2.xml",
+  "status": 200,
+  "url": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/ciencia/portada"
+ },
+ "rss:elpais:3": {
+  "content_type": "application/xml",
+  "file": "rss_elpais_3.xml",
+  "status": 200,
+  "url": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/salud-y-bienestar/portada"
+ },
  "rss:eltiempo:0": {
   "content_type": "text/xml; charset=UTF-8",
   "file": "rss_eltiempo_0.xml",
   "status": 200,
   "url": "https://www.eltiempo.com/rss/tecnosfera.xml"
+ },
+ "rss:eltiempo:1": {
+  "content_type": "text/xml; charset=UTF-8",
+  "file": "rss_eltiempo_1.xml",
+  "status": 200,
+  "url": "https://www.eltiempo.com/rss/vida_medio-ambiente.xml"
+ },
+ "rss:eltiempo:2": {
+  "content_type": "text/xml; charset=UTF-8",
+  "file": "rss_eltiempo_2.xml",
+  "status": 200,
+  "url": "https://www.eltiempo.com/rss/vida_ciencia.xml"
+ },
+ "rss:ema:0": {
+  "content_type": "application/rss+xml; charset=utf-8",
+  "file": "rss_ema_0.xml",
+  "status": 200,
+  "url": "https://www.ema.europa.eu/en/news.xml"
+ },
+ "rss:energytracker:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_energytracker_0.xml",
+  "status": 200,
+  "url": "https://energytracker.asia/feed/"
  },
  "rss:epoch:0": {
   "content_type": "application/xml",
@@ -809,11 +977,35 @@
   "status": 200,
   "url": "https://news.err.ee/rss"
  },
+ "rss:esa:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_esa_0.xml",
+  "status": 200,
+  "url": "https://www.esa.int/rss/latest-news-homepage.rss"
+ },
  "rss:et:0": {
   "content_type": "text/xml;charset=UTF-8",
   "file": "rss_et_0.xml",
   "status": 200,
   "url": "https://economictimes.indiatimes.com/tech/rssfeeds/13357270.cms"
+ },
+ "rss:et:1": {
+  "content_type": "text/xml;charset=UTF-8",
+  "file": "rss_et_1.xml",
+  "status": 200,
+  "url": "https://economictimes.indiatimes.com/industry/energy/rssfeeds/13358350.cms"
+ },
+ "rss:et:2": {
+  "content_type": "text/xml;charset=UTF-8",
+  "file": "rss_et_2.xml",
+  "status": 200,
+  "url": "https://economictimes.indiatimes.com/industry/healthcare/biotech/rssfeeds/13358050.cms"
+ },
+ "rss:et:3": {
+  "content_type": "text/xml;charset=UTF-8",
+  "file": "rss_et_3.xml",
+  "status": 200,
+  "url": "https://economictimes.indiatimes.com/news/economy/agriculture/rssfeeds/1202099874.cms"
  },
  "rss:etnews:0": {
   "content_type": "text/xml",
@@ -826,6 +1018,12 @@
   "file": "rss_euobserver_0.xml",
   "status": 200,
   "url": "https://euobserver.com/feed/"
+ },
+ "rss:europeanspaceflight:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_europeanspaceflight_0.xml",
+  "status": 200,
+  "url": "https://europeanspaceflight.com/feed/"
  },
  "rss:exame:0": {
   "content_type": "text/xml",
@@ -845,17 +1043,59 @@
   "status": 200,
   "url": "https://www.exponentialview.co/feed"
  },
+ "rss:fao:0": {
+  "content_type": "application/rss+xml",
+  "file": "rss_fao_0.xml",
+  "status": 200,
+  "url": "https://www.fao.org/feeds/fao-newsroom-rss"
+ },
+ "rss:farmersreviewafrica:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_farmersreviewafrica_0.xml",
+  "status": 200,
+  "url": "https://farmersreviewafrica.com/feed/"
+ },
+ "rss:farmersweeklysa:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_farmersweeklysa_0.xml",
+  "status": 200,
+  "url": "https://www.farmersweekly.co.za/feed/"
+ },
+ "rss:farmprogress:0": {
+  "content_type": "text/xml; charset=utf-8",
+  "file": "rss_farmprogress_0.xml",
+  "status": 200,
+  "url": "https://www.farmprogress.com/rss.xml"
+ },
  "rss:faz:0": {
   "content_type": "application/xml; charset=UTF-8",
   "file": "rss_faz_0.xml",
   "status": 200,
   "url": "https://www.faz.net/rss/aktuell/"
  },
+ "rss:faz:1": {
+  "content_type": "application/xml; charset=UTF-8",
+  "file": "rss_faz_1.xml",
+  "status": 200,
+  "url": "https://www.faz.net/rss/aktuell/wissen/"
+ },
+ "rss:faz:2": {
+  "content_type": "application/xml; charset=UTF-8",
+  "file": "rss_faz_2.xml",
+  "status": 200,
+  "url": "https://www.faz.net/rss/aktuell/wirtschaft/klima-nachhaltigkeit/"
+ },
  "rss:fd:0": {
   "content_type": "application/rss+xml;charset=UTF-8",
   "file": "rss_fd_0.xml",
   "status": 200,
   "url": "https://fd.nl/?rss"
+ },
+ "rss:fda:0": {
+  "content_type": "application/rss+xml; charset=utf-8",
+  "file": "rss_fda_0.xml",
+  "status": 200,
+  "url": "https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/press-releases/rss.xml"
  },
  "rss:fmt:0": {
   "content_type": "application/rss+xml; charset=utf-8",
@@ -869,6 +1109,24 @@
   "status": 200,
   "url": "https://feeds.folha.uol.com.br/tec/rss091.xml"
  },
+ "rss:folha:1": {
+  "content_type": "text/xml",
+  "file": "rss_folha_1.xml",
+  "status": 200,
+  "url": "https://feeds.folha.uol.com.br/ambiente/rss091.xml"
+ },
+ "rss:folha:2": {
+  "content_type": "text/xml",
+  "file": "rss_folha_2.xml",
+  "status": 200,
+  "url": "https://feeds.folha.uol.com.br/ciencia/rss091.xml"
+ },
+ "rss:folha:3": {
+  "content_type": "text/xml",
+  "file": "rss_folha_3.xml",
+  "status": 200,
+  "url": "https://feeds.folha.uol.com.br/equilibrioesaude/rss091.xml"
+ },
  "rss:fortune:0": {
   "content_type": "application/xml; charset=UTF-8",
   "file": "rss_fortune_0.xml",
@@ -881,6 +1139,12 @@
   "status": 200,
   "url": "https://moxie.foxnews.com/google-publisher/tech.xml"
  },
+ "rss:fox:1": {
+  "content_type": "text/xml;charset=utf-8",
+  "file": "rss_fox_1.xml",
+  "status": 200,
+  "url": "https://moxie.foxnews.com/google-publisher/health.xml"
+ },
  "rss:france24:0": {
   "content_type": "application/rss+xml; charset=utf-8",
   "file": "rss_france24_0.xml",
@@ -892,6 +1156,24 @@
   "file": "rss_franceinfo_0.xml",
   "status": 200,
   "url": "https://www.francetvinfo.fr/internet.rss"
+ },
+ "rss:franceinfo:1": {
+  "content_type": "text/xml; charset=UTF-8",
+  "file": "rss_franceinfo_1.xml",
+  "status": 200,
+  "url": "https://www.francetvinfo.fr/sciences/espace.rss"
+ },
+ "rss:franceinfo:2": {
+  "content_type": "text/xml; charset=UTF-8",
+  "file": "rss_franceinfo_2.xml",
+  "status": 200,
+  "url": "https://www.francetvinfo.fr/sciences.rss"
+ },
+ "rss:franceinfo:3": {
+  "content_type": "text/xml; charset=UTF-8",
+  "file": "rss_franceinfo_3.xml",
+  "status": 200,
+  "url": "https://www.francetvinfo.fr/sante.rss"
  },
  "rss:freepress:0": {
   "content_type": "application/xml; charset=utf-8",
@@ -911,6 +1193,30 @@
   "status": 200,
   "url": "https://g1.globo.com/rss/g1/tecnologia/"
  },
+ "rss:g1:1": {
+  "content_type": "application/xml; charset=UTF-8",
+  "file": "rss_g1_1.xml",
+  "status": 200,
+  "url": "https://g1.globo.com/rss/g1/economia/agronegocios/"
+ },
+ "rss:g1:2": {
+  "content_type": "application/xml; charset=UTF-8",
+  "file": "rss_g1_2.xml",
+  "status": 200,
+  "url": "https://g1.globo.com/rss/g1/ciencia/"
+ },
+ "rss:g1:3": {
+  "content_type": "application/xml; charset=UTF-8",
+  "file": "rss_g1_3.xml",
+  "status": 200,
+  "url": "https://g1.globo.com/rss/g1/saude/"
+ },
+ "rss:genengnews:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_genengnews_0.xml",
+  "status": 200,
+  "url": "https://www.genengnews.com/feed/"
+ },
  "rss:gigazine:0": {
   "content_type": "text/xml; charset=utf-8",
   "file": "rss_gigazine_0.xml",
@@ -923,17 +1229,47 @@
   "status": 200,
   "url": "https://globalnews.ca/tech/feed/"
  },
+ "rss:globalnews:1": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_globalnews_1.xml",
+  "status": 200,
+  "url": "https://globalnews.ca/environment/feed/"
+ },
+ "rss:globalnews:2": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_globalnews_2.xml",
+  "status": 200,
+  "url": "https://globalnews.ca/health/feed/"
+ },
  "rss:globeandmail:0": {
   "content_type": "application/xml; charset=utf-8",
   "file": "rss_globeandmail_0.xml",
   "status": 200,
   "url": "https://www.theglobeandmail.com/arc/outboundfeeds/rss/category/business/technology/"
  },
+ "rss:globeandmail:1": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_globeandmail_1.xml",
+  "status": 200,
+  "url": "https://www.theglobeandmail.com/arc/outboundfeeds/rss/category/business/industry-news/energy-and-resources/"
+ },
+ "rss:globeandmail:2": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_globeandmail_2.xml",
+  "status": 200,
+  "url": "https://www.theglobeandmail.com/arc/outboundfeeds/rss/category/canada/science/"
+ },
  "rss:globes:0": {
   "content_type": "text/xml; charset=utf-8",
   "file": "rss_globes_0.xml",
   "status": 200,
   "url": "https://en.globes.co.il/WebService/Rss/RssFeeder.asmx/FeederNode?iID=1725"
+ },
+ "rss:globorural:0": {
+  "content_type": "application/xml; charset=UTF-8",
+  "file": "rss_globorural_0.xml",
+  "status": 200,
+  "url": "https://globorural.globo.com/rss/globorural/"
  },
  "rss:googleai:0": {
   "content_type": "application/xml; charset=utf-8",
@@ -947,6 +1283,12 @@
   "status": 200,
   "url": "https://research.google/blog/rss/"
  },
+ "rss:graincentral:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_graincentral_0.xml",
+  "status": 200,
+  "url": "https://www.graincentral.com/feed/"
+ },
  "rss:guardian:0": {
   "content_type": "text/xml; charset=UTF-8",
   "file": "rss_guardian_0.xml",
@@ -958,6 +1300,42 @@
   "file": "rss_guardian_1.xml",
   "status": 200,
   "url": "https://www.theguardian.com/us/technology/rss"
+ },
+ "rss:guardian:2": {
+  "content_type": "text/xml; charset=UTF-8",
+  "file": "rss_guardian_2.xml",
+  "status": 200,
+  "url": "https://www.theguardian.com/environment/energy/rss"
+ },
+ "rss:guardian:3": {
+  "content_type": "text/xml; charset=UTF-8",
+  "file": "rss_guardian_3.xml",
+  "status": 200,
+  "url": "https://www.theguardian.com/science/space/rss"
+ },
+ "rss:guardian:4": {
+  "content_type": "text/xml; charset=UTF-8",
+  "file": "rss_guardian_4.xml",
+  "status": 200,
+  "url": "https://www.theguardian.com/science/rss"
+ },
+ "rss:guardian:5": {
+  "content_type": "text/xml; charset=UTF-8",
+  "file": "rss_guardian_5.xml",
+  "status": 200,
+  "url": "https://www.theguardian.com/environment/farming/rss"
+ },
+ "rss:guardian:6": {
+  "content_type": "text/xml; charset=UTF-8",
+  "file": "rss_guardian_6.xml",
+  "status": 200,
+  "url": "https://www.theguardian.com/global-development/food-security/rss"
+ },
+ "rss:guardian:7": {
+  "content_type": "text/xml; charset=UTF-8",
+  "file": "rss_guardian_7.xml",
+  "status": 200,
+  "url": "https://www.theguardian.com/business/pharmaceuticals-industry/rss"
  },
  "rss:gulfnews:0": {
   "content_type": "text/xml; application/rss+xml; charset=utf-8",
@@ -995,6 +1373,12 @@
   "status": 200,
   "url": "https://www.hyperdimensional.co/feed"
  },
+ "rss:iaea:0": {
+  "content_type": "application/rss+xml; charset=utf-8",
+  "file": "rss_iaea_0.xml",
+  "status": 200,
+  "url": "https://www.iaea.org/feeds/topnews"
+ },
  "rss:ieee:0": {
   "content_type": "application/rss+xml; charset=utf-8",
   "file": "rss_ieee_0.xml",
@@ -1024,6 +1408,18 @@
   "file": "rss_infobae_0.xml",
   "status": 200,
   "url": "https://www.infobae.com/arc/outboundfeeds/rss/category/tecno/"
+ },
+ "rss:infobae:1": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_infobae_1.xml",
+  "status": 200,
+  "url": "https://www.infobae.com/arc/outboundfeeds/rss/category/america/ciencia-america/"
+ },
+ "rss:infobae:2": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_infobae_2.xml",
+  "status": 200,
+  "url": "https://www.infobae.com/arc/outboundfeeds/rss/category/salud/"
  },
  "rss:interconnects:0": {
   "content_type": "application/xml; charset=utf-8",
@@ -1073,6 +1469,12 @@
   "status": 200,
   "url": "https://www.itweb.co.za/rss"
  },
+ "rss:koreabiomed:0": {
+  "content_type": "application/xml",
+  "file": "rss_koreabiomed_0.xml",
+  "status": 200,
+  "url": "https://www.koreabiomed.com/rss/allArticle.xml"
+ },
  "rss:koreaherald:0": {
   "content_type": "xml;charset=UTF-8",
   "file": "rss_koreaherald_0.xml",
@@ -1084,6 +1486,12 @@
   "file": "rss_koreatimes_0.xml",
   "status": 200,
   "url": "https://www.koreatimes.co.kr/www/rss/rss.xml"
+ },
+ "rss:labiotech:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_labiotech_0.xml",
+  "status": 200,
+  "url": "https://www.labiotech.eu/feed/"
  },
  "rss:lanacion:0": {
   "content_type": "application/xml; charset=utf-8",
@@ -1097,11 +1505,29 @@
   "status": 200,
   "url": "https://www.lapresse.ca/affaires/techno/rss"
  },
+ "rss:lapresse:1": {
+  "content_type": "text/xml;charset=UTF-8",
+  "file": "rss_lapresse_1.xml",
+  "status": 200,
+  "url": "https://www.lapresse.ca/actualites/environnement/rss"
+ },
+ "rss:lapresse:2": {
+  "content_type": "text/xml;charset=UTF-8",
+  "file": "rss_lapresse_2.xml",
+  "status": 200,
+  "url": "https://www.lapresse.ca/actualites/sciences/rss"
+ },
  "rss:lastweekinai:0": {
   "content_type": "application/xml; charset=utf-8",
   "file": "rss_lastweekinai_0.xml",
   "status": 200,
   "url": "https://lastweekin.ai/feed"
+ },
+ "rss:latamsatelital:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_latamsatelital_0.xml",
+  "status": 200,
+  "url": "https://latamsatelital.com/feed/"
  },
  "rss:latercera:0": {
   "content_type": "application/xml; charset=utf-8",
@@ -1114,6 +1540,18 @@
   "file": "rss_lefigaro_0.xml",
   "status": 200,
   "url": "https://www.lefigaro.fr/rss/figaro_secteur_high-tech.xml"
+ },
+ "rss:lefigaro:1": {
+  "content_type": "application/xml",
+  "file": "rss_lefigaro_1.xml",
+  "status": 200,
+  "url": "https://www.lefigaro.fr/rss/figaro_sciences.xml"
+ },
+ "rss:lefigaro:2": {
+  "content_type": "application/xml",
+  "file": "rss_lefigaro_2.xml",
+  "status": 200,
+  "url": "https://www.lefigaro.fr/rss/figaro_sante.xml"
  },
  "rss:lemonde:0": {
   "content_type": "application/xml; charset=UTF-8",
@@ -1145,11 +1583,23 @@
   "status": 200,
   "url": "https://www.marktechpost.com/feed/"
  },
+ "rss:medtechdive:0": {
+  "content_type": "application/rss+xml; charset=utf-8",
+  "file": "rss_medtechdive_0.xml",
+  "status": 200,
+  "url": "https://www.medtechdive.com/feeds/news/"
+ },
  "rss:memeorandum:0": {
   "content_type": "text/xml",
   "file": "rss_memeorandum_0.xml",
   "status": 200,
   "url": "https://www.memeorandum.com/feed.xml"
+ },
+ "rss:mercom:0": {
+  "content_type": "text/xml",
+  "file": "rss_mercom_0.xml",
+  "status": 200,
+  "url": "https://www.mercomindia.com/feed"
  },
  "rss:mint:0": {
   "content_type": "application/xml;charset=UTF-8",
@@ -1187,11 +1637,29 @@
   "status": 200,
   "url": "https://nairametrics.com/feed/"
  },
+ "rss:nasa:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_nasa_0.xml",
+  "status": 200,
+  "url": "https://www.nasa.gov/feed/"
+ },
+ "rss:nasaspaceflight:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_nasaspaceflight_0.xml",
+  "status": 200,
+  "url": "https://www.nasaspaceflight.com/feed/"
+ },
  "rss:nation:0": {
   "content_type": "application/rss+xml; charset=UTF-8",
   "file": "rss_nation_0.xml",
   "status": 200,
   "url": "https://www.thenation.com/subject/technology/feed/"
+ },
+ "rss:nation:1": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_nation_1.xml",
+  "status": 200,
+  "url": "https://www.thenation.com/subject/environment/feed/"
  },
  "rss:natreview:0": {
   "content_type": "application/rss+xml; charset=UTF-8",
@@ -1210,6 +1678,12 @@
   "file": "rss_newsroomnz_0.xml",
   "status": 200,
   "url": "https://newsroom.co.nz/feed/"
+ },
+ "rss:newsroomnz:1": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_newsroomnz_1.xml",
+  "status": 200,
+  "url": "https://newsroom.co.nz/category/climate-change/feed/"
  },
  "rss:nikkei:0": {
   "content_type": "application/rss+xml",
@@ -1235,6 +1709,24 @@
   "status": 200,
   "url": "https://feeds.npr.org/1019/rss.xml"
  },
+ "rss:npr:1": {
+  "content_type": "text/xml;charset=UTF-8",
+  "file": "rss_npr_1.xml",
+  "status": 200,
+  "url": "https://feeds.npr.org/1167/rss.xml"
+ },
+ "rss:npr:2": {
+  "content_type": "text/xml;charset=UTF-8",
+  "file": "rss_npr_2.xml",
+  "status": 200,
+  "url": "https://feeds.npr.org/1128/rss.xml"
+ },
+ "rss:npr:3": {
+  "content_type": "text/xml;charset=UTF-8",
+  "file": "rss_npr_3.xml",
+  "status": 200,
+  "url": "https://feeds.npr.org/1007/rss.xml"
+ },
  "rss:nrc:0": {
   "content_type": "application/rss+xml;charset=utf-8",
   "file": "rss_nrc_0.xml",
@@ -1246,6 +1738,12 @@
   "file": "rss_nrk_0.xml",
   "status": 200,
   "url": "https://www.nrk.no/toppsaker.rss"
+ },
+ "rss:nrk:1": {
+  "content_type": "application/xml",
+  "file": "rss_nrk_1.xml",
+  "status": 200,
+  "url": "https://www.nrk.no/viten/toppsaker.rss"
  },
  "rss:nucleo:0": {
   "content_type": "application/rss+xml; charset=utf-8",
@@ -1265,11 +1763,41 @@
   "status": 200,
   "url": "https://nypost.com/tech/feed/"
  },
+ "rss:nypost:1": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_nypost_1.xml",
+  "status": 200,
+  "url": "https://nypost.com/health/feed/"
+ },
  "rss:nyt:0": {
   "content_type": "application/xml",
   "file": "rss_nyt_0.xml",
   "status": 200,
   "url": "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml"
+ },
+ "rss:nyt:1": {
+  "content_type": "application/xml",
+  "file": "rss_nyt_1.xml",
+  "status": 200,
+  "url": "https://rss.nytimes.com/services/xml/rss/nyt/Climate.xml"
+ },
+ "rss:nyt:2": {
+  "content_type": "application/xml",
+  "file": "rss_nyt_2.xml",
+  "status": 200,
+  "url": "https://rss.nytimes.com/services/xml/rss/nyt/Health.xml"
+ },
+ "rss:nyt:3": {
+  "content_type": "application/xml",
+  "file": "rss_nyt_3.xml",
+  "status": 200,
+  "url": "https://rss.nytimes.com/services/xml/rss/nyt/Space.xml"
+ },
+ "rss:nyt:4": {
+  "content_type": "application/xml",
+  "file": "rss_nyt_4.xml",
+  "status": 200,
+  "url": "https://rss.nytimes.com/services/xml/rss/nyt/Science.xml"
  },
  "rss:nyteknik:0": {
   "content_type": "text/xml;charset=UTF-8",
@@ -1277,17 +1805,35 @@
   "status": 200,
   "url": "https://www.nyteknik.se/digitalisering?lab_viewport=rss"
  },
+ "rss:nyteknik:1": {
+  "content_type": "text/xml;charset=UTF-8",
+  "file": "rss_nyteknik_1.xml",
+  "status": 200,
+  "url": "https://www.nyteknik.se/energi?lab_viewport=rss"
+ },
  "rss:nzz:0": {
   "content_type": "text/xml; charset=utf-8",
   "file": "rss_nzz_0.xml",
   "status": 200,
   "url": "https://www.nzz.ch/technologie.rss"
  },
+ "rss:nzz:1": {
+  "content_type": "text/xml; charset=utf-8",
+  "file": "rss_nzz_1.xml",
+  "status": 200,
+  "url": "https://www.nzz.ch/wissenschaft.rss"
+ },
  "rss:observador:0": {
   "content_type": "text/xml; charset=utf-8",
   "file": "rss_observador_0.xml",
   "status": 200,
   "url": "https://observador.pt/feed/"
+ },
+ "rss:oilprice:0": {
+  "content_type": "rss+xml; charset=utf-8",
+  "file": "rss_oilprice_0.xml",
+  "status": 200,
+  "url": "https://oilprice.com/rss/main"
  },
  "rss:onenews:0": {
   "content_type": "application/xml; charset=utf-8",
@@ -1313,11 +1859,29 @@
   "status": 200,
   "url": "https://rss.orf.at/news.xml"
  },
+ "rss:orf:1": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_orf_1.xml",
+  "status": 200,
+  "url": "https://rss.orf.at/science.xml"
+ },
  "rss:pandaily:0": {
   "content_type": "application/xml; charset=utf-8",
   "file": "rss_pandaily_0.xml",
   "status": 200,
   "url": "https://pandaily.com/feed/"
+ },
+ "rss:payload:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_payload_0.xml",
+  "status": 200,
+  "url": "https://payloadspace.com/feed/"
+ },
+ "rss:pharmaphorum:0": {
+  "content_type": "application/rss+xml; charset=utf-8",
+  "file": "rss_pharmaphorum_0.xml",
+  "status": 200,
+  "url": "https://pharmaphorum.com/rss.xml"
  },
  "rss:platformer:0": {
   "content_type": "application/rss+xml; charset=utf-8",
@@ -1331,11 +1895,41 @@
   "status": 200,
   "url": "https://rss.politico.com/technology.xml"
  },
+ "rss:politico:1": {
+  "content_type": "application/xml;charset=UTF-8",
+  "file": "rss_politico_1.xml",
+  "status": 200,
+  "url": "https://rss.politico.com/energy.xml"
+ },
+ "rss:politico:2": {
+  "content_type": "application/xml;charset=UTF-8",
+  "file": "rss_politico_2.xml",
+  "status": 200,
+  "url": "https://rss.politico.com/healthcare.xml"
+ },
+ "rss:politico:3": {
+  "content_type": "application/xml;charset=UTF-8",
+  "file": "rss_politico_3.xml",
+  "status": 200,
+  "url": "https://rss.politico.com/agriculture.xml"
+ },
  "rss:politico_eu:0": {
   "content_type": "application/rss+xml; charset=UTF-8",
   "file": "rss_politico_eu_0.xml",
   "status": 200,
   "url": "https://www.politico.eu/section/technology/feed/"
+ },
+ "rss:politico_eu:1": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_politico_eu_1.xml",
+  "status": 200,
+  "url": "https://www.politico.eu/section/energy/feed/"
+ },
+ "rss:politico_eu:2": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_politico_eu_2.xml",
+  "status": 200,
+  "url": "https://www.politico.eu/section/health-care/feed/"
  },
  "rss:pragmatic:0": {
   "content_type": "application/xml; charset=utf-8",
@@ -1349,6 +1943,12 @@
   "status": 200,
   "url": "https://www.premiumtimesng.com/feed"
  },
+ "rss:premiumtimes:1": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_premiumtimes_1.xml",
+  "status": 200,
+  "url": "https://www.premiumtimesng.com/health/feed"
+ },
  "rss:producthunt_ai:0": {
   "content_type": "application/atom+xml; charset=utf-8",
   "file": "rss_producthunt_ai_0.xml",
@@ -1360,6 +1960,18 @@
   "file": "rss_puntoinformatico_0.xml",
   "status": 200,
   "url": "https://www.punto-informatico.it/feed/"
+ },
+ "rss:pvmagazine:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_pvmagazine_0.xml",
+  "status": 200,
+  "url": "https://www.pv-magazine.com/feed/"
+ },
+ "rss:pvmagazine_latam:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_pvmagazine_latam_0.xml",
+  "status": 200,
+  "url": "https://www.pv-magazine-latam.com/feed/"
  },
  "rss:qbitai:0": {
   "content_type": "application/rss+xml; charset=UTF-8",
@@ -1379,11 +1991,23 @@
   "status": 200,
   "url": "https://www.rappler.com/technology/feed/"
  },
+ "rss:rappler:1": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_rappler_1.xml",
+  "status": 200,
+  "url": "https://www.rappler.com/environment/feed/"
+ },
  "rss:reason:0": {
   "content_type": "application/rss+xml; charset=UTF-8",
   "file": "rss_reason_0.xml",
   "status": 200,
   "url": "https://reason.com/feed/"
+ },
+ "rss:reneweconomy:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_reneweconomy_0.xml",
+  "status": 200,
+  "url": "https://reneweconomy.com.au/feed/"
  },
  "rss:repubblica:0": {
   "content_type": "application/xml",
@@ -1391,17 +2015,41 @@
   "status": 200,
   "url": "https://www.repubblica.it/rss/tecnologia/rss2.0.xml"
  },
+ "rss:repubblica:1": {
+  "content_type": "application/xml",
+  "file": "rss_repubblica_1.xml",
+  "status": 200,
+  "url": "https://www.repubblica.it/rss/green-and-blue/rss2.0.xml"
+ },
+ "rss:repubblica:2": {
+  "content_type": "application/xml",
+  "file": "rss_repubblica_2.xml",
+  "status": 200,
+  "url": "https://www.repubblica.it/rss/salute/rss2.0.xml"
+ },
  "rss:restofworld:0": {
   "content_type": "application/xml; charset=utf-8",
   "file": "rss_restofworld_0.xml",
   "status": 200,
   "url": "https://restofworld.org/feed/latest/"
  },
+ "rss:reussir:0": {
+  "content_type": "application/xml;charset=UTF-8",
+  "file": "rss_reussir_0.xml",
+  "status": 200,
+  "url": "https://www.reussir.fr/rss.xml"
+ },
  "rss:rnz:0": {
   "content_type": "application/xml; charset=utf-8",
   "file": "rss_rnz_0.xml",
   "status": 200,
   "url": "https://www.rnz.co.nz/rss/business.xml"
+ },
+ "rss:rnz:1": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_rnz_1.xml",
+  "status": 200,
+  "url": "https://www.rnz.co.nz/rss/country.xml"
  },
  "rss:rp:0": {
   "content_type": "xml",
@@ -1414,6 +2062,18 @@
   "file": "rss_rte_0.xml",
   "status": 200,
   "url": "https://www.rte.ie/feeds/rss/?index=/news/business/"
+ },
+ "rss:rte:1": {
+  "content_type": "application/rss+xml; charset=utf-8",
+  "file": "rss_rte_1.xml",
+  "status": 200,
+  "url": "https://www.rte.ie/feeds/rss/?index=/news/environment/"
+ },
+ "rss:rte:2": {
+  "content_type": "application/rss+xml; charset=utf-8",
+  "file": "rss_rte_2.xml",
+  "status": 200,
+  "url": "https://www.rte.ie/feeds/rss/?index=/news/health/"
  },
  "rss:rundown:0": {
   "content_type": "application/rss+xml; charset=utf-8",
@@ -1493,11 +2153,47 @@
   "status": 200,
   "url": "https://www.smh.com.au/rss/technology.xml"
  },
+ "rss:smh:1": {
+  "content_type": "application/xml",
+  "file": "rss_smh_1.xml",
+  "status": 200,
+  "url": "https://www.smh.com.au/rss/environment.xml"
+ },
  "rss:sole24ore:0": {
   "content_type": "text/xml",
   "file": "rss_sole24ore_0.xml",
   "status": 200,
   "url": "https://www.ilsole24ore.com/rss/tecnologia.xml"
+ },
+ "rss:sole24ore:1": {
+  "content_type": "text/xml",
+  "file": "rss_sole24ore_1.xml",
+  "status": 200,
+  "url": "https://www.ilsole24ore.com/rss/salute.xml"
+ },
+ "rss:sorae:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_sorae_0.xml",
+  "status": 200,
+  "url": "https://sorae.info/feed"
+ },
+ "rss:spaceflightnow:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_spaceflightnow_0.xml",
+  "status": 200,
+  "url": "https://spaceflightnow.com/feed/"
+ },
+ "rss:spaceinafrica:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_spaceinafrica_0.xml",
+  "status": 200,
+  "url": "https://spaceinafrica.com/feed/"
+ },
+ "rss:spacenews:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_spacenews_0.xml",
+  "status": 200,
+  "url": "https://spacenews.com/feed/"
  },
  "rss:spidersweb:0": {
   "content_type": "application/rss+xml; charset=UTF-8",
@@ -1522,6 +2218,12 @@
   "file": "rss_startupdaily_0.xml",
   "status": 200,
   "url": "https://www.startupdaily.net/feed/"
+ },
+ "rss:stat:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_stat_0.xml",
+  "status": 200,
+  "url": "https://www.statnews.com/feed/"
  },
  "rss:straitstimes:0": {
   "content_type": "application/rss+xml; charset=utf-8",
@@ -1552,6 +2254,12 @@
   "file": "rss_sz_0.xml",
   "status": 200,
   "url": "https://rss.sueddeutsche.de/rss/Digital"
+ },
+ "rss:sz:1": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_sz_1.xml",
+  "status": 200,
+  "url": "https://rss.sueddeutsche.de/rss/Wissen"
  },
  "rss:t3n:0": {
   "content_type": "application/rss+xml; charset=UTF-8",
@@ -1637,11 +2345,47 @@
   "status": 200,
   "url": "https://thehill.com/policy/technology/feed/"
  },
+ "rss:thehill:1": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_thehill_1.xml",
+  "status": 200,
+  "url": "https://thehill.com/policy/energy-environment/feed/"
+ },
+ "rss:thehill:2": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_thehill_2.xml",
+  "status": 200,
+  "url": "https://thehill.com/policy/healthcare/feed/"
+ },
  "rss:thehindu:0": {
   "content_type": "application/xml",
   "file": "rss_thehindu_0.xml",
   "status": 200,
   "url": "https://www.thehindu.com/sci-tech/technology/feeder/default.rss"
+ },
+ "rss:thehindu:1": {
+  "content_type": "application/xml",
+  "file": "rss_thehindu_1.xml",
+  "status": 200,
+  "url": "https://www.thehindu.com/sci-tech/energy-and-environment/feeder/default.rss"
+ },
+ "rss:thehindu:2": {
+  "content_type": "application/xml",
+  "file": "rss_thehindu_2.xml",
+  "status": 200,
+  "url": "https://www.thehindu.com/sci-tech/science/feeder/default.rss"
+ },
+ "rss:thehindu:3": {
+  "content_type": "application/xml",
+  "file": "rss_thehindu_3.xml",
+  "status": 200,
+  "url": "https://www.thehindu.com/sci-tech/health/feeder/default.rss"
+ },
+ "rss:thehindu:4": {
+  "content_type": "application/xml",
+  "file": "rss_thehindu_4.xml",
+  "status": 200,
+  "url": "https://www.thehindu.com/sci-tech/agriculture/feeder/default.rss"
  },
  "rss:thelec:0": {
   "content_type": "application/xml",
@@ -1654,6 +2398,12 @@
   "file": "rss_thenational_0.xml",
   "status": 200,
   "url": "https://www.thenationalnews.com/arc/outboundfeeds/rss/?outputType=xml"
+ },
+ "rss:thenational:1": {
+  "content_type": "application/xml; charset=utf-8",
+  "file": "rss_thenational_1.xml",
+  "status": 200,
+  "url": "https://www.thenationalnews.com/arc/outboundfeeds/rss/category/business/energy/?outputType=xml"
  },
  "rss:tldrai:0": {
   "content_type": "text/xml",
@@ -1691,11 +2441,23 @@
   "status": 200,
   "url": "https://tweakers.net/feeds/mixed.xml"
  },
+ "rss:undercurrent:0": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_undercurrent_0.xml",
+  "status": 200,
+  "url": "https://www.undercurrentnews.com/feed/"
+ },
  "rss:understandingai:0": {
   "content_type": "application/xml; charset=utf-8",
   "file": "rss_understandingai_0.xml",
   "status": 200,
   "url": "https://www.understandingai.org/feed"
+ },
+ "rss:utilitydive:0": {
+  "content_type": "application/rss+xml; charset=utf-8",
+  "file": "rss_utilitydive_0.xml",
+  "status": 200,
+  "url": "https://www.utilitydive.com/feeds/news/"
  },
  "rss:verge:0": {
   "content_type": "application/xml; charset=UTF-8",
@@ -1721,17 +2483,35 @@
   "status": 200,
   "url": "https://www.vox.com/rss/technology/index.xml"
  },
+ "rss:vox:1": {
+  "content_type": "application/xml; charset=UTF-8",
+  "file": "rss_vox_1.xml",
+  "status": 200,
+  "url": "https://www.vox.com/rss/climate/index.xml"
+ },
  "rss:wapo:0": {
   "content_type": "text/xml; charset=utf-8",
   "file": "rss_wapo_0.xml",
   "status": 200,
   "url": "https://feeds.washingtonpost.com/rss/business/technology"
  },
+ "rss:wapo:1": {
+  "content_type": "text/xml; charset=utf-8",
+  "file": "rss_wapo_1.xml",
+  "status": 200,
+  "url": "https://feeds.washingtonpost.com/rss/national/health-science"
+ },
  "rss:wex:0": {
   "content_type": "application/rss+xml; charset=UTF-8",
   "file": "rss_wex_0.xml",
   "status": 200,
   "url": "https://www.washingtonexaminer.com/tag/technology/feed/"
+ },
+ "rss:wex:1": {
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "file": "rss_wex_1.xml",
+  "status": 200,
+  "url": "https://www.washingtonexaminer.com/tag/energy/feed/"
  },
  "rss:willison:0": {
   "content_type": "application/xml; charset=utf-8",
@@ -1744,6 +2524,12 @@
   "file": "rss_wired_0.xml",
   "status": 200,
   "url": "https://www.wired.com/feed/tag/ai/latest/rss"
+ },
+ "rss:wnn:0": {
+  "content_type": "application/rss+xml; charset=utf-8",
+  "file": "rss_wnn_0.xml",
+  "status": 200,
+  "url": "https://www.world-nuclear-news.org/rss"
  },
  "rss:wsj:0": {
   "content_type": "application/xml; charset=utf-8",

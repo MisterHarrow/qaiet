@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:admin="http://webns.net/mvcb/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Il Sole 24 ORE - Salute</title>
+    <link>https://www.ilsole24ore.com</link>
+    <description>Il Sole 24 ORE - Salute</description>
+    <copyright>Copyright 2019 - IlSole24ORE.com</copyright>
+    <language>it-IT</language>
+    <pubDate>Thu, 26 Nov 2026 13:49:24 GMT</pubDate>
+    <lastBuildDate>Thu, 26 Nov 2026 13:49:24 GMT</lastBuildDate>
+    <generator>Nile Wellspring</generator>
+    <image>
+      <title>Il Sole 24 ORE - Salute</title>
+      <url>https://www.ilsole24ore.com/static/img/ilsole24ore-o-2021.svg</url>
+      <link>https://www.ilsole24ore.com</link>
+      <width>356</width>
+      <height>131</height>
+      <description>Il Sole 24 ORE</description>
+    </image>
+    <atom:link href="https://www.ilsole24ore.com/rss/salute.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[In Italia viviamo più a lungo   ma la sanità ha sempre meno risorse]]></title>
+      <description><![CDATA[L’Italia è prima nell’Ue per anni vissuti in buona salute, ma spende il 18% meno della media per abitante. Ha mortalità prevenibile tra le più basse, ma ha meno della...]]></description>
+      <enclosure url="https://i2.res.24o.it/images2010/S24/Documenti/2026/11/27/Immagini/Ritagli/Imagoeconomica_2772197-U38232245878UID-1440x752@IlSole24Ore-Web.jpg" type="image/jpg" length="0"/>
+      <link>https://www.ilsole24ore.com/art/in-italia-viviamo-piu-lungo-ma-sanita-ha-sempre-meno-risorse-AJGCT9SC</link>
+      <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/"><![CDATA[di <a href="https://argomenti.ilsole24ore.com/paolo-del-bufalo.html">Paolo Del Bufalo</a>]]></dc:creator>
+      <guid isPermaLink="false">AJGCT9SC</guid>
+      <category domain="https://www.ilsole24ore.com">Salute</category>
+      <pubDate>Thu, 26 Nov 2026 09:06:41 GMT</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[Schillaci: «Più soldi a medici e infermieri» Le imprese: «Serve subito un segnale»]]></title>
+      <description><![CDATA[La dote per la Sanità in manovra di bilancio - 2,4 miliardi più un miliardo ereditato dall'anno scorso - potrebbe crescere ancora: in ballo c'è fino a 1 miliardo da...]]></description>
+      <enclosure url="https://i2.res.24o.it/images2010/S24/Documenti/2026/11/25/Immagini/Ritagli/Healthcare-Summit-2026-U40518103005NVx-1440x752@IlSole24Ore-Web.jpg" type="image/jpg" length="0"/>
+      <link>https://www.ilsole24ore.com/art/schillaci-piu-soldi-medici-e-infermieri-imprese-serve-subito-segnale-AJOSRERC</link>
+      <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/"><![CDATA[di <a href="https://argomenti.ilsole24ore.com/marzio-bartoloni.html">Marzio Bartoloni</a>, <a href="https://argomenti.ilsole24ore.com/ernesto-diffidenti.html">Ernesto Diffidenti</a>, <a href="https://argomenti.ilsole24ore.com/barbara-gobbi.html">Barbara Gobbi</a>]]></dc:creator>
+      <guid isPermaLink="false">AJOSRERC</guid>
+      <category domain="https://www.ilsole24ore.com">Salute</category>
+      <pubDate>Thu, 26 Nov 2026 07:28:42 GMT</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[Sanità, dopo il Pnrr  comincia il secondo tempo]]></title>
+      <description><![CDATA[Il 29 luglio il ministro della Salute ha comunicato alla Camera che l’obiettivo concordato con l’Europa è stato raggiunto nei tempi: almeno 1.038 Case della Comunità operative. Il Pnrr ha...]]></description>
+      <enclosure url="https://i2.res.24o.it/images2010/S24/Documenti/2026/11/25/Immagini/Ritagli/Imagoeconomica_1700219-U76857068163Jgc-1440x752@IlSole24Ore-Web.jpg" type="image/jpg" length="0"/>
+      <link>https://www.ilsole24ore.com/art/sanita-il-pnrr-comincia-secondo-tempo-AJMYDIRC</link>
+      <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/"><![CDATA[di <a href="https://argomenti.ilsole24ore.com/donato-scolozzi.html">Donato Scolozzi</a> *, <a href="https://argomenti.ilsole24ore.com/giacomo-falchi.html">Giacomo Falchi</a> *]]></dc:creator>
+      <guid isPermaLink="false">AJMYDIRC</guid>
+      <category domain="https://www.ilsole24ore.com">Salute</category>
+      <pubDate>Thu, 26 Nov 2026 07:37:45 GMT</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[Boehringer punta 160 milioni sui principi attivi made in Italy]]></title>
+      <description><![CDATA[Quando si analizza lo stato di salute del settore farmaceutico italiano – raccontato, giustamente, sempre con ottimismo dati i risultati recenti – andrebbe tenuta a mente anche una sua parte...]]></description>
+      <enclosure url="https://i2.res.24o.it/images2010/S24/Documenti/2026/11/25/Immagini/Ritagli/Imagoeconomica_2830724-U06583453337NtG-1440x752@IlSole24Ore-Web.jpg" type="image/jpg" length="0"/>
+      <link>https://www.ilsole24ore.com/art/boehringer-punta-160-milioni-principi-attivi-made-italy-AJFqCdRC</link>
+      <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/"><![CDATA[di <a href="https://argomenti.ilsole24ore.com/lorenzo-pace.html">Lorenzo Pace</a>]]></dc:creator>
+      <guid isPermaLink="false">AJFqCdRC</guid>
+      <category domain="https://www.ilsole24ore.com">Salute</category>
+      <pubDate>Tue, 24 Nov 2026 18:29:32 GMT</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[Obesità, la svolta della Lombardia: farmaci gratis per i più fragili, “ma ora serve una legge nazionale”]]></title>
+      <description><![CDATA[Arrivano finalmente i primi farmaci anti-obesità a carico del servizio pubblico, ma solo per i più fragili e, per ora, soltanto in Lombardia. La Giunta regionale ha appena approvato la...]]></description>
+      <enclosure url="https://i2.res.24o.it/images2010/S24/Documenti/2025/10/21/Immagini/Ritagli/AdobeStock_839408384-U60722362305yeU-1440x752@IlSole24Ore-Web.jpeg" type="image/jpeg" length="0"/>
+      <link>https://www.ilsole24ore.com/art/obesita-svolta-lombardia-farmaci-gratis-i-piu-fragili-ma-ora-serve-legge-nazionale-AJrywBRC</link>
+      <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/"><![CDATA[di <a href="https://argomenti.ilsole24ore.com/valentina-arcovio.html">Valentina Arcovio</a>]]></dc:creator>
+      <guid isPermaLink="false">AJrywBRC</guid>
+      <category domain="https://www.ilsole24ore.com">Salute</category>
+      <pubDate>Tue, 24 Nov 2026 17:47:13 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

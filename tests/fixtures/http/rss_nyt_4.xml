@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:nyt="http://www.nytimes.com/namespaces/rss/2.0" version="2.0">
+  <channel>
+    <title>NYT &gt; Science</title>
+    <link>https://www.nytimes.com/section/science</link>
+    <atom:link href="https://rss.nytimes.com/services/xml/rss/nyt/Science.xml" rel="self" type="application/rss+xml"></atom:link>
+    <description></description>
+    <language>en-us</language>
+    <copyright>Copyright 2026 The New York Times Company</copyright>
+    <lastBuildDate>Thu, 26 Nov 2026 14:42:48 +0000</lastBuildDate>
+    <pubDate>Thu, 26 Nov 2026 11:16:27 +0000</pubDate>
+    <image>
+      <title>NYT &gt; Science</title>
+      <url>https://static01.nyt.com/images/misc/NYT_logo_rss_250x40.png</url>
+      <link>https://www.nytimes.com/section/science</link>
+    </image>
+    <item>
+      <title>The N.F.L. Player Who Left Football for Math</title>
+      <link>https://www.nytimes.com/2026/11/26/science/john-urschel-ai-nfl-math.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2026/11/26/science/john-urschel-ai-nfl-math.html</guid>
+      <atom:link href="https://www.nytimes.com/2026/11/26/science/john-urschel-ai-nfl-math.html" rel="standout"></atom:link>
+      <description>John Urschel left the game in part because of health risks. Now he’s scoring points in a new profession, but A.I. looms as a different kind of career hazard.</description>
+      <dc:creator>Siobhan Roberts</dc:creator>
+      <pubDate>Thu, 26 Nov 2026 10:04:08 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Urschel, John Cameron (1991- )</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Thomas, Louisa</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Mathematics</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Artificial Intelligence</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Research</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Massachusetts Institute of Technology</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Football</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">National Football League</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Baltimore Ravens</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Chronic Traumatic Encephalopathy</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Content Type: Personal Profile</category>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2026/12/01/multimedia/26SCI-CONVERSATION-URSCHEL1-jpht/26SCI-CONVERSATION-URSCHEL1-jpht-mediumSquareAt3X.jpg" width="1800"></media:content>
+      <media:credit>Lucy Lu for The New York Times</media:credit>
+      <media:description>John Urschel at his home in Belmont, Mass., this month.</media:description>
+    </item>
+    <item>
+      <title>Europe’s Hera Mission Releases Close-Up Images of the Asteroid Hit by a NASA Spacecraft</title>
+      <link>https://www.nytimes.com/2026/11/25/science/hera-nasa-photos-dart-asteroid.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2026/11/25/science/hera-nasa-photos-dart-asteroid.html</guid>
+      <atom:link href="https://www.nytimes.com/2026/11/25/science/hera-nasa-photos-dart-asteroid.html" rel="standout"></atom:link>
+      <description>A European mission called Hera has just revealed the first close-up look at the aftermath of NASA’s audacious planetary defense test.</description>
+      <dc:creator>Robin George Andrews</dc:creator>
+      <pubDate>Wed, 25 Nov 2026 17:30:06 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Space and Astronomy</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Asteroids</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Rocket Science and Propulsion</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Research</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Rock and Stone</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">European Space Agency</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">National Aeronautics and Space Administration</category>
+      <media:content height="1080" medium="image" url="https://static01.nyt.com/images/2026/11/23/25SCI-HERA-ASTEROID-DARTCAM-78-cover/25SCI-HERA-ASTEROID-DARTCAM-78-cover-mediumSquareAt3X.jpg" width="1080"></media:content>
+      <media:credit>NASA/Johns Hopkins APL</media:credit>
+    </item>
+    <item>
+      <title>Bizarre Material May Herald the Future of Computer Chips</title>
+      <link>https://www.nytimes.com/2026/11/25/science/chips-wires-copper-niobium.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2026/11/25/science/chips-wires-copper-niobium.html</guid>
+      <atom:link href="https://www.nytimes.com/2026/11/25/science/chips-wires-copper-niobium.html" rel="standout"></atom:link>
+      <description>Unlike copper, newly described “nanoribbons” conduct electricity better as they shrink. If refined, the material could usher in a supercharged generation of microchips.</description>
+      <dc:creator>William J. Broad</dc:creator>
+      <pubDate>Wed, 25 Nov 2026 16:00:05 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Computer Chips</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Research</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Miniaturization</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Nanotechnology</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Artificial Intelligence</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Wire and Cable</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Physics</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Nature (Journal)</category>
+      <media:content height="1801" medium="image" url="https://static01.nyt.com/images/2026/11/25/science/25SCI-NEW-WIRES2/25SCI-NEW-WIRES2-mediumSquareAt3X.jpg" width="1800"></media:content>
+      <media:credit>Haotian Su, Eric Pop at Stanford University</media:credit>
+      <media:description>An illustration of the newly described nanoribbons. Each one would be fractions of the width of a strand of human hair.</media:description>
+    </item>
+    <item>
+      <title>This Danish Man Was a Rare Witness to the Agricultural Revolution</title>
+      <link>https://www.nytimes.com/2026/11/24/science/rodhals-man-neolithic-farming-witness.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2026/11/24/science/rodhals-man-neolithic-farming-witness.html</guid>
+      <atom:link href="https://www.nytimes.com/2026/11/24/science/rodhals-man-neolithic-farming-witness.html" rel="standout"></atom:link>
+      <description>Excavated in 1956, “Rodhals Man” lived — and ate — at the cusp of one of the biggest shifts in human history, a new study says.</description>
+      <dc:creator>Stella Raine Chu</dc:creator>
+      <pubDate>Tue, 24 Nov 2026 17:31:15 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Archaeology and Anthropology</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Agriculture and Farming</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Research</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Diet and Nutrition</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Skeletons</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Antiquity (Journal)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Denmark</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Teeth and Dentistry</category>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2026/11/19/multimedia/19SCI-RODHALS-MAN-01-gwfc/19SCI-RODHALS-MAN-01-gwfc-mediumSquareAt3X.jpg" width="1800"></media:content>
+      <media:credit>Danish Museum and Anders Fischer, via Agence France-Presse — Getty Images</media:credit>
+      <media:description>The skull of Rodhals Man, an individual who lived about 6,000 years ago and was buried in a shell midden on an island in Denmark.</media:description>
+    </item>
+    <item>
+      <title>What Personality Can Tell Us About Mental Health</title>
+      <link>https://www.nytimes.com/2026/11/24/science/personality-mental-health.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2026/11/24/science/personality-mental-health.html</guid>
+      <atom:link href="https://www.nytimes.com/2026/11/24/science/personality-mental-health.html" rel="standout"></atom:link>
+      <description>Psychologists and psychiatrists have long considered the role of personality in understanding mental illness and treatment. Now, science is bridging the gap.</description>
+      <dc:creator>Awais Aftab</dc:creator>
+      <pubDate>Tue, 24 Nov 2026 08:00:12 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Mental Health and Disorders</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Psychology and Psychologists</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Psychiatry and Psychiatrists</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Anxiety and Stress</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Depression (Mental)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Nature (Journal)</category>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2026/11/24/science/24SCI-AFTAB-PERSONALITY/24SCI-AFTAB-PERSONALITY-mediumSquareAt3X.jpg" width="1800"></media:content>
+      <media:credit>Sophi Miyoko Gullbrants</media:credit>
+    </item>
+  </channel>
+</rss>

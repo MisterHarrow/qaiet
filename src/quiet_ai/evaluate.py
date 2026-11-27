@@ -46,7 +46,7 @@ def sample(store: Store, sources: SourcesConfig, n: int, seed: int = 7) -> list[
     no_llm = {f.id for f in sources.feeds if not f.llm}
     rows = store.conn.execute(
         "SELECT i.id, i.source, i.title, i.title_en, i.summary, i.lang, l.track, l.stance FROM item_labels l "
-        "JOIN items i ON i.id = l.item_id WHERE l.task = 'news' AND i.kind = 'news' AND i.relevant = 1 AND i.dup_of IS NULL"
+        "JOIN items i ON i.id = l.item_id WHERE l.task = 'news' AND i.kind = 'news' AND i.relevant = 1 AND COALESCE(i.desk, 'ai') = 'ai' AND i.dup_of IS NULL"
     ).fetchall()
     cells: dict[tuple, list] = defaultdict(list)
     for r in rows:
@@ -210,7 +210,7 @@ def audit(store: Store, sources: SourcesConfig, by: str = "group", min_n: int = 
     attr = {f.id: getattr(f, by, None) for f in sources.feeds} | {g.id: getattr(g, by, None) for g in sources.gdelt_outlets}
     rows = store.conn.execute(
         "SELECT i.source, l.stance, l.confidence FROM item_labels l JOIN items i ON i.id = l.item_id "
-        "WHERE l.task = 'news' AND i.kind = 'news' AND i.relevant = 1"
+        "WHERE l.task = 'news' AND i.kind = 'news' AND i.relevant = 1 AND COALESCE(i.desk, 'ai') = 'ai'"
     ).fetchall()
     acc: dict[str, list] = defaultdict(list)
     for r in rows:

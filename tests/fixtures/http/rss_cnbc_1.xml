@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:metadata="http://search.cnbc.com/rss/2.0/modules/siteContentMetadata" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <atom:link rel="self" type="application/rss+xml" href="https://www.cnbc.com/id/19836768/device/rss/rss.html"/>
+    <language>en-us</language>
+    <ttl>60</ttl>
+    <title>Energy</title>
+    <feed_asset>
+      <id>19836768</id>
+      <type>franchise</type>
+      <subtype>section</subtype>
+      <seo>https://www.cnbc.com/energy/</seo>
+    </feed_asset>
+    <lastBuildDate>Thu, 26 Nov 2026 10:27 GMT</lastBuildDate>
+    <pubDate>Thu, 26 Nov 2026 10:27 GMT</pubDate>
+    <link>https://www.cnbc.com/energy/</link>
+    <description><![CDATA[Find the latest news and analysis, headlines, blogs and videos about energy markets, gas, oil, coal, commodities, nuclear power from CNBC.com.]]></description>
+    <item>
+      <link>https://www.cnbc.com/2026/11/26/latin-america-copper-energy-ai-investment.html</link>
+      <guid isPermaLink="false">108550928</guid>
+      <metadata:type>cnbcnewsstory</metadata:type>
+      <metadata:id>108550928</metadata:id>
+      <metadata:sponsored>false</metadata:sponsored>
+      <title>Latin America has the copper and energy the AI build-out needs. Infrastructure is the test</title>
+      <description><![CDATA[Latin America’s copper, oil, gas and rare earths could benefit from rising AI energy demand, if infrastructure and fiscal policy attract investment.]]></description>
+      <pubDate>Thu, 26 Nov 2026 08:59:11 GMT</pubDate>
+    </item>
+    <item>
+      <link>https://www.cnbc.com/2026/11/25/investors-led-by-todd-boehly-to-buy-lukoil-oil-and-gas-assets-outside-russia.html</link>
+      <guid isPermaLink="false">108559329</guid>
+      <metadata:type>cnbcnewsstory</metadata:type>
+      <metadata:id>108559329</metadata:id>
+      <metadata:sponsored>false</metadata:sponsored>
+      <title>Investors led by U.S. billionaire Todd Boehly to buy Lukoil&apos;s oil and gas assets outside Russia, sources say</title>
+      <description><![CDATA[The U.S. International Development Finance Corporation and Catena Investments, based in the United Arab Emirates, are also parties to the deal, the sources said.]]></description>
+      <pubDate>Wed, 25 Nov 2026 16:00:45 GMT</pubDate>
+    </item>
+    <item>
+      <link>https://www.cnbc.com/2026/11/25/ukraine-putin-russia-oil-refinery-attacks.html</link>
+      <guid isPermaLink="false">108559051</guid>
+      <metadata:type>cnbcnewsstory</metadata:type>
+      <metadata:id>108559051</metadata:id>
+      <metadata:sponsored>false</metadata:sponsored>
+      <title>Ukraine tells Putin to ‘stop complaining’ over oil refinery attacks as Russia promises retaliation</title>
+      <description><![CDATA[Ukraine’s foreign minister told Putin to end the war if he wants Kyiv to stop attacking Russian refineries, after Putin said retaliation was “inevitable.”]]></description>
+      <pubDate>Wed, 25 Nov 2026 09:18:37 GMT</pubDate>
+    </item>
+    <item>
+      <link>https://www.cnbc.com/2026/11/25/uae-iran-war-economy-oil.html</link>
+      <guid isPermaLink="false">108558991</guid>
+      <metadata:type>cnbcnewsstory</metadata:type>
+      <metadata:id>108558991</metadata:id>
+      <metadata:sponsored>false</metadata:sponsored>
+      <title>‘Ready for any storm’: UAE minister optimistic on economy as IMF lifts forecast</title>
+      <description><![CDATA[The UAE is optimistic about achieving 7%-8% economic growth next year, banking on a "different" economic model.]]></description>
+      <pubDate>Wed, 25 Nov 2026 04:06:01 GMT</pubDate>
+    </item>
+    <item>
+      <link>https://www.cnbc.com/2026/11/25/us-iran-war-trump-hormuz-houthi-saudi-pif-tower.html</link>
+      <guid isPermaLink="false">108558939</guid>
+      <metadata:type>cnbcnewsstory</metadata:type>
+      <metadata:id>108558939</metadata:id>
+      <metadata:sponsored>false</metadata:sponsored>
+      <title>Houthi attack on Saudi Arabian sovereign wealth fund PIF&apos;s tower injures 11</title>
+      <description><![CDATA[This has been the second attack by the Iran-backed group in six days on the tower, although the previous attack did not cause any casualties.]]></description>
+      <pubDate>Wed, 25 Nov 2026 02:36:43 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+			xmlns:media="http://search.yahoo.com/mrss/"
+		xmlns:dcterms="http://purl.org/dc/terms/"
+		>
+
+<channel>
+	<title>STAT</title>
+	<atom:link href="https://www.statnews.com/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.statnews.com/</link>
+	<description>Reporting from the frontiers of health and medicine</description>
+	<lastBuildDate>Wed, 25 Nov 2026 23:38:31 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=7.1.5</generator>
+
+<image>
+	<url>https://www.statnews.com/wp-content/uploads/2023/06/cropped-STAT-Favicon-Round-32x32.png</url>
+	<title>STAT</title>
+	<link>https://www.statnews.com/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+		<copyright>STAT Copyright 2026</copyright>
+			<item>
+		<title>STAT+: The grueling struggle to find a primary care doctor in the &#8216;medical capital&#8217; of America</title>
+		<link>https://www.statnews.com/2026/11/26/primary-care-appointment-times-doctor-shortage/?utm_campaign=rss</link>
+		
+		<dc:creator><![CDATA[Marin Wolf, Jonathan Saltzman,and  and Scooty Nickerson — Boston Globe]]></dc:creator>
+		<pubDate>Thu, 26 Nov 2026 12:00:00 +0000</pubDate>
+				<category><![CDATA[Health]]></category>
+		<category><![CDATA[health care]]></category>
+		<category><![CDATA[Health insurance]]></category>
+		<category><![CDATA[Physicians]]></category>
+		<category><![CDATA[STAT+]]></category>
+		<guid isPermaLink="false">https://www.statnews.com/?p=1553096</guid>
+
+					<description><![CDATA[Boston is supposed to be the medical capital of America. Yet many don’t have primary care access, hurting their ability to get treatments, screenings, and medical advice.]]></description>
+										
+					
+		
+		
+				<media:content url="https://www.statnews.com/wp-content/uploads/2026/11/AdobeStock_2158931352-1024x576.jpeg" type="image/jpeg">
+								<media:credit>Adobe</media:credit>
+									<media:thumbnail url="https://www.statnews.com/wp-content/uploads/2026/11/AdobeStock_2158931352-645x645.jpeg" />
+						</media:content>
+
+		<dcterms:modified>2026-11-25T18:38:31-05:00</dcterms:modified>
+	</item>
+		<item>
+		<title>Why Medicare’s 2027 physician pay changes worry some specialists</title>
+		<link>https://www.statnews.com/2026/11/25/medicare-physician-fee-schedule-change-worry-some-specialists/?utm_campaign=rss</link>
+		
+		<dc:creator><![CDATA[O. Rose Broderick]]></dc:creator>
+		<pubDate>Wed, 25 Nov 2026 21:28:53 +0000</pubDate>
+				<category><![CDATA[Health]]></category>
+		<category><![CDATA[CMS]]></category>
+		<category><![CDATA[Medicare]]></category>
+		<guid isPermaLink="false">https://www.statnews.com/?p=1553032</guid>
+
+					<description><![CDATA[Cuts to Medicare physician payment rates for certain same-day services could impact some specialists more than others.]]></description>
+										
+					
+		
+		
+				<media:content url="https://www.statnews.com/wp-content/uploads/2026/11/AdobeStock_84737739-1024x576.jpeg" type="image/jpeg">
+								<media:credit>Adobe</media:credit>
+									<media:thumbnail url="https://www.statnews.com/wp-content/uploads/2026/11/AdobeStock_84737739-645x645.jpeg" />
+						</media:content>
+
+		<dcterms:modified>2026-11-25T16:28:57-05:00</dcterms:modified>
+	</item>
+		<item>
+		<title>STAT+: FDA approves Cogent&#8217;s drug for rare stomach cancer</title>
+		<link>https://www.statnews.com/2026/11/25/biotech-news-fda-approves-cogents-drug-for-rare-stomach-cancer/?utm_campaign=rss</link>
+		
+		<dc:creator><![CDATA[Elaine Chen]]></dc:creator>
+		<pubDate>Wed, 25 Nov 2026 20:44:15 +0000</pubDate>
+				<category><![CDATA[Biotech]]></category>
+		<category><![CDATA[Business]]></category>
+		<category><![CDATA[Pharma]]></category>
+		<category><![CDATA[The Readout]]></category>
+		<category><![CDATA[biotechnology]]></category>
+		<category><![CDATA[drug development]]></category>
+		<category><![CDATA[Drug prices]]></category>
+		<category><![CDATA[FDA]]></category>
+		<category><![CDATA[Pharmaceuticals]]></category>
+		<category><![CDATA[rare diseases]]></category>
+		<category><![CDATA[research]]></category>
+		<guid isPermaLink="false">https://www.statnews.com/?p=1552849</guid>
+
+					<description><![CDATA[Cogent Biosciences won FDA clearance for its stomach cancer treatment, in combination with a much older drug from Pfizer called Sutent.]]></description>
+										
+					
+		
+		
+				<media:content url="https://www.statnews.com/wp-content/uploads/2025/11/AdobeStock_917911475-1024x576.jpeg" type="image/jpeg">
+								<media:credit>Adobe</media:credit>
+									<media:thumbnail url="https://www.statnews.com/wp-content/uploads/2025/11/AdobeStock_917911475-645x645.jpeg" />
+						</media:content>
+
+		<dcterms:modified>2026-11-25T15:44:19-05:00</dcterms:modified>
+	</item>
+		<item>
+		<title>STAT+: We’re reading about BioNTech founders’ oncology startup, a long-acting GSK drug, and more</title>
+		<link>https://www.statnews.com/pharmalot/2026/11/25/biontech-founders-oncology-startup-gsk-egpa-drug-exdensur/?utm_campaign=rss</link>
+		
+		<dc:creator><![CDATA[Andrew Joseph]]></dc:creator>
+		<pubDate>Wed, 25 Nov 2026 13:55:58 +0000</pubDate>
+				<category><![CDATA[Pharma]]></category>
+		<category><![CDATA[Pharmalot]]></category>
+		<category><![CDATA[pharmalittle]]></category>
+		<category><![CDATA[STAT+]]></category>
+		<guid isPermaLink="false">https://www.statnews.com/?p=1552855</guid>
+
+					<description><![CDATA[The cofounders of BioNTech are in talks to raise about $1 billion for a new oncology company]]></description>
+										
+					
+		
+		
+				<media:content url="https://www.statnews.com/wp-content/uploads/2015/11/PHARMALOT_LITTLE-copy-1024x576.jpg" type="image/jpeg">
+								<media:credit>Alex Hogan/STAT</media:credit>
+										<media:text>an anthropomorphized red and blue pill illustrated in the style of the famous american gothic painting</media:text>
+									<media:thumbnail url="https://www.statnews.com/wp-content/uploads/2015/11/PHARMALOT_LITTLE-copy-645x645.jpg" />
+						</media:content>
+
+		<dcterms:modified>2026-11-25T08:56:02-05:00</dcterms:modified>
+	</item>
+		<item>
+		<title>RFK Jr. weighs in on plan to detonate toxic material in Iowa</title>
+		<link>https://www.statnews.com/2026/11/25/health-news-rfk-jr-weighs-in-on-plan-to-detonate-toxic-material-in-iowa/?utm_campaign=rss</link>
+		
+		<dc:creator><![CDATA[Amanda Erickson and Jonathan Wosen]]></dc:creator>
+		<pubDate>Wed, 25 Nov 2026 13:03:56 +0000</pubDate>
+				<category><![CDATA[Health]]></category>
+		<category><![CDATA[Morning Rounds]]></category>
+		<category><![CDATA[health care]]></category>
+		<category><![CDATA[HHS]]></category>
+		<category><![CDATA[public health]]></category>
+		<category><![CDATA[RFK Jr.]]></category>
+		<category><![CDATA[Vaccines]]></category>
+		<guid isPermaLink="false">https://www.statnews.com/?p=1552835</guid>
+
+					<description><![CDATA[This morning, the Army plans to detonate a cache of “dangerously degraded” toxic material in Iowa, with experts warning of dangerous health consequences:]]></description>
+										
+					
+		
+		
+				<media:content url="https://www.statnews.com/wp-content/uploads/2026/10/AP26302044055811-1024x576.jpg" type="image/jpeg">
+								<media:credit>Charlie Neibergall/AP</media:credit>
+									<media:thumbnail url="https://www.statnews.com/wp-content/uploads/2026/10/AP26302044055811-645x645.jpg" />
+						</media:content>
+
+		<dcterms:modified>2026-11-25T08:04:00-05:00</dcterms:modified>
+	</item>
+	</channel>
+</rss>

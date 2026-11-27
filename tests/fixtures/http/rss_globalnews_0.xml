@@ -13,7 +13,7 @@
 	<atom:link href="https://globalnews.ca/tech/feed/" rel="self" type="application/rss+xml" />
 	<link>https://globalnews.ca</link>
 	<description>Global News Technology -  breaking tech and gadget news; get the latest news and updates on all things tech and digital on GlobalNews.ca</description>
-	<lastBuildDate>Wed, 25 Nov 2026 17:51:35 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 26 Nov 2026 14:28:20 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -21,6 +21,33 @@
 	1	</sy:updateFrequency>
 	
 <site xmlns="com-wordpress:feed-additions:1">176892389</site>	<item>
+		<title>FIFA hackers had access to &#8216;business and personal information,&#8217; organization says</title>
+		<link>https://globalnews.ca/news/12167231/fifa-cyberattack/</link>
+					<comments>https://globalnews.ca/news/12167231/fifa-cyberattack/#respond</comments>
+		
+		<dc:creator><![CDATA[globalnewsdigital]]></dc:creator>
+		<pubDate>Thu, 26 Nov 2026 14:28:20 +0000</pubDate>
+				<category><![CDATA[Sports]]></category>
+		<category><![CDATA[Tech]]></category>
+		<category><![CDATA[World]]></category>
+		<category><![CDATA[Cyberattack]]></category>
+		<category><![CDATA[FIFA]]></category>
+		<guid isPermaLink="false">https://globalnews.ca/?p=12167231</guid>
+
+					<description><![CDATA[The breach comes at a time when FIFA and its president, Gianni Infantino, is under scrutiny after his foiled, secretive plan to sell stakes in the World Cup to private investors.]]></description>
+										
+					
+					<wfw:commentRss>https://globalnews.ca/news/12167231/fifa-cyberattack/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">12167231</post-id><enclosure url="https://globalnews.ca/wp-content/uploads/2026/11/Infantino-2-e1795702968511.jpg?quality=65&#038;strip=all&#038;w=720&#038;h=480&#038;crop=1" length="67351000"  type="image/jpeg"/>
+		<media:thumbnail url="https://globalnews.ca/wp-content/uploads/2026/11/Infantino-2-e1795702968511.jpg?quality=65&#038;strip=all" />
+		<media:content url="https://globalnews.ca/wp-content/uploads/2026/11/Infantino-2-e1795702968511.jpg?quality=65&#038;strip=all" medium="image">
+			<media:title type="html">FIFA President Election</media:title>
+		</media:content>
+	</item>
+		<item>
 		<title>Microsoft declares ‘Code Red’ following 24-hour outage: Here’s what that means</title>
 		<link>https://globalnews.ca/news/12165881/microsoft-code-red/</link>
 					<comments>https://globalnews.ca/news/12165881/microsoft-code-red/#respond</comments>
@@ -127,33 +154,6 @@
 		<media:thumbnail url="https://globalnews.ca/wp-content/uploads/2026/11/Jensen-Huang-returns.jpg?quality=65&#038;strip=all" />
 		<media:content url="https://globalnews.ca/wp-content/uploads/2026/11/Jensen-Huang-returns.jpg?quality=65&#038;strip=all" medium="image">
 			<media:title type="html">NVIDIA AI Jensen Huang</media:title>
-		</media:content>
-	</item>
-		<item>
-		<title>Before you hit ‘buy’: How AI is making Black Friday scams harder to spot</title>
-		<link>https://globalnews.ca/news/12161533/ai-black-friday-scams-harder-to-spot/</link>
-					<comments>https://globalnews.ca/news/12161533/ai-black-friday-scams-harder-to-spot/#respond</comments>
-		
-		<dc:creator><![CDATA[Pooja Misra]]></dc:creator>
-		<pubDate>Sun, 22 Nov 2026 20:22:03 +0000</pubDate>
-				<category><![CDATA[Consumer]]></category>
-		<category><![CDATA[Tech]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Black Friday]]></category>
-		<category><![CDATA[holiday shopping scams]]></category>
-		<guid isPermaLink="false">https://globalnews.ca/?p=12161533</guid>
-
-					<description><![CDATA[AI is making fake Black Friday deals harder to spot. RBC’s Amit Sadhu explains how scammers use texts and social media to reach shoppers and what to check before you buy.]]></description>
-										
-					
-					<wfw:commentRss>https://globalnews.ca/news/12161533/ai-black-friday-scams-harder-to-spot/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
-		
-		
-		<post-id xmlns="com-wordpress:feed-additions:1">12161533</post-id><enclosure url="https://globalnews.ca/wp-content/uploads/2026/11/Sequence-02.00_00_20_04.Still003.jpg?quality=65&#038;strip=all&#038;w=720&#038;h=480&#038;crop=1" length="61719000"  type="image/jpeg"/>
-		<media:thumbnail url="https://globalnews.ca/wp-content/uploads/2026/11/Sequence-02.00_00_20_04.Still003.jpg?quality=65&#038;strip=all" />
-		<media:content url="https://globalnews.ca/wp-content/uploads/2026/11/Sequence-02.00_00_20_04.Still003.jpg?quality=65&#038;strip=all" medium="image">
-			<media:title type="html">Sequence 02.00_00_20_04.Still003</media:title>
 		</media:content>
 	</item>
 	</channel>

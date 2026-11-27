@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	xmlns:media="http://search.yahoo.com/mrss/" >
+<channel>
+	<title>sorae 宇宙へのポータルサイト</title>
+	<atom:link href="https://sorae.info/feed" rel="self" type="application/rss+xml" />
+	<link>https://sorae.info</link>
+	<description></description>
+	<lastBuildDate>Thu, 26 Nov 2026 14:43:23 +0000</lastBuildDate>
+	<language>ja</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=7.1.5</generator>
+
+<image>
+	<url>https://sorae.info/wp-content/uploads/2020/08/cropped-sorae-fav-32x32.png</url>
+	<title>sorae 宇宙へのポータルサイト</title>
+	<link>https://sorae.info</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>暗黒物質由来の「内部寄生型ブラックホール」が “宿主” の天体を食いつくす条件を探索</title>
+		<link>https://sorae.info/astronomy/20261126-endoparasitic-black-hole.html</link>
+		<pubDate>Thu, 26 Nov 2026 12:34:37 +0000</pubDate>
+		<dc:creator><![CDATA[彩恵りり]]></dc:creator>
+				<category><![CDATA[天文]]></category>
+		<category><![CDATA[ダークマター]]></category>
+		<category><![CDATA[ブラックホール]]></category>
+
+		<guid isPermaLink="false">https://sorae.info/?p=159768</guid>
+		<description><![CDATA[私たちの宇宙には、未知の重力源である「暗黒物質（ダークマター）」があると言われています。暗黒物質の性質次第では、これが天体の中心部に集まって重力崩壊し、「内部寄生型ブラックホール（Endoparasitic Black …]]></description>
+				
+			</item>
+		<item>
+		<title>独Isar Aerospace、ノバスコシア宇宙港でSpectrum用の発射台建設に着手　2028年の打ち上げ目指す</title>
+		<link>https://sorae.info/space/20261126-isar-spaceport-nova-scotia.html</link>
+		<pubDate>Thu, 26 Nov 2026 03:53:43 +0000</pubDate>
+		<dc:creator><![CDATA[sorae編集部]]></dc:creator>
+				<category><![CDATA[宇宙開発]]></category>
+		<category><![CDATA[Isar Aerospace]]></category>
+
+		<guid isPermaLink="false">https://sorae.info/?p=160055</guid>
+		<description><![CDATA[ドイツの宇宙企業Isar Aerospace（イザール・エアロスペース）とカナダのMaritime Launch Services（マリタイム・ローンチ・サービシズ、以下MLS）は現地時間2026年11月21日、カナダ東…]]></description>
+				
+			</item>
+		<item>
+		<title>小さな銀河を包み込む淡い腕　ダークエネルギーカメラが観測した棒渦巻銀河「NGC 1512」</title>
+		<link>https://sorae.info/astronomy/20261126-ngc-1512-decam.html</link>
+		<pubDate>Thu, 26 Nov 2026 02:12:26 +0000</pubDate>
+		<dc:creator><![CDATA[ソラノサキ]]></dc:creator>
+				<category><![CDATA[天文]]></category>
+		<category><![CDATA[NOIRLab]]></category>
+		<category><![CDATA[棒渦巻銀河]]></category>
+		<category><![CDATA[銀河]]></category>
+
+		<guid isPermaLink="false">https://sorae.info/?p=159922</guid>
+		<description><![CDATA[こちらは、チリのセロ・トロロ汎米天文台にあるブランコ4m望遠鏡の観測装置「DECam（ダークエネルギーカメラ）」で観測した棒渦巻銀河「NGC 1512」。とけい座の方向、地球から約6000万光年先にあります。 棒渦巻銀河…]]></description>
+				
+			</item>
+		<item>
+		<title>中国が有人宇宙船「神舟24号」打ち上げ　3時間半後に中国宇宙ステーションへ到着</title>
+		<link>https://sorae.info/ssn/20261126-shenzhou-24.html</link>
+		<pubDate>Wed, 25 Nov 2026 23:58:42 +0000</pubDate>
+		<dc:creator><![CDATA[sorae編集部 速報班]]></dc:creator>
+				<category><![CDATA[打ち上げ情報]]></category>
+		<category><![CDATA[宇宙開発]]></category>
+		<category><![CDATA[中国宇宙ステーション]]></category>
+		<category><![CDATA[中国宇宙開発]]></category>
+		<category><![CDATA[有人宇宙]]></category>
+
+		<guid isPermaLink="false">https://sorae.info/?p=160037</guid>
+		<description><![CDATA[中国は日本時間2026年11月25日に「長征2号F」ロケットの打ち上げを実施しました。搭載されていた宇宙船「神舟24号」は予定されていた軌道へ無事投入され、CSS（中国宇宙ステーション）「天宮」へのドッキングに成功したこ…]]></description>
+				
+			</item>
+		<item>
+		<title>赤色巨星「ミラA」から噴き出した巨大なループ　アルマ望遠鏡が捉えた磁場による噴出</title>
+		<link>https://sorae.info/astronomy/20261125-mira_a.html</link>
+		<pubDate>Wed, 25 Nov 2026 13:07:39 +0000</pubDate>
+		<dc:creator><![CDATA[ソラノサキ]]></dc:creator>
+				<category><![CDATA[天文]]></category>
+		<category><![CDATA[アルマ望遠鏡]]></category>
+		<category><![CDATA[ヨーロッパ南天天文台]]></category>
+		<category><![CDATA[赤色巨星]]></category>
+
+		<guid isPermaLink="false">https://sorae.info/?p=159950</guid>
+		<description><![CDATA[こちらは、南米・チリの電波望遠鏡群「アルマ望遠鏡（ALMA）」が観測した赤色巨星「ミラA（Mira A）」。くじら座の方向、地球から約330光年先にあります。 赤色巨星とは、寿命の終わりが近づいて大きく膨らみ、表面の温度…]]></description>
+				
+			</item>
+	</channel>
+</rss>

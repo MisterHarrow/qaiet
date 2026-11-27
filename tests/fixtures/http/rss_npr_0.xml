@@ -7,56 +7,56 @@
     <language>en</language>
     <copyright>Copyright 2024 NPR - For Personal Use Only</copyright>
     <generator>Story API Shim 1.2.24</generator>
-    <lastBuildDate>Tue, 24 Nov 2026 03:19:39 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 09:43:02 -0500</lastBuildDate>
     <image>
       <url>https://media.npr.org/images/podcasts/primary/npr_generic_image_300.jpg?s=200</url>
       <title>NPR Topics: Technology</title>
       <link>https://www.npr.org/sections/technology/</link>
     </image>
     <item>
-      <title>Trump claims credit as Jensen Huang returns to Nvidia</title>
-      <description>President Trump endorsed the announcement, calling it essential for the success of the company and the economy. He added that the government does not see Huang&apos;s return as a national security risk.</description>
-      <pubDate>Mon, 23 Nov 2026 09:53:41 -0500</pubDate>
-      <link>https://www.npr.org/2026/11/23/nx-s1-6050910/nvidias-jensen-huang-trump</link>
-      <guid>https://www.npr.org/2026/11/23/nx-s1-6050910/nvidias-jensen-huang-trump</guid>
+      <title>FCC says SpaceX can deploy 1 million satellites for data centers in space. Scientists are skeptical</title>
+      <description>The Trump administration gave Elon Musk&apos;s SpaceX the green light to deploy 1 million satellites that it said would create data centers in space, a move that has raised skepticism among scientists.</description>
+      <pubDate>Thu, 26 Nov 2026 01:53:09 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/26/g-s1-155940/fcc-spacex-satellites-data-centers-in-space</link>
+      <guid>https://www.npr.org/2026/11/26/g-s1-155940/fcc-spacex-satellites-data-centers-in-space</guid>
       
-      <dc:creator>Shannon Bond</dc:creator>
+      <dc:creator>The Associated Press</dc:creator>
     </item>
     <item>
-      <title>Google employees protest AI in schools policy</title>
-      <description>More than 550 Google employees signed a petition to allow schools access to Search without AI. Parents and educators protested outside Google offices in 6 cities last week for the same ask.</description>
-      <pubDate>Sat, 21 Nov 2026 17:01:40 -0500</pubDate>
-      <link>https://www.npr.org/2026/11/21/nx-s1-6048599/google-employees-protest-ai-in-schools-policy</link>
-      <guid>https://www.npr.org/2026/11/21/nx-s1-6048599/google-employees-protest-ai-in-schools-policy</guid>
+      <title>How to talk AI around the Thanksgiving table</title>
+      <description>You&apos;re gathered with family this Thanksgiving when the topic of AI comes up. How can you have a productive, fact-based conversation?</description>
+      <pubDate>Wed, 25 Nov 2026 16:33:59 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/25/nx-s1-6053216/how-to-talk-ai-around-the-thanksgiving-table</link>
+      <guid>https://www.npr.org/2026/11/25/nx-s1-6053216/how-to-talk-ai-around-the-thanksgiving-table</guid>
       
-      <dc:creator>Sequoia Carrillo</dc:creator>
+      <dc:creator>Kevin Roose</dc:creator>
     </item>
     <item>
-      <title>Killer robots: U.N. talks fall short of hopes for legally binding rules</title>
-      <description>U.N. talks in Geneva have failed to deliver binding rules on autonomous weapons, as humanitarian groups warn that military AI is advancing far faster than diplomacy.</description>
-      <pubDate>Sat, 21 Nov 2026 09:18:17 -0500</pubDate>
-      <link>https://www.npr.org/2026/11/21/nx-s1-6047916/killer-robots-un-drones</link>
-      <guid>https://www.npr.org/2026/11/21/nx-s1-6047916/killer-robots-un-drones</guid>
+      <title>What to know before using AI agents for Black Friday shopping</title>
+      <description>59% of U.S. shoppers plan to use AI for holiday shopping this weekend, according to the National Retail Federation</description>
+      <pubDate>Wed, 25 Nov 2026 08:51:56 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/25/nx-s1-6048524/what-to-know-before-using-ai-agents-for-black-friday-shopping</link>
+      <guid>https://www.npr.org/2026/11/25/nx-s1-6048524/what-to-know-before-using-ai-agents-for-black-friday-shopping</guid>
       
-      <dc:creator>Imogen Foulkes</dc:creator>
+      <dc:creator>Stephan Bisaha</dc:creator>
     </item>
     <item>
-      <title>Anthropic says it will put humanity first. Will its IPO change that?</title>
-      <description>Critics say now that the AI giant is a public company, its commitment to put safety ahead of commercial success will be tested.</description>
-      <pubDate>Sat, 21 Nov 2026 05:00:00 -0500</pubDate>
-      <link>https://www.npr.org/2026/11/21/nx-s1-6048678/anthropic-ipo-mission-ai-safety</link>
-      <guid>https://www.npr.org/2026/11/21/nx-s1-6048678/anthropic-ipo-mission-ai-safety</guid>
+      <title>Buying new things feels wonderful. But it can also be a trap</title>
+      <description>Constantly buying new things can be problematic, says journalist Eric Athas, author of the new book &quot;Saying No to New.&quot; Here&apos;s how to break the cycle and find joy in what you already have.</description>
+      <pubDate>Wed, 25 Nov 2026 05:02:00 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/25/nx-s1-6052361/buying-new-things-feels-wonderful-can-be-trap-break-the-cycle</link>
+      <guid>https://www.npr.org/2026/11/25/nx-s1-6052361/buying-new-things-feels-wonderful-can-be-trap-break-the-cycle</guid>
       
-      <dc:creator>Katie McQue</dc:creator>
+      <dc:creator>Andee Tagle</dc:creator>
     </item>
     <item>
-      <title>The AI boom had a really bad week — and it&apos;s raising loud alarms</title>
-      <description>AI stocks — and the broader markets — got pummeled this week, raising major concerns about the financial system and the wider economy. Here&apos;s what to know.</description>
-      <pubDate>Sat, 21 Nov 2026 05:00:00 -0500</pubDate>
-      <link>https://www.npr.org/2026/11/21/nx-s1-6048729/ai-stock-markets-anthropic-nvidia</link>
-      <guid>https://www.npr.org/2026/11/21/nx-s1-6048729/ai-stock-markets-anthropic-nvidia</guid>
+      <title>How high technology is changing cargo crime</title>
+      <description>Truckloads of turkey and bourbon are getting stolen in transit. Cargo theft of food and beverages are on the rise in part because the goods are hard to trace. We look at how high technology is changing cargo crime.</description>
+      <pubDate>Tue, 24 Nov 2026 17:49:10 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/24/nx-s1-6051029/how-high-technology-is-changing-cargo-crime</link>
+      <guid>https://www.npr.org/2026/11/24/nx-s1-6051029/how-high-technology-is-changing-cargo-crime</guid>
       
-      <dc:creator>Rafael Nam</dc:creator>
+      <dc:creator>Sarah Gonzalez</dc:creator>
     </item>
   </channel>
 </rss>

@@ -4,8 +4,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sentiment index · Qaiet Times</title>
-<meta name="description" content="The Qaiet Times sentiment index: how positive or critical the coverage of AI is, day by day.">
+<title>Sentiment index · {% if desk_label %}{{ desk_label }} · {% endif %}Qaiet Times</title>
+{% set subj = desk.name|lower if desk_label else "AI" %}
+<meta name="description" content="The Qaiet Times sentiment index: how positive or critical the coverage of {{ subj }} is, day by day.">
 {{ brand.favicon() }}
 {{ brand.theme_boot() }}
 <link rel="stylesheet" href="{{ root }}static/style.css">
@@ -15,15 +16,16 @@
 <header class="masthead">
   <div class="masthead-top">
     {{ brand.wordmark(root) }}
-    {{ brand.nav(root, "index") }}
+    {{ brand.nav(root, "index", base) }}
   </div>
+  {% if desks %}{{ brand.desks(desks) }}{% endif %}
   <hr class="rule">
 </header>
 <main class="prose wide">
-<h1>AI sentiment index</h1>
+<h1>{% if desk_label %}{{ desk_label }}{% else %}AI{% endif %} sentiment index</h1>
 {% if latest %}
 <p class="hero"><span class="hero-n">{{ latest.value|signed }}</span> <span class="hero-w">{{ words }}</span></p>
-<p class="lede">On {{ latest_long }}, the coverage of AI across {{ latest.outlets }} outlets averaged <strong>{{ latest.value|signed }}</strong> on a scale from −2 (strongly critical) to +2 (enthusiastic){% if tracks %}: {% for t in tracks %}{{ t.label|lower }} {{ t.latest.value|signed if t.latest else "–" }}{% if not loop.last %}, {% endif %}{% endfor %}{% endif %}.</p>
+<p class="lede">On {{ latest_long }}, the coverage of {{ subj }} across {{ latest.outlets }} outlets averaged <strong>{{ latest.value|signed }}</strong> on a scale from −2 (strongly critical) to +2 (enthusiastic){% if tracks %}: {% for t in tracks %}{{ t.label|lower }} {{ t.latest.value|signed if t.latest else "–" }}{% if not loop.last %}, {% endif %}{% endfor %}{% endif %}.</p>
 {% else %}
 <p class="lede">The first value appears after the first morning's labels.</p>
 {% endif %}
@@ -43,7 +45,7 @@
 
 <section>
   <h2>How it's calculated</h2>
-  <p>Every news article is labeled with a stance from −2 to +2: how critical or enthusiastic it is about AI in that story, not whether the news itself is good or bad. It also gets one main angle, its track (technical, political or economic, as described above each chart), and counts toward that track's line; all of them count toward "All coverage". For each day, each outlet's labels are averaged first, weighting confident labels more and leaving unclear ones out. Then the outlets are averaged, so a site that publishes fifty stories a day counts as one voice, like one that publishes two. A track needs at least three outlets on a day to get a value. Days are counted in Stockholm time. More on the labels on the <a href="{{ root }}about/#labels">About page</a>.</p>
+  <p>Every news article is labeled with a stance from −2 to +2: {% if desk.stance %}{{ desk.stance }}{% else %}how critical or enthusiastic it is about {{ subj }}{% endif %} in that story, not whether the news itself is good or bad. It also gets one main angle, its track (technical, political or economic, as described above each chart), and counts toward that track's line; all of them count toward "All coverage". For each day, each outlet's labels are averaged first, weighting confident labels more and leaving unclear ones out. Then the outlets are averaged, so a site that publishes fifty stories a day counts as one voice, like one that publishes two. A track needs at least three outlets on a day to get a value. Days are counted in Stockholm time. More on the labels on the <a href="{{ root }}about/#labels">About page</a>.</p>
   <p>Quoting it: "the Qaiet Times sentiment index{% if latest %} stood at {{ latest.value|signed }} on {{ latest_long }}{% endif %}". The numbers come from a language model and a fixed list of outlets; read them as a trend, not a measurement.</p>
 </section>
 

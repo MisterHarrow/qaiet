@@ -70,7 +70,7 @@ relevance:
   always_kinds: [repo, model, dataset, space, paper, launch]
   always_sources: [hf_posts]
   llm_batch_size: 25              # ambiguous items per Haiku call
-  prompt: relevance_v2            # src/quiet_ai/llm/prompts/<prompt>.md
+  prompt: relevance_v3            # src/quiet_ai/llm/prompts/<prompt>.md; v3 (2026-11-26) returns a desk, not about_ai
   # The relevance call often leaves title_en empty (and its cached answer is never asked again). A translation-only
   # call fills in the English title of every relevant headline still without one (added 2026-11-26).
   translate_prompt: translate_v1
@@ -228,3 +228,45 @@ schedule:
   collect_every_hours: 2          # fetch sources only, no model calls
   publish_at: "06:30"             # labels, summaries, the page and the daily edition
   timezone: Europe/Stockholm
+
+desks:
+  # The subjects the site covers (2026-11-26, docs/desks-draft.md). Each desk is a full copy of the page: its own
+  # stories, sentiment, narratives, index and archive; the first is the front page, the others live at /<key>/.
+  # Stance means stance toward the desk's own subject, so desks are never averaged together. Prompts left out are
+  # the `analysis` ones (AI's). The relevance call (relevance_v3) sorts every press item onto one desk or none.
+  - key: ai
+    label: AI
+    name: AI
+    builders: true                # Rising and The gap: builder listings exist only for AI
+  - key: energy
+    label: Energy
+    name: Energy
+    subject: power generation, fuels, grids, storage and the energy transition
+    stance: how alarmed or hopeful it is about energy supply and the transition
+    news_prompt: news_label_energy_v1
+    summary_prompt: story_summary_desk_v1
+    weather_prompt: weather_desk_v1
+  - key: biotech
+    label: Biotech
+    name: Biotech & health tech
+    subject: drugs, vaccines, gene and cell therapy, medical devices, digital health, and the companies and regulators around them
+    stance: how critical or enthusiastic it is about the medical technology or industry
+    news_prompt: news_label_biotech_v1
+    summary_prompt: story_summary_desk_v1
+    weather_prompt: weather_desk_v1
+  - key: space
+    label: Space
+    name: Space
+    subject: launches, space agencies and missions, satellites, space stations, astronomy and space policy
+    stance: how critical or enthusiastic it is about the space activity
+    news_prompt: news_label_space_v1
+    summary_prompt: story_summary_desk_v1
+    weather_prompt: weather_desk_v1
+  - key: food
+    label: Food
+    name: Agriculture & food supply
+    subject: harvests, food prices, hunger, farming, fertilizer, fisheries and food trade
+    stance: how alarmed or hopeful it is about the food supply
+    news_prompt: news_label_food_v1
+    summary_prompt: story_summary_desk_v1
+    weather_prompt: weather_desk_v1

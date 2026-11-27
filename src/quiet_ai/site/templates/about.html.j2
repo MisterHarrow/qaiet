@@ -25,8 +25,20 @@
 <h1>How this site works</h1>
 <p class="lede">Every morning around {{ a.publish_at }} Stockholm time, this page answers three questions: what happened in AI, how the press is framing it, and what people who build AI are actually making. It tries to do that in about five minutes of reading, without ads or noise.</p>
 
+{% if a.desks|length > 1 %}
+<section id="desks">
+  <h2>Desks</h2>
+  <p>The site has {{ a.desks|length }} desks: {% for d in a.desks %}<a href="{{ root }}{{ d.prefix }}">{{ d.name }}</a>{% if not loop.last %}{{ ", " if loop.revindex > 2 else " and " }}{% endif %}{% endfor %}. Each is a full page of its own, with its stories, sentiment, narratives, index and archive. Every news item is sorted onto one desk, or left out: AI first by keywords, everything else by a language model reading the headline. Outlets that cover only one subject (a solar trade magazine, a space news site) go straight to that desk. Builders (GitHub, Hugging Face, Hacker News, Bluesky) are followed for AI only, so Rising and The gap are on the AI desk.</p>
+  <p>Stance always means stance toward the desk's own subject, so the desks' figures are never added up or compared.</p>
+  <ul class="facts">
+    {% for d in a.desks if d.subject %}<li><strong>{{ d.name }}:</strong> {{ d.subject }}. Stance: {{ d.stance }}.</li>{% endfor %}
+  </ul>
+  <p>The other desks are new. Their labels are not yet checked against hand labels the way AI's are.</p>
+</section>
+{% endif %}
+
 <nav class="toc" aria-label="On this page">
-  <a href="#sources">Sources</a><a href="#steps">How a page is made</a><a href="#labels">Reading the labels</a><a href="#checking">Checking the labels</a><a href="#ranking">Ranking</a><a href="#gap">The gap</a><a href="#index">Sentiment index</a><a href="#narratives">Narratives</a><a href="#periods">Time periods</a><a href="#limits">Limits</a><a href="#privacy">Privacy and cost</a><a href="#health">Source health</a>
+  {% if a.desks|length > 1 %}<a href="#desks">Desks</a>{% endif %}<a href="#sources">Sources</a><a href="#steps">How a page is made</a><a href="#labels">Reading the labels</a><a href="#checking">Checking the labels</a><a href="#ranking">Ranking</a><a href="#gap">The gap</a><a href="#index">Sentiment index</a><a href="#narratives">Narratives</a><a href="#periods">Time periods</a><a href="#limits">Limits</a><a href="#privacy">Privacy and cost</a><a href="#health">Source health</a>
 </nav>
 
 <section id="sources">

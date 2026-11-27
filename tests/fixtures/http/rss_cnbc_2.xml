@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:metadata="http://search.cnbc.com/rss/2.0/modules/siteContentMetadata" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <atom:link rel="self" type="application/rss+xml" href="https://www.cnbc.com/id/10000108/device/rss/rss.html"/>
+    <language>en-us</language>
+    <ttl>60</ttl>
+    <title>Health and Science</title>
+    <feed_asset>
+      <id>10000108</id>
+      <type>franchise</type>
+      <subtype>section</subtype>
+      <seo>https://www.cnbc.com/health-and-science/</seo>
+    </feed_asset>
+    <lastBuildDate>Tue, 24 Nov 2026 11:26 GMT</lastBuildDate>
+    <pubDate>Tue, 24 Nov 2026 11:26 GMT</pubDate>
+    <link>https://www.cnbc.com/health-and-science/</link>
+    <description><![CDATA[Latest news for health care.]]></description>
+    <item>
+      <link>https://www.cnbc.com/2026/11/24/insmed-sanofi-deal-stock-pharma.html</link>
+      <guid isPermaLink="false">108558131</guid>
+      <metadata:type>cnbcnewsstory</metadata:type>
+      <metadata:id>108558131</metadata:id>
+      <metadata:sponsored>false</metadata:sponsored>
+      <title>Drugmaker Insmed shares rally 14% after Sanofi agrees to buy it in pharma’s biggest deal in three years</title>
+      <description><![CDATA[Sanofi faces a revenue drop toward the end of the decade as top-selling drugs lose exclusivity and open up for generic drugmakers to compete. ]]></description>
+      <pubDate>Tue, 24 Nov 2026 21:07:19 GMT</pubDate>
+    </item>
+    <item>
+      <link>https://www.cnbc.com/2026/11/23/abivax-scorpion-capital-obefazimod.html</link>
+      <guid isPermaLink="false">108557199</guid>
+      <metadata:type>cnbcnewsstory</metadata:type>
+      <metadata:id>108557199</metadata:id>
+      <metadata:sponsored>false</metadata:sponsored>
+      <title>French biotech rejects short seller’s cancer-risk claims after shares plunge 17%</title>
+      <description><![CDATA[Short seller Scorpion Capital has accused Abivax of serious scientific and safety shortcomings in its experimental inflammatory bowel disease drug.]]></description>
+      <pubDate>Mon, 23 Nov 2026 09:45:42 GMT</pubDate>
+    </item>
+    <item>
+      <link>https://www.cnbc.com/2026/11/22/pizza-chains-sales-glp-1-demand.html</link>
+      <guid isPermaLink="false">108555785</guid>
+      <metadata:type>cnbcnewsstory</metadata:type>
+      <metadata:id>108555785</metadata:id>
+      <metadata:sponsored>false</metadata:sponsored>
+      <title>Pizza chains are under pressure. GLP-1 use is only one part of the problem</title>
+      <description><![CDATA[Domino's, Papa Johns and Pizza Hut face weaker demand, more delivery competition and changing eating habits, including GLP-1 use.]]></description>
+      <pubDate>Sun, 22 Nov 2026 13:00:01 GMT</pubDate>
+    </item>
+    <item>
+      <link>https://www.cnbc.com/2026/11/20/the-path-philanthropist-priscilla-chans-bold-bet-on-rare-disease.html</link>
+      <guid isPermaLink="false">108551565</guid>
+      <metadata:type>cnbcnewsstory</metadata:type>
+      <metadata:id>108551565</metadata:id>
+      <metadata:sponsored>false</metadata:sponsored>
+      <title>The Path: Philanthropist Priscilla Chan’s bold bet on rare disease</title>
+      <description><![CDATA[Priscilla Chan joins Becky Quick on The Path to discuss rare disease research and how AI could help advance biomedicine and science.]]></description>
+      <pubDate>Fri, 20 Nov 2026 16:02:34 GMT</pubDate>
+    </item>
+    <item>
+      <link>https://www.cnbc.com/2026/11/20/anthropic-ipo-iceland-blue-lagoon.html</link>
+      <guid isPermaLink="false">108555034</guid>
+      <metadata:type>cnbcnewsstory</metadata:type>
+      <metadata:id>108555034</metadata:id>
+      <metadata:sponsored>false</metadata:sponsored>
+      <title>Forget Anthropic: In Europe, the IPO hype is about a blue lagoon</title>
+      <description><![CDATA[Iceland’s famed Blue Lagoon geothermal spa is going public in a $110 million IPO, tapping investor interest in tourism and the booming wellness industry.]]></description>
+      <pubDate>Mon, 23 Nov 2026 08:48:36 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

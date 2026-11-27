@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+   <channel>
+      <title>science.ORF.at</title>
+      <link>https://science.orf.at/</link>
+      <lastBuildDate>Thu, 26 Nov 2026 14:36:06 +0000</lastBuildDate>
+      <description>Die aktuellsten Nachrichten auf einen Blick - aus Österreich und der ganzen Welt. In Text, Bild und Video.</description>
+      <language>de</language>
+      <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+      <generator>Mojo CMS</generator>
+      <managingEditor>online@orf.at (ORF Online)</managingEditor>
+      <webMaster>webmaster@orf.at (ORF Online)</webMaster>
+      <copyright>Copyright &#169; 2026 ORF Online und Teletext GmbH &amp; Co KG</copyright>
+
+
+
+      <item>
+         <title>Neue Fliegenart in Wien entdeckt</title>
+         <link>https://science.orf.at/stories/3238380/</link>
+         <guid isPermaLink="true">https://science.orf.at/stories/3238380/</guid>
+         <description>Nicht in ihrem Heimatland Brasilien, sondern im Naturhistorischen Museum (NHM) Wien wurde eine Raupenfliege als neue Art identifiziert. Wie das Museum am Donnerstag mitteilte, kam das Exemplar schon vor rund 200 Jahren nach Wien.</description>
+         <category>Wissenschaft</category>
+         <pubDate>Thu, 26 Nov 2026 14:36:06 +0000</pubDate>
+
+         <enclosure url="https://tubestatic.orf.at/mims/2026/48/54/crops/w=1280/3263602_opener_1267154_forschungsreisender_natterer_fing_vor_200_jahren_nun_neue_fliege.jpg?s=81f7ed788b1d8697cd8486c3670f535982c1acd2" type="image/jpeg"/>
+      </item>
+      <item>
+         <title>Pflaster gegen resistente Bakterien entwickelt</title>
+         <link>https://science.orf.at/stories/3238379/</link>
+         <guid isPermaLink="true">https://science.orf.at/stories/3238379/</guid>
+         <description>Ein neues Gelpflaster nutzt Viren und Milchsäurebakterien gegen resistente Wundkeime. Im Labor vernichtete das Pflaster gefährliche Erreger binnen eines Tages, wie die Eidgenössische Materialprüfungs- und Forschungsanstalt in der Schweiz am Donnerstag mitteilte.</description>
+         <category>Wissenschaft</category>
+         <pubDate>Thu, 26 Nov 2026 12:09:42 +0000</pubDate>
+
+         
+      </item>
+      <item>
+         <title>Meeresvögel entlarven „unsichtbare“ Schiffe</title>
+         <link>https://science.orf.at/stories/3238364/</link>
+         <guid isPermaLink="true">https://science.orf.at/stories/3238364/</guid>
+         <description>Meeresvögel können „unsichtbare“ Fischerei sichtbar und hörbar machen, wie eine neue Studie zeigt. Britische Forscherinnen und Forscher gaben einem Dutzend Meeresvögel winzige Tonaufnahmegeräte auf ihrem Flug über die Meere mit. Diese zeigen: Nicht alle Schiffe werden offiziell erfasst.</description>
+         <category>Wissenschaft</category>
+         <pubDate>Thu, 26 Nov 2026 10:00:56 +0000</pubDate>
+
+         <enclosure url="https://tubestatic.orf.at/mims/2022/28/03/crops/w=1280/1416408_opener_510203_trawling_fishing_boat.jpg?s=c37a2862119de9a36125511d83d2046adfbcec83" type="image/jpeg"/>
+      </item>
+      <item>
+         <title>Blackout-Versuch in Bayern gescheitert</title>
+         <link>https://science.orf.at/stories/3238351/</link>
+         <guid isPermaLink="true">https://science.orf.at/stories/3238351/</guid>
+         <description>Ein mit Spannung erwarteter Blackout-Versuch in der bayrischen Gemeinde Fuchstal ist am Donnerstag gescheitert. Sechs Stunden lang wollte sich die Gemeinde nur durch selbst erzeugte Energie versorgen. Doch schon nach weniger als einer Stunde musste das Experiment abgebrochen werden.</description>
+         <category>Wissenschaft</category>
+         <pubDate>Thu, 26 Nov 2026 06:19:13 +0000</pubDate>
+
+         <enclosure url="https://tubestatic.orf.at/mims/2026/48/24/crops/w=1280/3263062_opener_1266924_pano-windpark-nacht.jpg?s=1a42c13d1534af6880adbe2b9e587dcc5985e64f" type="image/jpeg"/>
+      </item>
+      <item>
+         <title>Sonde brachte Asteroiden ins Taumeln</title>
+         <link>https://science.orf.at/stories/3238362/</link>
+         <guid isPermaLink="true">https://science.orf.at/stories/3238362/</guid>
+         <description>Der gezielte Einschlag einer Sonde auf dem Asteroiden Dimorphos vor vier Jahren hat den Himmelskörper entscheidend verändert. Der Asteroid, der nun taumelt, wirke abgeflacht, hieß es bei der Präsentation neuer Erkenntnisse durch die Europäische Weltraumorganisation (ESA).</description>
+         <category>Wissenschaft</category>
+         <pubDate>Wed, 25 Nov 2026 17:30:00 +0000</pubDate>
+
+         <enclosure url="https://tubestatic.orf.at/mims/2026/48/97/crops/w=1280/3262743_opener_1266797_1020312.png?s=715833f61d69c7d5d2b46bd75651de206fdbcdaa" type="image/jpeg"/>
+      </item>
+
+   </channel>
+</rss>
+
+

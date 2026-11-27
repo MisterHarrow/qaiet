@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{ n.headline|truncate(80) }} · Narratives · Qaiet Times</title>
+<title>{{ n.headline|truncate(80) }} · Narratives · {% if desk_label %}{{ desk_label }} · {% endif %}Qaiet Times</title>
 <meta name="description" content="A story covered {{ n.days }} days in a row, {{ n.first|date_range(n.last) }}, told day by day.">
 {{ brand.favicon() }}
 {{ brand.theme_boot() }}
@@ -16,8 +16,9 @@
 <header class="masthead">
   <div class="masthead-top">
     {{ brand.wordmark(root) }}
-    {{ brand.nav(root, "narratives") }}
+    {{ brand.nav(root, "narratives", base) }}
   </div>
+  {% if desks %}{{ brand.desks(desks) }}{% endif %}
   <hr class="rule">
 </header>
 <main class="prose wide narrative">

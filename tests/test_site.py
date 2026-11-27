@@ -7,6 +7,7 @@ from typer.testing import CliRunner
 
 from quiet_ai.cli import app
 from quiet_ai.pipeline.edition import stance_summary
+from quiet_ai.regions import REGIONS
 from quiet_ai.site import build
 
 
@@ -143,7 +144,8 @@ def test_about_page_reads_config_and_health(tmp_path, settings):
     assert "CBC: robots blocked" in html and settings.analysis.news_prompt in html
     # Limits: outlets per region, and the two-week wait for outlets in a new language
     regions = dict((r["name"], r["n"]) for r in ctx["regions"])
-    assert regions["Latin America"] == sum(1 for f in sources.feeds if f.kind == "news" and f.enabled and f.group == "latam")
+    latam = set(dict(REGIONS)["Latin America"])
+    assert regions["Latin America"] == sum(1 for f in sources.feeds if f.kind == "news" and f.enabled and f.country in latam)
     assert f"North America {regions['North America']}, Latin America {regions['Latin America']}, Europe" in html
     assert ctx["waiting"] is None and "only just started reading" not in html  # no source waits for the index
     assert f"checked for AI terms in {ctx['keyword_languages']} languages" in html

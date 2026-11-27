@@ -12,7 +12,7 @@
 	<atom:link href="https://www.rappler.com/technology/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.rappler.com/technology/</link>
 	<description>RAPPLER &#124; Philippine &#38; World News &#124; Investigative Journalism &#124; Data &#124; Civic Engagement &#124; Public Interest</description>
-	<lastBuildDate>Thu, 26 Nov 2026 17:14:41 +0800</lastBuildDate>
+	<lastBuildDate>Thu, 26 Nov 2026 22:45:27 +0800</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,26 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>1Password customer data, source code taken in GitHub breach</title>
+		<link>https://www.rappler.com/technology/1password-customer-data-source-code-taken-github-breach/</link>
+					<comments>https://www.rappler.com/technology/1password-customer-data-source-code-taken-github-breach/#respond</comments>
+		
+		<dc:creator><![CDATA[Victor Barreiro Jr.]]></dc:creator>
+		<pubDate>Thu, 26 Nov 2026 18:02:29 +0800</pubDate>
+				<category><![CDATA[Technology]]></category>
+		<category><![CDATA[cybersecurity]]></category>
+		<guid isPermaLink="false"></guid>
+
+					<description><![CDATA[1Password says customer vault data, the items in them, and the keys that protect them are safe and unaffected as the platform does not have access to user passwords or secret keys]]></description>
+										
+					
+					<wfw:commentRss>https://www.rappler.com/technology/1password-customer-data-source-code-taken-github-breach/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		
+<image>https://www.rappler.com/tachyon/2026/11/1password.jpg</image>	</item>
+		<item>
 		<title>TRACKER: Data leaks in the country</title>
 		<link>https://www.rappler.com/technology/philippine-data-leaks-tracker/</link>
 					<comments>https://www.rappler.com/technology/philippine-data-leaks-tracker/#respond</comments>
@@ -140,58 +160,5 @@
 			<media:thumbnail url="https://www.rappler.com/tachyon/2026/11/maria-ressa-ai-asean-1-scaled.jpeg?resize=75%2C75&amp;crop=155px%2C0px%2C1440px%2C1440px" />
 		</media:content>
 <image>https://www.rappler.com/tachyon/2026/10/ai-reuters-2026-10-scaled.jpg</image>	</item>
-		<item>
-		<title>EXPLAINER: How scammers reach you, with or without your data</title>
-		<link>https://www.rappler.com/technology/explainer-how-scammers-reach-you-with-or-without-your-data/</link>
-					<comments>https://www.rappler.com/technology/explainer-how-scammers-reach-you-with-or-without-your-data/#respond</comments>
-		
-		<dc:creator><![CDATA[Alex Culla]]></dc:creator>
-		<pubDate>Thu, 26 Nov 2026 07:27:16 +0800</pubDate>
-				<category><![CDATA[Philippine News]]></category>
-		<category><![CDATA[Technology]]></category>
-		<category><![CDATA[#ScamAlert]]></category>
-		<category><![CDATA[Cyber crime]]></category>
-		<category><![CDATA[cybersecurity]]></category>
-		<category><![CDATA[online scams]]></category>
-		<guid isPermaLink="false"></guid>
-
-					<description><![CDATA[Scammers are no longer just sliding into your DMs; they have found new ways to slip onto your screen ]]></description>
-										
-					
-					<wfw:commentRss>https://www.rappler.com/technology/explainer-how-scammers-reach-you-with-or-without-your-data/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
-		
-		
-		
-		<media:thumbnail url="https://www.rappler.com/tachyon/2026/11/christmas-scams-nov-12-2026.jpg?resize=75%2C75&amp;crop=428px%2C0px%2C1080px%2C1080px" />
-		<media:content url="https://www.rappler.com/tachyon/2026/11/christmas-scams-nov-12-2026.jpg" medium="image">
-			<media:title type="html">christmas-scams-nov-12-2026</media:title>
-			<media:thumbnail url="https://www.rappler.com/tachyon/2026/11/christmas-scams-nov-12-2026.jpg?resize=75%2C75&amp;crop=428px%2C0px%2C1080px%2C1080px" />
-		</media:content>
-		<media:content url="https://www.rappler.com/tachyon/2026/11/1-1.jpg" medium="image">
-			<media:title type="html">1</media:title>
-			<media:thumbnail url="https://www.rappler.com/tachyon/2026/11/1-1.jpg?resize=75%2C75&amp;crop_strategy=attention" />
-		</media:content>
-		<media:content url="https://www.rappler.com/tachyon/2026/11/3-1.jpg" medium="image">
-			<media:title type="html">3</media:title>
-			<media:thumbnail url="https://www.rappler.com/tachyon/2026/11/3-1.jpg?resize=75%2C75&amp;crop_strategy=attention" />
-		</media:content>
-		<media:content url="https://www.rappler.com/public.flourish.studio/visualisation/31037517/thumbnail" medium="image">
-			<media:title type="html">table visualization</media:title>
-		</media:content>
-		<media:content url="https://www.rappler.com/tachyon/2026/11/Scam_Smishing1.jpg" medium="image">
-			<media:title type="html">Scam_Smishing1</media:title>
-			<media:thumbnail url="https://www.rappler.com/tachyon/2026/11/Scam_Smishing1.jpg?resize=75%2C75&amp;crop_strategy=attention" />
-		</media:content>
-		<media:content url="https://www.rappler.com/tachyon/2026/11/2-1.jpg" medium="image">
-			<media:title type="html">2</media:title>
-			<media:thumbnail url="https://www.rappler.com/tachyon/2026/11/2-1.jpg?resize=75%2C75&amp;crop_strategy=attention" />
-		</media:content>
-		<media:content url="https://www.rappler.com/tachyon/2024/09/received_825812582875097.jpeg" medium="image">
-			<media:title type="html">scam-hub-angeles-city</media:title>
-			<media:description type="html">SCAM HUB. A small-scale BPO in Angeles City is raided by the National Bureau of Investigation-Pampanga District Office on September 20, 2024, over alleged cyberfraud activities.</media:description>
-			<media:thumbnail url="https://www.rappler.com/tachyon/2024/09/received_825812582875097.jpeg?resize=75%2C75&amp;crop=290px%2C0px%2C1536px%2C1536px" />
-		</media:content>
-<image>https://www.rappler.com/tachyon/2026/11/scammers-reaching-users-explainer-November-25-2026.jpg</image>	</item>
 	</channel>
 </rss>

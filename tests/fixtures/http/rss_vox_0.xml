@@ -6,7 +6,7 @@
 	<title type="text">Technology | Vox</title>
 	<subtitle type="text">Our world has too much noise and too little context. Vox helps you understand what matters.</subtitle>
 
-	<updated>2026-11-23T21:24:32+00:00</updated>
+	<updated>2026-11-25T19:18:33+00:00</updated>
 
 	<link rel="alternate" type="text/html" href="https://www.vox.com/technology" />
 	<id>https://www.vox.com/rss/technology/index.xml</id>
@@ -14,6 +14,40 @@
 
 	<icon>https://platform.vox.com/wp-content/uploads/sites/2/2024/08/vox_logo_rss_light_mode.png?w=150&amp;h=100&amp;crop=1</icon>
 		<entry>
+			
+			<author>
+				<name>Adam Clark Estes</name>
+			</author>
+			
+			<title type="html"><![CDATA[Buy now, pay later is more dangerous than ever]]></title>
+			<link rel="alternate" type="text/html" href="https://www.vox.com/life/469760/klarna-affirm-afterpay-black-friday" />
+			<id>https://www.vox.com/?p=469760</id>
+			<updated>2026-11-25T07:45:05-05:00</updated>
+			<published>2026-11-25T07:45:00-05:00</published>
+			<category scheme="https://www.vox.com" term="Even Better" /><category scheme="https://www.vox.com" term="Explainers" /><category scheme="https://www.vox.com" term="Life" /><category scheme="https://www.vox.com" term="Money" /><category scheme="https://www.vox.com" term="Personal Finance" /><category scheme="https://www.vox.com" term="Tech policy" /><category scheme="https://www.vox.com" term="Technology" />
+							<summary type="html"><![CDATA[An unsettling thing happens almost any time you buy something these days. You get to the checkout page and there’s an offer: Would you like to split this purchase up into four easy interest-free payments?&#160; Parting with a smaller amount of money to get something you want sooner is a compelling offer. So compelling that [&#8230;]]]></summary>
+			
+							
+			
+					</entry>
+			<entry>
+			
+			<author>
+				<name>Adam Clark Estes</name>
+			</author>
+			
+			<title type="html"><![CDATA[Jensen Huang’s return sends an unsettling message about power in America]]></title>
+			<link rel="alternate" type="text/html" href="https://www.vox.com/technology/512088/jensen-huang-nvidia-return-ceo-myth" />
+			<id>https://www.vox.com/?p=512088</id>
+			<updated>2026-11-25T14:18:33-05:00</updated>
+			<published>2026-11-24T19:05:00-05:00</published>
+			<category scheme="https://www.vox.com" term="Big Tech" /><category scheme="https://www.vox.com" term="Culture" /><category scheme="https://www.vox.com" term="Politics" /><category scheme="https://www.vox.com" term="Technology" />
+							<summary type="html"><![CDATA[The news of Jensen Huang’s resurrection at Nvidia felt like a practical joke or an Onion headline. Here was a cofounder and CEO of a trillion-dollar company who did just about all the bad things a CEO could do — including maybe involvement in espionage — who’d gotten his comeuppance. The board did its job. [&#8230;]]]></summary>
+			
+							
+			
+					</entry>
+			<entry>
 			
 			<author>
 				<name>Cameron Peters</name>
@@ -36,10 +70,10 @@
 				<name>Sigal Samuel</name>
 			</author>
 			
-			<title type="html"><![CDATA[How religion can help with AI anxiety]]></title>
+			<title type="html"><![CDATA[Feeling anxious about AI? Religion was made for moments like this.]]></title>
 			<link rel="alternate" type="text/html" href="https://www.vox.com/advice/511400/ai-doom-anxiety-religion-faith-church" />
 			<id>https://www.vox.com/?p=511400</id>
-			<updated>2026-11-23T11:37:25-05:00</updated>
+			<updated>2026-11-24T12:59:25-05:00</updated>
 			<published>2026-11-22T08:30:00-05:00</published>
 			<category scheme="https://www.vox.com" term="Advice" /><category scheme="https://www.vox.com" term="Artificial Intelligence" /><category scheme="https://www.vox.com" term="Future Perfect" /><category scheme="https://www.vox.com" term="Innovation" /><category scheme="https://www.vox.com" term="Life" /><category scheme="https://www.vox.com" term="Religion" /><category scheme="https://www.vox.com" term="Technology" /><category scheme="https://www.vox.com" term="Your Mileage May Vary" />
 							<summary type="html"><![CDATA[Your Mileage May Vary is an advice column offering you a unique framework for thinking through your moral dilemmas. It’s based on value pluralism — the idea that each of us has multiple values that are equally valid but that often conflict with each other. To submit a question, fill out this anonymous form. Here’s [&#8230;]]]></summary>
@@ -60,40 +94,6 @@
 			<published>2026-11-19T17:15:00-05:00</published>
 			<category scheme="https://www.vox.com" term="AI and nuclear weapons" /><category scheme="https://www.vox.com" term="Artificial Intelligence" /><category scheme="https://www.vox.com" term="China" /><category scheme="https://www.vox.com" term="Donald Trump" /><category scheme="https://www.vox.com" term="Innovation" /><category scheme="https://www.vox.com" term="Politics" /><category scheme="https://www.vox.com" term="Russia" /><category scheme="https://www.vox.com" term="Technology" /><category scheme="https://www.vox.com" term="Today, Explained newsletter" /><category scheme="https://www.vox.com" term="World Politics" />
 							<summary type="html"><![CDATA[This story appeared in&#160;Today, Explained,&#160;a daily newsletter that helps you understand the most compelling news and stories of the day.&#160;Subscribe here. President Donald Trump is on his way back from China after a four-day Asia trip that included taking in a surreal cover of &#8220;Y.M.C.A.,&#8221; heaping praise on a noted kleptocrat, and making earnest — [&#8230;]]]></summary>
-			
-							
-			
-					</entry>
-			<entry>
-			
-			<author>
-				<name>Adam Clark Estes</name>
-			</author>
-			
-			<title type="html"><![CDATA[How Nvidia’s chaos trickles down to you]]></title>
-			<link rel="alternate" type="text/html" href="https://www.vox.com/technology/511229/nvidia-ai-jensen-huang-401k-bubble" />
-			<id>https://www.vox.com/?p=511229</id>
-			<updated>2026-11-18T18:29:14-05:00</updated>
-			<published>2026-11-19T08:00:00-05:00</published>
-			<category scheme="https://www.vox.com" term="Artificial Intelligence" /><category scheme="https://www.vox.com" term="Big Tech" /><category scheme="https://www.vox.com" term="Innovation" /><category scheme="https://www.vox.com" term="Technology" />
-							<summary type="html"><![CDATA[If you didn’t know a lot about Nvidia a month ago, what you know now is salacious, essential, and probably a little bit misleading.&#160; The multitrillion-dollar chipmaker has primarily been in the news because its co-founder and CEO Jensen Huang had a few affairs — one with a possible spy — and resigned. This has [&#8230;]]]></summary>
-			
-							
-			
-					</entry>
-			<entry>
-			
-			<author>
-				<name>Kylie Jones</name>
-			</author>
-			
-			<title type="html"><![CDATA[The US helped the world rein in nuclear weapons. Could it do the same for AI?]]></title>
-			<link rel="alternate" type="text/html" href="https://www.vox.com/future-perfect/511092/nuclear-weapons-ai-nonproliferation-safety-regulation" />
-			<id>https://www.vox.com/?p=511092</id>
-			<updated>2026-11-17T17:46:50-05:00</updated>
-			<published>2026-11-18T08:00:00-05:00</published>
-			<category scheme="https://www.vox.com" term="AI and nuclear weapons" /><category scheme="https://www.vox.com" term="Artificial Intelligence" /><category scheme="https://www.vox.com" term="Future Perfect" /><category scheme="https://www.vox.com" term="Innovation" /><category scheme="https://www.vox.com" term="Living in an AI world" /><category scheme="https://www.vox.com" term="Technology" />
-							<summary type="html"><![CDATA[When Illinois Gov. JB Pritzker talks about the threat of artificial intelligence, he offers an increasingly common point of comparison: it is a danger “on the level of nuclear weapons.”  The comparison is not far-fetched. If the international community found ways to constrain a potentially catastrophic technology once before, perhaps those arrangements can help us [&#8230;]]]></summary>
 			
 							
 			

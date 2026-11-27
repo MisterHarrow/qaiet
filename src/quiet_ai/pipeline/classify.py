@@ -33,9 +33,10 @@ Track = Literal["technical", "political", "economic"]
 FRAMES: dict[str, tuple[str, ...]] = {
     "technical": ("hype", "grounded", "skeptical"),
     "political": ("pro-regulation", "pro-acceleration", "national-competition", "neutral"),
-    "economic": ("boom", "bubble", "disruption-concern", "neutral"),
+    "economic": ("boom", "bubble", "disruption-concern", "shortage", "neutral"),  # shortage: the energy and food desks
 }
-Frame = Literal["hype", "grounded", "skeptical", "pro-regulation", "pro-acceleration", "national-competition", "boom", "bubble", "disruption-concern", "neutral"]
+Frame = Literal["hype", "grounded", "skeptical", "pro-regulation", "pro-acceleration", "national-competition", "boom", "bubble",
+                "disruption-concern", "shortage", "neutral"]
 BuilderKind = Literal["model", "tool/library", "agent", "infra", "dataset", "research paper", "demo/app"]
 MAX_EVIDENCE_WORDS = 12
 
@@ -197,28 +198,33 @@ def _run_batches(llm: LLM, task: str, version: str, model: str, rows, line_fn, o
 
 
 def label_news(store: Store, settings: Settings, sources: SourcesConfig, llm: LLM, since_iso: str) -> LabelStats:
+    """Label every desk's news and commentary, each with its desk's prompt (stance means stance toward that desk's
+    subject). The cache key is the prompt version, so one item never gets another desk's cached label."""
     a = settings.analysis
     stats = LabelStats()
     no_llm = sorted(f.id for f in sources.feeds if not f.llm)
     digests = sorted(f.id for f in sources.feeds if f.role == "digest")
     kinds = a.stance_kinds
-    rows = store.conn.execute(
-        f"SELECT i.id, i.title, i.title_en, i.summary, i.lang, i.source, i.content_hash FROM items i "
-        f"LEFT JOIN item_labels l ON l.item_id = i.id "
-        f"WHERE (l.item_id IS NULL OR l.prompt_version != ?) AND i.relevant = 1 AND i.dup_of IS NULL AND i.first_seen_at >= ? "
-        f"AND i.kind IN ({','.join('?' * len(kinds))}) AND i.source NOT IN ({','.join('?' * len(digests))}) "
-        f"ORDER BY i.first_seen_at DESC",
-        (a.news_prompt, since_iso, *kinds, *digests),
-    ).fetchall()
-    stats.skipped_llm_false = sum(1 for r in rows if r["source"] in no_llm)
-    rows = [r for r in rows if r["source"] not in no_llm]
-    if not rows:
-        return stats
-    results = _run_batches(
-        llm, "news_label", a.news_prompt, settings.llm.item_model, rows, _news_line, NewsBatch, a.label_batch_size, 220, stats,
-        check=lambda raw, row: check_news_label(raw, [row["title"], row["title_en"], row["summary"]]),
-    )
-    _store_labels(store, rows, results, "news", a.news_prompt, settings.llm.item_model)
+    for desk in settings.active_desks:
+        prompt = settings.news_prompt(desk.key)
+        rows = store.conn.execute(
+            f"SELECT i.id, i.title, i.title_en, i.summary, i.lang, i.source, i.content_hash FROM items i "
+            f"LEFT JOIN item_labels l ON l.item_id = i.id "
+            f"WHERE (l.item_id IS NULL OR l.prompt_version != ?) AND i.relevant = 1 AND COALESCE(i.desk, 'ai') = ? "
+            f"AND i.dup_of IS NULL AND i.first_seen_at >= ? "
+            f"AND i.kind IN ({','.join('?' * len(kinds))}) AND i.source NOT IN ({','.join('?' * len(digests))}) "
+            f"ORDER BY i.first_seen_at DESC",
+            (prompt, desk.key, since_iso, *kinds, *digests),
+        ).fetchall()
+        stats.skipped_llm_false += sum(1 for r in rows if r["source"] in no_llm)
+        rows = [r for r in rows if r["source"] not in no_llm]
+        if not rows:
+            continue
+        results = _run_batches(
+            llm, "news_label", prompt, settings.llm.item_model, rows, _news_line, NewsBatch, a.label_batch_size, 220, stats,
+            check=lambda raw, row: check_news_label(raw, [row["title"], row["title_en"], row["summary"]]),
+        )
+        _store_labels(store, rows, results, "news", prompt, settings.llm.item_model)
     return stats
 
 
