@@ -25,6 +25,8 @@ uv run qa classify               # labels (Haiku), momentum, summaries and weath
 uv run qa stories                # print the ranked stories from the database, no LLM calls
 uv run qa stories -p week        # same for another view: day, week, month, year
 uv run qa costs                  # LLM spend this month against the cap
+uv run qa bulletin               # make today's spoken bulletin by hand if qa run didn't (~$0.60; needs ffmpeg)
+uv run qa bulletin --reuse-script --force  # voice the day's existing script again (after editing data/audio/bulletin-<date>.txt)
 uv run qa pull                   # replace data/quiet-ai.db with the live database (the `db` release asset)
 uv run qa eval sample            # write a blind, stratified sample to tests/gold/labels.yaml for hand labeling
 uv run qa eval crosscheck        # label the same sample with Claude Opus 5.5 and score the site against it
@@ -82,7 +84,8 @@ uv run qa ingest --record        # live fetch, writes fixtures, stores nothing
 2. `uv run qa run`: ingest, stories, labels, summaries, the site, plus:
    - stores today's front page as the day's edition;
    - freezes earlier days' editions to `editions/<date>.json`;
-   - prunes old data (items not about AI after 15 days, everything after 400 days; snapshots thinned after 7 days).
+   - prunes old data (items not about AI after 15 days, everything after 400 days; snapshots thinned after 7 days);
+   - reads today's edition aloud, once a day (`pipeline/bulletin.py`): Sonnet writes a script for the ear (`bulletin_v1`), ElevenLabs `eleven_v4` voices it paragraph by paragraph, ffmpeg joins, levels and encodes one MP3 (about 9 minutes, 6–7 MB). The page gets a player (native `<audio>`, with speed buttons from `app.js`) that replays the stored file. About $0.60 a day, logged by `qa costs` and capped by `bulletin.monthly_budget_usd`; if it fails (no key, cap reached), the publish goes on without it. The MP3, its script and details are kept as `audio` release assets (30 days) and restored by every publish and deploy.
 3. Uploads the database back to the release, plus a dated daily snapshot (14 kept).
 4. Commits new frozen editions. The daily commit also keeps GitHub from pausing the schedule after 60 days of inactivity.
 5. Deploys `site/` to Vercel (news.b3njamin.ai) with the Vercel CLI; Vercel never builds (the root `vercel.json` turns off its Git deploys, which `vercel link` connects; with them on, every push to `main` would replace the site with the repo root). GitHub Pages only serves a forward from the old address (`deploy/pages-redirect/`).
@@ -98,6 +101,7 @@ npx vercel login && npx vercel project add qaiet && npx vercel link --yes --proj
 gh secret set VERCEL_TOKEN --repo <owner>/qaiet        # an account token from vercel.com/account/settings/tokens
 gh secret set VERCEL_ORG_ID --repo <owner>/qaiet       # orgId from .vercel/project.json
 gh secret set VERCEL_PROJECT_ID --repo <owner>/qaiet   # projectId from .vercel/project.json
+gh secret set ELEVENLABS_API_KEY --repo <owner>/qaiet  # only for the spoken bulletin
 ```
 
 The domain: add it to the Vercel project (`npx vercel domains add news.b3njamin.ai qaiet`) and create the CNAME record it names at the DNS host (Namecheap).

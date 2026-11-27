@@ -485,9 +485,25 @@ def period_path(index: int, key: str) -> str:
     return "" if index == 0 else f"{key}/"
 
 
-def render(edition: dict, out_dir: Path, tz: str = "Europe/Stockholm", periods: list[dict] | None = None, rel_path: str | None = None) -> Path:
+def listen_files(bulletin: dict | None, out_dir: Path, root: str) -> dict | None:
+    """Copy a day's spoken bulletin (pipeline/bulletin.for_page) into the site's audio/ folder; links for the player."""
+    if not bulletin:
+        return None
+    audio = out_dir / "audio"
+    audio.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(bulletin["mp3"], audio / bulletin["mp3"].name)
+    listen = {"src": f"{root}audio/{bulletin['mp3'].name}", "minutes": bulletin.get("minutes"), "transcript": None}
+    if bulletin.get("txt"):
+        shutil.copy2(bulletin["txt"], audio / bulletin["txt"].name)
+        listen["transcript"] = f"{root}audio/{bulletin['txt'].name}"
+    return listen
+
+
+def render(edition: dict, out_dir: Path, tz: str = "Europe/Stockholm", periods: list[dict] | None = None, rel_path: str | None = None,
+           bulletin: dict | None = None) -> Path:
     """Render one view. `periods` lists every view ({key, label, path}) for the switcher.
-    `rel_path` overrides where the page goes (used for archive pages, which get no switcher)."""
+    `rel_path` overrides where the page goes (used for archive pages, which get no switcher).
+    `bulletin` (pipeline/bulletin.for_page) adds the spoken edition's player."""
     period = edition.get("period") or {"key": "day", "label": "24 hours"}
     periods = periods if periods is not None else [{"key": period["key"], "label": period["label"], "path": ""}]
     me = next((p for p in periods if p["key"] == period["key"]), {"path": ""})
@@ -523,6 +539,7 @@ def render(edition: dict, out_dir: Path, tz: str = "Europe/Stockholm", periods: 
         updated=f"{local:%H:%M}",
         tz_name=tz.split("/")[-1],
         data_since=_long_date(datetime.fromisoformat(since).astimezone(zone)) if since else None,
+        listen=listen_files(bulletin, out_dir, root),
     )
     (page_dir / "index.html").write_text(html, encoding="utf-8")
     shutil.copytree(HERE / "static", out_dir / "static", dirs_exist_ok=True)
@@ -549,10 +566,20 @@ def write_host_config(out_dir: Path) -> Path:
     return path
 
 
-def render_all(editions: list[dict], out_dir: Path, tz: str = "Europe/Stockholm") -> list[Path]:
-    """Render every view with a shared switcher. `editions` are in display order."""
+def render_all(editions: list[dict], out_dir: Path, tz: str = "Europe/Stockholm", audio_dir: Path | None = None) -> list[Path]:
+    """Render every view with a shared switcher. `editions` are in display order. The 24-hour view gets the player
+    when that day's spoken bulletin is in `audio_dir`."""
+    from quiet_ai.pipeline import bulletin
+
     periods = [{"key": e["period"]["key"], "label": e["period"]["label"], "path": period_path(i, e["period"]["key"])} for i, e in enumerate(editions)]
-    return [render(e, out_dir, tz, periods) for e in editions]
+    zone = ZoneInfo(tz)
+
+    def spoken(e: dict) -> dict | None:
+        if e["period"]["key"] != "day":
+            return None
+        return bulletin.for_page(audio_dir, datetime.fromisoformat(e["generated_at"]).astimezone(zone).date().isoformat())
+
+    return [render(e, out_dir, tz, periods, bulletin=spoken(e)) for e in editions]
 
 
 def render_about(context: dict, out_dir: Path, tz: str = "Europe/Stockholm") -> Path:
@@ -571,12 +598,15 @@ def render_about(context: dict, out_dir: Path, tz: str = "Europe/Stockholm") -> 
     return page_dir / "index.html"
 
 
-def render_archive(editions: list[dict], out_dir: Path, tz: str = "Europe/Stockholm") -> Path:
-    """One frozen page per finished day, plus /archive/ listing them (newest first)."""
+def render_archive(editions: list[dict], out_dir: Path, tz: str = "Europe/Stockholm", audio_dir: Path | None = None) -> Path:
+    """One frozen page per finished day, plus /archive/ listing them (newest first). A day with a spoken
+    bulletin in `audio_dir` gets its player."""
+    from quiet_ai.pipeline import bulletin
+
     days = []
     for e in editions:
         date = e["frozen"]["date"]
-        render(e, out_dir, tz, periods=[], rel_path=f"archive/{date}/")
+        render(e, out_dir, tz, periods=[], rel_path=f"archive/{date}/", bulletin=bulletin.for_page(audio_dir, date))
         days.append({
             "date": date,
             "long": _long_date(datetime.fromisoformat(date)),

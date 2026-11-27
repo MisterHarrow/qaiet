@@ -169,6 +169,23 @@ narratives:
   front_max: 6                    # ongoing narratives listed on the front page
   headlines_per_day: 3            # spread across the day's stance range
 
+bulletin:
+  # The edition read aloud: every publish (qa run) makes today's once, after saving the edition; the page replays
+  # the stored MP3. Sonnet writes the script (story_model, counted in the LLM cap); ElevenLabs reads it, one call
+  # per paragraph. A failed bulletin is noted and the publish goes on without it.
+  daily: true
+  prompt: bulletin_v1
+  tts_model: eleven_v4            # chosen in a blind test on 2026-11-26 over Simba 3.5, Kokoro, Ming and Chatterbox
+  voice_id: JBFqnCBsd6RMkjVDRZzb
+  voice_name: George
+  seed: 1201
+  price_per_million_chars: 80     # list price; a 9-minute bulletin is about 7,500 characters, about $0.60
+  monthly_budget_usd: 10          # ElevenLabs only; once reached, bulletins stop until next month (Benjamin sets this)
+  audio_dir: data/audio
+  pause_s: 0.7
+  section_pause_s: 1.5
+  bitrate: 96k
+
 site:
   out_dir: site                   # qa build writes here; git-ignored
   editions_dir: editions          # frozen daily editions (JSON), committed by the workflow

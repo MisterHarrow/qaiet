@@ -17,6 +17,33 @@
   });
 })();
 
+// The spoken edition: playback speed. The buttons stay hidden without JS (the native player still plays at 1x);
+// the chosen speed is kept in localStorage for the next day's bulletin.
+(function () {
+  var group = document.querySelector(".speed");
+  var audio = document.querySelector(".listen audio");
+  if (!group || !audio) return;
+  var buttons = group.querySelectorAll("button[data-rate]");
+  function set(rate) {
+    audio.playbackRate = audio.defaultPlaybackRate = rate;
+    buttons.forEach(function (b) { b.setAttribute("aria-pressed", String(parseFloat(b.dataset.rate) === rate)); });
+  }
+  var saved = 1;
+  try { saved = parseFloat(localStorage.getItem("rate")) || 1; } catch (e) {}
+  if (!group.querySelector('[data-rate="' + saved + '"]')) saved = 1;
+  set(saved);
+  // Some browsers reset the rate when the source loads.
+  audio.addEventListener("loadedmetadata", function () { set(saved); });
+  buttons.forEach(function (b) {
+    b.addEventListener("click", function () {
+      saved = parseFloat(b.dataset.rate);
+      set(saved);
+      try { if (saved === 1) localStorage.removeItem("rate"); else localStorage.setItem("rate", String(saved)); } catch (e) {}
+    });
+  });
+  group.hidden = false;
+})();
+
 // Filters: a track (Technical / Political / Economic), a mentioned name, and where the outlets are (a region, then
 // one of its countries). They narrow the cards and combine. Without JS every card shows and the controls stay inert.
 (function () {

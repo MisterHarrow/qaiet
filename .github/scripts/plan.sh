@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Decide what this workflow run does: publish | collect | skip.
+# Decide what this workflow run does: publish | collect | skip (manual runs: the chosen mode, also deploy).
 #   publish: collect, labels, summaries, the page, the daily edition, deploy
 #   collect: fetch sources only, no model calls
 #

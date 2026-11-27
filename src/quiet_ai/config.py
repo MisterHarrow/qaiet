@@ -261,6 +261,22 @@ class LLMSettings(_Model):
     prices: dict[str, ModelPrice] = Field(default_factory=dict)  # USD per million tokens
 
 
+class BulletinSettings(_Model):
+    """The spoken bulletin (pipeline/bulletin.py): made by every daily publish (qa run) unless `daily` is off."""
+    daily: bool = True
+    prompt: str = "bulletin_v1"
+    tts_model: str = "eleven_v4"
+    voice_id: str = "JBFqnCBsd6RMkjVDRZzb"  # ElevenLabs "George"
+    voice_name: str = "George"
+    seed: int = 1201                        # the same for every paragraph: a steadier voice
+    price_per_million_chars: float = 80     # USD, list price, for the cost log
+    monthly_budget_usd: float = 10          # its own cap, separate from the LLM's
+    audio_dir: str = "data/audio"           # bulletin-<date>.mp3/.txt/.json; the workflow keeps them as `audio` release assets
+    pause_s: float = 0.7                    # silence between paragraphs
+    section_pause_s: float = 1.5            # ... and between sections
+    bitrate: str = "96k"
+
+
 class Settings(_Model):
     db_path: str = "data/quiet-ai.db"
     db_release_url: str = ""  # public URL of the gzipped database the workflow saves (qa pull)
@@ -284,6 +300,7 @@ class Settings(_Model):
     gap: GapSettings = Field(default_factory=GapSettings)
     sentiment: SentimentSettings = Field(default_factory=SentimentSettings)
     narratives: NarrativeSettings = Field(default_factory=NarrativeSettings)
+    bulletin: BulletinSettings = Field(default_factory=BulletinSettings)
 
 
 def _yaml(path: Path) -> dict:
