@@ -17,6 +17,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import shutil
 import subprocess
 import tempfile
@@ -197,12 +198,22 @@ class ElevenLabs:
             self.context = False  # a refused request isn't billed
             r = self.http.post(url, headers=headers, json=body)
         if r.status_code != 200:
-            # Status only: the body can echo the request.
-            raise BulletinUnavailable(f"ElevenLabs answered HTTP {r.status_code}")
+            # Status and ElevenLabs' error code only (such as invalid_api_key or detected_unusual_activity):
+            # the message text can echo the request.
+            raise BulletinUnavailable(f"ElevenLabs answered HTTP {r.status_code}{error_code(r)}")
         return r.content
 
     def close(self) -> None:
         self.http.close()
+
+
+def error_code(r: httpx.Response) -> str:
+    try:
+        detail = r.json().get("detail")
+    except Exception:
+        return ""
+    code = (detail.get("status") or detail.get("code")) if isinstance(detail, dict) else None
+    return f" ({code})" if isinstance(code, str) and re.fullmatch(r"[a-z_]{3,60}", code) else ""
 
 
 def tts_month_spend(store: Store, now: datetime) -> float:

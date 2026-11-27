@@ -355,8 +355,11 @@ def _spoken(store: Store, settings, now: datetime, llm: LLM, run_id: str, day: s
 
     day = day or archive.local_date(now, settings.site.timezone)
     audio_dir = ROOT / settings.bulletin.audio_dir
-    if bulletin_mod.paths(audio_dir, day)["mp3"].exists() and not force:
+    files = bulletin_mod.paths(audio_dir, day)
+    if files["mp3"].exists() and not force:
         return f"{day} already voiced"
+    if script is None and files["txt"].exists() and not force:
+        script = files["txt"].read_text(encoding="utf-8")  # an earlier try wrote it: voice it, don't pay for a new one
     tts = bulletin_mod.ElevenLabs(settings.bulletin)
     try:
         res = bulletin_mod.make(store, settings, day, audio_dir, llm, tts, now, run_id, script)

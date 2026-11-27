@@ -182,10 +182,10 @@ def test_errors_never_echo_the_response(tmp_path, monkeypatch):
     store, settings, llm, tts = setup(tmp_path, FakeElevenLabs(fail_at=1))
     with pytest.raises(bulletin.BulletinUnavailable) as err:
         bulletin.make(store, settings, DAY, tmp_path, llm, tts, NOW)
-    assert str(err.value) == "ElevenLabs answered HTTP 401"
+    assert str(err.value) == "ElevenLabs answered HTTP 401 (invalid_api_key)"  # the code, never the message
     assert not (tmp_path / f"bulletin-{DAY}.mp3").exists()
     errors = store.conn.execute("SELECT error, cost_usd FROM llm_calls WHERE task = 'tts_bulletin' AND error IS NOT NULL").fetchall()
-    assert [(r["error"], r["cost_usd"]) for r in errors] == [("ElevenLabs answered HTTP 401", 0.0)]
+    assert [(r["error"], r["cost_usd"]) for r in errors] == [("ElevenLabs answered HTTP 401 (invalid_api_key)", 0.0)]
 
 
 def test_refuses_without_edition_key_or_budget(tmp_path):
@@ -252,3 +252,17 @@ def test_publish_helper_never_raises_and_voices_once(tmp_path, monkeypatch):
 
     (tmp_path / f"bulletin-{DAY}.mp3").write_bytes(b"x")
     assert cli._spoken(store, settings, NOW, llm, "run") == f"{DAY} already voiced"
+
+
+def test_a_later_try_reuses_the_days_script(tmp_path, monkeypatch):
+    from quiet_ai import cli
+
+    monkeypatch.setattr(bulletin, "join", fake_join)
+    fake = FakeElevenLabs()
+    store, settings, llm, tts = setup(tmp_path, fake)
+    settings.bulletin.audio_dir = str(tmp_path)
+    (tmp_path / f"bulletin-{DAY}.txt").write_text("One.\n\n---\n\nTwo.\n")
+    monkeypatch.setattr(bulletin, "ElevenLabs", lambda s: tts)
+    monkeypatch.setattr(cli, "ROOT", tmp_path)
+    note = cli._spoken(store, settings, NOW, llm, "run")
+    assert "2 paragraphs" in note and llm.client.calls == [] and [b["text"] for b in fake.bodies()] == ["One.", "Two."]
