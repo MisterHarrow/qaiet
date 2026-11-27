@@ -1,0 +1,47 @@
+[
+ {
+  "year": 2026,
+  "quarter": "Q3",
+  "month": "Sep",
+  "memberStateName": "European Commission",
+  "product": "K (Potash)",
+  "price": 363.0,
+  "unit": "€/tonne"
+ },
+ {
+  "year": 2026,
+  "quarter": "Q3",
+  "month": "Sep",
+  "memberStateName": "European Commission",
+  "product": "N (Nitrogen)",
+  "price": 469.0,
+  "unit": "€/tonne"
+ },
+ {
+  "year": 2026,
+  "quarter": "Q3",
+  "month": "Sep",
+  "memberStateName": "European Commission",
+  "product": "P (Phosphorus)",
+  "price": 742.0,
+  "unit": "€/tonne"
+ },
+ {
+  "year": 2026,
+  "quarter": "Q3",
+  "month": "Aug",
+  "memberStateName": "European Commission",
+  "product": "K (Potash)",
+  "price": 364.0,
+  "unit": "€/tonne"
+ },
+ {
+  "year": 2026,
+  "quarter": "Q3",
+  "month": "Aug",
+  "memberStateName": "European Commission",
+  "product": "N (Nitrogen)",
+  "price": 454.0,
+  "unit": "€/tonne"
+ }
+]

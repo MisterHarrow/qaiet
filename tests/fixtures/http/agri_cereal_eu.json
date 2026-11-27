@@ -1,0 +1,41 @@
+[
+ {
+  "memberStateCode": "EU",
+  "memberStateName": "European Union",
+  "beginDate": "16/11/2026",
+  "endDate": "22/11/2026",
+  "price": "€179,19",
+  "unit": "TONNES",
+  "weekNumber": 21,
+  "productName": "Feed barley",
+  "marketName": "National Average",
+  "stageName": "Deliver to first customer - silo or processing plant - on truck or other transport means",
+  "referencePeriod": "26/11/2026"
+ },
+ {
+  "memberStateCode": "EU",
+  "memberStateName": "European Union",
+  "beginDate": "16/11/2026",
+  "endDate": "22/11/2026",
+  "price": "€224,78",
+  "unit": "TONNES",
+  "weekNumber": 21,
+  "productName": "Feed maize",
+  "marketName": "National Average",
+  "stageName": "Deliver to first customer - silo or processing plant - on truck or other transport means",
+  "referencePeriod": "26/11/2026"
+ },
+ {
+  "memberStateCode": "EU",
+  "memberStateName": "European Union",
+  "beginDate": "16/11/2026",
+  "endDate": "22/11/2026",
+  "price": "€209,19",
+  "unit": "TONNES",
+  "weekNumber": 21,
+  "productName": "Milling wheat",
+  "marketName": "National Average",
+  "stageName": "Deliver to first customer - silo or processing plant - on truck or other transport means",
+  "referencePeriod": "26/11/2026"
+ }
+]

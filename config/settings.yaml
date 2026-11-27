@@ -20,6 +20,7 @@ http:
     public.api.bsky.app: 0.3
     huggingface.co: 0.5
     api.energidataservice.dk: 15   # Energinet answers HTTP 429 after about five quick calls
+    api.tech.ec.europa.eu: 2       # the Commission's Agri-food Data Portal (rate-limited, no figure given)
   workers: 8                      # different hosts are fetched in parallel
 
 ingest:
@@ -213,6 +214,26 @@ energy_data:
     - {code: DE, label: Germany}
   days: 7
   min_points: 88
+
+food_data:
+  # EU average farm-gate prices beside the food desk's news (docs/food-data-plan.md), from the European Commission's
+  # Agri-food Data Portal (CC BY 4.0, no key): three requests per publish. Member states report them weekly
+  # (fertiliser monthly); a week appears about four days after it ends. Never labeled, never sent to a model,
+  # never part of the sentiment index. A failed fetch keeps the last values.
+  enabled: true
+  desk: food
+  api_url: https://api.tech.ec.europa.eu/agrifood/api/
+  cereals:                        # productCodes: /agrifood/api/cereal/products
+    - {code: BLTPAN, label: Milling wheat}
+    - {code: MAI, label: Feed maize}
+    - {code: ORGFOUR, label: Feed barley}
+  dairy:
+    - {code: BUTTER, label: Butter}
+    - {code: SMP, label: Skimmed milk powder}
+  fertiliser:
+    - {code: N (Nitrogen), label: Nitrogen fertiliser}
+  points: 12
+  change_weeks: 4
 
 site:
   out_dir: site                   # qa build writes here; git-ignored

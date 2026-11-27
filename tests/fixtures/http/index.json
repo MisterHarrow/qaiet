@@ -1,4 +1,22 @@
 {
+ "agri:cereal:eu": {
+  "content_type": "application/json",
+  "file": "agri_cereal_eu.json",
+  "status": 200,
+  "url": "https://api.tech.ec.europa.eu/agrifood/api/cereal/prices?memberStateCodes=EU&productCodes=BLTPAN%2CMAI%2CORGFOUR&beginDate=16%2F11%2F2026&endDate=22%2F11%2F2026"
+ },
+ "agri:dairy:eu": {
+  "content_type": "application/json",
+  "file": "agri_dairy_eu.json",
+  "status": 200,
+  "url": "https://api.tech.ec.europa.eu/agrifood/api/dairy/prices?memberStateCodes=EU&products=BUTTER%2CSMP&beginDate=16%2F11%2F2026&endDate=22%2F11%2F2026"
+ },
+ "agri:fertiliser": {
+  "content_type": "application/json",
+  "file": "agri_fertiliser.json",
+  "status": 200,
+  "url": "https://api.tech.ec.europa.eu/agrifood/api/fertiliser/prices?years=2026"
+ },
  "bsky:abeba.blacksky.app": {
   "content_type": "application/json; charset=utf-8",
   "file": "bsky_abeba.blacksky.app.json",
