@@ -265,7 +265,11 @@ class BulletinSettings(_Model):
     """The spoken bulletin (pipeline/bulletin.py): made by every daily publish (qa run) unless `daily` is off."""
     daily: bool = True
     prompt: str = "bulletin_v1"
-    tts_engine: str = "ming"                # "ming" (on the Mac, free) or "elevenlabs"
+    tts_engine: str = "speechify"           # "speechify", "elevenlabs" or "ming" (on the Mac, free)
+    speechify_model: str = "simba-3.5"
+    speechify_voice_id: str = "wyatt_32"
+    speechify_voice_name: str = "Wyatt"
+    speechify_price_per_million_chars: float = 6.58  # USD, list price, for the cost log
     ming_model: str = "mlx-community/Ming-3.0-tts-0.5B-bf16"
     tts_model: str = "eleven_v4"            # ElevenLabs settings from here to price_per_million_chars
     voice_id: str = "JBFqnCBsd6RMkjVDRZzb"  # ElevenLabs "George"

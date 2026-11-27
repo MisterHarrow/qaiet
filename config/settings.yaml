@@ -175,9 +175,14 @@ bulletin:
   # noted and the publish goes on without it.
   daily: true
   prompt: bulletin_v1
-  # The voice: Ming-3.0-tts on Benjamin's Mac (Benjamin's choice, 2026-11-27, after a full-length test; free, MIT).
-  # The GitHub publish writes the script; deploy/mac/bulletin.sh voices it, uploads it and redeploys.
-  tts_engine: ming
+  # The voice: Speechify Simba 3.5, voice Wyatt (Benjamin's choice, 2026-11-27, over Gemini 3.8 Flash TTS, after
+  # Ming-3.0-tts turned out to change voice from sentence to sentence). Voiced in the GitHub publish.
+  tts_engine: speechify
+  speechify_model: simba-3.5
+  speechify_voice_id: wyatt_32
+  speechify_voice_name: Wyatt
+  speechify_price_per_million_chars: 6.58   # list price; a bulletin is about 7,500 characters, about $0.05
+  # Ming, if tts_engine is ming: free, on the Mac only (deploy/mac/), but no fixed speaker.
   ming_model: mlx-community/Ming-3.0-tts-0.5B-bf16
   # ElevenLabs, if tts_engine is elevenlabs (its free tier is blocked from GitHub's servers and too small for daily use).
   tts_model: eleven_v4
@@ -185,7 +190,7 @@ bulletin:
   voice_name: George
   seed: 1201
   price_per_million_chars: 80     # list price; a 9-minute bulletin is about 7,500 characters, about $0.60
-  monthly_budget_usd: 10          # ElevenLabs only; once reached, bulletins stop until next month (Benjamin sets this)
+  monthly_budget_usd: 10          # speech only (any priced engine); once reached, bulletins stop until next month (Benjamin sets this)
   audio_dir: data/audio
   pause_s: 0.7
   section_pause_s: 1.5

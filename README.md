@@ -25,7 +25,7 @@ uv run qa classify               # labels (Haiku), momentum, summaries and weath
 uv run qa stories                # print the ranked stories from the database, no LLM calls
 uv run qa stories -p week        # same for another view: day, week, month, year
 uv run qa costs                  # LLM spend this month against the cap
-uv run qa bulletin               # make today's spoken bulletin by hand (needs ffmpeg; Ming needs `uv sync --extra voice` on Apple Silicon)
+uv run qa bulletin               # make today's spoken bulletin by hand (the publish makes it daily; needs ffmpeg and SPEECHIFY_API_KEY)
 uv run qa bulletin --reuse-script --force  # voice the day's existing script again (after editing data/audio/bulletin-<date>.txt)
 uv run qa pull                   # replace data/quiet-ai.db with the live database (the `db` release asset)
 uv run qa eval sample            # write a blind, stratified sample to tests/gold/labels.yaml for hand labeling
@@ -85,7 +85,7 @@ uv run qa ingest --record        # live fetch, writes fixtures, stores nothing
    - stores today's front page as the day's edition;
    - freezes earlier days' editions to `editions/<date>.json`;
    - prunes old data (items not about AI after 15 days, everything after 400 days; snapshots thinned after 7 days);
-   - writes today's spoken bulletin script (`pipeline/bulletin.py`): Sonnet writes it for the ear (`bulletin_v1`), kept as an `audio` release asset. The voice, Ming-3.0-tts (MIT), runs only on Apple Silicon, so a Mac voices it: `deploy/mac/bulletin.sh`, run by launchd each morning (`deploy/mac/install.sh`), downloads the script, voices it paragraph by paragraph offline (`qa bulletin --reuse-script`), ffmpeg joins, levels and encodes one MP3, uploads it and starts a `deploy` run. The page's player (native `<audio>`, speed buttons from `app.js`) replays the stored file. The `audio` release keeps 30 days; every publish and deploy restores it. If anything fails, the site goes on without the player. `bulletin.tts_engine: elevenlabs` voices it in the publish instead (paid; needs the `ELEVENLABS_API_KEY` secret).
+   - reads today's edition aloud (`pipeline/bulletin.py`): Sonnet writes a script for the ear (`bulletin_v1`), Speechify Simba 3.5 voices it paragraph by paragraph in one fixed voice (Wyatt), and ffmpeg joins, levels and encodes one MP3 (about 9 minutes). About $0.05 for the speech and $0.04 for the script a day, at list prices; speech is logged by `qa costs` and capped by `bulletin.monthly_budget_usd`. The MP3, its script and details are kept as `audio` release assets (30 days) and restored by every publish and deploy; the page's player (native `<audio>`, speed buttons from `app.js`) replays the stored file. If it fails (no key, cap reached), the publish goes on without it. `bulletin.tts_engine` can also be `elevenlabs` (paid) or `ming` (free, voiced on a Mac by `deploy/mac/`, but its voice changes from sentence to sentence).
 3. Uploads the database back to the release, plus a dated daily snapshot (14 kept).
 4. Commits new frozen editions. The daily commit also keeps GitHub from pausing the schedule after 60 days of inactivity.
 5. Deploys `site/` to Vercel (news.b3njamin.ai) with the Vercel CLI; Vercel never builds (the root `vercel.json` turns off its Git deploys, which `vercel link` connects; with them on, every push to `main` would replace the site with the repo root). GitHub Pages only serves a forward from the old address (`deploy/pages-redirect/`).
@@ -101,10 +101,11 @@ npx vercel login && npx vercel project add qaiet && npx vercel link --yes --proj
 gh secret set VERCEL_TOKEN --repo <owner>/qaiet        # an account token from vercel.com/account/settings/tokens
 gh secret set VERCEL_ORG_ID --repo <owner>/qaiet       # orgId from .vercel/project.json
 gh secret set VERCEL_PROJECT_ID --repo <owner>/qaiet   # projectId from .vercel/project.json
+gh secret set SPEECHIFY_API_KEY --repo <owner>/qaiet   # the spoken bulletin's voice
 gh secret set ELEVENLABS_API_KEY --repo <owner>/qaiet  # only if bulletin.tts_engine is elevenlabs
 ```
 
-On the Mac that voices the bulletin: `uv sync --extra voice`, the Ming weights in the Hugging Face cache, `gh` signed in, ffmpeg, then `deploy/mac/install.sh` (`--remove` to undo).
+Only if `bulletin.tts_engine` is `ming`: on the Mac that voices the bulletin, `uv sync --extra voice`, the Ming weights in the Hugging Face cache, `gh` signed in, ffmpeg, then `deploy/mac/install.sh` (`--remove` to undo).
 
 The domain: add it to the Vercel project (`npx vercel domains add news.b3njamin.ai qaiet`) and create the CNAME record it names at the DNS host (Namecheap).
 

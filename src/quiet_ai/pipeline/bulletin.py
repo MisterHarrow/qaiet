@@ -3,9 +3,12 @@
 1. Script: Sonnet writes it for the ear from the day's saved edition (prompt bulletin_v1); the greeting with the
    date and the sign-off are fixed text, so they never vary.
 2. Speech, one paragraph at a time, by the engine in bulletin.tts_engine:
-   - "ming" (the default): Ming-3.0-tts through mlx-audio, on Apple Silicon only, free, from the local Hugging Face
-     cache. The GitHub publish can't run it, so it writes the script and stops; the Mac job (deploy/mac/) voices it.
+   - "speechify" (the default): Simba 3.5 over HTTP, one fixed voice (Wyatt); priced per character, made in the
+     GitHub publish.
    - "elevenlabs": eleven_v4 over HTTP, with the neighbouring paragraphs as context; priced per character.
+   - "ming": Ming-3.0-tts through mlx-audio, on Apple Silicon only, free. The GitHub publish can't run it, so it
+     writes the script and stops; the Mac job (deploy/mac/) voices it. It has no fixed speaker: the voice changes
+     from sentence to sentence, which is why it was dropped.
 3. Audio: ffmpeg joins the parts with a pause after each paragraph (longer between sections), evens out the
    loudness and encodes one MP3.
 
@@ -17,6 +20,7 @@ engine is capped on its own (bulletin.monthly_budget_usd); the LLM cap leaves it
 
 from __future__ import annotations
 
+import base64
 import json
 import os
 import re
@@ -263,8 +267,44 @@ class ElevenLabs:
         self.http.close()
 
 
-def engine(s: BulletinSettings) -> Ming | ElevenLabs:
-    return ElevenLabs(s) if s.tts_engine == "elevenlabs" else Ming(s)
+class Speechify:
+    """Simba 3.5 over plain HTTP, one fixed voice. The key comes from SPEECHIFY_API_KEY and stays in the header."""
+
+    URL = "https://api.speechify.ai/v1/audio/speech"
+    name = "speechify"
+    voiced_elsewhere = False
+    unavailable = "no SPEECHIFY_API_KEY"
+
+    def __init__(self, s: BulletinSettings, key: str | None = None, transport: httpx.BaseTransport | None = None):
+        self.s = s
+        self.key = key if key is not None else os.environ.get("SPEECHIFY_API_KEY", "")
+        self.http = httpx.Client(timeout=180, transport=transport)
+        self.voice = s.speechify_voice_name
+        self.price = s.speechify_price_per_million_chars
+
+    @property
+    def available(self) -> bool:
+        return bool(self.key)
+
+    def speak(self, text: str, previous: str = "", following: str = "") -> bytes:
+        if not self.key:
+            raise BulletinUnavailable(self.unavailable)
+        r = self.http.post(self.URL, headers={"Authorization": f"Bearer {self.key}"}, json={
+            "input": text, "voice_id": self.s.speechify_voice_id, "model": self.s.speechify_model,
+            "language": "en-US", "output_format": "wav_24000"})
+        if r.status_code != 200:
+            raise BulletinUnavailable(f"Speechify answered HTTP {r.status_code}{error_code(r)}")
+        try:
+            return base64.b64decode(r.json()["audio_data"])
+        except Exception:
+            raise BulletinUnavailable("Speechify sent no audio") from None
+
+    def close(self) -> None:
+        self.http.close()
+
+
+def engine(s: BulletinSettings) -> Speechify | ElevenLabs | Ming:
+    return {"elevenlabs": ElevenLabs, "ming": Ming}.get(s.tts_engine, Speechify)(s)
 
 
 def error_code(r: httpx.Response) -> str:
@@ -339,10 +379,10 @@ class Result:
 
 
 def tts_model(tts) -> str:
-    return tts.s.ming_model.split("/")[-1] if tts.name == "ming" else tts.s.tts_model
+    return {"ming": tts.s.ming_model.split("/")[-1], "speechify": tts.s.speechify_model}.get(tts.name, tts.s.tts_model)
 
 
-def make(store: Store, settings: Settings, day: str, audio_dir: Path, llm: LLM | None, tts: Ming | ElevenLabs,
+def make(store: Store, settings: Settings, day: str, audio_dir: Path, llm: LLM | None, tts: Speechify | ElevenLabs | Ming,
          now: datetime | None = None, run_id: str | None = None, script: str | None = None) -> Result:
     """Write, voice and encode the bulletin for `day` (a local date with a saved edition).
     `script` reuses a script (the text of an earlier .txt) instead of asking the model for a new one.
