@@ -317,3 +317,29 @@ def test_mac_voices_a_saved_script_without_the_edition_or_a_budget_check(tmp_pat
     res = bulletin.make(store, settings, DAY, tmp_path, llm, LocalMing(settings.bulletin), NOW, script="One.\n\nTwo.\n")
     assert res.paragraphs == 2 and res.tts_cost_usd == 0 and llm.client.calls == []
     assert json.loads((tmp_path / f"bulletin-{DAY}.json").read_text())["tts_model"] == "Ming-3.0-tts-0.5B-bf16"
+
+
+def test_speechify_requests_wyatt_and_decodes_the_audio(tmp_path, monkeypatch):
+    import base64
+
+    monkeypatch.setattr(bulletin, "join", fake_join)
+    seen = []
+
+    def handler(request):
+        seen.append(request)
+        if len(seen) == 3:
+            return httpx.Response(429, json={"detail": {"code": "rate_limited", "message": "key sk_1 is busy"}})
+        return httpx.Response(200, json={"audio_data": base64.b64encode(TONE.read_bytes()).decode(), "audio_format": "wav"})
+
+    store, settings, llm, _ = setup(tmp_path, FakeElevenLabs())
+    assert isinstance(bulletin.engine(settings.bulletin), bulletin.Speechify)  # the default voice
+    tts = bulletin.Speechify(settings.bulletin, key="sp-test", transport=httpx.MockTransport(handler))
+    with pytest.raises(bulletin.BulletinUnavailable) as err:
+        bulletin.make(store, settings, DAY, tmp_path, llm, tts, NOW, script="One.\n\nTwo.\n\nThree.\n")
+    assert str(err.value) == "Speechify answered HTTP 429 (rate_limited)"
+    body = json.loads(seen[0].content)
+    assert seen[0].url == "https://api.speechify.ai/v1/audio/speech" and seen[0].headers["authorization"] == "Bearer sp-test"
+    assert body == {"input": "One.", "voice_id": "wyatt_32", "model": "simba-3.5", "language": "en-US", "output_format": "wav_24000"}
+    rows = store.conn.execute("SELECT model, input_tokens, cost_usd FROM llm_calls WHERE task = 'tts_bulletin' AND error IS NULL").fetchall()
+    assert [(r["model"], r["input_tokens"]) for r in rows] == [("simba-3.5", 4), ("simba-3.5", 4)]
+    assert rows[0]["cost_usd"] == pytest.approx(4 * 6.58 / 1e6)

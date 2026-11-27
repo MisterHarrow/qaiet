@@ -198,7 +198,10 @@ button { font: inherit; }
 .listen { max-width: 54rem; margin: 1.3rem 0 0; }
 .listen .eyebrow { margin-bottom: 0.45rem; }
 .listen-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 1rem; }
-.listen audio { flex: 1 1 18rem; min-width: 0; max-width: 34rem; height: 2.5rem; color-scheme: inherit; }
+.listen audio { flex: 1 1 18rem; min-width: 0; max-width: 34rem; height: 2.5rem; color-scheme: inherit; background: transparent; }
+/* The browser's own panel is a grey pill; let the paper show through (Chrome, Edge, Safari). */
+.listen audio::-webkit-media-controls-enclosure { background: transparent; border-radius: 0; }
+.listen audio::-webkit-media-controls-panel { background: transparent; }
 .speed { display: flex; gap: 0.3rem; font: 0.72rem/1 var(--mono); letter-spacing: 0.04em; }
 .speed button {
   padding: 0.45rem 0.5rem; color: var(--muted); background: transparent; cursor: pointer; font: inherit; letter-spacing: inherit;

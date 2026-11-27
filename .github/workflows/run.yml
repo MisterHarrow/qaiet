@@ -110,10 +110,12 @@ jobs:
         if: env.MODE == 'collect'
         run: uv run qa ingest
 
-      # The ElevenLabs key is only in this step (qa run voices the day's bulletin; without the key it skips it).
+      # The speech keys are only in this step (qa run voices the day's bulletin with bulletin.tts_engine;
+      # without its key it skips it).
       - name: Publish
         if: env.MODE == 'publish'
         env:
+          SPEECHIFY_API_KEY: ${{ secrets.SPEECHIFY_API_KEY }}
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
         run: |
           command -v ffmpeg >/dev/null || { sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg; }
