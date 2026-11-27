@@ -209,6 +209,32 @@ button { font: inherit; }
 }
 .speed button:hover { color: var(--ink); border-color: var(--ink); }
 .speed button[aria-pressed="true"] { color: var(--paper); background: var(--ink); border-color: var(--ink); }
+/* Figures beside the energy desk's news (day-ahead prices): ink only, numbers in mono. Never stance colors. */
+.data-strip { max-width: 54rem; margin: 1.3rem 0 0; }
+.data-strip .eyebrow { margin-bottom: 0.5rem; }
+.data-strip .eyebrow-note a { color: inherit; text-decoration-color: var(--rule); }
+.data-strip .eyebrow-note a:hover { color: var(--signal); }
+.prices { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.55rem 1.6rem; }
+.prices li {
+  display: grid; grid-template-columns: auto 1fr auto; grid-template-areas: "zone zone zone" "pv range spark";
+  align-items: baseline; column-gap: 0.5rem; padding-top: 0.4rem; border-top: 1px solid var(--rule); min-width: 0;
+}
+.prices .zone { grid-area: zone; font: 0.78rem/1.3 var(--sans); color: var(--muted); }
+.prices .pv { grid-area: pv; font: 500 1.15rem/1.2 var(--mono); font-variant-numeric: tabular-nums; }
+.prices .range { grid-area: range; font: 0.72rem/1.2 var(--mono); color: var(--faint); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.prices .range abbr { text-decoration: none; }
+.spark-mini { grid-area: spark; align-self: center; overflow: visible; }
+.spark-mini polyline { fill: none; stroke: var(--ink); stroke-width: 1.25; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+.spark-mini circle { fill: var(--ink); }
+.spark-mini circle.day { fill: var(--faint); }
+@media (max-width: 48rem) { .prices { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.55rem 1.1rem; } }
+/* Phones: one line per area (name, price, range, week), so six areas stay short. */
+@media (max-width: 34rem) {
+  .prices { grid-template-columns: 1fr; gap: 0; }
+  .prices li { grid-template-columns: minmax(0, 1fr) auto auto auto; grid-template-areas: "zone pv range spark"; padding: 0.35rem 0; }
+  .prices .zone { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .prices .pv { font-size: 1rem; }
+}
 .notice { max-width: 52rem; margin: 1.1rem 0 0; padding: 0.7rem 0.9rem; border-left: 3px solid var(--signal); background: var(--wash); font-size: 0.9rem; color: var(--muted); }
 
 .eyebrow { margin: 0 0 0.6rem; font: 600 0.72rem/1.3 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
@@ -589,8 +615,8 @@ summary:hover { color: var(--ink); }
 .legend { display: flex; flex-wrap: wrap; gap: 0.3rem 1.1rem; font: 0.7rem/1.5 var(--mono); letter-spacing: 0.04em; text-transform: uppercase; }
 
 /* Hit areas: small controls get an invisible pad, so a finger finds them (about 44px tall) without anything moving. */
-.sitenav a, .theme-toggle, .periods a, .filters button, .card-foot summary, .open-source, .toc a, .tray-close, .speed button { position: relative; }
-.sitenav a::after, .theme-toggle::after, .periods a::after, .filters button::after, .card-foot summary::after, .open-source::after, .toc a::after, .tray-close::after, .speed button::after {
+.sitenav a, .theme-toggle, .periods a, .filters button, .card-foot summary, .open-source, .toc a, .tray-close, .speed button, .data-strip .eyebrow-note a { position: relative; }
+.sitenav a::after, .theme-toggle::after, .periods a::after, .filters button::after, .card-foot summary::after, .open-source::after, .toc a::after, .tray-close::after, .speed button::after, .data-strip .eyebrow-note a::after {
   content: ""; position: absolute; inset: -0.6rem -0.35rem;
 }
 .card-foot summary::after { inset: -0.9rem -0.6rem -0.9rem -1.1rem; }
@@ -599,6 +625,7 @@ summary:hover { color: var(--ink); }
 .toc a::after { inset: -0.3rem -0.5rem; }
 .tray-close::after { inset: 0 -0.3rem; }
 .speed button::after { inset: -0.55rem -0.15rem; }
+.data-strip .eyebrow-note a::after { inset: -0.75rem -0.3rem; }
 
 /* Responsive: 4 / 3 / 2 / 1 cards per row */
 @media (max-width: 75rem) { .stories { grid-template-columns: repeat(3, minmax(0, 1fr)); } }

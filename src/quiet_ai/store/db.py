@@ -206,6 +206,18 @@ CREATE TABLE IF NOT EXISTS source_runs (
 );
 
 CREATE TABLE IF NOT EXISTS meta (key TEXT PRIMARY KEY, value TEXT NOT NULL);
+
+-- Figures beside a desk's news (pipeline/energy_data.py): one daily value per source, metric and zone.
+CREATE TABLE IF NOT EXISTS energy_daily (
+    source     TEXT NOT NULL,   -- energinet
+    metric     TEXT NOT NULL,   -- price_mean | price_min | price_max (EUR/MWh)
+    zone       TEXT NOT NULL,   -- price area, e.g. SE3
+    day        TEXT NOT NULL,   -- Stockholm date
+    value      REAL NOT NULL,
+    points     INTEGER NOT NULL, -- 15-minute values behind it
+    updated_at TEXT NOT NULL,
+    PRIMARY KEY (source, metric, zone, day)
+);
 """
 
 

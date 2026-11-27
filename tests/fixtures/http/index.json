@@ -305,6 +305,48 @@
   "status": 200,
   "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=yoshuabengio.bsky.social&limit=30&filter=posts_no_replies"
  },
+ "energy:energinet:dayahead": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "energy_energinet_dayahead.json",
+  "status": 200,
+  "url": "https://api.energidataservice.dk/dataset/DayAheadPrices?start=2026-11-26T11%3A00&end=2026-11-26T11%3A15&sort=TimeUTC+asc"
+ },
+ "energy:energy-charts:power:de": {
+  "content_type": "application/json",
+  "file": "energy_energy-charts_power_de.json",
+  "status": 200,
+  "url": "https://api.energy-charts.info/public_power?country=de&start=2026-11-26T11%3A00Z&end=2026-11-26T12%3A00Z"
+ },
+ "energy:energy-charts:power:es": {
+  "content_type": "application/json",
+  "file": "energy_energy-charts_power_es.json",
+  "status": 200,
+  "url": "https://api.energy-charts.info/public_power?country=es&start=2026-11-26T11%3A00Z&end=2026-11-26T12%3A00Z"
+ },
+ "energy:energy-charts:power:fr": {
+  "content_type": "application/json",
+  "file": "energy_energy-charts_power_fr.json",
+  "status": 200,
+  "url": "https://api.energy-charts.info/public_power?country=fr&start=2026-11-26T11%3A00Z&end=2026-11-26T12%3A00Z"
+ },
+ "energy:energy-charts:power:pl": {
+  "content_type": "application/json",
+  "file": "energy_energy-charts_power_pl.json",
+  "status": 200,
+  "url": "https://api.energy-charts.info/public_power?country=pl&start=2026-11-26T11%3A00Z&end=2026-11-26T12%3A00Z"
+ },
+ "energy:energy-charts:power:se": {
+  "content_type": "application/json",
+  "file": "energy_energy-charts_power_se.json",
+  "status": 200,
+  "url": "https://api.energy-charts.info/public_power?country=se&start=2026-11-26T11%3A00Z&end=2026-11-26T12%3A00Z"
+ },
+ "energy:energy-charts:power:uk": {
+  "content_type": "application/json",
+  "file": "energy_energy-charts_power_uk.json",
+  "status": 200,
+  "url": "https://api.energy-charts.info/public_power?country=uk&start=2026-11-26T11%3A00Z&end=2026-11-26T12%3A00Z"
+ },
  "gdelt:artlist:0": {
   "content_type": "application/json; charset=utf-8",
   "file": "gdelt_artlist_0.json",

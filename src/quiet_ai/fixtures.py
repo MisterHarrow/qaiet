@@ -77,13 +77,18 @@ def sanitize_feed(body: bytes, max_items: int = MAX_ITEMS) -> bytes:
     return _DESC.sub(_short_desc, body)
 
 
-def _trim_json(obj: Any, max_items: int, depth: int = 0) -> Any:
+# Lists of series rather than of articles: kept whole, so a fixture still holds every series a
+# fetcher reads (Energy-Charts' generation types include the renewable share near the end).
+_KEEP_LISTS = {"production_types"}
+
+
+def _trim_json(obj: Any, max_items: int, depth: int = 0, keep: bool = False) -> Any:
     if isinstance(obj, list):
-        limit = max_items if depth <= 1 else max_items * 4
+        limit = len(obj) if keep else max_items if depth <= 1 else max_items * 4
         return [_trim_json(x, max_items, depth + 1) for x in obj[:limit]]
     if isinstance(obj, dict):
         return {
-            k: _trim_json(v, max_items, depth + 1)
+            k: _trim_json(v, max_items, depth + 1, keep=k in _KEEP_LISTS)
             for k, v in obj.items()
             if k not in _DROP_KEYS and not (k.endswith("_url") and k != "html_url")
         }

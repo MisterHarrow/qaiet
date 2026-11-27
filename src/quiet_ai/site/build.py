@@ -268,6 +268,8 @@ def _env() -> Environment:
     env.filters["frame_rows"] = frame_rows
     env.filters["narrative_chart"] = narrative_chart
     env.filters["seal"] = seal
+    env.filters["price_spark"] = price_spark
+    env.filters["eur"] = lambda v: "–" if v is None else f"{v:,.0f}".replace("-", "−").replace(",", "\u202f")
     env.globals.update(stance_names=STANCE_NAMES, kind_names=KIND_NAMES, country_names=COUNTRY_NAMES)
     return env
 
@@ -688,6 +690,31 @@ def render_narratives(narratives: list[dict], out_dir: Path, tz: str = "Europe/S
     (page_dir / "index.html").write_text(html, encoding="utf-8")
     shutil.copytree(HERE / "static", out_dir / "static", dirs_exist_ok=True)
     return page_dir / "index.html"
+
+
+def price_spark(points: list[dict], label: str) -> Markup:
+    """A week of daily mean prices as a small ink line, scaled to its own range, the last day marked. No color:
+    stance colors mean stance and --signal means navigation, so a price is drawn in ink only."""
+    w, h, pad = 72, 22, 3
+    vals = [p["value"] for p in points]
+    if not vals:
+        return Markup("")
+    lo, hi = min(vals), max(vals)
+    span = (hi - lo) or 1.0
+    n = len(vals)
+    x = lambda i: pad + (w - 2 * pad) * (i / (n - 1) if n > 1 else 0.5)  # noqa: E731
+    y = lambda v: pad + (h - 2 * pad) * ((hi - v) / span if hi > lo else 0.5)  # noqa: E731
+    fmt = lambda v: f"{v:,.0f}".replace("-", "\u2212").replace(",", "\u202f")  # noqa: E731
+    desc = f"{label}: daily mean over {n} day{'s' if n != 1 else ''}, {fmt(vals[0])} to {fmt(vals[-1])} € per MWh"
+    parts = [f'<svg class="spark-mini" viewBox="0 0 {w} {h}" width="{w}" height="{h}" role="img" aria-label="{escape(desc)}">']
+    if n > 1:
+        pts = " ".join(f"{x(i):.1f},{y(v):.1f}" for i, v in enumerate(vals))
+        parts.append(f'<polyline points="{pts}"/>')
+    for i, p in enumerate(points):
+        parts.append(f'<circle class="{"now" if i == n - 1 else "day"}" cx="{x(i):.1f}" cy="{y(p["value"]):.1f}" r="{2 if i == n - 1 else 0.9}">'
+                     f'<title>{escape(day_label(p["date"]))}: {fmt(p["value"])} €/MWh</title></circle>')
+    parts.append("</svg>")
+    return Markup("".join(parts))
 
 
 def sparkline(points: list[dict], label: str) -> Markup:

@@ -20,6 +20,7 @@ from quiet_ai.llm.client import LLM
 from quiet_ai.pipeline import archive
 from quiet_ai.pipeline import sentiment as sentiment_mod
 from quiet_ai.pipeline import edition as edition_mod
+from quiet_ai.pipeline import energy_data
 from quiet_ai.pipeline import momentum
 from quiet_ai.pipeline import narratives as narratives_mod
 from quiet_ai.pipeline import stories as story_views
@@ -78,6 +79,8 @@ def ingest(
     ctx.known_urls = store.urls_for_sources([f.id for f in ctx.sources.feeds if f.sitemap])
     try:
         reports = run_ingest(ctx, store, only=only, dry_run=dry_run)
+        if record and not only:
+            console.print(f"[dim]energy data: {energy_data.update(store, ctx.http, ctx.settings, ctx.now)}[/]")
     finally:
         ctx.http.close()
     if record:
@@ -171,6 +174,7 @@ def _open(dry_run: bool) -> tuple[Store, datetime]:
     store = Store(":memory:")
     ctx = _context("replay")
     run_ingest(ctx, store, dry_run=True)
+    energy_data.update(store, ctx.http, settings, ctx.now)
     ctx.http.close()
     run_cluster(store, settings, sources, ctx.now, None, default_embedder(settings, offline=True))
     return store, ctx.now
@@ -246,6 +250,7 @@ def run(
     ctx = _context("live", fetch_state=store.load_fetch_state())
     ctx.known_urls = store.urls_for_sources([f.id for f in ctx.sources.feeds if f.sitemap])
     reports = run_ingest(ctx, store)
+    console.print(f"[dim]energy data: {energy_data.update(store, ctx.http, settings, ctx.now)}[/]")
     ctx.http.close()
     bad = [r.result.source for r in reports if r.result.status not in ("ok", "not_modified")]
     console.print(f"[dim]ingest: {sum(r.new for r in reports)} new items; {len(bad)} sources failed {', '.join(bad[:8])}[/]")

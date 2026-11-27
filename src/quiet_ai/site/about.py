@@ -137,6 +137,10 @@ def about_context(store: Store, settings: Settings, sources: SourcesConfig, acco
         "groups": groups,
         "desks": [{"key": d.key, "name": d.name, "subject": d.subject, "stance": d.stance, "builders": d.builders,
                    "prefix": "" if i == 0 else f"{d.key}/"} for i, d in enumerate(settings.active_desks)],
+        "energy_data": ({"desk": settings.energy_data.desk, "areas": [a.label for a in settings.energy_data.price_areas],
+                         "days": settings.energy_data.days}
+                        if settings.energy_data.enabled and settings.energy_data.price_areas
+                        and any(d.key == settings.energy_data.desk for d in settings.active_desks) else None),
         "regions": [{"name": name, "n": sum(1 for f in news if f.country in codes)} for name, codes in REGIONS],
         "us_share": _us_share(store, settings, sources, now),
         "waiting": _waiting(news, now),

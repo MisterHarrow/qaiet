@@ -106,3 +106,13 @@ def test_sanitize_cuts_full_text_and_long_json_strings():
     assert b"content:encoded" not in out and len(out) < 900
     js = sanitize(('{"data": [' + ",".join(['{"d": "%s", "avatar": "x"}' % long] * 9) + "]}").encode(), "application/json")
     assert js.count(b'"d"') == 5 and b"avatar" not in js and len(js) < 4000
+
+
+def test_sanitize_keeps_every_series_but_trims_each():
+    import json
+
+    types = [{"name": f"t{i}", "data": list(range(50))} for i in range(12)]
+    body = json.dumps({"unix_seconds": list(range(50)), "production_types": types}).encode()
+    out = json.loads(sanitize(body, "application/json"))
+    assert len(out["production_types"]) == 12  # a list of series, not of articles: kept whole
+    assert len(out["unix_seconds"]) == 5 and all(len(t["data"]) == 20 for t in out["production_types"])
