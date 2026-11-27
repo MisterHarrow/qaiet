@@ -360,7 +360,7 @@ def _spoken(store: Store, settings, now: datetime, llm: LLM, run_id: str, day: s
         return f"{day} already voiced"
     if script is None and files["txt"].exists() and not force:
         script = files["txt"].read_text(encoding="utf-8")  # an earlier try wrote it: voice it, don't pay for a new one
-    tts = bulletin_mod.ElevenLabs(settings.bulletin)
+    tts = bulletin_mod.engine(settings.bulletin)
     try:
         res = bulletin_mod.make(store, settings, day, audio_dir, llm, tts, now, run_id, script)
     except Exception as e:  # no key, budget, ffmpeg, HTTP: say so and carry on

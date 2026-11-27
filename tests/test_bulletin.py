@@ -200,7 +200,7 @@ def test_refuses_without_edition_key_or_budget(tmp_path):
 
     store, settings, llm, tts = setup(tmp_path, fake)
     settings.bulletin = BulletinSettings(monthly_budget_usd=0.01)
-    bulletin.log_tts(store, "earlier", settings.bulletin, 100, NOW)  # $0.008 spent
+    bulletin.log_tts(store, "earlier", tts, 100, NOW)  # $0.008 spent
     with pytest.raises(bulletin.BulletinUnavailable, match="monthly budget"):
         bulletin.make(store, settings, DAY, tmp_path, llm, tts, NOW)
     assert fake.requests == []
@@ -246,6 +246,7 @@ def test_publish_helper_never_raises_and_voices_once(tmp_path, monkeypatch):
 
     monkeypatch.delenv("ELEVENLABS_API_KEY", raising=False)
     store, settings, llm, _ = setup(tmp_path, FakeElevenLabs())
+    settings.bulletin.tts_engine = "elevenlabs"
     settings.bulletin.audio_dir = str(tmp_path)  # absolute: ROOT / it is tmp_path
     assert cli._spoken(store, settings, NOW, llm, "run") == "[yellow]not made: no ELEVENLABS_API_KEY[/]"
     assert llm.client.calls == []  # stopped before the script was written
@@ -262,7 +263,57 @@ def test_a_later_try_reuses_the_days_script(tmp_path, monkeypatch):
     store, settings, llm, tts = setup(tmp_path, fake)
     settings.bulletin.audio_dir = str(tmp_path)
     (tmp_path / f"bulletin-{DAY}.txt").write_text("One.\n\n---\n\nTwo.\n")
-    monkeypatch.setattr(bulletin, "ElevenLabs", lambda s: tts)
+    monkeypatch.setattr(bulletin, "engine", lambda s: tts)
     monkeypatch.setattr(cli, "ROOT", tmp_path)
     note = cli._spoken(store, settings, NOW, llm, "run")
     assert "2 paragraphs" in note and llm.client.calls == [] and [b["text"] for b in fake.bodies()] == ["One.", "Two."]
+
+
+class FakeMingModel:
+    sample_rate = 24000
+
+    def generate(self, text, temperature):
+        assert temperature == 0.0
+        yield SimpleNamespace(audio=[0.0, 0.5, -0.5] * 800)
+        yield SimpleNamespace(audio=[2.0, -2.0])  # clipped, not wrapped
+
+
+def test_ming_writes_mono_wav_from_the_models_audio():
+    import io
+    import wave
+
+    ming = bulletin.Ming(BulletinSettings())
+    ming._model = FakeMingModel()  # no mlx, no weights
+    with wave.open(io.BytesIO(ming.speak("Hello.")), "rb") as w:
+        assert (w.getnchannels(), w.getsampwidth(), w.getframerate(), w.getnframes()) == (1, 2, 24000, 2402)
+        frames = w.readframes(w.getnframes())
+    assert frames[-4:] == (32767).to_bytes(2, "little", signed=True) + (-32767).to_bytes(2, "little", signed=True)
+    assert ming.price == 0 and bulletin.tts_model(ming) == "Ming-3.0-tts-0.5B-bf16"
+
+
+class AbsentMing(bulletin.Ming):
+    available = False
+
+
+def test_where_ming_cant_run_the_script_is_still_written(tmp_path):
+    store, settings, llm, _ = setup(tmp_path, FakeElevenLabs())
+    with pytest.raises(bulletin.BulletinUnavailable, match="saved for the Mac"):
+        bulletin.make(store, settings, DAY, tmp_path, llm, AbsentMing(settings.bulletin), NOW)
+    assert (tmp_path / f"bulletin-{DAY}.txt").read_text().startswith("This is Qaiet Times")
+    assert not (tmp_path / f"bulletin-{DAY}.mp3").exists() and len(llm.client.calls) == 1
+
+
+def test_mac_voices_a_saved_script_without_the_edition_or_a_budget_check(tmp_path, monkeypatch):
+    monkeypatch.setattr(bulletin, "join", fake_join)
+
+    class LocalMing(bulletin.Ming):
+        available = True
+
+        def speak(self, text, previous="", following=""):
+            return TONE.read_bytes()
+
+    store, settings, llm, _ = setup(tmp_path, FakeElevenLabs(), edition=False)  # the Mac's database may be old
+    settings.bulletin.monthly_budget_usd = 0  # free: never stops on the cap
+    res = bulletin.make(store, settings, DAY, tmp_path, llm, LocalMing(settings.bulletin), NOW, script="One.\n\nTwo.\n")
+    assert res.paragraphs == 2 and res.tts_cost_usd == 0 and llm.client.calls == []
+    assert json.loads((tmp_path / f"bulletin-{DAY}.json").read_text())["tts_model"] == "Ming-3.0-tts-0.5B-bf16"
