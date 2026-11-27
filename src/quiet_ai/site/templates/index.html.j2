@@ -79,6 +79,18 @@
   {% if e.weather %}
   <p class="weather">{{ e.weather }}</p>
   {% endif %}
+  {% if e.energy_data %}
+  {# Figures beside the news (pipeline/energy_data.py): never labeled, never in the index. Ink only, no stance colors. #}
+  {% set ed = e.energy_data %}
+  <section class="data-strip" aria-labelledby="prices-h">
+    <h2 class="eyebrow" id="prices-h">Day-ahead power price<span class="eyebrow-note">{{ ed.day|day_label }}, € per MWh, mean and range · last {{ ed.days }} days · <a href="{{ ed.url }}">Energinet</a></span></h2>
+    <ul class="prices">
+      {% for a in ed.areas %}
+      <li><span class="zone">{{ a.label }}</span><span class="pv">{{ a.mean|eur }}</span><span class="range">{{ a.min|eur }}–{{ a.max|eur }}{% if a.partial %} <abbr title="Not every quarter-hour of the day is in yet">part</abbr>{% endif %}</span>{{ a.series|price_spark(a.label) }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
   {% if listen %}
   {# The edition read aloud (qa bulletin). The native player works without JS; app.js adds the speed buttons. #}
   <div class="listen" aria-labelledby="listen-h">

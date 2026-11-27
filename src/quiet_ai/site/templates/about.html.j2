@@ -34,6 +34,9 @@
     {% for d in a.desks if d.subject %}<li><strong>{{ d.name }}:</strong> {{ d.subject }}. Stance: {{ d.stance }}.</li>{% endfor %}
   </ul>
   <p>The other desks are new. Their labels are not yet checked against hand labels the way AI's are.</p>
+  {% if a.energy_data %}
+  <p>The energy desk also shows today's day-ahead power price for {% for x in a.energy_data.areas %}{{ x }}{% if not loop.last %}{{ ", " if loop.revindex > 2 else " and " }}{% endif %}{% endfor %}: the day's mean, lowest and highest quarter-hour price in euros per megawatt-hour, and the daily mean over the last {{ a.energy_data.days }} days. The prices are set by the power exchanges' day-ahead auction and published by Energinet, Denmark's grid operator, on <a href="https://www.energidataservice.dk/">Energi Data Service</a> under CC BY 4.0 (Source: Energinet). They are fetched once each morning, with no model involved, and are figures beside the news: never labeled and never part of the sentiment index.</p>
+  {% endif %}
 </section>
 {% endif %}
 

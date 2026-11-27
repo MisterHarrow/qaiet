@@ -19,6 +19,7 @@ http:
     api.gdeltproject.org: 6       # GDELT asks for at most one request per 5 s
     public.api.bsky.app: 0.3
     huggingface.co: 0.5
+    api.energidataservice.dk: 15   # Energinet answers HTTP 429 after about five quick calls
   workers: 8                      # different hosts are fetched in parallel
 
 ingest:
@@ -195,6 +196,23 @@ bulletin:
   pause_s: 0.7
   section_pause_s: 1.5
   bitrate: 96k
+
+energy_data:
+  # Figures beside the energy desk's news (docs/energy-data-plan.md): today's day-ahead power price per area, with
+  # seven days of daily means. One request to Energinet's Energi Data Service per publish (CC BY 4.0, no key).
+  # Never labeled, never sent to a model, never part of the sentiment index. A failed fetch keeps the last day.
+  enabled: true
+  desk: energy
+  prices_url: https://api.energidataservice.dk/dataset/DayAheadPrices
+  price_areas:                    # every area the dataset carries (checked 2026-11-27); SE1, SE2 need ENTSO-E
+    - {code: SE3, label: Sweden SE3}
+    - {code: SE4, label: Sweden SE4}
+    - {code: NO2, label: Norway NO2}
+    - {code: DK1, label: Denmark DK1}
+    - {code: DK2, label: Denmark DK2}
+    - {code: DE, label: Germany}
+  days: 7
+  min_points: 88
 
 site:
   out_dir: site                   # qa build writes here; git-ignored

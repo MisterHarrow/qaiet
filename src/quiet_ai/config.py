@@ -305,6 +305,21 @@ class BulletinSettings(_Model):
     bitrate: str = "96k"
 
 
+class PriceArea(_Model):
+    code: str   # Energinet's PriceArea, e.g. "SE3"
+    label: str  # shown on the page
+
+
+class EnergyDataSettings(_Model):
+    """Figures beside the energy desk's news (pipeline/energy_data.py, docs/energy-data-plan.md). No model calls."""
+    enabled: bool = True
+    desk: str = "energy"
+    prices_url: str = "https://api.energidataservice.dk/dataset/DayAheadPrices"  # Energinet, CC BY 4.0
+    price_areas: list[PriceArea] = Field(default_factory=list)
+    days: int = 7             # sparkline length
+    min_points: int = 88      # 15-minute prices in a day (92 on the short DST day); fewer marks the day partial
+
+
 class Settings(_Model):
     db_path: str = "data/quiet-ai.db"
     db_release_url: str = ""  # public URL of the gzipped database the workflow saves (qa pull)
@@ -329,6 +344,7 @@ class Settings(_Model):
     sentiment: SentimentSettings = Field(default_factory=SentimentSettings)
     narratives: NarrativeSettings = Field(default_factory=NarrativeSettings)
     bulletin: BulletinSettings = Field(default_factory=BulletinSettings)
+    energy_data: EnergyDataSettings = Field(default_factory=EnergyDataSettings)
     desks: list[DeskSettings] = Field(default_factory=lambda: [DeskSettings(key="ai", label="AI", name="AI", builders=True)])
 
     @property

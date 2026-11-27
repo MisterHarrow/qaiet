@@ -1,0 +1,43 @@
+{
+ "total": 6,
+ "filters": "",
+ "sort": "TimeUTC asc",
+ "dataset": "DayAheadPrices",
+ "records": [
+  {
+   "TimeUTC": "2026-11-26T10:00:00",
+   "TimeDK": "2026-11-26T11:00:00",
+   "PriceArea": "SE4",
+   "DayAheadPriceEUR": 334.859985,
+   "DayAheadPriceDKK": 2502.843986
+  },
+  {
+   "TimeUTC": "2026-11-26T10:00:00",
+   "TimeDK": "2026-11-26T11:00:00",
+   "PriceArea": "SE3",
+   "DayAheadPriceEUR": 334.859985,
+   "DayAheadPriceDKK": 2502.843986
+  },
+  {
+   "TimeUTC": "2026-11-26T10:00:00",
+   "TimeDK": "2026-11-26T11:00:00",
+   "PriceArea": "NO2",
+   "DayAheadPriceEUR": 334.859985,
+   "DayAheadPriceDKK": 2502.843986
+  },
+  {
+   "TimeUTC": "2026-11-26T10:00:00",
+   "TimeDK": "2026-11-26T11:00:00",
+   "PriceArea": "DK2",
+   "DayAheadPriceEUR": 334.859985,
+   "DayAheadPriceDKK": 2502.843986
+  },
+  {
+   "TimeUTC": "2026-11-26T10:00:00",
+   "TimeDK": "2026-11-26T11:00:00",
+   "PriceArea": "DK1",
+   "DayAheadPriceEUR": 324.480011,
+   "DayAheadPriceDKK": 2425.260946
+  }
+ ]
+}
