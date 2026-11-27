@@ -169,6 +169,28 @@ narratives:
   front_max: 6                    # ongoing narratives listed on the front page
   headlines_per_day: 3            # spread across the day's stance range
 
+bulletin:
+  # The edition read aloud, once a day; the page replays the stored MP3. Sonnet writes the script (story_model,
+  # counted in the LLM cap) during the publish; the voice reads it one paragraph at a time. A failed bulletin is
+  # noted and the publish goes on without it.
+  daily: true
+  prompt: bulletin_v1
+  # The voice: Ming-3.0-tts on Benjamin's Mac (Benjamin's choice, 2026-11-27, after a full-length test; free, MIT).
+  # The GitHub publish writes the script; deploy/mac/bulletin.sh voices it, uploads it and redeploys.
+  tts_engine: ming
+  ming_model: mlx-community/Ming-3.0-tts-0.5B-bf16
+  # ElevenLabs, if tts_engine is elevenlabs (its free tier is blocked from GitHub's servers and too small for daily use).
+  tts_model: eleven_v4
+  voice_id: JBFqnCBsd6RMkjVDRZzb
+  voice_name: George
+  seed: 1201
+  price_per_million_chars: 80     # list price; a 9-minute bulletin is about 7,500 characters, about $0.60
+  monthly_budget_usd: 10          # ElevenLabs only; once reached, bulletins stop until next month (Benjamin sets this)
+  audio_dir: data/audio
+  pause_s: 0.7
+  section_pause_s: 1.5
+  bitrate: 96k
+
 site:
   out_dir: site                   # qa build writes here; git-ignored
   editions_dir: editions          # frozen daily editions (JSON), committed by the workflow

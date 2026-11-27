@@ -4,7 +4,7 @@ name: run
 #   collect - every 2 hours: fetch every source and save the database. No model calls, no deploy.
 #             Keeps high-volume feeds complete (some list fewer items than they publish in a day).
 #   publish - every morning from 06:30 Stockholm: collect, then relevance, stories, labels,
-#             summaries, the site and the daily edition; save, commit editions, deploy.
+#             summaries, the daily edition read aloud, the site; save, commit editions, deploy.
 #   deploy  - manual only: rebuild the site from the saved database (no model calls) and deploy.
 #             For page changes. Run it after the morning publish: the rebuilt page carries the
 #             current time, so before 06:30's publish it would look like today's edition.
@@ -95,6 +95,14 @@ jobs:
             echo "No saved database yet: starting fresh."
           fi
 
+      # The spoken bulletins, so every rebuild keeps their players (and a second publish the same day doesn't
+      # voice it again). The last 30 days are kept.
+      - name: Restore audio
+        if: env.MODE != 'collect'
+        run: |
+          mkdir -p data/audio
+          gh release download audio --pattern 'bulletin-*' --dir data/audio 2>/dev/null || echo "No saved bulletins."
+
       - name: Install
         run: uv sync --frozen
 
@@ -102,9 +110,30 @@ jobs:
         if: env.MODE == 'collect'
         run: uv run qa ingest
 
+      # The ElevenLabs key is only in this step (qa run voices the day's bulletin; without the key it skips it).
       - name: Publish
         if: env.MODE == 'publish'
-        run: uv run qa run
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: |
+          command -v ffmpeg >/dev/null || { sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg; }
+          uv run qa run
+
+      - name: Save audio
+        if: env.MODE == 'publish'
+        run: |
+          # A failed bulletin keeps its script, so a later publish the same day voices it without a new one.
+          shopt -s nullglob
+          files=(data/audio/bulletin-$(TZ=Europe/Stockholm date +%F).*)
+          if [ ${#files[@]} -eq 0 ]; then echo "No bulletin today."; exit 0; fi
+          gh release view audio >/dev/null 2>&1 || gh release create audio --prerelease --title "Audio" \
+            --notes "The spoken bulletins: one MP3 per day with its script and details, made by the morning publish. The last 30 days are kept."
+          gh release upload audio "${files[@]}" --clobber
+          cutoff=$(date -u -d '30 days ago' +%Y-%m-%d)
+          for asset in $(gh release view audio --json assets --jq '.assets[].name' | grep -E '^bulletin-[0-9-]+\.'); do
+            day=${asset#bulletin-}; day=${day%%.*}
+            if [[ "$day" < "$cutoff" ]]; then gh release delete-asset audio "$asset" -y; fi
+          done
 
       - name: Build the site only (no model calls)
         if: env.MODE == 'deploy'

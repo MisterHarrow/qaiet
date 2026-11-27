@@ -10,3 +10,6 @@ data/
 .vercel/
 .env*
 !.env.example
+
+# Local experiments (TTS samples, keys never here)
+/scratch/
