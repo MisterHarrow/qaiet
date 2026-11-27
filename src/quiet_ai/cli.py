@@ -307,6 +307,20 @@ def build(dry_run: DryRun = False, out: Out = None) -> None:
 
 
 @app.command()
+def energy() -> None:
+    """Fetch the energy desk's day-ahead prices into the database: one request, no model calls (qa run does
+    this too). The deploy runs it before qa build so a rebuilt page has today's prices. Never fails."""
+    settings = load_settings()
+    store = Store(ROOT / settings.db_path)
+    ctx = _context("live")
+    try:
+        console.print(f"energy data: {energy_data.update(store, ctx.http, settings, ctx.now)}")
+    finally:
+        ctx.http.close()
+        store.close()
+
+
+@app.command()
 def serve(
     port: Annotated[int, typer.Option("--port", "-p")] = 8765,
     rebuild: Annotated[bool, typer.Option("--build/--no-build", help="Build before serving.")] = True,
